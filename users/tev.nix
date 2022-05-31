@@ -36,6 +36,17 @@
           gp = "git push ";
           gpl = "git pull ";
         };
+        plugins = [
+          {
+            name = "theme-bobthefish";
+            src = pkgs.fetchFromGitHub {
+              owner = "oh-my-fish";
+              repo = "theme-bobthefish";
+              rev = "14a6f2b317661e959e13a23870cf89274f867f12";
+              sha256 = "0c5i7sdrsp0q3vbziqzdyqn4fmp235ax4mn4zslrswvn8g3fvdyh";
+            };
+          }
+        ];
       };
       firefox = {
         enable = true;
