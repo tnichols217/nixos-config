@@ -1,6 +1,5 @@
 { config, pkgs, ... }:
 {
-
   users.users.tev = {
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.

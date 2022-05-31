@@ -8,4 +8,5 @@ in
       (import "${home-manager}/nixos")
       ./tev.nix
     ];
+  users.mutableUsers = false;
 }
