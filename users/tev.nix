@@ -7,12 +7,22 @@
   };
 
   home-manager.users.tev = {
-    home.packages = with pkgs; [
-      vscodium
-      obsidian
-      barrier
-      firefox
-      git
-    ];
+    home = {
+      stateVersion = "21.11";
+      packages = with pkgs; [
+        vscodium
+        obsidian
+        barrier
+        firefox
+        gnupg
+      ];
+    };
+    programs = {
+      git = {
+        enable = "true";
+        userName = "tnichols217";
+        userEmail = "62992267+tnichols217@users.noreply.github.com"
+      };
+    }
   };
 }

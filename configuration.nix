@@ -8,6 +8,7 @@
       ./localization.nix
       ./users/users.nix
       ./x11/x11.nix
+      ./sound.nix
     ];
 
 
