@@ -15,6 +15,7 @@
         obsidian
         barrier
         gnupg
+        oh-my-fish
       ];
     };
     programs = {
