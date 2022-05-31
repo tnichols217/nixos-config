@@ -25,17 +25,17 @@
       };
       fish = {
         enable = true;
-        plugins = [
-          {
-            # name = "fzf";
-            # src = pkgs.fetchFromGitHub {
-            #   owner = "jethrokuan";
-            #   repo = "fzf";
-            #   rev = "ac01d96fc6344ebeb48c03f2c9c0be5bf3b20f1c";
-            #   sha256 = "1h97zh3ghcvvn2x9rj51frhhi85nf7wa072g9mm2pc6sg71ijw4k";
-            # };
-          }
-        ];
+        # plugins = [
+        #   {
+        #     name = "fzf";
+        #     src = pkgs.fetchFromGitHub {
+        #       owner = "jethrokuan";
+        #       repo = "fzf";
+        #       rev = "ac01d96fc6344ebeb48c03f2c9c0be5bf3b20f1c";
+        #       sha256 = "1h97zh3ghcvvn2x9rj51frhhi85nf7wa072g9mm2pc6sg71ijw4k";
+        #     };
+        #   }
+        # ];
         shellAliases = {
           clip = "xclip -selection clipboard -r";
           gac = "git add -A && git commit -am ";
