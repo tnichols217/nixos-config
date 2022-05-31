@@ -45,7 +45,7 @@
       };
       firefox = {
         enable = true;
-        package = pkgs.nur.repos.wolfangaukang.librewolf-bin;
+        # package = pkgs.nur.repos.wolfangaukang.librewolf-bin;
         extensions = with pkgs.nur.repos.rycee.firefox-addons; [
           https-everywhere
           privacy-badger
