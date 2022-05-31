@@ -21,7 +21,7 @@
       git = {
         enable = "true";
         userName = "tnichols217";
-        userEmail = "62992267+tnichols217@users.noreply.github.com"
+        userEmail = "62992267+tnichols217@users.noreply.github.com";
       };
     }
   };
