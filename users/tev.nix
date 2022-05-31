@@ -43,7 +43,7 @@
               owner = "oh-my-fish";
               repo = "theme-bobthefish";
               rev = "14a6f2b317661e959e13a23870cf89274f867f12";
-              sha256 = "0c5i7sdrsp0q3vbziqzdyqn4fmp235ax4mn4zslrswvn8g3fvdyh";
+              sha256 = "178wk0pz9vc6qn5c3my20yfr73s70kyd7zqf0xwr54q5l93rfplj";
             };
           }
         ];
