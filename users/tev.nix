@@ -76,7 +76,7 @@
           ms-python.python
           ms-python.vscode-pylance
           dotjoshjohnson.xml
-          redhat.vscode-xml
+          redhat.vscode-yaml
           bbenoist.nix
           jnoortheen.nix-ide
         ];
