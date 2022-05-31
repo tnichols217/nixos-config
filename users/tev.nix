@@ -74,7 +74,7 @@
         extensions = with pkgs.vscode-extensions; [
           ms-toolsai.jupyter
           ms-python.python
-          ms-python.pylance
+          ms-python.vscode-pylance
           dotjoshjohnson.xml
           redhat.vscode-xml
           bbenoist.nix
