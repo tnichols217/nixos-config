@@ -11,7 +11,6 @@
     home = {
       stateVersion = "21.11";
       packages = with pkgs; [
-        vscodium
         obsidian
         barrier
         gnupg
@@ -22,20 +21,12 @@
         enable = true;
         userName = "tnichols217";
         userEmail = "62992267+tnichols217@users.noreply.github.com";
+        diff-so-fancy = {
+          enable = true;
+        }
       };
       fish = {
         enable = true;
-        # plugins = [
-        #   {
-        #     name = "fzf";
-        #     src = pkgs.fetchFromGitHub {
-        #       owner = "jethrokuan";
-        #       repo = "fzf";
-        #       rev = "ac01d96fc6344ebeb48c03f2c9c0be5bf3b20f1c";
-        #       sha256 = "1h97zh3ghcvvn2x9rj51frhhi85nf7wa072g9mm2pc6sg71ijw4k";
-        #     };
-        #   }
-        # ];
         shellAliases = {
           clip = "xclip -selection clipboard -r";
           gac = "git add -A && git commit -am ";
@@ -57,6 +48,27 @@
       fzf = {
         enable = true;
         enableFishIntegration = true;
+        enableBashIntegration = true;
+      };
+      gh = {
+        enable = true;
+        enableGitCredentialHelper = true;
+      };
+      vscode = {
+        enable = true;
+        package = pkgs.vscodium;
+        extensions = [
+
+        ];
+        mutableExtensionsDir = false;
+        userSettings = {
+          "[nix]"."editor.tabSize" = 2;
+          "editor.renderWhitespace" = "all";
+          "editor.fontFamily" = "'Fira code', 'Hack', 'monospace', monospace";
+          "editor.fontLigatures" = true;
+          "editor.guides.bracketPairs" = true;
+          "editor.bracketPairColorization.enabled" = true;
+        };
       };
     };
   };
