@@ -5,5 +5,4 @@
   services.pipewire.pulse.enable = true;
   services.pipewire.alsa.enable = true;
   services.pipewire.jack.enable = true;
-  services.pipewire.wireplumber.enable = true;
 }
