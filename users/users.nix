@@ -5,9 +5,8 @@
 {
   imports =
     [
-      # (import "${home-manager}/nixos")
+      (import "${pkgs.home-manager}/nixos")
       ./tev.nix
     ];
   users.mutableUsers = false;
-  programs.home-manager.enable = true;
 }
