@@ -72,7 +72,7 @@
         enable = true;
         package = pkgs.vscodium;
         extensions = with pkgs.vscode-extensions; [
-          ms-toolsai-jupyter
+          ms-toolsai.jupyter
         ];
         mutableExtensionsDir = false;
         userSettings = {
