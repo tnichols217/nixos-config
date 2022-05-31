@@ -43,18 +43,18 @@
           gpl = "git pull ";
         };
       };
-    };
-    firefox = {
-      enable = true;
-      package = pkgs.nur.repos.wolfangaukang.librewolf-bin;
-      extensions = with pkgs.nur.repos.rycee.firefox-addons; [
-        https-everywhere
-        privacy-badger
-        darkreader
-        ublock-origin
-        sponsorblock
-        videospeed
-      ];
+      firefox = {
+        enable = true;
+        package = pkgs.nur.repos.wolfangaukang.librewolf-bin;
+        extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+          https-everywhere
+          privacy-badger
+          darkreader
+          ublock-origin
+          sponsorblock
+          videospeed
+        ];
+      };
     };
   };
 }
