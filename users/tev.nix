@@ -73,6 +73,12 @@
         package = pkgs.vscodium;
         extensions = with pkgs.vscode-extensions; [
           ms-toolsai.jupyter
+          ms-python.python
+          ms-python.pylance
+          dotjoshjohnson.xml
+          redhat.vscode-xml
+          bbenoist.nix
+          jnoortheen.nix-ide
         ];
         mutableExtensionsDir = false;
         userSettings = {
