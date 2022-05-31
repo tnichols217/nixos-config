@@ -16,6 +16,7 @@
         barrier
         gnupg
         oh-my-fish
+        nur.repos.jomik.fishPlugins.theme-bobthefish
       ];
     };
     programs = {
