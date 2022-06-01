@@ -26,7 +26,7 @@
       };
 
     "/boot" = {
-        device = "/dev/disk/by-uuid/NIXBOOT";
+        device = "/dev/disk/by-label/NIXBOOT";
         fsType = "vfat";
       };
   };
