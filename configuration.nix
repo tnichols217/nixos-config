@@ -1,17 +1,12 @@
 { config, pkgs, ... }:
-let
-  impermanence = builtins.fetchTarball "https://github.com/nix-community/impermanence/archive/master.tar.gz";
-in
 {
   imports =
     [
-      (import "${impermanence}/nixos.nix")
       ./configuration/hardware-configuration.nix
       ./configuration/bootloader.nix
       ./configuration/network.nix
       ./configuration/localization.nix
       ./configuration/users.nix
-      (import "${impermanence}/home-manager.nix")
       ./configuration/x11.nix
       ./configuration/sound.nix
     ];
