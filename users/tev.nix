@@ -19,6 +19,7 @@
         # nur.repos.jomik.fishPlugins.theme-bobthefish
         konsole
         flameshot
+        vscode-extensions
       ];
     };
     programs = {
