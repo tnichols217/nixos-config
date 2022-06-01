@@ -28,10 +28,11 @@
     enable = true;
     allowReboot = true;
     dates = "daily";
-    rebootWindow.lower = "04:00";
-    rebootWindow.upper = "05:00";
   };
 
+  system.autoUpgrade.rebootWindow.lower = "04:00";
+  system.autoUpgrade.rebootWindow.upper = "05:00";
+  
   environment.systemPackages = with pkgs; [
     nano
   ];
