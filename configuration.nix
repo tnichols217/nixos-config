@@ -11,7 +11,6 @@ in
       ./configuration/network.nix
       ./configuration/localization.nix
       ./configuration/users.nix
-      (import "${impermanence}/home-manager.nix")
       ./configuration/x11.nix
       ./configuration/sound.nix
     ];
