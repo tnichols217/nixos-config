@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 let
-  impermanence = builtins.fetchTarball "https://github.com/nix-community/impermanence";
+  impermanence = builtins.fetchTarball "https://github.com/nix-community/impermanence/archive/master.tar.gz";
 in
 {
   imports =
