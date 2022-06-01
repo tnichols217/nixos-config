@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 {
-  environment.persistence."${./cache}" = {
+  environment.persistence."/etc/nixos/configuration/persistence/cache" = {
     hideMounts = false;
     directories = [
       "/var/log"

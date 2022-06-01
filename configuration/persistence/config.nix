@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 {
-  environment.persistence."${./config}" = {
+  environment.persistence."/etc/nixos/configuration/persistence/config" = {
     hideMounts = false;
     directories = [
       "/etc/nixos"
