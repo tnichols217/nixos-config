@@ -28,10 +28,8 @@
     enable = true;
     allowReboot = true;
     dates = "daily";
-    rebootWindow = {
-      lower = "04:00";
-      upper = "05:00";
-    };
+    rebootWindow.lower = "04:00";
+    rebootWindow.upper = "05:00";
   };
 
   environment.systemPackages = with pkgs; [
