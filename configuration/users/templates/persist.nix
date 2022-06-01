@@ -19,7 +19,7 @@
       ];
       files = [
       ];
-    }
+    };
   };
 
   environment.persistence."/nix/persist/etc/nixos/configuration/persistence/config" = {
