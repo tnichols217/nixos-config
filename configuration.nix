@@ -1,16 +1,27 @@
 { config, pkgs, ... }:
+let
+  impermanence = builtins.fetchTarball "https://github.com/nix-community/impermanence";
+in
 {
   imports =
     [
-      ./hardware-configuration.nix
-      ./bootloader.nix
-      ./network.nix
-      ./localization.nix
-      ./users/users.nix
-      ./x11/x11.nix
-      ./sound.nix
+      (import "${impermanence}/nixos.nix")
+      ./configuration/hardware-configuration.nix
+      ./configuration/bootloader.nix
+      ./configuration/network.nix
+      ./configuration/localization.nix
+      ./configuration/users.nix
+      ./configuration/x11.nix
+      ./configuration/sound.nix
     ];
 
+  nix.autoOptimiseStore = true;
+
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 30d";
+  };
 
   nixpkgs.config.allowUnfree = true;
 

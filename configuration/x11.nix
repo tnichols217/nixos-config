@@ -2,7 +2,7 @@
 {
   imports =
     [
-      ./plasma5.nix
+      ./x11/plasma5.nix
     ];
   services.xserver.enable = true;
   services.printing.enable = true;
