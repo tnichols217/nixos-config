@@ -1,5 +1,4 @@
 { username }:
-{
   { config, pkgs, ... }:
   {
     users.users.${username} = {
@@ -201,4 +200,3 @@
       };
     };
   }
-}
