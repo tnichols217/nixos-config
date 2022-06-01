@@ -9,6 +9,7 @@
       ./configuration/users.nix
       ./configuration/x11.nix
       ./configuration/sound.nix
+      ./configuration/persistence.nix
     ];
 
   nix.autoOptimiseStore = true;
