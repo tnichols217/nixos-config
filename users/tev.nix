@@ -17,6 +17,7 @@
         gnupg
         # oh-my-fish
         # nur.repos.jomik.fishPlugins.theme-bobthefish
+        konsole
         flameshot
       ];
     };
