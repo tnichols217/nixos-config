@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 let
   home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/master.tar.gz";
+  impermanence = builtins.fetchTarball "https://github.com/nix-community/impermanence/archive/master.tar.gz";
 in
 {
   imports =
