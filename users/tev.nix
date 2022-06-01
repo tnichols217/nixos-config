@@ -91,6 +91,9 @@
           "editor.bracketPairColorization.enabled" = true;
         };
       };
+      obs-studio = {
+        enable = true;
+      };
     };
   };
 }
