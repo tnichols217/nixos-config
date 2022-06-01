@@ -6,7 +6,7 @@ in
   imports =
     [
       (import "${home-manager}/nixos")
-      (import "${impermanence}/home-manager.nix")
+      # (import "${impermanence}/home-manager.nix")
       ./users/tev.nix
     ];
   users.mutableUsers = false;
