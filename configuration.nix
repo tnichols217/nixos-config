@@ -26,12 +26,8 @@
 
   system.autoUpgrade = {
     enable = true;
-    allowReboot = true;
     dates = "daily";
   };
-
-  system.autoUpgrade.rebootWindow.lower = "04:00";
-  system.autoUpgrade.rebootWindow.upper = "05:00";
   
   environment.systemPackages = with pkgs; [
     nano
