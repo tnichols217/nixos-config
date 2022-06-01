@@ -1,0 +1,20 @@
+mount -t tmpfs none /mnt
+
+mkdir -p /mnt/{boot,nix,etc/nixos,var/log}
+
+mount /dev/disk/by-label/NIXBOOT /mnt/boot
+mount /dev/disk/by-label/NIXROOT /mnt/nix
+
+mkdir -p /mnt/nix/persist/{etc/nixos,var/log}
+
+mount -o bind /mnt/nix/persist/etc/nixos /mnt/etc/nixos
+mount -o bind /mnt/nix/persist/var/log /mnt/var/log
+
+cd /mnt/etc
+curl -LO https://github.com/tnichols217/nixos-config/archive/refs/heads/main.zip
+unzip main.zip
+mv nixos-config-main nixos
+rm main.zip
+
+cd /mnt
+nixos-install
