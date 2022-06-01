@@ -22,19 +22,10 @@
     };
   };
 
-  environment.persistence."/nix/persist/etc/nixos/configuration/persistence/config" = {
+  environment.persistence."/nix/persist/etc/nixos/configuration/persistence/local" = {
     hideMounts = false;
     users.${username} = {
       directories = [
-
-        ".config/gtk-3.0"
-        ".config/gtk-4.0"
-        ".config/KDE"
-        ".config/kde.org"
-        ".config/plasma-workspace"
-        ".config/xsettingsd"
-        ".kde"
-
         ".local/share/baloo"
         ".local/share/dolphin"
         ".local/share/kactivitymanagerd"
@@ -46,6 +37,27 @@
         ".local/share/kxmlgui5"
         ".local/share/RecentDocuments"
         ".local/share/sddm"
+      ];
+      files = [
+        ".local/share/krunnerstaterc"
+        ".local/share/user-places.xbel"
+        ".local/share/user-places.xbel.bak"
+        ".local/share/user-places.xbel.tbcache"
+      ];
+    };
+  };
+
+  environment.persistence."/nix/persist/etc/nixos/configuration/persistence/config" = {
+    hideMounts = false;
+    users.${username} = {
+      directories = [
+        ".config/gtk-3.0"
+        ".config/gtk-4.0"
+        ".config/KDE"
+        ".config/kde.org"
+        ".config/plasma-workspace"
+        ".config/xsettingsd"
+        ".kde"
       ];
       files = [
         ".screenrc"
@@ -103,11 +115,6 @@
         ".config/Trolltech.conf"
         ".config/user-dirs.dirs"
         ".config/user-dirs.locale"
-
-        ".local/share/krunnerstaterc"
-        ".local/share/user-places.xbel"
-        ".local/share/user-places.xbel.bak"
-        ".local/share/user-places.xbel.tbcache"
       ];
     };
   };

@@ -26,6 +26,7 @@ in
           # nur.repos.jomik.fishPlugins.theme-bobthefish
           konsole
           flameshot
+          fswatch
         ];
       };
       programs = {
