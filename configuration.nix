@@ -5,7 +5,7 @@ in
 {
   imports =
     [
-      # (import "${impermanence}/nixos.nix")
+      (import "${impermanence}/nixos.nix")
       ./configuration/hardware-configuration.nix
       ./configuration/bootloader.nix
       ./configuration/network.nix
