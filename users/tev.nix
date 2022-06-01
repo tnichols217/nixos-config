@@ -19,7 +19,6 @@
         # nur.repos.jomik.fishPlugins.theme-bobthefish
         konsole
         flameshot
-        vscode-extensions
       ];
     };
     programs = {
@@ -74,15 +73,15 @@
       vscode = {
         enable = true;
         package = pkgs.vscodium;
-        extensions = with pkgs; [
-          vscode-extensions.ms-toolsai.jupyter
-          vscode-extensions.ms-python.python
-          vscode-extensions.ms-python.vscode-pylance
-          vscode-extensions.dotjoshjohnson.xml
-          vscode-extensions.redhat.vscode-yaml
-          vscode-extensions.bbenoist.nix
-          vscode-extensions.jnoortheen.nix-ide
-        ];
+        # extensions = with pkgs; [
+        #   vscode-extensions.ms-toolsai.jupyter
+        #   vscode-extensions.ms-python.python
+        #   vscode-extensions.ms-python.vscode-pylance
+        #   vscode-extensions.dotjoshjohnson.xml
+        #   vscode-extensions.redhat.vscode-yaml
+        #   vscode-extensions.bbenoist.nix
+        #   vscode-extensions.jnoortheen.nix-ide
+        # ];
         # mutableExtensionsDir = false;
         userSettings = {
           "[nix]"."editor.tabSize" = 2;
