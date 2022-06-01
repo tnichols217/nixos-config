@@ -13,8 +13,8 @@ mount -o bind /mnt/nix/persist/var/log /mnt/var/log
 cd /mnt/etc
 curl -LO https://github.com/tnichols217/nixos-config/archive/refs/heads/main.zip
 unzip main.zip
-# mv nixos-config-main/* nixos/
-# rm -r main.zip nixos-config-main
+mv nixos-config-main/* nixos/
+rm -r main.zip nixos-config-main
 
-# cd /mnt
-# nixos-install
+cd /mnt
+nixos-install
