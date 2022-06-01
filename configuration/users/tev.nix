@@ -5,6 +5,6 @@ in
 {
     imports =
     [
-      ((import user.nix) ${username})
+      ((import user.nix) "${username}")
     ];
 }
