@@ -5,7 +5,7 @@ in
 {
     imports =
     [
-      ((import ./user_persist.nix) { username = "${username}"; })
+      ((import ./templates/persist.nix) { username = "${username}"; })
     ];
 
     users.users.${username} = {

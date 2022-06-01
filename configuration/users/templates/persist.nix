@@ -5,17 +5,27 @@
     hideMounts = false;
     users.${username} = {
       directories = [
-        "Downloads"
-        "Music"
-        "Pictures"
-        "Documents"
-        "Videos"
-        "VirtualBox VMs"
-        { directory = ".gnupg"; mode = "0700"; }
-        { directory = ".ssh"; mode = "0700"; }
-        { directory = ".nixops"; mode = "0700"; }
-        { directory = ".local/share/keyrings"; mode = "0700"; }
-        ".local/share/direnv"
+          "Downloads"
+          "Music"
+          "Pictures"
+          "Documents"
+          "Videos"
+          "VirtualBox VMs"
+          { directory = ".gnupg"; mode = "0700"; }
+          { directory = ".ssh"; mode = "0700"; }
+          { directory = ".nixops"; mode = "0700"; }
+          { directory = ".local/share/keyrings"; mode = "0700"; }
+          ".local/share/direnv"
+      ];
+      files = [
+      ];
+    }
+  };
+
+  environment.persistence."/nix/persist/etc/nixos/configuration/persistence/config" = {
+    hideMounts = false;
+    users.${username} = {
+      directories = [
 
         ".config/gtk-3.0"
         ".config/gtk-4.0"
