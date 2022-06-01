@@ -22,6 +22,18 @@
 
   nixpkgs.config.allowUnfree = true;
 
+  boot.kernelPackages = pkgs.linuxPackages_zen;
+
+  system.autoUpgrade = {
+    enable = true;
+    allowReboot = true;
+    dates = "daily";
+    rebootWindow = {
+      lower = "04:00";
+      upper = "05:00";
+    };
+  };
+
   environment.systemPackages = with pkgs; [
     nano
   ];
