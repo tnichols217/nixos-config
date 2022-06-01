@@ -15,8 +15,9 @@
         obsidian
         barrier
         gnupg
-        oh-my-fish
-        nur.repos.jomik.fishPlugins.theme-bobthefish
+        # oh-my-fish
+        # nur.repos.jomik.fishPlugins.theme-bobthefish
+        flameshot
       ];
     };
     programs = {
@@ -80,7 +81,7 @@
           bbenoist.nix
           jnoortheen.nix-ide
         ];
-        mutableExtensionsDir = false;
+        # mutableExtensionsDir = false;
         userSettings = {
           "[nix]"."editor.tabSize" = 2;
           "editor.renderWhitespace" = "all";
