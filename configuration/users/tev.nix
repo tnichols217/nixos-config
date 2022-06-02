@@ -27,6 +27,7 @@ in
           konsole
           flameshot
           fswatch
+          arc-kde-theme
         ];
       };
       programs = {
