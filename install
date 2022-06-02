@@ -1,9 +1,10 @@
-mount -t tmpfs none /mnt
+# mount -t tmpfs none /mnt
 
+mount /dev/disk/by-label/NIXROOT /mnt
 mkdir -p /mnt/{boot,nix,etc/nixos,var/log}
 
 mount /dev/disk/by-label/NIXBOOT /mnt/boot
-mount /dev/disk/by-label/NIXROOT /mnt/nix
+# mount /dev/disk/by-label/NIXROOT /mnt/nix
 
 mkdir -p /mnt/nix/persist/{etc/nixos,var/log}
 
