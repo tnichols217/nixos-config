@@ -28,6 +28,7 @@ in
         flameshot
         fswatch
         arc-kde-theme
+        python
       ];
     };
     programs = {
