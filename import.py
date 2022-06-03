@@ -1,5 +1,13 @@
+# Imports current system's kde config and exports it to config.json
+
+# Transform local config into global configs (multiuser)
+transform = True
+
 from pathlib import Path
 import json
+import os
+
+HOME = os.path.expanduser('~')
 
 def readFile(f):
     with open(f, 'r') as f:
@@ -21,12 +29,28 @@ def parseFile(f):
     c = " \n" + readFile(f)
     return parseString(c)
 
-CONFIGDIR = [Path("/home/tev/.config"), Path("/etc/xdg")]
+CONFIGDIR = [Path(HOME + "/.config"), Path("/etc/xdg")]
 MATCHES = ["*rc", "*kdeglobals"]
 
 files = []
 dict = {}
 [[[ dict.__setitem__(str(i), parseFile(i)) for i in i.glob(j)] for j in MATCHES] for i in CONFIGDIR]
+
+if (transform):
+    o = {}
+    for k in dict:
+        if (k.startswith("/home")):
+            transformed = "/etc/xdg/" + "/".join(k.split("/")[4:])
+            if transformed in o.keys():
+                o[transformed] += dict[k]
+            else:
+                o[transformed] = dict[k]
+        else:
+            if k in o.keys():
+                o[k] += dict[k]
+            else:
+                o[k] = dict[k]
+    dict = o
 
 with open("./config.json", "w") as f:
     json.dump(dict, f)
