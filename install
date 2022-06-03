@@ -1,6 +1,5 @@
 mount -t tmpfs none /mnt
 
-# mount /dev/disk/by-label/NIXROOT /mnt
 mkdir -p /mnt/{boot,nix,etc/nixos,var/log}
 
 mount /dev/disk/by-label/NIXBOOT /mnt/boot
