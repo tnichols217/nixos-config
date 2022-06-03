@@ -6,7 +6,7 @@ mkdir -p /mnt/{boot,nix,etc/nixos,var/log}
 mount /dev/disk/by-label/NIXBOOT /mnt/boot
 mount /dev/disk/by-label/NIXROOT /mnt/nix
 
-mkdir -p /mnt/boot/persist/{etc/nixos,var/log}
+mkdir -p /mnt/nix/persist/{etc/nixos,var/log}
 
 mount -o bind /mnt/nix/persist/etc/nixos /mnt/etc/nixos
 mount -o bind /mnt/nix/persist/var/log /mnt/var/log
