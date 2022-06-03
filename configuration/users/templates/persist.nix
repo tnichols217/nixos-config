@@ -22,30 +22,14 @@
     };
   };
 
-  # environment.persistence."/nix/persist/etc/nixos/configuration/persistence/local" = {
-  #   hideMounts = false;
-  #   users.${username} = {
-  #     directories = [
-  #       ".local/share/baloo"
-  #       ".local/share/dolphin"
-  #       ".local/share/kactivitymanagerd"
-  #       ".local/share/kate"
-  #       ".local/share/klipper"
-  #       ".local/share/konsole"
-  #       ".local/share/kscreen"
-  #       ".local/share/kwalletd"
-  #       ".local/share/kxmlgui5"
-  #       ".local/share/RecentDocuments"
-  #       ".local/share/sddm"
-  #     ];
-  #     files = [
-  #       ".local/share/krunnerstaterc"
-  #       ".local/share/user-places.xbel"
-  #       ".local/share/user-places.xbel.bak"
-  #       ".local/share/user-places.xbel.tbcache"
-  #     ];
-  #   };
-  # };
+  environment.persistence."/nix/persist/etc/nixos/configuration/persistence/local" = {
+    hideMounts = false;
+    users.${username} = {
+      directories = [
+        ".local"
+      ];
+    };
+  };
 
   # environment.persistence."/nix/persist/etc/nixos/configuration/persistence/config" = {
   #   hideMounts = false;
