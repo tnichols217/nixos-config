@@ -5,17 +5,15 @@
     hideMounts = false;
     users.${username} = {
       directories = [
-          "Downloads"
-          "Music"
-          "Pictures"
-          "Documents"
-          "Videos"
-          "VirtualBox VMs"
-          { directory = ".gnupg"; mode = "0700"; }
-          { directory = ".ssh"; mode = "0700"; }
-          { directory = ".nixops"; mode = "0700"; }
-          { directory = ".local/share/keyrings"; mode = "0700"; }
-          ".local/share/direnv"
+          { directory = "Downloads"; user = "${username}"; }
+          { directory = "Music"; user = "${username}"; }
+          { directory = "Pictures"; user = "${username}"; }
+          { directory = "Documents"; user = "${username}"; }
+          { directory = "Videos"; user = "${username}"; }
+          { directory = ".gnupg"; mode = "0700"; user = "${username}";}
+          { directory = ".ssh"; mode = "0700"; user = "${username}"; }
+          { directory = ".nixops"; mode = "0700"; user = "${username}"; }
+          { directory = ".local/share/keyrings"; mode = "0700"; user = "${username}"; }
       ];
       files = [
       ];
@@ -26,7 +24,7 @@
     hideMounts = false;
     users.${username} = {
       directories = [
-        ".local"
+        { directory = ".local"; user = "${username}"; }
       ];
     };
   };
