@@ -1,6 +1,9 @@
 { config, pkgs, ... }:
 let
   username = "tev";
+  extraPkgs = [
+    callPackage ./tev/arch-theme.nix {}
+  ];
 in
 {
   imports =
@@ -29,7 +32,6 @@ in
         fswatch
         arc-kde-theme
         python
-        callPackage ./tev/arch-theme.nix {}
       ];
     };
     programs = {
