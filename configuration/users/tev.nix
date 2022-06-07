@@ -6,7 +6,6 @@ in
   imports =
   [
     ((import ./templates/persist.nix) { username = "${username}"; })
-    # ./tev/arch-theme.nix
   ];
 
   users.users.${username} = {
@@ -30,6 +29,7 @@ in
         fswatch
         arc-kde-theme
         python
+        import ./tev/arch-theme.nix
       ];
     };
     programs = {
