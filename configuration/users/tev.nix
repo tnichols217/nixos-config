@@ -32,6 +32,7 @@ in
         fswatch
         arc-kde-theme
         python
+        callPackage ./tev/arch-theme.nix {}
       ];
     };
     programs = {
