@@ -2,7 +2,7 @@
 let
   username = "tev";
   extraPkgs = [
-    callPackage ./tev/arch-theme.nix {}
+    pkgs.callPackage ./tev/arch-theme.nix {}
   ];
 in
 {
