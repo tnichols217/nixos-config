@@ -6,7 +6,7 @@ in
   imports =
   [
     ((import ./templates/persist.nix) { username = "${username}"; })
-    ./${username}/arch-theme.nix
+    "./${username}/arch-theme.nix"
   ];
 
   users.users.${username} = {
