@@ -794,7 +794,7 @@
                 ],
                 [
                     "contrastEnabled",
-                    "true"
+                    "false"
                 ],
                 [
                     "kwin4_effect_dimscreenEnabled",
@@ -870,7 +870,7 @@
                 ],
                 [
                     "library",
-                    "org.kde.kwin.aurorae"
+                    "org.kde.breeze"
                 ],
                 [
                     "theme",
@@ -1703,17 +1703,6 @@
         ]
     ],
     "/etc/xdg/konsolerc": [
-        [
-            [
-                "Desktop Entry"
-            ],
-            [
-                [
-                    "DefaultProfile",
-                    "Profile 1.profile"
-                ]
-            ]
-        ],
         [
             [
                 "UiSettings"

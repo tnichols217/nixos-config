@@ -90,6 +90,8 @@ in
           "editor.fontLigatures" = true;
           "editor.guides.bracketPairs" = true;
           "editor.bracketPairColorization.enabled" = true;
+          "window.autoDetectColorScheme" = true;
+          "editor.semanticHighlighting.enabled" = true;
         };
       };
       obs-studio = {
