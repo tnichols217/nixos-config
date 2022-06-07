@@ -29,7 +29,7 @@ in
         fswatch
         arc-kde-theme
         python
-        callPackage import ./tev/arch-theme.nix
+        callPackage ./tev/arch-theme.nix {}
       ];
     };
     programs = {
