@@ -1,9 +1,6 @@
 { config, pkgs, ... }:
 let
   username = "tev";
-  extraPkgs = [
-    pkgs.callPackage ./tev/arch-theme.nix {}
-  ];
 in
 {
   imports =
@@ -25,8 +22,6 @@ in
         obsidian
         barrier
         gnupg
-        # oh-my-fish
-        # nur.repos.jomik.fishPlugins.theme-bobthefish
         konsole
         flameshot
         fswatch
@@ -96,6 +91,7 @@ in
           "editor.bracketPairColorization.enabled" = true;
           "window.autoDetectColorScheme" = true;
           "editor.semanticHighlighting.enabled" = true;
+          "workbench.colorTheme" = "Default Dark+";
         };
       };
       obs-studio = {

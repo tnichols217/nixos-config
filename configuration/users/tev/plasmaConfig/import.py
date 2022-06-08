@@ -54,5 +54,5 @@ if (transform):
 
 print(dict.keys())
 
-# with open("./config.json", "w") as f:
-#     json.dump(dict, f)
+with open("./config1.json", "w") as f:
+    json.dump(dict, f)

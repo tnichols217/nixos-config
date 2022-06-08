@@ -1,5 +1,5 @@
 {
-    "/etc/xdg/plasma-localerc": [
+    "/plasma-localerc": [
         [
             [
                 "Formats"
@@ -12,7 +12,7 @@
             ]
         ]
     ],
-    "/etc/xdg/kglobalshortcutsrc": [
+    "/kglobalshortcutsrc": [
         [
             [
                 "kcm_touchpad"
@@ -536,7 +536,7 @@
             ]
         ]
     ],
-    "/etc/xdg/kwinrc": [
+    "/kwinrc": [
         [
             [
                 "Compositing"
@@ -879,7 +879,7 @@
             ]
         ]
     ],
-    "/etc/xdg/powermanagementprofilesrc": [
+    "/powermanagementprofilesrc": [
         [
             [
                 "AC"
@@ -1102,7 +1102,7 @@
             ]
         ]
     ],
-    "/etc/xdg/plasmarc": [
+    "/plasmarc": [
         [
             [
                 "Wallpapers"
@@ -1115,7 +1115,7 @@
             ]
         ]
     ],
-    "/etc/xdg/katerc": [
+    "/katerc": [
         [
             [
                 "General"
@@ -1606,7 +1606,7 @@
             ]
         ]
     ],
-    "/etc/xdg/plasmashellrc": [
+    "/plasmashellrc": [
         [
             [
                 "KFileDialog Settings"
@@ -1644,7 +1644,7 @@
             ]
         ]
     ],
-    "/etc/xdg/filetypesrc": [
+    "/filetypesrc": [
         [
             [
                 "EmbedSettings"
@@ -1661,7 +1661,7 @@
             ]
         ]
     ],
-    "/etc/xdg/kcmshell5rc": [
+    "/kcmshell5rc": [
         [
             [
                 "UiSettings"
@@ -1674,7 +1674,7 @@
             ]
         ]
     ],
-    "/etc/xdg/kiorc": [
+    "/kiorc": [
         [
             [
                 "Confirmations"
@@ -1702,7 +1702,7 @@
             ]
         ]
     ],
-    "/etc/xdg/konsolerc": [
+    "/konsolerc": [
         [
             [
                 "UiSettings"
@@ -1719,7 +1719,7 @@
             ]
         ]
     ],
-    "/etc/xdg/touchpadxlibinputrc": [
+    "/touchpadxlibinputrc": [
         [
             [
                 "SynPS/2 Synaptics TouchPad"
@@ -1748,7 +1748,7 @@
             ]
         ]
     ],
-    "/etc/xdg/baloofilerc": [
+    "/baloofilerc": [
         [
             [
                 "General"
@@ -1769,7 +1769,7 @@
             ]
         ]
     ],
-    "/etc/xdg/kscreenlockerrc": [
+    "/kscreenlockerrc": [
         [
             [
                 "Greeter",
@@ -1785,7 +1785,7 @@
             ]
         ]
     ],
-    "/etc/xdg/systemmonitorrc": [
+    "/systemmonitorrc": [
         [
             [
                 "TaskDialog"
@@ -1818,7 +1818,7 @@
             ]
         ]
     ],
-    "/etc/xdg/khotkeysrc": [
+    "/khotkeysrc": [
         [
             [
                 "Data"
@@ -2232,7 +2232,7 @@
             ]
         ]
     ],
-    "/etc/xdg/ksmserverrc": [
+    "/ksmserverrc": [
         [
             [
                 "General"
@@ -2260,7 +2260,7 @@
             ]
         ]
     ],
-    "/etc/xdg/kcminputrc": [
+    "/kcminputrc": [
         [
             [
                 "Mouse"
@@ -2277,7 +2277,7 @@
             ]
         ]
     ],
-    "/etc/xdg/kdeglobals": [
+    "/kdeglobals": [
         [
             [
                 "Colors:Button"

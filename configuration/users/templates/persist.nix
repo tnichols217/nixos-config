@@ -6,6 +6,7 @@
     users.${username} = {
       directories = [
           { directory = "Downloads"; user = "${username}"; }
+          { directory = "Desktop"; user = "${username}"; }
           { directory = "Music"; user = "${username}"; }
           { directory = "Pictures"; user = "${username}"; }
           { directory = "Documents"; user = "${username}"; }
@@ -13,7 +14,6 @@
           { directory = ".gnupg"; mode = "0700"; user = "${username}";}
           { directory = ".ssh"; mode = "0700"; user = "${username}"; }
           { directory = ".nixops"; mode = "0700"; user = "${username}"; }
-          { directory = ".local/share/keyrings"; mode = "0700"; user = "${username}"; }
       ];
       files = [
       ];
@@ -25,6 +25,8 @@
     users.${username} = {
       directories = [
         { directory = ".local"; user = "${username}"; }
+        { directory = ".local/share"; user = "${username}"; }
+        { directory = ".local/state"; user = "${username}"; }
       ];
     };
   };
