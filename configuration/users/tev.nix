@@ -33,7 +33,7 @@ in
       configFile = {
         "." = {
           recursive = true;
-          source = (callPackage ./tev/plasma-config.nix {});
+          source = (pkgs.callPackage ./tev/plasma-config.nix {});
         };
       };
     };
