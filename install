@@ -17,4 +17,4 @@ mv -f nixos-config-main/* nixos
 rm -r main.zip nixos-config-main
 
 cd /mnt
-nixos-install
+nixos-install --show-trace
