@@ -6,7 +6,7 @@ in
   imports =
     [
       (import "${home-manager}/nixos")
-      ./users/tev.nix
+      # ./users/tev.nix
     ];
   users.mutableUsers = false;
 

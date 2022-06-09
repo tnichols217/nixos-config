@@ -99,9 +99,9 @@ in
         enable = true;
       };
     };
-    # gtk = {
-    #   enable = true;
+    gtk = {
+      enable = true;
 
-    # };
+    };
   };
 }
