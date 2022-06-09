@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs ? import <nixpkgs> {}, ... }:
 
 pkgs.stdenv.mkDerivation rec {
   pname = "plasma-config";
@@ -11,7 +11,8 @@ pkgs.stdenv.mkDerivation rec {
   ${pkgs.python3}/bin/python export.py
   ${pkgs.bash}/bin/bash config.sh ${pkgs.libsForQt5.kconfig}/bin/kwriteconfig5
 
-  cp -r ./conf/* $out/
+  mkdir -p $out
+  cp -r ./conf/* $out
 
   '';
 

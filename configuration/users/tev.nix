@@ -27,8 +27,15 @@ in
         fswatch
         python3
         (callPackage ./tev/arch-theme.nix {})
-        (callPackage ./tev/plasma-config.nix {})
       ];
+    };
+    xdg = {
+      configFile = {
+        "." = {
+          recursive = true;
+          source = (callPackage ./tev/plasma-config.nix {});
+        };
+      };
     };
     programs = {
       git = {
