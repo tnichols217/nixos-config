@@ -1,4 +1,4 @@
-nix-shell -p git
+nix-shell -p git --run "
 
 mount -t tmpfs none /mnt
 
@@ -23,3 +23,4 @@ git clone https://github.com/tnichols217/nixos-config/ nixos
 
 cd /mnt
 nixos-install --show-trace
+"
