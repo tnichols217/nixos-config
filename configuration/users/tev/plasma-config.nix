@@ -5,8 +5,7 @@ pkgs.stdenv.mkDerivation rec {
 
   src = ./plasma_config;
 
-  installPhase =
-  ''
+  installPhase =''
 
   ${pkgs.python3}/bin/python export.py
   ${pkgs.bash}/bin/bash config.sh ${pkgs.libsForQt5.kconfig}/bin/kwriteconfig5
