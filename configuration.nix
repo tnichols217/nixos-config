@@ -7,7 +7,7 @@
       ./configuration/bootloader.nix
       ./configuration/network.nix
       ./configuration/localization.nix
-      ./configuration/users.nix
+      # ./configuration/users.nix
       ./configuration/x11.nix
       ./configuration/sound.nix
       ./configuration/persistence.nix

@@ -10,7 +10,7 @@ pkgs.stdenv.mkDerivation rec {
   ''
 
   ${pkgs.python3}/bin/python export.py
-  ${pkgs.bash-interactive}/bin/bash config.sh ${kconfig}/bin/kwriteconfig5
+  ${pkgs.bash}/bin/bash config.sh ${kconfig}/bin/kwriteconfig5
 
   cp -r ./conf/* $out/
 
