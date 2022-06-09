@@ -1,24 +1,77 @@
+# { pkgs, ... }:
+
+# pkgs.stdenv.mkDerivation rec {
+#   pname = "plasma-config";
+
+#   src = ./plasma_config;
+
+#   installPhase =
+#   ''
+
+#   ${pkgs.python3}/bin/python export.py
+#   ${pkgs.bash}/bin/bash config.sh ${pkgs.libsForQt5.kconfig}/bin/kwriteconfig5
+
+#   cp -r ./conf/* $out/
+
+#   '';
+
+#   meta = {
+#     description = "My personal KDE plasma configuration";
+#     homepage = "https://github.com/tnichols217/nixos-config";
+#     # license = pkgs.stdenv.lib.licenses.gpl2;
+#     # platforms = pkgs.stdenv.lib.platforms.all;
+#   };
+# }
 
 { pkgs, ... }:
 
 pkgs.stdenv.mkDerivation rec {
-  pname = "plasma-config";
+  pname = "arch-kde-theme1";
+  version = "14ab5e53e6fe6b18ffcaba2194c8748e858e6024";
 
-  src = ./plasma_config;
+  src = pkgs.fetchFromGitHub {
+    owner = "rkstrdee";
+    repo = "Arch";
+    rev = version;
+    sha256 = "0xqrzw1f8wz8dwqza4qqbjl3rp3abf8qci5a6bcg9950mxfh2cn4";
+  };
 
-  installPhase =
+  installPhase = let 
+    SCHEMES_DIR = "$PREFIX/color-schemes";
+    PLASMA_DIR = "$PREFIX/plasma/desktoptheme";
+    LOOKFEEL_DIR = "$PREFIX/plasma/look-and-feel";
+    KVANTUM_DIR = "$PREFIX/Kvantum";
+    KONSOLE_DIR = "$PREFIX/konsole";
+    SRC_DIR = src;
+    DARK_THEME_DIR = "${PLASMA_DIR}/Arch-dark/colors";
+    LIGHT_THEME_DIR = "${PLASMA_DIR}/Arch/colors";
+  in
   ''
+  #!/bin/bash
 
-  ${pkgs.python3}/bin/python export.py
-  ${pkgs.bash}/bin/bash config.sh ${pkgs.libsForQt5.kconfig}/bin/kwriteconfig5
+  PREFIX="$out/share"
+  echo $out
 
-  cp -r ./conf/* $out/
+  mkdir -p ${SCHEMES_DIR}
+  mkdir -p ${DARK_THEME_DIR}
+  mkdir -p ${LIGHT_THEME_DIR}
+  mkdir -p ${LOOKFEEL_DIR}
+  mkdir -p ${KVANTUM_DIR}
+  mkdir -p ${KONSOLE_DIR}
+
+  cp -r color-schemes/*.colors                                            ${SCHEMES_DIR}
+  cp -r Kvantum/*                                                         ${KVANTUM_DIR}
+  cp -r konsole/*                                                         ${KONSOLE_DIR}
+  cp -r plasma/desktoptheme/*                                             ${PLASMA_DIR}
+  cp -r color-schemes/Arch.colors                                         ${LIGHT_THEME_DIR}
+  cp -r color-schemes/ArchDark.colors                                     ${DARK_THEME_DIR}
+  cp -r plasma/look-and-feel/*                                            ${LOOKFEEL_DIR}
 
   '';
 
   meta = {
-    description = "My personal KDE plasma configuration";
-    homepage = "https://github.com/tnichols217/nixos-config";
+    description = "A Customized beautiful theme for KDE based distros";
+    homepage = "https://github.com/rkstrdee/Arch";
     # license = pkgs.stdenv.lib.licenses.gpl2;
     # platforms = pkgs.stdenv.lib.platforms.all;
   };
