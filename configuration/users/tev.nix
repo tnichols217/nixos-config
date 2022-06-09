@@ -26,7 +26,7 @@ in
         flameshot
         fswatch
         arc-kde-theme
-        # python3
+        python3
         (callPackage ./tev/arch-theme.nix {})
         (callPackage ./tev/plasma-config.nix {})
       ];
@@ -99,9 +99,9 @@ in
         enable = true;
       };
     };
-    gtk = {
-      enable = true;
+    # gtk = {
+    #   enable = true;
 
-    };
+    # };
   };
 }
