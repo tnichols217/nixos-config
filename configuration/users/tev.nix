@@ -26,8 +26,9 @@ in
         flameshot
         fswatch
         arc-kde-theme
-        python
+        python3
         (callPackage ./tev/arch-theme.nix {})
+        (callPackage ./tev/plasma-config.nix {})
       ];
     };
     programs = {
