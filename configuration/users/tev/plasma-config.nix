@@ -6,16 +6,7 @@ pkgs.stdenv.mkDerivation rec {
 
   src = ./plasma_config;
 
-  installPhase = let 
-    SCHEMES_DIR = "$PREFIX/color-schemes";
-    PLASMA_DIR = "$PREFIX/plasma/desktoptheme";
-    LOOKFEEL_DIR = "$PREFIX/plasma/look-and-feel";
-    KVANTUM_DIR = "$PREFIX/Kvantum";
-    KONSOLE_DIR = "$PREFIX/konsole";
-    SRC_DIR = src;
-    DARK_THEME_DIR = "${PLASMA_DIR}/Arch-dark/colors";
-    LIGHT_THEME_DIR = "${PLASMA_DIR}/Arch/colors";
-  in
+  installPhase =
   ''
 
   ${pkgs.python3}/bin/python export.py
