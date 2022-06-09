@@ -8,6 +8,7 @@ pkgs.stdenv.mkDerivation rec {
 
   installPhase =''
 
+  ${pkgs.python3}/bin/python export.py
 
   cp -r ./conf/* $out/
 
