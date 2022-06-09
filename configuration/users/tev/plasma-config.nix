@@ -9,6 +9,7 @@ pkgs.stdenv.mkDerivation rec {
   installPhase =''
 
   ${pkgs.python3}/bin/python export.py
+  ${pkgs.bash}/bin/bash config.sh ${pkgs.libsForQt5.kconfig}/bin/kwriteconfig5
 
   cp -r ./conf/* $out/
 
