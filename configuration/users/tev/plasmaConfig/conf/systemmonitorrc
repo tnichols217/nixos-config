@@ -1,7 +1,0 @@
-[TaskDialog]
-normalizeCPUUsage=true
-showCommandLineOptions=false
-showTooltips=true
-showTotals=true
-units=1
-updateIntervalMSecs=1000
