@@ -1,5 +1,5 @@
 
-{ app, name }:
+{ app, name, username }:
 {
   home-manager.users.${username} = {
     xdg = {
