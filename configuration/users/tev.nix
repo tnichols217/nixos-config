@@ -6,6 +6,7 @@ in
   imports =
   [
     ((import ./templates/persist.nix) { username = "${username}"; })
+    ./tev/packages.nix
   ];
 
   users.users.${username} = {
@@ -18,91 +19,13 @@ in
   home-manager.users.${username} = {
     home = {
       stateVersion = "21.11";
-      packages = with pkgs; [
-        obsidian
-        barrier
-        gnupg
-        konsole
-        flameshot
-        fswatch
-        python3
-        (callPackage ./tev/arch-theme.nix {})
-      ];
     };
     xdg = {
       configFile = {
         "." = {
           recursive = true;
-          source = (pkgs.callPackage ./tev/plasma-config.nix {});
+          source = (pkgs.callPackage ./tev/plasma-config/rc.nix {});
         };
-      };
-    };
-    programs = {
-      git = {
-        enable = true;
-        userName = "tnichols217";
-        userEmail = "62992267+tnichols217@users.noreply.github.com";
-        diff-so-fancy = {
-          enable = true;
-        };
-      };
-      fish = {
-        enable = true;
-        shellAliases = {
-          clip = "xclip -selection clipboard -r";
-          gac = "git add -A && git commit -am ";
-          gp = "git push ";
-          gpl = "git pull ";
-        };
-        plugins = [
-          {
-            name = "theme-bobthefish";
-            src = pkgs.fetchFromGitHub {
-              owner = "oh-my-fish";
-              repo = "theme-bobthefish";
-              rev = "14a6f2b317661e959e13a23870cf89274f867f12";
-              sha256 = "178wk0pz9vc6qn5c3my20yfr73s70kyd7zqf0xwr54q5l93rfplj";
-            };
-          }
-        ];
-      };
-      firefox = {
-        enable = true;
-        extensions = with pkgs.nur.repos.rycee.firefox-addons; [
-          https-everywhere
-          privacy-badger
-          darkreader
-          ublock-origin
-          sponsorblock
-          videospeed
-        ];
-      };
-      fzf = {
-        enable = true;
-        enableFishIntegration = true;
-        enableBashIntegration = true;
-      };
-      gh = {
-        enable = true;
-        enableGitCredentialHelper = true;
-      };
-      vscode = {
-        enable = true;
-        package = pkgs.vscodium;
-        userSettings = {
-          "[nix]"."editor.tabSize" = 2;
-          "editor.renderWhitespace" = "all";
-          "editor.fontFamily" = "'Fira code', 'Hack', 'monospace', monospace";
-          "editor.fontLigatures" = true;
-          "editor.guides.bracketPairs" = true;
-          "editor.bracketPairColorization.enabled" = true;
-          "window.autoDetectColorScheme" = true;
-          "editor.semanticHighlighting.enabled" = true;
-          "workbench.colorTheme" = "Default Dark+";
-        };
-      };
-      obs-studio = {
-        enable = true;
       };
     };
     gtk = {
