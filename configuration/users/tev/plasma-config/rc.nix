@@ -4,7 +4,7 @@ pkgs.stdenv.mkDerivation rec {
   pname = "plasma-config";
   version = "v1.0.0";
 
-  src = ./plasma_config;
+  src = ./rc;
 
   installPhase =''
 
