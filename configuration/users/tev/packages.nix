@@ -15,7 +15,7 @@ in
         python3
         nur.repos.wolfangaukang.stremio
         spotify
-        (callPackage ./tev/arch-theme.nix {})
+        (callPackage ./arch-theme.nix {})
       ];
     };
     programs = {
