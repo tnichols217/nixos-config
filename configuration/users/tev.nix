@@ -6,6 +6,7 @@ in
   imports =
   [
     ((import ./templates/persist.nix) { username = "${username}"; })
+    ((import ./tev/plasma-config/autostart.nix) { username = "${username}"; })
     ./tev/packages.nix
   ];
 
