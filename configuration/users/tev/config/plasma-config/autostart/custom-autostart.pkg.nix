@@ -1,4 +1,4 @@
-{ pkgs ? import <nixpkgs> {}, pkg ? "", exec ? "/usr/bin/", icon ? "", name ? "", path-config ? "", terminal ? "False", type ? "Application", ... }:
+{ pkgs ? import <nixpkgs> {}, pkg ? "", exec ? "/bin/", icon ? "", name ? "", path-config ? "", terminal ? "False", type ? "Application", ... }:
 pkgs.stdenv.mkDerivation 
 rec {
   pname = "generate-desktop-file";
