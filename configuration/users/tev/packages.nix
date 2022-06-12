@@ -1,7 +1,5 @@
+{ username }:
 { config, pkgs, ... }:
-let
-  username = "tev";
-in
 {
   home-manager.users.${username} = {
     home = {
@@ -11,11 +9,14 @@ in
         gnupg
         konsole
         flameshot
+        ibus
+        ibus-engines.uniemoji
+        ibus-engines.libpinyin
         fswatch
         python3
         nur.repos.wolfangaukang.stremio
         spotify
-        (callPackage ./arch-theme.nix {})
+        (callPackage ./arch-theme.pkg.nix {})
       ];
     };
     programs = {

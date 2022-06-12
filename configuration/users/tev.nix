@@ -6,8 +6,8 @@ in
   imports =
   [
     ((import ./templates/persist.nix) { username = "${username}"; })
-    ((import ./tev/plasma-config/autostart.nix) { username = "${username}"; })
-    ./tev/packages.nix
+    ((import ./tev/config.nix) { username = "${username}"; })
+    ((import ./tev/packages.nix) { username = "${username}"; })
   ];
 
   users.users.${username} = {
@@ -20,14 +20,6 @@ in
   home-manager.users.${username} = {
     home = {
       stateVersion = "21.11";
-    };
-    xdg = {
-      configFile = {
-        "." = {
-          recursive = true;
-          source = (pkgs.callPackage ./tev/plasma-config/rc.nix {});
-        };
-      };
     };
     gtk = {
       enable = true;
