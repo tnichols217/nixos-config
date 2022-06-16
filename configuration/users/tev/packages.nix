@@ -83,6 +83,19 @@
           "editor.semanticHighlighting.enabled" = true;
           "workbench.colorTheme" = "Default Dark+";
         };
+        # extensions = [
+        #   (pkgs.vscode-utils.buildVscodeMarketplaceExtension {
+        #     mktplcRef = {
+        #       name = "nix-env-selector";
+        #       publisher = "arrterian";
+        #       version = "1.0.7";
+        #       sha256 = "0e76885c9dbb6dca4eac8a75866ec372b948cc64a3a3845327d7c3ef6ba42a57";
+        #     };
+        #     meta = {
+        #       license = lib.licenses.mit;
+        #     };
+        #   })
+        # ];
       };
       obs-studio = {
         enable = true;
