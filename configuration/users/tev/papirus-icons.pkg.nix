@@ -1,5 +1,4 @@
-{ pkgs ? import <nixpkgs> {}, 
-  themes ? "Papirus*",
+{ pkgs ? import <nixpkgs> {},
   ...
 }:
 
@@ -18,7 +17,7 @@ pkgs.stdenv.mkDerivation rec {
 
   installPhase = ''
     mkdir -p $out/share/icons
-    cp -a ${themes} $out/share/icons
+    cp -a Papirus* $out/share/icons
   '';
 
   meta = with pkgs.lib; {
