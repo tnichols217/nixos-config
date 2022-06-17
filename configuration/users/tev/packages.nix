@@ -18,6 +18,7 @@
         spotify
         (callPackage ./arch-theme.pkg.nix {})
         (callPackage ./papirus-icons.pkg.nix {})
+        (callPackage ./kwin-scripts.pkg.nix {})
       ];
     };
     programs = {
