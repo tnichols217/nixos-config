@@ -4,12 +4,9 @@
             [
                 "Formats"
             ],
-            [
-                [
-                    "LANG",
-                    "en_SG.UTF-8"
-                ]
-            ]
+            {
+                "LANG": "en_SG.UTF-8"
+            }
         ]
     ],
     "/kglobalshortcutsrc": [
@@ -17,523 +14,205 @@
             [
                 "kcm_touchpad"
             ],
-            [
-                [
-                    "Disable Touchpad",
-                    "Touchpad Off,Touchpad Off,Disable Touchpad"
-                ],
-                [
-                    "Enable Touchpad",
-                    "Touchpad On,Touchpad On,Enable Touchpad"
-                ],
-                [
-                    "Toggle Touchpad",
-                    "Touchpad Toggle,Touchpad Toggle,Toggle Touchpad"
-                ],
-                [
-                    "_k_friendly_name",
-                    "Touchpad"
-                ]
-            ]
+            {
+                "Disable Touchpad": "Touchpad Off,Touchpad Off,Disable Touchpad",
+                "Enable Touchpad": "Touchpad On,Touchpad On,Enable Touchpad",
+                "Toggle Touchpad": "Touchpad Toggle,Touchpad Toggle,Toggle Touchpad",
+                "_k_friendly_name": "Touchpad"
+            }
         ],
         [
             [
                 "kded5"
             ],
-            [
-                [
-                    "Show System Activity",
-                    "Ctrl+Esc,Ctrl+Esc,Show System Activity"
-                ],
-                [
-                    "_k_friendly_name",
-                    "KDE Daemon"
-                ],
-                [
-                    "display",
-                    "Display\\tMeta+P,Display\\tMeta+P,Switch Display"
-                ]
-            ]
+            {
+                "Show System Activity": "Ctrl+Esc,Ctrl+Esc,Show System Activity",
+                "_k_friendly_name": "KDE Daemon",
+                "display": "Display\\tMeta+P,Display\\tMeta+P,Switch Display"
+            }
         ],
         [
             [
                 "khotkeys"
             ],
-            [
-                [
-                    "_k_friendly_name",
-                    "Custom Shortcuts Service"
-                ],
-                [
-                    "{2b622f4b-e7dd-4cb3-a362-b4bb59688264}",
-                    "Meta+Shift+S,none,open"
-                ],
-                [
-                    "{e793c702-98fa-4314-98a2-9aed7662ad13}",
-                    "Alt+Media Play,none,next"
-                ],
-                [
-                    "{f78700e1-1af3-4a00-8bfc-1abc66d68a91}",
-                    "Ctrl+Media Play,none,prev"
-                ]
-            ]
+            {
+                "_k_friendly_name": "Custom Shortcuts Service",
+                "{2b622f4b-e7dd-4cb3-a362-b4bb59688264}": "Meta+Shift+S,none,open",
+                "{e793c702-98fa-4314-98a2-9aed7662ad13}": "Alt+Media Play,none,next",
+                "{f78700e1-1af3-4a00-8bfc-1abc66d68a91}": "Ctrl+Media Play,none,prev"
+            }
         ],
         [
             [
                 "kmix"
             ],
-            [
-                [
-                    "_k_friendly_name",
-                    "Audio Volume"
-                ],
-                [
-                    "decrease_microphone_volume",
-                    "Microphone Volume Down,Microphone Volume Down,Decrease Microphone Volume"
-                ],
-                [
-                    "decrease_volume",
-                    "Volume Down,Volume Down,Decrease Volume"
-                ],
-                [
-                    "increase_microphone_volume",
-                    "Microphone Volume Up,Microphone Volume Up,Increase Microphone Volume"
-                ],
-                [
-                    "increase_volume",
-                    "Volume Up,Volume Up,Increase Volume"
-                ],
-                [
-                    "mic_mute",
-                    "Microphone Mute\\tMeta+Volume Mute,Microphone Mute\\tMeta+Volume Mute,Mute Microphone"
-                ],
-                [
-                    "mute",
-                    "Volume Mute,Volume Mute,Mute"
-                ]
-            ]
+            {
+                "_k_friendly_name": "Audio Volume",
+                "decrease_microphone_volume": "Microphone Volume Down,Microphone Volume Down,Decrease Microphone Volume",
+                "decrease_volume": "Volume Down,Volume Down,Decrease Volume",
+                "increase_microphone_volume": "Microphone Volume Up,Microphone Volume Up,Increase Microphone Volume",
+                "increase_volume": "Volume Up,Volume Up,Increase Volume",
+                "mic_mute": "Microphone Mute\\tMeta+Volume Mute,Microphone Mute\\tMeta+Volume Mute,Mute Microphone",
+                "mute": "Volume Mute,Volume Mute,Mute"
+            }
         ],
         [
             [
                 "ksmserver"
             ],
-            [
-                [
-                    "Halt Without Confirmation",
-                    "none,,Halt Without Confirmation"
-                ],
-                [
-                    "Lock Session",
-                    "Meta+L\\tCtrl+Alt+L\\tScreensaver,Meta+L\\tCtrl+Alt+L\\tScreensaver,Lock Session"
-                ],
-                [
-                    "Log Out",
-                    "Ctrl+Alt+Del,Ctrl+Alt+Del,Log Out"
-                ],
-                [
-                    "Log Out Without Confirmation",
-                    "none,,Log Out Without Confirmation"
-                ],
-                [
-                    "Reboot Without Confirmation",
-                    "none,,Reboot Without Confirmation"
-                ],
-                [
-                    "_k_friendly_name",
-                    "Session Management"
-                ]
-            ]
+            {
+                "Halt Without Confirmation": "none,,Halt Without Confirmation",
+                "Lock Session": "Meta+L\\tCtrl+Alt+L\\tScreensaver,Meta+L\\tCtrl+Alt+L\\tScreensaver,Lock Session",
+                "Log Out": "Ctrl+Alt+Del,Ctrl+Alt+Del,Log Out",
+                "Log Out Without Confirmation": "none,,Log Out Without Confirmation",
+                "Reboot Without Confirmation": "none,,Reboot Without Confirmation",
+                "_k_friendly_name": "Session Management"
+            }
         ],
         [
             [
                 "kwin"
             ],
-            [
-                [
-                    "Expose",
-                    "Meta+Tab\\tCtrl+F9,Ctrl+F9,Toggle Present Windows (Current desktop)"
-                ],
-                [
-                    "ExposeAll",
-                    "Meta+Shift+Tab\\tLaunch (C)\\tCtrl+F10,Ctrl+F10\\tLaunch (C),Toggle Present Windows (All desktops)"
-                ],
-                [
-                    "ExposeClass",
-                    "Ctrl+F7,Ctrl+F7,Toggle Present Windows (Window class)"
-                ],
-                [
-                    "Kill Window",
-                    "Ctrl+Alt+Esc,Ctrl+Alt+Esc,Kill Window"
-                ],
-                [
-                    "Show Desktop",
-                    "Meta+D,Meta+D,Show Desktop"
-                ],
-                [
-                    "ShowDesktopGrid",
-                    "Ctrl+F8,Ctrl+F8,Show Desktop Grid"
-                ],
-                [
-                    "Suspend Compositing",
-                    "Alt+Shift+F12,Alt+Shift+F12,Suspend Compositing"
-                ],
-                [
-                    "Switch One Desktop Down",
-                    "Meta+Ctrl+@\\tMeta+Down,Meta+Ctrl+Down,Switch One Desktop Down"
-                ],
-                [
-                    "Switch One Desktop Up",
-                    "Meta+Up\\tMeta+Ctrl+!,Meta+Ctrl+Up,Switch One Desktop Up"
-                ],
-                [
-                    "Switch One Desktop to the Left",
-                    "Meta+Left\\tMeta+Ctrl+2,Meta+Ctrl+Left,Switch One Desktop to the Left"
-                ],
-                [
-                    "Switch One Desktop to the Right",
-                    "Meta+Right\\tMeta+Ctrl+1,Meta+Ctrl+Right,Switch One Desktop to the Right"
-                ],
-                [
-                    "Switch Window Down",
-                    "none,Meta+Alt+Down,Switch to Window Below"
-                ],
-                [
-                    "Switch Window Left",
-                    "none,Meta+Alt+Left,Switch to Window to the Left"
-                ],
-                [
-                    "Switch Window Right",
-                    "none,Meta+Alt+Right,Switch to Window to the Right"
-                ],
-                [
-                    "Switch Window Up",
-                    "none,Meta+Alt+Up,Switch to Window Above"
-                ],
-                [
-                    "Walk Through Windows",
-                    "Alt+Tab,Alt+Tab,Walk Through Windows"
-                ],
-                [
-                    "Walk Through Windows (Reverse)",
-                    "Alt+Shift+Backtab,Alt+Shift+Backtab,Walk Through Windows (Reverse)"
-                ],
-                [
-                    "Walk Through Windows of Current Application",
-                    "Alt+`,Alt+`,Walk Through Windows of Current Application"
-                ],
-                [
-                    "Walk Through Windows of Current Application (Reverse)",
-                    "Alt+~,Alt+~,Walk Through Windows of Current Application (Reverse)"
-                ],
-                [
-                    "Window Above Other Windows",
-                    "Ctrl+Alt+Shift+Up,,Keep Window Above Others"
-                ],
-                [
-                    "Window Below Other Windows",
-                    "Ctrl+Alt+Shift+Down,,Keep Window Below Others"
-                ],
-                [
-                    "Window Close",
-                    "Alt+F4,Alt+F4,Close Window"
-                ],
-                [
-                    "Window Maximize",
-                    "Meta+PgUp\\tMeta+],Meta+PgUp,Maximize Window"
-                ],
-                [
-                    "Window On All Desktops",
-                    "Ctrl+Alt+Shift+Right,,Keep Window on All Desktops"
-                ],
-                [
-                    "Window One Desktop Down",
-                    "Meta+Ctrl+Shift+Down\\tMeta+Ctrl+Down\\tMeta+Ctrl+Alt+@,Meta+Ctrl+Shift+Down,Window One Desktop Down"
-                ],
-                [
-                    "Window One Desktop Up",
-                    "Meta+Ctrl+Shift+Up\\tMeta+Ctrl+Up\\tMeta+Ctrl+Alt+!,Meta+Ctrl+Shift+Up,Window One Desktop Up"
-                ],
-                [
-                    "Window One Desktop to the Left",
-                    "Meta+Ctrl+Shift+Left\\tMeta+Ctrl+Alt+2\\tMeta+Ctrl+Left,Meta+Ctrl+Shift+Left,Window One Desktop to the Left"
-                ],
-                [
-                    "Window One Desktop to the Right",
-                    "Meta+Ctrl+Shift+Right\\tMeta+Ctrl+Right\\tMeta+Ctrl+Alt+1,Meta+Ctrl+Shift+Right,Window One Desktop to the Right"
-                ],
-                [
-                    "Window Operations Menu",
-                    "Alt+F3,Alt+F3,Window Operations Menu"
-                ],
-                [
-                    "Window Quick Tile Bottom",
-                    "Meta+Alt+Down,Meta+Down,Quick Tile Window to the Bottom"
-                ],
-                [
-                    "Window Quick Tile Left",
-                    "Meta+Alt+Left,Meta+Left,Quick Tile Window to the Left"
-                ],
-                [
-                    "Window Quick Tile Right",
-                    "Meta+Alt+Right,Meta+Right,Quick Tile Window to the Right"
-                ],
-                [
-                    "Window Quick Tile Top",
-                    "Meta+Alt+Up,Meta+Up,Quick Tile Window to the Top"
-                ],
-                [
-                    "Window to Next Screen",
-                    "Meta+Shift+Right,Meta+Shift+Right,Window to Next Screen"
-                ],
-                [
-                    "Window to Previous Screen",
-                    "Meta+Shift+Left,Meta+Shift+Left,Window to Previous Screen"
-                ],
-                [
-                    "_k_friendly_name",
-                    "KWin"
-                ],
-                [
-                    "view_actual_size",
-                    "Meta+0,Meta+0,Actual Size"
-                ],
-                [
-                    "view_zoom_in",
-                    "Meta+=,Meta+=,Zoom Out"
-                ],
-                [
-                    "view_zoom_out",
-                    "Meta+-,Meta+-,Zoom Out"
-                ]
-            ]
+            {
+                "Expose": "Meta+Tab\\tCtrl+F9,Ctrl+F9,Toggle Present Windows (Current desktop)",
+                "ExposeAll": "Meta+Shift+Tab\\tLaunch (C)\\tCtrl+F10,Ctrl+F10\\tLaunch (C),Toggle Present Windows (All desktops)",
+                "ExposeClass": "Ctrl+F7,Ctrl+F7,Toggle Present Windows (Window class)",
+                "Kill Window": "Ctrl+Alt+Esc,Ctrl+Alt+Esc,Kill Window",
+                "Show Desktop": "Meta+D,Meta+D,Show Desktop",
+                "ShowDesktopGrid": "Ctrl+F8,Ctrl+F8,Show Desktop Grid",
+                "Suspend Compositing": "Alt+Shift+F12,Alt+Shift+F12,Suspend Compositing",
+                "Switch One Desktop Down": "Meta+Ctrl+@\\tMeta+Down,Meta+Ctrl+Down,Switch One Desktop Down",
+                "Switch One Desktop Up": "Meta+Up\\tMeta+Ctrl+!,Meta+Ctrl+Up,Switch One Desktop Up",
+                "Switch One Desktop to the Left": "Meta+Left\\tMeta+Ctrl+2,Meta+Ctrl+Left,Switch One Desktop to the Left",
+                "Switch One Desktop to the Right": "Meta+Right\\tMeta+Ctrl+1,Meta+Ctrl+Right,Switch One Desktop to the Right",
+                "Switch Window Down": "none,Meta+Alt+Down,Switch to Window Below",
+                "Switch Window Left": "none,Meta+Alt+Left,Switch to Window to the Left",
+                "Switch Window Right": "none,Meta+Alt+Right,Switch to Window to the Right",
+                "Switch Window Up": "none,Meta+Alt+Up,Switch to Window Above",
+                "Walk Through Windows": "Alt+Tab,Alt+Tab,Walk Through Windows",
+                "Walk Through Windows (Reverse)": "Alt+Shift+Backtab,Alt+Shift+Backtab,Walk Through Windows (Reverse)",
+                "Walk Through Windows of Current Application": "Alt+`,Alt+`,Walk Through Windows of Current Application",
+                "Walk Through Windows of Current Application (Reverse)": "Alt+~,Alt+~,Walk Through Windows of Current Application (Reverse)",
+                "Window Above Other Windows": "Ctrl+Alt+Shift+Up,,Keep Window Above Others",
+                "Window Below Other Windows": "Ctrl+Alt+Shift+Down,,Keep Window Below Others",
+                "Window Close": "Alt+F4,Alt+F4,Close Window",
+                "Window Maximize": "Meta+PgUp\\tMeta+],Meta+PgUp,Maximize Window",
+                "Window On All Desktops": "Ctrl+Alt+Shift+Right,,Keep Window on All Desktops",
+                "Window One Desktop Down": "Meta+Ctrl+Shift+Down\\tMeta+Ctrl+Down\\tMeta+Ctrl+Alt+@,Meta+Ctrl+Shift+Down,Window One Desktop Down",
+                "Window One Desktop Up": "Meta+Ctrl+Shift+Up\\tMeta+Ctrl+Up\\tMeta+Ctrl+Alt+!,Meta+Ctrl+Shift+Up,Window One Desktop Up",
+                "Window One Desktop to the Left": "Meta+Ctrl+Shift+Left\\tMeta+Ctrl+Alt+2\\tMeta+Ctrl+Left,Meta+Ctrl+Shift+Left,Window One Desktop to the Left",
+                "Window One Desktop to the Right": "Meta+Ctrl+Shift+Right\\tMeta+Ctrl+Right\\tMeta+Ctrl+Alt+1,Meta+Ctrl+Shift+Right,Window One Desktop to the Right",
+                "Window Operations Menu": "Alt+F3,Alt+F3,Window Operations Menu",
+                "Window Quick Tile Bottom": "Meta+Alt+Down,Meta+Down,Quick Tile Window to the Bottom",
+                "Window Quick Tile Left": "Meta+Alt+Left,Meta+Left,Quick Tile Window to the Left",
+                "Window Quick Tile Right": "Meta+Alt+Right,Meta+Right,Quick Tile Window to the Right",
+                "Window Quick Tile Top": "Meta+Alt+Up,Meta+Up,Quick Tile Window to the Top",
+                "Window to Next Screen": "Meta+Shift+Right,Meta+Shift+Right,Window to Next Screen",
+                "Window to Previous Screen": "Meta+Shift+Left,Meta+Shift+Left,Window to Previous Screen",
+                "_k_friendly_name": "KWin",
+                "view_actual_size": "Meta+0,Meta+0,Actual Size",
+                "view_zoom_in": "Meta+=,Meta+=,Zoom Out",
+                "view_zoom_out": "Meta+-,Meta+-,Zoom Out"
+            }
         ],
         [
             [
                 "mediacontrol"
             ],
-            [
-                [
-                    "_k_friendly_name",
-                    "Media Controller"
-                ],
-                [
-                    "mediavolumedown",
-                    "none,,Media volume down"
-                ],
-                [
-                    "mediavolumeup",
-                    "none,,Media volume up"
-                ],
-                [
-                    "nextmedia",
-                    "Media Next,Media Next,Media playback next"
-                ],
-                [
-                    "pausemedia",
-                    "Media Pause,Media Pause,Pause media playback"
-                ],
-                [
-                    "playmedia",
-                    "none,,Play media playback"
-                ],
-                [
-                    "playpausemedia",
-                    "Media Play,Media Play,Play/Pause media playback"
-                ],
-                [
-                    "previousmedia",
-                    "Media Previous,Media Previous,Media playback previous"
-                ],
-                [
-                    "stopmedia",
-                    "Media Stop,Media Stop,Stop media playback"
-                ]
-            ]
+            {
+                "_k_friendly_name": "Media Controller",
+                "mediavolumedown": "none,,Media volume down",
+                "mediavolumeup": "none,,Media volume up",
+                "nextmedia": "Media Next,Media Next,Media playback next",
+                "pausemedia": "Media Pause,Media Pause,Pause media playback",
+                "playmedia": "none,,Play media playback",
+                "playpausemedia": "Media Play,Media Play,Play/Pause media playback",
+                "previousmedia": "Media Previous,Media Previous,Media playback previous",
+                "stopmedia": "Media Stop,Media Stop,Stop media playback"
+            }
         ],
         [
             [
                 "org.kde.dolphin.desktop"
             ],
-            [
-                [
-                    "_k_friendly_name",
-                    "Dolphin"
-                ],
-                [
-                    "_launch",
-                    "Meta+E,Meta+E,Dolphin"
-                ]
-            ]
+            {
+                "_k_friendly_name": "Dolphin",
+                "_launch": "Meta+E,Meta+E,Dolphin"
+            }
         ],
         [
             [
                 "org.kde.konsole.desktop"
             ],
-            [
-                [
-                    "_k_friendly_name",
-                    "Konsole"
-                ],
-                [
-                    "_launch",
-                    "Ctrl+Alt+T,none,Konsole"
-                ]
-            ]
+            {
+                "_k_friendly_name": "Konsole",
+                "_launch": "Ctrl+Alt+T,none,Konsole"
+            }
         ],
         [
             [
                 "org.kde.krunner.desktop"
             ],
-            [
-                [
-                    "RunClipboard",
-                    "Alt+Shift+F2,Alt+Shift+F2,Run command on clipboard contents"
-                ],
-                [
-                    "_k_friendly_name",
-                    "KRunner"
-                ],
-                [
-                    "_launch",
-                    "Alt+Space\\tAlt+F2\\tSearch,Alt+Space\\tAlt+F2\\tSearch,KRunner"
-                ]
-            ]
+            {
+                "RunClipboard": "Alt+Shift+F2,Alt+Shift+F2,Run command on clipboard contents",
+                "_k_friendly_name": "KRunner",
+                "_launch": "Alt+Space\\tAlt+F2\\tSearch,Alt+Space\\tAlt+F2\\tSearch,KRunner"
+            }
         ],
         [
             [
                 "org.kde.plasma.emojier.desktop"
             ],
-            [
-                [
-                    "_k_friendly_name",
-                    "Emoji Selector"
-                ],
-                [
-                    "_launch",
-                    "Meta+.,Meta+.,Emoji Selector"
-                ]
-            ]
+            {
+                "_k_friendly_name": "Emoji Selector",
+                "_launch": "Meta+.,Meta+.,Emoji Selector"
+            }
         ],
         [
             [
                 "org_kde_powerdevil"
             ],
-            [
-                [
-                    "Decrease Keyboard Brightness",
-                    "Keyboard Brightness Down,Keyboard Brightness Down,Decrease Keyboard Brightness"
-                ],
-                [
-                    "Decrease Screen Brightness",
-                    "Monitor Brightness Down,Monitor Brightness Down,Decrease Screen Brightness"
-                ],
-                [
-                    "Hibernate",
-                    "Hibernate,Hibernate,Hibernate"
-                ],
-                [
-                    "Increase Keyboard Brightness",
-                    "Keyboard Brightness Up,Keyboard Brightness Up,Increase Keyboard Brightness"
-                ],
-                [
-                    "Increase Screen Brightness",
-                    "Monitor Brightness Up,Monitor Brightness Up,Increase Screen Brightness"
-                ],
-                [
-                    "PowerDown",
-                    "Power Down,Power Down,Power Down"
-                ],
-                [
-                    "PowerOff",
-                    "Power Off,Power Off,Power Off"
-                ],
-                [
-                    "Sleep",
-                    "Sleep,Sleep,Suspend"
-                ],
-                [
-                    "Toggle Keyboard Backlight",
-                    "Keyboard Light On/Off,Keyboard Light On/Off,Toggle Keyboard Backlight"
-                ],
-                [
-                    "_k_friendly_name",
-                    "Power Management"
-                ]
-            ]
+            {
+                "Decrease Keyboard Brightness": "Keyboard Brightness Down,Keyboard Brightness Down,Decrease Keyboard Brightness",
+                "Decrease Screen Brightness": "Monitor Brightness Down,Monitor Brightness Down,Decrease Screen Brightness",
+                "Hibernate": "Hibernate,Hibernate,Hibernate",
+                "Increase Keyboard Brightness": "Keyboard Brightness Up,Keyboard Brightness Up,Increase Keyboard Brightness",
+                "Increase Screen Brightness": "Monitor Brightness Up,Monitor Brightness Up,Increase Screen Brightness",
+                "PowerDown": "Power Down,Power Down,Power Down",
+                "PowerOff": "Power Off,Power Off,Power Off",
+                "Sleep": "Sleep,Sleep,Suspend",
+                "Toggle Keyboard Backlight": "Keyboard Light On/Off,Keyboard Light On/Off,Toggle Keyboard Backlight",
+                "_k_friendly_name": "Power Management"
+            }
         ],
         [
             [
                 "plasmashell"
             ],
-            [
-                [
-                    "_k_friendly_name",
-                    "Plasma"
-                ],
-                [
-                    "activate task manager entry 1",
-                    "Meta+1,Meta+1,Activate Task Manager Entry 1"
-                ],
-                [
-                    "activate task manager entry 10",
-                    "none,Meta+0,Activate Task Manager Entry 10"
-                ],
-                [
-                    "activate task manager entry 2",
-                    "Meta+2,Meta+2,Activate Task Manager Entry 2"
-                ],
-                [
-                    "activate task manager entry 3",
-                    "Meta+3,Meta+3,Activate Task Manager Entry 3"
-                ],
-                [
-                    "activate task manager entry 4",
-                    "Meta+4,Meta+4,Activate Task Manager Entry 4"
-                ],
-                [
-                    "activate task manager entry 5",
-                    "Meta+5,Meta+5,Activate Task Manager Entry 5"
-                ],
-                [
-                    "activate task manager entry 6",
-                    "Meta+6,Meta+6,Activate Task Manager Entry 6"
-                ],
-                [
-                    "activate task manager entry 7",
-                    "Meta+7,Meta+7,Activate Task Manager Entry 7"
-                ],
-                [
-                    "activate task manager entry 8",
-                    "Meta+8,Meta+8,Activate Task Manager Entry 8"
-                ],
-                [
-                    "activate task manager entry 9",
-                    "Meta+9,Meta+9,Activate Task Manager Entry 9"
-                ],
-                [
-                    "show dashboard",
-                    "Ctrl+F12,Ctrl+F12,Show Desktop"
-                ],
-                [
-                    "show-on-mouse-pos",
-                    "Meta+V,Meta+V,Open Klipper at Mouse Position"
-                ]
-            ]
+            {
+                "_k_friendly_name": "Plasma",
+                "activate task manager entry 1": "Meta+1,Meta+1,Activate Task Manager Entry 1",
+                "activate task manager entry 10": "none,Meta+0,Activate Task Manager Entry 10",
+                "activate task manager entry 2": "Meta+2,Meta+2,Activate Task Manager Entry 2",
+                "activate task manager entry 3": "Meta+3,Meta+3,Activate Task Manager Entry 3",
+                "activate task manager entry 4": "Meta+4,Meta+4,Activate Task Manager Entry 4",
+                "activate task manager entry 5": "Meta+5,Meta+5,Activate Task Manager Entry 5",
+                "activate task manager entry 6": "Meta+6,Meta+6,Activate Task Manager Entry 6",
+                "activate task manager entry 7": "Meta+7,Meta+7,Activate Task Manager Entry 7",
+                "activate task manager entry 8": "Meta+8,Meta+8,Activate Task Manager Entry 8",
+                "activate task manager entry 9": "Meta+9,Meta+9,Activate Task Manager Entry 9",
+                "show dashboard": "Ctrl+F12,Ctrl+F12,Show Desktop",
+                "show-on-mouse-pos": "Meta+V,Meta+V,Open Klipper at Mouse Position"
+            }
         ],
         [
             [
                 "systemsettings.desktop"
             ],
-            [
-                [
-                    "_k_friendly_name",
-                    "System Settings"
-                ],
-                [
-                    "_launch",
-                    "Tools,Tools,System Settings"
-                ]
-            ]
+            {
+                "_k_friendly_name": "System Settings",
+                "_launch": "Tools,Tools,System Settings"
+            }
         ]
     ],
     "/kwinrc": [
@@ -541,342 +220,144 @@
             [
                 "Compositing"
             ],
-            [
-                [
-                    "GLCore",
-                    "true"
-                ],
-                [
-                    "OpenGLIsUnsafe",
-                    "false"
-                ]
-            ]
+            {
+                "GLCore": "true",
+                "OpenGLIsUnsafe": "false"
+            }
         ],
         [
             [
                 "Desktops"
             ],
-            [
-                [
-                    "Id_1",
-                    "5d9883a3-5318-4c83-85db-70712ba16bb2"
-                ],
-                [
-                    "Id_10",
-                    "9b0afee8-b349-4ad5-ae58-2188950efe1c"
-                ],
-                [
-                    "Id_11",
-                    "6e72eacc-55c6-4792-b5c9-f5ed1a212afe"
-                ],
-                [
-                    "Id_12",
-                    "031fdbd2-af14-4565-9aca-27262b5a29ec"
-                ],
-                [
-                    "Id_13",
-                    "28a903a9-7aa6-4fa8-ab1d-0979d8d65d0e"
-                ],
-                [
-                    "Id_14",
-                    "6cd1f5e0-5e1b-4f62-817f-1d84dcf54170"
-                ],
-                [
-                    "Id_15",
-                    "47db55cd-de5c-4cf8-80a9-fd402b8a0f0a"
-                ],
-                [
-                    "Id_16",
-                    "cd51710b-9d9b-4c4c-8ec6-ba7121a53b40"
-                ],
-                [
-                    "Id_17",
-                    "88e28943-bdcb-44c9-83e9-9dc03154ef9b"
-                ],
-                [
-                    "Id_18",
-                    "38a8fb28-c744-43d0-9c90-2f97c5bed6f6"
-                ],
-                [
-                    "Id_19",
-                    "972d14b5-2582-4c50-bb8b-c5fb2b2d2959"
-                ],
-                [
-                    "Id_2",
-                    "3253195e-4655-451c-8cd3-b5e7a3b5a6eb"
-                ],
-                [
-                    "Id_20",
-                    "fcd2e084-8cd8-443e-9a9e-6e5a87404d7b"
-                ],
-                [
-                    "Id_3",
-                    "d50e4bf7-8290-4dfa-88e4-c1f3d225ab09"
-                ],
-                [
-                    "Id_4",
-                    "bcb3771d-be99-45e4-959b-4288a0004acf"
-                ],
-                [
-                    "Id_5",
-                    "548cdecb-03f4-4bf0-8094-7cdabbfc748b"
-                ],
-                [
-                    "Id_6",
-                    "22e8b3c8-ccce-4685-a137-036bc71ee230"
-                ],
-                [
-                    "Id_7",
-                    "1d6d6a15-8237-4a9d-8298-47acfc0fe056"
-                ],
-                [
-                    "Id_8",
-                    "03edf17b-a4b4-4979-8d5a-ab5fe0fac7c3"
-                ],
-                [
-                    "Id_9",
-                    "43e8a1f9-6936-40e7-8651-20840064f61a"
-                ],
-                [
-                    "Name_10",
-                    "10"
-                ],
-                [
-                    "Name_11",
-                    "11"
-                ],
-                [
-                    "Name_12",
-                    "12"
-                ],
-                [
-                    "Name_13",
-                    "13"
-                ],
-                [
-                    "Name_14",
-                    "14"
-                ],
-                [
-                    "Name_15",
-                    "15"
-                ],
-                [
-                    "Name_16",
-                    "16"
-                ],
-                [
-                    "Name_17",
-                    "17"
-                ],
-                [
-                    "Name_18",
-                    "18"
-                ],
-                [
-                    "Name_19",
-                    "19"
-                ],
-                [
-                    "Name_2",
-                    "2"
-                ],
-                [
-                    "Name_20",
-                    "20"
-                ],
-                [
-                    "Name_3",
-                    "3"
-                ],
-                [
-                    "Name_4",
-                    "4"
-                ],
-                [
-                    "Name_5",
-                    "5"
-                ],
-                [
-                    "Name_6",
-                    "6"
-                ],
-                [
-                    "Name_7",
-                    "7"
-                ],
-                [
-                    "Name_8",
-                    "8"
-                ],
-                [
-                    "Name_9",
-                    "9"
-                ],
-                [
-                    "Number",
-                    "20"
-                ],
-                [
-                    "Rows",
-                    "4"
-                ]
-            ]
+            {
+                "Id_1": "5d9883a3-5318-4c83-85db-70712ba16bb2",
+                "Id_10": "9b0afee8-b349-4ad5-ae58-2188950efe1c",
+                "Id_11": "6e72eacc-55c6-4792-b5c9-f5ed1a212afe",
+                "Id_12": "031fdbd2-af14-4565-9aca-27262b5a29ec",
+                "Id_13": "28a903a9-7aa6-4fa8-ab1d-0979d8d65d0e",
+                "Id_14": "6cd1f5e0-5e1b-4f62-817f-1d84dcf54170",
+                "Id_15": "47db55cd-de5c-4cf8-80a9-fd402b8a0f0a",
+                "Id_16": "cd51710b-9d9b-4c4c-8ec6-ba7121a53b40",
+                "Id_17": "88e28943-bdcb-44c9-83e9-9dc03154ef9b",
+                "Id_18": "38a8fb28-c744-43d0-9c90-2f97c5bed6f6",
+                "Id_19": "972d14b5-2582-4c50-bb8b-c5fb2b2d2959",
+                "Id_2": "3253195e-4655-451c-8cd3-b5e7a3b5a6eb",
+                "Id_20": "fcd2e084-8cd8-443e-9a9e-6e5a87404d7b",
+                "Id_3": "d50e4bf7-8290-4dfa-88e4-c1f3d225ab09",
+                "Id_4": "bcb3771d-be99-45e4-959b-4288a0004acf",
+                "Id_5": "548cdecb-03f4-4bf0-8094-7cdabbfc748b",
+                "Id_6": "22e8b3c8-ccce-4685-a137-036bc71ee230",
+                "Id_7": "1d6d6a15-8237-4a9d-8298-47acfc0fe056",
+                "Id_8": "03edf17b-a4b4-4979-8d5a-ab5fe0fac7c3",
+                "Id_9": "43e8a1f9-6936-40e7-8651-20840064f61a",
+                "Name_10": "10",
+                "Name_11": "11",
+                "Name_12": "12",
+                "Name_13": "13",
+                "Name_14": "14",
+                "Name_15": "15",
+                "Name_16": "16",
+                "Name_17": "17",
+                "Name_18": "18",
+                "Name_19": "19",
+                "Name_2": "2",
+                "Name_20": "20",
+                "Name_3": "3",
+                "Name_4": "4",
+                "Name_5": "5",
+                "Name_6": "6",
+                "Name_7": "7",
+                "Name_8": "8",
+                "Name_9": "9",
+                "Number": "20",
+                "Rows": "4"
+            }
         ],
         [
             [
                 "Effect-Blur"
             ],
-            [
-                [
-                    "BlurStrength",
-                    "3"
-                ],
-                [
-                    "NoiseStrength",
-                    "0"
-                ]
-            ]
+            {
+                "BlurStrength": "3",
+                "NoiseStrength": "0"
+            }
         ],
         [
             [
                 "Effect-PresentWindows"
             ],
-            [
-                [
-                    "BorderActivateAll",
-                    "9"
-                ]
-            ]
+            {
+                "BorderActivateAll": "9"
+            }
         ],
         [
             [
                 "Effect-Slide"
             ],
-            [
-                [
-                    "SlideDocks",
-                    "true"
-                ]
-            ]
+            {
+                "SlideDocks": "true"
+            }
         ],
         [
             [
                 "Effect-Wobbly"
             ],
-            [
-                [
-                    "AdvancedMode",
-                    "true"
-                ],
-                [
-                    "Drag",
-                    "85"
-                ],
-                [
-                    "Stiffness",
-                    "10"
-                ],
-                [
-                    "WobblynessLevel",
-                    "1"
-                ]
-            ]
+            {
+                "AdvancedMode": "true",
+                "Drag": "85",
+                "Stiffness": "10",
+                "WobblynessLevel": "1"
+            }
         ],
         [
             [
                 "Plugins"
             ],
-            [
-                [
-                    "blurEnabled",
-                    "true"
-                ],
-                [
-                    "contrastEnabled",
-                    "false"
-                ],
-                [
-                    "kwin4_effect_dimscreenEnabled",
-                    "true"
-                ],
-                [
-                    "kwin4_effect_translucencyEnabled",
-                    "true"
-                ],
-                [
-                    "screenedgeEnabled",
-                    "false"
-                ],
-                [
-                    "wobblywindowsEnabled",
-                    "true"
-                ]
-            ]
+            {
+                "blurEnabled": "true",
+                "contrastEnabled": "false",
+                "kwin4_effect_dimscreenEnabled": "true",
+                "kwin4_effect_translucencyEnabled": "true",
+                "screenedgeEnabled": "false",
+                "wobblywindowsEnabled": "true"
+            }
         ],
         [
             [
                 "Script-desktopchangeosd"
             ],
-            [
-                [
-                    "PopupHideDelay",
-                    "200"
-                ]
-            ]
+            {
+                "PopupHideDelay": "200"
+            }
         ],
         [
             [
                 "TabBox"
             ],
-            [
-                [
-                    "BorderActivate",
-                    "9"
-                ],
-                [
-                    "LayoutName",
-                    "MediumRoundedDark"
-                ]
-            ]
+            {
+                "BorderActivate": "9",
+                "LayoutName": "MediumRoundedDark"
+            }
         ],
         [
             [
                 "Windows"
             ],
-            [
-                [
-                    "ElectricBorderCooldown",
-                    "150"
-                ],
-                [
-                    "ElectricBorderDelay",
-                    "100"
-                ]
-            ]
+            {
+                "ElectricBorderCooldown": "150",
+                "ElectricBorderDelay": "100"
+            }
         ],
         [
             [
                 "org.kde.kdecoration2"
             ],
-            [
-                [
-                    "BorderSize",
-                    "None"
-                ],
-                [
-                    "BorderSizeAuto",
-                    "false"
-                ],
-                [
-                    "library",
-                    "org.kde.breeze"
-                ],
-                [
-                    "theme",
-                    "__aurorae__svg__Sweet-Dark-transparent"
-                ]
-            ]
+            {
+                "BorderSize": "None",
+                "BorderSizeAuto": "false",
+                "library": "org.kde.breeze",
+                "theme": "__aurorae__svg__Sweet-Dark-transparent"
+            }
         ]
     ],
     "/powermanagementprofilesrc": [
@@ -884,222 +365,144 @@
             [
                 "AC"
             ],
-            [
-                [
-                    "icon",
-                    "battery-charging"
-                ]
-            ]
+            {
+                "icon": "battery-charging"
+            }
         ],
         [
             [
                 "AC",
                 "DPMSControl"
             ],
-            [
-                [
-                    "idleTime",
-                    "600"
-                ],
-                [
-                    "lockBeforeTurnOff",
-                    "0"
-                ]
-            ]
+            {
+                "idleTime": "600",
+                "lockBeforeTurnOff": "0"
+            }
         ],
         [
             [
                 "AC",
                 "DimDisplay"
             ],
-            [
-                [
-                    "idleTime",
-                    "300000"
-                ]
-            ]
+            {
+                "idleTime": "300000"
+            }
         ],
         [
             [
                 "AC",
                 "HandleButtonEvents"
             ],
-            [
-                [
-                    "lidAction",
-                    "1"
-                ],
-                [
-                    "powerButtonAction",
-                    "16"
-                ],
-                [
-                    "powerDownAction",
-                    "16"
-                ]
-            ]
+            {
+                "lidAction": "1",
+                "powerButtonAction": "16",
+                "powerDownAction": "16"
+            }
         ],
         [
             [
                 "Battery"
             ],
-            [
-                [
-                    "icon",
-                    "battery-060"
-                ]
-            ]
+            {
+                "icon": "battery-060"
+            }
         ],
         [
             [
                 "Battery",
                 "DPMSControl"
             ],
-            [
-                [
-                    "idleTime",
-                    "300"
-                ],
-                [
-                    "lockBeforeTurnOff",
-                    "0"
-                ]
-            ]
+            {
+                "idleTime": "300",
+                "lockBeforeTurnOff": "0"
+            }
         ],
         [
             [
                 "Battery",
                 "DimDisplay"
             ],
-            [
-                [
-                    "idleTime",
-                    "120000"
-                ]
-            ]
+            {
+                "idleTime": "120000"
+            }
         ],
         [
             [
                 "Battery",
                 "HandleButtonEvents"
             ],
-            [
-                [
-                    "lidAction",
-                    "1"
-                ],
-                [
-                    "powerButtonAction",
-                    "16"
-                ],
-                [
-                    "powerDownAction",
-                    "16"
-                ]
-            ]
+            {
+                "lidAction": "1",
+                "powerButtonAction": "16",
+                "powerDownAction": "16"
+            }
         ],
         [
             [
                 "Battery",
                 "SuspendSession"
             ],
-            [
-                [
-                    "idleTime",
-                    "600000"
-                ],
-                [
-                    "suspendType",
-                    "1"
-                ]
-            ]
+            {
+                "idleTime": "600000",
+                "suspendType": "1"
+            }
         ],
         [
             [
                 "LowBattery"
             ],
-            [
-                [
-                    "icon",
-                    "battery-low"
-                ]
-            ]
+            {
+                "icon": "battery-low"
+            }
         ],
         [
             [
                 "LowBattery",
                 "BrightnessControl"
             ],
-            [
-                [
-                    "value",
-                    "30"
-                ]
-            ]
+            {
+                "value": "30"
+            }
         ],
         [
             [
                 "LowBattery",
                 "DPMSControl"
             ],
-            [
-                [
-                    "idleTime",
-                    "120"
-                ],
-                [
-                    "lockBeforeTurnOff",
-                    "0"
-                ]
-            ]
+            {
+                "idleTime": "120",
+                "lockBeforeTurnOff": "0"
+            }
         ],
         [
             [
                 "LowBattery",
                 "DimDisplay"
             ],
-            [
-                [
-                    "idleTime",
-                    "60000"
-                ]
-            ]
+            {
+                "idleTime": "60000"
+            }
         ],
         [
             [
                 "LowBattery",
                 "HandleButtonEvents"
             ],
-            [
-                [
-                    "lidAction",
-                    "1"
-                ],
-                [
-                    "powerButtonAction",
-                    "16"
-                ],
-                [
-                    "powerDownAction",
-                    "16"
-                ]
-            ]
+            {
+                "lidAction": "1",
+                "powerButtonAction": "16",
+                "powerDownAction": "16"
+            }
         ],
         [
             [
                 "LowBattery",
                 "SuspendSession"
             ],
-            [
-                [
-                    "idleTime",
-                    "300000"
-                ],
-                [
-                    "suspendType",
-                    "1"
-                ]
-            ]
+            {
+                "idleTime": "300000",
+                "suspendType": "1"
+            }
         ]
     ],
     "/plasmarc": [
@@ -1107,12 +510,9 @@
             [
                 "Wallpapers"
             ],
-            [
-                [
-                    "usersWallpapers",
-                    "/home1/tev/Desktop/background/Anime Street Evening.png"
-                ]
-            ]
+            {
+                "usersWallpapers": "/home1/tev/Desktop/background/Anime Street Evening.png"
+            }
         ]
     ],
     "/katerc": [
@@ -1120,490 +520,160 @@
             [
                 "General"
             ],
-            [
-                [
-                    "Config Revision",
-                    "10"
-                ],
-                [
-                    "Days Meta Infos",
-                    "30"
-                ],
-                [
-                    "Save Meta Infos",
-                    "true"
-                ],
-                [
-                    "Show Full Path in Title",
-                    "false"
-                ],
-                [
-                    "Show Menu Bar",
-                    "true"
-                ],
-                [
-                    "Show Status Bar",
-                    "true"
-                ],
-                [
-                    "Show Tab Bar",
-                    "true"
-                ],
-                [
-                    "Show Url Nav Bar",
-                    "true"
-                ]
-            ]
+            {
+                "Config Revision": "10",
+                "Days Meta Infos": "30",
+                "Save Meta Infos": "true",
+                "Show Full Path in Title": "false",
+                "Show Menu Bar": "true",
+                "Show Status Bar": "true",
+                "Show Tab Bar": "true",
+                "Show Url Nav Bar": "true"
+            }
         ],
         [
             [
                 "KTextEditor Document"
             ],
-            [
-                [
-                    "Allow End of Line Detection",
-                    "true"
-                ],
-                [
-                    "Auto Detect Indent",
-                    "true"
-                ],
-                [
-                    "Auto Save",
-                    "true"
-                ],
-                [
-                    "Auto Save Interval",
-                    "0"
-                ],
-                [
-                    "Auto Save On Focus Out",
-                    "true"
-                ],
-                [
-                    "BOM",
-                    "false"
-                ],
-                [
-                    "Backup Local",
-                    "false"
-                ],
-                [
-                    "Backup Prefix",
-                    ""
-                ],
-                [
-                    "Backup Remote",
-                    "false"
-                ],
-                [
-                    "Backup Suffix",
-                    "~"
-                ],
-                [
-                    "Camel Cursor",
-                    "true"
-                ],
-                [
-                    "Encoding",
-                    "UTF-8"
-                ],
-                [
-                    "End of Line",
-                    "0"
-                ],
-                [
-                    "Indent On Backspace",
-                    "true"
-                ],
-                [
-                    "Indent On Tab",
-                    "true"
-                ],
-                [
-                    "Indent On Text Paste",
-                    "false"
-                ],
-                [
-                    "Indentation Mode",
-                    "normal"
-                ],
-                [
-                    "Indentation Width",
-                    "4"
-                ],
-                [
-                    "Keep Extra Spaces",
-                    "false"
-                ],
-                [
-                    "Line Length Limit",
-                    "10000"
-                ],
-                [
-                    "Newline at End of File",
-                    "true"
-                ],
-                [
-                    "On-The-Fly Spellcheck",
-                    "false"
-                ],
-                [
-                    "Overwrite Mode",
-                    "false"
-                ],
-                [
-                    "PageUp/PageDown Moves Cursor",
-                    "false"
-                ],
-                [
-                    "Remove Spaces",
-                    "1"
-                ],
-                [
-                    "ReplaceTabsDyn",
-                    "true"
-                ],
-                [
-                    "Show Spaces",
-                    "0"
-                ],
-                [
-                    "Show Tabs",
-                    "true"
-                ],
-                [
-                    "Smart Home",
-                    "true"
-                ],
-                [
-                    "Swap Directory",
-                    ""
-                ],
-                [
-                    "Swap File Mode",
-                    "1"
-                ],
-                [
-                    "Swap Sync Interval",
-                    "15"
-                ],
-                [
-                    "Tab Handling",
-                    "2"
-                ],
-                [
-                    "Tab Width",
-                    "4"
-                ],
-                [
-                    "Trailing Marker Size",
-                    "1"
-                ],
-                [
-                    "Word Wrap",
-                    "false"
-                ],
-                [
-                    "Word Wrap Column",
-                    "80"
-                ]
-            ]
+            {
+                "Allow End of Line Detection": "true",
+                "Auto Detect Indent": "true",
+                "Auto Save": "true",
+                "Auto Save Interval": "0",
+                "Auto Save On Focus Out": "true",
+                "BOM": "false",
+                "Backup Local": "false",
+                "Backup Prefix": "",
+                "Backup Remote": "false",
+                "Backup Suffix": "~",
+                "Camel Cursor": "true",
+                "Encoding": "UTF-8",
+                "End of Line": "0",
+                "Indent On Backspace": "true",
+                "Indent On Tab": "true",
+                "Indent On Text Paste": "false",
+                "Indentation Mode": "normal",
+                "Indentation Width": "4",
+                "Keep Extra Spaces": "false",
+                "Line Length Limit": "10000",
+                "Newline at End of File": "true",
+                "On-The-Fly Spellcheck": "false",
+                "Overwrite Mode": "false",
+                "PageUp/PageDown Moves Cursor": "false",
+                "Remove Spaces": "1",
+                "ReplaceTabsDyn": "true",
+                "Show Spaces": "0",
+                "Show Tabs": "true",
+                "Smart Home": "true",
+                "Swap Directory": "",
+                "Swap File Mode": "1",
+                "Swap Sync Interval": "15",
+                "Tab Handling": "2",
+                "Tab Width": "4",
+                "Trailing Marker Size": "1",
+                "Word Wrap": "false",
+                "Word Wrap Column": "80"
+            }
         ],
         [
             [
                 "KTextEditor Editor"
             ],
-            [
-                [
-                    "Encoding Prober Type",
-                    "1"
-                ],
-                [
-                    "Fallback Encoding",
-                    "ISO 8859-15"
-                ]
-            ]
+            {
+                "Encoding Prober Type": "1",
+                "Fallback Encoding": "ISO 8859-15"
+            }
         ],
         [
             [
                 "KTextEditor Renderer"
             ],
-            [
-                [
-                    "Animate Bracket Matching",
-                    "true"
-                ],
-                [
-                    "Auto Color Theme Selection",
-                    "true"
-                ],
-                [
-                    "Line Height Multiplier",
-                    "1"
-                ],
-                [
-                    "Show Indentation Lines",
-                    "false"
-                ],
-                [
-                    "Show Whole Bracket Expression",
-                    "false"
-                ],
-                [
-                    "Word Wrap Marker",
-                    "false"
-                ]
-            ]
+            {
+                "Animate Bracket Matching": "true",
+                "Auto Color Theme Selection": "true",
+                "Line Height Multiplier": "1",
+                "Show Indentation Lines": "false",
+                "Show Whole Bracket Expression": "false",
+                "Word Wrap Marker": "false"
+            }
         ],
         [
             [
                 "KTextEditor View"
             ],
-            [
-                [
-                    "Allow Mark Menu",
-                    "true"
-                ],
-                [
-                    "Auto Brackets",
-                    "false"
-                ],
-                [
-                    "Auto Center Lines",
-                    "0"
-                ],
-                [
-                    "Auto Completion",
-                    "true"
-                ],
-                [
-                    "Auto Completion Preselect First Entry",
-                    "true"
-                ],
-                [
-                    "Backspace Remove Composed Characters",
-                    "false"
-                ],
-                [
-                    "Bookmark Menu Sorting",
-                    "0"
-                ],
-                [
-                    "Bracket Match Preview",
-                    "false"
-                ],
-                [
-                    "Chars To Enclose Selection",
-                    "<>(){}[]'\""
-                ],
-                [
-                    "Default Mark Type",
-                    "1"
-                ],
-                [
-                    "Dynamic Word Wrap",
-                    "true"
-                ],
-                [
-                    "Dynamic Word Wrap Align Indent",
-                    "80"
-                ],
-                [
-                    "Dynamic Word Wrap At Static Marker",
-                    "false"
-                ],
-                [
-                    "Dynamic Word Wrap Indicators",
-                    "1"
-                ],
-                [
-                    "Dynamic Wrap not at word boundaries",
-                    "false"
-                ],
-                [
-                    "Fold First Line",
-                    "false"
-                ],
-                [
-                    "Folding Bar",
-                    "true"
-                ],
-                [
-                    "Folding Preview",
-                    "true"
-                ],
-                [
-                    "Icon Bar",
-                    "false"
-                ],
-                [
-                    "Input Mode",
-                    "0"
-                ],
-                [
-                    "Keyword Completion",
-                    "true"
-                ],
-                [
-                    "Line Modification",
-                    "true"
-                ],
-                [
-                    "Line Numbers",
-                    "true"
-                ],
-                [
-                    "Maximum Search History Size",
-                    "100"
-                ],
-                [
-                    "Mouse Paste At Cursor Position",
-                    "false"
-                ],
-                [
-                    "Multiple Cursor Modifier",
-                    "134217728"
-                ],
-                [
-                    "Persistent Selection",
-                    "false"
-                ],
-                [
-                    "Scroll Bar Marks",
-                    "false"
-                ],
-                [
-                    "Scroll Bar Mini Map All",
-                    "true"
-                ],
-                [
-                    "Scroll Bar Mini Map Width",
-                    "60"
-                ],
-                [
-                    "Scroll Bar MiniMap",
-                    "true"
-                ],
-                [
-                    "Scroll Bar Preview",
-                    "true"
-                ],
-                [
-                    "Scroll Past End",
-                    "false"
-                ],
-                [
-                    "Search/Replace Flags",
-                    "140"
-                ],
-                [
-                    "Show Documentation With Completion",
-                    "true"
-                ],
-                [
-                    "Show Focus Frame Around Editor",
-                    "true"
-                ],
-                [
-                    "Show Folding Icons On Hover Only",
-                    "true"
-                ],
-                [
-                    "Show Line Count",
-                    "false"
-                ],
-                [
-                    "Show Scrollbars",
-                    "0"
-                ],
-                [
-                    "Show Word Count",
-                    "false"
-                ],
-                [
-                    "Smart Copy Cut",
-                    "true"
-                ],
-                [
-                    "Text Drag And Drop",
-                    "true"
-                ],
-                [
-                    "User Sets Of Chars To Enclose Selection",
-                    ""
-                ],
-                [
-                    "Vi Input Mode Steal Keys",
-                    "false"
-                ],
-                [
-                    "Vi Relative Line Numbers",
-                    "false"
-                ],
-                [
-                    "Word Completion",
-                    "true"
-                ],
-                [
-                    "Word Completion Minimal Word Length",
-                    "3"
-                ],
-                [
-                    "Word Completion Remove Tail",
-                    "true"
-                ]
-            ]
+            {
+                "Allow Mark Menu": "true",
+                "Auto Brackets": "false",
+                "Auto Center Lines": "0",
+                "Auto Completion": "true",
+                "Auto Completion Preselect First Entry": "true",
+                "Backspace Remove Composed Characters": "false",
+                "Bookmark Menu Sorting": "0",
+                "Bracket Match Preview": "false",
+                "Chars To Enclose Selection": "<>(){}[]'\"",
+                "Default Mark Type": "1",
+                "Dynamic Word Wrap": "true",
+                "Dynamic Word Wrap Align Indent": "80",
+                "Dynamic Word Wrap At Static Marker": "false",
+                "Dynamic Word Wrap Indicators": "1",
+                "Dynamic Wrap not at word boundaries": "false",
+                "Fold First Line": "false",
+                "Folding Bar": "true",
+                "Folding Preview": "true",
+                "Icon Bar": "false",
+                "Input Mode": "0",
+                "Keyword Completion": "true",
+                "Line Modification": "true",
+                "Line Numbers": "true",
+                "Maximum Search History Size": "100",
+                "Mouse Paste At Cursor Position": "false",
+                "Multiple Cursor Modifier": "134217728",
+                "Persistent Selection": "false",
+                "Scroll Bar Marks": "false",
+                "Scroll Bar Mini Map All": "true",
+                "Scroll Bar Mini Map Width": "60",
+                "Scroll Bar MiniMap": "true",
+                "Scroll Bar Preview": "true",
+                "Scroll Past End": "false",
+                "Search/Replace Flags": "140",
+                "Show Documentation With Completion": "true",
+                "Show Focus Frame Around Editor": "true",
+                "Show Folding Icons On Hover Only": "true",
+                "Show Line Count": "false",
+                "Show Scrollbars": "0",
+                "Show Word Count": "false",
+                "Smart Copy Cut": "true",
+                "Text Drag And Drop": "true",
+                "User Sets Of Chars To Enclose Selection": "",
+                "Vi Input Mode Steal Keys": "false",
+                "Vi Relative Line Numbers": "false",
+                "Word Completion": "true",
+                "Word Completion Minimal Word Length": "3",
+                "Word Completion Remove Tail": "true"
+            }
         ],
         [
             [
                 "UiSettings"
             ],
-            [
-                [
-                    "ColorScheme",
-                    "Default"
-                ]
-            ]
+            {
+                "ColorScheme": "Default"
+            }
         ],
         [
             [
                 "filetree"
             ],
-            [
-                [
-                    "editShade",
-                    "5,88,104"
-                ],
-                [
-                    "listMode",
-                    "false"
-                ],
-                [
-                    "shadingEnabled",
-                    "true"
-                ],
-                [
-                    "showCloseButton",
-                    "false"
-                ],
-                [
-                    "showFullPathOnRoots",
-                    "false"
-                ],
-                [
-                    "showToolbar",
-                    "true"
-                ],
-                [
-                    "sortRole",
-                    "0"
-                ],
-                [
-                    "viewShade",
-                    "58,83,115"
-                ]
-            ]
+            {
+                "editShade": "5,88,104",
+                "listMode": "false",
+                "shadingEnabled": "true",
+                "showCloseButton": "false",
+                "showFullPathOnRoots": "false",
+                "showToolbar": "true",
+                "sortRole": "0",
+                "viewShade": "58,83,115"
+            }
         ]
     ],
     "/plasmashellrc": [
@@ -1611,28 +681,19 @@
             [
                 "KFileDialog Settings"
             ],
-            [
-                [
-                    "detailViewIconSize",
-                    "16"
-                ]
-            ]
+            {
+                "detailViewIconSize": "16"
+            }
         ],
         [
             [
                 "PlasmaViews",
                 "Panel 3"
             ],
-            [
-                [
-                    "alignment",
-                    "1"
-                ],
-                [
-                    "panelVisibility",
-                    "1"
-                ]
-            ]
+            {
+                "alignment": "1",
+                "panelVisibility": "1"
+            }
         ],
         [
             [
@@ -1640,32 +701,20 @@
                 "Panel 3",
                 "Defaults"
             ],
-            [
-                [
-                    "minLength",
-                    "0"
-                ],
-                [
-                    "thickness",
-                    "35"
-                ]
-            ]
+            {
+                "minLength": "0",
+                "thickness": "35"
+            }
         ],
         [
             [
                 "PlasmaViews",
                 "Panel 7"
             ],
-            [
-                [
-                    "alignment",
-                    "2"
-                ],
-                [
-                    "panelVisibility",
-                    "1"
-                ]
-            ]
+            {
+                "alignment": "2",
+                "panelVisibility": "1"
+            }
         ],
         [
             [
@@ -1673,32 +722,20 @@
                 "Panel 7",
                 "Defaults"
             ],
-            [
-                [
-                    "minLength",
-                    "0"
-                ],
-                [
-                    "thickness",
-                    "35"
-                ]
-            ]
+            {
+                "minLength": "0",
+                "thickness": "35"
+            }
         ],
         [
             [
                 "PlasmaViews",
                 "Panel 14"
             ],
-            [
-                [
-                    "alignment",
-                    "132"
-                ],
-                [
-                    "panelVisibility",
-                    "1"
-                ]
-            ]
+            {
+                "alignment": "132",
+                "panelVisibility": "1"
+            }
         ],
         [
             [
@@ -1706,16 +743,10 @@
                 "Panel 14",
                 "Defaults"
             ],
-            [
-                [
-                    "minLength",
-                    "0"
-                ],
-                [
-                    "thickness",
-                    "25"
-                ]
-            ]
+            {
+                "minLength": "0",
+                "thickness": "25"
+            }
         ]
     ],
     "/filetypesrc": [
@@ -1723,16 +754,10 @@
             [
                 "EmbedSettings"
             ],
-            [
-                [
-                    "embed-application/octet-stream",
-                    "false"
-                ],
-                [
-                    "embed-application/x-wine-extension-ini",
-                    "false"
-                ]
-            ]
+            {
+                "embed-application/octet-stream": "false",
+                "embed-application/x-wine-extension-ini": "false"
+            }
         ]
     ],
     "/kcmshell5rc": [
@@ -1740,12 +765,9 @@
             [
                 "UiSettings"
             ],
-            [
-                [
-                    "ColorScheme",
-                    "Default"
-                ]
-            ]
+            {
+                "ColorScheme": "Default"
+            }
         ]
     ],
     "/kiorc": [
@@ -1753,44 +775,37 @@
             [
                 "Confirmations"
             ],
-            [
-                [
-                    "ConfirmDelete",
-                    "false"
-                ],
-                [
-                    "ConfirmEmptyTrash",
-                    "false"
-                ]
-            ]
+            {
+                "ConfirmDelete": "false",
+                "ConfirmEmptyTrash": "false"
+            }
         ],
         [
             [
                 "Executable scripts"
             ],
-            [
-                [
-                    "behaviourOnLaunch",
-                    "execute"
-                ]
-            ]
+            {
+                "behaviourOnLaunch": "execute"
+            }
         ]
     ],
     "/konsolerc": [
         [
             [
+                "Desktop Entry"
+            ],
+            {
+                "DefaultProfile": "KonsoleTheme.profile"
+            }
+        ],
+        [
+            [
                 "UiSettings"
             ],
-            [
-                [
-                    "ColorScheme",
-                    ""
-                ],
-                [
-                    "WindowColorScheme",
-                    "Default"
-                ]
-            ]
+            {
+                "ColorScheme": "",
+                "WindowColorScheme": "Default"
+            }
         ]
     ],
     "/touchpadxlibinputrc": [
@@ -1798,28 +813,13 @@
             [
                 "SynPS/2 Synaptics TouchPad"
             ],
-            [
-                [
-                    "naturalScroll",
-                    "true"
-                ],
-                [
-                    "pointerAccelerationProfileAdaptive",
-                    "false"
-                ],
-                [
-                    "pointerAccelerationProfileFlat",
-                    "true"
-                ],
-                [
-                    "tapDragLock",
-                    "true"
-                ],
-                [
-                    "tapToClick",
-                    "true"
-                ]
-            ]
+            {
+                "naturalScroll": "true",
+                "pointerAccelerationProfileAdaptive": "false",
+                "pointerAccelerationProfileFlat": "true",
+                "tapDragLock": "true",
+                "tapToClick": "true"
+            }
         ]
     ],
     "/baloofilerc": [
@@ -1827,20 +827,11 @@
             [
                 "General"
             ],
-            [
-                [
-                    "dbVersion",
-                    "2"
-                ],
-                [
-                    "exclude filters",
-                    "*~,*.part,*.o,*.la,*.lo,*.loT,*.moc,moc_*.cpp,qrc_*.cpp,ui_*.h,cmake_install.cmake,CMakeCache.txt,CTestTestfile.cmake,libtool,config.status,confdefs.h,autom4te,conftest,confstat,Makefile.am,*.gcode,.ninja_deps,.ninja_log,build.ninja,*.csproj,*.m4,*.rej,*.gmo,*.pc,*.omf,*.aux,*.tmp,*.po,*.vm*,*.nvram,*.rcore,*.swp,*.swap,lzo,litmain.sh,*.orig,.histfile.*,.xsession-errors*,*.map,*.so,*.a,*.db,*.qrc,*.ini,*.init,*.img,*.vdi,*.vbox*,vbox.log,*.qcow2,*.vmdk,*.vhd,*.vhdx,*.sql,*.sql.gz,*.ytdl,*.class,*.pyc,*.pyo,*.elc,*.qmlc,*.jsc,*.fastq,*.fq,*.gb,*.fasta,*.fna,*.gbff,*.faa,po,CVS,.svn,.git,_darcs,.bzr,.hg,CMakeFiles,CMakeTmp,CMakeTmpQmake,.moc,.obj,.pch,.uic,.npm,.yarn,.yarn-cache,__pycache__,node_modules,node_packages,nbproject,core-dumps,lost+found"
-                ],
-                [
-                    "exclude filters version",
-                    "8"
-                ]
-            ]
+            {
+                "dbVersion": "2",
+                "exclude filters": "*~,*.part,*.o,*.la,*.lo,*.loT,*.moc,moc_*.cpp,qrc_*.cpp,ui_*.h,cmake_install.cmake,CMakeCache.txt,CTestTestfile.cmake,libtool,config.status,confdefs.h,autom4te,conftest,confstat,Makefile.am,*.gcode,.ninja_deps,.ninja_log,build.ninja,*.csproj,*.m4,*.rej,*.gmo,*.pc,*.omf,*.aux,*.tmp,*.po,*.vm*,*.nvram,*.rcore,*.swp,*.swap,lzo,litmain.sh,*.orig,.histfile.*,.xsession-errors*,*.map,*.so,*.a,*.db,*.qrc,*.ini,*.init,*.img,*.vdi,*.vbox*,vbox.log,*.qcow2,*.vmdk,*.vhd,*.vhdx,*.sql,*.sql.gz,*.ytdl,*.class,*.pyc,*.pyo,*.elc,*.qmlc,*.jsc,*.fastq,*.fq,*.gb,*.fasta,*.fna,*.gbff,*.faa,po,CVS,.svn,.git,_darcs,.bzr,.hg,CMakeFiles,CMakeTmp,CMakeTmpQmake,.moc,.obj,.pch,.uic,.npm,.yarn,.yarn-cache,__pycache__,node_modules,node_packages,nbproject,core-dumps,lost+found",
+                "exclude filters version": "8"
+            }
         ]
     ],
     "/kscreenlockerrc": [
@@ -1851,12 +842,9 @@
                 "org.kde.image",
                 "General"
             ],
-            [
-                [
-                    "Image",
-                    "/home1/tev/Desktop/background/Anime Street Evening.png"
-                ]
-            ]
+            {
+                "Image": "/home1/tev/Desktop/background/Anime Street Evening.png"
+            }
         ]
     ],
     "/systemmonitorrc": [
@@ -1864,32 +852,14 @@
             [
                 "TaskDialog"
             ],
-            [
-                [
-                    "normalizeCPUUsage",
-                    "true"
-                ],
-                [
-                    "showCommandLineOptions",
-                    "false"
-                ],
-                [
-                    "showTooltips",
-                    "true"
-                ],
-                [
-                    "showTotals",
-                    "true"
-                ],
-                [
-                    "units",
-                    "1"
-                ],
-                [
-                    "updateIntervalMSecs",
-                    "1000"
-                ]
-            ]
+            {
+                "normalizeCPUUsage": "true",
+                "showCommandLineOptions": "false",
+                "showTooltips": "true",
+                "showTotals": "true",
+                "units": "1",
+                "updateIntervalMSecs": "1000"
+            }
         ]
     ],
     "/khotkeysrc": [
@@ -1897,413 +867,230 @@
             [
                 "Data"
             ],
-            [
-                [
-                    "DataCount",
-                    "2"
-                ]
-            ]
+            {
+                "DataCount": "2"
+            }
         ],
         [
             [
                 "Data_1"
             ],
-            [
-                [
-                    "Comment",
-                    "Comment"
-                ],
-                [
-                    "DataCount",
-                    "2"
-                ],
-                [
-                    "Enabled",
-                    "true"
-                ],
-                [
-                    "Name",
-                    "music"
-                ],
-                [
-                    "SystemGroup",
-                    "0"
-                ],
-                [
-                    "Type",
-                    "ACTION_DATA_GROUP"
-                ]
-            ]
+            {
+                "Comment": "Comment",
+                "DataCount": "2",
+                "Enabled": "true",
+                "Name": "music",
+                "SystemGroup": "0",
+                "Type": "ACTION_DATA_GROUP"
+            }
         ],
         [
             [
                 "Data_1Conditions"
             ],
-            [
-                [
-                    "Comment",
-                    ""
-                ],
-                [
-                    "ConditionsCount",
-                    "0"
-                ]
-            ]
+            {
+                "Comment": "",
+                "ConditionsCount": "0"
+            }
         ],
         [
             [
                 "Data_1_1"
             ],
-            [
-                [
-                    "Comment",
-                    "Comment"
-                ],
-                [
-                    "Enabled",
-                    "true"
-                ],
-                [
-                    "Name",
-                    "next"
-                ],
-                [
-                    "Type",
-                    "SIMPLE_ACTION_DATA"
-                ]
-            ]
+            {
+                "Comment": "Comment",
+                "Enabled": "true",
+                "Name": "next",
+                "Type": "SIMPLE_ACTION_DATA"
+            }
         ],
         [
             [
                 "Data_1_1Actions"
             ],
-            [
-                [
-                    "ActionsCount",
-                    "1"
-                ]
-            ]
+            {
+                "ActionsCount": "1"
+            }
         ],
         [
             [
                 "Data_1_1Actions0"
             ],
-            [
-                [
-                    "CommandURL",
-                    "playerctl next"
-                ],
-                [
-                    "Type",
-                    "COMMAND_URL"
-                ]
-            ]
+            {
+                "CommandURL": "playerctl next",
+                "Type": "COMMAND_URL"
+            }
         ],
         [
             [
                 "Data_1_1Conditions"
             ],
-            [
-                [
-                    "Comment",
-                    ""
-                ],
-                [
-                    "ConditionsCount",
-                    "0"
-                ]
-            ]
+            {
+                "Comment": "",
+                "ConditionsCount": "0"
+            }
         ],
         [
             [
                 "Data_1_1Triggers"
             ],
-            [
-                [
-                    "Comment",
-                    "Simple_action"
-                ],
-                [
-                    "TriggersCount",
-                    "1"
-                ]
-            ]
+            {
+                "Comment": "Simple_action",
+                "TriggersCount": "1"
+            }
         ],
         [
             [
                 "Data_1_1Triggers0"
             ],
-            [
-                [
-                    "Key",
-                    "Alt+Media Play"
-                ],
-                [
-                    "Type",
-                    "SHORTCUT"
-                ],
-                [
-                    "Uuid",
-                    "{e793c702-98fa-4314-98a2-9aed7662ad13}"
-                ]
-            ]
+            {
+                "Key": "Alt+Media Play",
+                "Type": "SHORTCUT",
+                "Uuid": "{e793c702-98fa-4314-98a2-9aed7662ad13}"
+            }
         ],
         [
             [
                 "Data_1_2"
             ],
-            [
-                [
-                    "Comment",
-                    "Comment"
-                ],
-                [
-                    "Enabled",
-                    "true"
-                ],
-                [
-                    "Name",
-                    "prev"
-                ],
-                [
-                    "Type",
-                    "SIMPLE_ACTION_DATA"
-                ]
-            ]
+            {
+                "Comment": "Comment",
+                "Enabled": "true",
+                "Name": "prev",
+                "Type": "SIMPLE_ACTION_DATA"
+            }
         ],
         [
             [
                 "Data_1_2Actions"
             ],
-            [
-                [
-                    "ActionsCount",
-                    "1"
-                ]
-            ]
+            {
+                "ActionsCount": "1"
+            }
         ],
         [
             [
                 "Data_1_2Actions0"
             ],
-            [
-                [
-                    "CommandURL",
-                    "playerctl previous"
-                ],
-                [
-                    "Type",
-                    "COMMAND_URL"
-                ]
-            ]
+            {
+                "CommandURL": "playerctl previous",
+                "Type": "COMMAND_URL"
+            }
         ],
         [
             [
                 "Data_1_2Conditions"
             ],
-            [
-                [
-                    "Comment",
-                    ""
-                ],
-                [
-                    "ConditionsCount",
-                    "0"
-                ]
-            ]
+            {
+                "Comment": "",
+                "ConditionsCount": "0"
+            }
         ],
         [
             [
                 "Data_1_2Triggers"
             ],
-            [
-                [
-                    "Comment",
-                    "Simple_action"
-                ],
-                [
-                    "TriggersCount",
-                    "1"
-                ]
-            ]
+            {
+                "Comment": "Simple_action",
+                "TriggersCount": "1"
+            }
         ],
         [
             [
                 "Data_1_2Triggers0"
             ],
-            [
-                [
-                    "Key",
-                    "Ctrl+Media Play"
-                ],
-                [
-                    "Type",
-                    "SHORTCUT"
-                ],
-                [
-                    "Uuid",
-                    "{f78700e1-1af3-4a00-8bfc-1abc66d68a91}"
-                ]
-            ]
+            {
+                "Key": "Ctrl+Media Play",
+                "Type": "SHORTCUT",
+                "Uuid": "{f78700e1-1af3-4a00-8bfc-1abc66d68a91}"
+            }
         ],
         [
             [
                 "Data_2"
             ],
-            [
-                [
-                    "Comment",
-                    "Comment"
-                ],
-                [
-                    "DataCount",
-                    "1"
-                ],
-                [
-                    "Enabled",
-                    "true"
-                ],
-                [
-                    "Name",
-                    "flameshot"
-                ],
-                [
-                    "SystemGroup",
-                    "0"
-                ],
-                [
-                    "Type",
-                    "ACTION_DATA_GROUP"
-                ]
-            ]
+            {
+                "Comment": "Comment",
+                "DataCount": "1",
+                "Enabled": "true",
+                "Name": "flameshot",
+                "SystemGroup": "0",
+                "Type": "ACTION_DATA_GROUP"
+            }
         ],
         [
             [
                 "Data_2Conditions"
             ],
-            [
-                [
-                    "Comment",
-                    ""
-                ],
-                [
-                    "ConditionsCount",
-                    "0"
-                ]
-            ]
+            {
+                "Comment": "",
+                "ConditionsCount": "0"
+            }
         ],
         [
             [
                 "Data_2_1"
             ],
-            [
-                [
-                    "Comment",
-                    "Comment"
-                ],
-                [
-                    "Enabled",
-                    "true"
-                ],
-                [
-                    "Name",
-                    "open"
-                ],
-                [
-                    "Type",
-                    "SIMPLE_ACTION_DATA"
-                ]
-            ]
+            {
+                "Comment": "Comment",
+                "Enabled": "true",
+                "Name": "open",
+                "Type": "SIMPLE_ACTION_DATA"
+            }
         ],
         [
             [
                 "Data_2_1Actions"
             ],
-            [
-                [
-                    "ActionsCount",
-                    "1"
-                ]
-            ]
+            {
+                "ActionsCount": "1"
+            }
         ],
         [
             [
                 "Data_2_1Actions0"
             ],
-            [
-                [
-                    "CommandURL",
-                    "flameshot gui"
-                ],
-                [
-                    "Type",
-                    "COMMAND_URL"
-                ]
-            ]
+            {
+                "CommandURL": "flameshot gui",
+                "Type": "COMMAND_URL"
+            }
         ],
         [
             [
                 "Data_2_1Conditions"
             ],
-            [
-                [
-                    "Comment",
-                    ""
-                ],
-                [
-                    "ConditionsCount",
-                    "0"
-                ]
-            ]
+            {
+                "Comment": "",
+                "ConditionsCount": "0"
+            }
         ],
         [
             [
                 "Data_2_1Triggers"
             ],
-            [
-                [
-                    "Comment",
-                    "Simple_action"
-                ],
-                [
-                    "TriggersCount",
-                    "1"
-                ]
-            ]
+            {
+                "Comment": "Simple_action",
+                "TriggersCount": "1"
+            }
         ],
         [
             [
                 "Data_2_1Triggers0"
             ],
-            [
-                [
-                    "Key",
-                    "Meta+Shift+S"
-                ],
-                [
-                    "Type",
-                    "SHORTCUT"
-                ],
-                [
-                    "Uuid",
-                    "{2b622f4b-e7dd-4cb3-a362-b4bb59688264}"
-                ]
-            ]
+            {
+                "Key": "Meta+Shift+S",
+                "Type": "SHORTCUT",
+                "Uuid": "{2b622f4b-e7dd-4cb3-a362-b4bb59688264}"
+            }
         ],
         [
             [
                 "Notification Messages"
             ],
-            [
-                [
-                    "ConfirmDelete",
-                    "true"
-                ],
-                [
-                    "ConfirmEmptyTrash",
-                    "true"
-                ]
-            ]
+            {
+                "ConfirmDelete": "true",
+                "ConfirmEmptyTrash": "true"
+            }
         ]
     ],
     "/ksmserverrc": [
@@ -2311,27 +1098,18 @@
             [
                 "General"
             ],
-            [
-                [
-                    "loginMode",
-                    "emptySession"
-                ],
-                [
-                    "confirmLogout",
-                    "false"
-                ]
-            ]
+            {
+                "loginMode": "emptySession",
+                "confirmLogout": "false"
+            }
         ],
         [
             [
                 "LegacySession: saved at previous logout"
             ],
-            [
-                [
-                    "count",
-                    "0"
-                ]
-            ]
+            {
+                "count": "0"
+            }
         ]
     ],
     "/kcminputrc": [
@@ -2339,16 +1117,10 @@
             [
                 "Mouse"
             ],
-            [
-                [
-                    "XLbInptAccelProfileFlat",
-                    "true"
-                ],
-                [
-                    "XLbInptPointerAcceleration",
-                    "1"
-                ]
-            ]
+            {
+                "XLbInptAccelProfileFlat": "true",
+                "XLbInptPointerAcceleration": "1"
+            }
         ]
     ],
     "/kdeglobals": [
@@ -2356,581 +1128,215 @@
             [
                 "Colors:Button"
             ],
-            [
-                [
-                    "BackgroundAlternate",
-                    "64,69,82"
-                ],
-                [
-                    "BackgroundNormal",
-                    "29,31,35"
-                ],
-                [
-                    "DecorationFocus",
-                    "66,14,210"
-                ],
-                [
-                    "DecorationHover",
-                    "66,14,210"
-                ],
-                [
-                    "ForegroundActive",
-                    "61,174,233"
-                ],
-                [
-                    "ForegroundInactive",
-                    "102,106,115"
-                ],
-                [
-                    "ForegroundLink",
-                    "41,128,185"
-                ],
-                [
-                    "ForegroundNegative",
-                    "109,69,255"
-                ],
-                [
-                    "ForegroundNeutral",
-                    "255,106,0"
-                ],
-                [
-                    "ForegroundNormal",
-                    "195,199,209"
-                ],
-                [
-                    "ForegroundPositive",
-                    "113,247,159"
-                ],
-                [
-                    "ForegroundVisited",
-                    "33,135,252"
-                ]
-            ]
+            {
+                "BackgroundAlternate": "64,69,82",
+                "BackgroundNormal": "29,31,35",
+                "DecorationFocus": "66,14,210",
+                "DecorationHover": "66,14,210",
+                "ForegroundActive": "61,174,233",
+                "ForegroundInactive": "102,106,115",
+                "ForegroundLink": "41,128,185",
+                "ForegroundNegative": "109,69,255",
+                "ForegroundNeutral": "255,106,0",
+                "ForegroundNormal": "195,199,209",
+                "ForegroundPositive": "113,247,159",
+                "ForegroundVisited": "33,135,252"
+            }
         ],
         [
             [
                 "Colors:Complementary"
             ],
-            [
-                [
-                    "BackgroundAlternate",
-                    "20,20,33"
-                ],
-                [
-                    "BackgroundNormal",
-                    "30,32,36"
-                ],
-                [
-                    "DecorationFocus",
-                    "66,14,210"
-                ],
-                [
-                    "DecorationHover",
-                    "66,14,210"
-                ],
-                [
-                    "ForegroundActive",
-                    "0,193,228"
-                ],
-                [
-                    "ForegroundInactive",
-                    "102,106,115"
-                ],
-                [
-                    "ForegroundLink",
-                    "33,135,252"
-                ],
-                [
-                    "ForegroundNegative",
-                    "109,69,255"
-                ],
-                [
-                    "ForegroundNeutral",
-                    "255,106,0"
-                ],
-                [
-                    "ForegroundNormal",
-                    "211,218,227"
-                ],
-                [
-                    "ForegroundPositive",
-                    "113,247,159"
-                ],
-                [
-                    "ForegroundVisited",
-                    "124,183,255"
-                ]
-            ]
+            {
+                "BackgroundAlternate": "20,20,33",
+                "BackgroundNormal": "30,32,36",
+                "DecorationFocus": "66,14,210",
+                "DecorationHover": "66,14,210",
+                "ForegroundActive": "0,193,228",
+                "ForegroundInactive": "102,106,115",
+                "ForegroundLink": "33,135,252",
+                "ForegroundNegative": "109,69,255",
+                "ForegroundNeutral": "255,106,0",
+                "ForegroundNormal": "211,218,227",
+                "ForegroundPositive": "113,247,159",
+                "ForegroundVisited": "124,183,255"
+            }
         ],
         [
             [
                 "Colors:Header"
             ],
-            [
-                [
-                    "BackgroundAlternate",
-                    "20,20,33"
-                ],
-                [
-                    "BackgroundNormal",
-                    "26,28,32"
-                ],
-                [
-                    "DecorationFocus",
-                    "66,14,210"
-                ],
-                [
-                    "DecorationHover",
-                    "66,14,210"
-                ],
-                [
-                    "ForegroundActive",
-                    "0,193,228"
-                ],
-                [
-                    "ForegroundInactive",
-                    "102,106,115"
-                ],
-                [
-                    "ForegroundLink",
-                    "33,135,252"
-                ],
-                [
-                    "ForegroundNegative",
-                    "109,69,255"
-                ],
-                [
-                    "ForegroundNeutral",
-                    "255,106,0"
-                ],
-                [
-                    "ForegroundNormal",
-                    "211,218,227"
-                ],
-                [
-                    "ForegroundPositive",
-                    "113,247,159"
-                ],
-                [
-                    "ForegroundVisited",
-                    "124,183,255"
-                ]
-            ]
+            {
+                "BackgroundAlternate": "20,20,33",
+                "BackgroundNormal": "26,28,32",
+                "DecorationFocus": "66,14,210",
+                "DecorationHover": "66,14,210",
+                "ForegroundActive": "0,193,228",
+                "ForegroundInactive": "102,106,115",
+                "ForegroundLink": "33,135,252",
+                "ForegroundNegative": "109,69,255",
+                "ForegroundNeutral": "255,106,0",
+                "ForegroundNormal": "211,218,227",
+                "ForegroundPositive": "113,247,159",
+                "ForegroundVisited": "124,183,255"
+            }
         ],
         [
             [
                 "Colors:Header",
                 "Inactive"
             ],
-            [
-                [
-                    "BackgroundAlternate",
-                    "20,20,33"
-                ],
-                [
-                    "BackgroundNormal",
-                    "30,32,36"
-                ],
-                [
-                    "DecorationFocus",
-                    "66,14,210"
-                ],
-                [
-                    "DecorationHover",
-                    "66,14,210"
-                ],
-                [
-                    "ForegroundActive",
-                    "0,193,228"
-                ],
-                [
-                    "ForegroundInactive",
-                    "102,106,115"
-                ],
-                [
-                    "ForegroundLink",
-                    "33,135,252"
-                ],
-                [
-                    "ForegroundNegative",
-                    "109,69,255"
-                ],
-                [
-                    "ForegroundNeutral",
-                    "255,106,0"
-                ],
-                [
-                    "ForegroundNormal",
-                    "211,218,227"
-                ],
-                [
-                    "ForegroundPositive",
-                    "113,247,159"
-                ],
-                [
-                    "ForegroundVisited",
-                    "124,183,255"
-                ]
-            ]
+            {
+                "BackgroundAlternate": "20,20,33",
+                "BackgroundNormal": "30,32,36",
+                "DecorationFocus": "66,14,210",
+                "DecorationHover": "66,14,210",
+                "ForegroundActive": "0,193,228",
+                "ForegroundInactive": "102,106,115",
+                "ForegroundLink": "33,135,252",
+                "ForegroundNegative": "109,69,255",
+                "ForegroundNeutral": "255,106,0",
+                "ForegroundNormal": "211,218,227",
+                "ForegroundPositive": "113,247,159",
+                "ForegroundVisited": "124,183,255"
+            }
         ],
         [
             [
                 "Colors:Selection"
             ],
-            [
-                [
-                    "BackgroundAlternate",
-                    "29,153,243"
-                ],
-                [
-                    "BackgroundNormal",
-                    "66,14,210"
-                ],
-                [
-                    "DecorationFocus",
-                    "66,14,210"
-                ],
-                [
-                    "DecorationHover",
-                    "66,14,210"
-                ],
-                [
-                    "ForegroundActive",
-                    "252,252,252"
-                ],
-                [
-                    "ForegroundInactive",
-                    "211,218,227"
-                ],
-                [
-                    "ForegroundLink",
-                    "253,188,75"
-                ],
-                [
-                    "ForegroundNegative",
-                    "109,69,255"
-                ],
-                [
-                    "ForegroundNeutral",
-                    "255,106,0"
-                ],
-                [
-                    "ForegroundNormal",
-                    "254,254,254"
-                ],
-                [
-                    "ForegroundPositive",
-                    "113,247,159"
-                ],
-                [
-                    "ForegroundVisited",
-                    "189,195,199"
-                ]
-            ]
+            {
+                "BackgroundAlternate": "29,153,243",
+                "BackgroundNormal": "66,14,210",
+                "DecorationFocus": "66,14,210",
+                "DecorationHover": "66,14,210",
+                "ForegroundActive": "252,252,252",
+                "ForegroundInactive": "211,218,227",
+                "ForegroundLink": "253,188,75",
+                "ForegroundNegative": "109,69,255",
+                "ForegroundNeutral": "255,106,0",
+                "ForegroundNormal": "254,254,254",
+                "ForegroundPositive": "113,247,159",
+                "ForegroundVisited": "189,195,199"
+            }
         ],
         [
             [
                 "Colors:Tooltip"
             ],
-            [
-                [
-                    "BackgroundAlternate",
-                    "30,32,36"
-                ],
-                [
-                    "BackgroundNormal",
-                    "53,57,69"
-                ],
-                [
-                    "DecorationFocus",
-                    "66,14,210"
-                ],
-                [
-                    "DecorationHover",
-                    "66,14,210"
-                ],
-                [
-                    "ForegroundActive",
-                    "61,174,233"
-                ],
-                [
-                    "ForegroundInactive",
-                    "102,106,115"
-                ],
-                [
-                    "ForegroundLink",
-                    "41,128,185"
-                ],
-                [
-                    "ForegroundNegative",
-                    "109,69,255"
-                ],
-                [
-                    "ForegroundNeutral",
-                    "255,106,0"
-                ],
-                [
-                    "ForegroundNormal",
-                    "211,218,227"
-                ],
-                [
-                    "ForegroundPositive",
-                    "113,247,159"
-                ],
-                [
-                    "ForegroundVisited",
-                    "33,135,252"
-                ]
-            ]
+            {
+                "BackgroundAlternate": "30,32,36",
+                "BackgroundNormal": "53,57,69",
+                "DecorationFocus": "66,14,210",
+                "DecorationHover": "66,14,210",
+                "ForegroundActive": "61,174,233",
+                "ForegroundInactive": "102,106,115",
+                "ForegroundLink": "41,128,185",
+                "ForegroundNegative": "109,69,255",
+                "ForegroundNeutral": "255,106,0",
+                "ForegroundNormal": "211,218,227",
+                "ForegroundPositive": "113,247,159",
+                "ForegroundVisited": "33,135,252"
+            }
         ],
         [
             [
                 "Colors:View"
             ],
-            [
-                [
-                    "BackgroundAlternate",
-                    "20,20,33"
-                ],
-                [
-                    "BackgroundNormal",
-                    "30,32,36"
-                ],
-                [
-                    "DecorationFocus",
-                    "66,14,210"
-                ],
-                [
-                    "DecorationHover",
-                    "66,14,210"
-                ],
-                [
-                    "ForegroundActive",
-                    "0,193,228"
-                ],
-                [
-                    "ForegroundInactive",
-                    "102,106,115"
-                ],
-                [
-                    "ForegroundLink",
-                    "33,135,252"
-                ],
-                [
-                    "ForegroundNegative",
-                    "109,69,255"
-                ],
-                [
-                    "ForegroundNeutral",
-                    "255,106,0"
-                ],
-                [
-                    "ForegroundNormal",
-                    "211,218,227"
-                ],
-                [
-                    "ForegroundPositive",
-                    "113,247,159"
-                ],
-                [
-                    "ForegroundVisited",
-                    "124,183,255"
-                ]
-            ]
+            {
+                "BackgroundAlternate": "20,20,33",
+                "BackgroundNormal": "30,32,36",
+                "DecorationFocus": "66,14,210",
+                "DecorationHover": "66,14,210",
+                "ForegroundActive": "0,193,228",
+                "ForegroundInactive": "102,106,115",
+                "ForegroundLink": "33,135,252",
+                "ForegroundNegative": "109,69,255",
+                "ForegroundNeutral": "255,106,0",
+                "ForegroundNormal": "211,218,227",
+                "ForegroundPositive": "113,247,159",
+                "ForegroundVisited": "124,183,255"
+            }
         ],
         [
             [
                 "Colors:Window"
             ],
-            [
-                [
-                    "BackgroundAlternate",
-                    "30,32,36"
-                ],
-                [
-                    "BackgroundNormal",
-                    "26,28,32"
-                ],
-                [
-                    "DecorationFocus",
-                    "30,32,36"
-                ],
-                [
-                    "DecorationHover",
-                    "66,14,210"
-                ],
-                [
-                    "ForegroundActive",
-                    "61,174,233"
-                ],
-                [
-                    "ForegroundInactive",
-                    "102,106,115"
-                ],
-                [
-                    "ForegroundLink",
-                    "41,128,185"
-                ],
-                [
-                    "ForegroundNegative",
-                    "109,69,255"
-                ],
-                [
-                    "ForegroundNeutral",
-                    "255,106,0"
-                ],
-                [
-                    "ForegroundNormal",
-                    "211,218,227"
-                ],
-                [
-                    "ForegroundPositive",
-                    "113,247,159"
-                ],
-                [
-                    "ForegroundVisited",
-                    "179,13,191"
-                ]
-            ]
+            {
+                "BackgroundAlternate": "30,32,36",
+                "BackgroundNormal": "26,28,32",
+                "DecorationFocus": "30,32,36",
+                "DecorationHover": "66,14,210",
+                "ForegroundActive": "61,174,233",
+                "ForegroundInactive": "102,106,115",
+                "ForegroundLink": "41,128,185",
+                "ForegroundNegative": "109,69,255",
+                "ForegroundNeutral": "255,106,0",
+                "ForegroundNormal": "211,218,227",
+                "ForegroundPositive": "113,247,159",
+                "ForegroundVisited": "179,13,191"
+            }
         ],
         [
             [
                 "General"
             ],
-            [
-                [
-                    "BrowserApplication",
-                    "firefox.desktop"
-                ]
-            ]
+            {
+                "BrowserApplication": "firefox.desktop"
+            }
         ],
         [
             [
                 "Icons"
             ],
-            [
-                [
-                    "Theme",
-                    "Papirus-Dark"
-                ]
-            ]
+            {
+                "Theme": "Papirus-Dark"
+            }
         ],
         [
             [
                 "KDE"
             ],
-            [
-                [
-                    "AnimationDurationFactor",
-                    "0.3"
-                ],
-                [
-                    "ColorScheme",
-                    "BreezeLight"
-                ],
-                [
-                    "LookAndFeelPackage",
-                    "Arch"
-                ],
-                [
-                    "SingleClick",
-                    "false"
-                ],
-                [
-                    "contrast",
-                    "4"
-                ]
-            ]
+            {
+                "AnimationDurationFactor": "0.3",
+                "ColorScheme": "BreezeLight",
+                "LookAndFeelPackage": "Arch",
+                "SingleClick": "false",
+                "contrast": "4"
+            }
         ],
         [
             [
                 "KFileDialog Settings"
             ],
-            [
-                [
-                    "Allow Expansion",
-                    "true"
-                ],
-                [
-                    "Automatically select filename extension",
-                    "true"
-                ],
-                [
-                    "Breadcrumb Navigation",
-                    "true"
-                ],
-                [
-                    "Show Bookmarks",
-                    "true"
-                ],
-                [
-                    "Show Full Path",
-                    "false"
-                ],
-                [
-                    "Show Inline Previews",
-                    "true"
-                ],
-                [
-                    "Show Preview",
-                    "false"
-                ],
-                [
-                    "Show Speedbar",
-                    "true"
-                ],
-                [
-                    "Show hidden files",
-                    "true"
-                ],
-                [
-                    "Sort by",
-                    "Date"
-                ],
-                [
-                    "Sort directories first",
-                    "true"
-                ],
-                [
-                    "Sort reversed",
-                    "true"
-                ],
-                [
-                    "View Style",
-                    "DetailTree"
-                ]
-            ]
+            {
+                "Allow Expansion": "true",
+                "Automatically select filename extension": "true",
+                "Breadcrumb Navigation": "true",
+                "Show Bookmarks": "true",
+                "Show Full Path": "false",
+                "Show Inline Previews": "true",
+                "Show Preview": "false",
+                "Show Speedbar": "true",
+                "Show hidden files": "true",
+                "Sort by": "Date",
+                "Sort directories first": "true",
+                "Sort reversed": "true",
+                "View Style": "DetailTree"
+            }
         ],
         [
             [
                 "WM"
             ],
-            [
-                [
-                    "activeBackground",
-                    "26,28,32"
-                ],
-                [
-                    "activeBlend",
-                    "30,32,36"
-                ],
-                [
-                    "activeForeground",
-                    "211,218,227"
-                ],
-                [
-                    "inactiveBackground",
-                    "30,32,36"
-                ],
-                [
-                    "inactiveBlend",
-                    "30,32,36"
-                ],
-                [
-                    "inactiveForeground",
-                    "102,106,115"
-                ]
-            ]
+            {
+                "activeBackground": "26,28,32",
+                "activeBlend": "30,32,36",
+                "activeForeground": "211,218,227",
+                "inactiveBackground": "30,32,36",
+                "inactiveBlend": "30,32,36",
+                "inactiveForeground": "102,106,115"
+            }
         ]
     ],
     "/plasma-org.kde.plasma.desktop-appletsrc": [
@@ -2939,68 +1345,35 @@
                 "ActionPlugins",
                 "0"
             ],
-            [
-                [
-                    "RightButton;NoModifier",
-                    "org.kde.contextmenu"
-                ],
-                [
-                    "wheel:Vertical;NoModifier",
-                    "org.kde.switchdesktop"
-                ]
-            ]
+            {
+                "RightButton;NoModifier": "org.kde.contextmenu",
+                "wheel:Vertical;NoModifier": "org.kde.switchdesktop"
+            }
         ],
         [
             [
                 "ActionPlugins",
                 "1"
             ],
-            [
-                [
-                    "RightButton;NoModifier",
-                    "org.kde.contextmenu"
-                ]
-            ]
+            {
+                "RightButton;NoModifier": "org.kde.contextmenu"
+            }
         ],
         [
             [
                 "Containments",
                 "2"
             ],
-            [
-                [
-                    "ItemGeometriesHorizontal",
-                    ""
-                ],
-                [
-                    "activityId",
-                    "b8c38c6a-90a5-4db9-b967-11a6c016ca90"
-                ],
-                [
-                    "formfactor",
-                    "0"
-                ],
-                [
-                    "immutability",
-                    "1"
-                ],
-                [
-                    "lastScreen",
-                    "0"
-                ],
-                [
-                    "location",
-                    "0"
-                ],
-                [
-                    "plugin",
-                    "org.kde.desktopcontainment"
-                ],
-                [
-                    "wallpaperplugin",
-                    "org.kde.image"
-                ]
-            ]
+            {
+                "ItemGeometriesHorizontal": "",
+                "activityId": "b8c38c6a-90a5-4db9-b967-11a6c016ca90",
+                "formfactor": "0",
+                "immutability": "1",
+                "lastScreen": "0",
+                "location": "0",
+                "plugin": "org.kde.desktopcontainment",
+                "wallpaperplugin": "org.kde.image"
+            }
         ],
         [
             [
@@ -3008,16 +1381,10 @@
                 "2",
                 "ConfigDialog"
             ],
-            [
-                [
-                    "DialogHeight",
-                    "776"
-                ],
-                [
-                    "DialogWidth",
-                    "1131"
-                ]
-            ]
+            {
+                "DialogHeight": "776",
+                "DialogWidth": "1131"
+            }
         ],
         [
             [
@@ -3025,12 +1392,9 @@
                 "2",
                 "Configuration"
             ],
-            [
-                [
-                    "PreloadWeight",
-                    "0"
-                ]
-            ]
+            {
+                "PreloadWeight": "0"
+            }
         ],
         [
             [
@@ -3038,16 +1402,10 @@
                 "2",
                 "General"
             ],
-            [
-                [
-                    "ToolBoxButtonState",
-                    "topcenter"
-                ],
-                [
-                    "ToolBoxButtonX",
-                    "768"
-                ]
-            ]
+            {
+                "ToolBoxButtonState": "topcenter",
+                "ToolBoxButtonX": "768"
+            }
         ],
         [
             [
@@ -3057,52 +1415,25 @@
                 "org.kde.image",
                 "General"
             ],
-            [
-                [
-                    "Image",
-                    "file:///home1/tev/Desktop/background/Anime Street Evening.png"
-                ],
-                [
-                    "SlidePaths",
-                    "/usr/share/wallpapers"
-                ]
-            ]
+            {
+                "Image": "file:///home1/tev/Desktop/background/Anime Street Evening.png",
+                "SlidePaths": "/usr/share/wallpapers"
+            }
         ],
         [
             [
                 "Containments",
                 "3"
             ],
-            [
-                [
-                    "activityId",
-                    ""
-                ],
-                [
-                    "formfactor",
-                    "2"
-                ],
-                [
-                    "immutability",
-                    "1"
-                ],
-                [
-                    "lastScreen",
-                    "0"
-                ],
-                [
-                    "location",
-                    "4"
-                ],
-                [
-                    "plugin",
-                    "org.kde.panel"
-                ],
-                [
-                    "wallpaperplugin",
-                    "org.kde.image"
-                ]
-            ]
+            {
+                "activityId": "",
+                "formfactor": "2",
+                "immutability": "1",
+                "lastScreen": "0",
+                "location": "4",
+                "plugin": "org.kde.panel",
+                "wallpaperplugin": "org.kde.image"
+            }
         ],
         [
             [
@@ -3111,16 +1442,10 @@
                 "Applets",
                 "4"
             ],
-            [
-                [
-                    "immutability",
-                    "1"
-                ],
-                [
-                    "plugin",
-                    "org.kde.plasma.kickoff"
-                ]
-            ]
+            {
+                "immutability": "1",
+                "plugin": "org.kde.plasma.kickoff"
+            }
         ],
         [
             [
@@ -3130,12 +1455,9 @@
                 "4",
                 "Configuration"
             ],
-            [
-                [
-                    "PreloadWeight",
-                    "100"
-                ]
-            ]
+            {
+                "PreloadWeight": "100"
+            }
         ],
         [
             [
@@ -3146,16 +1468,10 @@
                 "Configuration",
                 "ConfigDialog"
             ],
-            [
-                [
-                    "DialogHeight",
-                    "540"
-                ],
-                [
-                    "DialogWidth",
-                    "720"
-                ]
-            ]
+            {
+                "DialogHeight": "540",
+                "DialogWidth": "720"
+            }
         ],
         [
             [
@@ -3166,12 +1482,9 @@
                 "Configuration",
                 "General"
             ],
-            [
-                [
-                    "favoritesPortedToKAstats",
-                    "true"
-                ]
-            ]
+            {
+                "favoritesPortedToKAstats": "true"
+            }
         ],
         [
             [
@@ -3182,12 +1495,9 @@
                 "Configuration",
                 "Shortcuts"
             ],
-            [
-                [
-                    "global",
-                    "Alt+F1"
-                ]
-            ]
+            {
+                "global": "Alt+F1"
+            }
         ],
         [
             [
@@ -3197,12 +1507,9 @@
                 "4",
                 "Shortcuts"
             ],
-            [
-                [
-                    "global",
-                    "Alt+F1"
-                ]
-            ]
+            {
+                "global": "Alt+F1"
+            }
         ],
         [
             [
@@ -3211,16 +1518,10 @@
                 "Applets",
                 "5"
             ],
-            [
-                [
-                    "immutability",
-                    "1"
-                ],
-                [
-                    "plugin",
-                    "org.kde.plasma.icontasks"
-                ]
-            ]
+            {
+                "immutability": "1",
+                "plugin": "org.kde.plasma.icontasks"
+            }
         ],
         [
             [
@@ -3230,12 +1531,9 @@
                 "5",
                 "Configuration"
             ],
-            [
-                [
-                    "PreloadWeight",
-                    "0"
-                ]
-            ]
+            {
+                "PreloadWeight": "0"
+            }
         ],
         [
             [
@@ -3246,12 +1544,9 @@
                 "Configuration",
                 "General"
             ],
-            [
-                [
-                    "launchers",
-                    "applications:systemsettings.desktop,applications:org.kde.konsole.desktop,preferred://filemanager,preferred://browser"
-                ]
-            ]
+            {
+                "launchers": "applications:systemsettings.desktop,applications:org.kde.konsole.desktop,preferred://filemanager,preferred://browser"
+            }
         ],
         [
             [
@@ -3260,16 +1555,10 @@
                 "Applets",
                 "6"
             ],
-            [
-                [
-                    "immutability",
-                    "1"
-                ],
-                [
-                    "plugin",
-                    "org.kde.plasma.marginsseparator"
-                ]
-            ]
+            {
+                "immutability": "1",
+                "plugin": "org.kde.plasma.marginsseparator"
+            }
         ],
         [
             [
@@ -3279,12 +1568,9 @@
                 "6",
                 "Configuration"
             ],
-            [
-                [
-                    "PreloadWeight",
-                    "0"
-                ]
-            ]
+            {
+                "PreloadWeight": "0"
+            }
         ],
         [
             [
@@ -3295,16 +1581,10 @@
                 "Configuration",
                 "ConfigDialog"
             ],
-            [
-                [
-                    "DialogHeight",
-                    "540"
-                ],
-                [
-                    "DialogWidth",
-                    "720"
-                ]
-            ]
+            {
+                "DialogHeight": "540",
+                "DialogWidth": "720"
+            }
         ],
         [
             [
@@ -3312,16 +1592,10 @@
                 "3",
                 "ConfigDialog"
             ],
-            [
-                [
-                    "DialogHeight",
-                    "74"
-                ],
-                [
-                    "DialogWidth",
-                    "2560"
-                ]
-            ]
+            {
+                "DialogHeight": "74",
+                "DialogWidth": "2560"
+            }
         ],
         [
             [
@@ -3329,12 +1603,9 @@
                 "3",
                 "Configuration"
             ],
-            [
-                [
-                    "PreloadWeight",
-                    "0"
-                ]
-            ]
+            {
+                "PreloadWeight": "0"
+            }
         ],
         [
             [
@@ -3342,48 +1613,24 @@
                 "3",
                 "General"
             ],
-            [
-                [
-                    "AppletOrder",
-                    "4;5;6"
-                ]
-            ]
+            {
+                "AppletOrder": "4;5;6"
+            }
         ],
         [
             [
                 "Containments",
                 "7"
             ],
-            [
-                [
-                    "activityId",
-                    ""
-                ],
-                [
-                    "formfactor",
-                    "2"
-                ],
-                [
-                    "immutability",
-                    "1"
-                ],
-                [
-                    "lastScreen",
-                    "0"
-                ],
-                [
-                    "location",
-                    "4"
-                ],
-                [
-                    "plugin",
-                    "org.kde.panel"
-                ],
-                [
-                    "wallpaperplugin",
-                    "org.kde.image"
-                ]
-            ]
+            {
+                "activityId": "",
+                "formfactor": "2",
+                "immutability": "1",
+                "lastScreen": "0",
+                "location": "4",
+                "plugin": "org.kde.panel",
+                "wallpaperplugin": "org.kde.image"
+            }
         ],
         [
             [
@@ -3392,16 +1639,10 @@
                 "Applets",
                 "8"
             ],
-            [
-                [
-                    "immutability",
-                    "1"
-                ],
-                [
-                    "plugin",
-                    "org.kde.plasma.marginsseparator"
-                ]
-            ]
+            {
+                "immutability": "1",
+                "plugin": "org.kde.plasma.marginsseparator"
+            }
         ],
         [
             [
@@ -3410,16 +1651,10 @@
                 "Applets",
                 "9"
             ],
-            [
-                [
-                    "immutability",
-                    "1"
-                ],
-                [
-                    "plugin",
-                    "org.kde.plasma.pager"
-                ]
-            ]
+            {
+                "immutability": "1",
+                "plugin": "org.kde.plasma.pager"
+            }
         ],
         [
             [
@@ -3428,16 +1663,10 @@
                 "Applets",
                 "10"
             ],
-            [
-                [
-                    "immutability",
-                    "1"
-                ],
-                [
-                    "plugin",
-                    "org.kde.plasma.systemtray"
-                ]
-            ]
+            {
+                "immutability": "1",
+                "plugin": "org.kde.plasma.systemtray"
+            }
         ],
         [
             [
@@ -3447,16 +1676,10 @@
                 "10",
                 "Configuration"
             ],
-            [
-                [
-                    "PreloadWeight",
-                    "55"
-                ],
-                [
-                    "SystrayContainmentId",
-                    "13"
-                ]
-            ]
+            {
+                "PreloadWeight": "55",
+                "SystrayContainmentId": "13"
+            }
         ],
         [
             [
@@ -3465,16 +1688,10 @@
                 "Applets",
                 "11"
             ],
-            [
-                [
-                    "immutability",
-                    "1"
-                ],
-                [
-                    "plugin",
-                    "org.kde.plasma.digitalclock"
-                ]
-            ]
+            {
+                "immutability": "1",
+                "plugin": "org.kde.plasma.digitalclock"
+            }
         ],
         [
             [
@@ -3483,16 +1700,10 @@
                 "Applets",
                 "12"
             ],
-            [
-                [
-                    "immutability",
-                    "1"
-                ],
-                [
-                    "plugin",
-                    "org.kde.plasma.showdesktop"
-                ]
-            ]
+            {
+                "immutability": "1",
+                "plugin": "org.kde.plasma.showdesktop"
+            }
         ],
         [
             [
@@ -3500,16 +1711,10 @@
                 "7",
                 "ConfigDialog"
             ],
-            [
-                [
-                    "DialogHeight",
-                    "74"
-                ],
-                [
-                    "DialogWidth",
-                    "2560"
-                ]
-            ]
+            {
+                "DialogHeight": "74",
+                "DialogWidth": "2560"
+            }
         ],
         [
             [
@@ -3517,84 +1722,39 @@
                 "7",
                 "General"
             ],
-            [
-                [
-                    "AppletOrder",
-                    "8;9;10;11;12"
-                ]
-            ]
+            {
+                "AppletOrder": "8;9;10;11;12"
+            }
         ],
         [
             [
                 "Containments",
                 "13"
             ],
-            [
-                [
-                    "activityId",
-                    ""
-                ],
-                [
-                    "formfactor",
-                    "2"
-                ],
-                [
-                    "immutability",
-                    "1"
-                ],
-                [
-                    "lastScreen",
-                    "0"
-                ],
-                [
-                    "location",
-                    "4"
-                ],
-                [
-                    "plugin",
-                    "org.kde.plasma.private.systemtray"
-                ],
-                [
-                    "wallpaperplugin",
-                    "org.kde.image"
-                ]
-            ]
+            {
+                "activityId": "",
+                "formfactor": "2",
+                "immutability": "1",
+                "lastScreen": "0",
+                "location": "4",
+                "plugin": "org.kde.plasma.private.systemtray",
+                "wallpaperplugin": "org.kde.image"
+            }
         ],
         [
             [
                 "Containments",
                 "14"
             ],
-            [
-                [
-                    "activityId",
-                    ""
-                ],
-                [
-                    "formfactor",
-                    "2"
-                ],
-                [
-                    "immutability",
-                    "1"
-                ],
-                [
-                    "lastScreen",
-                    "0"
-                ],
-                [
-                    "location",
-                    "3"
-                ],
-                [
-                    "plugin",
-                    "org.kde.panel"
-                ],
-                [
-                    "wallpaperplugin",
-                    "org.kde.image"
-                ]
-            ]
+            {
+                "activityId": "",
+                "formfactor": "2",
+                "immutability": "1",
+                "lastScreen": "0",
+                "location": "3",
+                "plugin": "org.kde.panel",
+                "wallpaperplugin": "org.kde.image"
+            }
         ],
         [
             [
@@ -3603,16 +1763,10 @@
                 "Applets",
                 "15"
             ],
-            [
-                [
-                    "immutability",
-                    "1"
-                ],
-                [
-                    "plugin",
-                    "org.kde.plasma.appmenu"
-                ]
-            ]
+            {
+                "immutability": "1",
+                "plugin": "org.kde.plasma.appmenu"
+            }
         ],
         [
             [
@@ -3622,12 +1776,9 @@
                 "15",
                 "Configuration"
             ],
-            [
-                [
-                    "PreloadWeight",
-                    "55"
-                ]
-            ]
+            {
+                "PreloadWeight": "55"
+            }
         ],
         [
             [
@@ -3638,16 +1789,10 @@
                 "Configuration",
                 "ConfigDialog"
             ],
-            [
-                [
-                    "DialogHeight",
-                    "540"
-                ],
-                [
-                    "DialogWidth",
-                    "720"
-                ]
-            ]
+            {
+                "DialogHeight": "540",
+                "DialogWidth": "720"
+            }
         ],
         [
             [
@@ -3657,12 +1802,9 @@
                 "15",
                 "Shortcuts"
             ],
-            [
-                [
-                    "global",
-                    ""
-                ]
-            ]
+            {
+                "global": ""
+            }
         ],
         [
             [
@@ -3670,16 +1812,10 @@
                 "14",
                 "ConfigDialog"
             ],
-            [
-                [
-                    "DialogHeight",
-                    "74"
-                ],
-                [
-                    "DialogWidth",
-                    "2560"
-                ]
-            ]
+            {
+                "DialogHeight": "74",
+                "DialogWidth": "2560"
+            }
         ],
         [
             [
@@ -3687,27 +1823,39 @@
                 "14",
                 "General"
             ],
-            [
-                [
-                    "AppletOrder",
-                    "15"
-                ]
-            ]
+            {
+                "AppletOrder": "15"
+            }
         ],
         [
             [
                 "ScreenMapping"
             ],
+            {
+                "itemsOnDisabledScreens": "",
+                "screenMapping": ""
+            }
+        ]
+    ],
+    "/kwinrulesrc": [
+        [
             [
-                [
-                    "itemsOnDisabledScreens",
-                    ""
-                ],
-                [
-                    "screenMapping",
-                    ""
-                ]
-            ]
+                "1"
+            ],
+            {
+                "Description": "Hide window border",
+                "noborder": "true",
+                "noborderrule": "2"
+            }
+        ],
+        [
+            [
+                "General"
+            ],
+            {
+                "count": "1",
+                "rules": "1"
+            }
         ]
     ]
 }

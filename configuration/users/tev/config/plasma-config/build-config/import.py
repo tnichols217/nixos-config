@@ -9,6 +9,11 @@ import os
 
 HOME = os.path.expanduser('~')
 
+def listToDict(l):
+    o = {}
+    [o.__setitem__(i[0], i[1] if len(i) > 1 else "") for i in l]
+    return o
+
 def readFile(f):
     with open(f, 'r') as f:
         o = f.readlines()
@@ -21,7 +26,7 @@ def readFile(f):
 def parseString(c):
     DELIM = "\n["
     DELIM2 = "]["
-    d = [[(i[0][:len(i[0])-1].split(DELIM2)), [j.split("=") for j in i[1:]]] for i in [i.split("\n") for i in c.split(DELIM)[1:]]]
+    d = [[(i[0][:len(i[0])-1].split(DELIM2)), listToDict([j.split("=") for j in i[1:]])] for i in [i.split("\n") for i in c.split(DELIM)[1:]]]
     # print(d)
     return d
 

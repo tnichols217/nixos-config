@@ -1,0 +1,15 @@
+[Desktop Entry]
+Name=Kwin-scripts
+Comment=Halves windows
+Icon=preferences-system-windows
+
+X-KDE-PluginInfo-Author=Trevor Nichols
+X-KDE-PluginInfo-Email=62992267+tnichols217@users.noreply.github.com
+X-KDE-PluginInfo-Name=kwin-scripts
+X-KDE-PluginInfo-Version=1.0
+X-KDE-PluginInfo-License=GPL3
+
+Type=Service
+X-KDE-ServiceTypes=KWin/Script
+X-Plasma-API=javascript
+X-Plasma-MainScript=code/main.js
