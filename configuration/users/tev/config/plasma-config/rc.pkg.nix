@@ -19,7 +19,7 @@ pkgs.stdenv.mkDerivation rec {
   meta = {
     description = "My personal KDE plasma configuration";
     homepage = "https://github.com/tnichols217/nixos-config";
-    # license = pkgs.stdenv.lib.licenses.gpl2;
-    # platforms = pkgs.stdenv.lib.platforms.all;
+    license = pkgs.stdenv.lib.licenses.gpl3;
+    platforms = pkgs.stdenv.lib.platforms.all;
   };
 }

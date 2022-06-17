@@ -17,6 +17,7 @@
         nur.repos.wolfangaukang.stremio
         spotify
         (callPackage ./arch-theme.pkg.nix {})
+        (callPackage ./papirus-icons.pkg.nix {})
       ];
     };
     programs = {

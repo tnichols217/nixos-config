@@ -25,7 +25,7 @@ rec {
   meta = {
     description = "Combines two deriviations (for config files)";
     homepage = "https://github.com/tnichols217/nixos-config";
-    # license = pkgs.stdenv.lib.licenses.gpl2;
-    # platforms = pkgs.stdenv.lib.platforms.all;
+    license = pkgs.stdenv.lib.licenses.gpl3;
+    platforms = pkgs.stdenv.lib.platforms.all;
   };
 }

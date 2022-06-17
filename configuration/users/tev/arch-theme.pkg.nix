@@ -47,7 +47,7 @@ pkgs.stdenv.mkDerivation rec {
   meta = {
     description = "A Customized beautiful theme for KDE based distros";
     homepage = "https://github.com/rkstrdee/Arch";
-    # license = pkgs.stdenv.lib.licenses.gpl2;
-    # platforms = pkgs.stdenv.lib.platforms.all;
+    license = pkgs.lib.licenses.gpl3;
+    platforms = pkgs.lib.platforms.all;
   };
 }
