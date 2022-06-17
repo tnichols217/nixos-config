@@ -1621,9 +1621,13 @@
         [
             [
                 "PlasmaViews",
-                "Panel 2"
+                "Panel 3"
             ],
             [
+                [
+                    "alignment",
+                    "1"
+                ],
                 [
                     "panelVisibility",
                     "1"
@@ -1633,13 +1637,83 @@
         [
             [
                 "PlasmaViews",
-                "Panel 2",
+                "Panel 3",
                 "Defaults"
             ],
             [
                 [
+                    "minLength",
+                    "0"
+                ],
+                [
                     "thickness",
-                    "30"
+                    "35"
+                ]
+            ]
+        ],
+        [
+            [
+                "PlasmaViews",
+                "Panel 7"
+            ],
+            [
+                [
+                    "alignment",
+                    "2"
+                ],
+                [
+                    "panelVisibility",
+                    "1"
+                ]
+            ]
+        ],
+        [
+            [
+                "PlasmaViews",
+                "Panel 7",
+                "Defaults"
+            ],
+            [
+                [
+                    "minLength",
+                    "0"
+                ],
+                [
+                    "thickness",
+                    "35"
+                ]
+            ]
+        ],
+        [
+            [
+                "PlasmaViews",
+                "Panel 14"
+            ],
+            [
+                [
+                    "alignment",
+                    "132"
+                ],
+                [
+                    "panelVisibility",
+                    "1"
+                ]
+            ]
+        ],
+        [
+            [
+                "PlasmaViews",
+                "Panel 14",
+                "Defaults"
+            ],
+            [
+                [
+                    "minLength",
+                    "0"
+                ],
+                [
+                    "thickness",
+                    "25"
                 ]
             ]
         ]
@@ -3593,7 +3667,7 @@
         [
             [
                 "Containments",
-                "15",
+                "14",
                 "ConfigDialog"
             ],
             [
