@@ -13,164 +13,164 @@ in
   "/kglobalshortcutsrc"= {
     "kcm_touchpad"= {
       "items"= {
-        "Disable Touchpad"= "Touchpad OffTouchpad OffDisable Touchpad";
-        "Enable Touchpad"= "Touchpad OnTouchpad OnEnable Touchpad";
-        "Toggle Touchpad"= "Touchpad ToggleTouchpad ToggleToggle Touchpad";
+        "Disable Touchpad"= "Touchpad Off,Touchpad Off,Disable Touchpad";
+        "Enable Touchpad"= "Touchpad On,Touchpad On,Enable Touchpad";
+        "Toggle Touchpad"= "Touchpad Toggle,Touchpad Toggle,Toggle Touchpad";
         "_k_friendly_name"= "Touchpad";
       };
     };
     "kded5"= {
       "items"= {
-        "Show System Activity"= "Ctrl+EscCtrl+EscShow System Activity";
+        "Show System Activity"= "Ctrl+Esc,Ctrl+Esc,Show System Activity";
         "_k_friendly_name"= "KDE Daemon";
-        "display"= "Display\tMeta+PDisplay\tMeta+PSwitch Display";
+        "display"= "Display\tMeta+P,Display\tMeta+P,Switch Display";
       };
     };
     "khotkeys"= {
       "items"= {
         "_k_friendly_name"= "Custom Shortcuts Service";
-        "{2b622f4b-e7dd-4cb3-a362-b4bb59688264}"= "Meta+Shift+Snoneopen";
-        "{e793c702-98fa-4314-98a2-9aed7662ad13}"= "Alt+Media Playnonenext";
-        "{f78700e1-1af3-4a00-8bfc-1abc66d68a91}"= "Ctrl+Media Playnoneprev";
+        "{2b622f4b-e7dd-4cb3-a362-b4bb59688264}"= "Meta+Shift+S,none,open";
+        "{e793c702-98fa-4314-98a2-9aed7662ad13}"= "Alt+Media Play,none,next";
+        "{f78700e1-1af3-4a00-8bfc-1abc66d68a91}"= "Ctrl+Media Play,none,prev";
       };
     };
     "kmix"= {
       "items"= {
         "_k_friendly_name"= "Audio Volume";
-        "decrease_microphone_volume"= "Microphone Volume DownMicrophone Volume DownDecrease Microphone Volume";
-        "decrease_volume"= "Volume DownVolume DownDecrease Volume";
-        "increase_microphone_volume"= "Microphone Volume UpMicrophone Volume UpIncrease Microphone Volume";
-        "increase_volume"= "Volume UpVolume UpIncrease Volume";
-        "mic_mute"= "Microphone Mute\tMeta+Volume MuteMicrophone Mute\tMeta+Volume MuteMute Microphone";
-        "mute"= "Volume MuteVolume MuteMute";
+        "decrease_microphone_volume"= "Microphone Volume Down,Microphone Volume Down,Decrease Microphone Volume";
+        "decrease_volume"= "Volume Down,Volume Down,Decrease Volume";
+        "increase_microphone_volume"= "Microphone Volume Up,Microphone Volume Up,Increase Microphone Volume";
+        "increase_volume"= "Volume Up,Volume Up,Increase Volume";
+        "mic_mute"= "Microphone Mute\tMeta+Volume Mute,Microphone Mute\tMeta+Volume Mute,Mute Microphone";
+        "mute"= "Volume Mute,Volume Mute,Mute";
       };
     };
     "ksmserver"= {
       "items"= {
-        "Halt Without Confirmation"= "noneHalt Without Confirmation";
-        "Lock Session"= "Meta+L\tCtrl+Alt+L\tScreensaverMeta+L\tCtrl+Alt+L\tScreensaverLock Session";
-        "Log Out"= "Ctrl+Alt+DelCtrl+Alt+DelLog Out";
-        "Log Out Without Confirmation"= "noneLog Out Without Confirmation";
-        "Reboot Without Confirmation"= "noneReboot Without Confirmation";
+        "Halt Without Confirmation"= "none,,Halt Without Confirmation";
+        "Lock Session"= "Meta+L\tCtrl+Alt+L\tScreensaver,Meta+L\tCtrl+Alt+L\tScreensaver,Lock Session";
+        "Log Out"= "Ctrl+Alt+Del,Ctrl+Alt+Del,Log Out";
+        "Log Out Without Confirmation"= "none,,Log Out Without Confirmation";
+        "Reboot Without Confirmation"= "none,,Reboot Without Confirmation";
         "_k_friendly_name"= "Session Management";
       };
     };
     "kwin"= {
       "items"= {
-        "Expose"= "Meta+Tab\tCtrl+F9Ctrl+F9Toggle Present Windows (Current desktop)";
-        "ExposeAll"= "Meta+Shift+Tab\tLaunch (C)\tCtrl+F10Ctrl+F10\tLaunch (C)Toggle Present Windows (All desktops)";
-        "ExposeClass"= "Ctrl+F7Ctrl+F7Toggle Present Windows (Window class)";
-        "Kill Window"= "Ctrl+Alt+EscCtrl+Alt+EscKill Window";
-        "Show Desktop"= "Meta+DMeta+DShow Desktop";
-        "ShowDesktopGrid"= "Ctrl+F8Ctrl+F8Show Desktop Grid";
-        "Suspend Compositing"= "Alt+Shift+F12Alt+Shift+F12Suspend Compositing";
-        "Switch One Desktop Down"= "Meta+Ctrl+@\tMeta+DownMeta+Ctrl+DownSwitch One Desktop Down";
-        "Switch One Desktop Up"= "Meta+Up\tMeta+Ctrl+!Meta+Ctrl+UpSwitch One Desktop Up";
-        "Switch One Desktop to the Left"= "Meta+Left\tMeta+Ctrl+2Meta+Ctrl+LeftSwitch One Desktop to the Left";
-        "Switch One Desktop to the Right"= "Meta+Right\tMeta+Ctrl+1Meta+Ctrl+RightSwitch One Desktop to the Right";
-        "Switch Window Down"= "noneMeta+Alt+DownSwitch to Window Below";
-        "Switch Window Left"= "noneMeta+Alt+LeftSwitch to Window to the Left";
-        "Switch Window Right"= "noneMeta+Alt+RightSwitch to Window to the Right";
-        "Switch Window Up"= "noneMeta+Alt+UpSwitch to Window Above";
-        "Walk Through Windows"= "Alt+TabAlt+TabWalk Through Windows";
-        "Walk Through Windows (Reverse)"= "Alt+Shift+BacktabAlt+Shift+BacktabWalk Through Windows (Reverse)";
-        "Walk Through Windows of Current Application"= "Alt+`Alt+`Walk Through Windows of Current Application";
-        "Walk Through Windows of Current Application (Reverse)"= "Alt+~Alt+~Walk Through Windows of Current Application (Reverse)";
-        "Window Above Other Windows"= "Ctrl+Alt+Shift+UpKeep Window Above Others";
-        "Window Below Other Windows"= "Ctrl+Alt+Shift+DownKeep Window Below Others";
-        "Window Close"= "Alt+F4Alt+F4Close Window";
-        "Window Maximize"= "Meta+PgUp\tMeta+]Meta+PgUpMaximize Window";
-        "Window On All Desktops"= "Ctrl+Alt+Shift+RightKeep Window on All Desktops";
-        "Window One Desktop Down"= "Meta+Ctrl+Shift+Down\tMeta+Ctrl+Down\tMeta+Ctrl+Alt+@Meta+Ctrl+Shift+DownWindow One Desktop Down";
-        "Window One Desktop Up"= "Meta+Ctrl+Shift+Up\tMeta+Ctrl+Up\tMeta+Ctrl+Alt+!Meta+Ctrl+Shift+UpWindow One Desktop Up";
-        "Window One Desktop to the Left"= "Meta+Ctrl+Shift+Left\tMeta+Ctrl+Alt+2\tMeta+Ctrl+LeftMeta+Ctrl+Shift+LeftWindow One Desktop to the Left";
-        "Window One Desktop to the Right"= "Meta+Ctrl+Shift+Right\tMeta+Ctrl+Right\tMeta+Ctrl+Alt+1Meta+Ctrl+Shift+RightWindow One Desktop to the Right";
-        "Window Operations Menu"= "Alt+F3Alt+F3Window Operations Menu";
-        "Window Quick Tile Bottom"= "Meta+Alt+DownMeta+DownQuick Tile Window to the Bottom";
-        "Window Quick Tile Left"= "Meta+Alt+LeftMeta+LeftQuick Tile Window to the Left";
-        "Window Quick Tile Right"= "Meta+Alt+RightMeta+RightQuick Tile Window to the Right";
-        "Window Quick Tile Top"= "Meta+Alt+UpMeta+UpQuick Tile Window to the Top";
-        "Window to Next Screen"= "Meta+Shift+RightMeta+Shift+RightWindow to Next Screen";
-        "Window to Previous Screen"= "Meta+Shift+LeftMeta+Shift+LeftWindow to Previous Screen";
+        "Expose"= "Meta+Tab\tCtrl+F9,Ctrl+F9,Toggle Present Windows (Current desktop)";
+        "ExposeAll"= "Meta+Shift+Tab\tLaunch (C)\tCtrl+F10,Ctrl+F10\tLaunch (C),Toggle Present Windows (All desktops)";
+        "ExposeClass"= "Ctrl+F7,Ctrl+F7,Toggle Present Windows (Window class)";
+        "Kill Window"= "Ctrl+Alt+Esc,Ctrl+Alt+Esc,Kill Window";
+        "Show Desktop"= "Meta+D,Meta+D,Show Desktop";
+        "ShowDesktopGrid"= "Ctrl+F8,Ctrl+F8,Show Desktop Grid";
+        "Suspend Compositing"= "Alt+Shift+F12,Alt+Shift+F12,Suspend Compositing";
+        "Switch One Desktop Down"= "Meta+Ctrl+@\tMeta+Down,Meta+Ctrl+Down,Switch One Desktop Down";
+        "Switch One Desktop Up"= "Meta+Up\tMeta+Ctrl+!,Meta+Ctrl+Up,Switch One Desktop Up";
+        "Switch One Desktop to the Left"= "Meta+Left\tMeta+Ctrl+2,Meta+Ctrl+Left,Switch One Desktop to the Left";
+        "Switch One Desktop to the Right"= "Meta+Right\tMeta+Ctrl+1,Meta+Ctrl+Right,Switch One Desktop to the Right";
+        "Switch Window Down"= "none,Meta+Alt+Down,Switch to Window Below";
+        "Switch Window Left"= "none,Meta+Alt+Left,Switch to Window to the Left";
+        "Switch Window Right"= "none,Meta+Alt+Right,Switch to Window to the Right";
+        "Switch Window Up"= "none,Meta+Alt+Up,Switch to Window Above";
+        "Walk Through Windows"= "Alt+Tab,Alt+Tab,Walk Through Windows";
+        "Walk Through Windows (Reverse)"= "Alt+Shift+Backtab,Alt+Shift+Backtab,Walk Through Windows (Reverse)";
+        "Walk Through Windows of Current Application"= "Alt+`,Alt+`,Walk Through Windows of Current Application";
+        "Walk Through Windows of Current Application (Reverse)"= "Alt+~,Alt+~,Walk Through Windows of Current Application (Reverse)";
+        "Window Above Other Windows"= "Ctrl+Alt+Shift+Up,,Keep Window Above Others";
+        "Window Below Other Windows"= "Ctrl+Alt+Shift+Down,,Keep Window Below Others";
+        "Window Close"= "Alt+F4,Alt+F4,Close Window";
+        "Window Maximize"= "Meta+PgUp\tMeta+],Meta+PgUp,Maximize Window";
+        "Window On All Desktops"= "Ctrl+Alt+Shift+Right,,Keep Window on All Desktops";
+        "Window One Desktop Down"= "Meta+Ctrl+Shift+Down\tMeta+Ctrl+Down\tMeta+Ctrl+Alt+@,Meta+Ctrl+Shift+Down,Window One Desktop Down";
+        "Window One Desktop Up"= "Meta+Ctrl+Shift+Up\tMeta+Ctrl+Up\tMeta+Ctrl+Alt+!,Meta+Ctrl+Shift+Up,Window One Desktop Up";
+        "Window One Desktop to the Left"= "Meta+Ctrl+Shift+Left\tMeta+Ctrl+Alt+2\tMeta+Ctrl+Left,Meta+Ctrl+Shift+Left,Window One Desktop to the Left";
+        "Window One Desktop to the Right"= "Meta+Ctrl+Shift+Right\tMeta+Ctrl+Right\tMeta+Ctrl+Alt+1,Meta+Ctrl+Shift+Right,Window One Desktop to the Right";
+        "Window Operations Menu"= "Alt+F3,Alt+F3,Window Operations Menu";
+        "Window Quick Tile Bottom"= "Meta+Alt+Down,Meta+Down,Quick Tile Window to the Bottom";
+        "Window Quick Tile Left"= "Meta+Alt+Left,Meta+Left,Quick Tile Window to the Left";
+        "Window Quick Tile Right"= "Meta+Alt+Right,Meta+Right,Quick Tile Window to the Right";
+        "Window Quick Tile Top"= "Meta+Alt+Up,Meta+Up,Quick Tile Window to the Top";
+        "Window to Next Screen"= "Meta+Shift+Right,Meta+Shift+Right,Window to Next Screen";
+        "Window to Previous Screen"= "Meta+Shift+Left,Meta+Shift+Left,Window to Previous Screen";
         "_k_friendly_name"= "KWin";
-        "view_actual_size"= "Meta+0Meta+0Actual Size";
-        "view_zoom_in"= "Meta+:Meta+:Zoom Out";
-        "view_zoom_out"= "Meta+-Meta+-Zoom Out";
+        "view_actual_size"= "Meta+0,Meta+0,Actual Size";
+        "view_zoom_in"= "Meta+=,Meta+=,Zoom Out";
+        "view_zoom_out"= "Meta+-,Meta+-,Zoom Out";
       };
     };
     "mediacontrol"= {
       "items"= {
         "_k_friendly_name"= "Media Controller";
-        "mediavolumedown"= "noneMedia volume down";
-        "mediavolumeup"= "noneMedia volume up";
-        "nextmedia"= "Media NextMedia NextMedia playback next";
-        "pausemedia"= "Media PauseMedia PausePause media playback";
-        "playmedia"= "nonePlay media playback";
-        "playpausemedia"= "Media PlayMedia PlayPlay/Pause media playback";
-        "previousmedia"= "Media PreviousMedia PreviousMedia playback previous";
-        "stopmedia"= "Media StopMedia StopStop media playback";
+        "mediavolumedown"= "none,,Media volume down";
+        "mediavolumeup"= "none,,Media volume up";
+        "nextmedia"= "Media Next,Media Next,Media playback next";
+        "pausemedia"= "Media Pause,Media Pause,Pause media playback";
+        "playmedia"= "none,,Play media playback";
+        "playpausemedia"= "Media Play,Media Play,Play/Pause media playback";
+        "previousmedia"= "Media Previous,Media Previous,Media playback previous";
+        "stopmedia"= "Media Stop,Media Stop,Stop media playback";
       };
     };
     "org.kde.dolphin.desktop"= {
       "items"= {
         "_k_friendly_name"= "Dolphin";
-        "_launch"= "Meta+EMeta+EDolphin";
+        "_launch"= "Meta+E,Meta+E,Dolphin";
       };
     };
     "org.kde.konsole.desktop"= {
       "items"= {
         "_k_friendly_name"= "Konsole";
-        "_launch"= "Ctrl+Alt+TnoneKonsole";
+        "_launch"= "Ctrl+Alt+T,none,Konsole";
       };
     };
     "org.kde.krunner.desktop"= {
       "items"= {
-        "RunClipboard"= "Alt+Shift+F2Alt+Shift+F2Run command on clipboard contents";
+        "RunClipboard"= "Alt+Shift+F2,Alt+Shift+F2,Run command on clipboard contents";
         "_k_friendly_name"= "KRunner";
-        "_launch"= "Alt+Space\tAlt+F2\tSearchAlt+Space\tAlt+F2\tSearchKRunner";
+        "_launch"= "Alt+Space\tAlt+F2\tSearch,Alt+Space\tAlt+F2\tSearch,KRunner";
       };
     };
     "org.kde.plasma.emojier.desktop"= {
       "items"= {
         "_k_friendly_name"= "Emoji Selector";
-        "_launch"= "Meta+.Meta+.Emoji Selector";
+        "_launch"= "Meta+.,Meta+.,Emoji Selector";
       };
     };
     "org_kde_powerdevil"= {
       "items"= {
-        "Decrease Keyboard Brightness"= "Keyboard Brightness DownKeyboard Brightness DownDecrease Keyboard Brightness";
-        "Decrease Screen Brightness"= "Monitor Brightness DownMonitor Brightness DownDecrease Screen Brightness";
-        "Hibernate"= "HibernateHibernateHibernate";
-        "Increase Keyboard Brightness"= "Keyboard Brightness UpKeyboard Brightness UpIncrease Keyboard Brightness";
-        "Increase Screen Brightness"= "Monitor Brightness UpMonitor Brightness UpIncrease Screen Brightness";
-        "PowerDown"= "Power DownPower DownPower Down";
-        "PowerOff"= "Power OffPower OffPower Off";
-        "Sleep"= "SleepSleepSuspend";
-        "Toggle Keyboard Backlight"= "Keyboard Light On/OffKeyboard Light On/OffToggle Keyboard Backlight";
+        "Decrease Keyboard Brightness"= "Keyboard Brightness Down,Keyboard Brightness Down,Decrease Keyboard Brightness";
+        "Decrease Screen Brightness"= "Monitor Brightness Down,Monitor Brightness Down,Decrease Screen Brightness";
+        "Hibernate"= "Hibernate,Hibernate,Hibernate";
+        "Increase Keyboard Brightness"= "Keyboard Brightness Up,Keyboard Brightness Up,Increase Keyboard Brightness";
+        "Increase Screen Brightness"= "Monitor Brightness Up,Monitor Brightness Up,Increase Screen Brightness";
+        "PowerDown"= "Power Down,Power Down,Power Down";
+        "PowerOff"= "Power Off,Power Off,Power Off";
+        "Sleep"= "Sleep,Sleep,Suspend";
+        "Toggle Keyboard Backlight"= "Keyboard Light On/Off,Keyboard Light On/Off,Toggle Keyboard Backlight";
         "_k_friendly_name"= "Power Management";
       };
     };
     "plasmashell"= {
       "items"= {
         "_k_friendly_name"= "Plasma";
-        "activate task manager entry 1"= "Meta+1Meta+1Activate Task Manager Entry 1";
-        "activate task manager entry 10"= "noneMeta+0Activate Task Manager Entry 10";
-        "activate task manager entry 2"= "Meta+2Meta+2Activate Task Manager Entry 2";
-        "activate task manager entry 3"= "Meta+3Meta+3Activate Task Manager Entry 3";
-        "activate task manager entry 4"= "Meta+4Meta+4Activate Task Manager Entry 4";
-        "activate task manager entry 5"= "Meta+5Meta+5Activate Task Manager Entry 5";
-        "activate task manager entry 6"= "Meta+6Meta+6Activate Task Manager Entry 6";
-        "activate task manager entry 7"= "Meta+7Meta+7Activate Task Manager Entry 7";
-        "activate task manager entry 8"= "Meta+8Meta+8Activate Task Manager Entry 8";
-        "activate task manager entry 9"= "Meta+9Meta+9Activate Task Manager Entry 9";
-        "show dashboard"= "Ctrl+F12Ctrl+F12Show Desktop";
-        "show-on-mouse-pos"= "Meta+VMeta+VOpen Klipper at Mouse Position";
+        "activate task manager entry 1"= "Meta+1,Meta+1,Activate Task Manager Entry 1";
+        "activate task manager entry 10"= "none,Meta+0,Activate Task Manager Entry 10";
+        "activate task manager entry 2"= "Meta+2,Meta+2,Activate Task Manager Entry 2";
+        "activate task manager entry 3"= "Meta+3,Meta+3,Activate Task Manager Entry 3";
+        "activate task manager entry 4"= "Meta+4,Meta+4,Activate Task Manager Entry 4";
+        "activate task manager entry 5"= "Meta+5,Meta+5,Activate Task Manager Entry 5";
+        "activate task manager entry 6"= "Meta+6,Meta+6,Activate Task Manager Entry 6";
+        "activate task manager entry 7"= "Meta+7,Meta+7,Activate Task Manager Entry 7";
+        "activate task manager entry 8"= "Meta+8,Meta+8,Activate Task Manager Entry 8";
+        "activate task manager entry 9"= "Meta+9,Meta+9,Activate Task Manager Entry 9";
+        "show dashboard"= "Ctrl+F12,Ctrl+F12,Show Desktop";
+        "show-on-mouse-pos"= "Meta+V,Meta+V,Open Klipper at Mouse Position";
       };
     };
     "systemsettings.desktop"= {
       "items"= {
         "_k_friendly_name"= "System Settings";
-        "_launch"= "ToolsToolsSystem Settings";
+        "_launch"= "Tools,Tools,System Settings";
       };
     };
   };
@@ -516,14 +516,14 @@ in
     };
     "filetree"= {
       "items"= {
-        "editShade"= "588104";
+        "editShade"= "5,88,104";
         "listMode"= "false";
         "shadingEnabled"= "true";
         "showCloseButton"= "false";
         "showFullPathOnRoots"= "false";
         "showToolbar"= "true";
         "sortRole"= "0";
-        "viewShade"= "5883115";
+        "viewShade"= "58,83,115";
       };
     };
   };
@@ -583,7 +583,7 @@ in
     "General"= {
       "items"= {
         "dbVersion"= "2";
-        "exclude filters"= "*~*.part*.o*.la*.lo*.loT*.mocmoc_*.cppqrc_*.cppui_*.hcmake_install.cmakeCMakeCache.txtCTestTestfile.cmakelibtoolconfig.statusconfdefs.hautom4teconftestconfstatMakefile.am*.gcode.ninja_deps.ninja_logbuild.ninja*.csproj*.m4*.rej*.gmo*.pc*.omf*.aux*.tmp*.po*.vm**.nvram*.rcore*.swp*.swaplzolitmain.sh*.orig.histfile.*.xsession-errors**.map*.so*.a*.db*.qrc*.ini*.init*.img*.vdi*.vbox*vbox.log*.qcow2*.vmdk*.vhd*.vhdx*.sql*.sql.gz*.ytdl*.class*.pyc*.pyo*.elc*.qmlc*.jsc*.fastq*.fq*.gb*.fasta*.fna*.gbff*.faapoCVS.svn.git_darcs.bzr.hgCMakeFilesCMakeTmpCMakeTmpQmake.moc.obj.pch.uic.npm.yarn.yarn-cache__pycache__node_modulesnode_packagesnbprojectcore-dumpslost+found";
+        "exclude filters"= "*~,*.part,*.o,*.la,*.lo,*.loT,*.moc,moc_*.cpp,qrc_*.cpp,ui_*.h,cmake_install.cmake,CMakeCache.txt,CTestTestfile.cmake,libtool,config.status,confdefs.h,autom4te,conftest,confstat,Makefile.am,*.gcode,.ninja_deps,.ninja_log,build.ninja,*.csproj,*.m4,*.rej,*.gmo,*.pc,*.omf,*.aux,*.tmp,*.po,*.vm*,*.nvram,*.rcore,*.swp,*.swap,lzo,litmain.sh,*.orig,.histfile.*,.xsession-errors*,*.map,*.so,*.a,*.db,*.qrc,*.ini,*.init,*.img,*.vdi,*.vbox*,vbox.log,*.qcow2,*.vmdk,*.vhd,*.vhdx,*.sql,*.sql.gz,*.ytdl,*.class,*.pyc,*.pyo,*.elc,*.qmlc,*.jsc,*.fastq,*.fq,*.gb,*.fasta,*.fna,*.gbff,*.faa,po,CVS,.svn,.git,_darcs,.bzr,.hg,CMakeFiles,CMakeTmp,CMakeTmpQmake,.moc,.obj,.pch,.uic,.npm,.yarn,.yarn-cache,__pycache__,node_modules,node_packages,nbproject,core-dumps,lost+found";
         "exclude filters version"= "8";
       };
     };
@@ -802,132 +802,132 @@ in
   "/kdeglobals"= {
     "Colors:Button"= {
       "items"= {
-        "BackgroundAlternate"= "646982";
-        "BackgroundNormal"= "293135";
-        "DecorationFocus"= "6614210";
-        "DecorationHover"= "6614210";
-        "ForegroundActive"= "61174233";
-        "ForegroundInactive"= "102106115";
-        "ForegroundLink"= "41128185";
-        "ForegroundNegative"= "10969255";
-        "ForegroundNeutral"= "2551060";
-        "ForegroundNormal"= "195199209";
-        "ForegroundPositive"= "113247159";
-        "ForegroundVisited"= "33135252";
+        "BackgroundAlternate"= "64,69,82";
+        "BackgroundNormal"= "29,31,35";
+        "DecorationFocus"= "66,14,210";
+        "DecorationHover"= "66,14,210";
+        "ForegroundActive"= "61,174,233";
+        "ForegroundInactive"= "102,106,115";
+        "ForegroundLink"= "41,128,185";
+        "ForegroundNegative"= "109,69,255";
+        "ForegroundNeutral"= "255,106,0";
+        "ForegroundNormal"= "195,199,209";
+        "ForegroundPositive"= "113,247,159";
+        "ForegroundVisited"= "33,135,252";
       };
     };
     "Colors:Complementary"= {
       "items"= {
-        "BackgroundAlternate"= "202033";
-        "BackgroundNormal"= "303236";
-        "DecorationFocus"= "6614210";
-        "DecorationHover"= "6614210";
-        "ForegroundActive"= "0193228";
-        "ForegroundInactive"= "102106115";
-        "ForegroundLink"= "33135252";
-        "ForegroundNegative"= "10969255";
-        "ForegroundNeutral"= "2551060";
-        "ForegroundNormal"= "211218227";
-        "ForegroundPositive"= "113247159";
-        "ForegroundVisited"= "124183255";
+        "BackgroundAlternate"= "20,20,33";
+        "BackgroundNormal"= "30,32,36";
+        "DecorationFocus"= "66,14,210";
+        "DecorationHover"= "66,14,210";
+        "ForegroundActive"= "0,193,228";
+        "ForegroundInactive"= "102,106,115";
+        "ForegroundLink"= "33,135,252";
+        "ForegroundNegative"= "109,69,255";
+        "ForegroundNeutral"= "255,106,0";
+        "ForegroundNormal"= "211,218,227";
+        "ForegroundPositive"= "113,247,159";
+        "ForegroundVisited"= "124,183,255";
       };
     };
     "Colors:Header"= {
       "items"= {
-        "BackgroundAlternate"= "202033";
-        "BackgroundNormal"= "262832";
-        "DecorationFocus"= "6614210";
-        "DecorationHover"= "6614210";
-        "ForegroundActive"= "0193228";
-        "ForegroundInactive"= "102106115";
-        "ForegroundLink"= "33135252";
-        "ForegroundNegative"= "10969255";
-        "ForegroundNeutral"= "2551060";
-        "ForegroundNormal"= "211218227";
-        "ForegroundPositive"= "113247159";
-        "ForegroundVisited"= "124183255";
+        "BackgroundAlternate"= "20,20,33";
+        "BackgroundNormal"= "26,28,32";
+        "DecorationFocus"= "66,14,210";
+        "DecorationHover"= "66,14,210";
+        "ForegroundActive"= "0,193,228";
+        "ForegroundInactive"= "102,106,115";
+        "ForegroundLink"= "33,135,252";
+        "ForegroundNegative"= "109,69,255";
+        "ForegroundNeutral"= "255,106,0";
+        "ForegroundNormal"= "211,218,227";
+        "ForegroundPositive"= "113,247,159";
+        "ForegroundVisited"= "124,183,255";
       };
       "groups"= {
         "Inactive"= {
           "items"= {
-            "BackgroundAlternate"= "202033";
-            "BackgroundNormal"= "303236";
-            "DecorationFocus"= "6614210";
-            "DecorationHover"= "6614210";
-            "ForegroundActive"= "0193228";
-            "ForegroundInactive"= "102106115";
-            "ForegroundLink"= "33135252";
-            "ForegroundNegative"= "10969255";
-            "ForegroundNeutral"= "2551060";
-            "ForegroundNormal"= "211218227";
-            "ForegroundPositive"= "113247159";
-            "ForegroundVisited"= "124183255";
+            "BackgroundAlternate"= "20,20,33";
+            "BackgroundNormal"= "30,32,36";
+            "DecorationFocus"= "66,14,210";
+            "DecorationHover"= "66,14,210";
+            "ForegroundActive"= "0,193,228";
+            "ForegroundInactive"= "102,106,115";
+            "ForegroundLink"= "33,135,252";
+            "ForegroundNegative"= "109,69,255";
+            "ForegroundNeutral"= "255,106,0";
+            "ForegroundNormal"= "211,218,227";
+            "ForegroundPositive"= "113,247,159";
+            "ForegroundVisited"= "124,183,255";
           };
         };
       };
     };
     "Colors:Selection"= {
       "items"= {
-        "BackgroundAlternate"= "29153243";
-        "BackgroundNormal"= "6614210";
-        "DecorationFocus"= "6614210";
-        "DecorationHover"= "6614210";
-        "ForegroundActive"= "252252252";
-        "ForegroundInactive"= "211218227";
-        "ForegroundLink"= "25318875";
-        "ForegroundNegative"= "10969255";
-        "ForegroundNeutral"= "2551060";
-        "ForegroundNormal"= "254254254";
-        "ForegroundPositive"= "113247159";
-        "ForegroundVisited"= "189195199";
+        "BackgroundAlternate"= "29,153,243";
+        "BackgroundNormal"= "66,14,210";
+        "DecorationFocus"= "66,14,210";
+        "DecorationHover"= "66,14,210";
+        "ForegroundActive"= "252,252,252";
+        "ForegroundInactive"= "211,218,227";
+        "ForegroundLink"= "253,188,75";
+        "ForegroundNegative"= "109,69,255";
+        "ForegroundNeutral"= "255,106,0";
+        "ForegroundNormal"= "254,254,254";
+        "ForegroundPositive"= "113,247,159";
+        "ForegroundVisited"= "189,195,199";
       };
     };
     "Colors:Tooltip"= {
       "items"= {
-        "BackgroundAlternate"= "303236";
-        "BackgroundNormal"= "535769";
-        "DecorationFocus"= "6614210";
-        "DecorationHover"= "6614210";
-        "ForegroundActive"= "61174233";
-        "ForegroundInactive"= "102106115";
-        "ForegroundLink"= "41128185";
-        "ForegroundNegative"= "10969255";
-        "ForegroundNeutral"= "2551060";
-        "ForegroundNormal"= "211218227";
-        "ForegroundPositive"= "113247159";
-        "ForegroundVisited"= "33135252";
+        "BackgroundAlternate"= "30,32,36";
+        "BackgroundNormal"= "53,57,69";
+        "DecorationFocus"= "66,14,210";
+        "DecorationHover"= "66,14,210";
+        "ForegroundActive"= "61,174,233";
+        "ForegroundInactive"= "102,106,115";
+        "ForegroundLink"= "41,128,185";
+        "ForegroundNegative"= "109,69,255";
+        "ForegroundNeutral"= "255,106,0";
+        "ForegroundNormal"= "211,218,227";
+        "ForegroundPositive"= "113,247,159";
+        "ForegroundVisited"= "33,135,252";
       };
     };
     "Colors:View"= {
       "items"= {
-        "BackgroundAlternate"= "202033";
-        "BackgroundNormal"= "303236";
-        "DecorationFocus"= "6614210";
-        "DecorationHover"= "6614210";
-        "ForegroundActive"= "0193228";
-        "ForegroundInactive"= "102106115";
-        "ForegroundLink"= "33135252";
-        "ForegroundNegative"= "10969255";
-        "ForegroundNeutral"= "2551060";
-        "ForegroundNormal"= "211218227";
-        "ForegroundPositive"= "113247159";
-        "ForegroundVisited"= "124183255";
+        "BackgroundAlternate"= "20,20,33";
+        "BackgroundNormal"= "30,32,36";
+        "DecorationFocus"= "66,14,210";
+        "DecorationHover"= "66,14,210";
+        "ForegroundActive"= "0,193,228";
+        "ForegroundInactive"= "102,106,115";
+        "ForegroundLink"= "33,135,252";
+        "ForegroundNegative"= "109,69,255";
+        "ForegroundNeutral"= "255,106,0";
+        "ForegroundNormal"= "211,218,227";
+        "ForegroundPositive"= "113,247,159";
+        "ForegroundVisited"= "124,183,255";
       };
     };
     "Colors:Window"= {
       "items"= {
-        "BackgroundAlternate"= "303236";
-        "BackgroundNormal"= "262832";
-        "DecorationFocus"= "303236";
-        "DecorationHover"= "6614210";
-        "ForegroundActive"= "61174233";
-        "ForegroundInactive"= "102106115";
-        "ForegroundLink"= "41128185";
-        "ForegroundNegative"= "10969255";
-        "ForegroundNeutral"= "2551060";
-        "ForegroundNormal"= "211218227";
-        "ForegroundPositive"= "113247159";
-        "ForegroundVisited"= "17913191";
+        "BackgroundAlternate"= "30,32,36";
+        "BackgroundNormal"= "26,28,32";
+        "DecorationFocus"= "30,32,36";
+        "DecorationHover"= "66,14,210";
+        "ForegroundActive"= "61,174,233";
+        "ForegroundInactive"= "102,106,115";
+        "ForegroundLink"= "41,128,185";
+        "ForegroundNegative"= "109,69,255";
+        "ForegroundNeutral"= "255,106,0";
+        "ForegroundNormal"= "211,218,227";
+        "ForegroundPositive"= "113,247,159";
+        "ForegroundVisited"= "179,13,191";
       };
     };
     "General"= {
@@ -968,12 +968,12 @@ in
     };
     "WM"= {
       "items"= {
-        "activeBackground"= "262832";
-        "activeBlend"= "303236";
-        "activeForeground"= "211218227";
-        "inactiveBackground"= "303236";
-        "inactiveBlend"= "303236";
-        "inactiveForeground"= "102106115";
+        "activeBackground"= "26,28,32";
+        "activeBlend"= "30,32,36";
+        "activeForeground"= "211,218,227";
+        "inactiveBackground"= "30,32,36";
+        "inactiveBlend"= "30,32,36";
+        "inactiveForeground"= "102,106,115";
       };
     };
   };
@@ -1108,7 +1108,7 @@ in
                       "groups"= {
                         "General"= {
                           "items"= {
-                            "launchers"= "applications:systemsettings.desktopapplications:org.kde.konsole.desktoppreferred://filemanagerpreferred://browser";
+                            "launchers"= "applications:systemsettings.desktop,applications:org.kde.konsole.desktop,preferred://filemanager,preferred://browser";
                           };
                         };
                       };

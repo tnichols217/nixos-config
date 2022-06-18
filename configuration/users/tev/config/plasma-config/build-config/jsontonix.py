@@ -5,7 +5,8 @@ with open("config.json") as f:
 def parseLine(s):
     o = s
     o = o.replace("\":", "\"=")
-    o = o.replace(",", "")
+    if o.endswith(","):
+        o = o[:-1]
     o = o.replace("\n", "")
     if (not o.endswith("{")):
         o += ";"
