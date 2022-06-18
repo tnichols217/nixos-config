@@ -34,30 +34,38 @@ def parseFile(f):
     c = " \n" + readFile(f)
     return parseString(c)
 
+def remove(s, r):
+    o = s
+    for i in r:
+        o = o.replace(str(i), "")
+    return o
+
 CONFIGDIR = [Path(HOME + "/.config"), Path("/etc/xdg")]
 MATCHES = ["*rc", "*kdeglobals", "Trolltech.conf"]
 
 files = []
 dict = {}
-[[[ dict.__setitem__(str(i), parseFile(i)) for i in i.glob(j)] for j in MATCHES] for i in CONFIGDIR]
+[[[ dict.__setitem__(remove(str(i), CONFIGDIR), parseFile(i)) for i in i.glob(j)] for j in MATCHES] for i in CONFIGDIR]
 
-if (transform):
+output = {}
+for q in dict:
     o = {}
-    for k in dict:
-        if (k.startswith("/home")):
-            transformed = "/etc/xdg/" + "/".join(k.split("/")[4:])
-            if transformed in o.keys():
-                o[transformed] += dict[k]
-            else:
-                o[transformed] = dict[k]
-        else:
-            if k in o.keys():
-                o[k] += dict[k]
-            else:
-                o[k] = dict[k]
-    dict = o
-
-print(dict.keys())
+    for i in dict[q]:
+        if (not i[0][0] in o):
+            o[i[0][0]] = {}
+        loc = o[i[0][0]]
+        for k in i[0][1:]:
+            if (not "groups" in loc):
+                loc["groups"] = {k: {}}
+            elif (not k in loc["groups"]):
+                loc["groups"][k] = {}
+            loc = loc["groups"][k]
+        if (len(i[1]) > 0 and not "items" in loc):
+            loc["items"] = {}
+            loc = loc["items"]
+        for k in i[1]:
+            loc[k] = i[1][k]
+    output[q] = o
 
 with open("./config1.json", "w") as f:
-    json.dump(dict, f)
+    json.dump(output, f, indent=4)

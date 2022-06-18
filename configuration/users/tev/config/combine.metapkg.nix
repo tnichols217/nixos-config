@@ -1,4 +1,4 @@
-{ pkgs ? import <nixpkgs> {}, pack ? [], ... }:
+{ pkgs ? import <nixpkgs> {}, pack, ... }:
 pkgs.stdenv.mkDerivation 
 rec {
   pname = "combine";

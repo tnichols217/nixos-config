@@ -1,1 +1,2 @@
-import ./build-config.pkg.nix { config = ./rc/config.json; }
+{ pkgs ? import <nixpkgs> {} }:
+pkgs.callPackage ./build-config.metapkg.nix { config = import ./rc/config.nix { inherit pkgs; }; }

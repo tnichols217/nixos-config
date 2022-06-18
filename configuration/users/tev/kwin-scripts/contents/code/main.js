@@ -18,25 +18,25 @@ function halfUp(client) {
 
 registerShortcut("Resize Window to Half Up",
                  "Resize Window to Half Up",
-                 "Meta+W",
+                 "Shift+Meta+W",
                  () => {
                      halfUp(workspace.activeClient);
                  });
 registerShortcut("Resize Window to Half Left",
                  "Resize Window to Half Left",
-                 "Meta+A",
+                 "Shift+Meta+A",
                  () => {
                      halfLeft(workspace.activeClient);
                  });
 registerShortcut("Resize Window to Half Down",
                  "Resize Window to Half Down",
-                 "Meta+S",
+                 "Shift+Meta+S",
                  () => {
                      halfDown(workspace.activeClient);
                  });
 registerShortcut("Resize Window to Half Right",
                  "Resize Window to Half Right",
-                 "Meta+D",
+                 "Shift+Meta+D",
                  () => {
                      halfRight(workspace.activeClient);
                  });
