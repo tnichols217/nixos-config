@@ -24,7 +24,7 @@
   outputs = { self, nixpkgs, nur, ... }@attrs: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      specialArgs = attrs;
+      # specialArgs = attrs;
       modules = [
         ./configuration.nix
         nur.nixosModules.nur
