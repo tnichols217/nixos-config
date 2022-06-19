@@ -31,8 +31,6 @@
       specialArgs = attrs;
       modules = [
         ./configuration.nix
-        impermanence.nixosModule
-        impermanence.nixosModules.home-manager.impermanence
         home-manager.nixosModule
       ];
     };

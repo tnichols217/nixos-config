@@ -9,6 +9,7 @@
       ./configuration/localization.nix
       # ./configuration/users.nix
       ./configuration/x11.nix
+        impermanence.nixosModule
       ./configuration/sound.nix
       ./configuration/persistence.nix
     ];
