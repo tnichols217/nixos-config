@@ -18,7 +18,7 @@
     chili = {
       url = github:MarianArlt/kde-plasma-chili;
       flake = false;
-    }
+    };
   };
   
   outputs = { self, nixpkgs, ... }@attrs: {
