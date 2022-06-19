@@ -8,6 +8,8 @@ pkgs.stdenv.mkDerivation rec {
 
   installPhase =''
 
+  echo $out
+
   cp ${builtins.toFile "config.json" (builtins.toJSON config)} ./config.json
 
   ${pkgs.python3}/bin/python export.py

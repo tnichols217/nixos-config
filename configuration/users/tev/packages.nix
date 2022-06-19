@@ -19,6 +19,7 @@
         (callPackage ./packages/arch-theme.pkg.nix {})
         (callPackage ./packages/papirus-icons.pkg.nix {})
         (callPackage ./packages/kwin-scripts.pkg.nix {})
+        (callPackage ./packages/konsole-themes.pkg.nix {})
       ];
     };
     programs = {
