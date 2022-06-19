@@ -1,4 +1,4 @@
-{ config, pkgs, nixpkgs, home-manager, btf, arch-theme, papirus, nur, impermanence, ... }:
+{ config, pkgs, nixpkgs, home-manager, btf, arch-theme, papirus, nur, ... }:
 {
   imports =
     [
@@ -9,7 +9,6 @@
       ./configuration/localization.nix
       # ./configuration/users.nix
       ./configuration/x11.nix
-        impermanence.nixosModule
       ./configuration/sound.nix
       ./configuration/persistence.nix
     ];

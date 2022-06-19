@@ -30,8 +30,9 @@
       system = "x86_64-linux";
       specialArgs = attrs;
       modules = [
-        ./configuration.nix
+        impermanence.nixosModule
         home-manager.nixosModule
+        ./configuration.nix
       ];
     };
   };
