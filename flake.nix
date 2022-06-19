@@ -32,6 +32,7 @@
       modules = [
         ./configuration.nix
         impermanence.nixosModule
+        impermanence.nixosModules.home-manager.impermanence
       ];
     };
   };
