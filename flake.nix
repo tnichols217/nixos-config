@@ -2,7 +2,10 @@
   inputs = { 
     nixpkgs.url = github:NixOS/nixpkgs/nixos-unstable;
     home-manager.url = github:nix-community/home-manager;
-    nur.url = github:nix-community/NUR;
+    nur = {
+      url = github:nix-community/NUR;
+      flake = false;
+    };
     btf = {
       url = github:oh-my-fish/theme-bobthefish;
       flake = false;
@@ -21,13 +24,12 @@
     };
   };
   
-  outputs = { self, nixpkgs, nur, ... }@attrs: {
+  outputs = { self, nixpkgs, ... }@attrs: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      # specialArgs = attrs;
+      specialArgs = attrs;
       modules = [
         ./configuration.nix
-        nur.nixosModules.nur
       ];
     };
   };
