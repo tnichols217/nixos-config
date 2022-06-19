@@ -1,4 +1,4 @@
-{ config, pkgs, nixpkgs, home-manager, btf, arch-theme, papirus, nur, ... }:
+{ config, pkgs, nixpkgs, home-manager, btf, arch-theme, papirus, nur, impermanence, ... }:
 {
   imports =
     [
