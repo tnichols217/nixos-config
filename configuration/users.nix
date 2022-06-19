@@ -6,10 +6,4 @@
       ./users/tev.nix
     ];
   users.mutableUsers = false;
-
-  nixpkgs.config.packageOverrides = pkgs: {
-    nur = import nur {
-      inherit pkgs;
-    };
-  };
 }
