@@ -3,15 +3,12 @@
     nixpkgs.url = github:NixOS/nixpkgs/nixos-unstable;
     home-manager = {
       url = github:nix-community/home-manager;
-      flake = false;
     };
     impermanence = {
       url = github:nix-community/impermanence;
-      flake = false;
     };
     nur = {
       url = github:nix-community/NUR;
-      flake = false;
     };
     btf = {
       url = github:oh-my-fish/theme-bobthefish;
@@ -34,9 +31,12 @@
   outputs = { self, nixpkgs, ... }@attrs: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      specialArgs = attrs;
+      specialArgs = { inherit attrs };
       modules = [
         ./configuration.nix
+        home-manager.nixosModule
+        impermanence.nixosModule
+        nur.nixosModule
       ];
     };
   };
