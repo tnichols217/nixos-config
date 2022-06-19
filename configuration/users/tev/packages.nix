@@ -40,7 +40,7 @@
           gpl = "git pull ";
           "..." = "cd ../..";
           "...." = "cd ../../..";
-          cdg = "cd $(git rev-parse --show-toplevel)"
+          cdg = "cd $(git rev-parse --show-toplevel)";
         };
         plugins = [
           {
