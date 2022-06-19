@@ -31,7 +31,7 @@
   outputs = { self, nixpkgs, ... }@attrs: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      specialArgs = { inherit attrs };
+      specialArgs = { inherit attrs; };
       modules = [
         ./configuration.nix
         home-manager.nixosModule
