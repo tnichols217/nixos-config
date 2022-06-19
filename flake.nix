@@ -2,6 +2,7 @@
   inputs = { 
     nixpkgs.url = github:NixOS/nixpkgs/nixos-unstable;
     home-manager.url = github:nix-community/home-manager;
+    impermanence.url = github:nix-community/impermanence;
     nur = {
       url = github:nix-community/NUR;
       flake = false;
@@ -30,6 +31,7 @@
       specialArgs = attrs;
       modules = [
         ./configuration.nix
+        impermanence.nixosModule
       ];
     };
   };
