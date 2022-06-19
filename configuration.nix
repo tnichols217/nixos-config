@@ -1,7 +1,4 @@
-{ config, ... }:
-let 
-pkgs = import (fetchTarball https://github.com/NixOS/nixpkgs-channels/archive/nixos-unstable.tar.gz) {};
-in
+{ config, pkgs, nixpkgs, home-manager, nur, omf, arch-theme, papirus, ... }:
 {
   imports =
     [
@@ -16,13 +13,18 @@ in
       ./configuration/persistence.nix
     ];
 
-  nix.autoOptimiseStore = true;
-
-  nix.gc = {
-    automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 30d";
-  };
+  nix = {
+    package = pkgs.nixFlakes;
+    extraOptions = ''
+      experimental-features = nix-command flakes
+    '';
+    autoOptimiseStore = true;
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 30d";
+    };
+   };
 
   nixpkgs.config.allowUnfree = true;
 
