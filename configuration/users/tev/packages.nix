@@ -16,9 +16,9 @@
         python3
         nur.repos.wolfangaukang.stremio
         spotify
-        (callPackage ./arch-theme.pkg.nix {})
-        (callPackage ./papirus-icons.pkg.nix {})
-        (callPackage ./kwin-scripts.pkg.nix {})
+        (callPackage ./packages/arch-theme.pkg.nix {})
+        (callPackage ./packages/papirus-icons.pkg.nix {})
+        (callPackage ./packages/kwin-scripts.pkg.nix {})
       ];
     };
     programs = {

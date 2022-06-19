@@ -11,7 +11,7 @@ in
       configFile = {
         "." = {
           recursive = true;
-          source = (pkgs.callPackage ./config/combine.metapkg.nix { inherit pack; });
+          source = (pkgs.callPackage ./metapkgs/combine.metapkg.nix { inherit pack; });
         };
       };
     };

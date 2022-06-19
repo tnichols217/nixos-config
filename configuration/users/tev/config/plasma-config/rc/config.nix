@@ -567,6 +567,25 @@ in
         "WindowColorScheme"= "Default";
       };
     };
+    "MainWindow"= {
+      "items"= {
+        "MenuBar"= "Disabled";
+        "StatusBar"= "Disabled";
+        "ToolBarsMovable"= "Disabled";
+      };
+    };
+    "SplitView"= {
+      "items"= {
+        "SplitViewVisibility"= "AlwaysHideSplitHeader";
+      };
+    };
+    "TabBar"= {
+      "items"= {
+        "CloseTabButton"= "None";
+        "CloseTabOnMiddleMouseButton"= "true";
+        "TabBarPosition"= "Top";
+      };
+    };
   };
   "/touchpadxlibinputrc"= {
     "SynPS/2 Synaptics TouchPad"= {

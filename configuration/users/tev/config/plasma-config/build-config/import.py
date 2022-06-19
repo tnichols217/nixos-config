@@ -1,8 +1,5 @@
 # Imports current system's kde config and exports it to config.json
 
-# Transform local config into global configs (multiuser)
-transform = False
-
 from pathlib import Path
 import json
 import os
@@ -45,7 +42,8 @@ MATCHES = ["*rc", "*kdeglobals", "Trolltech.conf"]
 
 files = []
 dict = {}
-[[[ dict.__setitem__(remove(str(i), CONFIGDIR), parseFile(i)) for i in i.glob(j)] for j in MATCHES] for i in CONFIGDIR]
+# [[[ dict.__setitem__(remove(str(i), CONFIGDIR), parseFile(i)) for i in i.glob(j)] for j in MATCHES] for i in CONFIGDIR]
+dict.__setitem__("config", parseFile("config"))
 
 output = {}
 for q in dict:
