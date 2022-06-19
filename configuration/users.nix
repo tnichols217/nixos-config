@@ -1,19 +1,9 @@
-{ config, pkgs, impermanence, ... }:
-let
-  # home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/master.tar.gz";
-  home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/refs/heads/release-22.05.tar.gz";
-in
+{ config, pkgs, impermanence, home-manager, btf, arch-theme, papirus, ... }:
 {
   imports =
     [
-      (import "${home-manager}/nixos")
+      home-manager.nixosModule
       ./users/tev.nix
     ];
   users.mutableUsers = false;
-
-  nixpkgs.config.packageOverrides = pkgs: {
-    nur = import (builtins.fetchTarball "https://github.com/nix-community/NUR/archive/master.tar.gz") {
-      inherit pkgs;
-    };
-  };
 }

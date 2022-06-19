@@ -1,17 +1,10 @@
-{ pkgs ? import <nixpkgs> {},
-  ...
-}:
+{ pkgs ? import <nixpkgs> {}, papirus, ... }:
 
 pkgs.stdenv.mkDerivation rec {
   pname = "papirus-icon-theme";
   version = "20220606";
 
-  src = pkgs.fetchFromGitHub {
-    owner = "PapirusDevelopmentTeam";
-    repo = pname;
-    rev = version;
-    sha256 = "sha256-HJb77ArzwMX9ZYTp0Ffxxtst1/xhPAa+eEP5n950DSs=";
-  };
+  src = papirus
 
   dontDropIconThemeCache = true;
 

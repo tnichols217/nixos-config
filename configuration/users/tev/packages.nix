@@ -1,5 +1,5 @@
 { username }:
-{ config, pkgs, ... }:
+{ config, pkgs, btf, arch-theme, papirus, ... }:
 {
   home-manager.users.${username} = {
     home = {
@@ -14,7 +14,7 @@
         ibus-engines.libpinyin
         fswatch
         python3
-        nur.repos.wolfangaukang.stremio
+        config.nur.repos.wolfangaukang.stremio
         spotify
         (callPackage ./packages/arch-theme.pkg.nix {})
         (callPackage ./packages/papirus-icons.pkg.nix {})
@@ -45,19 +45,14 @@
         plugins = [
           {
             name = "theme-bobthefish";
-            src = pkgs.fetchFromGitHub {
-              owner = "oh-my-fish";
-              repo = "theme-bobthefish";
-              rev = "14a6f2b317661e959e13a23870cf89274f867f12";
-              sha256 = "178wk0pz9vc6qn5c3my20yfr73s70kyd7zqf0xwr54q5l93rfplj";
-            };
+            src = btf
           }
         ];
       };
       firefox = {
         enable = true;
-        # package = pkgs.nur.repos.wolfangaukang.librewolf-bin;
-        extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+        # package = config.nur.repos.wolfangaukang.librewolf-bin;
+        extensions = with config.nur.repos.rycee.firefox-addons; [
           https-everywhere
           privacy-badger
           darkreader

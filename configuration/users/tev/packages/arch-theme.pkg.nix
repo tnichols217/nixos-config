@@ -1,15 +1,10 @@
-{ pkgs, ... }:
+{ pkgs, arch-theme, ... }:
 
 pkgs.stdenv.mkDerivation rec {
   pname = "arch-kde-theme";
   version = "14ab5e53e6fe6b18ffcaba2194c8748e858e6024";
 
-  src = pkgs.fetchFromGitHub {
-    owner = "rkstrdee";
-    repo = "Arch";
-    rev = version;
-    sha256 = "0xqrzw1f8wz8dwqza4qqbjl3rp3abf8qci5a6bcg9950mxfh2cn4";
-  };
+  src = arch-theme;
 
   installPhase = let 
     SCHEMES_DIR = "$PREFIX/color-schemes";

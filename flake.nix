@@ -1,25 +1,34 @@
 {
-  inputs.nixpkgs.url = github:NixOS/nixpkgs/nixos-unstable;
-  inputs.home-manager.url = github:nix-community/home-manager;
-  inputs.nur.url = github:nix-community/NUR;
-  inputs.omf = {
-    url = github:oh-my-fish/theme-bobthefish;
-    flake = false;
-  };
-  inputs.arch-theme = {
-    url = github:rkstrdee/Arch;
-    flake = false;
-  };
-  inputs.papirus = {
-    url = github:PapirusDevelopmentTeam/papirus-icon-theme;
-    flake = false;
+  inputs = { 
+    nixpkgs.url = github:NixOS/nixpkgs/nixos-unstable;
+    home-manager.url = github:nix-community/home-manager;
+    nur.url = github:nix-community/NUR;
+    btf = {
+      url = github:oh-my-fish/theme-bobthefish;
+      flake = false;
+    };
+    arch-theme = {
+      url = github:rkstrdee/Arch;
+      flake = false;
+    };
+    papirus = {
+      url = github:PapirusDevelopmentTeam/papirus-icon-theme;
+      flake = false;
+    };
+    chili = {
+      url = github:MarianArlt/kde-plasma-chili;
+      flake = false;
+    }
   };
   
   outputs = { self, nixpkgs, ... }@attrs: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = attrs;
-      modules = [ ./configuration.nix ];
+      modules = [
+        ./configuration.nix
+        nur.nixosModules.nur
+      ];
     };
   };
 }
