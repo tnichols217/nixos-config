@@ -38,6 +38,9 @@
           gac = "git add -A && git commit -am ";
           gp = "git push ";
           gpl = "git pull ";
+          "..." = "cd ../..";
+          "...." = "cd ../../..";
+          cdg = "cd $(git rev-parse --show-toplevel)"
         };
         plugins = [
           {
