@@ -2,7 +2,7 @@
 {
   imports =
     [
-      # impermanence.nixosModule
+      (import "${impermanence}/nixos.nix")
       ./persistence/cache.nix
       ./persistence/config.nix
       ./persistence/data.nix

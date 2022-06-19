@@ -1,8 +1,14 @@
 {
   inputs = { 
     nixpkgs.url = github:NixOS/nixpkgs/nixos-unstable;
-    home-manager.url = github:nix-community/home-manager;
-    impermanence.url = github:nix-community/impermanence;
+    home-manager = {
+      url = github:nix-community/home-manager;
+      flake = false;
+    };
+    impermanence = {
+      url = github:nix-community/impermanence;
+      flake = false;
+    };
     nur = {
       url = github:nix-community/NUR;
       flake = false;
@@ -30,8 +36,6 @@
       system = "x86_64-linux";
       specialArgs = attrs;
       modules = [
-        impermanence.nixosModule
-        home-manager.nixosModule
         ./configuration.nix
       ];
     };

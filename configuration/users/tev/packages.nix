@@ -14,7 +14,7 @@
         ibus-engines.libpinyin
         fswatch
         python3
-        config.nur.repos.wolfangaukang.stremio
+        pkgs.nur.repos.wolfangaukang.stremio
         spotify
         (callPackage ./packages/arch-theme.pkg.nix {})
         (callPackage ./packages/papirus-icons.pkg.nix {})
@@ -51,8 +51,8 @@
       };
       firefox = {
         enable = true;
-        # package = config.nur.repos.wolfangaukang.librewolf-bin;
-        extensions = with config.nur.repos.rycee.firefox-addons; [
+        # package = pkgs.nur.repos.wolfangaukang.librewolf-bin;
+        extensions = with pkgs.nur.repos.rycee.firefox-addons; [
           https-everywhere
           privacy-badger
           darkreader
