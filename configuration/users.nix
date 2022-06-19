@@ -2,7 +2,7 @@
 {
   imports =
     [
-      # home-manager.nixosModule
+      home-manager.nixosModule
       ./users/tev.nix
     ];
   users.mutableUsers = false;
