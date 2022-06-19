@@ -5,5 +5,4 @@
       ./users/tev.nix
     ];
   users.mutableUsers = false;
-  };
 }
