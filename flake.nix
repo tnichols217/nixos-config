@@ -34,9 +34,9 @@
       specialArgs = { inherit attrs; };
       modules = [
         ./configuration.nix
-        home-manager.nixosModule
-        impermanence.nixosModule
-        nur.nixosModule
+        attrs.home-manager.nixosModule
+        attrs.impermanence.nixosModule
+        attrs.nur.nixosModules.nur
       ];
     };
   };

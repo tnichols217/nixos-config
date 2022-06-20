@@ -4,7 +4,7 @@ pkgs.stdenv.mkDerivation rec {
   pname = "papirus-icon-theme";
   version = "20220606";
 
-  src = papirus
+  src = papirus;
 
   dontDropIconThemeCache = true;
 

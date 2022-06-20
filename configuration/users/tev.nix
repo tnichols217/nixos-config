@@ -5,9 +5,9 @@ in
 {
   imports =
   [
-    ((import ./templates/persist.nix) { username = "${username}"; })
-    ((import ./tev/config.nix) { username = "${username}"; })
-    ((import ./tev/packages.nix) { username = "${username}"; })
+    ((import ./templates/persist.nix) { inherit username; })
+    ((import ./tev/config.nix) { inherit username; })
+    ((import ./tev/packages.nix) { inherit username; })
   ];
 
   users.users.${username} = {
@@ -23,7 +23,6 @@ in
     };
     gtk = {
       enable = true;
-
     };
   };
 }

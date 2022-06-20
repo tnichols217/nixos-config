@@ -14,10 +14,10 @@
         ibus-engines.libpinyin
         fswatch
         python3
-        pkgs.nur.repos.wolfangaukang.stremio
         spotify
-        (callPackage ./packages/arch-theme.pkg.nix {})
-        (callPackage ./packages/papirus-icons.pkg.nix {})
+        pkgs.nur.repos.wolfangaukang.stremio
+        (callPackage ./packages/arch-theme.pkg.nix { inherit arch-theme; })
+        (callPackage ./packages/papirus-icons.pkg.nix { inherit papirus; })
         (callPackage ./packages/kwin-scripts.pkg.nix {})
         (callPackage ./packages/konsole-themes.pkg.nix {})
       ];
