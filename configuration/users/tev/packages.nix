@@ -1,4 +1,4 @@
-{ config, pkgs, username, btf, arch-theme, papirus, ... }:
+{ config, pkgs, username, attrs, ... }:
 {
   home-manager.users.${username} = {
     home = {
@@ -44,7 +44,7 @@
         plugins = [
           {
             name = "theme-bobthefish";
-            src = btf;
+            src = attrs.btf;
           }
         ];
       };
