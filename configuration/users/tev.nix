@@ -1,4 +1,4 @@
-args@{ config, pkgs, ... }:
+args@{ config, pkgs, btf, arch-theme, papirus, ... }:
 let
   username = "tev";
 in
@@ -7,7 +7,7 @@ in
   [
     ((import ./templates/persist.nix) { inherit username; })
     ((import ./tev/config.nix) { inherit username; })
-    ((import ./tev/packages.nix) (args // { inherit username; }))
+    ((import ./tev/packages.nix) (args // { inherit username btf arch-theme; }))
   ];
 
   users.users.${username} = {
