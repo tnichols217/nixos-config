@@ -1,6 +1,6 @@
 { pkgs }:
 let
-background = "${pkgs.callPackage ./config/background.nix {}}/Anime Street Night.png";
+background = "./config/background/Anime Streep Day.png";
 in
 {
   "/plasma-localerc"= {
