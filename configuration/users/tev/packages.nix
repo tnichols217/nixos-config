@@ -15,7 +15,7 @@
         python3
         spotify
         # config.nur.repos.wolfangaukang.stremio
-        (callPackage ./packages/arch-theme.pkg.nix { inherit arch-theme; })
+        (callPackage ./packages/arch-theme.pkg.nix { inherit ; })
         (callPackage ./packages/papirus-icons.pkg.nix { inherit papirus; })
         (callPackage ./packages/kwin-scripts.pkg.nix {})
         (callPackage ./packages/konsole-themes.pkg.nix {})
