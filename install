@@ -18,6 +18,11 @@ git clone https://github.com/tnichols217/nixos-config/ nixos
 
 cd /mnt
 
+BUILD=$1
+if [ -z "$BUILD" ]; then
+    BUILD="nixos"
+fi
+
 nix-shell -p nixFlakes --run "
-nixos-install --show-trace --flake ".#nixos"
+nixos-install --show-trace --flake ".#$BUILD"
 "
