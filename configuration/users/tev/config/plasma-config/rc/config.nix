@@ -1,6 +1,6 @@
 { pkgs }:
 let
-background = "./config/background/Anime Streep Day.png";
+background = ./config/background/Anime-Street-Day.png;
 in
 {
   "/plasma-localerc"= {
