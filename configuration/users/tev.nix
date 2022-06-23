@@ -1,4 +1,4 @@
-args@{ config, pkgs, btf, arch-theme, papirus, ... }:
+args@{ config, pkgs,... }:
 let
   username = "tev";
 in
