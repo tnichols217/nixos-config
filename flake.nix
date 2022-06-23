@@ -36,7 +36,7 @@
         attrs.home-manager.nixosModule
         attrs.impermanence.nixosModule
         attrs.nur.nixosModule
-        ./configuration.nix
+        # ./configuration.nix
       ];
     };
   };
