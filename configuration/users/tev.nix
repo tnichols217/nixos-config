@@ -5,8 +5,8 @@ in
 {
   imports =
   [
-    ((import ./templates/persist.nix) { inherit username; })
-    ((import ./tev/config.nix) { inherit username; })
+    ((import ./templates/persist.nix) (args // { inherit username; }))
+    ((import ./tev/config.nix) (args // { inherit username; }))
     ((import ./tev/packages.nix) (args // { inherit username; }))
   ];
 

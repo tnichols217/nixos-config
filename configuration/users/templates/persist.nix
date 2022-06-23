@@ -1,5 +1,4 @@
-{ username }:
-{ config, pkgs, ... }:
+{ config, pkgs, username, ... }:
 {
   environment.persistence."/nix/persist/etc/nixos/configuration/persistence/data" = {
     hideMounts = false;
