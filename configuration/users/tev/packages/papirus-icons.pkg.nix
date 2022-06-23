@@ -1,4 +1,4 @@
-{ pkgs ? import <nixpkgs> {}, papirus, ... }:
+{ pkgs, papirus, ... }:
 
 pkgs.stdenv.mkDerivation rec {
   pname = "papirus-icon-theme";
