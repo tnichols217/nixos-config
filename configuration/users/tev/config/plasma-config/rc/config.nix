@@ -1,6 +1,6 @@
-{ pkgs ? import <nixpkgs> {} }:
-let 
-background = "b";
+{ pkgs }:
+let
+background = pkgs.callPackage ./config/background.nix {};
 in
 {
   "/plasma-localerc"= {
