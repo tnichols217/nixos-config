@@ -381,6 +381,11 @@ in
     };
   };
   "/plasmarc"= {
+    "Theme-plasmathemeexplorer" = {
+      "Items" = {
+        "name" = "Arch";
+      };
+    };
     "Wallpapers"= {
       "items"= {
         "usersWallpapers"= "${background}";
