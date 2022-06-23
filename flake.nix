@@ -35,7 +35,7 @@
       modules = [
         attrs.home-manager.nixosModule
         attrs.impermanence.nixosModule
-        attrs.nur.nixosModules.nix
+        attrs.nur.nixosModules.nur
         ./configuration.nix
       ];
     };
