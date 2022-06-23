@@ -1,4 +1,4 @@
-{ pkgs, arch-theme, btf, arch-theme, papirus, ... }:
+{ pkgs, arch-theme, ... }:
 
 pkgs.stdenv.mkDerivation rec {
   pname = "arch-kde-theme";
