@@ -1,4 +1,4 @@
-args@{ config, pkgs,... }:
+args@{ config, pkgs, btf, ... }:
 let
   username = "tev";
 in
