@@ -7,7 +7,7 @@ in
   [
     ((import ./templates/persist.nix) { inherit username; })
     ((import ./tev/config.nix) { inherit username; })
-    ((import ./tev/packages.nix) (args // { inherit username btf arch-theme; }))
+    ((import ./tev/packages.nix) (args // { inherit username; }))
   ];
 
   users.users.${username} = {
