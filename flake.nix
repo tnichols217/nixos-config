@@ -33,10 +33,10 @@
       system = "x86_64-linux";
       specialArgs = { inherit attrs; };
       modules = [
-        ./configuration.nix
         attrs.home-manager.nixosModule
         attrs.impermanence.nixosModule
-        attrs.nur.nixosModules.nur
+        attrs.nur.nixosModule
+        ./configuration.nix
       ];
     };
   };

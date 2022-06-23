@@ -1,4 +1,4 @@
-{ config, pkgs, nur, ... }:
+{ config, pkgs, ... }:
 {
   imports =
     [
@@ -27,9 +27,9 @@
    };
 
   nixpkgs.config.allowUnfree = true;
-  nixpkgs.overlays = [
-    nur.overlay
-  ];
+  # nixpkgs.overlays = [
+  #   nur.overlay
+  # ];
 
   boot.kernelPackages = pkgs.linuxPackages_zen;
 

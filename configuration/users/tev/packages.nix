@@ -15,7 +15,7 @@
         fswatch
         python3
         spotify
-        # pkgs.nur.repos.wolfangaukang.stremio
+        # config.nur.repos.wolfangaukang.stremio
         (callPackage ./packages/arch-theme.pkg.nix { inherit arch-theme; })
         (callPackage ./packages/papirus-icons.pkg.nix { inherit papirus; })
         (callPackage ./packages/kwin-scripts.pkg.nix {})
@@ -51,8 +51,8 @@
       };
       firefox = {
         enable = true;
-        # package = pkgs.nur.repos.wolfangaukang.librewolf-bin;
-        # extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+        # package = config.nur.repos.wolfangaukang.librewolf-bin;
+        # extensions = with config.nur.repos.rycee.firefox-addons; [
         #   https-everywhere
         #   privacy-badger
         #   darkreader
