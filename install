@@ -19,5 +19,5 @@ git clone https://github.com/tnichols217/nixos-config/ nixos
 cd /mnt
 
 nix-shell -p nixFlakes --run "
-nixos-install --show-trace
+nixos-install --show-trace --flake ".#nixos"
 "
