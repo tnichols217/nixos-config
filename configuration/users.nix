@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, btf, arch-theme, papirus, ... }:
 {
   imports =
     [
