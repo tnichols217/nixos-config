@@ -1,4 +1,4 @@
-{ config, pkgs, username, btf, ... }:
+{ config, pkgs, username, btf, arch-theme, papirus, ... }:
 {
   home-manager.users.${username} = {
     home = {
