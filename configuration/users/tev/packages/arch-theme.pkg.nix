@@ -1,10 +1,10 @@
-{ pkgs, arch-theme, ... }:
+{ pkgs, ... }@attrs:
 
 pkgs.stdenv.mkDerivation rec {
   pname = "arch-kde-theme";
   version = "14ab5e53e6fe6b18ffcaba2194c8748e858e6024";
 
-  src = arch-theme;
+  src = attrs.arch-theme;
 
   installPhase = let 
     SCHEMES_DIR = "$PREFIX/color-schemes";
