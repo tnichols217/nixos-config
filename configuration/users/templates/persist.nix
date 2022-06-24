@@ -19,23 +19,23 @@
     };
   };
 
-  environment.persistence."/nix/persist/etc/nixos/configuration/persistence/local" = {
-    hideMounts = false;
-    users.${username} = {
-      directories = [
-        { directory = ".local"; user = "${username}"; }
-        { directory = ".local/share"; user = "${username}"; }
-        { directory = ".local/state"; user = "${username}"; }
-      ];
-    };
-  };
+  # environment.persistence."/nix/persist/etc/nixos/configuration/persistence/local" = {
+  #   hideMounts = false;
+  #   users.${username} = {
+  #     directories = [
+  #       { directory = ".local"; user = "${username}"; }
+  #       { directory = ".local/share"; user = "${username}"; }
+  #       { directory = ".local/state"; user = "${username}"; }
+  #     ];
+  #   };
+  # };
 
-  environment.persistence."/nix/persist/etc/nixos/configuration/persistence/config" = {
-    hideMounts = false;
-    users.${username} = {
-      directories = [
-        { directory = ".config"; user = "${username}"; }
-      ];
-    };
-  };
+  # environment.persistence."/nix/persist/etc/nixos/configuration/persistence/config" = {
+  #   hideMounts = false;
+  #   users.${username} = {
+  #     directories = [
+  #       { directory = ".config"; user = "${username}"; }
+  #     ];
+  #   };
+  # };
 }

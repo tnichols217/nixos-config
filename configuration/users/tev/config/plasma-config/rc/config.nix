@@ -240,6 +240,13 @@ in
     "Effect-Slide"= {
       "items"= {
         "SlideDocks"= "true";
+        "HorizontalGap"= "0";
+        "VerticalGap"= "0";
+      };
+    };
+    "KDE"= {
+      "items"= {
+        "AnimationDurationFactor"= "0.25";
       };
     };
     "Effect-Wobbly"= {
@@ -267,12 +274,15 @@ in
     };
     "TabBox"= {
       "items"= {
+        "DesktopLayout"= "org.kde.breeze.desktop";
+        "DesktopListLayout"= "org.kde.breeze.desktop";
         "BorderActivate"= "9";
         "LayoutName"= "MediumRoundedDark";
       };
     };
     "Windows"= {
       "items"= {
+        "Placement"= "Centered";
         "ElectricBorderCooldown"= "150";
         "ElectricBorderDelay"= "100";
       };
@@ -381,6 +391,9 @@ in
     };
   };
   "/plasmarc"= {
+    "Theme"= {
+      "name"= "Arch";
+    };
     "Theme-plasmathemeexplorer" = {
       "Items" = {
         "name" = "Arch";
@@ -614,6 +627,9 @@ in
   };
   "/kscreenlockerrc"= {
     "Greeter"= {
+      "items"= {
+        "Theme"= "Arch";
+      };
       "groups"= {
         "Wallpaper"= {
           "groups"= {
@@ -628,6 +644,14 @@ in
             };
           };
         };
+      };
+    };
+  };
+  "/ksplashrc"= {
+    "KSplash"= {
+      "items"= {
+        "Engine"= "KSplashQML";
+        "Theme"= "Arch";
       };
     };
   };
@@ -957,6 +981,7 @@ in
     "General"= {
       "items"= {
         "BrowserApplication"= "firefox.desktop";
+        "ColorScheme"= "ArchSmooth";
       };
     };
     "Icons"= {
