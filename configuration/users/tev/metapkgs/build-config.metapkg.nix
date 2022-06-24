@@ -1,4 +1,4 @@
-{ pkgs ? import <nixpkgs> {}, config, ... }:
+{ pkgs ? import <nixpkgs> {}, config ? ../config/plasma-config/rc/config.nix, ... }:
 
 pkgs.stdenv.mkDerivation rec {
   pname = "plasma-config";
@@ -10,7 +10,7 @@ pkgs.stdenv.mkDerivation rec {
 
   echo $out
 
-  cp ${builtins.toFile "config.json" (builtins.toJSON config)} ./config.json
+  cp ${builtins.toFile "config.json" (builtins.toJSON (import config { inherit pkgs; }))} ./config.json
 
   ${pkgs.python3}/bin/python export.py
   ${pkgs.bash}/bin/bash config.sh ${pkgs.libsForQt5.kconfig}/bin/kwriteconfig5

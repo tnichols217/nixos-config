@@ -392,10 +392,12 @@ in
   };
   "/plasmarc"= {
     "Theme"= {
-      "name"= "Arch";
+      "items"= {
+        "name"= "Arch";
+      };
     };
     "Theme-plasmathemeexplorer" = {
-      "Items" = {
+      "items" = {
         "name" = "Arch";
       };
     };
