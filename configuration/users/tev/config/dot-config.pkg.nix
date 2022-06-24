@@ -10,7 +10,7 @@ pkgs.stdenv.mkDerivation rec {
 
   mkdir $out
 
-  cp * $out
+  cp -r * $out
 
   '';
 
