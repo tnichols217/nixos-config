@@ -7,6 +7,7 @@ in
     "Formats"= {
       "items"= {
         "LANG"= "en_SG.UTF-8";
+        "LC_TIME"= "Default.UTF-8"
       };
     };
   };
@@ -1263,6 +1264,7 @@ in
                           "items"= {
                             "displayTimezoneFormat"= "FullText";
                             "showSeconds"= "true";
+                            "use24hFormat"= "2";
                           };
                         };
                       };
