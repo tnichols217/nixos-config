@@ -97,6 +97,10 @@ pkgs.wrapFirefox pkgs.firefox-esr-unwrapped {
     } + "/conf" ) + ''
       defaultPref("privacy.clearOnShutdown.history", false);
       defaultPref("privacy.clearOnShutdown.downloads", false);
+      defaultPref("privacy.clearOnShutdown.sessions", false);
+      defaultPref("privacy.clearOnShutdown.cache", false);
+      defaultPref("privacy.clearOnShutdown.cookies", false);
+      defaultPref("privacy.clearOnShutdown.offlineApps", false);
       defaultPref("security.identityblock.show_extended_validation", true);
     '' ;
 }
