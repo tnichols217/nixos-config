@@ -24,6 +24,10 @@ pkgs.wrapFirefox pkgs.firefox-esr-unwrapped {
       name = "tiled-tab-groups";
       source = attrs.tiled-tab-groups;
     } )
+    ( fetchFFAddon {
+      name = "dark-space-theme";
+      source = attrs.dark-space-theme;
+    } )
   ];
 
   extraPolicies = {

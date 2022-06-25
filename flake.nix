@@ -50,6 +50,10 @@
       url = "https://addons.mozilla.org/firefox/downloads/file/3887846/tiled_tab_groups-0.18.25.xpi";
       flake = false;
     };
+    dark-space-theme = {
+      url = "https://addons.mozilla.org/firefox/downloads/file/3765900/nicothin_space-1.1.1.xpi";
+      flake = false;
+    };
     librewolfConfig = {
       url = "https://gitlab.com/librewolf-community/settings/-/raw/master/librewolf.cfg";
       flake = false;
