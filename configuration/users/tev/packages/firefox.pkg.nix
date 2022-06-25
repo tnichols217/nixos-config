@@ -79,15 +79,15 @@ pkgs.wrapFirefox pkgs.firefox-esr-unwrapped {
       overrides = [ 
         { 
           re = "network.dns.disableIPv6";
-          wi = ''defaultPref("network.dns.disableIPv6", false);'';
+          wi = ''defaultPref(\"network.dns.disableIPv6\", false);'';
         }
         { 
           re = "webgl.disabled";
-          wi = ''defaultPref("webgl.disabled", false);'';
+          wi = ''defaultPref(\"webgl.disabled\", false);'';
         }
         { 
           re = "media.peerconnection.ice.no_host";
-          wi = ''defaultPref("media.peerconnection.ice.no_host", false);'';
+          wi = ''defaultPref(\"media.peerconnection.ice.no_host\", false);'';
         }
       ];
     } + "/conf" ) + ''
