@@ -28,8 +28,30 @@
       url = github:MarianArlt/kde-plasma-chili;
       flake = false;
     };
+
+    # firefox addons
     ublock = {
       url = "https://addons.mozilla.org/firefox/downloads/file/3961087/ublock_origin-1.43.0.xpi";
+      flake = false;
+    };
+    dark-reader = {
+      url = "https://addons.mozilla.org/firefox/downloads/file/3954503/darkreader-4.9.51.xpi";
+      flake = false;
+    };
+    sponsorblock = {
+      url = "https://addons.mozilla.org/firefox/downloads/file/3964892/sponsorblock-4.6.xpi";
+      flake = false;
+    };
+    videospeed-controller = {
+      url = "https://addons.mozilla.org/firefox/downloads/file/3756025/videospeed-0.6.3.3.xpi";
+      flake = false;
+    };
+    tiled-tab-groups = {
+      url = "https://addons.mozilla.org/firefox/downloads/file/3887846/tiled_tab_groups-0.18.25.xpi";
+      flake = false;
+    };
+    librewolfConfig = {
+      url = "https://gitlab.com/librewolf-community/settings/-/raw/master/librewolf.cfg";
       flake = false;
     };
   };

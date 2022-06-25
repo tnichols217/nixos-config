@@ -1,4 +1,4 @@
-{ stdenv, unzip, jq, zip, fetchurl,writeScript, ... }:
+{ stdenv, unzip, jq, zip, writeScript, ... }:
 
 { name, source }:
 
