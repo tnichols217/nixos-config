@@ -9,13 +9,13 @@ rec {
   installPhase = 
   let
   intro = "sed -i \"s/[^\\n]*";
-  outro = "/\" conf \n";
+  outro = "/\" $out/conf \n";
   concat = intro + pkgs.lib.concatStringsSep (outro + intro) (pkgs.lib.lists.forEach overrides ( x: x.re + "[^\\n]*/" + x.wi )) + outro;
   in ''
 
   mkdir $out
 
-  cp ${input-file} conf
+  cp ${input-file} $out/conf
 
   ${concat}
 
