@@ -226,35 +226,35 @@ in
         "Rows"= "4";
       };
     };
-    "Effect-Blur"= {
+    "Effect-blur"= {
       "items"= {
         "BlurStrength"= "3";
         "NoiseStrength"= "0";
       };
     };
-    "Effect-PresentWindows"= {
+    "Effect-presentWindows"= {
       "items"= {
         "BorderActivateAll"= "9";
       };
     };
-    "Effect-Slide"= {
+    "Effect-slide"= {
       "items"= {
         "SlideDocks"= "true";
         "HorizontalGap"= "0";
         "VerticalGap"= "0";
       };
     };
-    "KDE"= {
-      "items"= {
-        "AnimationDurationFactor"= "0.25";
-      };
-    };
-    "Effect-Wobbly"= {
+    "Effect-wobbly"= {
       "items"= {
         "AdvancedMode"= "true";
         "Drag"= "85";
         "Stiffness"= "10";
         "WobblynessLevel"= "1";
+      };
+    };
+    "KDE"= {
+      "items"= {
+        "AnimationDurationFactor"= "0.25";
       };
     };
     "Plugins"= {
