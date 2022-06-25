@@ -62,7 +62,7 @@ pkgs.wrapFirefox pkgs.firefox-esr-unwrapped {
         "Twitter"
       ];
       Default = "DuckDuckGo";
-      Add = {
+      Add = [
         {
           Name = "You.com/code";
           Description = "The world's only democratized search platform.";
@@ -70,7 +70,7 @@ pkgs.wrapFirefox pkgs.firefox-esr-unwrapped {
           Method = "POST";
           URLTemplate = "https://you.com/search?q=(searchTerms)&tbm=youcode";
         }
-      }
+      ];
     };
   };
 
