@@ -1,5 +1,5 @@
 {
-  inputs = { 
+  inputs = (import ./flake/firefox.nix) // { 
     nixpkgs = {
       url = github:NixOS/nixpkgs/nixos-unstable;
     };

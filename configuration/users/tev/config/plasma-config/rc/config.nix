@@ -1256,6 +1256,18 @@ in
                     "immutability"= "1";
                     "plugin"= "org.kde.plasma.digitalclock";
                   };
+                  "groups"= {
+                    "Configuration"= {
+                      "groups"= {
+                        "Appearance"= {
+                          "items"= {
+                            "displayTimezoneFormat"= "FullText";
+                            "showSeconds"= "true";
+                          };
+                        };
+                      };
+                    };
+                  };
                 };
                 "18"= {
                   "items"= {
