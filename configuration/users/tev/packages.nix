@@ -19,7 +19,7 @@
         (callPackage ./packages/papirus-icons.pkg.nix { papirus = attrs.papirus; })
         (callPackage ./packages/kwin-scripts.pkg.nix {})
         (callPackage ./packages/konsole-themes.pkg.nix {})
-        (callPakcage ./packages/firefox.pkg.nix {})
+        (callPackage ./packages/firefox.pkg.nix {})
       ];
     };
     programs = {
