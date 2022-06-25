@@ -72,7 +72,7 @@ pkgs.wrapFirefox pkgs.firefox-esr-unwrapped {
           Description = "The world's only democratized search platform.";
           Alias = "";
           Method = "POST";
-          URLTemplate = "https://you.com/search?q=(searchTerms)&tbm=youcode";
+          URLTemplate = "https://you.com/search?q={searchTerms}&tbm=youcode";
         }
       ];
     };
