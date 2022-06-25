@@ -1,5 +1,5 @@
 {
-  inputs = ( import ./flake/firefox.nix {} ) // { 
+  inputs = { 
     nixpkgs = {
       url = github:NixOS/nixpkgs/nixos-unstable;
     };
@@ -28,6 +28,10 @@
       url = github:MarianArlt/kde-plasma-chili;
       flake = false;
     };
+    ublock = {
+      url = "file+https://addons.mozilla.org/firefox/downloads/file/3961087/ublock_origin-1.43.0.xpi";
+      flake = false;
+    };
   };
   
   outputs = { self, nixpkgs, ... }@attrs: {
@@ -35,8 +39,8 @@
       system = "x86_64-linux";
       specialArgs = { inherit attrs; };
       modules = [
-        attrs.home-manager.nixosModule
-        attrs.impermanence.nixosModule
+        attrs.home-manager.nixosModules.default
+        attrs.impermanence.nixosModules.impermanence
         attrs.nur.nixosModules.nur
         ./configuration.nix
       ];

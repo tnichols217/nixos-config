@@ -1,0 +1,6 @@
+{ pkgs, ... }:
+{
+  options.firefoxAddons = {
+    
+  }
+}
