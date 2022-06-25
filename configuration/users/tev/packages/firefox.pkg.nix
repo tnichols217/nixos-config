@@ -2,7 +2,7 @@
 
 pkgs.wrapFirefox pkgs.firefox-esr-unwrapped {
   nixExtensions = let
-  fetchFFAddon = pkgs.callPackage (import ./firefox/fetchFirefoxAddonFlake.nix) {};
+  fetchFFAddon = pkgs.callPackage (import ./firefox/fetchFirefoxAddonFlake.metapkg.nix) {};
   in [
     ( fetchFFAddon {
       name = "ublock";
@@ -74,12 +74,33 @@ pkgs.wrapFirefox pkgs.firefox-esr-unwrapped {
     };
   };
 
-  extraPrefs = (builtins.readFile attrs.librewolfConfig) + ''
-    defaultPref("network.dns.disableIPv6", false);
-    defaultPref("webgl.disabled", false);
-    defaultPref("media.peerconnection.ice.no_host", false);
-    defaultPref("privacy.clearOnShutdown.history", false);
-    defaultPref("privacy.clearOnShutdown.downloads", false);
-    defaultPref("security.identityblock.show_extended_validation", true);
-  '';
+  extraPrefs = builtins.readFile (pkgs.callPackage ./firefox/overrideSetting.metapkg.nix { 
+      input-file = attrs.librewolfConfig; 
+      overrides = [ 
+        { 
+          re = "network.dns.disableIPv6";
+          wi = ''defaultPref("network.dns.disableIPv6", false);'';
+        }
+        { 
+          re = "webgl.disabled";
+          wi = ''defaultPref("webgl.disabled", false);'';
+        }
+        { 
+          re = "media.peerconnection.ice.no_host";
+          wi = ''defaultPref("media.peerconnection.ice.no_host", false);'';
+        }
+        { 
+          re = "privacy.clearOnShutdown.history";
+          wi = ''defaultPref("privacy.clearOnShutdown.history", false);'';
+        }
+        { 
+          re = "privacy.clearOnShutdown.downloads";
+          wi = ''defaultPref("privacy.clearOnShutdown.downloads", false);'';
+        }
+        { 
+          re = "security.identityblock.show_extended_validation";
+          wi = ''defaultPref("security.identityblock.show_extended_validation", true);'';
+        }
+      ];
+    } + "/conf" );
 }
