@@ -89,18 +89,10 @@ pkgs.wrapFirefox pkgs.firefox-esr-unwrapped {
           re = "media.peerconnection.ice.no_host";
           wi = ''defaultPref("media.peerconnection.ice.no_host", false);'';
         }
-        { 
-          re = "privacy.clearOnShutdown.history";
-          wi = ''defaultPref("privacy.clearOnShutdown.history", false);'';
-        }
-        { 
-          re = "privacy.clearOnShutdown.downloads";
-          wi = ''defaultPref("privacy.clearOnShutdown.downloads", false);'';
-        }
-        { 
-          re = "security.identityblock.show_extended_validation";
-          wi = ''defaultPref("security.identityblock.show_extended_validation", true);'';
-        }
       ];
-    } + "/conf" );
+    } + "/conf" ) + ''
+      defaultPref("privacy.clearOnShutdown.history", false);
+      defaultPref("privacy.clearOnShutdown.downloads", false);
+      defaultPref("security.identityblock.show_extended_validation", true);
+    '' ;
 }

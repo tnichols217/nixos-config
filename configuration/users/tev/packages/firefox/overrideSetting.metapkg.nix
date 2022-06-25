@@ -1,4 +1,4 @@
-{ pkgs ? import <nixpkgs> {}, input-file, overrides, ... }:
+{ pkgs ? import <nixpkgs> {}, input-file ? ./test, overrides ? [{re="c"; wi="d";}], ... }:
 pkgs.stdenv.mkDerivation 
 rec {
   pname = "override firefox config file";
@@ -18,6 +18,10 @@ rec {
   cp ${input-file} $out/conf
 
   ${concat}
+
+  cat $out/conf
+
+  echo ""
 
   '';
 
