@@ -10,7 +10,7 @@ rec {
   let
   intro = "sed -i \"s/[^\\n]*";
   outro = "/\" conf \n";
-  concat = intro + pkgs.lib.concatStringsSep (outro + intro) (pkgs.lib.lists.forEach pack ( x: x.re + "[^\\n]*/" + x.wi )) + outro;
+  concat = intro + pkgs.lib.concatStringsSep (outro + intro) (pkgs.lib.lists.forEach overrides ( x: x.re + "[^\\n]*/" + x.wi )) + outro;
   in ''
 
   mkdir $out
