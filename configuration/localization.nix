@@ -1,6 +1,5 @@
 { config, pkgs, ... }:
 {
-  networking.hostName = "nixos";
   time.timeZone = "Asia/Kuala_Lumpur";
   i18n.defaultLocale = "en_SG.UTF-8";
   console = {
