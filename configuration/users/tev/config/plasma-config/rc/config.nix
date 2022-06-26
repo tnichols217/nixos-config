@@ -1506,8 +1506,8 @@ in
         "cryptoEnabled"= "true";
         "elevateMode"= "false";
         "elevateModeEnum"= "0";
-        "groupClientChecked"= "${if host-name == "MSI" then "true" else "false"}";
-        "groupServerChecked"= "${if host-name == "ASUS" then "true" else "false"}";
+        # "groupClientChecked"= "${if host-name == "MSI" then "true" else "false"}";
+        # "groupServerChecked"= "${if host-name == "ASUS" then "true" else "false"}";
         "interface"= "";
         "language"= "en";
         "logFilename"= "/var/log/barrier.log";
