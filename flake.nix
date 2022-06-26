@@ -71,12 +71,12 @@
     nixosConfigurations.MSI = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit attrs; hostname = "MSI"; };
-      modules = mod;
+      modules = mods;
     };
     nixosConfigurations.ASUS = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit attrs; hostname = "ASUS"; };
-      modules = mod;
+      modules = mods;
     };
   };
 }
