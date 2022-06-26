@@ -1,4 +1,4 @@
-{ pkgs, hostname }:
+{ pkgs, host-name }:
 let
 background = ./config/background/Anime-Street-Day.png;
 in
@@ -1502,12 +1502,12 @@ in
         "autoConfigPrompted"= "true";
         "autoHide"= "true";
         "autoStart"= "false";
-        "configFile"= "${./config/barrier + hostname + ".conf"}";
+        "configFile"= "${./config/barrier + host-name + ".conf"}";
         "cryptoEnabled"= "true";
         "elevateMode"= "false";
         "elevateModeEnum"= "0";
-        "groupClientChecked"= "${if hostname == "MSI" then "true" else "false"}";
-        "groupServerChecked"= "${if hostname == "ASUS" then "true" else "false"}";
+        "groupClientChecked"= "${if host-name == "MSI" then "true" else "false"}";
+        "groupServerChecked"= "${if host-name == "ASUS" then "true" else "false"}";
         "interface"= "";
         "language"= "en";
         "logFilename"= "/var/log/barrier.log";
@@ -1516,7 +1516,7 @@ in
         "minimizeToTray"= "true";
         "port"= "24800";
         "requireClientCertificate"= "false";
-        "screenName"= "${hostname}";
+        "screenName"= "${host-name}";
         "serverHostname"= "ASUS";
         "startedBefore"= "true";
         "useExternalConfig"= "true";
