@@ -1502,7 +1502,7 @@ in
         "autoConfigPrompted"= "true";
         "autoHide"= "true";
         "autoStart"= "false";
-        "configFile"= "${./config/barrier/ + hostname + ".conf"}";
+        "configFile"= "${./config/barrier + hostname + ".conf"}";
         "cryptoEnabled"= "true";
         "elevateMode"= "false";
         "elevateModeEnum"= "0";
