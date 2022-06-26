@@ -60,16 +60,23 @@
     };
   };
   
-  outputs = { self, nixpkgs, ... }@attrs: {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      specialArgs = { inherit attrs; };
-      modules = [
+  outputs = { self, nixpkgs, ... }@attrs: let 
+  mods = [
         attrs.home-manager.nixosModules.default
         attrs.impermanence.nixosModules.impermanence
         attrs.nur.nixosModules.nur
         ./configuration.nix
       ];
+    in {
+    nixosConfigurations.MSI = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      specialArgs = { inherit attrs; hostname = "MSI"; };
+      modules = mod;
+    };
+    nixosConfigurations.ASUS = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      specialArgs = { inherit attrs; hostname = "ASUS"; };
+      modules = mod;
     };
   };
 }

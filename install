@@ -20,7 +20,7 @@ cd /mnt
 
 BUILD=$1
 if [ -z "$BUILD" ]; then
-    BUILD="nixos"
+    BUILD="MSI"
 fi
 
 nix-shell -p nixFlakes --run "
