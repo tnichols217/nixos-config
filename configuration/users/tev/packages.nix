@@ -14,6 +14,7 @@
         fswatch
         python3
         spotify
+        libsForQt5.qt5.qttools
         # config.nur.repos.wolfangaukang.stremio
         (callPackage ./packages/arch-theme.pkg.nix { arch-theme = attrs.arch-theme; })
         (callPackage ./packages/papirus-icons.pkg.nix { papirus = attrs.papirus; })
