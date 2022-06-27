@@ -41,6 +41,7 @@
           "..." = "cd ../..";
           "...." = "cd ../../..";
           cdg = "cd $(git rev-parse --show-toplevel)";
+          upg = "sudo bash -c \"cd /etc/nixos; git pull; nixos-rebuild boot --flake \\\".#${host-name}\\\"\"";
         };
         plugins = [
           {
