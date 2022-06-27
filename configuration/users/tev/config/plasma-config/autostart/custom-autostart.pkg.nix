@@ -14,7 +14,7 @@ rec {
 
   mkdir -p $out/autostart/
 
-  ${kc} --file $out/autostart/${name}.desktop --group "Desktop Entry" --key Exec "${pkg + exec + name + "" + args}"
+  ${kc} --file $out/autostart/${name}.desktop --group "Desktop Entry" --key Exec "${pkg + exec + name + " " + args}"
   ${kc} --file $out/autostart/${name}.desktop --group "Desktop Entry" --key Icon "${icon}"
   ${kc} --file $out/autostart/${name}.desktop --group "Desktop Entry" --key Name "${name}"
   ${kc} --file $out/autostart/${name}.desktop --group "Desktop Entry" --key Path "${path-config}"
