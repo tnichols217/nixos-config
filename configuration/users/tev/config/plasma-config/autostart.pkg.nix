@@ -1,4 +1,4 @@
-{ pkgs ? import <nixpkgs> {}, background }:
+{ pkgs ? import <nixpkgs> {} }:
 pkgs.callPackage ../../metapkgs/combine.metapkg.nix { pack = [
   (pkgs.callPackage ./autostart/save-desktop.pkg.nix { app = pkgs.flameshot; name = "org.flameshot.Flameshot"; })
   (pkgs.callPackage ./autostart/save-desktop.pkg.nix { app = pkgs.barrier; name = "barrier"; })
