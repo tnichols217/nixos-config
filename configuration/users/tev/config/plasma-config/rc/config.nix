@@ -1495,7 +1495,7 @@ in
       };
     };
   };
-  "Debauchee/Barrier.conf"= {
+  "/Debauchee/Barrier.conf"= {
     "General"= {
       "items"= {
         "autoConfig"= "false";
