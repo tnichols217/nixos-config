@@ -1,4 +1,4 @@
-{ pkgs, ... }@attrs:
+{ pkgs, attrs }:
 
 {
   enable = true;

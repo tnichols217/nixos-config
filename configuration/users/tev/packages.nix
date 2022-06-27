@@ -1,4 +1,4 @@
-{ config, pkgs, username, attrs, host-name, ... }:
+{ config, pkgs, username, attrs, host-name, ... }@attrs:
 {
   home-manager.users.${username} = {
     home = {
@@ -72,7 +72,7 @@
         enable = true;
         enableGitCredentialHelper = true;
       };
-      vscode = pkgs.callPackage ./packages/vscode.nix {};
+      vscode = import ./packages/vscode.nix { inherit pkgs attrs; };
       obs-studio = {
         enable = true;
       };
