@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, ... }@attrs:
 
 {
   enable = true;
@@ -16,7 +16,7 @@
   };
   extensions = [
     (pkgs.vscode-utils.buildVscodeMarketplaceExtension {
-      vsix = vscExt-alefragnani-project-manager;
+      vsix = attrs.vscExt-alefragnani-project-manager;
     })
   ];
 }
