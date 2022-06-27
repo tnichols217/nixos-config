@@ -1501,7 +1501,7 @@ in
         "autoConfig"= "false";
         "autoConfigPrompted"= "true";
         "autoHide"= "true";
-        "autoStart"= "false";
+        "autoStart"= "true";
         "configFile"= "${./config/barrier + ("/" + host-name + ".conf")}";
         "cryptoEnabled"= "true";
         "elevateMode"= "false";
