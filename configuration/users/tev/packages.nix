@@ -72,7 +72,7 @@
         enable = true;
         enableGitCredentialHelper = true;
       };
-      vscode = import ./packages/vscode.nix { inherit pkgs; attrs = a };
+      vscode = import ./packages/vscode.nix { inherit pkgs; attrs = a; };
       obs-studio = {
         enable = true;
       };
