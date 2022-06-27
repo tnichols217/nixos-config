@@ -31,13 +31,12 @@
   #   };
   # };
 
-  environment.persistence."/nix/persist/etc/nixos/configuration/persistence/config" = {
-    hideMounts = false;
-    users.${username} = {
-      directories = [
-        # { directory = ".config"; user = "${username}"; }
-        { directory = ".config/dconf"; user = "${username}"; }
-      ];
-    };
-  };
+  # environment.persistence."/nix/persist/etc/nixos/configuration/persistence/config" = {
+  #   hideMounts = false;
+  #   users.${username} = {
+  #     directories = [
+  #       # { directory = ".config"; user = "${username}"; }
+  #     ];
+  #   };
+  # };
 }

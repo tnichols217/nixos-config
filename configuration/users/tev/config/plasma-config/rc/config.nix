@@ -1,6 +1,6 @@
 { pkgs, host-name }:
 let
-background = ./config/background/Anime-Street-Day.png;
+background = import ./config/background.nix;
 in
 {
   "/plasma-localerc"= {
