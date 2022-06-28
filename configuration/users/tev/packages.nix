@@ -1,33 +1,4 @@
-{ config, pkgs, username, attrs, host-name, 
-  vscExt-alefragnani-project-manager,
-  vscExt-bbenoist-QML,
-  vscExt-codezombiech-gitignore,
-  vscExt-donjayamanne-git-extension-pack,
-  vscExt-donjayamanne-githistory,
-  vscExt-eamodio-gitlens,
-  vscExt-mhutchie-git-graph,
-  vscExt-qwtel-sqlite-viewer,
-  vscExt-svelte-svelte-vscode,
-  vscExt-ziyasal-vscode-open-in-github,
-  vscExt-bbenoist-Nix,
-  vscExt-bierner-color-info,
-  vscExt-christian-kohler-path-intellisense,
-  vscExt-cssho-vscode-svgviewer,
-  vscExt-ecmel-vscode-html-css,
-  vscExt-GrapeCity-gc-excelviewer,
-  vscExt-jnoortheen-nix-ide,
-  vscExt-ms-python-python,
-  vscExt-ms-python-vscode-pylance,
-  vscExt-ms-toolsai-jupyter,
-  vscExt-ms-toolsai-jupyter-keymap,
-  vscExt-ms-toolsai-jupyter-renderers,
-  vscExt-redhat-vscode-xml,
-  vscExt-shd101wyy-markdown-preview-enhanced,
-  vscExt-TabNine-tabnine-vscode,
-  vscExt-tht13-html-preview-vscode,
-  vscExt-tht13-python,
-  vscExt-vscode-icons-team-vscode-icons,
-  vscExt-yzane-markdown-pdf,... }@a:
+{ config, pkgs, username, attrs, host-name, vscode-exts,... }@a:
 {
   home-manager.users.${username} = {
     home = {
@@ -101,7 +72,7 @@
         enable = true;
         enableGitCredentialHelper = true;
       };
-      vscode = import ./packages/vscode.nix { inherit pkgs; attrs = a; };
+      vscode = import ./packages/vscode.nix (vscode-exts // { inherit pkgs; attrs = a; });
       obs-studio = {
         enable = true;
       };
