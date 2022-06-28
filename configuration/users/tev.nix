@@ -7,7 +7,7 @@ in
   [
     ((import ./templates/persist.nix) (args // { inherit username; }))
     ((import ./tev/config.nix) (args // { inherit username; }))
-    ./tev/packages.nix
+    (pkgs.callPackage ./tev/packages.nix { inherit username; })
   ];
 
   users.users.${username} = {
