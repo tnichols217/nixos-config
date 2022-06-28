@@ -29,6 +29,10 @@ def genExtList(ext):
   };
 }\n'''
 
+def genAttrList(ext):
+    return '''  ''' + name(ext) + ''',\n'''
+
 # links = "".join(list(map(genFlakeInfo, exts)))
-links = "".join(list(map(genExtList, exts)))
+# links = "".join(list(map(genExtList, exts)))
+links = "".join(list(map(genAttrList, exts)))
 print(links)
