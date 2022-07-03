@@ -16,20 +16,20 @@
   };
   mutableExtensionsDir = false;
   extensions = let 
-    vscodeExtensions = builtins.map (x : import ./vscode/parseVSIXfile.nix { inherit pkgs; file = x; }) vscodeExtensions;
+    mappedVscodeExtensions = builtins.map (x : import ./vscode/parseVSIXfile.nix { inherit pkgs; file = x; }) vscodeExtensions;
   in builtins.map pkgs.vscode-utils.buildVscodeMarketplaceExtension [
     (let 
       publisher = "alefragnani";
       name = "project-manager";
     in {
-      vsix = vscodeExtensions."${"vscExt-" + publisher + "-" + name}";
+      vsix = mappedVscodeExtensions."${"vscExt-" + publisher + "-" + name}";
       mktplcRef = {
         inherit publisher name;
         version = "12.6.0";
       };
     })
     # {
-    #   vsix = vscodeExtensions.vscExt-bbenoist-QML;
+    #   vsix = mappedVscodeExtensions.vscExt-bbenoist-QML;
     #   mktplcRef = {
     #     publisher = "bbenoist";
     #     name = "QML";
@@ -37,7 +37,7 @@
     #   };
     # }
     # {
-    #   vsix = vscodeExtensions.vscExt-codezombiech-gitignore;
+    #   vsix = mappedVscodeExtensions.vscExt-codezombiech-gitignore;
     #   mktplcRef = {
     #     publisher = "codezombiech";
     #     name = "gitignore";
@@ -45,7 +45,7 @@
     #   };
     # }
     # {
-    #   vsix = vscodeExtensions.vscExt-donjayamanne-git-extension-pack;
+    #   vsix = mappedVscodeExtensions.vscExt-donjayamanne-git-extension-pack;
     #   mktplcRef = {
     #     publisher = "donjayamanne";
     #     name = "git-extension-pack";
@@ -53,7 +53,7 @@
     #   };
     # }
     # {
-    #   vsix = vscodeExtensions.vscExt-donjayamanne-githistory;
+    #   vsix = mappedVscodeExtensions.vscExt-donjayamanne-githistory;
     #   mktplcRef = {
     #     publisher = "donjayamanne";
     #     name = "githistory";
@@ -61,7 +61,7 @@
     #   };
     # }
     # {
-    #   vsix = vscodeExtensions.vscExt-eamodio-gitlens;
+    #   vsix = mappedVscodeExtensions.vscExt-eamodio-gitlens;
     #   mktplcRef = {
     #     publisher = "eamodio";
     #     name = "gitlens";
@@ -69,7 +69,7 @@
     #   };
     # }
     # {
-    #   vsix = vscodeExtensions.vscExt-mhutchie-git-graph;
+    #   vsix = mappedVscodeExtensions.vscExt-mhutchie-git-graph;
     #   mktplcRef = {
     #     publisher = "mhutchie";
     #     name = "git-graph";
@@ -77,7 +77,7 @@
     #   };
     # }
     # {
-    #   vsix = vscodeExtensions.vscExt-qwtel-sqlite-viewer;
+    #   vsix = mappedVscodeExtensions.vscExt-qwtel-sqlite-viewer;
     #   mktplcRef = {
     #     publisher = "qwtel";
     #     name = "sqlite-viewer";
@@ -85,7 +85,7 @@
     #   };
     # }
     # {
-    #   vsix = vscodeExtensions.vscExt-svelte-svelte-vscode;
+    #   vsix = mappedVscodeExtensions.vscExt-svelte-svelte-vscode;
     #   mktplcRef = {
     #     publisher = "svelte";
     #     name = "svelte-vscode";
@@ -93,7 +93,7 @@
     #   };
     # }
     # {
-    #   vsix = vscodeExtensions.vscExt-ziyasal-vscode-open-in-github;
+    #   vsix = mappedVscodeExtensions.vscExt-ziyasal-vscode-open-in-github;
     #   mktplcRef = {
     #     publisher = "ziyasal";
     #     name = "vscode-open-in-github";
@@ -101,7 +101,7 @@
     #   };
     # }
     # {
-    #   vsix = vscodeExtensions.vscExt-bbenoist-Nix;
+    #   vsix = mappedVscodeExtensions.vscExt-bbenoist-Nix;
     #   mktplcRef = {
     #     publisher = "bbenoist";
     #     name = "Nix";
@@ -109,7 +109,7 @@
     #   };
     # }
     # {
-    #   vsix = vscodeExtensions.vscExt-bierner-color-info;
+    #   vsix = mappedVscodeExtensions.vscExt-bierner-color-info;
     #   mktplcRef = {
     #     publisher = "bierner";
     #     name = "color-info";
@@ -117,7 +117,7 @@
     #   };
     # }
     # {
-    #   vsix = vscodeExtensions.vscExt-christian-kohler-path-intellisense;
+    #   vsix = mappedVscodeExtensions.vscExt-christian-kohler-path-intellisense;
     #   mktplcRef = {
     #     publisher = "christian-kohler";
     #     name = "path-intellisense";
@@ -125,7 +125,7 @@
     #   };
     # }
     # {
-    #   vsix = vscodeExtensions.vscExt-cssho-vscode-svgviewer;
+    #   vsix = mappedVscodeExtensions.vscExt-cssho-vscode-svgviewer;
     #   mktplcRef = {
     #     publisher = "cssho";
     #     name = "vscode-svgviewer";
@@ -133,7 +133,7 @@
     #   };
     # }
     # {
-    #   vsix = vscodeExtensions.vscExt-ecmel-vscode-html-css;
+    #   vsix = mappedVscodeExtensions.vscExt-ecmel-vscode-html-css;
     #   mktplcRef = {
     #     publisher = "ecmel";
     #     name = "vscode-html-css";
@@ -141,7 +141,7 @@
     #   };
     # }
     # {
-    #   vsix = vscodeExtensions.vscExt-GrapeCity-gc-excelviewer;
+    #   vsix = mappedVscodeExtensions.vscExt-GrapeCity-gc-excelviewer;
     #   mktplcRef = {
     #     publisher = "GrapeCity";
     #     name = "gc-excelviewer";
@@ -149,7 +149,7 @@
     #   };
     # }
     # {
-    #   vsix = vscodeExtensions.vscExt-jnoortheen-nix-ide;
+    #   vsix = mappedVscodeExtensions.vscExt-jnoortheen-nix-ide;
     #   mktplcRef = {
     #     publisher = "jnoortheen";
     #     name = "nix-ide";
@@ -157,7 +157,7 @@
     #   };
     # }
     # {
-    #   vsix = vscodeExtensions.vscExt-ms-python-python;
+    #   vsix = mappedVscodeExtensions.vscExt-ms-python-python;
     #   mktplcRef = {
     #     publisher = "ms-python";
     #     name = "python";
@@ -165,7 +165,7 @@
     #   };
     # }
     # {
-    #   vsix = vscodeExtensions.vscExt-ms-python-vscode-pylance;
+    #   vsix = mappedVscodeExtensions.vscExt-ms-python-vscode-pylance;
     #   mktplcRef = {
     #     publisher = "ms-python";
     #     name = "vscode-pylance";
@@ -173,7 +173,7 @@
     #   };
     # }
     # {
-    #   vsix = vscodeExtensions.vscExt-ms-toolsai-jupyter;
+    #   vsix = mappedVscodeExtensions.vscExt-ms-toolsai-jupyter;
     #   mktplcRef = {
     #     publisher = "ms-toolsai";
     #     name = "jupyter";
@@ -181,7 +181,7 @@
     #   };
     # }
     # {
-    #   vsix = vscodeExtensions.vscExt-ms-toolsai-jupyter-keymap;
+    #   vsix = mappedVscodeExtensions.vscExt-ms-toolsai-jupyter-keymap;
     #   mktplcRef = {
     #     publisher = "ms-toolsai";
     #     name = "jupyter-keymap";
@@ -189,7 +189,7 @@
     #   };
     # }
     # {
-    #   vsix = vscodeExtensions.vscExt-ms-toolsai-jupyter-renderers;
+    #   vsix = mappedVscodeExtensions.vscExt-ms-toolsai-jupyter-renderers;
     #   mktplcRef = {
     #     publisher = "ms-toolsai";
     #     name = "jupyter-renderers";
@@ -197,7 +197,7 @@
     #   };
     # }
     # {
-    #   vsix = vscodeExtensions.vscExt-redhat-vscode-xml;
+    #   vsix = mappedVscodeExtensions.vscExt-redhat-vscode-xml;
     #   mktplcRef = {
     #     publisher = "redhat";
     #     name = "vscode-xml";
@@ -205,7 +205,7 @@
     #   };
     # }
     # {
-    #   vsix = vscodeExtensions.vscExt-shd101wyy-markdown-preview-enhanced;
+    #   vsix = mappedVscodeExtensions.vscExt-shd101wyy-markdown-preview-enhanced;
     #   mktplcRef = {
     #     publisher = "shd101wyy";
     #     name = "markdown-preview-enhanced";
@@ -213,7 +213,7 @@
     #   };
     # }
     # {
-    #   vsix = vscodeExtensions.vscExt-TabNine-tabnine-vscode;
+    #   vsix = mappedVscodeExtensions.vscExt-TabNine-tabnine-vscode;
     #   mktplcRef = {
     #     publisher = "TabNine";
     #     name = "tabnine-vscode";
@@ -221,7 +221,7 @@
     #   };
     # }
     # {
-    #   vsix = vscodeExtensions.vscExt-tht13-html-preview-vscode;
+    #   vsix = mappedVscodeExtensions.vscExt-tht13-html-preview-vscode;
     #   mktplcRef = {
     #     publisher = "tht13";
     #     name = "html-preview-vscode";
@@ -229,7 +229,7 @@
     #   };
     # }
     # {
-    #   vsix = vscodeExtensions.vscExt-tht13-python;
+    #   vsix = mappedVscodeExtensions.vscExt-tht13-python;
     #   mktplcRef = {
     #     publisher = "tht13";
     #     name = "python";
@@ -237,7 +237,7 @@
     #   };
     # }
     # {
-    #   vsix = vscodeExtensions.vscExt-vscode-icons-team-vscode-icons;
+    #   vsix = mappedVscodeExtensions.vscExt-vscode-icons-team-vscode-icons;
     #   mktplcRef = {
     #     publisher = "vscode-icons-team";
     #     name = "vscode-icons";
@@ -245,7 +245,7 @@
     #   };
     # }
     # {
-    #   vsix = vscodeExtensions.vscExt-yzane-markdown-pdf;
+    #   vsix = mappedVscodeExtensions.vscExt-yzane-markdown-pdf;
     #   mktplcRef = {
     #     publisher = "yzane";
     #     name = "markdown-pdf";
