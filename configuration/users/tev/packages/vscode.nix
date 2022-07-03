@@ -16,8 +16,8 @@
   };
   mutableExtensionsDir = false;
   extensions = let 
-    # mappedVscodeExtensions = builtins.map (x : (import ./vscode/parseVSIXfile.nix { inherit pkgs; file = x; })) vscodeExtensions;
-    mappedVscodeExtensions = builtins.map (x : x) vscodeExtensions;
+    mappedVscodeExtensions = builtins.map (name: value: (import ./vscode/parseVSIXfile.nix { inherit pkgs; file = value; })) vscodeExtensions;
+    # mappedVscodeExtensions = builtins.map (x : x) vscodeExtensions;
   in builtins.map pkgs.vscode-utils.buildVscodeMarketplaceExtension [
     (let 
       publisher = "alefragnani";
