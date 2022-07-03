@@ -4,7 +4,7 @@ pkgs.stdenv.mkDerivation rec {
   pname = "vscodeExtensionRenamer";
   version = "v1.0.0";
 
-  src = arch-theme;
+  src = ./.;
 
   installPhase = 
   ''
