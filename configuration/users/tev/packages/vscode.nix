@@ -15,12 +15,14 @@
     "workbench.colorTheme" = "Default Dark+";
   };
   mutableExtensionsDir = false;
-  extensions = builtins.map pkgs.vscode-utils.buildVscodeMarketplaceExtension [
+  extensions = let 
+    vscodeExtensions = builtins.map (x : import ./vscode/parseVSIXfile.nix { inherit pkgs; file = x; }) vscodeExtensions;
+  in builtins.map pkgs.vscode-utils.buildVscodeMarketplaceExtension [
     (let 
       publisher = "alefragnani";
       name = "project-manager";
     in {
-      vsix = import ./vscode/parseVSIXfile.nix { inherit pkgs; file = vscodeExtensions."${"vscExt-" + publisher + "-" + name}"; };
+      vsix = vscodeExtensions."${"vscExt-" + publisher + "-" + name}";
       mktplcRef = {
         inherit publisher name;
         version = "12.6.0";
