@@ -1,4 +1,4 @@
-args@{ config, pkgs, btf, arch-theme, papirus, vscodeExtensions, ... }:
+args@{ config, pkgs, btf, arch-theme, papirus, vscodeExtensions, host-name, ... }:
 let
   username = "tev";
 in
@@ -6,7 +6,7 @@ in
   imports =
   [
     ((import ./templates/persist.nix) (args // { inherit username; }))
-    ((import ./tev/config.nix) (args // { inherit username; }))
+    ((import ./tev/config.nix) (args // { inherit username host-name; }))
     ((import ./tev/packages.nix) (args // { inherit username arch-theme papirus vscodeExtensions; }))
   ];
 
