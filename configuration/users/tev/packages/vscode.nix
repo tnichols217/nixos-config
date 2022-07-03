@@ -1,4 +1,4 @@
-{ pkgs, attrs }:
+{ pkgs, vscodeExtensions }:
 
 {
   enable = true;
@@ -16,7 +16,7 @@
   };
   extensions = builtins.map pkgs.vscode-utils.buildVscodeMarketplaceExtension [
     {
-      vsix = attrs.vscExt-alefragnani-project-manager;
+      vsix = vscodeExtensions.vscExt-alefragnani-project-manager;
       mktplcRef = {
         publisher = "alefragnani";
         name = "project-manager";
@@ -24,7 +24,7 @@
       };
     }
     {
-      vsix = attrs.vscExt-bbenoist-QML;
+      vsix = vscodeExtensions.vscExt-bbenoist-QML;
       mktplcRef = {
         publisher = "bbenoist";
         name = "QML";
@@ -32,7 +32,7 @@
       };
     }
     {
-      vsix = attrs.vscExt-codezombiech-gitignore;
+      vsix = vscodeExtensions.vscExt-codezombiech-gitignore;
       mktplcRef = {
         publisher = "codezombiech";
         name = "gitignore";
@@ -40,7 +40,7 @@
       };
     }
     {
-      vsix = attrs.vscExt-donjayamanne-git-extension-pack;
+      vsix = vscodeExtensions.vscExt-donjayamanne-git-extension-pack;
       mktplcRef = {
         publisher = "donjayamanne";
         name = "git-extension-pack";
@@ -48,7 +48,7 @@
       };
     }
     {
-      vsix = attrs.vscExt-donjayamanne-githistory;
+      vsix = vscodeExtensions.vscExt-donjayamanne-githistory;
       mktplcRef = {
         publisher = "donjayamanne";
         name = "githistory";
@@ -56,7 +56,7 @@
       };
     }
     {
-      vsix = attrs.vscExt-eamodio-gitlens;
+      vsix = vscodeExtensions.vscExt-eamodio-gitlens;
       mktplcRef = {
         publisher = "eamodio";
         name = "gitlens";
@@ -64,7 +64,7 @@
       };
     }
     {
-      vsix = attrs.vscExt-mhutchie-git-graph;
+      vsix = vscodeExtensions.vscExt-mhutchie-git-graph;
       mktplcRef = {
         publisher = "mhutchie";
         name = "git-graph";
@@ -72,7 +72,7 @@
       };
     }
     {
-      vsix = attrs.vscExt-qwtel-sqlite-viewer;
+      vsix = vscodeExtensions.vscExt-qwtel-sqlite-viewer;
       mktplcRef = {
         publisher = "qwtel";
         name = "sqlite-viewer";
@@ -80,7 +80,7 @@
       };
     }
     {
-      vsix = attrs.vscExt-svelte-svelte-vscode;
+      vsix = vscodeExtensions.vscExt-svelte-svelte-vscode;
       mktplcRef = {
         publisher = "svelte";
         name = "svelte-vscode";
@@ -88,7 +88,7 @@
       };
     }
     {
-      vsix = attrs.vscExt-ziyasal-vscode-open-in-github;
+      vsix = vscodeExtensions.vscExt-ziyasal-vscode-open-in-github;
       mktplcRef = {
         publisher = "ziyasal";
         name = "vscode-open-in-github";
@@ -96,7 +96,7 @@
       };
     }
     {
-      vsix = attrs.vscExt-bbenoist-Nix;
+      vsix = vscodeExtensions.vscExt-bbenoist-Nix;
       mktplcRef = {
         publisher = "bbenoist";
         name = "Nix";
@@ -104,7 +104,7 @@
       };
     }
     {
-      vsix = attrs.vscExt-bierner-color-info;
+      vsix = vscodeExtensions.vscExt-bierner-color-info;
       mktplcRef = {
         publisher = "bierner";
         name = "color-info";
@@ -112,7 +112,7 @@
       };
     }
     {
-      vsix = attrs.vscExt-christian-kohler-path-intellisense;
+      vsix = vscodeExtensions.vscExt-christian-kohler-path-intellisense;
       mktplcRef = {
         publisher = "christian-kohler";
         name = "path-intellisense";
@@ -120,7 +120,7 @@
       };
     }
     {
-      vsix = attrs.vscExt-cssho-vscode-svgviewer;
+      vsix = vscodeExtensions.vscExt-cssho-vscode-svgviewer;
       mktplcRef = {
         publisher = "cssho";
         name = "vscode-svgviewer";
@@ -128,7 +128,7 @@
       };
     }
     {
-      vsix = attrs.vscExt-ecmel-vscode-html-css;
+      vsix = vscodeExtensions.vscExt-ecmel-vscode-html-css;
       mktplcRef = {
         publisher = "ecmel";
         name = "vscode-html-css";
@@ -136,7 +136,7 @@
       };
     }
     {
-      vsix = attrs.vscExt-GrapeCity-gc-excelviewer;
+      vsix = vscodeExtensions.vscExt-GrapeCity-gc-excelviewer;
       mktplcRef = {
         publisher = "GrapeCity";
         name = "gc-excelviewer";
@@ -144,7 +144,7 @@
       };
     }
     {
-      vsix = attrs.vscExt-jnoortheen-nix-ide;
+      vsix = vscodeExtensions.vscExt-jnoortheen-nix-ide;
       mktplcRef = {
         publisher = "jnoortheen";
         name = "nix-ide";
@@ -152,7 +152,7 @@
       };
     }
     {
-      vsix = attrs.vscExt-ms-python-python;
+      vsix = vscodeExtensions.vscExt-ms-python-python;
       mktplcRef = {
         publisher = "ms-python";
         name = "python";
@@ -160,7 +160,7 @@
       };
     }
     {
-      vsix = attrs.vscExt-ms-python-vscode-pylance;
+      vsix = vscodeExtensions.vscExt-ms-python-vscode-pylance;
       mktplcRef = {
         publisher = "ms-python";
         name = "vscode-pylance";
@@ -168,7 +168,7 @@
       };
     }
     {
-      vsix = attrs.vscExt-ms-toolsai-jupyter;
+      vsix = vscodeExtensions.vscExt-ms-toolsai-jupyter;
       mktplcRef = {
         publisher = "ms-toolsai";
         name = "jupyter";
@@ -176,7 +176,7 @@
       };
     }
     {
-      vsix = attrs.vscExt-ms-toolsai-jupyter-keymap;
+      vsix = vscodeExtensions.vscExt-ms-toolsai-jupyter-keymap;
       mktplcRef = {
         publisher = "ms-toolsai";
         name = "jupyter-keymap";
@@ -184,7 +184,7 @@
       };
     }
     {
-      vsix = attrs.vscExt-ms-toolsai-jupyter-renderers;
+      vsix = vscodeExtensions.vscExt-ms-toolsai-jupyter-renderers;
       mktplcRef = {
         publisher = "ms-toolsai";
         name = "jupyter-renderers";
@@ -192,7 +192,7 @@
       };
     }
     {
-      vsix = attrs.vscExt-redhat-vscode-xml;
+      vsix = vscodeExtensions.vscExt-redhat-vscode-xml;
       mktplcRef = {
         publisher = "redhat";
         name = "vscode-xml";
@@ -200,7 +200,7 @@
       };
     }
     {
-      vsix = attrs.vscExt-shd101wyy-markdown-preview-enhanced;
+      vsix = vscodeExtensions.vscExt-shd101wyy-markdown-preview-enhanced;
       mktplcRef = {
         publisher = "shd101wyy";
         name = "markdown-preview-enhanced";
@@ -208,7 +208,7 @@
       };
     }
     {
-      vsix = attrs.vscExt-TabNine-tabnine-vscode;
+      vsix = vscodeExtensions.vscExt-TabNine-tabnine-vscode;
       mktplcRef = {
         publisher = "TabNine";
         name = "tabnine-vscode";
@@ -216,7 +216,7 @@
       };
     }
     {
-      vsix = attrs.vscExt-tht13-html-preview-vscode;
+      vsix = vscodeExtensions.vscExt-tht13-html-preview-vscode;
       mktplcRef = {
         publisher = "tht13";
         name = "html-preview-vscode";
@@ -224,7 +224,7 @@
       };
     }
     {
-      vsix = attrs.vscExt-tht13-python;
+      vsix = vscodeExtensions.vscExt-tht13-python;
       mktplcRef = {
         publisher = "tht13";
         name = "python";
@@ -232,7 +232,7 @@
       };
     }
     {
-      vsix = attrs.vscExt-vscode-icons-team-vscode-icons;
+      vsix = vscodeExtensions.vscExt-vscode-icons-team-vscode-icons;
       mktplcRef = {
         publisher = "vscode-icons-team";
         name = "vscode-icons";
@@ -240,7 +240,7 @@
       };
     }
     {
-      vsix = attrs.vscExt-yzane-markdown-pdf;
+      vsix = vscodeExtensions.vscExt-yzane-markdown-pdf;
       mktplcRef = {
         publisher = "yzane";
         name = "markdown-pdf";

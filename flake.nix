@@ -185,21 +185,52 @@
   };
   
   outputs = { self, nixpkgs, ... }@attrs: let 
-  mods = [
+    mods = [
         attrs.home-manager.nixosModules.default
         attrs.impermanence.nixosModules.impermanence
         attrs.nur.nixosModules.nur
         ./configuration.nix
       ];
+    vscodeExtensions = [
+      vscExt-alefragnani-project-manager
+      vscExt-bbenoist-QML
+      vscExt-codezombiech-gitignore
+      vscExt-donjayamanne-git-extension-pack
+      vscExt-donjayamanne-githistory
+      vscExt-eamodio-gitlens
+      vscExt-mhutchie-git-graph
+      vscExt-qwtel-sqlite-viewer
+      vscExt-svelte-svelte-vscode
+      vscExt-ziyasal-vscode-open-in-github
+      vscExt-bbenoist-Nix
+      vscExt-bierner-color-info
+      vscExt-christian-kohler-path-intellisense
+      vscExt-cssho-vscode-svgviewer
+      vscExt-ecmel-vscode-html-css
+      vscExt-GrapeCity-gc-excelviewer
+      vscExt-jnoortheen-nix-ide
+      vscExt-ms-python-python
+      vscExt-ms-python-vscode-pylance
+      vscExt-ms-toolsai-jupyter
+      vscExt-ms-toolsai-jupyter-keymap
+      vscExt-ms-toolsai-jupyter-renderers
+      vscExt-redhat-vscode-xml
+      vscExt-shd101wyy-markdown-preview-enhanced
+      vscExt-TabNine-tabnine-vscode
+      vscExt-tht13-html-preview-vscode
+      vscExt-tht13-python
+      vscExt-vscode-icons-team-vscode-icons
+      vscExt-yzane-markdown-pdf
+    ];
     in {
     nixosConfigurations.MSI = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      specialArgs = { inherit attrs; host-name = "MSI"; };
+      specialArgs = { inherit attrs vscodeExtensions; host-name = "MSI"; };
       modules = mods;
     };
     nixosConfigurations.ASUS = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      specialArgs = { inherit attrs; host-name = "ASUS"; };
+      specialArgs = { inherit attrs vscodeExtensions; host-name = "ASUS"; };
       modules = mods;
     };
   };
