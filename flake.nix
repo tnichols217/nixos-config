@@ -191,7 +191,7 @@
         attrs.nur.nixosModules.nur
         ./configuration.nix
       ];
-    vscodeExtensions = [
+    vscodeExtensions = with attrs [
       vscExt-alefragnani-project-manager
       vscExt-bbenoist-QML
       vscExt-codezombiech-gitignore
