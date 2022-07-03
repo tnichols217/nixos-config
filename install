@@ -23,6 +23,6 @@ if [ -z "$BUILD" ]; then
     BUILD="MSI"
 fi
 
-nix-shell -p nixFlakes --run "
+nix-shell -p nixFlakes git --run "
 nixos-install --show-trace --flake ".#$BUILD"
 "
