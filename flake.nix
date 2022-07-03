@@ -191,7 +191,7 @@
         attrs.nur.nixosModules.nur
         ./configuration.nix
       ];
-    vscodeExtensions = with attrs; [
+    vscodeExtensions = with attrs; { inherit
       vscExt-alefragnani-project-manager
       vscExt-bbenoist-QML
       vscExt-codezombiech-gitignore
@@ -221,7 +221,7 @@
       vscExt-tht13-python
       vscExt-vscode-icons-team-vscode-icons
       vscExt-yzane-markdown-pdf
-    ];
+    };
     in {
     nixosConfigurations.MSI = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
