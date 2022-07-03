@@ -79,7 +79,7 @@ pkgs.wrapFirefox pkgs.firefox-esr-unwrapped {
   };
 
   extraPrefs = builtins.readFile (pkgs.callPackage ./firefox/overrideSetting.metapkg.nix { 
-      input-file = attrs.librewolfConfig + ".librewolf.cfg"; 
+      input-file = attrs.librewolfConfig + "/librewolf.cfg"; 
       overrides = [ 
         { 
           re = "network.dns.disableIPv6";
