@@ -64,7 +64,7 @@
     # "https://${publisher}.gallery.vsassets.io/_apis/public/gallery/publisher/${publisher}/extension/${name}/${version}/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage";
 
     vscExt-alefragnani-project-manager = {
-        url = "file+https://alefragnani.gallery.vsassets.io/_apis/public/gallery/publisher/alefragnani/extension/project-manager/12.6.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage";
+        url = "https://alefragnani.gallery.vsassets.io/_apis/public/gallery/publisher/alefragnani/extension/project-manager/12.6.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage";
         flake = false;
     };
     # vscExt-bbenoist-QML = {
