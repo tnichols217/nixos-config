@@ -220,7 +220,8 @@
       # vscExt-tht13-html-preview-vscode
       # vscExt-tht13-python
       # vscExt-vscode-icons-team-vscode-icons
-      # vscExt-yzane-markdown-pdf;
+      # vscExt-yzane-markdown-pdf
+      ;
     };
     in {
     nixosConfigurations.MSI = nixpkgs.lib.nixosSystem {
