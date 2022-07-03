@@ -1,4 +1,4 @@
-args@{ config, pkgs, btf, arch-theme, papirus vscodeExtensions, ... }:
+args@{ config, pkgs, btf, arch-theme, papirus, vscodeExtensions, ... }:
 let
   username = "tev";
 in
