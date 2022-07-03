@@ -14,6 +14,7 @@
     "editor.semanticHighlighting.enabled" = true;
     "workbench.colorTheme" = "Default Dark+";
   };
+  mutableExtensionsDir = false;
   extensions = builtins.map pkgs.vscode-utils.buildVscodeMarketplaceExtension [
     (let 
       publisher = "alefragnani";
