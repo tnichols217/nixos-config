@@ -55,7 +55,7 @@
       flake = false;
     };
     librewolfConfig = {
-      url = "https://gitlab.com/librewolf-community/settings/-/raw/master/librewolf.cfg";
+      url = "git+https://gitlab.com/librewolf-community/settings";
       flake = false;
     };
 
