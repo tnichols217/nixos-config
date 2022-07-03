@@ -7,7 +7,7 @@ in
   [
     ((import ./templates/persist.nix) (args // { inherit username; }))
     ((import ./tev/config.nix) (args // { inherit username host-name; }))
-    ((import ./tev/packages.nix) (args // { inherit username arch-theme papirus vscodeExtensions; }))
+    ((import ./tev/packages.nix) (args // { inherit username arch-theme papirus vscodeExtensions; attrs = args; }))
   ];
 
   users.users.${username} = {
