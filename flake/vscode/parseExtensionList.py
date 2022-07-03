@@ -21,7 +21,7 @@ def genFlakeInfo(ext):
 
 def genExtList(ext):
     return '''{
-  vsix = attrs.''' + name(ext) + ''';
+  vsix = vscodeExtensions.''' + name(ext) + ''';
   mktplcRef = {
     publisher = "''' + ext[0] + '''";
     name = "''' + ext[1] + '''";
@@ -30,7 +30,7 @@ def genExtList(ext):
 }\n'''
 
 def genAttrList(ext):
-    return '''  ''' + name(ext) + ''',\n'''
+    return '''  ''' + name(ext) + '''\n'''
 
 # links = "".join(list(map(genFlakeInfo, exts)))
 # links = "".join(list(map(genExtList, exts)))
