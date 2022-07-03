@@ -15,7 +15,7 @@
     "workbench.colorTheme" = "Default Dark+";
   };
   extensions = builtins.map pkgs.vscode-utils.buildVscodeMarketplaceExtension [
-    let 
+    (let 
       publisher = "alefragnani";
       name = "project-manager";
     in {
@@ -24,7 +24,7 @@
         inherit publisher name;
         version = "12.6.0";
       };
-    }
+    })
     # {
     #   vsix = vscodeExtensions.vscExt-bbenoist-QML;
     #   mktplcRef = {
