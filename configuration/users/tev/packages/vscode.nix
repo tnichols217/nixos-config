@@ -19,7 +19,7 @@
       publisher = "alefragnani";
       name = "project-manager";
     in {
-      vsix = import ./vscode/parseVSIXfile.nix { inherit pkgs; file = vscodeExtensions."${"vscExt-" + publisher + "-" + name}"};
+      vsix = import ./vscode/parseVSIXfile.nix { inherit pkgs; file = vscodeExtensions."${"vscExt-" + publisher + "-" + name}"; };
       mktplcRef = {
         inherit publisher name;
         version = "12.6.0";
