@@ -29,13 +29,15 @@
         nvtop
 
         obsidian
-        tdesktop
-        whatsapp-for-linux
+        obs-studio
         config.nur.repos.wolfangaukang.stremio
         barrier
         flameshot
         spotify
+
         discord-ptb
+        tdesktop
+        whatsapp-for-linux
         
         (callPackage ./packages/arch-theme.pkg.nix { arch-theme = attrs.arch-theme; })
         (callPackage ./packages/papirus-icons.pkg.nix { papirus = attrs.papirus; })

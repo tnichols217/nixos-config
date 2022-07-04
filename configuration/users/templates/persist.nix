@@ -19,24 +19,15 @@
     };
   };
 
-  # environment.persistence."/nix/persist/etc/nixos/configuration/persistence/local" = {
-  #   hideMounts = false;
-  #   users.${username} = {
-  #     directories = [
-  #       { directory = ".local"; user = "${username}"; }
-  #       { directory = ".local/share"; user = "${username}"; }
-  #       { directory = ".local/share/barrier"; user = "${username}"; }
-  #     # { directory = ".local/state"; user = "${username}"; }
-  #     ];
-  #   };
-  # };
-
-  # environment.persistence."/nix/persist/etc/nixos/configuration/persistence/config" = {
-  #   hideMounts = false;
-  #   users.${username} = {
-  #     directories = [
-  #       # { directory = ".config"; user = "${username}"; }
-  #     ];
-  #   };
-  # };
+  environment.persistence."/nix/persist/etc/nixos/configuration/persistence/local" = {
+    hideMounts = false;
+    users.${username} = {
+      directories = [
+        { directory = ".local/share/barrier"; user = "${username}"; }
+        { directory = ".local/share/TelegramDesktop"; user = "${username}"; }
+        { directory = ".config/discordptb"; user = "${username}"; }
+        { directory = ".config/spotify"; user = "${username}"; }
+      ];
+    };
+  };
 }
