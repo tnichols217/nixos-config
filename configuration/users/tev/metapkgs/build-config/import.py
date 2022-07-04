@@ -24,7 +24,6 @@ def parseString(c):
     DELIM = "\n["
     DELIM2 = "]["
     d = [[(i[0][:len(i[0])-1].split(DELIM2)), listToDict([j.split("=") for j in i[1:]])] for i in [i.split("\n") for i in c.split(DELIM)[1:]]]
-    # print(d)
     return d
 
 def parseFile(f):
@@ -42,7 +41,6 @@ MATCHES = ["*rc", "*kdeglobals", "Trolltech.conf"]
 
 files = []
 dict = {}
-# [[[ dict.__setitem__(remove(str(i), CONFIGDIR), parseFile(i)) for i in i.glob(j)] for j in MATCHES] for i in CONFIGDIR]
 dict.__setitem__("config", parseFile("config"))
 
 output = {}

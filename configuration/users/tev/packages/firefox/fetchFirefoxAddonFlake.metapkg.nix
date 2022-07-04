@@ -9,10 +9,6 @@ in
 stdenv.mkDerivation {
   inherit name;
 
-  # passthru = {
-  #   inherit extid;
-  # };
-
   builder = writeScript "xpibuilder" ''
     source $stdenv/setup
     header "firefox addon $name into $out"

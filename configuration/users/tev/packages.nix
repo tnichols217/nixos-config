@@ -65,6 +65,7 @@
           "...." = "cd ../../..";
           cdg = "cd $(git rev-parse --show-toplevel)";
           upg = "sudo bash -c \"cd /etc/nixos; git pull; nixos-rebuild boot --flake \\\".#${host-name}\\\"\"";
+          sci = "ssh-copy-id -i ~/.ssh/ed25519 ";
         };
         plugins = [
           {

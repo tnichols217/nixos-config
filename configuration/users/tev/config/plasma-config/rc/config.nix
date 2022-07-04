@@ -639,11 +639,6 @@ in
         "Wallpaper"= {
           "groups"= {
             "org.kde.image"= {
-              # auroras
-              # colorful fpm
-              # warping
-              # pixelated rgb
-              # sig 2014
               "groups"= {
                 "General"= {
                   "items"= {
