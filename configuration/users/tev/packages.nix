@@ -28,7 +28,6 @@
         htop
 
         obsidian
-        obs-studio
         config.nur.repos.wolfangaukang.stremio
         barrier
         flameshot
