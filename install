@@ -27,6 +27,7 @@ if [ -z "$BUILD" ]; then
     BUILD="MSI"
 fi
 
+cd /mnt/etc/nixos
 nix-shell -p nixFlakes git --run "
 nixos-install --flake \".#$BUILD\"
 "
