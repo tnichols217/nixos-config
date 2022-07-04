@@ -12,6 +12,10 @@ mount -o bind /mnt/nix/persist/etc/nixos /mnt/etc/nixos
 mount -o bind /mnt/nix/persist/var/log /mnt/var/log
 
 cd /mnt/etc
+
+nix-channel --add https://nixos.org/channels/nixos-unstable nixos
+nix-channel --update
+
 nix-shell -p git --run "
 git clone https://github.com/tnichols217/nixos-config/ nixos
 "
@@ -24,5 +28,5 @@ if [ -z "$BUILD" ]; then
 fi
 
 nix-shell -p nixFlakes git --run "
-nixos-install --show-trace --flake ".#$BUILD"
+nixos-install --show-trace --flake \".#$BUILD\"
 "
