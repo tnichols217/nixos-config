@@ -82,6 +82,26 @@
         enable = true;
         enableGitCredentialHelper = true;
       };
+      ssh = {
+        enable = true;
+        matchBlocks = {
+          "MSI" = {
+            hostname = "192.168.100.250";
+            user = "${username}";
+            Port = "27180"
+          };
+          "Desktop" = {
+            hostname = "192.168.100.200";
+            user = "${username}";
+            Port = "27180"
+          };
+          "heyo" = {
+            hostname = "heyo.ydns.eu";
+            user = "${username}";
+            Port = "27180"
+          };
+        };
+      };
       vscode = import ./packages/vscode.nix ({ inherit pkgs vscodeExtensions attrs; });
       obs-studio = {
         enable = true;
