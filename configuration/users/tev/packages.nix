@@ -3,19 +3,39 @@
   home-manager.users.${username} = {
     home = {
       packages = with pkgs; [
-        obsidian
-        barrier
+        # utils
+        libsForQt5.qt5.qttools
         gnupg
-        konsole
-        flameshot
         ibus
         ibus-engines.uniemoji
         ibus-engines.libpinyin
         fswatch
         python3
+        konsole
+        meld
+        neofetch
+        gparted
+        docker
+        yarn
+        nodePackages.npm
+
+        # programs
+        filezilla
+        filelight
+        libreoffice
+        lolcat
+        htop
+        nvtop
+
+        obsidian
+        tdesktop
+        whatsapp-for-linux
+        config.nur.repos.wolfangaukang.stremio
+        barrier
+        flameshot
         spotify
-        libsForQt5.qt5.qttools
-        # config.nur.repos.wolfangaukang.stremio
+        discord-ptb
+        
         (callPackage ./packages/arch-theme.pkg.nix { arch-theme = attrs.arch-theme; })
         (callPackage ./packages/papirus-icons.pkg.nix { papirus = attrs.papirus; })
         (callPackage ./packages/kwin-scripts.pkg.nix {})
@@ -51,18 +71,6 @@
           }
         ];
       };
-      # firefox = {
-      #   enable = true;
-      #   # package = config.nur.repos.wolfangaukang.librewolf-bin;
-      #   # extensions = with config.nur.repos.rycee.firefox-addons; [
-      #   #   https-everywhere
-      #   #   privacy-badger
-      #   #   darkreader
-      #   #   ublock-origin
-      #   #   sponsorblock
-      #   #   videospeed
-      #   # ];
-      # };
       fzf = {
         enable = true;
         enableFishIntegration = true;
