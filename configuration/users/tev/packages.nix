@@ -18,6 +18,7 @@
         docker
         yarn
         nodePackages.npm
+        jre8
 
         # programs
         filezilla
