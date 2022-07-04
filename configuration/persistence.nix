@@ -2,9 +2,8 @@
 {
   imports =
     [
-      ./persistence/cache.nix
-      ./persistence/config.nix
       ./persistence/data.nix
+      ./persistence/local.nix
     ];
   environment.persistence."/nix/persist" = {
     hideMounts = false;
