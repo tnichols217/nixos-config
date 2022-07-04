@@ -25,6 +25,7 @@
       directories = [
         { directory = ".local/share/barrier"; user = "${username}"; }
         { directory = ".local/share/TelegramDesktop"; user = "${username}"; }
+        { directory = ".local/share/barrier"; user = "${username}"; }
         { directory = ".config/discordptb"; user = "${username}"; }
         { directory = ".config/spotify"; user = "${username}"; }
       ];
