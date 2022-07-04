@@ -9,9 +9,9 @@ in
 stdenv.mkDerivation {
   inherit name;
 
-  passthru = {
-    inherit extid;
-  };
+  # passthru = {
+  #   inherit extid;
+  # };
 
   builder = writeScript "xpibuilder" ''
     source $stdenv/setup
