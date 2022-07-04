@@ -8,18 +8,18 @@ pkgs.callPackage ../../metapkgs/combine.metapkg.nix { pack = [
     wp = import ./rc/config/background.nix;
   in "${pkgs.writeScriptBin "setWallpaper" ''
   qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript '
-    var allDesktops = desktops()
     var alreadySet = false
     while (!alreadySet) {
-        alreadySet = allDesktops.map((d) => {
-            d.currentConfigGroup = Array("Wallpaper", "${plugin}", "General")
-            return d.readConfig("Image") == "file://${wp}"
-        }).every(a => a)
-        print(alreadySet)
-        allDesktops.forEach((d) => {
-            d.wallpaperPlugin = "${plugin}";
-            d.currentConfigGroup = Array("Wallpaper", "${plugin}", "General");
-            d.writeConfig("Image", "file://${wp}")
-        })
+      var allDesktops = desktops()
+      alreadySet = allDesktops.map((d) => {
+        d.currentConfigGroup = Array("Wallpaper", "${plugin}", "General")
+        return d.readConfig("Image") == "file://${wp}"
+      }).every(a => a) && allDesktops.length > 0
+      print(alreadySet)
+      allDesktops.forEach((d) => {
+        d.wallpaperPlugin = "${plugin}";
+        d.currentConfigGroup = Array("Wallpaper", "${plugin}", "General");
+        d.writeConfig("Image", "file://${wp}")
+      })
     }';''}" + "/bin/setWallpaper"; })
 ]; }
