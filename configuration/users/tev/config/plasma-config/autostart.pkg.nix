@@ -7,19 +7,18 @@ pkgs.callPackage ../../metapkgs/combine.metapkg.nix { pack = [
     plugin = "org.kde.image";
     wp = import ./rc/config/background.nix;
   in "${pkgs.writeScriptBin "setWallpaper" ''
-  qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript '
-    var alreadySet = false
-    while (!alreadySet) {
+    while true;
+    do qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript '
+      var alreadySet = false
       var allDesktops = desktops()
-      alreadySet = allDesktops.map((d) => {
-        d.currentConfigGroup = Array("Wallpaper", "${plugin}", "General")
-        return d.readConfig("Image") == "file://${wp}"
-      }).every(a => a) && allDesktops.length > 0
-      print(alreadySet)
       allDesktops.forEach((d) => {
         d.wallpaperPlugin = "${plugin}";
         d.currentConfigGroup = Array("Wallpaper", "${plugin}", "General");
         d.writeConfig("Image", "file://${wp}")
       })
-    }';''}" + "/bin/setWallpaper"; })
+    }';
+    sleep 10;
+    done''}" + "/bin/setWallpaper"; })
+
+    (pkgs.callPackage ./autostart/custom-autostart.pkg.nix { exec = ""; name = "bash"; args = "${pkgs.writeScriptBin "setWallpaper" ''while true; do qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript 'var allDesktops = desktops();print (allDesktops);for (i=0;i<allDesktops.length;i++) {d = allDesktops[i];d.wallpaperPlugin = "org.kde.image";d.currentConfigGroup = Array("Wallpaper", "org.kde.image", "General");d.writeConfig("Image", "file://${import ./rc/config/background.nix}")}'; sleep 10; done''}" + "/bin/setWallpaper"; })
 ]; }
