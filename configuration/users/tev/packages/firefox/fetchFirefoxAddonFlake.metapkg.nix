@@ -3,7 +3,7 @@
 source:
 
 let
-  name = builtins.elemAt (pkgs.lib.strings.splitString "." (builtins.last (pkgs.lib.strings.splitString "/" (builtins.toString source)))) 0;
+  name = builtins.elemAt (pkgs.lib.strings.splitString "." (pkgs.lib.lists.last (pkgs.lib.strings.splitString "/" (builtins.toString source)))) 0;
   extid = "nixos@${name}";
 in
 stdenv.mkDerivation {
