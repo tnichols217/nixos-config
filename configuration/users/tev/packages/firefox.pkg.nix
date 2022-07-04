@@ -8,7 +8,7 @@ pkgs.wrapFirefox pkgs.firefox-esr-unwrapped {
     let 
       name = attrs.program-extensions + "/firefox/out/" + x;
     in
-    fetchFFAddon rec { source = name; name = builtins.elemAt (pkgs.lib.strings.splitString "." (pkgs.lib.lists.last (pkgs.lib.strings.splitString "/" (builtins.toString source)))) 0; }
+    fetchFFAddon { source = name; name = builtins.elemAt (pkgs.lib.strings.splitString "." (pkgs.lib.lists.last (pkgs.lib.strings.splitString "/" (builtins.toString name)))) 0; }
   );
 
   extraPolicies = {
