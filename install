@@ -28,5 +28,5 @@ if [ -z "$BUILD" ]; then
 fi
 
 nix-shell -p nixFlakes git --run "
-nixos-install --show-trace --flake \".#$BUILD\"
+nixos-install --flake \".#$BUILD\"
 "
