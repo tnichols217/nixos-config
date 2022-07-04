@@ -20,7 +20,7 @@
       vsix = attrs.program-extensions + "/vscode/out/" + x;
       name = pkgs.lib.strings.splitString "." x;
     in
-    {
+    pkgs.vscode-utils.buildVscodeMarketplaceExtension {
       vsix = vsix;
       mktplcRef = {
         publisher = builtins.elemAt name 0;
