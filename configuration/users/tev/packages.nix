@@ -26,7 +26,6 @@
         libreoffice
         lolcat
         htop
-        nvtop
 
         obsidian
         obs-studio
@@ -34,6 +33,7 @@
         barrier
         flameshot
         spotify
+        blender
 
         discord-ptb
         tdesktop
