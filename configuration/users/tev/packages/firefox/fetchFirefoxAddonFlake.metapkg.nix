@@ -1,8 +1,9 @@
-{ stdenv, unzip, jq, zip, writeScript, ... }:
+{ pkgs, stdenv, unzip, jq, zip, writeScript, ... }:
 
-{ name, source }:
+source:
 
 let
+  name = builtins.elemAt (pkgs.lib.strings.splitString "." (builtins.elemAt (builtins.tail (pkgs.lib.strings.splitString "/" (builtins.toString source))) 0)) 0;
   extid = "nixos@${name}";
 in
 stdenv.mkDerivation {

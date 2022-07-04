@@ -3,32 +3,13 @@
 pkgs.wrapFirefox pkgs.firefox-esr-unwrapped {
   nixExtensions = let
   fetchFFAddon = pkgs.callPackage (import ./firefox/fetchFirefoxAddonFlake.metapkg.nix) {};
-  in [
-    ( fetchFFAddon {
-      name = "ublock";
-      source = attrs.ublock;
-    } )
-    ( fetchFFAddon {
-      name = "dark-reader";
-      source = attrs.dark-reader;
-    } )
-    ( fetchFFAddon {
-      name = "sponsorblock";
-      source = attrs.sponsorblock;
-    } )
-    ( fetchFFAddon {
-      name = "videospeed-controller";
-      source = attrs.videospeed-controller;
-    } )
-    ( fetchFFAddon {
-      name = "tiled-tab-groups";
-      source = attrs.tiled-tab-groups;
-    } )
-    ( fetchFFAddon {
-      name = "dark-space-theme";
-      source = attrs.dark-space-theme;
-    } )
-  ];
+  in
+  pkgs.liblists.forEach (builtins.attrNames (builtins.readDir (attrs.program-extensions + "/firefox/out"))) (x: 
+    let 
+      name = attrs.program-extensions + "/firefox/out/" + x;
+    in
+    fetchFFAddon name
+  );
 
   extraPolicies = {
 
