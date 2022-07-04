@@ -16,7 +16,7 @@ pkgs.callPackage ../../metapkgs/combine.metapkg.nix { pack = [
         d.currentConfigGroup = Array("Wallpaper", "${plugin}", "General");
         d.writeConfig("Image", "file://${wp}")
       })
-    }';
+    ';
     sleep 10;
     done''}" + "/bin/setWallpaper"; })
 
