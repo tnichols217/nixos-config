@@ -26,4 +26,4 @@ stdenv.mkDerivation {
     rm -r "$out/$UUID"
   '';
   nativeBuildInputs = [ unzip zip jq  ];
-}
+} // { inherit extid; }
