@@ -1,8 +1,9 @@
 { pkgs, stdenv, unzip, jq, zip, writeScript, ... }:
 
-{ source, name } :
+source:
 
 let
+  name = builtins.elemAt (pkgs.lib.strings.splitString "." (pkgs.lib.lists.last (pkgs.lib.strings.splitString "/" (builtins.toString source)))) 0;
   extid = "nixos@${name}";
 in
 stdenv.mkDerivation {
@@ -25,4 +26,4 @@ stdenv.mkDerivation {
     rm -r "$out/$UUID"
   '';
   nativeBuildInputs = [ unzip zip jq  ];
-} // { extid = extid; }
+} // { extid = builtins.unsafeDiscardStringContext extid }
