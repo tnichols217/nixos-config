@@ -88,17 +88,17 @@
           "MSI" = {
             hostname = "192.168.100.250";
             user = "${username}";
-            Port = 27180;
+            port = 27180;
           };
           "Desktop" = {
             hostname = "192.168.100.200";
             user = "${username}";
-            Port = 27180;
+            port = 27180;
           };
           "heyo" = {
             hostname = "heyo.ydns.eu";
             user = "${username}";
-            Port = 27180;
+            port = 27180;
           };
         };
       };
