@@ -19,6 +19,7 @@
         yarn
         nodePackages.npm
         jre8
+        virt-manager
 
         # programs
         filezilla
