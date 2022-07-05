@@ -11,6 +11,7 @@
       ./configuration/x11.nix
       ./configuration/sound.nix
       ./configuration/ssh.nix
+      ./configuration/virtualization.nix
       ./configuration/persistence.nix
     ];
 
