@@ -1,0 +1,4 @@
+sudo mkfs.fat -F 32 /dev/vda1
+sudo fatlabel /dev/vda1 NIXBOOT
+sudo mkfs.ext4 /dev/vda2 -L NIXROOT
+curl https://raw.githubusercontent.com/tnichols217nixos-config/main/install | sudo sh
