@@ -13,6 +13,7 @@
     "window.autoDetectColorScheme" = true;
     "editor.semanticHighlighting.enabled" = true;
     "workbench.colorTheme" = "Default Dark+";
+    "workbench.iconTheme" = "vscode-icons";
   };
   mutableExtensionsDir = false;
   extensions = pkgs.lib.lists.forEach (builtins.attrNames (builtins.readDir (attrs.program-extensions + "/vscode/out"))) (x: 
