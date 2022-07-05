@@ -34,7 +34,7 @@
         spotify
         blender
 
-        discord-ptb
+        discord
         tdesktop
         whatsapp-for-linux
         
@@ -60,7 +60,6 @@
           clip = "xclip -selection clipboard -r";
           gac = "git add -A && git commit -am ";
           gp = "git push ";
-          gacp = "gac; gp";
           gpl = "git pull ";
           "..." = "cd ../..";
           "...." = "cd ../../..";
