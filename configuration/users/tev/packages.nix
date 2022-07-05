@@ -20,6 +20,7 @@
         nodePackages.npm
         jre8
         virt-manager
+        libvirt
         qemu_full
 
         # programs
