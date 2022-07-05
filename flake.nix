@@ -49,15 +49,17 @@
         attrs.nur.nixosModules.nur
         ./configuration.nix
       ];
+    version = "21.11";
+    fullAttrs = { inherit attrs version; };
     in {
     nixosConfigurations.MSI = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      specialArgs = { inherit attrs; host-name = "MSI"; };
+      specialArgs = { inherit fullAttrs; host-name = "MSI"; };
       modules = mods;
     };
     nixosConfigurations.ASUS = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      specialArgs = { inherit attrs; host-name = "ASUS"; };
+      specialArgs = { inherit fullAttrs; host-name = "ASUS"; };
       modules = mods;
     };
   };

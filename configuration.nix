@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, version, ... }:
 {
   imports =
     [
@@ -45,6 +45,6 @@
     nano
   ];
 
-  system.stateVersion = "21.11";
+  system.stateVersion = version;
 }
 

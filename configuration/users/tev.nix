@@ -1,4 +1,4 @@
-args@{ config, pkgs, btf, arch-theme, papirus, vscodeExtensions, ... }:
+args@{ config, pkgs, btf, arch-theme, papirus, vscodeExtensions, version, ... }:
 let
   username = "tev";
 in
@@ -15,7 +15,7 @@ in
 
   home-manager.users.${username} = {
     home = {
-      stateVersion = system.stateVersion;
+      stateVersion = version;
     };
     gtk = {
       enable = true;
