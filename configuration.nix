@@ -10,6 +10,8 @@
       ./configuration/users.nix
       ./configuration/x11.nix
       ./configuration/sound.nix
+      ./configuration/ssh.nix
+      ./configuration/security.nix
       ./configuration/persistence.nix
     ];
 
@@ -37,10 +39,9 @@
   
   environment.systemPackages = with pkgs; [
     nano
+    ./configuration/security/doasWrapper.pkg.nix
   ];
 
-  # man configuration.nix or on https://nixos.org/nixos/options.html
   system.stateVersion = "21.11";
-
 }
 
