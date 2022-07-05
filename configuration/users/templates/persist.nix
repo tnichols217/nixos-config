@@ -21,6 +21,7 @@
     hideMounts = false;
     users.${username} = {
       directories = [
+        { directory = ".steam"; user = "${username}"; }
         { directory = ".local/share/barrier"; user = "${username}"; }
         { directory = ".local/share/steam"; user = "${username}"; }
         { directory = ".local/share/TelegramDesktop"; user = "${username}"; }

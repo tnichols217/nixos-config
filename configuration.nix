@@ -26,6 +26,10 @@
     };
    };
 
+   services.nix-serve = {
+    enable = true;
+  };
+
   nixpkgs.config.allowUnfree = true;
 
   boot.kernelPackages = pkgs.linuxPackages_zen;
