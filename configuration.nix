@@ -38,7 +38,6 @@
   
   environment.systemPackages = with pkgs; [
     nano
-    (pkgs.callPackage ./configuration/security/doasWrapper.pkg.nix {})
   ];
 
   system.stateVersion = "21.11";
