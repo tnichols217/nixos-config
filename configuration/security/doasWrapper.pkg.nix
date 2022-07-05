@@ -8,9 +8,7 @@ pkgs.stdenv.mkDerivation rec {
 
   installPhase =''
 
-  mkdir $out
-
-  ls ${pkgs.sudo + "/bin"}
+  mkdir -p $out/bin
 
   cp -s ${pkgs.sudo + "/bin/sudo"} $out/bin/doas
 
