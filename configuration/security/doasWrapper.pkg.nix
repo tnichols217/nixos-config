@@ -10,7 +10,8 @@ pkgs.stdenv.mkDerivation rec {
 
   mkdir -p $out/bin
 
-  cp -s ${pkgs.doas + "/bin/doas"} $out/bin/sudo
+  cp -sr ${pkgs.doas} $out
+  cp -sr ${pkgs.doas "/bin/doas"} $out/bin/sudo
 
   '';
 
