@@ -37,7 +37,6 @@
         gimp
         inkscape
         brave
-        steam
 
         discord
         tdesktop
