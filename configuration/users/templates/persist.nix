@@ -13,6 +13,7 @@
           { directory = ".gnupg"; mode = "0700"; user = "${username}";}
           { directory = ".ssh"; mode = "0700"; user = "${username}"; }
           { directory = ".nixops"; mode = "0700"; user = "${username}"; }
+          { directory = ".config/libvirt"; mode = "0700"; user = "${username}"; }
       ];
       files = [
       ];
