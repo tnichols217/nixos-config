@@ -7,7 +7,7 @@ in
     "Formats"= {
       "items"= {
         "LANG"= "en_US.UTF-8";
-        "LC_TIME"= "Default.UTF-8";
+        "LC_TIME"= "en_US.UTF-8";
       };
     };
   };
