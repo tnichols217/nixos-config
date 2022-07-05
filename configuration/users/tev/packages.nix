@@ -20,6 +20,7 @@
         nodePackages.npm
         jre8
         virt-manager
+        qemu-full
 
         # programs
         filezilla
