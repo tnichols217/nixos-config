@@ -6,8 +6,11 @@ in
   "/plasma-localerc"= {
     "Formats"= {
       "items"= {
-        "LANG"= "en_US.UTF-8";
-        "LC_TIME"= "en_US.UTF-8";
+        "LANG"= "en_SG.UTF-8";
+        "LC_TIME"= "en_150.UTF-8";
+        "LC_NUMERIC"= "en_150.UTF-8";
+        "LC_MONETARY"= "en_MY.UTF-8";
+        "LC_MEASUREMENT"= "en_150.UTF-8";
       };
     };
   };
