@@ -34,6 +34,9 @@
         flameshot
         spotify
         blender
+        gimp
+        inkscape
+        brave
 
         discord
         tdesktop
