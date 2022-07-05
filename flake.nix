@@ -54,12 +54,12 @@
     in {
     nixosConfigurations.MSI = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      specialArgs = { inherit fullAttrs; host-name = "MSI"; };
+      specialArgs = fullAttrs // { host-name = "MSI"; };
       modules = mods;
     };
     nixosConfigurations.ASUS = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      specialArgs = { inherit fullAttrs; host-name = "ASUS"; };
+      specialArgs = fullAttrs // { host-name = "ASUS"; };
       modules = mods;
     };
   };

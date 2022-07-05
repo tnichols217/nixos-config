@@ -14,6 +14,7 @@ mount -o bind /mnt/nix/persist/var/log /mnt/var/log
 cd /mnt/etc
 
 nix-channel --add https://nixos.org/channels/nixos-unstable nixos
+nix-channel --add https://nixos.org/channels/nixpkgs-unstable nixpkgs
 nix-channel --update
 
 nix-shell -p git --run "
