@@ -6,7 +6,7 @@ in
   "/plasma-localerc"= {
     "Formats"= {
       "items"= {
-        "LANG"= "en_SG.UTF-8";
+        "LANG"= "en_US.UTF-8";
         "LC_TIME"= "Default.UTF-8";
       };
     };
