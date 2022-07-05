@@ -26,9 +26,11 @@
     };
    };
 
-   services.nix-serve = {
+  services.nix-serve = {
     enable = true;
   };
+
+  programs.steam.enable = true;
 
   nixpkgs.config.allowUnfree = true;
 
