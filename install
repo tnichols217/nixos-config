@@ -21,6 +21,9 @@ nix-shell -p git --run "
 git clone https://github.com/tnichols217/nixos-config/ nixos
 "
 
+mkdir -p /mnt/nix/persist/etc/nixos/configuration/persistence/data/home
+mount /dev/disk/by-label/NIXHOME /mnt/nix/persist/etc/nixos/configuration/persistence/data/home
+
 cd /mnt
 
 BUILD=$1
