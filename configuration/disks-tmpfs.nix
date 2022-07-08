@@ -18,14 +18,19 @@
     };
 
     "/nix" = {
-        device = "/dev/disk/by-label/NIXROOT";
-        fsType = "ext4";
-      };
+      device = "/dev/disk/by-label/NIXROOT";
+      fsType = "ext4";
+    };
 
     "/boot" = {
-        device = "/dev/disk/by-label/NIXBOOT";
-        fsType = "vfat";
-      };
+      device = "/dev/disk/by-label/NIXBOOT";
+      fsType = "vfat";
+    };
+
+    "/nix/persist/etc/nixos/configuration/persistence/data" = {
+      device = "/dev/disk/by-label/NIXHOME";
+      fsType = "ext4";
+    }
   };
 
 

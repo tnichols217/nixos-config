@@ -30,5 +30,5 @@ fi
 
 cd /mnt/etc/nixos
 nix-shell -p nixFlakes git --run "
-nixos-install --flake \".#$BUILD\"
+nixos-install --no-root-passwd --flake \".#$BUILD\"
 "
