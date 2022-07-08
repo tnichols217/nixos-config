@@ -27,10 +27,10 @@
       fsType = "vfat";
     };
 
-    # "/nix/persist/etc/nixos/configuration/persistence/data" = {
-    #   device = "/dev/disk/by-label/NIXHOME";
-    #   fsType = "ext4";
-    # };
+    "/nix/persist/etc/nixos/configuration/persistence/data/home" = {
+      device = "/dev/disk/by-label/NIXHOME";
+      fsType = "ext4";
+    };
   };
 
 
