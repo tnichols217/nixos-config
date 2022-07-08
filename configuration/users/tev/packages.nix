@@ -42,6 +42,8 @@
         discord
         tdesktop
         whatsapp-for-linux
+
+        osu-lazer
         
         (callPackage ./packages/arch-theme.pkg.nix { arch-theme = attrs.arch-theme; })
         (callPackage ./packages/papirus-icons.pkg.nix { papirus = attrs.papirus; })
@@ -70,7 +72,7 @@
           "...." = "cd ../../..";
           cdg = "cd $(git rev-parse --show-toplevel)";
           upt  = "cd /etc/nixos; sudo nix flake update";
-          upg = "sudo bash -c \"cd /etc/nixos; git pull; nixos-rebuild boot --flake \\\".#${host-name}\\\"\"";
+          upg = "sudo bash -c \"cd /etc/nixos; git pull --silent; nixos-rebuild boot --flake \\\".#${host-name}\\\"\"";
           uptg = "upt; upg";
           sci = "ssh-copy-id -i ~/.ssh/ed25519 ";
         };
