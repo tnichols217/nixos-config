@@ -54,11 +54,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1656927578,
-        "narHash": "sha256-ZSFrM/1PlJOqCb3mN88ZUh9dkQvNLU/nkoQ2tu02/FM=",
+        "lastModified": 1657241847,
+        "narHash": "sha256-/aN3p2LaRNVXf7w92GWgXq9H5f23YRQPOvsm3BrBqzU=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "f2445620d177e295e711c1b2bc6c01ed6df26c16",
+        "rev": "8160b3b45b8457d58d2b3af2aeb2eb6f47042e0f",
         "type": "github"
       },
       "original": {
@@ -87,7 +87,7 @@
       "locked": {
         "lastModified": 1656687681,
         "narHash": "sha256-gGhkrR0hJNR8+P+q6mCbpt8bULWTgFcoqvvhS90DjI8=",
-        "ref": "master",
+        "ref": "refs/heads/master",
         "rev": "c983fcc8bea8fab31265bc345217b59ce5128de2",
         "revCount": 184,
         "type": "git",
@@ -116,11 +116,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1656753965,
-        "narHash": "sha256-BCrB3l0qpJokOnIVc3g2lHiGhnjUi0MoXiw6t1o8H1E=",
+        "lastModified": 1657265485,
+        "narHash": "sha256-PUQ9C7mfi0/BnaAUX2R/PIkoNCb/Jtx9EpnhMBNrO/o=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "0ea7a8f1b939d74e5df8af9a8f7342097cdf69eb",
+        "rev": "b39924fc7764c08ae3b51beef9a3518c414cdb7d",
         "type": "github"
       },
       "original": {
@@ -132,11 +132,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1656928701,
-        "narHash": "sha256-fQWedhQM0NuxgEE7ZRxjRPkXxZocYxSAsjg8xrQ4xzU=",
+        "lastModified": 1657372868,
+        "narHash": "sha256-yXzNQRlQMCYJJn4fA+zZNj3W0t9w+WDeCKG7D86YkTE=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "9c99082a18ebf177d7210aa391bff308027b9cbc",
+        "rev": "38f00cf4ee1dab9c10883b1d464486f0c040bb80",
         "type": "github"
       },
       "original": {
@@ -148,11 +148,11 @@
     "papirus": {
       "flake": false,
       "locked": {
-        "lastModified": 1656907931,
-        "narHash": "sha256-JtGu8pnGzQBER1DR9OYvwC5xIB0lepkGFBU1pXeu7Kg=",
+        "lastModified": 1657152567,
+        "narHash": "sha256-KUyTy8ca2GwI2jNk6j7hjwQ+YKOt11G/2bN6MzVCwpE=",
         "owner": "PapirusDevelopmentTeam",
         "repo": "papirus-icon-theme",
-        "rev": "fda56eb32faf45a7cc0462b8a189981967a2bd1a",
+        "rev": "0465a6707bcf38055537269203286a6ccac0c0a8",
         "type": "github"
       },
       "original": {
