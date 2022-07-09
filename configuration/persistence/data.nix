@@ -4,9 +4,6 @@
     hideMounts = false;
     directories = [
       "/root"
-      "/var/lib/libvirt"
-    ];
-    files = [
     ];
   };
 }
