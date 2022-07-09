@@ -21,6 +21,7 @@
       users.${username} = {
         directories = pkgs.lib.lists.map mapDir [
           ".local/share/Steam"
+          ".steam"
           ".local/share/osu"
         ];
       };
@@ -32,7 +33,6 @@
           ".ssh"
           ".gnupg"
           ".nixops"
-          ".steam"
           ".mozilla"
           ".local/share/barrier"
           ".local/share/TelegramDesktop"
