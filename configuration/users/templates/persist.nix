@@ -1,18 +1,17 @@
 { config, pkgs, username, ... }:
 {
-  environment.persistence."/nix/persist/etc/nixos/configuration/persistence/data" = {
+  environment.persistence."/nix/persist/etc/nixos/configuration/persistence/data" = let 
+  mapDir = ( x: { directory = x; mode = "0700"; user = "${username}"; } );
+  in {
     hideMounts = false;
     users.${username} = {
-      directories = [
-        { directory = "Downloads"; user = "${username}"; }
-        { directory = "Desktop"; user = "${username}"; }
-        { directory = "Music"; user = "${username}"; }
-        { directory = "Pictures"; user = "${username}"; }
-        { directory = "Documents"; user = "${username}"; }
-        { directory = "Videos"; user = "${username}"; }
-        { directory = ".gnupg"; mode = "0700"; user = "${username}";}
-        { directory = ".ssh"; mode = "0700"; user = "${username}"; }
-        { directory = ".nixops"; mode = "0700"; user = "${username}"; }
+      directories = pkgs.lib.lists.map mapDir [
+        "Downloads"
+        "Desktop"
+        "Music"
+        "Pictures"
+        "Documents"
+        "Videos"
       ];
     };
   };
@@ -20,17 +19,21 @@
   environment.persistence."/nix/persist/etc/nixos/configuration/persistence/local" = {
     hideMounts = false;
     users.${username} = {
-      directories = [
-        { directory = ".steam"; user = "${username}"; }
-        { directory = ".local/share/barrier"; user = "${username}"; }
-        { directory = ".local/share/Steam"; user = "${username}"; }
-        { directory = ".local/share/osu"; user = "${username}"; }
-        { directory = ".local/share/TelegramDesktop"; user = "${username}"; }
-        { directory = ".local/share/kwalletd"; user = "${username}"; }
-        { directory = ".local/share/kscreen"; user = "${username}"; }
-        { directory = ".config/discordptb"; user = "${username}"; }
-        { directory = ".config/libvirt"; mode = "0700"; user = "${username}"; }
-        { directory = ".config/spotify"; user = "${username}"; }
+      directories = pkgs.lib.lists.map mapDir [
+        ".ssh"
+        ".gnupg"
+        ".nixops"
+        ".steam"
+        ".mozilla"
+        ".local/share/barrier"
+        ".local/share/Steam"
+        ".local/share/osu"
+        ".local/share/TelegramDesktop"
+        ".local/share/kwalletd"
+        ".local/share/kscreen"
+        ".config/discordptb"
+        ".config/libvirt"
+        ".config/spotify"
       ];
     };
   };
