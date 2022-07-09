@@ -26,6 +26,8 @@
         { directory = ".local/share/Steam"; user = "${username}"; }
         { directory = ".local/share/osu"; user = "${username}"; }
         { directory = ".local/share/TelegramDesktop"; user = "${username}"; }
+        { directory = ".local/share/kwalletd"; user = "${username}"; }
+        { directory = ".local/share/kscreen"; user = "${username}"; }
         { directory = ".config/discordptb"; user = "${username}"; }
         { directory = ".config/libvirt"; mode = "0700"; user = "${username}"; }
         { directory = ".config/spotify"; user = "${username}"; }
