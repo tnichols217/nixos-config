@@ -14,7 +14,7 @@
     "/" = {
       device = "none";
       fsType = "tmpfs";
-      options = [ "defaults" "size=4G" "mode=755" ];
+      options = [ "defaults" "size=8G" "mode=755" ];
     };
 
     "/nix" = {
