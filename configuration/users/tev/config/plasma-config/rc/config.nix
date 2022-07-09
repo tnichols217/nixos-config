@@ -1,6 +1,6 @@
 { pkgs, host-name }:
 let
-background = (import ./config/background.nix { host-name });
+background = (import ./config/background.nix { inherit host-name; });
 in
 {
   "/plasma-localerc"= {

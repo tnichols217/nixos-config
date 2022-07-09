@@ -1,4 +1,4 @@
-{ pkgs ? import <nixpkgs> {} }:
+{ pkgs ? import <nixpkgs> {}, host-name }:
 pkgs.callPackage ../../metapkgs/combine.metapkg.nix { pack = [
   (pkgs.callPackage ./autostart/save-desktop.pkg.nix { app = pkgs.flameshot; name = "org.flameshot.Flameshot"; })
   (pkgs.callPackage ./autostart/save-desktop.pkg.nix { app = pkgs.barrier; name = "barrier"; })
@@ -6,7 +6,7 @@ pkgs.callPackage ../../metapkgs/combine.metapkg.nix { pack = [
   (pkgs.callPackage ./autostart/custom-autostart.pkg.nix { exec = ""; name = "bash"; args = let
     algo = "ed25519";
     plugin = "org.kde.image";
-    wp = import ./rc/config/background.nix;
+    wp = import ./rc/config/background.nix { inherit host-name; };
   in "${pkgs.writeScriptBin "setWallpaper" ''
     if [ ! -f ~/.ssh/${algo} ]; then
       ssh-keygen -t ${algo} -f ~/.ssh/${algo} -N ""
