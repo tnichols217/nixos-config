@@ -11,24 +11,40 @@
   boot.extraModulePackages = [ ];
 
   fileSystems = {
+    # combine
     "/" = {
       device = "none";
       fsType = "tmpfs";
       options = [ "defaults" "size=8G" "mode=755" ];
     };
 
+    # software
     "/nix" = {
       device = "/dev/disk/by-label/NIXROOT";
       fsType = "ext4";
     };
 
+    # boot
     "/boot" = {
       device = "/dev/disk/by-label/NIXBOOT";
       fsType = "vfat";
     };
 
+    # local data
+    "/nix/persist" = {
+      device = "/dev/disk/by-label/NIXPERSIST";
+      fsType = "ext4";
+    };
+
+    # data
     "/nix/persist/etc/nixos/configuration/persistence/data/home" = {
       device = "/dev/disk/by-label/NIXHOME";
+      fsType = "ext4";
+    };
+
+    # data
+    "/nix/persist/etc/nixos/configuration/persistence/bucket/home" = {
+      device = "/dev/disk/by-label/NIXBUCKET";
       fsType = "ext4";
     };
   };
@@ -37,6 +53,7 @@
 
   swapDevices = [
     { 
+      # swap
       device = "/dev/disk/by-label/NIXSWAP";
     }
   ];

@@ -16,6 +16,15 @@
         ];
       };
     };
+    "/nix/persist/etc/nixos/configuration/persistence/bucket" = {
+      hideMounts = false;
+      users.${username} = {
+        directories = pkgs.lib.lists.map mapDir [
+          ".local/share/Steam"
+          ".local/share/osu"
+        ];
+      };
+    };
     "/nix/persist/etc/nixos/configuration/persistence/local" = {
       hideMounts = false;
       users.${username} = {
@@ -26,8 +35,6 @@
           ".steam"
           ".mozilla"
           ".local/share/barrier"
-          ".local/share/Steam"
-          ".local/share/osu"
           ".local/share/TelegramDesktop"
           ".local/share/kwalletd"
           ".local/share/kscreen"

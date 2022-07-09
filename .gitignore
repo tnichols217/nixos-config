@@ -1,8 +1,6 @@
-/configuration/persistence/cache/*
-!/configuration/persistence/cache/.empty
-/configuration/persistence/config/*
-!/configuration/persistence/config/.empty
+
 /configuration/persistence/data/*
 !/configuration/persistence/data/.empty
 /configuration/persistence/local/*
 !/configuration/persistence/local/.empty
+!/configuration/persistence/local/var/log/.empty
