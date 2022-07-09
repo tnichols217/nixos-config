@@ -19,6 +19,8 @@ nix-channel --update
 
 nix-shell -p git --run "
 git clone https://github.com/tnichols217/nixos-config/ nixos
+cd nixos
+git pull
 "
 
 mkdir -p /mnt/nix/persist/etc/nixos/configuration/persistence/data/home

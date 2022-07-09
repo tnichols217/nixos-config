@@ -11,7 +11,7 @@ in
     ((import ./tev/packages.nix) (args // { inherit username arch-theme papirus vscodeExtensions; }))
   ];
 
-  users.users.${username}.hashedPassword = ''$6$HeYdqp57.G0nM9K/$.i5eB/rANAYEeGYLxdvbM8jklRy3UebqHsWoHMabC5yQaUoaday9xhbCS7CVF9jANq0isTJK8US7C5/WNmPP7.'';
+  users.users.${username}.hashedPassword = ''$6$jFmvFtj14aQAG7tk$FEl8XyZCoNEnxqTS1RFS821pmt/NynpTizF6JrOS90kO/qUKR1EeVjBMvIl9RywM.cTKhn8kNXqVzt8XYkY8T.'';
 
   home-manager.users.${username} = {
     home = {
