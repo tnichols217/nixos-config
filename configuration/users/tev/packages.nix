@@ -34,7 +34,7 @@
         barrier
         flameshot
         spotify
-        blender
+        (blender.override { cudaSupport = true; } )
         gimp
         inkscape
         brave
