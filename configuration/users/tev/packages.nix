@@ -43,7 +43,7 @@
         tdesktop
         whatsapp-for-linux
 
-        osu-lazer
+        # osu-lazer
         
         (callPackage ./packages/arch-theme.pkg.nix { arch-theme = attrs.arch-theme; })
         (callPackage ./packages/papirus-icons.pkg.nix { papirus = attrs.papirus; })
