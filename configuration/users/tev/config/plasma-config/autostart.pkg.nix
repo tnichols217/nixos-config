@@ -24,5 +24,4 @@ pkgs.callPackage ../../metapkgs/combine.metapkg.nix { pack = [
     sleep 10;
     done''}" + "/bin/setWallpaper"; })
 
-    (pkgs.callPackage ./autostart/custom-autostart.pkg.nix { exec = ""; name = "bash"; args = "${pkgs.writeScriptBin "setWallpaper" ''while true; do qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript 'var allDesktops = desktops();print (allDesktops);for (i=0;i<allDesktops.length;i++) {d = allDesktops[i];d.wallpaperPlugin = "org.kde.image";d.currentConfigGroup = Array("Wallpaper", "org.kde.image", "General");d.writeConfig("Image", "file://${import ./rc/config/background.nix}")}'; sleep 10; done''}" + "/bin/setWallpaper"; })
 ]; }
