@@ -84,6 +84,7 @@ in
         "Window Below Other Windows"= "Ctrl+Alt+Shift+Down,,Keep Window Below Others";
         "Window Close"= "Alt+F4,Alt+F4,Close Window";
         "Window Maximize"= "Meta+PgUp\tMeta+],Meta+PgUp,Maximize Window";
+        "Window Minimize"= "Meta+PgDown\tMeta+[,Meta+PgDown,Minimize Window";
         "Window On All Desktops"= "Ctrl+Alt+Shift+Right,,Keep Window on All Desktops";
         "Window One Desktop Down"= "Meta+Ctrl+Shift+Down\tMeta+Ctrl+Down\tMeta+Ctrl+Alt+@,Meta+Ctrl+Shift+Down,Window One Desktop Down";
         "Window One Desktop Up"= "Meta+Ctrl+Shift+Up\tMeta+Ctrl+Up\tMeta+Ctrl+Alt+!,Meta+Ctrl+Shift+Up,Window One Desktop Up";
