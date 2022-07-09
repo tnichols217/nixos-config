@@ -3,6 +3,7 @@
   networking.networkmanager.enable = true;
   networking.useDHCP = false;
   networking.hostName = host-name;
+  hardware.enableRedistributableFirmware = true;
   # networking.wireless = {
   #   enable = true;
   #   userControlled.enable = true;
