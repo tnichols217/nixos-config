@@ -38,11 +38,11 @@
 
     # data
     "/nix/persist/etc/nixos/configuration/persistence/data/home" = {
-      device = "/dev/disk/by-label/NIXHOME";
+      device = "/dev/disk/by-label/NIXDATA";
       fsType = "ext4";
     };
 
-    # data
+    # bucket
     "/nix/persist/etc/nixos/configuration/persistence/bucket/home" = {
       device = "/dev/disk/by-label/NIXBUCKET";
       fsType = "ext4";
