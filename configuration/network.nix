@@ -8,7 +8,7 @@
     userControlled.enable = true;
     networks = {
       "NICHOLS 5Ghz" = {
-        pskRaw = "1c1f10514c30ccab217b1a1c96b6dab18d72f7cc0ab24ea0be8ec37d47d893e7";
+        psk = "0194815801";
       };
     };
   };
