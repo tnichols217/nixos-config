@@ -34,7 +34,7 @@
 
   nixpkgs.config = {
     allowUnfree = true;
-    cudaSupport = true;
+    # cudaSupport = true;
   };
 
   boot.kernelPackages = pkgs.linuxPackages_zen;
