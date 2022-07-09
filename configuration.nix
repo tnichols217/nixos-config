@@ -32,7 +32,10 @@
 
   programs.steam.enable = true;
 
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config = {
+    allowUnfree = true;
+    cudaSupport = true;
+  };
 
   boot.kernelPackages = pkgs.linuxPackages_zen;
 
