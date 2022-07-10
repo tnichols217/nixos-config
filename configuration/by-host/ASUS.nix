@@ -16,7 +16,7 @@
     # server drive
     "/storage" = {
       device = "/dev/disk/by-label/WEBSTORAGE";
-      fsType = "tmpfs";
+      fsType = "ext4";
     };
   };
 
