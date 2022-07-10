@@ -1,6 +1,6 @@
 { host-name, ... }:
 {
   imports = [
-    "./by-host/${host-name}.nix"
+    ./by-host/${host-name}.nix
   ];
 }
