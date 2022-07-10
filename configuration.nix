@@ -1,4 +1,4 @@
-{ config, pkgs, version, ... }:
+{ config, pkgs, version, host-name, ... }:
 {
   imports =
     [
@@ -13,6 +13,7 @@
       ./configuration/ssh.nix
       ./configuration/virtualization.nix
       ./configuration/persistence.nix
+      ./configuration/by-host.nix
     ];
 
   nix = {
@@ -34,7 +35,6 @@
 
   nixpkgs.config = {
     allowUnfree = true;
-    # cudaSupport = true;
   };
 
   boot.kernelPackages = pkgs.linuxPackages_zen;
