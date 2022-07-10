@@ -28,7 +28,7 @@
         addSSL = true;
         documentRoot = "/storage/church/Public";
         sslServerKey = "/var/lib/acme/acme-challenge/${host}/key.pem";
-        sslServerKey = "/var/lib/acme/acme-challenge/${host}/fullchain.pem";
+        sslServerCert = "/var/lib/acme/acme-challenge/${host}/fullchain.pem";
       };
     in {
       "heyo.ydns.eu" = defHost "heyo.ydns.eu";
