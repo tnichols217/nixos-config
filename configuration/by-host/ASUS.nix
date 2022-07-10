@@ -9,7 +9,7 @@
     certs = {
       "heyo.ydns.eu" = {};
       "pigsgo.mooo.com" = {};
-    }
+    };
   };
   services.httpd = {
     enable = true;
