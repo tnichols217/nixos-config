@@ -5,6 +5,7 @@
     directories = [
       "/var/log"
       "/var/lib/bluetooth"
+      "/var/lib/acme"
       "/var/lib/systemd/coredump"
       "/etc/NetworkManager/system-connections"
       "/etc/letsencrypt"
