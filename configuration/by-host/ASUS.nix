@@ -4,7 +4,7 @@
     acceptTerms = true;
     defaults = {
       webRoot = "/var/lib/acme/acme-challenge";
-      email = "62992267+tnichols217@users.noreply.github.com"
+      email = "62992267+tnichols217@users.noreply.github.com";
     };
     certs = {
       "heyo.ydns.eu" = {};
@@ -13,6 +13,6 @@
   };
   services.httpd = {
     enable = true;
-    
+
   };
 }
