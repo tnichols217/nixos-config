@@ -3,7 +3,7 @@
   security.acme = {
     acceptTerms = true;
     defaults = {
-      webRoot = "/var/lib/acme/acme-challenge";
+      webroot = "/var/lib/acme/acme-challenge";
       email = "62992267+tnichols217@users.noreply.github.com";
     };
     certs = {
