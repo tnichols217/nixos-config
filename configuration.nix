@@ -45,7 +45,6 @@
   };
   
   environment.systemPackages = with pkgs; [
-    cudatoolkit
     nano
   ];
 
