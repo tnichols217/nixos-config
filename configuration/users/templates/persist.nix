@@ -42,6 +42,7 @@
           ".config/libvirt"
           ".config/spotify"
           ".config/obs-studio/basic"
+          ".config/obs-studio/plugin_config"
         ];
       };
     };
