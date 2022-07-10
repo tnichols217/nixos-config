@@ -1609,4 +1609,19 @@ in
       };
     };
   };
+  "obs-studio" = {
+    "General" = {
+      "Pre19Defaults" = "false";
+      "Pre21Defaults" = "false";
+      "Pre23Defaults" = "false";
+      "Pre24.1Defaults"= "false";
+      "FirstRun" = "true";
+    };
+    "Basic" = {
+      "Profile" = "Untitled";
+      "ProfileDir" = "Untitled";
+      "SceneCollection" = "Untitled";
+      "SceneCollectionFile" = "Untitled";
+    };
+  };
 }

@@ -41,6 +41,7 @@
           ".config/discordptb"
           ".config/libvirt"
           ".config/spotify"
+          ".config/obs-studio/basic"
         ];
       };
     };
