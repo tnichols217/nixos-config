@@ -2,5 +2,5 @@
 {
   imports = [
     "./by-host/${host-name}.nix"
-  ]
+  ];
 }
