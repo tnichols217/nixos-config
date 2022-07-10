@@ -28,8 +28,8 @@
       defHost = host: {
         addSSL = true;
         documentRoot = "/storage/church/Public";
-        sslServerKey = "/var/lib/acme/acme-challenge/${host}/key.pem";
-        sslServerCert = "/var/lib/acme/acme-challenge/${host}/fullchain.pem";
+        sslServerKey = "/var/lib/acme/${host}/key.pem";
+        sslServerCert = "/var/lib/acme/${host}/fullchain.pem";
       };
     in {
       "heyo.ydns.eu" = defHost "heyo.ydns.eu";
