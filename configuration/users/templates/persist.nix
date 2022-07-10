@@ -38,7 +38,7 @@
           ".local/share/TelegramDesktop"
           ".local/share/kwalletd"
           ".local/share/kscreen"
-          ".config/discordptb"
+          ".config/discord"
           ".config/libvirt"
           ".config/spotify"
           ".config/obs-studio/basic"
