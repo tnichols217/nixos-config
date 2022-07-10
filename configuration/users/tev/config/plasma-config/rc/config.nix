@@ -1507,7 +1507,7 @@ in
         "autoHide"= "true";
         "autoStart"= "true";
         "configFile"= "${./config/barrier + ("/" + host-name + ".conf")}";
-        "cryptoEnabled"= "true";
+        "cryptoEnabled"= "false";
         "elevateMode"= "false";
         "elevateModeEnum"= "0";
         "groupClientChecked"= "${if host-name == "MSI" then "true" else "false"}";
