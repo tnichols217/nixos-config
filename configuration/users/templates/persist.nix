@@ -37,6 +37,7 @@
           ".gnupg"
           ".nixops"
           ".mozilla"
+          ".persist"
           ".local/share/barrier"
           ".local/share/TelegramDesktop"
           ".local/share/kwalletd"
