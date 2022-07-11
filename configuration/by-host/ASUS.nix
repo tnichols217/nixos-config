@@ -28,11 +28,17 @@
       defHost = host: {
         addSSL = true;
         documentRoot = "/storage/church/Public";
-        useACMEHost = "${host}";
+        useACMEHost = "${host
+        }";
       };
     in {
       "heyo.ydns.eu" = defHost "heyo.ydns.eu";
       "pigsgo.mooo.com" = defHost "pigsgo.mooo.com";
     };
+  };
+
+  services.cron = {
+    enable = true;
+    cronFiles = [ ''0,5,10,15,20,25,30,35,40,45,50,55 * * * * wwwrun sh /storage/church/config/update.sh'' ];
   };
 }
