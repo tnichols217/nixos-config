@@ -40,6 +40,7 @@
           ".local/share/TelegramDesktop"
           ".local/share/kwalletd"
           ".local/share/kscreen"
+          ".config/gh"
           ".config/discord"
           ".config/obsidian"
           ".config/libvirt"
