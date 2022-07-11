@@ -52,7 +52,6 @@
         (callPackage ./packages/kwin-scripts.pkg.nix {})
         (callPackage ./packages/konsole-themes.pkg.nix {})
         (callPackage ./packages/firefox.pkg.nix { inherit attrs; })
-        (callPackage ./packages/shortcuts.pkg.nix { })
       ];
     };
     programs = {
