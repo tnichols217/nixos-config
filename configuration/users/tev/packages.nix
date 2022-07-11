@@ -29,7 +29,7 @@
         libreoffice
         lolcat
         htop
-        libsForQt5.kdeconect
+        libsForQt5.kdeconnect
 
         obsidian
         config.nur.repos.wolfangaukang.stremio
