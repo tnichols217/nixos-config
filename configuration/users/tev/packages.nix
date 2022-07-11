@@ -21,6 +21,7 @@
         jre8
         virt-manager
         bat
+        xclip
 
         # programs
         filezilla
@@ -28,7 +29,7 @@
         libreoffice
         lolcat
         htop
-        libsForQt5.kdenlive
+        libsForQt5.kdeconect
 
         obsidian
         config.nur.repos.wolfangaukang.stremio
