@@ -123,7 +123,7 @@
             inherit identityFile;
           };
           "*" = {
-            inherit identityFIle;
+            inherit identityFile;
           };
         };
       };
