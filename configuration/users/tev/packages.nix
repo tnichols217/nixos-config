@@ -28,6 +28,7 @@
         libreoffice
         lolcat
         htop
+        libsForQt5.kdenlive
 
         obsidian
         config.nur.repos.wolfangaukang.stremio
