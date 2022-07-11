@@ -2,6 +2,7 @@
 {
   environment.persistence = let 
       mapDir = ( x: { directory = x; mode = "0700"; user = "${username}"; } );
+      mapFile = ( x: { file = x; mode = "700"; user = "${username}"; parentDirectory = { mode = "700"; }; } );
     in {
     "/nix/persist/etc/nixos/configuration/persistence/data" = {
       hideMounts = false;
@@ -40,13 +41,15 @@
           ".local/share/TelegramDesktop"
           ".local/share/kwalletd"
           ".local/share/kscreen"
-          ".config/gh"
           ".config/discord"
           ".config/obsidian"
           ".config/libvirt"
           ".config/spotify"
           ".config/obs-studio/basic"
           ".config/obs-studio/plugin_config"
+        ];
+        files = pkgs.lib.lists.map mapFile [
+          ".config/gh/hosts.yml"
         ];
       };
     };
