@@ -75,7 +75,7 @@
           upg = "sudo bash -c \"cd /etc/nixos; git pull; nixos-rebuild boot --flake \\\".#${host-name}\\\"\"";
           uptg = "upt; upg";
           sci = "ssh-copy-id -i ~/.ssh/ed25519 ";
-          gc = "git clone git@github.com:tnichols217/"
+          gc = "git clone git@github.com:tnichols217/";
         };
         plugins = [
           {

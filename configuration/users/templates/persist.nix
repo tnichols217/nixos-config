@@ -13,6 +13,8 @@
           "Pictures"
           "Documents"
           "Videos"
+          "Public"
+          "Templates"
         ];
       };
     };
@@ -39,6 +41,7 @@
           ".local/share/kwalletd"
           ".local/share/kscreen"
           ".config/discord"
+          ".config/obsidian"
           ".config/libvirt"
           ".config/spotify"
           ".config/obs-studio/basic"
