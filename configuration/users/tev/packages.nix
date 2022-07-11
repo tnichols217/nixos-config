@@ -94,21 +94,36 @@
       };
       ssh = {
         enable = true;
-        matchBlocks = {
+        matchBlocks = let 
+          identityFile = "/home/${username}/.ssh/ed25519";
+          user = "${username}";
+          port = 27180;
+        in {
           "MSI" = {
             hostname = "192.168.100.250";
-            user = "${username}";
-            port = 27180;
+            inherit user port identityFile;
           };
           "Desktop" = {
             hostname = "192.168.100.200";
-            user = "${username}";
-            port = 27180;
+            inherit user port identityFile;
+
           };
           "heyo" = {
             hostname = "heyo.ydns.eu";
-            user = "${username}";
-            port = 27180;
+            inherit user port identityFile;
+
+          };
+          "pigs" = {
+            hostname = "pigsgo.mooo.com";
+            inherit user port identityFile;
+          };
+          "gh" = {
+            hostname = "github.com";
+            user = "git";
+            inherit identityFile;
+          };
+          "*" = {
+            inherit identityFIle;
           };
         };
       };
