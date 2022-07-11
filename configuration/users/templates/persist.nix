@@ -2,7 +2,7 @@
 {
   environment.persistence = let 
       mapDir = ( x: { directory = x; mode = "0700"; user = "${username}"; } );
-      mapFile = ( x: { file = x; mode = "700"; user = "${username}"; parentDirectory = { mode = "700"; }; } );
+      mapFile = ( x: { file = x; user = "${username}"; parentDirectory = { mode = "700"; }; } );
     in {
     "/nix/persist/etc/nixos/configuration/persistence/data" = {
       hideMounts = false;
