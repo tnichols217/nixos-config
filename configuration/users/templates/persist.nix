@@ -26,6 +26,7 @@
           ".local/share/Steam"
           ".steam"
           ".local/share/osu"
+          ".minecraft"
         ];
       };
     };
@@ -37,7 +38,7 @@
           ".gnupg"
           ".nixops"
           ".mozilla"
-          ".persist"
+          ".tlauncher"
           ".local/share/barrier"
           ".local/share/TelegramDesktop"
           ".local/share/kwalletd"
