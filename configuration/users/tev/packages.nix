@@ -27,6 +27,7 @@
         filezilla
         filelight
         libreoffice
+        davinci-resolve
         lolcat
         htop
         libsForQt5.kdeconnect-kde
