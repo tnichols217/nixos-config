@@ -19,17 +19,21 @@
   nix = {
     package = pkgs.nixFlakes;
     extraOptions = ''experimental-features = nix-command flakes'';
-    settings.auto-optimise-store = true;
+    settings = {
+      substituters = [
+        "https://tnichols217-nixos-config.cachix.org"
+      ];
+      trusted-public-keys = [
+        "tnichols217-nixos-config.cachix.org-1:B9JhBiPS+OHykLW16qovoOelAvtdH5sIjYU7BZvs7q8="
+      ];
+      auto-optimise-store = true;
+    };
     gc = {
       automatic = true;
       dates = "weekly";
       options = "--delete-older-than 30d";
     };
    };
-
-  services.nix-serve = {
-    enable = true;
-  };
 
   programs.steam.enable = true;
 
@@ -46,6 +50,7 @@
   
   environment.systemPackages = with pkgs; [
     nano
+    cachix
   ];
 
   system.stateVersion = version;
