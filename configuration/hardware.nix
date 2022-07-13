@@ -3,7 +3,7 @@
 {
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
-    # (modulesPath + "/profiles/qemu-guest.nix")
+    (modulesPath + "/profiles/qemu-guest.nix")
     ./hardware/disks-tmpfs.nix
   ];
 
@@ -11,7 +11,7 @@
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
-  # powerManagement.cpuFreqGovernor = "performance";
+  powerManagement.cpuFreqGovernor = "performance";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
-  # hardware.video.hidpi.enable = true;
+  hardware.video.hidpi.enable = true;
 }
