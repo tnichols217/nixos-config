@@ -27,11 +27,11 @@ cd nixos
 git pull
 "
 
-mkdir -p /mnt/nix/persist/etc/nixos/configuration/persistence/data/home
-mount /dev/disk/by-label/NIXDATA /mnt/nix/persist/etc/nixos/configuration/persistence/data/home
+mkdir -p /mnt/nix/persist/etc/nixos/configuration/persistence/data
+mount /dev/disk/by-label/NIXDATA /mnt/nix/persist/etc/nixos/configuration/persistence/data
 
-mkdir -p /mnt/nix/persist/etc/nixos/configuration/persistence/data/bucket
-mount /dev/disk/by-label/NIXBUCKET /mnt/nix/persist/etc/nixos/configuration/persistence/data/bucket
+mkdir -p /mnt/nix/persist/etc/nixos/configuration/persistence/bucket
+mount /dev/disk/by-label/NIXBUCKET /mnt/nix/persist/etc/nixos/configuration/persistence/bucket
 
 cd /mnt
 
