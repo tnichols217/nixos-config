@@ -7,6 +7,7 @@
   services.xserver.enable = true;
   services.printing.enable = true;
   services.xserver.libinput.enable = true;
-  # services.xserver.videoDrivers = [ "nvidia" ];
+  hardware.nvidia.modesetting.enable = true;
+  services.xserver.videoDrivers = [ "nvidia" ];
   hardware.opengl.enable = true;
 }
