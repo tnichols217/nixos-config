@@ -1,5 +1,5 @@
 
-swapon /dev/disc/by-label/NIXSWAP
+swapon /dev/disk/by-label/NIXSWAP
 
 mount -t tmpfs none /mnt
 
