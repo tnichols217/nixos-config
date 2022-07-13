@@ -107,10 +107,10 @@ in
         "mediavolumedown"= "none,,Media volume down";
         "mediavolumeup"= "none,,Media volume up";
         "nextmedia"= "Alt+Media Play\tMedia Next,Media Next,Media playback next";
-        "pausemedia"= "Ctrl+Media Play\tMedia Pause,Media Pause,Pause media playback";
+        "pausemedia"= "Media Pause,Media Pause,Pause media playback";
         "playmedia"= "none,,Play media playback";
         "playpausemedia"= "Media Play,Media Play,Play/Pause media playback";
-        "previousmedia"= "Media Previous,Media Previous,Media playback previous";
+        "previousmedia"= "Ctrl+Media Play\tMedia Previous,Media Previous,Media playback previous";
         "stopmedia"= "Media Stop,Media Stop,Stop media playback";
       };
     };
