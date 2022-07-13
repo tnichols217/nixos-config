@@ -17,7 +17,6 @@ rec {
   do
     cp -rsn $file/* $out
     ${pkgs.findutils}/bin/find $out -type d -exec chmod 755 {} +
-    # chmod -R 755 $out/*
   done
 
   '';

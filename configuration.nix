@@ -3,7 +3,6 @@
   imports =
     [
       ./configuration/hardware.nix
-      # ./configuration/disks.nix
       ./configuration/bootloader.nix
       ./configuration/network.nix
       ./configuration/localization.nix
