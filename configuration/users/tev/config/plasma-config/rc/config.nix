@@ -684,11 +684,11 @@ in
     };
     "Data_1"= {
       "items"= {
-        "Comment"= "Comment";
-        "DataCount"= "2";
-        "Enabled"= "true";
-        "Name"= "music";
-        "SystemGroup"= "0";
+        "Comment"= "KMenuEdit Global Shortcuts";
+        "DataCount"= "1";
+        "Enabled"= "false";
+        "Name"= "KMenuEdit";
+        "SystemGroup"= "1";
         "Type"= "ACTION_DATA_GROUP";
       };
     };
@@ -702,7 +702,7 @@ in
       "items"= {
         "Comment"= "Comment";
         "Enabled"= "true";
-        "Name"= "next";
+        "Name"= "open";
         "Type"= "SIMPLE_ACTION_DATA";
       };
     };
@@ -713,7 +713,7 @@ in
     };
     "Data_1_1Actions0"= {
       "items"= {
-        "CommandURL"= "playerctl next";
+        "CommandURL"= "http://duckduckgo.com";
         "Type"= "COMMAND_URL";
       };
     };
@@ -731,55 +731,17 @@ in
     };
     "Data_1_1Triggers0"= {
       "items"= {
-        "Key"= "Alt+Media Play";
+        "Key"= "";
         "Type"= "SHORTCUT";
-        "Uuid"= "{e793c702-98fa-4314-98a2-9aed7662ad13}";
-      };
-    };
-    "Data_1_2"= {
-      "items"= {
-        "Comment"= "Comment";
-        "Enabled"= "true";
-        "Name"= "prev";
-        "Type"= "SIMPLE_ACTION_DATA";
-      };
-    };
-    "Data_1_2Actions"= {
-      "items"= {
-        "ActionsCount"= "1";
-      };
-    };
-    "Data_1_2Actions0"= {
-      "items"= {
-        "CommandURL"= "playerctl previous";
-        "Type"= "COMMAND_URL";
-      };
-    };
-    "Data_1_2Conditions"= {
-      "items"= {
-        "Comment"= "";
-        "ConditionsCount"= "0";
-      };
-    };
-    "Data_1_2Triggers"= {
-      "items"= {
-        "Comment"= "Simple_action";
-        "TriggersCount"= "1";
-      };
-    };
-    "Data_1_2Triggers0"= {
-      "items"= {
-        "Key"= "Ctrl+Media Play";
-        "Type"= "SHORTCUT";
-        "Uuid"= "{f78700e1-1af3-4a00-8bfc-1abc66d68a91}";
+        "Uuid"= "{d03619b6-9b3c-48cc-9d9c-a2aadb485550}";
       };
     };
     "Data_2"= {
       "items"= {
         "Comment"= "Comment";
-        "DataCount"= "1";
+        "DataCount"= "2";
         "Enabled"= "true";
-        "Name"= "flameshot";
+        "Name"= "music";
         "SystemGroup"= "0";
         "Type"= "ACTION_DATA_GROUP";
       };
@@ -794,7 +756,7 @@ in
       "items"= {
         "Comment"= "Comment";
         "Enabled"= "true";
-        "Name"= "open";
+        "Name"= "next";
         "Type"= "SIMPLE_ACTION_DATA";
       };
     };
@@ -805,7 +767,7 @@ in
     };
     "Data_2_1Actions0"= {
       "items"= {
-        "CommandURL"= "flameshot gui";
+        "CommandURL"= "playerctl next";
         "Type"= "COMMAND_URL";
       };
     };
@@ -822,6 +784,98 @@ in
       };
     };
     "Data_2_1Triggers0"= {
+      "items"= {
+        "Key"= "Alt+Media Play";
+        "Type"= "SHORTCUT";
+        "Uuid"= "{e793c702-98fa-4314-98a2-9aed7662ad13}";
+      };
+    };
+    "Data_2_2"= {
+      "items"= {
+        "Comment"= "Comment";
+        "Enabled"= "true";
+        "Name"= "prev";
+        "Type"= "SIMPLE_ACTION_DATA";
+      };
+    };
+    "Data_2_2Actions"= {
+      "items"= {
+        "ActionsCount"= "1";
+      };
+    };
+    "Data_2_2Actions0"= {
+      "items"= {
+        "CommandURL"= "playerctl previous";
+        "Type"= "COMMAND_URL";
+      };
+    };
+    "Data_2_2Conditions"= {
+      "items"= {
+        "Comment"= "";
+        "ConditionsCount"= "0";
+      };
+    };
+    "Data_2_2Triggers"= {
+      "items"= {
+        "Comment"= "Simple_action";
+        "TriggersCount"= "1";
+      };
+    };
+    "Data_2_2Triggers0"= {
+      "items"= {
+        "Key"= "Ctrl+Media Play";
+        "Type"= "SHORTCUT";
+        "Uuid"= "{f78700e1-1af3-4a00-8bfc-1abc66d68a91}";
+      };
+    };
+    "Data_3"= {
+      "items"= {
+        "Comment"= "Comment";
+        "DataCount"= "1";
+        "Enabled"= "true";
+        "Name"= "flameshot";
+        "SystemGroup"= "0";
+        "Type"= "ACTION_DATA_GROUP";
+      };
+    };
+    "Data_3Conditions"= {
+      "items"= {
+        "Comment"= "";
+        "ConditionsCount"= "0";
+      };
+    };
+    "Data_3_1"= {
+      "items"= {
+        "Comment"= "Comment";
+        "Enabled"= "true";
+        "Name"= "open";
+        "Type"= "SIMPLE_ACTION_DATA";
+      };
+    };
+    "Data_3_1Actions"= {
+      "items"= {
+        "ActionsCount"= "1";
+      };
+    };
+    "Data_3_1Actions0"= {
+      "items"= {
+        "CommandURL"= "flameshot gui";
+        "Type"= "COMMAND_URL";
+      };
+    };
+    "Data_3_1Conditions"= {
+      "items"= {
+        "Comment"= "";
+        "ConditionsCount"= "0";
+      };
+    };
+    "Data_3_1Triggers"= {
+      "items"= {
+        "Comment"= "Simple_action";
+        "TriggersCount"= "1";
+      };
+    };
+    "Data_3_1Triggers0"= {
       "items"= {
         "Key"= "Meta+Shift+S";
         "Type"= "SHORTCUT";
