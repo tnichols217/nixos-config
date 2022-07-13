@@ -1,4 +1,6 @@
 
+swapon /dev/disc/by-label/NIXSWAP
+
 mount -t tmpfs none /mnt
 
 mkdir -p /mnt/{boot,nix,etc/nixos,var/log}
