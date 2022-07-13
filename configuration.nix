@@ -2,7 +2,7 @@
 {
   imports =
     [
-      ./configuration/disks-tmpfs.nix
+      ./configuration/hardware.nix
       # ./configuration/disks.nix
       ./configuration/bootloader.nix
       ./configuration/network.nix
