@@ -19,6 +19,7 @@
   nix = {
     package = pkgs.nixFlakes;
     extraOptions = ''experimental-features = nix-command flakes'';
+    binaryCaches = ["https://cache.nixos.org/"];
     settings = {
       substituters = [
         "https://tnichols217-nixos-config.cachix.org"
