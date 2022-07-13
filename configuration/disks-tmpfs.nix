@@ -41,14 +41,14 @@
     };
 
     # data
-    "/nix/persist/etc/nixos/configuration/persistence/data/home" = {
+    "/nix/persist/etc/nixos/configuration/persistence/data" = {
       device = "/dev/disk/by-label/NIXDATA";
       fsType = "ext4";
       neededForBoot = true;
     };
 
     # bucket
-    "/nix/persist/etc/nixos/configuration/persistence/bucket/home" = {
+    "/nix/persist/etc/nixos/configuration/persistence/bucket" = {
       device = "/dev/disk/by-label/NIXBUCKET";
       fsType = "ext4";
       neededForBoot = true;
