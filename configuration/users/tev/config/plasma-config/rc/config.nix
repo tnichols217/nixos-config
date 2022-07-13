@@ -33,9 +33,7 @@ in
     "khotkeys"= {
       "items"= {
         "_k_friendly_name"= "Custom Shortcuts Service";
-        "{2b622f4b-e7dd-4cb3-a362-b4bb59688264}"= "Meta+Shift+S,none,open";
-        "{e793c702-98fa-4314-98a2-9aed7662ad13}"= "Alt+Media Play,none,next";
-        "{f78700e1-1af3-4a00-8bfc-1abc66d68a91}"= "Ctrl+Media Play,none,prev";
+        "{2b622f4b-e7dd-4cb3-a362-b4bb59688264}"= "Meta+Shift+S,none,Flameshot Gui";
       };
     };
     "kmix"= {
@@ -108,8 +106,8 @@ in
         "_k_friendly_name"= "Media Controller";
         "mediavolumedown"= "none,,Media volume down";
         "mediavolumeup"= "none,,Media volume up";
-        "nextmedia"= "Media Next,Media Next,Media playback next";
-        "pausemedia"= "Media Pause,Media Pause,Pause media playback";
+        "nextmedia"= "Alt+Media Play\tMedia Next,Media Next,Media playback next";
+        "pausemedia"= "Ctrl+Media Play\tMedia Pause,Media Pause,Pause media playback";
         "playmedia"= "none,,Play media playback";
         "playpausemedia"= "Media Play,Media Play,Play/Pause media playback";
         "previousmedia"= "Media Previous,Media Previous,Media playback previous";
@@ -684,11 +682,11 @@ in
     };
     "Data_1"= {
       "items"= {
-        "Comment"= "KMenuEdit Global Shortcuts";
+        "Comment"= "Comment";
         "DataCount"= "1";
-        "Enabled"= "false";
-        "Name"= "KMenuEdit";
-        "SystemGroup"= "1";
+        "Enabled"= "true";
+        "Name"= "flameshot";
+        "SystemGroup"= "0";
         "Type"= "ACTION_DATA_GROUP";
       };
     };
@@ -702,7 +700,7 @@ in
       "items"= {
         "Comment"= "Comment";
         "Enabled"= "true";
-        "Name"= "open";
+        "Name"= "Flameshot Gui";
         "Type"= "SIMPLE_ACTION_DATA";
       };
     };
@@ -713,7 +711,7 @@ in
     };
     "Data_1_1Actions0"= {
       "items"= {
-        "CommandURL"= "http://duckduckgo.com";
+        "CommandURL"= "flameshot gui";
         "Type"= "COMMAND_URL";
       };
     };
@@ -731,161 +729,16 @@ in
     };
     "Data_1_1Triggers0"= {
       "items"= {
-        "Key"= "";
-        "Type"= "SHORTCUT";
-        "Uuid"= "{d03619b6-9b3c-48cc-9d9c-a2aadb485550}";
-      };
-    };
-    "Data_2"= {
-      "items"= {
-        "Comment"= "Comment";
-        "DataCount"= "2";
-        "Enabled"= "true";
-        "Name"= "music";
-        "SystemGroup"= "0";
-        "Type"= "ACTION_DATA_GROUP";
-      };
-    };
-    "Data_2Conditions"= {
-      "items"= {
-        "Comment"= "";
-        "ConditionsCount"= "0";
-      };
-    };
-    "Data_2_1"= {
-      "items"= {
-        "Comment"= "Comment";
-        "Enabled"= "true";
-        "Name"= "next";
-        "Type"= "SIMPLE_ACTION_DATA";
-      };
-    };
-    "Data_2_1Actions"= {
-      "items"= {
-        "ActionsCount"= "1";
-      };
-    };
-    "Data_2_1Actions0"= {
-      "items"= {
-        "CommandURL"= "playerctl next";
-        "Type"= "COMMAND_URL";
-      };
-    };
-    "Data_2_1Conditions"= {
-      "items"= {
-        "Comment"= "";
-        "ConditionsCount"= "0";
-      };
-    };
-    "Data_2_1Triggers"= {
-      "items"= {
-        "Comment"= "Simple_action";
-        "TriggersCount"= "1";
-      };
-    };
-    "Data_2_1Triggers0"= {
-      "items"= {
-        "Key"= "Alt+Media Play";
-        "Type"= "SHORTCUT";
-        "Uuid"= "{e793c702-98fa-4314-98a2-9aed7662ad13}";
-      };
-    };
-    "Data_2_2"= {
-      "items"= {
-        "Comment"= "Comment";
-        "Enabled"= "true";
-        "Name"= "prev";
-        "Type"= "SIMPLE_ACTION_DATA";
-      };
-    };
-    "Data_2_2Actions"= {
-      "items"= {
-        "ActionsCount"= "1";
-      };
-    };
-    "Data_2_2Actions0"= {
-      "items"= {
-        "CommandURL"= "playerctl previous";
-        "Type"= "COMMAND_URL";
-      };
-    };
-    "Data_2_2Conditions"= {
-      "items"= {
-        "Comment"= "";
-        "ConditionsCount"= "0";
-      };
-    };
-    "Data_2_2Triggers"= {
-      "items"= {
-        "Comment"= "Simple_action";
-        "TriggersCount"= "1";
-      };
-    };
-    "Data_2_2Triggers0"= {
-      "items"= {
-        "Key"= "Ctrl+Media Play";
-        "Type"= "SHORTCUT";
-        "Uuid"= "{f78700e1-1af3-4a00-8bfc-1abc66d68a91}";
-      };
-    };
-    "Data_3"= {
-      "items"= {
-        "Comment"= "Comment";
-        "DataCount"= "1";
-        "Enabled"= "true";
-        "Name"= "flameshot";
-        "SystemGroup"= "0";
-        "Type"= "ACTION_DATA_GROUP";
-      };
-    };
-    "Data_3Conditions"= {
-      "items"= {
-        "Comment"= "";
-        "ConditionsCount"= "0";
-      };
-    };
-    "Data_3_1"= {
-      "items"= {
-        "Comment"= "Comment";
-        "Enabled"= "true";
-        "Name"= "open";
-        "Type"= "SIMPLE_ACTION_DATA";
-      };
-    };
-    "Data_3_1Actions"= {
-      "items"= {
-        "ActionsCount"= "1";
-      };
-    };
-    "Data_3_1Actions0"= {
-      "items"= {
-        "CommandURL"= "flameshot gui";
-        "Type"= "COMMAND_URL";
-      };
-    };
-    "Data_3_1Conditions"= {
-      "items"= {
-        "Comment"= "";
-        "ConditionsCount"= "0";
-      };
-    };
-    "Data_3_1Triggers"= {
-      "items"= {
-        "Comment"= "Simple_action";
-        "TriggersCount"= "1";
-      };
-    };
-    "Data_3_1Triggers0"= {
-      "items"= {
         "Key"= "Meta+Shift+S";
         "Type"= "SHORTCUT";
         "Uuid"= "{2b622f4b-e7dd-4cb3-a362-b4bb59688264}";
       };
     };
-    "Notification Messages"= {
+    "Main"= {
       "items"= {
-        "ConfirmDelete"= "true";
-        "ConfirmEmptyTrash"= "true";
+        "AlreadyImported"= "";
+        "Disabled"= "false";
+        "Version"= "2";
       };
     };
   };
