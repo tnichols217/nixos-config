@@ -1,9 +1,5 @@
 { pkgs, ... }:
 {
-
-  # temporarily until i can fix gpu drivers for my laptop
-  services.xserver.videoDrivers = [ "nvidia" ];
-
   security.acme = {
     acceptTerms = true;
     defaults = {
