@@ -1,7 +1,4 @@
 { pkgs, ... }:
-let
-  nvidia-offload = ;
-in
 {
   environment.systemPackages = [
     pkgs.writeShellScriptBin "nvidia-offload" ''
@@ -11,7 +8,7 @@ in
     export __VK_LAYER_NV_optimus=NVIDIA_only
     exec "$@"
   '' ];
-  
+
   hardware.nvidia.prime = {
     offload.enable = true;
     intelBusId = "PCI:0:2:0";
