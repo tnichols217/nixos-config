@@ -48,7 +48,7 @@
         {
           name = "module-tunnel-sink";
           args = {
-            "server" = "192.168.100.250";
+            "server" = "tcp:192.168.100.250:4713";
           };
         }
       ];
