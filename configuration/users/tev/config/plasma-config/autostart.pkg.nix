@@ -11,6 +11,11 @@ pkgs.callPackage ../../metapkgs/combine.metapkg.nix { pack = [
     if [ ! -f ~/.ssh/${algo} ]; then
       ssh-keygen -t ${algo} -f ~/.ssh/${algo} -N ""
     fi
+    ${if host-name == "MSI" then ''
+    if [ ! -f ~/.local/share/applications/steam.desktop ]; then
+      sed 's/^Exec=/&nvidia-offload /' /run/current-system/sw/share/applications/steam.desktop > ~/.local/share/applications/steam.desktop
+    fi
+    '' else ""}
     while true;
     do qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript '
       var alreadySet = false

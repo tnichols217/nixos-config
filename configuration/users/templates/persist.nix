@@ -52,6 +52,7 @@
         ];
         files = pkgs.lib.lists.map mapFile [
           ".config/gh/hosts.yml"
+          ".local/share/applications/steam.desktop"
         ];
       };
     };
