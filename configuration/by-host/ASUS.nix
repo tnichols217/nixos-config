@@ -41,4 +41,17 @@
     enable = true;
     systemCronJobs = [ ''0,5,10,15,20,25,30,35,40,45,50,55 * * * * root sh /storage/church/config/update.sh'' ];
   };
+
+  services.pipewire = {
+    config.pipewire-pulse = {
+      "context.modules" = [
+        {
+          name = "module-tunnel-sink";
+          args = {
+            "server" = "192.168.100.250";
+          };
+        }
+      ];
+    };
+  };
 }
