@@ -18,14 +18,8 @@
 
   services.pipewire = {
     config.pipewire-pulse = {
-      "context.modules" = [
-        {
-          name = "module-native-protocol-tcp";
-          args = {
-            "port" = "4713";
-            "listen" = "127.0.0.1";
-          };
-        }
+      "context.exec" = [
+        { path = "pactl"; args = "load-module module-native-protocol-tcp port=4713 listen=127.0.0.1"; }
       ];
     };
   };
