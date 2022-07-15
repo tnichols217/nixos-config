@@ -17,7 +17,7 @@
   };
 
   services.pipewire = {
-    config.pipewire = {
+    config.pipewire-pulse = {
       "pulse.properties" = {
         "server.address" = [
           "unix:native"
