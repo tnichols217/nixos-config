@@ -44,8 +44,17 @@
 
   services.pipewire = {
     config.pipewire-pulse = {
-      "context.exec" = [
-        { path = "pactl"; args = "load-module module-tunnel-sink server=tcp:192.168.100.250:4713"; }
+      # "context.exec" = [
+      #   { path = "pactl"; args = "load-module module-tunnel-sink server=tcp:192.168.100.250:4713"; }
+      # ];
+      "context.modules" = [
+        {
+          name = "libpipewire-module-pulse-tunnel";
+          args = {
+            tunnel.mode = "sink";
+            pulse.server.address = "tcp:192.168.1.250";
+          };
+        }
       ];
     };
   };
