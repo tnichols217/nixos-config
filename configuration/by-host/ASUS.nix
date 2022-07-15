@@ -49,6 +49,7 @@
       #     { path = "pactl"; args = "load-module module-tunnel-sink server=tcp:192.168.100.250:4713"; }
       #   ];
         "context.modules" = [
+          { name = "libpipewire-module-protocol-native"; }
           {
             name = "libpipewire-module-pulse-tunnel";
             args = {
