@@ -19,7 +19,7 @@
   services.pipewire = {
     config.pipewire-pulse = {
       "context.exec" = [
-        { path = "pactl"; args = "load-module module-native-protocol-tcp port=4713 listen=127.0.0.1"; }
+        { path = "pactl"; args = "load-module module-native-protocol-tcp port=4713 listen=127.0.0.1 auth-ip-acl=192.168.100.0/24"; }
       ];
     };
   };
