@@ -93,6 +93,10 @@
             #   "pulse.server.address" = "tcp:192.168.100.250";
             # };
           }
+          {
+            name = "libpipewire-module-zeroconf-discover";
+            args = {};
+          }
         ];
       };
     };
