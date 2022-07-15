@@ -83,13 +83,13 @@
           { name = "libpipewire-module-adapter"; }
           { name = "libpipewire-module-link-factory"; }
           { name = "libpipewire-module-session-manager"; }
-          {
-            name = "libpipewire-module-pulse-tunnel";
-            args = {
-              tunnel.mode = "sink";
-              pulse.server.address = "tcp:192.168.1.250:4713";
-            };
-          }
+          # {
+          #   name = "libpipewire-module-pulse-tunnel";
+          #   args = {
+          #     tunnel.mode = "sink";
+          #     pulse.server.address = "tcp:192.168.1.250:4713";
+          #   };
+          # }
         ];
       };
     };
