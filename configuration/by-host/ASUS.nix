@@ -88,10 +88,10 @@
           { name = "libpipewire-module-session-manager"; }
           {
             name = "libpipewire-module-pulse-tunnel";
-            args = {
-              "tunnel.mode" = "sink";
-              "pulse.server.address" = "tcp:192.168.100.250";
-            };
+            # args = {
+            #   "tunnel.mode" = "sink";
+            #   "pulse.server.address" = "tcp:192.168.100.250";
+            # };
           }
         ];
       };
