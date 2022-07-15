@@ -55,7 +55,7 @@
             name = "libpipewire-module-pulse-tunnel";
             args = {
               tunnel.mode = "sink";
-              pulse.server.address = "tcp:192.168.1.250";
+              pulse.server.address = "tcp:192.168.1.250:4713";
             };
           }
         ];
