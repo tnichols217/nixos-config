@@ -117,7 +117,7 @@
             hostname = "192.168.100.250";
             inherit user port identityFile;
           };
-          "Desktop" = {
+          "ASUS" = {
             hostname = "192.168.100.200";
             inherit user port identityFile;
 
