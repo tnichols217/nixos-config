@@ -22,6 +22,7 @@
         virt-manager
         bat
         xclip
+        helvum
 
         # programs
         filezilla
