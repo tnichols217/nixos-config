@@ -77,10 +77,12 @@
           cdg = "cd $(git rev-parse --show-toplevel)";
           upt  = "cd /etc/nixos; sudo nix flake update";
           upg = "sudo bash -c \"cd /etc/nixos; git pull; nixos-rebuild boot --flake \\\".#${host-name}\\\"\"";
+          upgs = "sudo bash -c \"cd /etc/nixos; git pull; nixos-rebuild switch --flake \\\".#${host-name}\\\"\"";
           uptg = "upt; upg";
           sci = "ssh-copy-id -i ~/.ssh/ed25519 ";
           pathof = "path resolve ";
           code = "codium";
+          rssound = "systemctl --user restart pipewire";
         };
         functions = {
           gc = "git clone git@github.com:tnichols217/$argv";
