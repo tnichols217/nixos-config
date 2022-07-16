@@ -21,12 +21,12 @@
       "pulse.properties" = {
         "server.address" = [
           "unix:native"
-          "tcp:4713"
+          # "tcp:4713"
         ];
       };
-      # "context.exec" = [
-      #   { path = "pactl"; args = "load-module module-native-protocol-tcp port=4713 listen=127.0.0.1 auth-ip-acl=192.168.100.0/24"; }
-      # ];
+      "context.exec" = [
+        { path = "pactl"; args = "load-module module-native-protocol-tcp port=4713 listen=127.0.0.1 auth-ip-acl=192.168.100.0/24"; }
+      ];
     };
   };
 }
