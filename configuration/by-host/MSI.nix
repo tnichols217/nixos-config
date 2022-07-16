@@ -23,12 +23,12 @@
       "pulse.properties" = {
         "server.address" = [
           "unix:native"
-          # "tcp:4713"
+          "tcp:4713"
         ];
       };
-      "context.exec" = [
-        { path = "pactl"; args = "load-module module-native-protocol-tcp auth-anonymous=1"; }
-      ];
+      # "context.exec" = [
+      #   { path = "pactl"; args = "load-module module-native-protocol-tcp auth-anonymous=1"; }
+      # ];
     };
   };
 }
