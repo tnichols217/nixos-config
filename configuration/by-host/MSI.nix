@@ -1,5 +1,7 @@
 { pkgs, ... }:
 {
+  networking.networkmanager.enable = true;
+
   environment.systemPackages = [
     (pkgs.writeShellScriptBin "nvidia-offload" ''
     export __NV_PRIME_RENDER_OFFLOAD=1

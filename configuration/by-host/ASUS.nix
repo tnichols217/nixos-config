@@ -1,5 +1,15 @@
 { pkgs, ... }:
 {
+  networking.wireless = {
+    enable = true;
+    userControlled.enable = true;
+    networks = {
+      "NICHOLS 5Ghz" = {
+        psk = "0194815801";
+      };
+    };
+  };
+
   security.acme = {
     acceptTerms = true;
     defaults = {
