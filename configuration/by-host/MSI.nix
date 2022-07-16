@@ -25,7 +25,7 @@
         ];
       };
       "context.exec" = [
-        { path = "pactl"; args = "load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1;192.168.100.200/32"; }
+        { path = "pactl"; args = "load-module module-native-protocol-tcp auth-anonymous=1"; }
       ];
     };
   };
