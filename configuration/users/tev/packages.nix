@@ -18,7 +18,7 @@
         docker
         yarn
         nodePackages.npm
-        jre8
+        openjdk16-bootstrap
         virt-manager
         bat
         xclip
