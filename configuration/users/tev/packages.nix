@@ -21,14 +21,17 @@
         openjdk16-bootstrap
         virt-manager
         bat
+        lsd
         xclip
         helvum
+        ark
 
         # programs
         filezilla
         filelight
         libreoffice
         davinci-resolve
+        kicad
         lolcat
         htop
         libsForQt5.kdeconnect-kde
