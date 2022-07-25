@@ -31,7 +31,7 @@
         filelight
         libreoffice
         davinci-resolve
-        kicad
+        # kicad
         lolcat
         htop
         libsForQt5.kdeconnect-kde
