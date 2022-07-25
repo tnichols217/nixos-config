@@ -86,6 +86,7 @@
           pathof = "path resolve ";
           code = "codium";
           rssound = "systemctl --user restart pipewire";
+          ls = "lsd";
         };
         functions = {
           gc = "git clone git@github.com:tnichols217/$argv";
