@@ -4,6 +4,7 @@
     home = {
       packages = with pkgs; [
         # utils
+        cachix
         libsForQt5.qt5.qttools
         gnupg
         ibus

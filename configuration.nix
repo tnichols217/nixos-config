@@ -50,7 +50,6 @@
   
   environment.systemPackages = with pkgs; [
     nano
-    cachix
   ];
 
   system.stateVersion = version;
