@@ -3,6 +3,10 @@
   time.timeZone = "Asia/Kuala_Lumpur";
   i18n = {
     defaultLocale = "en_SG.UTF-8";
+    supportedLocales = [
+      "en_SG.UTF-8"
+      "en_MY.UTF-8"
+    ];
     inputMethod = {
       ibus.engines = with pkgs.ibus-engines; [ libpinyin typing-booster uniemoji ];
     };
