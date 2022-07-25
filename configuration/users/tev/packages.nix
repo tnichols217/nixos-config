@@ -25,6 +25,7 @@
         xclip
         helvum
         ark
+        nerdfonts
 
         # programs
         filezilla
