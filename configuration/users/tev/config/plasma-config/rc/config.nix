@@ -7,9 +7,10 @@ in
     "Formats"= {
       "items"= {
         "LANG"= "en_SG.UTF-8";
+        "LC_ALL"= "en_SG.UTF-8";
         "LC_TIME"= "en_SG.UTF-8";
         "LC_NUMERIC"= "en_SG.UTF-8";
-        "LC_MONETARY"= "en_MY.UTF-8";
+        "LC_MONETARY"= "en_SG.UTF-8";
         "LC_MEASUREMENT"= "en_SG.UTF-8";
       };
     };
