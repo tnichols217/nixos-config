@@ -27,6 +27,7 @@
         helvum
         ark
         nerdfonts
+        pstree
 
         # programs
         filezilla
