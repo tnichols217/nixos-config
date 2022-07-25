@@ -81,10 +81,7 @@
           "..." = "cd ../..";
           "...." = "cd ../../..";
           cdg = "cd $(git rev-parse --show-toplevel)";
-          upt  = "cd /etc/nixos; sudo nix flake update";
-          upgb = "sudo bash -c \"cd /etc/nixos; git pull; nixos-rebuild boot --flake \\\".#${host-name}\\\"\"";
-          upg = "sudo bash -c \"cd /etc/nixos; git pull; nixos-rebuild switch --flake \\\".#${host-name}\\\"\"";
-          uptg = "upt; upg";
+          upg = "sudo bash -c \"rm /home/${username}/.gtkrc-2.0 /home/${username}/.config/plasma-org.kde.plasma.desktop-appletsrc; cd /etc/nixos; git pull; nixos-rebuild switch --flake \\\".#${host-name}\\\"\"";
           sci = "ssh-copy-id -i ~/.ssh/ed25519 ";
           pathof = "path resolve ";
           code = "codium";
