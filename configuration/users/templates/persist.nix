@@ -43,6 +43,7 @@
           ".local/share/TelegramDesktop"
           ".local/share/kwalletd"
           ".local/share/kscreen"
+          ".local/share/direnv/allow"
           ".config/kdeconnect"
           ".config/VSCodium"
           ".config/discord"
