@@ -70,6 +70,9 @@
         diff-so-fancy = {
           enable = true;
         };
+        lfs = {
+          enable = true;
+        };
       };
       fish = {
         enable = true;
