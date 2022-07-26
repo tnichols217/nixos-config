@@ -164,11 +164,11 @@
     "program-extensions": {
       "flake": false,
       "locked": {
-        "lastModified": 1658848391,
-        "narHash": "sha256-qtoJuebNucvIhGcCL9AmVMsfqomnW7Lr+3qUrLIxd08=",
+        "lastModified": 1658849674,
+        "narHash": "sha256-8oDGpvUD8hpvhBiDjjsVmEjSbQz/rsv8qOyJSqU32LM=",
         "owner": "tnichols217",
         "repo": "nixos-program-extensions",
-        "rev": "940e4b1f6b7e450b9a390ce080949fcd9a30d5a6",
+        "rev": "41b6a3bc06e309d490dc534546b035ba5330d2f8",
         "type": "github"
       },
       "original": {
