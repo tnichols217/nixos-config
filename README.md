@@ -10,4 +10,4 @@ First Partition disks:
 
 Install with: `curl https://raw.githubusercontent.com/tnichols217/nixos-config/main/install | sudo sh -s `_modulename_
 
-Update packages with: `.update.sh`
+Update packages with: `./update.sh`
