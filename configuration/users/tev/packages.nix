@@ -90,6 +90,7 @@
           code = "codium";
           rssound = "systemctl --user restart pipewire";
           ls = "lsd";
+          ca = "bat";
         };
         functions = {
           gc = "git clone git@github.com:tnichols217/$argv";
@@ -151,6 +152,15 @@
       vscode = import ./packages/vscode.nix ({ inherit pkgs vscodeExtensions attrs; });
       obs-studio = {
         enable = true;
+      };
+      direnv = {
+        enable = true;
+        enableFishIntegration = true;
+        enableBashIntegration = true;
+        nix-direnv = {
+          enable = true;
+          enableFlakes = true;
+        };
       };
     };
   };
