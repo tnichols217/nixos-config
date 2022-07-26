@@ -31,7 +31,7 @@
 
     # addons
     program-extensions = {
-      url = "github:tnichols217/nixos-program-extensions";
+      url = "git+https://github.com/tnichols217/nixos-program-extensions";
       flake = false;
     };
 
