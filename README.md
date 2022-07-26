@@ -10,4 +10,4 @@ First Partition disks:
 
 Install with: `curl https://raw.githubusercontent.com/tnichols217/nixos-config/main/install | sudo sh -s `_modulename_
 
-Update packages with: `nix-shell -p nixFlakes --run "nix --extra-experimental-features nix-command --extra-experimental-features flakes flake update"`
+Update packages with: `.update.sh`
