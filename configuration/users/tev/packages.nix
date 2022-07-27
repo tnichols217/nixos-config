@@ -81,6 +81,7 @@
           gac = "git add -A && git commit -am ";
           gp = "git push ";
           gpl = "git pull ";
+          gs = "git submodule ";
           "..." = "cd ../..";
           "...." = "cd ../../..";
           cdg = "cd $(git rev-parse --show-toplevel)";
@@ -91,6 +92,7 @@
           rssound = "systemctl --user restart pipewire";
           ls = "lsd";
           ca = "bat";
+          da = "direnv allow";
         };
         functions = {
           gc = "git clone git@github.com:tnichols217/$argv";
@@ -155,6 +157,11 @@
       };
       direnv = {
         enable = true;
+        config = {
+          global = {
+            disable_stdin = true;
+          };
+        };
         nix-direnv = {
           enable = true;
         };
