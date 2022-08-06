@@ -83,5 +83,6 @@ pkgs.wrapFirefox pkgs.firefox-esr-unwrapped {
       defaultPref("privacy.clearOnShutdown.cookies", false);
       defaultPref("privacy.clearOnShutdown.offlineApps", false);
       defaultPref("security.identityblock.show_extended_validation", true);
+      defaultPref("browser.tabs.insertAfterCurrent", true);
     '' ;
 }
