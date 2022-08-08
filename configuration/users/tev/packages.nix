@@ -50,6 +50,7 @@
         gimp
         inkscape
         brave
+        teams
 
         discord
         tdesktop
