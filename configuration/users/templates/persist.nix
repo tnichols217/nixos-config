@@ -47,6 +47,8 @@
           ".config/kdeconnect"
           ".config/VSCodium"
           ".config/discord"
+          ".config/Microsoft/Microsoft Teams"
+          ".config/teams"
           ".config/obsidian"
           ".config/libvirt"
           ".config/spotify"
