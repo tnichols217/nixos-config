@@ -39,6 +39,7 @@
         kicad-unstable
         lolcat
         htop
+        kcalc
         libsForQt5.kdeconnect-kde
 
         obsidian
