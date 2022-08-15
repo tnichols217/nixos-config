@@ -4,6 +4,7 @@
     hideMounts = false;
     directories = [
       "/var/log"
+      "/var/lib/openvpn"
       "/var/lib/bluetooth"
       "/var/lib/acme"
       "/var/lib/systemd/coredump"

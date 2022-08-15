@@ -22,6 +22,75 @@
     };
   };
 
+  services.openvpn.servers = {
+    server = {
+      config = let 
+        # easyrsa init-pki
+        # easyrsa build-ca
+        ca = "/var/lib/openvpn/pki/ca.crt";
+        # easyrsa build-server-full server
+        cert = "/var/lib/openvpn/pki/issued/server.crt";
+        key = "/var/lib/openvpn/pki/private/server.key";
+        # openssl dhparam -out dh2048.pem 2048
+        dh = "/var/lib/openvpn/dh2048.pem";
+        # openvpn --genkey tls-auth ta.key
+        ta = "/var/lib/openvpn/ta.key";
+        log = "openvpn-status.log";
+      in ''
+        port 1194
+        proto udp
+
+        ;dev tap
+        dev tun
+
+        # SSL/TLS root certificate (ca)
+        ca ${ca}
+        # server certificate
+        cert ${cert}
+        # server private key
+        key ${key}
+
+        # Diffie hellman parameters.
+        # Generate your own with:
+        #   openssl dhparam -out dh2048.pem 2048
+        dh ${dh}
+
+        tls-auth ${ta} 0
+
+        # Configure server mode and supply a VPN subnet
+        # for OpenVPN to draw client addresses from.
+        server 10.8.0.0 255.255.255.0
+
+        # Maintain a record of client <-> virtual IP address
+        ifconfig-pool-persist ipp.txt
+
+        keepalive 10 120
+
+        cipher AES-256-CBC
+
+        max-clients 5
+        user nobody
+        group nobody
+        persist-key
+        persist-tun
+
+        # Log verbosity 0-9
+        verb 3
+        status ${log}
+
+        # Notify the client that when the server restarts
+        explicit-exit-notify 1
+
+        # Uncomment to allow clients to be able to "see" each other.
+        ;client-to-client
+
+        # Uncomment this directive if multiple clients
+        # might connect with the same certificate/key
+        ;duplicate-cn
+      '';
+    };
+  };
+
   fileSystems = {
     # server drive
     "/storage" = {

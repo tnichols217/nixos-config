@@ -1,5 +1,8 @@
 { config, pkgs, host-name, ... }:
 {
+  imports = [
+    ./network/openvpn.nix
+  ];
   networking.hostName = host-name;
   hardware.enableRedistributableFirmware = true;
   networking.firewall.enable = false;
