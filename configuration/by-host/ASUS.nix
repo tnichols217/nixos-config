@@ -92,7 +92,7 @@
   in {
     serverTun = {
       config = configString{adapt = "tun"; port = "1195";};
-      up = "iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -o eth0 -j MASQUERADE"
+      up = "iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -o eth0 -j MASQUERADE";
     };
     serverTap = {
       config = configString{adapt = "tap";};
