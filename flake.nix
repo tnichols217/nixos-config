@@ -68,10 +68,13 @@
         modules = mods;
       };
     };
-    packages.x86_64-linux = nixos-generators.nixosGenerate {
+    packages.x86_64-linux = rec {
+      iso = nixos-generators.nixosGenerate {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         modules = mods;
         format = "iso";
-    };
+      };
+      default = iso;
+    }
   };
 }
