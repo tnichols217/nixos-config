@@ -41,6 +41,8 @@
         proto udp
 
         dev ${adapt}
+        push "redirect-gateway def1"
+        push "dhcp-option DNS 10.8.0.1"
 
         # SSL/TLS root certificate (ca)
         ca ${ca}
@@ -90,6 +92,7 @@
   in {
     serverTun = {
       config = configString{adapt = "tun"; port = "1195";};
+      up = "iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -o eth0 -j MASQUERADE"
     };
     serverTap = {
       config = configString{adapt = "tap";};
