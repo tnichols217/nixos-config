@@ -1,8 +1,8 @@
 { ... }:
 {
-  services.openvpn.servers = {
-    client = {
-      config = let 
+  services.openvpn.servers = let 
+    configString = {adapt}: 
+      let 
         addr = "pigsgo.mooo.com";
         # get from server
         ca = "/var/lib/openvpn/ca.crt";
@@ -14,7 +14,7 @@
       in ''
         client
 
-        dev tun
+        dev ${adapt}
 
         ;proto tcp
         proto udp
@@ -41,6 +41,12 @@
         # Set log file verbosity.
         verb 3
       '';
+  in {
+    clientTun = {
+      config = configString{adapt = "tun"};
+    };
+    clientTap = {
+      config = configString{adapt = "tap"};
     };
   };
 }

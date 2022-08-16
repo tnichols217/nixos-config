@@ -22,9 +22,9 @@
     };
   };
 
-  services.openvpn.servers = {
-    server = {
-      config = let 
+  services.openvpn.servers = let 
+    configString = {adapt}:
+      let 
         # easyrsa init-pki
         # easyrsa build-ca
         ca = "/var/lib/openvpn/pki/ca.crt";
@@ -40,8 +40,7 @@
         port 1194
         proto udp
 
-        ;dev tap
-        dev tun
+        dev ${adapt}
 
         # SSL/TLS root certificate (ca)
         ca ${ca}
@@ -88,6 +87,12 @@
         # might connect with the same certificate/key
         ;duplicate-cn
       '';
+  in  {
+    serverTun = {
+      config = configString{adapt = "tun"}
+    };
+    serverTap = {
+      config = configString{adapt = "tap"}
     };
   };
 
