@@ -46,7 +46,7 @@
     };
   };
   
-  outputs = { self, nixpkgs, ... }@attrs: let 
+  outputs = { self, nixpkgs, nixos-generators, ... }@attrs: let 
       mods = [
           attrs.home-manager.nixosModules.default
           attrs.impermanence.nixosModules.impermanence
@@ -68,7 +68,7 @@
         modules = mods;
       };
     };
-    packages.x86_64-linux = {
+    packages.x86_64-linux = nixos-generators.nixosGenerate {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         modules = mods;
         format = "iso";
