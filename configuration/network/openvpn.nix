@@ -36,8 +36,6 @@
 
         tls-auth ${ta} 1
 
-        cipher AES-256-CBC
-
         # Set log file verbosity.
         verb 3
       '';
