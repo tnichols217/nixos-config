@@ -91,7 +91,7 @@
   in {
     serverTun = {
       config = configString{adapt = "tun"; port = "1195";};
-      up = "iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -o wlo1 -j MASQUERADE; sysctl -w net.ipv4.ip_forward=1";
+      up = "iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -o wlo1 -j MASQUERADE; ${pkgs.procps}/bin/sysctl -w net.ipv4.ip_forward=1";
     };
     serverTap = {
       config = configString{adapt = "tap";};
