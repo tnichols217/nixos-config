@@ -30,6 +30,7 @@
         ark
         nerdfonts
         pstree
+        networkmanager-openvpn
 
         # programs
         filezilla
