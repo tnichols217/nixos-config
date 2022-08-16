@@ -28,7 +28,7 @@
         xclip
         helvum
         ark
-        # nerdfonts
+        nerdfonts
         pstree
 
         # programs
