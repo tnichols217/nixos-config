@@ -1,7 +1,7 @@
 { ... }:
 {
   services.openvpn.servers = let 
-    configString = {adapt}: 
+    configString = {adapt, port?"1194"}: 
       let 
         addr = "pigsgo.mooo.com";
         # get from server
@@ -19,7 +19,7 @@
         ;proto tcp
         proto udp
         
-        remote ${addr} 1194
+        remote ${addr} ${port}
         
         resolv-retry infinite
 
@@ -43,7 +43,7 @@
       '';
   in {
     clientTun = {
-      config = configString{adapt = "tun";};
+      config = configString{adapt = "tun"; port = "1195";};
     };
     clientTap = {
       config = configString{adapt = "tap";};

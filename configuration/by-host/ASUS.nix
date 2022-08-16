@@ -23,7 +23,7 @@
   };
 
   services.openvpn.servers = let 
-    configString = {adapt}:
+    configString = {adapt, port?"1194"}:
       let 
         # easyrsa init-pki
         # easyrsa build-ca
@@ -37,7 +37,7 @@
         ta = "/var/lib/openvpn/ta.key";
         log = "openvpn-status.log";
       in ''
-        port 1194
+        port ${port}
         proto udp
 
         dev ${adapt}
@@ -89,7 +89,7 @@
       '';
   in {
     serverTun = {
-      config = configString{adapt = "tun";};
+      config = configString{adapt = "tun"; port = "1195";};
     };
     serverTap = {
       config = configString{adapt = "tap";};
