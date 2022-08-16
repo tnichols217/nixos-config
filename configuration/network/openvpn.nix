@@ -43,10 +43,10 @@
       '';
   in {
     clientTun = {
-      config = configString{adapt = "tun"};
+      config = configString{adapt = "tun";};
     };
     clientTap = {
-      config = configString{adapt = "tap"};
+      config = configString{adapt = "tap";};
     };
   };
 }

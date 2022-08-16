@@ -89,10 +89,10 @@
       '';
   in  {
     serverTun = {
-      config = configString{adapt = "tun"}
+      config = configString{adapt = "tun";}
     };
     serverTap = {
-      config = configString{adapt = "tap"}
+      config = configString{adapt = "tap";}
     };
   };
 
