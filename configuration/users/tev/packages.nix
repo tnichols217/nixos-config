@@ -28,7 +28,7 @@
         xclip
         helvum
         ark
-        # nerdfonts
+        nerdfonts
         pstree
 
         # programs
@@ -36,7 +36,7 @@
         filelight
         libreoffice
         davinci-resolve
-        # kicad-unstable
+        kicad-unstable
         lolcat
         htop
         kcalc
@@ -47,7 +47,7 @@
         barrier
         flameshot
         spotify
-        # (blender.override { cudaSupport = true; } )
+        (blender.override { cudaSupport = true; } )
         gimp
         inkscape
         brave
