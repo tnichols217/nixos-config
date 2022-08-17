@@ -54,11 +54,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1659978484,
-        "narHash": "sha256-VkErPc8pXcuFQG7jkkaUOEMORe81oweRNlAYZJ2+aRI=",
+        "lastModified": 1660574517,
+        "narHash": "sha256-Lp5D2pAPrM3iAc1eeR0iGwz5rM+SYOWzVxI3p17nlrU=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "c1addfdad3825f75a66f8d73ec7d2f68c78ba6f8",
+        "rev": "688e5c85b7537f308b82167c8eb4ecfb70a49861",
         "type": "github"
       },
       "original": {
@@ -98,6 +98,42 @@
         "url": "https://gitlab.com/librewolf-community/settings"
       }
     },
+    "nixlib": {
+      "locked": {
+        "lastModified": 1636849918,
+        "narHash": "sha256-nzUK6dPcTmNVrgTAC1EOybSMsrcx+QrVPyqRdyKLkjA=",
+        "owner": "nix-community",
+        "repo": "nixpkgs.lib",
+        "rev": "28a5b0557f14124608db68d3ee1f77e9329e9dd5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "nixpkgs.lib",
+        "type": "github"
+      }
+    },
+    "nixos-generators": {
+      "inputs": {
+        "nixlib": "nixlib",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1660661347,
+        "narHash": "sha256-0eSeeQ7oH502rX5hXXi4Pt9CTgEhygp0/EL+biwhkrk=",
+        "owner": "nix-community",
+        "repo": "nixos-generators",
+        "rev": "ecef210472ddac2a9e06c7d4c7247a5be96b1cab",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "nixos-generators",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1654953433,
@@ -116,11 +152,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1660071133,
-        "narHash": "sha256-XX6T9wcvEZIVWY4TO5O1d2MgFyFrF2v4TpCFs7fjdn8=",
+        "lastModified": 1660574513,
+        "narHash": "sha256-nkMQ1TKIIAYIVbbUzjxfjPn3H1zZFW20TrHUFAjwvNU=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "36cc29d837e7232e3176e4651e8e117a6f231793",
+        "rev": "af9e00071d0971eb292fd5abef334e66eda3cb69",
         "type": "github"
       },
       "original": {
@@ -132,11 +168,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1660181147,
-        "narHash": "sha256-49/rBWoZA5uVa3Egq12mlrM+z2T3DbbuXqO0XjpFnUQ=",
+        "lastModified": 1660659904,
+        "narHash": "sha256-s5gB9+9zK1tSGrL8F1n1RF35f9AkMP/CBTea0frKLCY=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "3013fafff48b531f632b1a50afdc88a4078dc69c",
+        "rev": "29772121ebeb684ed52f3e5e10cf3c4200b149ce",
         "type": "github"
       },
       "original": {
@@ -148,11 +184,11 @@
     "papirus": {
       "flake": false,
       "locked": {
-        "lastModified": 1660007933,
-        "narHash": "sha256-ZadgWcNjyuq21vEXFk0jnjNtc+UV4ZfEz38de+3PuWs=",
+        "lastModified": 1660535855,
+        "narHash": "sha256-6nLwtDWl5IIAcp6Lyq7T3DmwDGtmhT7Vb14h0gI1518=",
         "owner": "PapirusDevelopmentTeam",
         "repo": "papirus-icon-theme",
-        "rev": "f69a813fc4b597c505fc09d284925f077a5aafaa",
+        "rev": "d5609a1ba33acef9a91a2c57af63647e4c10b11c",
         "type": "github"
       },
       "original": {
@@ -164,11 +200,11 @@
     "program-extensions": {
       "flake": false,
       "locked": {
-        "lastModified": 1660187045,
-        "narHash": "sha256-KbtXXvwps1vCct2yzo+8HFLw4Lf0iSv3cmLBrDhOP3k=",
+        "lastModified": 1660663538,
+        "narHash": "sha256-AOV9tuZYEyqkxxQ1nxzwtq3zegiAyzrz/Xy249IskoA=",
         "owner": "tnichols217",
         "repo": "nixos-program-extensions",
-        "rev": "9217025662d12c0e9990994c0ad7080fd4ed1c61",
+        "rev": "d075992cd2201ff7a2d7897d97b6f17e5aecdd0a",
         "type": "github"
       },
       "original": {
@@ -185,6 +221,7 @@
         "home-manager": "home-manager",
         "impermanence": "impermanence",
         "librewolfConfig": "librewolfConfig",
+        "nixos-generators": "nixos-generators",
         "nixpkgs": "nixpkgs_2",
         "nur": "nur",
         "papirus": "papirus",

@@ -1,8 +1,8 @@
 { ... }:
 {
-  services.openvpn.servers = {
-    client = {
-      config = let 
+  services.openvpn.servers = let 
+    configString = {adapt, port?"1194"}: 
+      let 
         addr = "pigsgo.mooo.com";
         # get from server
         ca = "/var/lib/openvpn/ca.crt";
@@ -14,12 +14,12 @@
       in ''
         client
 
-        dev tun
+        dev ${adapt}
 
         ;proto tcp
         proto udp
         
-        remote ${addr} 1194
+        remote ${addr} ${port}
         
         resolv-retry infinite
 
@@ -36,11 +36,17 @@
 
         tls-auth ${ta} 1
 
-        cipher AES-256-CBC
-
         # Set log file verbosity.
         verb 3
       '';
+  in {
+    clientTun = {
+      config = configString{adapt = "tun"; port = "1195";};
+      autoStart = false;
+    };
+    clientTap = {
+      config = configString{adapt = "tap";};
+      autoStart = false;
     };
   };
 }

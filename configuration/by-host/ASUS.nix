@@ -22,9 +22,9 @@
     };
   };
 
-  services.openvpn.servers = {
-    server = {
-      config = let 
+  services.openvpn.servers = let 
+    configString = {adapt, port?"1194"}:
+      let 
         # easyrsa init-pki
         # easyrsa build-ca
         ca = "/var/lib/openvpn/pki/ca.crt";
@@ -37,11 +37,13 @@
         ta = "/var/lib/openvpn/ta.key";
         log = "openvpn-status.log";
       in ''
-        port 1194
+        port ${port}
         proto udp
 
-        ;dev tap
-        dev tun
+        dev ${adapt}
+        push "redirect-gateway def1"
+        push "dhcp-option DNS 8.8.8.8"
+        push "dhcp-option DNS 8.8.4.4"
 
         # SSL/TLS root certificate (ca)
         ca ${ca}
@@ -66,8 +68,6 @@
 
         keepalive 10 120
 
-        cipher AES-256-CBC
-
         max-clients 5
         user nobody
         group nobody
@@ -88,6 +88,13 @@
         # might connect with the same certificate/key
         ;duplicate-cn
       '';
+  in {
+    serverTun = {
+      config = configString{adapt = "tun"; port = "1195";};
+      up = "iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -o wlo1 -j MASQUERADE; ${pkgs.procps}/bin/sysctl -w net.ipv4.ip_forward=1";
+    };
+    serverTap = {
+      config = configString{adapt = "tap";};
     };
   };
 

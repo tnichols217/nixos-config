@@ -1,8 +1,9 @@
 { config, pkgs, host-name, ... }:
 {
-  imports = [
-    ./network/openvpn.nix
-  ];
+  imports =
+    if host-name != "ASUS" then [
+      ./network/openvpn.nix
+     ] else [];
   networking.hostName = host-name;
   hardware.enableRedistributableFirmware = true;
   networking.firewall.enable = false;
