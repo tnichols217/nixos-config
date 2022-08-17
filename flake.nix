@@ -70,11 +70,12 @@
     };
     packages.x86_64-linux = rec {
       iso = nixos-generators.nixosGenerate {
+        specialArgs = fullAttrs // { host-name = "MSI"; };
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         modules = mods;
         format = "iso";
       };
       default = iso;
-    }
+    };
   };
 }

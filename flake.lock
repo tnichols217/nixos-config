@@ -98,6 +98,42 @@
         "url": "https://gitlab.com/librewolf-community/settings"
       }
     },
+    "nixlib": {
+      "locked": {
+        "lastModified": 1636849918,
+        "narHash": "sha256-nzUK6dPcTmNVrgTAC1EOybSMsrcx+QrVPyqRdyKLkjA=",
+        "owner": "nix-community",
+        "repo": "nixpkgs.lib",
+        "rev": "28a5b0557f14124608db68d3ee1f77e9329e9dd5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "nixpkgs.lib",
+        "type": "github"
+      }
+    },
+    "nixos-generators": {
+      "inputs": {
+        "nixlib": "nixlib",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1660661347,
+        "narHash": "sha256-0eSeeQ7oH502rX5hXXi4Pt9CTgEhygp0/EL+biwhkrk=",
+        "owner": "nix-community",
+        "repo": "nixos-generators",
+        "rev": "ecef210472ddac2a9e06c7d4c7247a5be96b1cab",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "nixos-generators",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1654953433,
@@ -185,6 +221,7 @@
         "home-manager": "home-manager",
         "impermanence": "impermanence",
         "librewolfConfig": "librewolfConfig",
+        "nixos-generators": "nixos-generators",
         "nixpkgs": "nixpkgs_2",
         "nur": "nur",
         "papirus": "papirus",
