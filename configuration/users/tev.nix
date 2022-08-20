@@ -23,7 +23,7 @@ in
     i18n = {
       inputMethod = {
         enabled = "fcitx5";
-        fcitx5.engines = with pkgs.ibus-engines; [ fcitx5-chinese-addon ];
+        fcitx5.engines = with pkgs; [ fcitx5-chinese-addon ];
       };
     };
   };
