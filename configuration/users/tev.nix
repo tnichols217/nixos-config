@@ -21,10 +21,6 @@ in
       enable = true;
     };
     i18n = {
-      defaultLocale = "en_SG.UTF-8";
-      supportedLocales = [
-        "en_SG.UTF-8/UTF-8"
-      ];
       inputMethod = {
         enabled = "ibus";
         ibus.engines = with pkgs.ibus-engines; [ libpinyin typing-booster uniemoji ];
