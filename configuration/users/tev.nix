@@ -22,8 +22,8 @@ in
     };
     i18n = {
       inputMethod = {
-        enabled = "ibus";
-        ibus.engines = with pkgs.ibus-engines; [ libpinyin typing-booster uniemoji ];
+        enabled = "fcitx5";
+        fcitx5.engines = with pkgs.ibus-engines; [ fcitx5-chinese-addon ];
       };
     };
   };
