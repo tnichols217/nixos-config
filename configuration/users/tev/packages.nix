@@ -7,9 +7,6 @@
         cachix
         libsForQt5.qt5.qttools
         gnupg
-        ibus
-        ibus-engines.uniemoji
-        ibus-engines.libpinyin
         fswatch
         python3
         konsole
