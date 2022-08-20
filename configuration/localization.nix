@@ -7,8 +7,8 @@
       "en_SG.UTF-8/UTF-8"
     ];
     inputMethod = {
-      enabled = "ibus";
-      ibus.engines = with pkgs.ibus-engines; [ libpinyin typing-booster uniemoji ];
+      enabled = "fcitx5";
+      fcitx5.addons = with pkgs; [ fcitx5-chinese-addons ];
     };
   };
   console = {
