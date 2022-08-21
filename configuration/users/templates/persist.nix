@@ -44,6 +44,7 @@
           ".local/share/kwalletd"
           ".local/share/kscreen"
           ".local/share/direnv/allow"
+          ".local/share/MuseScore"
           ".config/kdeconnect"
           ".config/VSCodium"
           ".config/discord"
