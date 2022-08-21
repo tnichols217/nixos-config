@@ -38,6 +38,7 @@
         htop
         kcalc
         libsForQt5.kdeconnect-kde
+        musescore
 
         obsidian
         config.nur.repos.wolfangaukang.stremio
