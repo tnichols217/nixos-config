@@ -28,6 +28,7 @@
         nerdfonts
         pstree
         scrcpy
+        adb
 
         # programs
         filezilla
