@@ -28,7 +28,7 @@
         nerdfonts
         pstree
         scrcpy
-        adb
+        android-tools
 
         # programs
         filezilla
