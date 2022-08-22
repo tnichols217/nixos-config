@@ -27,6 +27,7 @@
         ark
         nerdfonts
         pstree
+        scrcpy
 
         # programs
         filezilla
