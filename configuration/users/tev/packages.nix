@@ -56,6 +56,7 @@
         discord
         tdesktop
         whatsapp-for-linux
+        minecraft
 
         osu-lazer
         
