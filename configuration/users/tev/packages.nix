@@ -57,6 +57,7 @@
         tdesktop
         whatsapp-for-linux
         minecraft
+        polymc
 
         osu-lazer
         
