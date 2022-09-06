@@ -38,7 +38,7 @@
           ".gnupg"
           ".nixops"
           ".mozilla"
-          ".tlauncher"
+          ".local/share/PolyMC"
           ".local/share/barrier"
           ".local/share/TelegramDesktop"
           ".local/share/kwalletd"
