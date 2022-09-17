@@ -5,6 +5,11 @@
   };
 
   home-manager.users.${username} = {
+    packages = with pkgs; [
+        bat
+        lsd
+        xclip
+    ];
     home = {
       stateVersion = version;
     };

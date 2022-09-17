@@ -20,9 +20,6 @@
         nodePackages.npm
         openjdk16-bootstrap
         virt-manager
-        bat
-        lsd
-        xclip
         helvum
         ark
         nerdfonts
