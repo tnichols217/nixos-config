@@ -47,7 +47,7 @@
         plugins = [
           {
             name = "theme-bobthefish";
-            src = attrs.btf;
+            src = btf;
           }
         ];
       };
