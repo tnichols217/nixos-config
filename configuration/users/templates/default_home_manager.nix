@@ -1,7 +1,6 @@
 { pkgs, btf, username, host-name, version, ... }:
 {
   users.users.${username} = {
-    isNormalUser = true;
     shell = pkgs.fish;
   };
 
