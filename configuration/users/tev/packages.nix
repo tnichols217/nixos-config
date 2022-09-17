@@ -35,7 +35,7 @@
         filelight
         libreoffice
         davinci-resolve
-        kicad-unstable
+        kicad
         lolcat
         htop
         kcalc
