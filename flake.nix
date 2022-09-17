@@ -3,6 +3,9 @@
     nixpkgs = {
       url = github:NixOS/nixpkgs/nixos-unstable;
     };
+    nixpkgs-old = {
+      url = github:NixOS/nixpkgs/nixos-22.05;
+    }
     home-manager = {
       url = github:nix-community/home-manager;
     };
@@ -46,7 +49,7 @@
     };
   };
   
-  outputs = { self, nixpkgs, nixos-generators, ... }@attrs: let 
+  outputs = { self, nixpkgs, nixpkgs-old, nixos-generators, ... }@attrs: let 
       mods = [
           attrs.home-manager.nixosModules.default
           attrs.impermanence.nixosModules.impermanence
@@ -54,7 +57,10 @@
           ./configuration.nix
         ];
       version = "21.11";
-      fullAttrs = { inherit attrs version; };
+      fullAttrs = {
+        inherit attrs version;
+        oldpkgs = nixpkgs-old.legacyPackages.x86_64-linux;
+      };
     in {
     nixosConfigurations = {
       MSI = nixpkgs.lib.nixosSystem {
