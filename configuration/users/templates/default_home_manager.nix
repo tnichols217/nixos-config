@@ -1,4 +1,4 @@
-{ pkgs, btf, username, host-name, version, ... }:
+{ pkgs, attrs, username, host-name, version, ... }:
 {
   users.users.${username} = {
     shell = pkgs.fish;
@@ -49,7 +49,7 @@
         plugins = [
           {
             name = "theme-bobthefish";
-            src = btf;
+            src = attrs.btf;
           }
         ];
       };
