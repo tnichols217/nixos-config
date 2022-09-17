@@ -6,5 +6,5 @@
       ./users/root.nix
     ];
   users.mutableUsers = false;
-  users.defaultUserShell = pkgs.fish
+  users.defaultUserShell = pkgs.fish;
 }
