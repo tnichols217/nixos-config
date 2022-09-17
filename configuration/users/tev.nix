@@ -7,7 +7,7 @@ in
   [
     ((import ./templates/persist.nix) (args // { inherit username; }))
     ((import ./templates/normal_sudo.nix) (args // { inherit username; }))
-    ((import ./templates/default_home_manager.nix) (args // { inherit pkgs username host-name version; btf = attrs.btf }))
+    ((import ./templates/default_home_manager.nix) (args // { inherit pkgs username host-name version; btf = attrs.btf; }))
     ((import ./tev/config.nix) (args // { inherit username; }))
     ((import ./tev/packages.nix) (args // { inherit username arch-theme papirus vscodeExtensions; }))
   ];
