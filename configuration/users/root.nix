@@ -1,4 +1,4 @@
-args@{ pkgs, btf, host-name, version, ... }:
+args@{ attrs, pkgs, host-name, version, ... }:
 let
   username = "root";
 in
