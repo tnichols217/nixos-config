@@ -5,13 +5,13 @@
   };
 
   home-manager.users.${username} = {
-    packages = with pkgs; [
-        bat
-        lsd
-        xclip
-    ];
     home = {
       stateVersion = version;
+      packages = with pkgs; [
+          bat
+          lsd
+          xclip
+      ];
     };
     programs = {
       git = {
