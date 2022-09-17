@@ -1,4 +1,4 @@
-{ pkgs, btf, username, host-name, ... }:
+{ pkgs, btf, username, host-name, version, ... }:
 {
   users.users.${username} = {
     isNormalUser = true;
@@ -6,6 +6,9 @@
   };
 
   home-manager.users.${username} = {
+    home = {
+      stateVersion = version;
+    };
     programs = {
       git = {
         enable = true;
