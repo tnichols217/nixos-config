@@ -1,4 +1,4 @@
-{ pkgs, attrs, vscodeExtensions }:
+{ pkgs, attrs }:
 
 {
   enable = true;

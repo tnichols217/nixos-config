@@ -1,4 +1,4 @@
-{ config, pkgs, oldpkgs, username, attrs, host-name, vscodeExtensions,... }:
+{ config, pkgs, oldpkgs, username, attrs, host-name,... }:
 {
   home-manager.users.${username} = {
     home = {
@@ -104,7 +104,7 @@
           };
         };
       };
-      vscode = import ./packages/vscode.nix ({ inherit pkgs vscodeExtensions attrs; });
+      vscode = import ./packages/vscode.nix ({ inherit pkgs attrs; });
       obs-studio = {
         enable = true;
       };
