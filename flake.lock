@@ -150,6 +150,22 @@
         "type": "github"
       }
     },
+    "nixpkgs-old": {
+      "locked": {
+        "lastModified": 1663244735,
+        "narHash": "sha256-+EukKkeAx6ithOLM1u5x4D12ZFuoi6vpPYjhNDmLz1o=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "178fea1414ae708a5704490f4c49ec3320be9815",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-22.05",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nixpkgs_2": {
       "locked": {
         "lastModified": 1663268520,
@@ -168,11 +184,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1663431623,
-        "narHash": "sha256-HlvNsC9x6DIZpr9+Ln9iN6ov0zlXYSdplGRBUypwbPs=",
+        "lastModified": 1663433586,
+        "narHash": "sha256-oiJtjVErUFqtmfbjkGS0oCbewiWIKg4FWS/ukoaEkl4=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "7fe72ebf692caab152baba97ff7b4309257742b4",
+        "rev": "f69efff5d2b17cddee66a28b7cea27dffb35d4aa",
         "type": "github"
       },
       "original": {
@@ -223,6 +239,7 @@
         "librewolfConfig": "librewolfConfig",
         "nixos-generators": "nixos-generators",
         "nixpkgs": "nixpkgs_2",
+        "nixpkgs-old": "nixpkgs-old",
         "nur": "nur",
         "papirus": "papirus",
         "program-extensions": "program-extensions"
