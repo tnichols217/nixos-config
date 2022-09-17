@@ -5,7 +5,7 @@
     };
     nixpkgs-old = {
       url = github:NixOS/nixpkgs/nixos-22.05;
-    }
+    };
     home-manager = {
       url = github:nix-community/home-manager;
     };
