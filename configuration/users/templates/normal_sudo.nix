@@ -2,7 +2,7 @@
 {
   users.users.${username} = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "libvirtd" "networkmanager" ];
+    extraGroups = [ "wheel" "libvirtd" "networkmanager" "docker" ];
     shell = pkgs.fish;
   };
 }
