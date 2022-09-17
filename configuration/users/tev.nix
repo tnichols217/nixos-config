@@ -1,4 +1,4 @@
-args@{ config, pkgs, btf, arch-theme, papirus, vscodeExtensions, version, host-name, ... }:
+args@{ attrs, config, pkgs, btf, arch-theme, papirus, vscodeExtensions, version, host-name, ... }:
 let
   username = "tev";
 in
@@ -7,7 +7,7 @@ in
   [
     ((import ./templates/persist.nix) (args // { inherit username; }))
     ((import ./templates/normal_sudo.nix) (args // { inherit username; }))
-    ((import ./templates/default_home_manager.nix) (args // { inherit pkgs btf username host-name version; }))
+    ((import ./templates/default_home_manager.nix) (args // { inherit pkgs username host-name version; btf = attrs.btf }))
     ((import ./tev/config.nix) (args // { inherit username; }))
     ((import ./tev/packages.nix) (args // { inherit username arch-theme papirus vscodeExtensions; }))
   ];

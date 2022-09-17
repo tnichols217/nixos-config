@@ -5,6 +5,6 @@ in
 {
   imports =
   [
-    ((import ./templates/default_home_manager.nix) (args // { inherit pkgs btf username host-name version; }))
+    ((import ./templates/default_home_manager.nix) (args // { inherit pkgs username host-name version; btf = attrs.btf }))
   ];
 }
