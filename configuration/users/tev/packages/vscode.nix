@@ -6,7 +6,7 @@
   userSettings = {
     "[nix]"."editor.tabSize" = 2;
     "editor.renderWhitespace" = "all";
-    "editor.fontFamily" = "'Fira code', 'Hack', 'monospace', monospace";
+    "editor.fontFamily" = "'FiraCode', 'Hack', 'monospace', monospace";
     "editor.fontLigatures" = true;
     "editor.guides.bracketPairs" = true;
     "editor.bracketPairColorization.enabled" = true;
