@@ -13,6 +13,7 @@
     "editor.semanticHighlighting.enabled" = true;
     "workbench.colorTheme" = "Default Dark+";
     "workbench.iconTheme" = "vscode-icons";
+    "tabnine.experimentalAutoImports" = true;
 
   };
   mutableExtensionsDir = false;
