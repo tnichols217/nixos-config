@@ -16,7 +16,7 @@
     ];
 
   nix = {
-    package = pkgs.nixFlakes;
+    package = pkgs.nixVersions.stable;
     extraOptions = ''experimental-features = nix-command flakes'';
     settings = {
       substituters = [
@@ -33,7 +33,7 @@
       dates = "weekly";
       options = "--delete-older-than 30d";
     };
-   };
+  };
 
   programs.steam.enable = true;
 

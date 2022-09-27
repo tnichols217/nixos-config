@@ -43,6 +43,6 @@ if [ -z "$BUILD" ]; then
 fi
 
 cd /mnt/etc/nixos
-nix-shell -p nixFlakes git --run "
+nix-shell -p nixVersions.stable git --run "
 nixos-install --no-root-passwd --option extra-substituters https://tnichols217-nixos-config.cachix.org --option extra-trusted-public-keys tnichols217-nixos-config.cachix.org-1:B9JhBiPS+OHykLW16qovoOelAvtdH5sIjYU7BZvs7q8= --flake \".#$BUILD\"
 "
