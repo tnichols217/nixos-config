@@ -14,7 +14,7 @@
     "workbench.colorTheme" = "Default Dark+";
     "workbench.iconTheme" = "vscode-icons";
     "tabnine.experimentalAutoImports" = true;
-
+    "java.inlayHints.parameterNames.enabled" = "all";
   };
   mutableExtensionsDir = false;
   extensions = pkgs.lib.lists.forEach (builtins.attrNames (builtins.readDir (attrs.program-extensions + "/vscode/out"))) (x: 
