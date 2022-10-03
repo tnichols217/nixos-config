@@ -24,6 +24,11 @@
         lfs = {
           enable = true;
         };
+        extraConfig = {
+          credential = {
+            helper = "store";
+          };
+        };
       };
       fish = {
         enable = true;
