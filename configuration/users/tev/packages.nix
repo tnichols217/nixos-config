@@ -97,9 +97,9 @@
             user = "git";
             inherit identityFile;
           };
-          "*" = {
-            inherit identityFile;
-          };
+          # "*" = {
+          #   inherit identityFile;
+          # };
           "vs" = {
             hostname = "vs-ssh.visualstudio.com";
             user = "DalatIntSchool";
