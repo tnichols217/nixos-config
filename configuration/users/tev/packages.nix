@@ -70,6 +70,7 @@
         enable = true;
         matchBlocks = let 
           identityFile = "/home/${username}/.ssh/ed25519";
+          identityFileRsa = "/home/${username}/.ssh/rsa";
           user = "${username}";
           port = 27180;
         in {
@@ -98,6 +99,11 @@
           };
           "*" = {
             inherit identityFile;
+          };
+          "vs" = {
+            hostname = "vs-ssh.visualstudio.com";
+            user = "DalatIntSchool";
+            identityFile = identityFileRsa;
           };
         };
       };
