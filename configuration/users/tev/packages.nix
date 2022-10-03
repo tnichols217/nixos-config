@@ -100,12 +100,6 @@
           "*" = {
             inherit identityFile;
           };
-          "vs" = {
-            hostname = "vs-ssh.visualstudio.com";
-            user = "DalatIntSchool";
-            identityFile = identityFileRsa;
-            HostKeyAlgorithms = "+ssh-rsa";
-          };
         };
       };
       vscode = import ./packages/vscode.nix ({ inherit pkgs attrs; });
