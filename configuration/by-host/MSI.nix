@@ -38,6 +38,6 @@
 
   nix.settings = {
     "max-jobs" = 0;
-    "builders" = "ssh://pigsgo.mooo.com?ssh-key=/home/tev/.ssh/ed25519 x86_64-linux 10 - - kvm";
+    "builders" = "ssh://tev@pigsgo.mooo.com?ssh-key=/home/tev/.ssh/ed25519 x86_64-linux 10 - - kvm";
   };
 }
