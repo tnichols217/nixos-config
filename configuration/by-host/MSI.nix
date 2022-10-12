@@ -33,4 +33,14 @@
       };
     };
   };
+
+  nix.distributedBuilds = true;
+
+  nix.buildMachines = [
+    "ssh://ASUS"
+  ];
+
+  nix.settings = {
+    "max-jobs" = 0;
+  };
 }
