@@ -11,6 +11,7 @@
       fcitx5.addons = with pkgs; [ fcitx5-chinese-addons ];
     };
   };
+  services.geoclue2.enable = true;
   services.localtimed.enable = true;
   console = {
     font = "Lat2-Terminus16";
