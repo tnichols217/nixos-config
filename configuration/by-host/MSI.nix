@@ -38,6 +38,6 @@
 
   nix.settings = {
     "max-jobs" = 0;
-    "builders" = "ssh://ASUS x86_64-linux";
+    "builders" = "ssh://ASUS x86_64-linux 10 - - kvm";
   };
 }
