@@ -27,7 +27,7 @@
         "tnichols217-nixos-config.cachix.org-1:B9JhBiPS+OHykLW16qovoOelAvtdH5sIjYU7BZvs7q8="
       ];
       auto-optimise-store = true;
-      trusted-users = "tev";
+      trusted-users = [ "tev" ];
     };
     gc = {
       automatic = true;
