@@ -36,11 +36,8 @@
 
   nix.distributedBuilds = true;
 
-  nix.buildMachines = [
-    "ssh://ASUS"
-  ];
-
   nix.settings = {
     "max-jobs" = 0;
+    "builders" = "ssh://ASUS x86_64-linux";
   };
 }
