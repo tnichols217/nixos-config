@@ -72,7 +72,8 @@
           identityFile = "/home/${username}/.ssh/ed25519";
           identityFileRsa = "/home/${username}/.ssh/rsa";
           user = "${username}";
-          port = 27180;
+          port = 22;
+          # port = 27180;
         in {
           "MSI" = {
             hostname = "192.168.100.250";
