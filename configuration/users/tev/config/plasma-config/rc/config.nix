@@ -289,6 +289,7 @@ in
         "Placement"= "Centered";
         "ElectricBorderCooldown"= "150";
         "ElectricBorderDelay"= "100";
+        "RollOverDesktops" = "true";
       };
     };
     "org.kde.kdecoration2"= {
