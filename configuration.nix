@@ -1,4 +1,4 @@
-{ config, pkgs, version, host-name, ... }:
+{ config, pkgs, version, host-name, attrs, ... }:
 {
   imports =
     [
