@@ -38,8 +38,15 @@
 
   programs.steam.enable = true;
 
+  nixpkgs = {
+    config = {
+      allowUnfree = true;
+    };
+    overlays = [
+      attrs.prismlauncher.overlay
+    ];
+  };
   nixpkgs.config = {
-    allowUnfree = true;
   };
 
   boot.kernelPackages = pkgs.linuxPackages_zen;

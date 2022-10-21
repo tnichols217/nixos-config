@@ -54,7 +54,8 @@
         tdesktop
         whatsapp-for-linux
         minecraft
-        polymc
+        # polymc
+        prismlauncher
 
         osu-lazer
         
