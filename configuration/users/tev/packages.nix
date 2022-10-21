@@ -19,6 +19,7 @@
         nodePackages.nodemon
         nodePackages.npm
         openjdk16-bootstrap
+        jdk8
         virt-manager
         helvum
         ark
