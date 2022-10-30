@@ -9,5 +9,13 @@
   services.xserver.libinput.enable = true;
   hardware.opengl.enable = true;
   services.xserver.videoDrivers = [ "nvidia" ];
-  fonts.enableDefaultFonts = true;
+  fonts = {
+    fonts = with pkgs; [
+      nerdfonts
+      noto-fonts
+      noto-fonts-cjk
+      noto-fonts-emoji
+    ];
+    enableDefaultFonts = true;
+  };
 }
