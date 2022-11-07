@@ -261,6 +261,11 @@ in
         "AnimationDurationFactor"= "0.25";
       };
     };
+    "MouseBindings"= {
+      "items"= {
+        "CommandAllWheel"= "Change Opacity";
+      };
+    };
     "Plugins"= {
       "items"= {
         "blurEnabled"= "true";
@@ -281,7 +286,7 @@ in
         "DesktopLayout"= "org.kde.breeze.desktop";
         "DesktopListLayout"= "org.kde.breeze.desktop";
         "BorderActivate"= "9";
-        "LayoutName"= "MediumRoundedDark";
+        "LayoutName"= "thumbnail_grid";
       };
     };
     "Windows"= {
