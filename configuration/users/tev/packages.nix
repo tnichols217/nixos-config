@@ -1,5 +1,6 @@
-{ config, pkgs, oldpkgs, username, attrs, host-name,... }:
+{ config, pkgs, oldpkgs, username, attrs, host-name, nixpkgs, ... }:
 {
+  nixpkgs.config.firefox.enablePlasmaBrowserIntegration = true;
   home-manager.users.${username} = {
     home = {
       packages = with pkgs; [
