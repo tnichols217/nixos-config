@@ -1,6 +1,5 @@
 { config, pkgs, oldpkgs, username, attrs, host-name, nixpkgs, ... }:
 {
-  nixpkgs.config.firefox.enablePlasmaBrowserIntegration = true;
   home-manager.users.${username} = {
     home = {
       packages = with pkgs; [
@@ -26,6 +25,7 @@
         pstree
         scrcpy
         android-tools
+        plasma-browser-integration
 
         # programs
         filezilla
