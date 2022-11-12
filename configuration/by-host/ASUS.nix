@@ -109,7 +109,7 @@
   services.httpd = {
     enable = true;
     adminAddr = "Pathway2PBC@gmail.com";
-    group = "acme";
+    # group = "acme";
     virtualHosts = let 
       defHost = host: {
         # addSSL = true;
