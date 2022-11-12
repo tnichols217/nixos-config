@@ -232,11 +232,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1668174315,
-        "narHash": "sha256-oss9lJ30HbgXpVFy5Xv9doB+1mNjQehbFlFYau95odM=",
+        "lastModified": 1668255064,
+        "narHash": "sha256-JWVzaBAC9eL+Eg/SG71ZPSDQQd/eO9sS2YNGrlDDEH4=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "5da1d2f59d29cd1bb9c0787db9c1046825ade56a",
+        "rev": "9a0be7d4b9de779707b8788c6bdaaf23160a7975",
         "type": "github"
       },
       "original": {
@@ -269,11 +269,11 @@
         "tomlplusplus": "tomlplusplus"
       },
       "locked": {
-        "lastModified": 1668177963,
-        "narHash": "sha256-J9+KLwzw0anNn/KKECVLnloLii73FX1cHX32WXbcoUA=",
+        "lastModified": 1668199733,
+        "narHash": "sha256-Nb6cvcN1KU7LJZ/vz0ZGtwp0Ig9chrMEV0L8fdoS2zo=",
         "owner": "PrismLauncher",
         "repo": "PrismLauncher",
-        "rev": "21dbd28a2f2397f0053f4f40563c16cb03b0fdfe",
+        "rev": "64576f4c4c6c41ba4528a00a38242955079f52ec",
         "type": "github"
       },
       "original": {
@@ -285,11 +285,11 @@
     "program-extensions": {
       "flake": false,
       "locked": {
-        "lastModified": 1667472599,
-        "narHash": "sha256-1PEy7Gev3CSguFxKsqGq0SvxtK+NhQ00lASvKO4L8fs=",
+        "lastModified": 1668257467,
+        "narHash": "sha256-dcGPcVXzMe3HmAlgfXpcF+04cbpQkNesgYg2bLeq5n4=",
         "owner": "tnichols217",
         "repo": "nixos-program-extensions",
-        "rev": "9d617191cdbc75820ca82f9ac95e0fa50025bbba",
+        "rev": "aefbcb2d0c0a128fc35df010bfa80b820bc2579c",
         "type": "github"
       },
       "original": {
