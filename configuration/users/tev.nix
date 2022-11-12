@@ -1,4 +1,4 @@
-args@{ attrs, config, pkgs, version, host-name, ... }:
+args@{ attrs, config, pkgs, version, host-name, nixpkgs, ... }:
 let
   username = "tev";
 in
