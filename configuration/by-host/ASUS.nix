@@ -114,8 +114,7 @@
       defHost = host: {
         addSSL = true;
         documentRoot = "/storage/church/Public";
-        useACMEHost = "${host
-        }";
+        # useACMEHost = "${host}";
       };
     in {
       "heyo.ydns.eu" = defHost "heyo.ydns.eu";
