@@ -261,11 +261,6 @@ in
         "AnimationDurationFactor"= "0.25";
       };
     };
-    "MouseBindings"= {
-      "items"= {
-        "CommandAllWheel"= "Change Opacity";
-      };
-    };
     "Plugins"= {
       "items"= {
         "blurEnabled"= "true";
