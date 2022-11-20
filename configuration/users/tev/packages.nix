@@ -26,6 +26,7 @@
         scrcpy
         android-tools
         plasma-browser-integration
+        ipfs
 
         # programs
         filezilla
