@@ -5,6 +5,7 @@
       packages = with pkgs; [
         # utils
         cachix
+        gnupg
         libsForQt5.qt5.qttools
         fswatch
         python3

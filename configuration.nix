@@ -9,6 +9,7 @@
       ./configuration/users.nix
       ./configuration/x11.nix
       ./configuration/sound.nix
+      ./configuration/security.nix
       ./configuration/ssh.nix
       ./configuration/virtualization.nix
       ./configuration/persistence.nix
