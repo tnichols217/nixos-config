@@ -6,7 +6,6 @@
         # utils
         cachix
         libsForQt5.qt5.qttools
-        gnupg
         fswatch
         python3
         konsole
