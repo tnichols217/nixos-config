@@ -6,6 +6,7 @@
         # utils
         cachix
         gnupg
+        poppler
         libsForQt5.qt5.qttools
         fswatch
         python3
