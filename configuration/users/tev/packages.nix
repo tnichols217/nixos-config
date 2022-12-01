@@ -28,6 +28,7 @@
         android-tools
         plasma-browser-integration
         ipfs
+        dotnet-sdk
 
         # programs
         filezilla
