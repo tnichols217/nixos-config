@@ -17,9 +17,9 @@
     "java.inlayHints.parameterNames.enabled" = "all";
   };
   mutableExtensionsDir = false;
-  extensions = pkgs.lib.lists.forEach (builtins.attrNames (builtins.readDir (attrs.program-extensions + "/vscode/out"))) (x: 
+  extensions = pkgs.lib.lists.forEach (builtins.attrNames (builtins.readDir (attrs.program-extensions.packages."x86_64-linux".default + "/vscode"))) (x: 
     let 
-      vsix = attrs.program-extensions + "/vscode/out/" + x;
+      vsix = attrs.program-extensions.packages."x86_64-linux".default + "/vscode" + x;
       name = pkgs.lib.strings.splitString "." x;
     in
     pkgs.vscode-utils.buildVscodeMarketplaceExtension {

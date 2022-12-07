@@ -4,9 +4,9 @@ pkgs.wrapFirefox pkgs.firefox-esr-unwrapped {
   nixExtensions = let
   fetchFFAddon = pkgs.callPackage (import ./firefox/fetchFirefoxAddonFlake.metapkg.nix) {};
   in
-  pkgs.lib.lists.forEach (builtins.attrNames (builtins.readDir (attrs.program-extensions + "/firefox/out"))) (x: 
+  pkgs.lib.lists.forEach (builtins.attrNames (builtins.readDir (attrs.program-extensions.packages."x86_64-linux".default + "/firefox"))) (x: 
     let 
-      name = attrs.program-extensions + "/firefox/out/" + x;
+      name = attrs.program-extensions.packages."x86_64-linux".default + "/firefox" + x;
     in
     fetchFFAddon name
   );

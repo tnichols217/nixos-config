@@ -43,12 +43,11 @@
     # addons
     program-extensions = {
       url = "github:tnichols217/nixos-program-extensions";
-      flake = false;
     };
 
     # firefox addons
     librewolfConfig = {
-      url = "git+https://gitlab.com/librewolf-community/settings";
+      url = "git+https://gitlab.com/librewolf-community/settings.git/";
       flake = false;
     };
   };
