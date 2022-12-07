@@ -29,6 +29,7 @@
         plasma-browser-integration
         ipfs
         dotnet-sdk
+        pandoc
 
         # programs
         filezilla
