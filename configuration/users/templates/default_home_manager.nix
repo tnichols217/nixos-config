@@ -50,6 +50,7 @@
           ls = "lsd";
           ca = "bat";
           da = "direnv allow";
+          fsw = "fswatch -rax ";
         };
         functions = {
           gc = "git clone git@github.com:tnichols217/$argv";
