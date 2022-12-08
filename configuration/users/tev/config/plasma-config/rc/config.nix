@@ -761,6 +761,7 @@ in
     "Mouse"= {
       "items"= {
         "XLbInptAccelProfileFlat"= "true";
+        "XLbInptMiddleEmulation"= "true";
         "XLbInptPointerAcceleration"= "1";
       };
     };
