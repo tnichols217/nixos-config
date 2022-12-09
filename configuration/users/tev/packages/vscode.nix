@@ -15,6 +15,7 @@
     "workbench.iconTheme" = "vscode-icons";
     "tabnine.experimentalAutoImports" = true;
     "java.inlayHints.parameterNames.enabled" = "all";
+    "git.autofetch" = true;
   };
   mutableExtensionsDir = false;
   extensions = pkgs.lib.lists.forEach (builtins.attrNames (builtins.readDir (attrs.program-extensions.packages."x86_64-linux".default + "/vscode"))) (x: 
