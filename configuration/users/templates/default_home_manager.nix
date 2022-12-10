@@ -4,6 +4,8 @@
     shell = pkgs.fish;
   };
 
+  home-manager.backupFileExtension = "backup";
+
   home-manager.users.${username} = {
     home = {
       stateVersion = version;
