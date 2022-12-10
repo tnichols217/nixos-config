@@ -6,7 +6,7 @@ pkgs.wrapFirefox pkgs.firefox-esr-unwrapped {
   in
   pkgs.lib.lists.forEach (builtins.attrNames (builtins.readDir (attrs.program-extensions.packages."x86_64-linux".default + "/firefox"))) (x: 
     let 
-      name = attrs.program-extensions.packages."x86_64-linux".default + "/firefox" + x;
+      name = attrs.program-extensions.packages."x86_64-linux".default + "/firefox/" + x;
     in
     fetchFFAddon name
   );
