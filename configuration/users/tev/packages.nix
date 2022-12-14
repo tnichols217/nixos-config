@@ -31,6 +31,7 @@
         dotnet-sdk
         pandoc
         rustc
+        cargo
 
         # programs
         filezilla
