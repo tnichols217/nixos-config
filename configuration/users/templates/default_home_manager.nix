@@ -53,7 +53,7 @@
           ca = "bat";
           da = "direnv allow";
           fsw = "fswatch -rax ";
-          black = "kill (pidof plasmashell); plasmashell &";
+          black = "kill (pidof plasmashell); plasmashell &; disown (pidof plasmashell)";
         };
         functions = {
           gc = "git clone git@github.com:tnichols217/$argv";
