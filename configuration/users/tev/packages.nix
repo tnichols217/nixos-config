@@ -30,6 +30,8 @@
         ipfs
         dotnet-sdk
         pandoc
+        rustup
+        rustc
 
         # programs
         filezilla
