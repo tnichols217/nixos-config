@@ -13,6 +13,7 @@
   boot.extraModulePackages = with config.boot.kernelPackages; [
     v4l2loopback
   ];
+  boot.supportedFilesystems = [ "ntfs" ];
   powerManagement.cpuFreqGovernor = "performance";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
   hardware.video.hidpi.enable = true;
