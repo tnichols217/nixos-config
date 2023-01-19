@@ -21,7 +21,6 @@
         nodePackages.npm
         openjdk16-bootstrap
         virt-manager
-        helvum
         ark
         pstree
         scrcpy
