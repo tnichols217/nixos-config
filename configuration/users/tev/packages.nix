@@ -46,7 +46,7 @@
         musescore
 
         obsidian
-        config.nur.repos.wolfangaukang.stremio
+        stremio
         barrier
         flameshot
         spotify
