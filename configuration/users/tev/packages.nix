@@ -1,4 +1,4 @@
-{ config, pkgs, oldpkgs, username, attrs, host-name, nixpkgs, ... }:
+{ config, pkgs, username, attrs, host-name, nixpkgs, ... }:
 {
   home-manager.users.${username} = {
     home = {
@@ -37,7 +37,6 @@
         filelight
         libreoffice
         davinci-resolve
-        oldpkgs.kicad
         lolcat
         htop
         kcalc
