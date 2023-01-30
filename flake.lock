@@ -85,11 +85,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1674771519,
-        "narHash": "sha256-U0W3S1nX6yEvLh3Vq70EORbmXecAKXfmEfCfaA4A+I8=",
+        "lastModified": 1674928308,
+        "narHash": "sha256-elVU4NUZEl11BdT4gC+lrpLYM8Ccxqxs19Ix84HTI9o=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "bb4b25b302dbf0f527f190461b080b5262871756",
+        "rev": "08a778d80308353f4f65c9dcd3790b5da02d6306",
         "type": "github"
       },
       "original": {
@@ -132,11 +132,11 @@
     "librewolfConfig": {
       "flake": false,
       "locked": {
-        "lastModified": 1674779874,
-        "narHash": "sha256-SYqyYU1mC60fk8RaJaMROe5VcrxJeHuJR4h/3XVsc1U=",
+        "lastModified": 1674782578,
+        "narHash": "sha256-8cLHwcEdoSNgoxinaIGC4yyGRMvQOeMEux98xzyNGWM=",
         "ref": "refs/heads/master",
-        "rev": "e417584a74814cf99de6605597af74edb5bd8726",
-        "revCount": 214,
+        "rev": "6fe09c63cbfb83ebfb6a17f5e624248f2501b97e",
+        "revCount": 216,
         "type": "git",
         "url": "https://gitlab.com/librewolf-community/settings.git/"
       },
@@ -247,11 +247,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1674771478,
-        "narHash": "sha256-WI5CNBN3ys5vUcfUvpVIfU4lYm3b5Oon8sbJnNG1nK8=",
+        "lastModified": 1675089990,
+        "narHash": "sha256-VN70n9I7A4b9kmKoND1ACxWoNyK436Xw9QJJrzer9x0=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "2d809d91d70e26e983d61a50546947f3189d05bb",
+        "rev": "167df43c426fb5a39086691f59bda8b6ee3f7b73",
         "type": "github"
       },
       "original": {
@@ -283,11 +283,11 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1674756928,
-        "narHash": "sha256-s3JJbAeoIyBWnjRXmNFdw4lpzqjfm9LTYeTfuFFXm+s=",
+        "lastModified": 1675090971,
+        "narHash": "sha256-kGna5Tegd/6+95q9UxLv5Q/yRWIf5Fa1p1uMvNXKl/M=",
         "owner": "PrismLauncher",
         "repo": "PrismLauncher",
-        "rev": "f705cf09bce828ea2f8bae918673c1d921713866",
+        "rev": "deed49574ac344f126eed5fd71f7151c72ff79ac",
         "type": "github"
       },
       "original": {
