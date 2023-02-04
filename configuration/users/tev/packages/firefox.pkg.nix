@@ -8,7 +8,7 @@ pkgs.wrapFirefox pkgs.firefox-esr-unwrapped {
     let 
       name = attrs.program-extensions.packages."x86_64-linux".default + "/firefox/" + x;
     in
-    pkgs.fetchFirefoxAddon name
+    fetchFFAddon name
   );
 
   extraPolicies = {
