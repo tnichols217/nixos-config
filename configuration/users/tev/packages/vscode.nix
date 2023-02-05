@@ -2,11 +2,7 @@
 
 {
   enable = true;
-  package = (pkgs.vscode-with-extensions.override {
-    vscodeExtensions = [
-      pkgs.vscode-extensions.bbenoist.nix
-    ];
-  });
+  package = pkgs.vscodium;
   userSettings = {
     "[nix]"."editor.tabSize" = 2;
     "editor.renderWhitespace" = "all";
