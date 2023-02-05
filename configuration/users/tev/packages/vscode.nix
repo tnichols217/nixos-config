@@ -18,9 +18,7 @@
         };
       }
     );
-  }) // {
-    pname = "vscodium";
-  };
+  }) // { pname = "vscodium"; };
   userSettings = {
     "[nix]"."editor.tabSize" = 2;
     "editor.renderWhitespace" = "all";
