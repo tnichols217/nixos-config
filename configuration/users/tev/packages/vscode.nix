@@ -2,7 +2,7 @@
 
 {
   enable = true;
-  package = pkgs.vscodium
+  package = pkgs.vscodium;
 
   userSettings = {
     "[nix]"."editor.tabSize" = 2;
