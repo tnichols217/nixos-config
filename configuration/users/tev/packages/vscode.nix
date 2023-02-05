@@ -14,6 +14,7 @@
         mktplcRef = {
           publisher = builtins.elemAt name 0;
           name = builtins.elemAt name 1;
+          pname = builtins.elemAt name 1;
           version = "latest";
         };
       }
