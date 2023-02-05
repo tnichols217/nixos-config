@@ -3,7 +3,7 @@
 {
   enable = true;
   package = pkgs.vscode-with-extensions.override {
-    vscode = pkgs.vscodium;
+    # vscode = pkgs.vscodium;
     vscodeExtensions = pkgs.lib.lists.forEach (builtins.attrNames (builtins.readDir (attrs.program-extensions.packages."x86_64-linux".default + "/vscode"))) (x: 
       let 
         vsix = attrs.program-extensions.packages."x86_64-linux".default + "/vscode/" + x;
