@@ -2,7 +2,25 @@
 
 {
   enable = true;
-  package = pkgs.vscodium;
+  package = (pkgs.vscode-with-extensions.override {
+    vscode = pkgs.vscodium;
+    vscodeExtensions = pkgs.lib.lists.forEach (builtins.attrNames (builtins.readDir (attrs.program-extensions.packages."x86_64-linux".default + "/vscode"))) (x: 
+      let 
+        vsix = attrs.program-extensions.packages."x86_64-linux".default + "/vscode/" + x;
+        name = pkgs.lib.strings.splitString "." x;
+      in
+      pkgs.vscode-utils.buildVscodeMarketplaceExtension {
+        vsix = vsix;
+        mktplcRef = {
+          publisher = builtins.elemAt name 0;
+          name = builtins.elemAt name 1;
+          version = "latest";
+        };
+      }
+    );
+  }) // {
+    pname = "vscodium";
+  };
   userSettings = {
     "[nix]"."editor.tabSize" = 2;
     "editor.renderWhitespace" = "all";
@@ -17,19 +35,4 @@
     "java.inlayHints.parameterNames.enabled" = "all";
     "git.autofetch" = true;
   };
-  mutableExtensionsDir = false;
-  extensions = pkgs.lib.lists.forEach (builtins.attrNames (builtins.readDir (attrs.program-extensions.packages."x86_64-linux".default + "/vscode"))) (x: 
-    let 
-      vsix = attrs.program-extensions.packages."x86_64-linux".default + "/vscode/" + x;
-      name = pkgs.lib.strings.splitString "." x;
-    in
-    pkgs.vscode-utils.buildVscodeMarketplaceExtension {
-      vsix = vsix;
-      mktplcRef = {
-        publisher = builtins.elemAt name 0;
-        name = builtins.elemAt name 1;
-        version = "latest";
-      };
-    }
-  );
 }

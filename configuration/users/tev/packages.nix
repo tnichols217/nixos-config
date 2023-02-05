@@ -43,6 +43,8 @@
         libsForQt5.kdeconnect-kde
         musescore
 
+        # vscode
+
         obsidian
         stremio
         barrier
