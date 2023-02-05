@@ -6,7 +6,7 @@
     vscode = pkgs.vscodium;
     vscodeExtensions = [
       pkgs.vscode-extensions.bbenoist.nix
-    ]
+    ];
   });
   userSettings = {
     "[nix]"."editor.tabSize" = 2;
