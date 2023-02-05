@@ -3,7 +3,6 @@
 {
   enable = true;
   package = (pkgs.vscode-with-extensions.override {
-    vscode = pkgs.vscodium;
     vscodeExtensions = [
       pkgs.vscode-extensions.bbenoist.nix
     ];
