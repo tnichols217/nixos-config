@@ -301,6 +301,18 @@ in
       };
     };
   };
+  "/kxkbrc"= {
+    "Layout"= {
+      "items"= {
+        "DisplayNames"= ",";
+        "LayoutList"= "us,us";
+        "Options"= "terminate:ctrl_alt_bksp";
+        "ResetOldOptions"= "true";
+        "Use"= "true";
+        "VariantList"= ",dvorak";
+      };
+    };
+  }
   "/powermanagementprofilesrc"= {
     "AC"= {
       "items"= {
