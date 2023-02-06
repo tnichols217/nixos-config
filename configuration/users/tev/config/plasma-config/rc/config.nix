@@ -312,7 +312,7 @@ in
         "VariantList"= ",dvorak";
       };
     };
-  }
+  };
   "/powermanagementprofilesrc"= {
     "AC"= {
       "items"= {
