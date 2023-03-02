@@ -15,9 +15,6 @@ pkgs.callPackage ../../metapkgs/combine.metapkg.nix { pack = [
     if [ ! -f ~/.local/share/applications/steam.desktop ]; then
       sed 's/^Exec=/&nvidia-offload /' /run/current-system/sw/share/applications/steam.desktop > ~/.local/share/applications/steam.desktop
     fi
-    if [ ! -f ~/.local/share/applications/org.polymc.PolyMC.desktop ]; then
-      sed 's/^Exec=/&nvidia-offload /' /home/tev/.nix-profile/share/applications/org.polymc.PolyMC.desktop > ~/.local/share/applications/org.polymc.PolyMC.desktop
-    fi
     '' else ""}
     while true;
     do qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript '

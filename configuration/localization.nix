@@ -6,10 +6,6 @@
     supportedLocales = [
       "en_SG.UTF-8/UTF-8"
     ];
-    inputMethod = {
-      enabled = "fcitx5";
-      fcitx5.addons = with pkgs; [ fcitx5-chinese-addons ];
-    };
   };
   services.geoclue2.enable = true;
   services.localtimed.enable = true;
