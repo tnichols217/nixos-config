@@ -958,6 +958,7 @@ in
     };
   };
   "/plasma-org.kde.plasma.desktop-appletsrc"= {
+    # Desktop Applets
     "ActionPlugins"= {
       "groups"= {
         "0"= {
@@ -973,8 +974,10 @@ in
         };
       };
     };
+    # Panels
     "Containments"= {
       "groups"= {
+        # Desktop Background applet
         "2"= {
           "items"= {
             "ItemGeometriesHorizontal"= "";
@@ -1020,6 +1023,7 @@ in
             };
           };
         };
+        # Bottom Left Panel
         "3"= {
           "items"= {
             "activityId"= "";
@@ -1121,6 +1125,7 @@ in
             };
           };
         };
+        # Bottom Right Panel
         "10"= {
           "items"= {
             "activityId"= "";
@@ -1174,11 +1179,6 @@ in
                       "items"= {
                         "PreloadWeight"= "55";
                         "SystrayContainmentId"= "24";
-                      };
-                    };
-                    "General"= {
-                      "items"= {
-                        "extraItems"= "org.kde.plasma.volume,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.devicenotifier,org.kde.kscreen,org.kde.kdeconnect,org.kde.plasma.keyboardlayout,org.kde.plasma.keyboardindicator,org.kde.plasma.networkmanagement,touchpad,org.kde.plasma.clipboard,org.kde.plasma.notifications,Barrier,org.kde.plasma.printmanager";
                       };
                     };
                   };
@@ -1247,7 +1247,15 @@ in
             };
           };
         };
+        # Systray Bottom Right Panel
         "24"= {
+          "groups" = {
+            "General"= {
+              "items"= {
+                "extraItems"= "org.kde.plasma.volume,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.devicenotifier,org.kde.kscreen,org.kde.kdeconnect,org.kde.plasma.keyboardlayout,org.kde.plasma.keyboardindicator,org.kde.plasma.networkmanagement,touchpad,org.kde.plasma.clipboard,org.kde.plasma.notifications,Barrier,org.kde.plasma.printmanager";
+              };
+            };
+          };
           "items"= {
             "activityId"= "";
             "formfactor"= "2";
@@ -1258,6 +1266,7 @@ in
             "wallpaperplugin"= "org.kde.image";
           };
         };
+        # Top Panel
         "25"= {
           "items"= {
             "activityId"= "";
