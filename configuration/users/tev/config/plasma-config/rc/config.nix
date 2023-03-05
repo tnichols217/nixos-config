@@ -1252,7 +1252,7 @@ in
           "groups" = {
             "General"= {
               "items"= {
-                "extraItems"= "org.kde.plasma.volume,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.devicenotifier,org.kde.kscreen,org.kde.kdeconnect,org.kde.plasma.keyboardlayout,org.kde.plasma.keyboardindicator,org.kde.plasma.networkmanagement,touchpad,org.kde.plasma.clipboard,org.kde.plasma.notifications,Barrier,org.kde.plasma.printmanager";
+                "extraItems"= "org.kde.plasma.volume,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.devicenotifier,org.kde.kscreen,org.kde.kdeconnect,org.kde.plasma.keyboardlayout,org.kde.plasma.keyboardindicator,org.kde.plasma.networkmanagement,touchpad,org.kde.plasma.clipboard,org.kde.plasma.notifications,Barrier,org.kde.plasma.printmanager,org.kde.plasma.mediacontroller";
               };
             };
           };
