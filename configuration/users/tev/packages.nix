@@ -42,6 +42,7 @@
         kcalc
         libsForQt5.kdeconnect-kde
         musescore
+        pureref
 
         # vscode
 
@@ -60,7 +61,6 @@
         tdesktop
         whatsapp-for-linux
         minecraft
-        # polymc
         prismlauncher
 
         osu-lazer
