@@ -31,6 +31,7 @@
         pandoc
         rustc
         cargo
+        nvtop
 
         # programs
         filezilla
