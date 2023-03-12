@@ -47,6 +47,7 @@
         libsForQt5.kdeconnect-kde
         musescore
         pureref
+        audacity
 
         # vscode
 
