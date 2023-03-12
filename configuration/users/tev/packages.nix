@@ -32,6 +32,8 @@
         rustc
         cargo
         nvtop
+        qpwgraph
+        yt-dlp
 
         # programs
         filezilla
