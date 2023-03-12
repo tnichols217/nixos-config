@@ -34,6 +34,7 @@
         nvtop
         qpwgraph
         yt-dlp
+        ffmpeg
 
         # programs
         filezilla
