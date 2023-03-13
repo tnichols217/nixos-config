@@ -35,6 +35,8 @@
         qpwgraph
         yt-dlp
         ffmpeg
+        libtpms
+        swtpm
 
         # programs
         filezilla
