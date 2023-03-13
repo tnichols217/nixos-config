@@ -26,6 +26,7 @@
           ".local/share/Steam"
           ".steam"
           ".local/share/osu"
+          ".local/share/shapez.io"
           ".minecraft"
         ];
       };
