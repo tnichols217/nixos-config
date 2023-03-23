@@ -62,6 +62,7 @@
   
   environment.systemPackages = with pkgs; [
     nano
+    btrfs-progs
   ];
 
   system.stateVersion = version;
