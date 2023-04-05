@@ -27,6 +27,7 @@
           ".steam"
           ".local/share/osu"
           ".local/share/shapez.io"
+          ".local/share/lutris"
           ".minecraft"
         ];
       };
@@ -46,6 +47,7 @@
           ".local/share/kscreen"
           ".local/share/direnv/allow"
           ".local/share/MuseScore"
+          ".config/lutris"
           ".config/kdeconnect"
           ".config/VSCodium"
           ".config/discord"
