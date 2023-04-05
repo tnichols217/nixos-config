@@ -30,6 +30,7 @@
           ".local/share/lutris"
           ".minecraft"
           "Games"
+          ".wine"
         ];
       };
     };
