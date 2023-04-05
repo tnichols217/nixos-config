@@ -29,6 +29,7 @@
           ".local/share/shapez.io"
           ".local/share/lutris"
           ".minecraft"
+          "Games"
         ];
       };
     };
