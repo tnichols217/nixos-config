@@ -50,6 +50,7 @@
         musescore
         pureref
         audacity
+        lutris
 
         # vscode
 
