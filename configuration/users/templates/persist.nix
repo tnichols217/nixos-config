@@ -28,6 +28,7 @@
           ".local/share/osu"
           ".local/share/shapez.io"
           ".local/share/lutris"
+          ".local/share/SHENZHEN IO"
           ".minecraft"
           "Games"
           ".wine"
