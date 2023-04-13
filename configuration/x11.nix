@@ -6,6 +6,9 @@
     ];
   services.xserver.enable = true;
   services.printing.enable = true;
+  services.avahi.enable = true;
+  services.avahi.nssmdns = true;
+  services.avahi.openFirewall = true;
   services.xserver.libinput.enable = true;
   hardware.opengl.enable = true;
   services.xserver.videoDrivers = [ "nvidia" ];
