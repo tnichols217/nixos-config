@@ -9,6 +9,7 @@
   services.avahi.enable = true;
   services.avahi.nssmdns = true;
   services.avahi.openFirewall = true;
+  services.printing.drivers = [ pkgs.gutenprintBin pkgs.hplipWithPlugin pkgs.brgenml1lpr pkgs.brgenml1cupswrapper pkgs.cnijfilter2 ];
   services.xserver.libinput.enable = true;
   hardware.opengl.enable = true;
   services.xserver.videoDrivers = [ "nvidia" ];
