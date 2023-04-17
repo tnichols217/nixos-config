@@ -29,6 +29,7 @@
           ".local/share/shapez.io"
           ".local/share/lutris"
           ".local/share/SHENZHEN IO"
+          ".local/share/Celeste"
           ".minecraft"
           "Games"
           ".wine"
