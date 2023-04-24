@@ -38,6 +38,7 @@
         libtpms
         swtpm
         piper
+        darling-dmg
 
         # programs
         filezilla
