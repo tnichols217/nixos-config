@@ -37,6 +37,7 @@
         ffmpeg
         libtpms
         swtpm
+        piper
 
         # programs
         filezilla
