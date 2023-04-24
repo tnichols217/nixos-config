@@ -19,4 +19,5 @@
   hardware.video.hidpi.enable = true;
   hardware.bluetooth.enable = true;
   services.ratbagd.enable = true;
+  services.xserver.libinput.mouse.scrollMethod = "button";
 }
