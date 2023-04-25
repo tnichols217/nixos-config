@@ -20,4 +20,5 @@
   hardware.bluetooth.enable = true;
   services.ratbagd.enable = true;
   services.xserver.libinput.mouse.scrollMethod = "button";
+  services.xserver.libinput.mouse.scrollButton = 3;
 }
