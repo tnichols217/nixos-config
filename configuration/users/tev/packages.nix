@@ -39,7 +39,6 @@
         swtpm
         piper
         darling-dmg
-        firefox-devedition-bin
 
         # programs
         filezilla
