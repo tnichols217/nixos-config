@@ -47,6 +47,12 @@
       url = "git+https://gitlab.com/librewolf-community/settings.git/";
       flake = false;
     };
+
+    # nix-index
+    nix-index-database = {
+      url = "github:Mic92/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   
   outputs = { self, nixpkgs, nixos-generators, nix-index-database, ... }@attrs: let 
@@ -54,6 +60,7 @@
           attrs.home-manager.nixosModules.default
           attrs.impermanence.nixosModules.impermanence
           attrs.nur.nixosModules.nur
+          nix-index-database.nixosModules.nix-index
           ./configuration.nix
         ];
       version = "21.11";
