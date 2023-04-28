@@ -33,7 +33,7 @@
         };
       };
       nix-index.enable = true;
-      command-not-found.enable = pkg.lib.mkForce false;
+      command-not-found.enable = pkgs.lib.mkForce false;
       fish = {
         enable = true;
         shellAliases = {
