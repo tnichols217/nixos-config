@@ -39,6 +39,7 @@
         swtpm
         piper
         darling-dmg
+        comma
 
         # programs
         filezilla
