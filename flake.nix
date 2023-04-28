@@ -55,7 +55,7 @@
     };
   };
   
-  outputs = { self, nixpkgs, nixos-generators, ... }@attrs: let 
+  outputs = { self, nixpkgs, nixos-generators, nix-index-database, ... }@attrs: let 
       mods = [
           attrs.home-manager.nixosModules.default
           attrs.impermanence.nixosModules.impermanence
