@@ -60,7 +60,7 @@
           attrs.home-manager.nixosModules.default
           attrs.impermanence.nixosModules.impermanence
           attrs.nur.nixosModules.nur
-          nix-index-database.nixosModules.nix-index
+          # nix-index-database.nixosModules.nix-index
           ./configuration.nix
         ];
       version = "21.11";
