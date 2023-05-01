@@ -14,6 +14,7 @@
       ./configuration/virtualization.nix
       ./configuration/persistence.nix
       ./configuration/by-host.nix
+      ./configuration/flatpak.nix
     ];
 
   nix = {
@@ -46,9 +47,6 @@
         "python-2.7.18.6"
       ];
     };
-    overlays = [
-      attrs.prismlauncher.overlay
-    ];
   };
   nixpkgs.config = {
   };

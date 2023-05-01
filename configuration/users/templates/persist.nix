@@ -45,6 +45,7 @@
           ".nixops"
           ".mozilla"
           ".local/share/PolyMC" # move to prismlauncher
+          ".local/share/PrismLauncher" # move to prismlauncher
           ".local/share/barrier"
           ".local/share/TelegramDesktop"
           ".local/share/kwalletd"
