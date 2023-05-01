@@ -51,12 +51,6 @@
   nixpkgs.config = {
   };
 
-  oldnixpkgs = {
-    config = {
-      allowUnfree = true;
-    };
-  };
-
   boot.kernelPackages = pkgs.linuxPackages_zen;
 
   system.autoUpgrade = {
