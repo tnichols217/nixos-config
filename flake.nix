@@ -65,7 +65,7 @@
       version = "21.11";
       fullAttrs = {
         inherit attrs version;
-        oldpkgs = nixpkgs_old.legacyPackages.x86_64-linux;
+        oldpkgs = import nixpkgs_old { system = "x86_64-linux"; config = {allowUnfree = true;};};
         oldnixpkgs = nixpkgs_old;
       };
     in {
@@ -84,7 +84,7 @@
     packages.x86_64-linux = rec {
       iso = nixos-generators.nixosGenerate {
         specialArgs = fullAttrs // { host-name = "MSI"; };
-        pkgs = import nixpkgs { system = "x86_64-linux"; config = {allowUnfree = true;};};
+        pkgs = nixpkgs.legacyPackages.x86_64-linux;
         modules = mods;
         format = "iso";
       };
