@@ -20,7 +20,7 @@
     # ) ++ 
     [
       alefragnani.project-manager
-      bbenoist.QML
+      bbenoist.qml
       codezombiech.gitignore
       donjayamanne.git-extension-pack
       donjayamanne.githistory
@@ -29,12 +29,12 @@
       qwtel.sqlite-viewer
       svelte.svelte-vscode
       ziyasal.vscode-open-in-github
-      bbenoist.Nix
+      bbenoist.nix
       bierner.color-info
       christian-kohler.path-intellisense
       cssho.vscode-svgviewer
       ecmel.vscode-html-css
-      GrapeCity.gc-excelviewer
+      grapecity.gc-excelviewer
       jnoortheen.nix-ide
       ms-python.python
       ms-python.vscode-pylance
@@ -42,26 +42,25 @@
       ms-toolsai.jupyter-keymap
       ms-toolsai.jupyter-renderers
       redhat.vscode-xml
-      TabNine.tabnine-vscode
+      tabnine.tabnine-vscode
       tht13.html-preview-vscode
       tht13.python
       vscode-icons-team.vscode-icons
       yzane.markdown-pdf
       aaron-bond.better-comments
       redhat.java
-      AureliaEffect.aurelia
+      aureliaeffect.aurelia
       msjsdiag.debugger-for-chrome
       steoates.autoimport
-      EditorConfig.EditorConfig
+      editorconfig.editorconfig
       christian-kohler.path-intellisense
-      behzad88.Aurelia
+      behzad88.aurelia
       ms-dotnettools.csharp
       redhat.vscode-yaml
       rust-lang.rust-analyzer
-      Orta.vscode-twoslash-queries
+      orta.vscode-twoslash-queries
       paulober.pico-w-go
       firefox-devtools.vscode-firefox-debug
-      ms-dotnettools.csharp
     ];
   }) // { pname = "vscodium"; };
   userSettings = {
