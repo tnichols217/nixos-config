@@ -12,14 +12,15 @@ pkgs.wrapFirefox pkgs.firefox-esr-unwrapped {
         name = attrs.program-extensions.packages."x86_64-linux".default + "/firefox/" + x;
       in
       fetchFFAddon name
-    ) ++ [
-      ublock-origin
-      darkreader
-      sponsorblock
-      videospeed
-      ipfs-companion
-      simplelogin
-    ];
+    )
+    #  ++ [
+    #   ublock-origin
+    #   darkreader
+    #   sponsorblock
+    #   videospeed
+    #   ipfs-companion
+    #   simplelogin
+    # ];
 
   extraPolicies = {
 
