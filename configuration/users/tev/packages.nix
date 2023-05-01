@@ -1,4 +1,4 @@
-{ config, pkgs, username, attrs, host-name, nixpkgs, ... }:
+{ config, pkgs, username, attrs, host-name, nixpkgs, oldpkgs, ... }:
 {
   home-manager.users.${username} = {
     home = {
@@ -45,7 +45,8 @@
         filezilla
         filelight
         libreoffice
-        davinci-resolve
+        # Davinci doesnt work on the latest nixpkgs
+        oldpkgs.davinci-resolve
         lolcat
         htop
         kcalc
