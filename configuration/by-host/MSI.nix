@@ -24,16 +24,18 @@
     nvidiaBusId = "PCI:1:0:0";
   };
 
-  services.pipewire = {
-    config.pipewire-pulse = {
-      "pulse.properties" = {
-        "server.address" = [
-          "unix:native"
-          "tcp:4713"
-        ];
-      };
-    };
-  };
+  # TODO move pipewire config to config files instead
+
+  # services.pipewire = {
+  #   config.pipewire-pulse = {
+  #     "pulse.properties" = {
+  #       "server.address" = [
+  #         "unix:native"
+  #         "tcp:4713"
+  #       ];
+  #     };
+  #   };
+  # };
 
   nix.distributedBuilds = true;
 

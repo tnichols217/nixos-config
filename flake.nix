@@ -33,10 +33,6 @@
       flake = false;
     };
 
-    prismlauncher = {
-      url = "github:PrismLauncher/PrismLauncher";
-    };
-
     # addons
     program-extensions = {
       url = "github:tnichols217/nixos-program-extensions";

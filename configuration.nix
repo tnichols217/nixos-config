@@ -38,7 +38,10 @@
     };
   };
 
-  programs.steam.enable = true;
+  programs = {
+    steam.enable = true;
+    fish.enable = true;
+  };
 
   nixpkgs = {
     config = {
