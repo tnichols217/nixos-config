@@ -1,8 +1,7 @@
-{ pkgs, attrs }:
-
+{ pkgs, attrs, config, vscode_exts, openvsx_exts }:
 {
   enable = true;
-  package = (pkgs.vscode-with-extensions.override {
+  package = with vscode_exts; (pkgs.vscode-with-extensions.override {
     vscode = pkgs.vscodium;
     vscodeExtensions = pkgs.lib.lists.forEach (builtins.attrNames (builtins.readDir (attrs.program-extensions.packages."x86_64-linux".default + "/vscode"))) (x: 
       let 
@@ -17,7 +16,51 @@
           version = "latest";
         };
       }
-    );
+    ) ++ [
+      alefragnani.project-manager
+      bbenoist.QML
+      codezombiech.gitignore
+      donjayamanne.git-extension-pack
+      donjayamanne.githistory
+      eamodio.gitlens
+      mhutchie.git-graph
+      qwtel.sqlite-viewer
+      svelte.svelte-vscode
+      ziyasal.vscode-open-in-github
+      bbenoist.Nix
+      bierner.color-info
+      christian-kohler.path-intellisense
+      cssho.vscode-svgviewer
+      ecmel.vscode-html-css
+      GrapeCity.gc-excelviewer
+      jnoortheen.nix-ide
+      ms-python.python
+      ms-python.vscode-pylance
+      ms-toolsai.jupyter
+      ms-toolsai.jupyter-keymap
+      ms-toolsai.jupyter-renderers
+      redhat.vscode-xml
+      TabNine.tabnine-vscode
+      tht13.html-preview-vscode
+      tht13.python
+      vscode-icons-team.vscode-icons
+      yzane.markdown-pdf
+      aaron-bond.better-comments
+      redhat.java
+      AureliaEffect.aurelia
+      msjsdiag.debugger-for-chrome
+      steoates.autoimport
+      EditorConfig.EditorConfig
+      christian-kohler.path-intellisense
+      behzad88.Aurelia
+      ms-dotnettools.csharp
+      redhat.vscode-yaml
+      rust-lang.rust-analyzer
+      Orta.vscode-twoslash-queries
+      paulober.pico-w-go
+      firefox-devtools.vscode-firefox-debug
+      ms-dotnettools.csharp
+    ];
   }) // { pname = "vscodium"; };
   userSettings = {
     "[nix]"."editor.tabSize" = 2;

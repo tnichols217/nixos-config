@@ -40,6 +40,9 @@
     program-extensions = {
       url = "github:tnichols217/nixos-program-extensions";
     };
+    nix-vscode-extensions = {
+      url = "github:nix-community/nix-vscode-extensions";
+    };
 
     # firefox addons
     librewolfConfig = {
@@ -54,7 +57,7 @@
     };
   };
   
-  outputs = { self, nixpkgs, nixos-generators, nix-index-database, nixpkgs_old, ... }@attrs: let 
+  outputs = { self, nixpkgs, nixos-generators, nix-index-database, nixpkgs_old, nix-vscode-extensions, ... }@attrs: let 
       mods = [
           attrs.home-manager.nixosModules.default
           attrs.impermanence.nixosModules.impermanence
@@ -66,7 +69,8 @@
       fullAttrs = {
         inherit attrs version;
         oldpkgs = import nixpkgs_old { system = "x86_64-linux"; config = {allowUnfree = true;};};
-        oldnixpkgs = nixpkgs_old;
+        vscode_exts = attrs.nix-vscode-extensions.extensions.x86_64-linux.vscode-marketplace;
+        openvsx_exts = attrs.nix-vscode-extensions.extensions.x86_64-linux.open-vsx;
       };
     in {
     nixosConfigurations = {

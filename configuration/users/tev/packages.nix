@@ -1,4 +1,4 @@
-{ config, pkgs, username, attrs, host-name, nixpkgs, oldpkgs, ... }:
+{ config, pkgs, username, attrs, host-name, nixpkgs, oldpkgs, vscode_exts, openvsx_exts, ... }:
 {
   home-manager.users.${username} = {
     home = {
@@ -81,7 +81,7 @@
         (callPackage ./packages/papirus-icons.pkg.nix { papirus = attrs.papirus; })
         (callPackage ./packages/kwin-scripts.pkg.nix {})
         (callPackage ./packages/konsole-themes.pkg.nix {})
-        (callPackage ./packages/firefox.pkg.nix { inherit attrs; })
+        (callPackage ./packages/firefox.pkg.nix { inherit attrs config; })
       ];
     };
     programs = {
@@ -122,7 +122,7 @@
           };
         };
       };
-      vscode = import ./packages/vscode.nix ({ inherit pkgs attrs; });
+      vscode = import ./packages/vscode.nix ({ inherit pkgs attrs config vscode_exts openvsx_exts; });
       obs-studio = {
         enable = true;
       };

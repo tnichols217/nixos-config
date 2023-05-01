@@ -1,15 +1,25 @@
-{ pkgs, attrs, ... }:
+{ pkgs, attrs, config, ... }:
 
+let 
+  firefox_exts = config.nur.repos.rycee.firefox-addons;
+in
 pkgs.wrapFirefox pkgs.firefox-esr-unwrapped {
-  nixExtensions = let
-  fetchFFAddon = pkgs.callPackage (import ./firefox/fetchFirefoxAddonFlake.metapkg.nix) {};
+  nixExtensions = with firefox_exts; let
+    fetchFFAddon = pkgs.callPackage (import ./firefox/fetchFirefoxAddonFlake.metapkg.nix) {};
   in
-  pkgs.lib.lists.forEach (builtins.attrNames (builtins.readDir (attrs.program-extensions.packages."x86_64-linux".default + "/firefox"))) (x: 
-    let 
-      name = attrs.program-extensions.packages."x86_64-linux".default + "/firefox/" + x;
-    in
-    fetchFFAddon name
-  );
+    pkgs.lib.lists.forEach (builtins.attrNames (builtins.readDir (attrs.program-extensions.packages."x86_64-linux".default + "/firefox"))) (x: 
+      let 
+        name = attrs.program-extensions.packages."x86_64-linux".default + "/firefox/" + x;
+      in
+      fetchFFAddon name
+    ) ++ [
+      ublock-origin
+      darkreader
+      sponsorblock
+      videospeed
+      ipfs-companion
+      simplelogin
+    ];
 
   extraPolicies = {
 
@@ -84,5 +94,6 @@ pkgs.wrapFirefox pkgs.firefox-esr-unwrapped {
       defaultPref("privacy.clearOnShutdown.offlineApps", false);
       defaultPref("security.identityblock.show_extended_validation", true);
       defaultPref("browser.tabs.insertAfterCurrent", true);
+      defaultPref("dom.importMaps.enabled", true);
     '' ;
 }
