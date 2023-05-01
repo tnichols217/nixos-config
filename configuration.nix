@@ -46,12 +46,15 @@
   nixpkgs = {
     config = {
       allowUnfree = true;
-      permittedInsecurePackages = [
-        "python-2.7.18.6"
-      ];
     };
   };
   nixpkgs.config = {
+  };
+
+  oldnixpkgs = {
+    config = {
+      allowUnfree = true;
+    };
   };
 
   boot.kernelPackages = pkgs.linuxPackages_zen;

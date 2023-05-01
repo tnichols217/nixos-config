@@ -66,6 +66,7 @@
       fullAttrs = {
         inherit attrs version;
         oldpkgs = nixpkgs_old.legacyPackages.x86_64-linux;
+        oldnixpkgs = nixpkgs_old;
       };
     in {
     nixosConfigurations = {
