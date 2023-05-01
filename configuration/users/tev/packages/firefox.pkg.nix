@@ -20,7 +20,8 @@ pkgs.wrapFirefox pkgs.firefox-esr-unwrapped {
     #   videospeed
     #   ipfs-companion
     #   simplelogin
-    # ];
+    # ]
+    ;
 
   extraPolicies = {
 
