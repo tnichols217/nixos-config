@@ -4,6 +4,7 @@
     hideMounts = false;
     directories = [
       "/var/lib/libvirt"
+      "/var/lib/waydroid"
     ];
   };
 }
