@@ -32,7 +32,6 @@
       bbenoist.nix
       bierner.color-info
       christian-kohler.path-intellisense
-      cssho.vscode-svgviewer
       ecmel.vscode-html-css
       grapecity.gc-excelviewer
       jnoortheen.nix-ide
