@@ -3,20 +3,22 @@
   enable = true;
   package = with vscode_exts; (pkgs.vscode-with-extensions.override {
     vscode = pkgs.vscodium;
-    vscodeExtensions = pkgs.lib.lists.forEach (builtins.attrNames (builtins.readDir (attrs.program-extensions.packages."x86_64-linux".default + "/vscode"))) (x: 
-      let 
-        vsix = attrs.program-extensions.packages."x86_64-linux".default + "/vscode/" + x;
-        name = pkgs.lib.strings.splitString "." x;
-      in
-      pkgs.vscode-utils.buildVscodeMarketplaceExtension {
-        vsix = vsix;
-        mktplcRef = {
-          publisher = builtins.elemAt name 0;
-          name = builtins.elemAt name 1;
-          version = "latest";
-        };
-      }
-    ) ++ [
+    vscodeExtensions = 
+    # pkgs.lib.lists.forEach (builtins.attrNames (builtins.readDir (attrs.program-extensions.packages."x86_64-linux".default + "/vscode"))) (x: 
+    #   let 
+    #     vsix = attrs.program-extensions.packages."x86_64-linux".default + "/vscode/" + x;
+    #     name = pkgs.lib.strings.splitString "." x;
+    #   in
+    #   pkgs.vscode-utils.buildVscodeMarketplaceExtension {
+    #     vsix = vsix;
+    #     mktplcRef = {
+    #       publisher = builtins.elemAt name 0;
+    #       name = builtins.elemAt name 1;
+    #       version = "latest";
+    #     };
+    #   }
+    # ) ++ 
+    [
       alefragnani.project-manager
       bbenoist.QML
       codezombiech.gitignore
