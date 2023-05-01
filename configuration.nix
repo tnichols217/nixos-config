@@ -14,7 +14,7 @@
       ./configuration/virtualization.nix
       ./configuration/persistence.nix
       ./configuration/by-host.nix
-      ./configuration/flatpak.nix
+      ./configuration/programs.nix
     ];
 
   nix = {
