@@ -76,6 +76,6 @@
     "tabnine.experimentalAutoImports" = true;
     "java.inlayHints.parameterNames.enabled" = "all";
     "git.autofetch" = true;
-    "omnisharp.path" = "latest";
+    "omnisharp.path" = "${pkgs.omnisharp-roslyn + "/bin/OmniSharp"}";
   };
 }
