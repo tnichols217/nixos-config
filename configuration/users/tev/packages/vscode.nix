@@ -54,7 +54,8 @@
       editorconfig.editorconfig
       christian-kohler.path-intellisense
       behzad88.aurelia
-      ms-dotnettools.csharp
+      # ms-dotnettools.csharp
+      openvsx_exts.muhammad-sammy.csharp
       redhat.vscode-yaml
       rust-lang.rust-analyzer
       orta.vscode-twoslash-queries
