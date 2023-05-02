@@ -76,5 +76,6 @@
     "tabnine.experimentalAutoImports" = true;
     "java.inlayHints.parameterNames.enabled" = "all";
     "git.autofetch" = true;
+    "omnisharp.path" = "latest";
   };
 }
