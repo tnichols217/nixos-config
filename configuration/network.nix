@@ -17,4 +17,8 @@
       "time3.google.com"
       "time4.google.com"
   ];
+
+  services.dbus.packages = [
+    pkgs.miraclecast
+  ];
 }
