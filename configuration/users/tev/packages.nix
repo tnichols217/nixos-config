@@ -40,6 +40,7 @@
         piper
         darling-dmg
         comma
+        miraclecast
 
         # programs
         filezilla
