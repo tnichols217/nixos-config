@@ -306,7 +306,7 @@ in
       "items"= {
         "DisplayNames"= ",";
         "LayoutList"= "us,us";
-        "Options"= "terminate:ctrl_alt_bksp,compose:ralt";
+        "Options"= "terminate:ctrl_alt_bksp,compose:ralt,grp:win_space_toggle";
         "ResetOldOptions"= "true";
         "Use"= "true";
         "VariantList"= ",dvorak";
