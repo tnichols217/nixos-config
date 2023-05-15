@@ -41,6 +41,7 @@
         darling-dmg
         comma
         miraclecast
+        mpv
 
         # programs
         filezilla
