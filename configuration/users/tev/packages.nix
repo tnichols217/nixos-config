@@ -42,6 +42,8 @@
         comma
         miraclecast
         mpv
+        imagemagick
+        pdfslicer
 
         # programs
         filezilla
