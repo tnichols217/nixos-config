@@ -44,6 +44,7 @@
         mpv
         imagemagick
         pdfslicer
+        sonic-visualiser
 
         # programs
         filezilla
