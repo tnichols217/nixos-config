@@ -7,5 +7,5 @@
     ];
   users.mutableUsers = false;
   users.defaultUserShell = pkgs.fish;
-  services.logind.extraConfig = "RuntimeDirectorySize=100%"
+  services.logind.extraConfig = "RuntimeDirectorySize=100%";
 }
