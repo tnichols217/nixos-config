@@ -14,7 +14,7 @@
         meld
         neofetch
         gparted
-        docker
+        podman
         yarn
         nodejs
         nodePackages.nodemon
