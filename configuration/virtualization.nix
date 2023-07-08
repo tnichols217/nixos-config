@@ -2,8 +2,8 @@
 {
   virtualisation = {
     libvirtd.enable = true;
-    virtualisation.podman.enable = true;
-    virtualisation.podman.dockerSocket.enable = true;
-    virtualisation.podman.defaultNetwork.dnsname.enable = true;
+    podman.enable = true;
+    podman.dockerSocket.enable = true;
+    podman.defaultNetwork.dnsname.enable = true;
   };
 }
