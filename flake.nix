@@ -65,7 +65,7 @@
           # nix-index-database.nixosModules.nix-index
           ./configuration.nix
         ];
-      version = "21.11";
+      version = "23.05";
       fullAttrs = {
         inherit attrs version;
         oldpkgs = import nixpkgs_old { system = "x86_64-linux"; config = {allowUnfree = true;};};
