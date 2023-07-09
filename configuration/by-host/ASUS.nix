@@ -134,13 +134,10 @@
   };
 
   virtualisation.arion = {
-    virtualisation.arion = {
-      backend = "podman-socket";
-      projects.minecraft.settings = {
-        imports = [ attrs.minecraft-arion.arion-module ];
-      };
+    backend = "podman-socket";
+    projects.minecraft.settings = {
+      imports = [ attrs.minecraft-arion.arion-module ];
     };
-
   };
 
   # TODO move pipewire config to config files instead
