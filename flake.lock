@@ -16,6 +16,28 @@
         "type": "github"
       }
     },
+    "arion": {
+      "inputs": {
+        "flake-parts": "flake-parts",
+        "haskell-flake": "haskell-flake",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1682181677,
+        "narHash": "sha256-El8WQ2ccxWwkSrjuwKNR0gD/O7vS/KLBY4Q2/nF8m1c=",
+        "owner": "hercules-ci",
+        "repo": "arion",
+        "rev": "6a1f03329c400327b3b2e0ed5e1efff11037ba67",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hercules-ci",
+        "repo": "arion",
+        "type": "github"
+      }
+    },
     "btf": {
       "flake": false,
       "locked": {
@@ -30,6 +52,22 @@
         "owner": "oh-my-fish",
         "repo": "theme-bobthefish",
         "type": "github"
+      }
+    },
+    "bungeecord": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1688551103,
+        "narHash": "sha256-ngkOwqcN4OTDhNRQchP42RJzZNWgtDhbzwQ6/KSfjyo=",
+        "ref": "refs/heads/master",
+        "rev": "9f5ace9025cc28d4d1f43e0a1cd4fddd6505c4dc",
+        "revCount": 1900,
+        "type": "git",
+        "url": "https://github.com/SpigotMC/BungeeCord"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://github.com/SpigotMC/BungeeCord"
       }
     },
     "chili": {
@@ -64,9 +102,48 @@
         "type": "github"
       }
     },
+    "flake-parts": {
+      "inputs": {
+        "nixpkgs-lib": [
+          "arion",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1675933616,
+        "narHash": "sha256-/rczJkJHtx16IFxMmAWu5nNYcSXNg1YYXTHoGjLrLUA=",
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "rev": "47478a4a003e745402acf63be7f9a092d51b83d7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "type": "github"
+      }
+    },
     "flake-utils": {
       "inputs": {
         "systems": "systems"
+      },
+      "locked": {
+        "lastModified": 1687709756,
+        "narHash": "sha256-Y5wKlQSkgEK2weWdOu4J3riRd+kV/VCgHsqLNTTWQ/0=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "dbabf0ca0c0c4bce6ea5eaf65af5cb694d2082c7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "flake-utils_2": {
+      "inputs": {
+        "systems": "systems_2"
       },
       "locked": {
         "lastModified": 1681202837,
@@ -82,7 +159,7 @@
         "type": "github"
       }
     },
-    "flake-utils_2": {
+    "flake-utils_3": {
       "locked": {
         "lastModified": 1659877975,
         "narHash": "sha256-zllb8aq3YO3h8B/U0/J1WBgAL8EX5yWf5pMj3G0NAmc=",
@@ -97,9 +174,27 @@
         "type": "github"
       }
     },
+    "haskell-flake": {
+      "locked": {
+        "lastModified": 1675296942,
+        "narHash": "sha256-u1X1sblozi5qYEcLp1hxcyo8FfDHnRUVX3dJ/tW19jY=",
+        "owner": "srid",
+        "repo": "haskell-flake",
+        "rev": "c2cafce9d57bfca41794dc3b99c593155006c71e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "srid",
+        "ref": "0.1.0",
+        "repo": "haskell-flake",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": [
+          "nixpkgs"
+        ]
       },
       "locked": {
         "lastModified": 1686778999,
@@ -146,6 +241,49 @@
         "url": "https://gitlab.com/librewolf-community/settings.git/"
       }
     },
+    "mavenix": {
+      "inputs": {
+        "nixpkgs": "nixpkgs",
+        "utils": "utils"
+      },
+      "locked": {
+        "lastModified": 1643802645,
+        "narHash": "sha256-BynM25iwp/l3FyrcHqiNJdDxvN6IxSM3/zkFR6PD3B0=",
+        "owner": "nix-community",
+        "repo": "mavenix",
+        "rev": "ce9ddfd7f361190e8e8dcfaf6b8282eebbb3c7cb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "mavenix",
+        "type": "github"
+      }
+    },
+    "minecraft-arion": {
+      "inputs": {
+        "bungeecord": "bungeecord",
+        "flake-utils": "flake-utils",
+        "mavenix": "mavenix",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "spigot": "spigot"
+      },
+      "locked": {
+        "lastModified": 1688915151,
+        "narHash": "sha256-oo+Ipd3W0HXaoOGOiyFZqrBepq+q5dDgVroPj/wyB80=",
+        "owner": "tnichols217",
+        "repo": "nix-minecraft-server",
+        "rev": "890ebeedcdc9f1a00fa8754a43c75a36f745d4b6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tnichols217",
+        "repo": "nix-minecraft-server",
+        "type": "github"
+      }
+    },
     "nix-index-database": {
       "inputs": {
         "nixpkgs": [
@@ -169,7 +307,7 @@
     "nix-vscode-extensions": {
       "inputs": {
         "flake-compat": "flake-compat",
-        "flake-utils": "flake-utils",
+        "flake-utils": "flake-utils_2",
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
@@ -224,18 +362,16 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1686501370,
-        "narHash": "sha256-G0WuM9fqTPRc2URKP9Lgi5nhZMqsfHGrdEbrLvAPJcg=",
-        "owner": "nixos",
+        "lastModified": 1621552131,
+        "narHash": "sha256-AD/AEXv+QOYAg0PIqMYv2nbGOGTIwfOGKtz3rE+y+Tc=",
+        "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "75a5ebf473cd60148ba9aec0d219f72e5cf52519",
+        "rev": "d42cd445dde587e9a993cd9434cb43da07c4c5de",
         "type": "github"
       },
       "original": {
-        "owner": "nixos",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
+        "id": "nixpkgs",
+        "type": "indirect"
       }
     },
     "nixpkgs_2": {
@@ -335,7 +471,7 @@
     },
     "program-extensions": {
       "inputs": {
-        "flake-utils": "flake-utils_2",
+        "flake-utils": "flake-utils_3",
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
@@ -355,11 +491,13 @@
     "root": {
       "inputs": {
         "arch-theme": "arch-theme",
+        "arion": "arion",
         "btf": "btf",
         "chili": "chili",
         "home-manager": "home-manager",
         "impermanence": "impermanence",
         "librewolfConfig": "librewolfConfig",
+        "minecraft-arion": "minecraft-arion",
         "nix-index-database": "nix-index-database",
         "nix-vscode-extensions": "nix-vscode-extensions",
         "nixos-generators": "nixos-generators",
@@ -368,6 +506,22 @@
         "nur": "nur",
         "papirus": "papirus",
         "program-extensions": "program-extensions"
+      }
+    },
+    "spigot": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1687164037,
+        "narHash": "sha256-EO/wfsn1t8nc26x1kJaJwudCV/hN+k9ORCYnYgldSNs=",
+        "ref": "refs/heads/master",
+        "rev": "2836244c7570cce607f5b5d124bdc7b4f28aa0ee",
+        "revCount": 155,
+        "type": "git",
+        "url": "https://hub.spigotmc.org/stash/scm/spigot/buildtools.git"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://hub.spigotmc.org/stash/scm/spigot/buildtools.git"
       }
     },
     "systems": {
@@ -382,6 +536,36 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
+        "type": "github"
+      }
+    },
+    "systems_2": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    },
+    "utils": {
+      "locked": {
+        "lastModified": 1620759905,
+        "narHash": "sha256-WiyWawrgmyN0EdmiHyG2V+fqReiVi8bM9cRdMaKQOFg=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "b543720b25df6ffdfcf9227afafc5b8c1fabfae8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
         "type": "github"
       }
     }

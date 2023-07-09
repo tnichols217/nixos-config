@@ -12,11 +12,9 @@
     };
     impermanence = {
       url = github:nix-community/impermanence;
-      inputs.nixpkgs.follows = "nixpkgs";
     };
     nur = {
       url = github:nix-community/NUR;
-      inputs.nixpkgs.follows = "nixpkgs";
     };
     arion = {
       url = github:hercules-ci/arion;
