@@ -135,7 +135,7 @@
   };
 
   nixpkgs.overlays = [
-    attrs.minecraft-arion.overlays.default
+    attrs.minecraft-arion.overlays.x86_64-linux
   ];
 
   virtualisation.arion = {
