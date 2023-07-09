@@ -134,6 +134,10 @@
     };
   };
 
+  nixpkgs.overlays = [
+    attrs.minecraft-arion.overlays.default
+  ];
+
   virtualisation.arion = {
     backend = "podman-socket";
     projects.minecraft.settings = {
