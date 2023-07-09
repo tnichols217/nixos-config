@@ -8,15 +8,26 @@
     };
     home-manager = {
       url = github:nix-community/home-manager;
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     impermanence = {
       url = github:nix-community/impermanence;
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     nur = {
       url = github:nix-community/NUR;
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    arion = {
+      url = github:hercules-ci/arion;
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     nixos-generators = {
       url = "github:nix-community/nixos-generators";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    minecraft-arion = {
+      url = "github:tnichols217/nix-minecraft-server";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     btf = {
@@ -57,7 +68,7 @@
     };
   };
   
-  outputs = { self, nixpkgs, nixos-generators, nix-index-database, nixpkgs_old, nix-vscode-extensions, ... }@attrs: let 
+  outputs = { self, nixpkgs, nixos-generators, nix-index-database, nixpkgs_old, nix-vscode-extensions, arion, minecraft-arion, ... }@attrs: let 
       mods = [
           attrs.home-manager.nixosModules.default
           attrs.impermanence.nixosModules.impermanence
@@ -82,7 +93,7 @@
       ASUS = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = fullAttrs // { host-name = "ASUS"; };
-        modules = mods;
+        modules = mods ++ [ arion.nixosModules.arion ];
       };
     };
     packages.x86_64-linux = rec {

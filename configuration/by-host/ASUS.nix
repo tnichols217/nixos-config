@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, attrs, ... }:
 {
   networking.wireless = {
     enable = true;
@@ -131,6 +131,16 @@
       fsType = "ext4";
       neededForBoot = false;
     };
+  };
+
+  virtualisation.arion = {
+    virtualisation.arion = {
+      backend = "podman-socket";
+      projects.minecraft.settings = {
+        imports = [ attrs.minecraft-arion.arion-module ];
+      };
+    };
+
   };
 
   # TODO move pipewire config to config files instead
