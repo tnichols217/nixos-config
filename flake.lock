@@ -271,11 +271,11 @@
         "spigot": "spigot"
       },
       "locked": {
-        "lastModified": 1688966255,
-        "narHash": "sha256-JC4qK+P6ZQ9zpnARQW2+h/OTKaSQeCMAyYmpD/KLvUg=",
+        "lastModified": 1688966750,
+        "narHash": "sha256-4rBuBwe1Hv3BlUezLZbzFVplJ5fc1l21Zyy/aFYNsBs=",
         "owner": "tnichols217",
         "repo": "nix-minecraft-server",
-        "rev": "7106768f77914bfdee877536801c1b1e64dadd47",
+        "rev": "b97cf33f0d635dddd9b4619e1fa0277e67ecaff1",
         "type": "github"
       },
       "original": {
