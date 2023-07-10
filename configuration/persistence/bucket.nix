@@ -5,7 +5,7 @@
     directories = [
       "/var/lib/libvirt"
       "/var/lib/waydroid"
-      "/var/lib/containers/storage/volumes"
+      "/var/lib/container-storage/volumes"
     ];
   };
 }
