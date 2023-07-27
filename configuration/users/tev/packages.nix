@@ -60,6 +60,7 @@
         pureref
         audacity
         lutris
+        dolphin-emu
 
         # vscode
 
