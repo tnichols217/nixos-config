@@ -61,6 +61,7 @@
         audacity
         lutris
         dolphin-emu
+        qbittorrent
 
         # vscode
 
