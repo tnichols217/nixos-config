@@ -30,6 +30,7 @@
           ".local/share/lutris"
           ".local/share/SHENZHEN IO"
           ".local/share/Celeste"
+          ".local/share/dolphin-emu"
           ".minecraft"
           "Games"
           ".wine"
@@ -63,6 +64,7 @@
           ".config/spotify"
           ".config/obs-studio/basic"
           ".config/obs-studio/plugin_config"
+          ".config/dolphin-emu"
         ];
         files = pkgs.lib.lists.map mapFile [
           ".config/gh/hosts.yml"
