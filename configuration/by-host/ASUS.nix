@@ -223,9 +223,10 @@
     virtualHosts = {
       "pigsgo.mooo.com" = {
         locations."/".proxyPass = "http://${config.services.nix-serve.bindAddress}:${toString config.services.nix-serve.port}";
-        # useACMEHost = "pigsgo.mooo.com";
-        sslCertificateKey = "/var/lib/acme/pigsgo.mooo.com/key.pem";
-        sslCertificate = "/var/lib/acme/pigsgo.mooo.com/cert.pem";
+        useACMEHost = "pigsgo.mooo.com";
+        forceSSL = true;
+        # sslCertificateKey = "/var/lib/acme/pigsgo.mooo.com/key.pem";
+        # sslCertificate = "/var/lib/acme/pigsgo.mooo.com/cert.pem";
         listen = [
           {
             addr = "0.0.0.0";
