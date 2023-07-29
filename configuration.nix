@@ -21,9 +21,10 @@
     package = pkgs.nixVersions.stable;
     extraOptions = ''experimental-features = nix-command flakes'';
     settings = {
-      substituters = [
+      trusted-substituters = [
         "https://cache.nixos.org/"
         "https://tnichols217-nixos-config.cachix.org"
+        "https://pigsgo.mooo.com:5000/"
       ];
       trusted-public-keys = [
         "tnichols217-nixos-config.cachix.org-1:B9JhBiPS+OHykLW16qovoOelAvtdH5sIjYU7BZvs7q8="
