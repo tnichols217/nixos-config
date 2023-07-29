@@ -8,6 +8,7 @@
       "/var/lib/bluetooth"
       "/var/lib/acme"
       "/var/lib/systemd/coredump"
+      "/var/lib/nix-serve"
       "/etc/NetworkManager/system-connections"
       "/etc/letsencrypt"
       # "/etc/ssh"

@@ -196,8 +196,43 @@
   #   };
   # };
 
+  systemd.services."generate-nix-serve-certs" = {
+    serviceConfig.Type = "oneshot";
+    path = with pkgs; [ nix ];
+    script = ''
+      if [ -f "/var/lib/nix-serve/cache-priv-key.pem" ] && [ -f "/var/lib/nix-serve/cache-pub-key.pem" ]; then
+        nix-store --generate-binary-cache-key pigsgo.mooo.com /var/lib/nix-serve/cache-priv-key.pem /var/lib/nix-serve/cache-pub-key.pem
+        chown nix-serve cache-priv-key.pem
+        chmod 600 cache-priv-key.pem
+      fi
+    '';
+    wantedBy = ["multi-user.target"];
+    
+  };
+
   services.nix-serve = {
     enable = true;
+    port = 4999;
+  };
+
+  services.nginx = {
+    enable = true;
+    recommendedProxySettings = true;
+    virtualHosts = {
+      "pigsgo.mooo.com" = {
+        locations."/".proxyPass = "http://${config.services.nix-serve.bindAddress}:${toString config.services.nix-serve.port}";
+        useACMEHost = "pigsgo.mooo.com";
+        listen = [
+          [
+            {
+              addr = "0.0.0.0";
+              port = 5000;
+              ssl = true;
+            }
+          ]
+        ];
+      };
+    };
   };
 
   hardware.nvidia = {
