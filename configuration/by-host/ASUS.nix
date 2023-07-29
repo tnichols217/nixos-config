@@ -215,6 +215,8 @@
     port = 4999;
   };
 
+  users.users.nginx.extraGroups = ["wwwrun"];
+
   services.nginx = {
     enable = true;
     recommendedProxySettings = true;
