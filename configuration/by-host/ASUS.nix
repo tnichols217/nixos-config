@@ -225,13 +225,11 @@
         locations."/".proxyPass = "http://${config.services.nix-serve.bindAddress}:${toString config.services.nix-serve.port}";
         useACMEHost = "pigsgo.mooo.com";
         listen = [
-          [
-            {
-              addr = "0.0.0.0";
-              port = 5000;
-              ssl = true;
-            }
-          ]
+          {
+            addr = "0.0.0.0";
+            port = 5000;
+            ssl = true;
+          }
         ];
       };
     };
