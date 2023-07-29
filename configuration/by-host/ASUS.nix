@@ -1,4 +1,4 @@
-{ pkgs, attrs, ... }:
+{ pkgs, attrs, config, ... }:
 {
   networking.wireless = {
     enable = true;
