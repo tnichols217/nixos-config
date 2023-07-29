@@ -51,7 +51,8 @@
         filelight
         libreoffice
         # Davinci doesnt work on the latest nixpkgs
-        oldpkgs.davinci-resolve
+        # oldpkgs.davinci-resolve
+        pkgs.callPackage ./packages/dainci.nix {}
         lolcat
         htop
         kcalc

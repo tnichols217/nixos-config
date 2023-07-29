@@ -14,12 +14,12 @@
   hardware.opengl.enable = true;
   services.xserver.videoDrivers = [ "nvidia" ];
   fonts = {
-    fonts = with pkgs; [
+    packages = with pkgs; [
       nerdfonts
       noto-fonts
       noto-fonts-cjk
       noto-fonts-emoji
     ];
-    enableDefaultFonts = true;
+    enableDefaultPackages = true;
   };
 }
