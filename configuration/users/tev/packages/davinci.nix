@@ -47,7 +47,7 @@ let
         rec {
           outputHashMode = "recursive";
           outputHashAlgo = "sha256";
-          outputHash = "sha256-yUKT1x5LrzdGLDZjZDeTvNgRAzeR+rn18AGY5Mn+5As=";
+          outputHash = "sha256-u9SD814h/ULy0vXxChZUnko2xZdFCelR9u7UImV6MYo=";
 
           impureEnvVars = lib.fetchers.proxyImpureEnvVars;
 
