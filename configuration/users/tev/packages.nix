@@ -52,7 +52,7 @@
         libreoffice
         # Davinci doesnt work on the latest nixpkgs
         # oldpkgs.davinci-resolve
-        (pkgs.callPackage ./packages/dainci.nix {})
+        (pkgs.callPackage ./packages/davinci.nix {})
         lolcat
         htop
         kcalc
