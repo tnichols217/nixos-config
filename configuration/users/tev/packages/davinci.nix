@@ -98,10 +98,11 @@ let
           "$SITEURL")
 
         echo $RESOLVEURL
+        
+          # --header "Host: sw.cloud.blackmagicdesign.com" \
 
         curl \
           --retry 3 --retry-delay 3 \
-          # --header "Host: sw.cloud.blackmagicdesign.com" \
           --header "Upgrade-Insecure-Requests: 1" \
           --header "$USERAGENT" \
           --header "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8" \
