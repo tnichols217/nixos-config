@@ -21,6 +21,7 @@
     enable = true;
     hostName = "pigsgo.mooo.com";
     package = pkgs.nextcloud27;
+    configureRedis = true;
     # nginx.enable = true;
 
     https = true;
@@ -39,6 +40,10 @@
 
       adminpassFile = "/var/lib/nextcloud/admin-pass";
       adminuser = "admin";
- };
-};
+    };
+    phpOptions = {
+      upload_max_filesize = "64G";
+      post_max_size = "64G";
+    };
+  };
 }
