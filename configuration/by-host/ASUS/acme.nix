@@ -5,7 +5,7 @@
     defaults = {
       webroot = "/var/lib/acme/acme-challenge";
       email = "62992267+tnichols217@users.noreply.github.com";
-      group = "wwwrun";
+      group = "nginx";
     };
     certs = {
       "heyo.ydns.eu" = {};
