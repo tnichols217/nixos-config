@@ -1,6 +1,6 @@
 { pkgs, attrs, config, ... }:
 {
-  users.users.nginx.extraGroups = ["wwwrun"];
+  # users.users.nginx.extraGroups = ["wwwrun"];
 
   services.nginx = {
     enable = true;
