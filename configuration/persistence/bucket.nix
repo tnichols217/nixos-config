@@ -6,6 +6,7 @@
       "/var/lib/libvirt"
       "/var/lib/waydroid"
       "/var/lib/container-storage/volumes"
+      "/var/lib/nextcloud/data"
     ];
   };
 }
