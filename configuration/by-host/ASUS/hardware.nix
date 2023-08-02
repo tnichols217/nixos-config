@@ -1,6 +1,6 @@
 { pkgs, attrs, config, ... }:
 {
-  imposts = [
+  imports = [
     ./hardware/fs.nix
     ./hardware/nvidia.nix
   ];
