@@ -12,6 +12,11 @@
     ];
   };
 
+  systemd.services."nextcloud-setup" = {
+    requires = ["postgresql.service"];
+    after = ["postgresql.service"];
+  };
+
   services.nextcloud = {
     enable = true;
     hostName = "pigsgo.mooo.com";
@@ -29,9 +34,9 @@
       dbuser = "nextcloud";
       dbhost = "/run/postgresql"; # nextcloud will add /.s.PGSQL.5432 by itself
       dbname = "nextcloud";
-      dbpassFile = "/var/nextcloud-db-pass";
+      dbpassFile = "/var/lib/nextcloud/db-pass";
 
-      adminpassFile = "/var/nextcloud-admin-pass";
+      adminpassFile = "/var/lib/nextcloud/admin-pass";
       adminuser = "admin";
  };
 };

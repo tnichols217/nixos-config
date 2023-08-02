@@ -98,8 +98,8 @@ let
           "$SITEURL")
 
         echo $RESOLVEURL
-        
-          # --header "Host: sw.cloud.blackmagicdesign.com" \
+
+          # --header "Host: sw.blackmagicdesign.com" \
 
         curl \
           --retry 3 --retry-delay 3 \

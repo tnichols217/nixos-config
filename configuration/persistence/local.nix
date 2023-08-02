@@ -9,6 +9,7 @@
       "/var/lib/acme"
       "/var/lib/systemd/coredump"
       "/var/lib/nix-serve"
+      "/var/lib/nextcloud"
       "/etc/NetworkManager/system-connections"
       "/etc/letsencrypt"
       # "/etc/ssh"
