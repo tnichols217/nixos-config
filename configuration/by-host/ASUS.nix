@@ -1,6 +1,6 @@
 { pkgs, attrs, config, ... }:
 {
-  imposts = [
+  imports = [
     ./ASUS/acme.nix
     ./ASUS/arion.nix
     ./ASUS/cron.nix
