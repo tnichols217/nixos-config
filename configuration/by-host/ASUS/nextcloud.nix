@@ -20,6 +20,7 @@
   services.nextcloud = {
     enable = true;
     hostName = "pigsgo.mooo.com";
+    package = pkgs.nextcloud27;
     # nginx.enable = true;
 
     https = true;
