@@ -4,7 +4,7 @@
   i18n = {
     defaultLocale = "en_SG.UTF-8";
     supportedLocales = [
-      "en_SG.UTF-8/UTF-8"
+      "all"
     ];
   };
   services.geoclue2.enable = true;
