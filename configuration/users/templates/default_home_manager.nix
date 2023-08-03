@@ -101,7 +101,14 @@
             src = ./zsh;
           }
         ];
-        initExtra = "";
+        initExtra = let
+        functions = {
+          gc = "git clone git@github.com:tnichols217/$argv";
+          gacp = "git add -A && git commit -am $argv; git push";
+          unpersist = "set TEMPFILE (mktemp); cp $argv $TEMPFILE; rm $argv; cp $TEMPFILE $argv; rm $TEMPFILE";
+          gm = "set CURBRANCH (git branch --show-current); git checkout $argv; git merge $CURBRANCH; git push; git checkout $CURBRANCH";
+        };
+        in builtins.concatStringsSep " " (builtins.mapAttrs (name: value: "${name}() {${value}};") functions) ;
         shellAliases = {
           clip = "xclip -selection clipboard -r";
           gac = "git add -A && git commit -am ";
