@@ -44,6 +44,10 @@
       url = github:MarianArlt/kde-plasma-chili;
       flake = false;
     };
+    p10k = {
+      url = github:romkatv/powerlevel10k;
+      flake = false;
+    };
 
     # addons
     program-extensions = {

@@ -4,6 +4,8 @@
     shell = pkgs.fish;
   };
 
+  environment.pathsToLink = [ "/share/zsh" ];
+
   home-manager.backupFileExtension = "backup";
 
   home-manager.users.${username} = {
@@ -69,6 +71,25 @@
             src = attrs.btf;
           }
         ];
+      };
+      zsh = {
+        enable = true;
+        enableAutosuggestions = true;
+        autocd = true;
+        dirHashes = {
+          docs  = "$HOME/Documents";
+          pr  = "$HOME/Documents/projects";
+        };
+        oh-my-zsh = {
+          enable = true;
+          plugins = [
+            {
+              # p10k
+              name = "powerlevel10k.zsh-theme";
+              src = attrs.p10k;
+            }
+          ];
+        };
       };
       fzf = {
         enable = true;
