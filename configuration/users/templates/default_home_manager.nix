@@ -1,4 +1,4 @@
-{ pkgs, attrs, username, host-name, version, ... }:
+{ pkgs, attrs, username, host-name, version, lib, ... }:
 {
   users.users.${username} = {
     shell = pkgs.fish;
@@ -81,6 +81,7 @@
         enableAutosuggestions = true;
         syntaxHighlighting.enable = true;
         autocd = true;
+        # this line breaks my entire config for some reason
         # dotDir = ".config/zsh";
         dirHashes = {
           docs  = "$HOME/Documents";
@@ -108,7 +109,7 @@
           unpersist = "set TEMPFILE (mktemp); cp $argv $TEMPFILE; rm $argv; cp $TEMPFILE $argv; rm $TEMPFILE";
           gm = "set CURBRANCH (git branch --show-current); git checkout $argv; git merge $CURBRANCH; git push; git checkout $CURBRANCH";
         };
-        in builtins.concatStringsSep " " (builtins.mapAttrs (name: value: "${name}() {${value}};") functions) ;
+        in builtins.concatStringsSep " " (lib.attrsets.mapAttrsToList (name: value: "${name}() {${value}};") functions) ;
         shellAliases = {
           clip = "xclip -selection clipboard -r";
           gac = "git add -A && git commit -am ";
