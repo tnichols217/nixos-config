@@ -4,7 +4,7 @@
     shell = pkgs.fish;
   };
 
-  # environment.pathsToLink = [ "/share/zsh" ];
+  environment.pathsToLink = [ "/share/zsh" ];
 
   home-manager.backupFileExtension = "backup";
 
