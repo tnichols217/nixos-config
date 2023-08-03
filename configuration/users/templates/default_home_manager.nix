@@ -1,7 +1,7 @@
 { pkgs, attrs, username, host-name, version, lib, ... }:
 {
   users.users.${username} = {
-    shell = pkgs.fish;
+    shell = pkgs.zsh;
   };
 
   environment.pathsToLink = [ "/share/zsh" ];
@@ -130,6 +130,13 @@
           da = "direnv allow";
           fsw = "fswatch -rax ";
           black = "kill (pidof plasmashell); plasmashell &; disown (pidof plasmashell)";
+        };
+      };
+      kitty = {
+        enable = true;
+        settings = {
+          background_opacity = 0.5;
+          background_blur = 0.5;
         };
       };
       fzf = {
