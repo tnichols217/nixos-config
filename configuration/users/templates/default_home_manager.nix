@@ -81,7 +81,7 @@
         enableAutosuggestions = true;
         syntaxHighlighting.enable = true;
         autocd = true;
-        dotDir = ".config/zsh";
+        # dotDir = ".config/zsh";
         dirHashes = {
           docs  = "$HOME/Documents";
           pr  = "$HOME/Documents/projects";
