@@ -73,6 +73,10 @@
         ];
       };
       zsh = {
+        initExtraBeforeCompInit = ''
+          P10K_INSTANT_PROMPT="$XDG_CACHE_HOME/p10k-instant-prompt-''${(%):-%n}.zsh"
+          [[ ! -r "$P10K_INSTANT_PROMPT" ]] || source "$P10K_INSTANT_PROMPT"
+        '';
         enable = true;
         enableAutosuggestions = true;
         syntaxHighlighting.enable = true;
@@ -87,11 +91,12 @@
         # };
         plugins = [
           {
-            # p10k
-            name = "powerlevel10k.zsh-theme";
-            src = attrs.p10k;
+            file = "powerlevel10k.zsh-theme";
+            name = "powerlevel10k";
+            src = "${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k";
           }
         ];
+        initExtra = "";
       };
       fzf = {
         enable = true;
