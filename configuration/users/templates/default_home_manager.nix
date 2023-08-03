@@ -73,10 +73,10 @@
         ];
       };
       zsh = {
-        # initExtraBeforeCompInit = ''
-        #   P10K_INSTANT_PROMPT="$XDG_CACHE_HOME/p10k-instant-prompt-''${(%):-%n}.zsh"
-        #   [[ ! -r "$P10K_INSTANT_PROMPT" ]] || source "$P10K_INSTANT_PROMPT"
-        # '';
+        initExtraBeforeCompInit = ''
+          P10K_INSTANT_PROMPT="$XDG_CACHE_HOME/p10k-instant-prompt-''${(%):-%n}.zsh"
+          [[ ! -r "$P10K_INSTANT_PROMPT" ]] || source "$P10K_INSTANT_PROMPT"
+        '';
         enable = true;
         enableAutosuggestions = true;
         syntaxHighlighting.enable = true;
