@@ -75,6 +75,7 @@
       zsh = {
         enable = true;
         enableAutosuggestions = true;
+        syntaxHighlighting.enable = true;
         autocd = true;
         dirHashes = {
           docs  = "$HOME/Documents";
