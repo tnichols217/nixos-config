@@ -73,10 +73,10 @@
         ];
       };
       zsh = {
-        initExtraBeforeCompInit = ''
-          P10K_INSTANT_PROMPT="$XDG_CACHE_HOME/p10k-instant-prompt-''${(%):-%n}.zsh"
-          [[ ! -r "$P10K_INSTANT_PROMPT" ]] || source "$P10K_INSTANT_PROMPT"
-        '';
+        # initExtraBeforeCompInit = ''
+        #   P10K_INSTANT_PROMPT="$XDG_CACHE_HOME/p10k-instant-prompt-''${(%):-%n}.zsh"
+        #   [[ ! -r "$P10K_INSTANT_PROMPT" ]] || source "$P10K_INSTANT_PROMPT"
+        # '';
         enable = true;
         enableAutosuggestions = true;
         syntaxHighlighting.enable = true;
@@ -89,40 +89,40 @@
         # oh-my-zsh = {
         #   enable = true;
         # };
-        plugins = [
-          {
-            file = "powerlevel10k.zsh-theme";
-            name = "powerlevel10k";
-            src = "${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k";
-          }
-          {
-            file = "p10k.zsh";
-            name = "powerlevel10k-config";
-            src = ./zsh;
-          }
-        ];
-        initExtra = "";
-        shellAliases = {
-          clip = "xclip -selection clipboard -r";
-          gac = "git add -A && git commit -am ";
-          gp = "git push ";
-          gpl = "git pull ";
-          gs = "git submodule ";
-          "..." = "cd ../..";
-          "...." = "cd ../../..";
-          cdg = "cd $(git rev-parse --show-toplevel)";
-          upg = "sudo bash -c \"cd /etc/nixos; git stash; git stash clear; git pull; nixos-rebuild switch --flake \\\".#${host-name}\\\"\"";
-          sci = "ssh-copy-id -i ~/.ssh/ed25519 ";
-          pathof = "path resolve ";
-          code = "codium";
-          c = "codium .";
-          rssound = "systemctl --user restart pipewire";
-          ls = "lsd";
-          ca = "bat";
-          da = "direnv allow";
-          fsw = "fswatch -rax ";
-          black = "kill (pidof plasmashell); plasmashell &; disown (pidof plasmashell)";
-        };
+        # plugins = [
+        #   {
+        #     file = "powerlevel10k.zsh-theme";
+        #     name = "powerlevel10k";
+        #     src = "${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k";
+        #   }
+        #   {
+        #     file = "p10k.zsh";
+        #     name = "powerlevel10k-config";
+        #     src = ./zsh;
+        #   }
+        # ];
+        # initExtra = "";
+        # shellAliases = {
+        #   clip = "xclip -selection clipboard -r";
+        #   gac = "git add -A && git commit -am ";
+        #   gp = "git push ";
+        #   gpl = "git pull ";
+        #   gs = "git submodule ";
+        #   "..." = "cd ../..";
+        #   "...." = "cd ../../..";
+        #   cdg = "cd $(git rev-parse --show-toplevel)";
+        #   upg = "sudo bash -c \"cd /etc/nixos; git stash; git stash clear; git pull; nixos-rebuild switch --flake \\\".#${host-name}\\\"\"";
+        #   sci = "ssh-copy-id -i ~/.ssh/ed25519 ";
+        #   pathof = "path resolve ";
+        #   code = "codium";
+        #   c = "codium .";
+        #   rssound = "systemctl --user restart pipewire";
+        #   ls = "lsd";
+        #   ca = "bat";
+        #   da = "direnv allow";
+        #   fsw = "fswatch -rax ";
+        #   black = "kill (pidof plasmashell); plasmashell &; disown (pidof plasmashell)";
+        # };
       };
       fzf = {
         enable = true;
