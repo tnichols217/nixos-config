@@ -80,16 +80,16 @@
           docs  = "$HOME/Documents";
           pr  = "$HOME/Documents/projects";
         };
-        oh-my-zsh = {
-          enable = true;
-          plugins = [
-            {
-              # p10k
-              name = "powerlevel10k.zsh-theme";
-              src = attrs.p10k;
-            }
-          ];
-        };
+        # oh-my-zsh = {
+        #   enable = true;
+        # };
+        plugins = [
+          {
+            # p10k
+            name = "powerlevel10k.zsh-theme";
+            src = attrs.p10k;
+          }
+        ];
       };
       fzf = {
         enable = true;

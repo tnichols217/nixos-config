@@ -453,6 +453,22 @@
         "type": "github"
       }
     },
+    "p10k": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1690642900,
+        "narHash": "sha256-OmNseLGFGVGtKM9TZdfLJY6PbAFXWyxL14Xet63g9vA=",
+        "owner": "romkatv",
+        "repo": "powerlevel10k",
+        "rev": "f851f41fc14d5bd66266b4b4af917d50c1c8b7fe",
+        "type": "github"
+      },
+      "original": {
+        "owner": "romkatv",
+        "repo": "powerlevel10k",
+        "type": "github"
+      }
+    },
     "papirus": {
       "flake": false,
       "locked": {
@@ -504,6 +520,7 @@
         "nixpkgs": "nixpkgs_3",
         "nixpkgs_old": "nixpkgs_old",
         "nur": "nur",
+        "p10k": "p10k",
         "papirus": "papirus",
         "program-extensions": "program-extensions"
       }
