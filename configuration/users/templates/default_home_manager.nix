@@ -4,7 +4,7 @@
     shell = pkgs.fish;
   };
 
-  environment.pathsToLink = [ "/share/zsh" ];
+  # environment.pathsToLink = [ "/share/zsh" ];
 
   home-manager.backupFileExtension = "backup";
 
@@ -102,6 +102,27 @@
           }
         ];
         initExtra = "";
+        shellAliases = {
+          clip = "xclip -selection clipboard -r";
+          gac = "git add -A && git commit -am ";
+          gp = "git push ";
+          gpl = "git pull ";
+          gs = "git submodule ";
+          "..." = "cd ../..";
+          "...." = "cd ../../..";
+          cdg = "cd $(git rev-parse --show-toplevel)";
+          upg = "sudo bash -c \"cd /etc/nixos; git stash; git stash clear; git pull; nixos-rebuild switch --flake \\\".#${host-name}\\\"\"";
+          sci = "ssh-copy-id -i ~/.ssh/ed25519 ";
+          pathof = "path resolve ";
+          code = "codium";
+          c = "codium .";
+          rssound = "systemctl --user restart pipewire";
+          ls = "lsd";
+          ca = "bat";
+          da = "direnv allow";
+          fsw = "fswatch -rax ";
+          black = "kill (pidof plasmashell); plasmashell &; disown (pidof plasmashell)";
+        };
       };
       fzf = {
         enable = true;
