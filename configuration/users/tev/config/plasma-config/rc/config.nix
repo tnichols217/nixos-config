@@ -1098,7 +1098,7 @@ in
                       "groups" = {
                         "General" = {
                           "items" = {
-                            "launchers" = "applications:systemsettings.desktop,applications:org.kde.konsole.desktop,preferred://filemanager,preferred://browser";
+                            "launchers" = "applications:systemsettings.desktop,applications:kitty.desktop,preferred://filemanager,preferred://browser";
                           };
                         };
                       };
