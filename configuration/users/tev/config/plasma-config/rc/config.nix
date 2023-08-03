@@ -121,10 +121,10 @@ in
         "_launch" = "Meta+E,Meta+E,Dolphin";
       };
     };
-    "org.kde.konsole.desktop" = {
+    "kitty.desktop" = {
       "items" = {
-        "_k_friendly_name" = "Konsole";
-        "_launch" = "Ctrl+Alt+T,none,Konsole";
+        "_k_friendly_name" = "Kitty";
+        "_launch" = "Ctrl+Alt+T,none,Kitty";
       };
     };
     "org.kde.krunner.desktop" = {
