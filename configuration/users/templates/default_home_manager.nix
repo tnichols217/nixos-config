@@ -11,7 +11,7 @@
   nixpkgs.overlays = [
     (
       self: super: {
-            kitty = import ./packages/kitty.pkg.nix { pkgs = super; inherit self; };
+            kitty = import ./packages/kitty.pkg.nix { pkgs = super; inherit self; inherit attrs; };
           }
     )
   ];
