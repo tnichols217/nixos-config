@@ -8,6 +8,14 @@
 
   home-manager.backupFileExtension = "backup";
 
+  nixpkgs.overlays = [
+    (
+      self: super: {
+            kitty = import ./packages/kitty.pkg.nix { pkgs = super; inherit self; };
+          }
+    )
+  ];
+
   home-manager.users.${username} = {
     home = {
       stateVersion = version;
@@ -134,7 +142,6 @@
       };
       kitty = {
         enable = true;
-        package = pkgs.callPackage ./packages/kitty.pkg.nix { inherit attrs; };
         settings = {
           background_opacity = "0.5";
           background_blur = 5;

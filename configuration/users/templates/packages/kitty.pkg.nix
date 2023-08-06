@@ -1,10 +1,10 @@
-{ pkgs ? import <nixpkgs> {}, attrs, ... }:
+{ pkgs ? import <nixpkgs> {}, attrs, self, ... }:
 
 pkgs.stdenv.mkDerivation rec {
   pname = "dot-config";
   version = "v1.0.0";
 
-  src = pkgs.kitty;
+  src = self.kitty;
 
   installPhase =''
 
@@ -15,7 +15,7 @@ pkgs.stdenv.mkDerivation rec {
   cd $out/bin
 
   mv kitty kitty-unwrapped
-  cp ${pkgs.writeShellScriptBin "kitty" "${pkgs.kitty}/bin/kitty -c ~/.config/kitty/kitty.conf -c $(ls ${"${attrs.kitty-themes}/themes"} | shuf -n 1) $argv"}/bin/* .
+  cp ${pkgs.writeShellScriptBin "kitty" "${self.kitty}/bin/kitty -c ~/.config/kitty/kitty.conf -c $(ls ${"${attrs.kitty-themes}/themes"} | shuf -n 1) $argv"}/bin/* .
 
   '';
 
