@@ -14,6 +14,7 @@ pkgs.callPackage ../../metapkgs/combine.metapkg.nix { pack = [
     ${if host-name == "MSI" then ''
     sed 's/^Exec=/&nvidia-offload /' /run/current-system/sw/share/applications/steam.desktop > ~/.local/share/applications/steam.desktop
     sed 's/^Exec=/&nvidia-offload /' ~/.nix-profile/share/applications/dolphin-emu.desktop > ~/.local/share/applications/dolphin-emu.desktop
+    sed 's~Exec=~Exec=${pkgs.callPackage ../../../templates/packages/kitty.pkg.nix { self = pkgs; }}/bin/kitty~' ~/.nix-profile/share/applications/kitty.desktop > ~/.local/share/applications/kitty.desktop
     '' else ""}
     while true;
     do qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript '
