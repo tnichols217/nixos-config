@@ -16,10 +16,10 @@ pkgs.callPackage ../../metapkgs/combine.metapkg.nix { pack = [
       sed 's/^Exec=/&nvidia-offload /' /run/current-system/sw/share/applications/steam.desktop > ~/.local/share/applications/steam.desktop
     fi
     if [ ! -f ~/.local/share/applications/dolphin-emu.desktop ]; then
-      sed 's/^Exec=/&nvidia-offload /' /run/current-system/sw/share/applications/dolphin-emu.desktop > ~/.local/share/applications/dolphin-emu.desktop
+      sed 's/^Exec=/&nvidia-offload /' ~/.nix-profile/share/applications/dolphin-emu.desktop > ~/.local/share/applications/dolphin-emu.desktop
     fi
     if [ ! -f ~/.local/share/applications/kitty.desktop ]; then
-      sed 's/^Exec=kitty/& -c ~/.config/kitty/kitty.conf -c $(ls ${"${attrs.kitty-themes}/themes"} | shuf -n 1) /' /run/current-system/sw/share/applications/dolphin-emu.desktop > ~/.local/share/applications/dolphin-emu.desktop
+      sed 's/^Exec=kitty/& -c ~/.config/kitty/kitty.conf -c $(ls ${"${attrs.kitty-themes}/themes"} | shuf -n 1) /' ~/.nix-profile/share/applications/kitty.desktop > ~/.local/share/applications/kitty.desktop
     fi
     '' else ""}
     while true;
