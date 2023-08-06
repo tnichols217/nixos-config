@@ -45,6 +45,7 @@
         imagemagick
         pdfslicer
         sonic-visualiser
+        (pkgs.callPackage ./packages/kitty.pkg.nix {})
 
         # programs
         filezilla
