@@ -4,7 +4,7 @@ pkgs.stdenv.mkDerivation rec {
   pname = "dot-config";
   version = "v1.0.0";
 
-  src = self.kitty;
+  src = pkgs.kitty;
 
   installPhase =''
 
