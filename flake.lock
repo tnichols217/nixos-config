@@ -225,6 +225,22 @@
         "type": "github"
       }
     },
+    "kitty-themes": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1642593129,
+        "narHash": "sha256-RcDmZ1fbNX18+X3xCqqdRbD+XYPsgNte1IXUNt6CxIA=",
+        "owner": "dexpota",
+        "repo": "kitty-themes",
+        "rev": "b1abdd54ba655ef34f75a568d78625981bf1722c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "dexpota",
+        "repo": "kitty-themes",
+        "type": "github"
+      }
+    },
     "librewolfConfig": {
       "flake": false,
       "locked": {
@@ -512,6 +528,7 @@
         "chili": "chili",
         "home-manager": "home-manager",
         "impermanence": "impermanence",
+        "kitty-themes": "kitty-themes",
         "librewolfConfig": "librewolfConfig",
         "minecraft-arion": "minecraft-arion",
         "nix-index-database": "nix-index-database",
