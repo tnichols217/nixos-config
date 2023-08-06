@@ -15,7 +15,7 @@ pkgs.stdenv.mkDerivation rec {
   cd $out/bin
 
   mv kitty kitty-unwrapped
-  cp ${pkgs.writeShellScriptBin "kitty" "${self.kitty}/bin/kitty -c ~/.config/kitty/kitty.conf -c $(ls ${"${attrs.kitty-themes}/themes"} | shuf -n 1) $argv"}/bin/* .
+  cp ${pkgs.writeShellScriptBin "kitty" "${self.kitty}/bin/kitty -c ~/.config/kitty/kitty.conf -c ${"${attrs.kitty-themes}/themes/"}$(ls ${"${attrs.kitty-themes}/themes"} | shuf -n 1) $argv"}/bin/* .
 
   '';
 
