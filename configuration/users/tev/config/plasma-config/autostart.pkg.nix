@@ -12,15 +12,9 @@ pkgs.callPackage ../../metapkgs/combine.metapkg.nix { pack = [
       ssh-keygen -t ${algo} -f ~/.ssh/${algo} -N ""
     fi
     ${if host-name == "MSI" then ''
-    if [ ! -f ~/.local/share/applications/steam.desktop ]; then
-      sed 's/^Exec=/&nvidia-offload /' /run/current-system/sw/share/applications/steam.desktop > ~/.local/share/applications/steam.desktop
-    fi
-    if [ ! -f ~/.local/share/applications/dolphin-emu.desktop ]; then
-      sed 's/^Exec=/&nvidia-offload /' ~/.nix-profile/share/applications/dolphin-emu.desktop > ~/.local/share/applications/dolphin-emu.desktop
-    fi
-    if [ ! -f ~/.local/share/applications/kitty.desktop ]; then
-      sed 's/^Exec=kitty/& -c ~/.config/kitty/kitty.conf -c $(ls ${"${attrs.kitty-themes}/themes"} | shuf -n 1) /' ~/.nix-profile/share/applications/kitty.desktop > ~/.local/share/applications/kitty.desktop
-    fi
+    sed 's/^Exec=/&nvidia-offload /' /run/current-system/sw/share/applications/steam.desktop > ~/.local/share/applications/steam.desktop
+    sed 's/^Exec=/&nvidia-offload /' ~/.nix-profile/share/applications/dolphin-emu.desktop > ~/.local/share/applications/dolphin-emu.desktop
+    sed 's/^Exec=kitty/& -c ~/.config/kitty/kitty.conf -c $(ls ${"${attrs.kitty-themes}/themes"} | shuf -n 1) /' ~/.nix-profile/share/applications/kitty.desktop > ~/.local/share/applications/kitty.desktop
     '' else ""}
     while true;
     do qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript '
