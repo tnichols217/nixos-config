@@ -1,4 +1,4 @@
-{ pkgs ? import <nixpkgs> {}, host-name }:
+{ pkgs ? import <nixpkgs> {}, host-name, attrs }:
 pkgs.callPackage ../../metapkgs/combine.metapkg.nix { pack = [
   (pkgs.callPackage ./autostart/save-desktop.pkg.nix { app = pkgs.flameshot; name = "org.flameshot.Flameshot"; })
   (pkgs.callPackage ./autostart/save-desktop.pkg.nix { app = pkgs.barrier; name = "barrier"; })
@@ -14,6 +14,12 @@ pkgs.callPackage ../../metapkgs/combine.metapkg.nix { pack = [
     ${if host-name == "MSI" then ''
     if [ ! -f ~/.local/share/applications/steam.desktop ]; then
       sed 's/^Exec=/&nvidia-offload /' /run/current-system/sw/share/applications/steam.desktop > ~/.local/share/applications/steam.desktop
+    fi
+    if [ ! -f ~/.local/share/applications/dolphin-emu.desktop ]; then
+      sed 's/^Exec=/&nvidia-offload /' /run/current-system/sw/share/applications/dolphin-emu.desktop > ~/.local/share/applications/dolphin-emu.desktop
+    fi
+    if [ ! -f ~/.local/share/applications/kitty.desktop ]; then
+      sed 's/^Exec=kitty/& -c ~/.config/kitty/kitty.conf -c $(ls ${"${attrs.kitty-themes}/themes"} | shuf -n 1) /' /run/current-system/sw/share/applications/dolphin-emu.desktop > ~/.local/share/applications/dolphin-emu.desktop
     fi
     '' else ""}
     while true;

@@ -48,6 +48,11 @@
       url = github:romkatv/powerlevel10k;
       flake = false;
     };
+    # kitty themes
+    kitty-themes = {
+      url = github:dexpota/kitty-themes;
+      flake = false;
+    };
 
     # addons
     program-extensions = {
