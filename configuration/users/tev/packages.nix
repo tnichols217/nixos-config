@@ -45,7 +45,7 @@
         imagemagick
         pdfslicer
         sonic-visualiser
-        (pkgs.callPackage ./packages/kitty.pkg.nix {})
+        (pkgs.callPackage ./packages/kitty.pkg.nix { inherit attrs; })
 
         # programs
         filezilla
