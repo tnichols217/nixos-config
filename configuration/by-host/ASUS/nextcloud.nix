@@ -42,8 +42,8 @@
       adminuser = "admin";
     };
     phpOptions = {
-      upload_max_filesize = "64G";
-      post_max_size = "64G";
+      upload_max_filesize = lib.mkForce "64G";
+      post_max_size = lib.mkForce "64G";
     };
   };
 }
