@@ -1,4 +1,4 @@
-{ pkgs, attrs, config, ... }:
+{ pkgs, attrs, config, lib, ... }:
 {
   services.postgresql = {
     enable = true;
