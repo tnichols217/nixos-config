@@ -75,7 +75,7 @@
         gimp
         inkscape
         brave
-        teams
+        # teams
 
         discord
         tdesktop
