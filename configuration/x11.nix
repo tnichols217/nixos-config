@@ -12,7 +12,13 @@
   services.printing.drivers = [ pkgs.gutenprintBin pkgs.hplipWithPlugin pkgs.brgenml1lpr pkgs.brgenml1cupswrapper pkgs.cnijfilter2 ];
   services.xserver.libinput.enable = true;
   hardware.opengl.enable = true;
-  services.xserver.videoDrivers = [ "nvidia" ];
+  hardware.opengl.driSupport = true;
+  hardware.opengl.driSupport32Bit = true;
+  hardware.opengl.extraPackages = with pkgs; [
+    rocm-opencl-icd
+    rocm-opencl-runtime
+  ];
+  services.xserver.videoDrivers = [ "nvidia" "amdgpu" ];
   fonts = {
     packages = with pkgs; [
       nerdfonts

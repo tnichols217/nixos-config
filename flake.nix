@@ -97,6 +97,11 @@
         specialArgs = fullAttrs // { host-name = "MSI"; };
         modules = mods;
       };
+      ROG = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = fullAttrs // { host-name = "ROG"; };
+        modules = mods;
+      };
       ASUS = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = fullAttrs // { host-name = "ASUS"; };

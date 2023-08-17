@@ -11,10 +11,10 @@ pkgs.callPackage ../../metapkgs/combine.metapkg.nix { pack = [
     if [ ! -f ~/.ssh/${algo} ]; then
       ssh-keygen -t ${algo} -f ~/.ssh/${algo} -N ""
     fi
+    sed 's~Exec=kitty~Exec=${pkgs.callPackage ../../../templates/packages/kitty.pkg.nix { self = pkgs; inherit attrs; }}/bin/kitty~' ~/.nix-profile/share/applications/kitty.desktop > ~/.local/share/applications/kitty.desktop
     ${if host-name == "MSI" then ''
     sed 's/^Exec=/&nvidia-offload /' /run/current-system/sw/share/applications/steam.desktop > ~/.local/share/applications/steam.desktop
     sed 's/^Exec=/&nvidia-offload /' ~/.nix-profile/share/applications/dolphin-emu.desktop > ~/.local/share/applications/dolphin-emu.desktop
-    sed 's~Exec=kitty~Exec=${pkgs.callPackage ../../../templates/packages/kitty.pkg.nix { self = pkgs; inherit attrs; }}/bin/kitty~' ~/.nix-profile/share/applications/kitty.desktop > ~/.local/share/applications/kitty.desktop
     '' else ""}
     while true;
     do qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript '
