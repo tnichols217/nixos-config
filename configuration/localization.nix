@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 {
-  time.timeZone = "Asia/Kuala_Lumpur";
+  # time.timeZone = "Asia/Kuala_Lumpur";
+  time.timeZone = "America/New_York";
   i18n = {
     defaultLocale = "en_SG.UTF-8";
     supportedLocales = [
