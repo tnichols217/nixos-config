@@ -65,6 +65,7 @@
           ".config/obs-studio/basic"
           ".config/obs-studio/plugin_config"
           ".config/dolphin-emu"
+          ".config/xsettingsd"
         ];
         files = pkgs.lib.lists.map mapFile [
           ".config/gh/hosts.yml"
