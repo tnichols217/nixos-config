@@ -45,6 +45,7 @@
         imagemagick
         pdfslicer
         sonic-visualiser
+        xsettingsd
 
         # programs
         filezilla
