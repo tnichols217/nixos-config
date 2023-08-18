@@ -775,6 +775,13 @@ in
       };
     };
   };
+  "/kcmfonts" = {
+    "General" = {
+      "items" = {
+        "forceFontDPI" = "144";
+      };
+    };
+  };
   "/kcminputrc" = {
     "Mouse" = {
       "items" = {
