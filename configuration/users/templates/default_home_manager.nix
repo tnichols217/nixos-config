@@ -174,7 +174,7 @@
       xsettingsd = {
         enable = true;
         settings = {
-          "Gdk/UnscaledDPI" = if host-name == "ROG" then "147456" else "98304";
+          "Gdk/UnscaledDPI" = if host-name == "ROG" then 147456 else 98304;
         };
       };
     };
