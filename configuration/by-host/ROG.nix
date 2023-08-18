@@ -8,7 +8,7 @@
     ];
   };
 
-  # services.xserver.desktopManager.plasma5.useQtScaling = true;
+  services.xserver.desktopManager.plasma5.useQtScaling = true;
 
   # TODO move pipewire config to config files instead
 
