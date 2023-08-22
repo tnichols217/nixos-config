@@ -1,5 +1,8 @@
 { config, pkgs, username, attrs, host-name, nixpkgs, oldpkgs, vscode_exts, openvsx_exts, ... }:
 {
+  environment.sessionVariables = {
+    MOZ_USE_XINPUT2 = "1";
+  };
   home-manager.users.${username} = {
     home = {
       packages = with pkgs; [

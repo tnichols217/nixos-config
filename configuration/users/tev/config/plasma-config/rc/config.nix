@@ -642,6 +642,15 @@ in
         "tapToClick" = "true";
       };
     };
+    "ASUE120A:00 04F3:319B Touchpad" = {
+      "items" = {
+        "naturalScroll" = "true";
+        "pointerAccelerationProfileAdaptive" = "false";
+        "pointerAccelerationProfileFlat" = "true";
+        "tapDragLock" = "true";
+        "tapToClick" = "true";
+      };
+    };
   };
   "/baloofilerc" = {
     "General" = {
@@ -772,13 +781,6 @@ in
     "LegacySession: saved at previous logout" = {
       "items" = {
         "count" = "0";
-      };
-    };
-  };
-  "/kcmfonts" = {
-    "General" = {
-      "items" = {
-        "forceFontDPI" = "144";
       };
     };
   };
@@ -1593,4 +1595,12 @@ in
       "SceneCollectionFile" = "Untitled";
     };
   };
-}
+} // (if host-name == "ROG" then {
+  "/kcmfonts" = {
+    "General" = {
+      "items" = {
+        "forceFontDPI" = "144";
+      };
+    };
+  };
+} else {})
