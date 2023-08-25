@@ -175,6 +175,17 @@
         enable = true;
         settings = {
           "Gdk/UnscaledDPI" = if host-name == "ROG" then 147456 else 98304;
+          "Gdk/WindowScalingFactor" = 1;
+          "Gtk/EnableAnimations" = 1;
+          "Gtk/DecorationLayout" = "icon:minimize,maximize,close";
+          "Gtk/PrimaryButtonWarpsSlider" = 0;
+          "Gtk/ToolbarStyle" = 3;
+          "Gtk/MenuImages" = 1;
+          "Gtk/ButtonImages" = 1;
+          "Gtk/CursorThemeSize" = 24;
+          "Gtk/CursorThemeName" = "breeze_cursors";
+          "Net/IconThemeName" = "Papirus-Dark";
+          "Gtk/FontName" = "Noto Sans,  10";
         };
       };
     };

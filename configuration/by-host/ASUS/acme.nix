@@ -10,6 +10,7 @@
     certs = {
       "heyo.ydns.eu" = {};
       "pigsgo.mooo.com" = {};
+      "tln32asus.student.cwru.edu" = {};
     };
   };
 }
