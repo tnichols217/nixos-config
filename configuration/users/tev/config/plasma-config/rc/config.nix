@@ -1472,7 +1472,7 @@ in
         "port" = "24800";
         "requireClientCertificate" = "false";
         "screenName" = "${host-name}";
-        "serverHostname" = "192.168.100.200";
+        "serverHostname" = "129.22.38.12";
         "startedBefore" = "true";
         "useExternalConfig" = "true";
         "useInternalConfig" = "false";

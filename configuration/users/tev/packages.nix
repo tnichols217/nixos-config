@@ -111,7 +111,8 @@
             inherit user port identityFile;
           };
           "ASUS" = {
-            hostname = "192.168.100.200";
+            # hostname = "192.168.100.200";
+            hostname = "129.22.38.12";
             inherit user port identityFile;
 
           };
