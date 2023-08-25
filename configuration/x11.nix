@@ -12,7 +12,7 @@
   services.printing.drivers = [ pkgs.gutenprintBin pkgs.hplipWithPlugin pkgs.brgenml1lpr pkgs.brgenml1cupswrapper pkgs.cnijfilter2 ];
   services.xserver.libinput.enable = true;
   hardware.opengl.enable = true;
-  services.xserver.videoDrivers = if host-name == "ROG" then [ "amdgpu" ] else [ "nvidia" ];
+  services.xserver.videoDrivers = if (host-name == "ROG") then [ "amdgpu" ] else [ "nvidia" ];
   fonts = {
     packages = with pkgs; [
       nerdfonts
@@ -22,7 +22,7 @@
     ];
     enableDefaultPackages = true;
   };
-} // (if host-name == "ROG" then {
+} // (if (host-name == "ROG") then {
   hardware.opengl.driSupport = true;
   hardware.opengl.driSupport32Bit = true;
   hardware.opengl.extraPackages = with pkgs; [
