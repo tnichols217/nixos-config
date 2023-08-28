@@ -3,7 +3,7 @@
   services.openvpn.servers = let 
     configString = {adapt, port?"1194"}: 
       let 
-        addr = "pigsgo.mooo.com";
+        addr = "tln32asus.student.cwru.edu";
         # get from server
         ca = "/var/lib/openvpn/ca.crt";
         # easyrsa build-client-full client

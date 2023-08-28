@@ -24,11 +24,12 @@
       trusted-substituters = [
         "https://cache.nixos.org/"
         "https://tnichols217-nixos-config.cachix.org"
-        "https://pigsgo.mooo.com:5000/"
+        # "https://pigsgo.mooo.com:5000/"
+        "https://tln32asus.student.cwru.edu:5000/"
       ];
       trusted-public-keys = [
         "tnichols217-nixos-config.cachix.org-1:B9JhBiPS+OHykLW16qovoOelAvtdH5sIjYU7BZvs7q8="
-        "pigsgo.mooo.com:V8MCTN/ox+Y5GxqFsjAml4IfcUvTacLFIqw48A9Ic/o="
+        "tln32asus.student.cwru.edu:V8MCTN/ox+Y5GxqFsjAml4IfcUvTacLFIqw48A9Ic/o="
       ];
       auto-optimise-store = true;
       trusted-users = [ "tev" ];

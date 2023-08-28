@@ -19,7 +19,7 @@
 
   services.nextcloud = {
     enable = true;
-    hostName = "pigsgo.mooo.com";
+    hostName = "tln32asus.student.cwru.edu";
     package = pkgs.nextcloud27;
     configureRedis = true;
     # nginx.enable = true;
