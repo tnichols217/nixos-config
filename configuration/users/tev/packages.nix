@@ -108,24 +108,29 @@
           # port = 27180;
         in {
           "MSI" = {
-            hostname = "192.168.100.250";
+            # hostname = "192.168.100.250";
+            hostname = "tln32msi.student.cwru.edu";
+            inherit user port identityFile;
+          };
+          "ROG" = {
+            hostname = "tln32rog.student.cwru.edu";
             inherit user port identityFile;
           };
           "ASUS" = {
             # hostname = "192.168.100.200";
-            hostname = "129.22.38.12";
+            hostname = "tln32asus.student.cwru.edu";
             inherit user port identityFile;
 
           };
-          "heyo" = {
-            hostname = "heyo.ydns.eu";
-            inherit user port identityFile;
+          # "heyo" = {
+          #   hostname = "heyo.ydns.eu";
+          #   inherit user port identityFile;
 
-          };
-          "pigs" = {
-            hostname = "pigsgo.mooo.com";
-            inherit user port identityFile;
-          };
+          # };
+          # "pigs" = {
+          #   hostname = "pigsgo.mooo.com";
+          #   inherit user port identityFile;
+          # };
           "gh" = {
             hostname = "github.com";
             user = "git";
