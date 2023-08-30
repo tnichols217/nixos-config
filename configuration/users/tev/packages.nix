@@ -67,6 +67,7 @@
         lutris
         dolphin-emu
         qbittorrent
+        calibre
 
         # vscode
 
