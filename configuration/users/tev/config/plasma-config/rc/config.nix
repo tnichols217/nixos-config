@@ -653,6 +653,11 @@ in
     };
   };
   "/baloofilerc" = {
+    "Basic Settings" = {
+      "items" = {
+        "Indexing-Enabled" = "false";
+      };
+    };
     "General" = {
       "items" = {
         "dbVersion" = "2";
