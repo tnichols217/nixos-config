@@ -11,6 +11,7 @@
   services.avahi.openFirewall = true;
   services.printing.drivers = [ pkgs.gutenprintBin pkgs.hplipWithPlugin pkgs.brgenml1lpr pkgs.brgenml1cupswrapper pkgs.cnijfilter2 ];
   services.xserver.libinput.enable = true;
+  services.xserver.wacom.enable = true;
   hardware.opengl.enable = true;
   services.xserver.videoDrivers = if host-name == "ROG" then [ "amdgpu" ] else [ "nvidia" ];
   fonts = {
