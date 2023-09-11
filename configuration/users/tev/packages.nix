@@ -49,6 +49,7 @@
         pdfslicer
         sonic-visualiser
         xsettingsd
+        wacomtablet
 
         # programs
         filezilla
