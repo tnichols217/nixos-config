@@ -46,7 +46,7 @@
       vscode_exts.tht13.html-preview-vscode
       vscode_exts.tht13.python
       vscode-icons-team.vscode-icons
-      yzane.markdown-pdf
+      vscode_exts.yzane.markdown-pdf
       aaron-bond.better-comments
       redhat.java
       aureliaeffect.aurelia
