@@ -49,7 +49,7 @@
       vscode_exts.yzane.markdown-pdf
       vscode_exts.aaron-bond.better-comments
       redhat.java
-      aureliaeffect.aurelia
+      vscode_exts.aureliaeffect.aurelia
       msjsdiag.debugger-for-chrome
       steoates.autoimport
       editorconfig.editorconfig
