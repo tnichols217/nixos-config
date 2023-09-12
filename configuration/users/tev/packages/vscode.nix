@@ -43,8 +43,8 @@
       ms-toolsai.jupyter-renderers
       redhat.vscode-xml
       tabnine.tabnine-vscode
-      tht13.html-preview-vscode
-      tht13.python
+      vscode_exts.tht13.html-preview-vscode
+      vscode_exts.tht13.python
       vscode-icons-team.vscode-icons
       yzane.markdown-pdf
       aaron-bond.better-comments
