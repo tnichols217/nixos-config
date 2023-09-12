@@ -3,9 +3,10 @@
   environment.sessionVariables = {
     MOZ_USE_XINPUT2 = "1";
   };
+  users.users.jupyter.group = "jupyter";
+  users.groups.jupyter = {};
   services.jupyter = {
     enable = true;
-    group = "jupyter";
     kernels = {
       python3 = let
         env = (pkgs.python3.withPackages (pythonPackages: with pythonPackages; [
