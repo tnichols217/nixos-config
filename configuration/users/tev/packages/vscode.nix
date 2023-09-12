@@ -59,7 +59,7 @@
       openvsx_exts.muhammad-sammy.csharp
       redhat.vscode-yaml
       rust-lang.rust-analyzer
-      orta.vscode-twoslash-queries
+      vscode_exts.orta.vscode-twoslash-queries
       paulober.pico-w-go
       firefox-devtools.vscode-firefox-debug
     ];
