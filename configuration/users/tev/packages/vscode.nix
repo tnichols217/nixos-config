@@ -27,7 +27,7 @@
       donjayamanne.githistory
       eamodio.gitlens
       mhutchie.git-graph
-      qwtel.sqlite-viewer
+      vscode_exts.qwtel.sqlite-viewer
       svelte.svelte-vscode
       ziyasal.vscode-open-in-github
       bbenoist.nix
