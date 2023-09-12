@@ -60,7 +60,7 @@
       redhat.vscode-yaml
       rust-lang.rust-analyzer
       vscode_exts.orta.vscode-twoslash-queries
-      paulober.pico-w-go
+      vscode_exts.paulober.pico-w-go
       firefox-devtools.vscode-firefox-debug
     ];
   }) // { pname = "vscodium"; };
