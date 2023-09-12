@@ -31,7 +31,7 @@
       svelte.svelte-vscode
       vscode_exts.ziyasal.vscode-open-in-github
       bbenoist.nix
-      bierner.color-info
+      vscode_exts.bierner.color-info
       christian-kohler.path-intellisense
       ecmel.vscode-html-css
       grapecity.gc-excelviewer
