@@ -33,7 +33,7 @@
       bbenoist.nix
       vscode_exts.bierner.color-info
       christian-kohler.path-intellisense
-      ecmel.vscode-html-css
+      vscode_exts.ecmel.vscode-html-css
       grapecity.gc-excelviewer
       jnoortheen.nix-ide
       ms-python.python
