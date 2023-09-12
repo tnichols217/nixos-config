@@ -117,6 +117,9 @@
         prismlauncher
 
         osu-lazer
+
+        # python
+        python311Packages.ipykernel
         
         (callPackage ./packages/arch-theme.pkg.nix { arch-theme = attrs.arch-theme; })
         (callPackage ./packages/papirus-icons.pkg.nix { papirus = attrs.papirus; })
