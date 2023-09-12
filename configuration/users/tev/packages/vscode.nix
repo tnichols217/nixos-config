@@ -47,7 +47,7 @@
       vscode_exts.tht13.python
       vscode-icons-team.vscode-icons
       vscode_exts.yzane.markdown-pdf
-      aaron-bond.better-comments
+      vscode_exts.aaron-bond.better-comments
       redhat.java
       aureliaeffect.aurelia
       msjsdiag.debugger-for-chrome
