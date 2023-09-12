@@ -23,7 +23,7 @@
       alefragnani.project-manager
       vscode_exts.bbenoist.qml
       codezombiech.gitignore
-      donjayamanne.git-extension-pack
+      vscode_exts.donjayamanne.git-extension-pack
       donjayamanne.githistory
       eamodio.gitlens
       mhutchie.git-graph
