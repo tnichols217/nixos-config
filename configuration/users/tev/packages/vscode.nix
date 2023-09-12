@@ -51,7 +51,7 @@
       redhat.java
       vscode_exts.aureliaeffect.aurelia
       vscode_exts.msjsdiag.debugger-for-chrome
-      steoates.autoimport
+      vscode_exts.steoates.autoimport
       editorconfig.editorconfig
       christian-kohler.path-intellisense
       behzad88.aurelia
