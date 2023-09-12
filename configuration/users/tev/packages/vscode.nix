@@ -50,7 +50,7 @@
       vscode_exts.aaron-bond.better-comments
       redhat.java
       vscode_exts.aureliaeffect.aurelia
-      msjsdiag.debugger-for-chrome
+      vscode_exts.msjsdiag.debugger-for-chrome
       steoates.autoimport
       editorconfig.editorconfig
       christian-kohler.path-intellisense
