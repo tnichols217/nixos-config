@@ -29,7 +29,7 @@
       mhutchie.git-graph
       vscode_exts.qwtel.sqlite-viewer
       svelte.svelte-vscode
-      ziyasal.vscode-open-in-github
+      vscode_exts.ziyasal.vscode-open-in-github
       bbenoist.nix
       bierner.color-info
       christian-kohler.path-intellisense
