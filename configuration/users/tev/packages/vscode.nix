@@ -21,7 +21,7 @@
     # ) ++ 
     [
       alefragnani.project-manager
-      bbenoist.qml
+      vscode_exts.bbenoist.qml
       codezombiech.gitignore
       donjayamanne.git-extension-pack
       donjayamanne.githistory
