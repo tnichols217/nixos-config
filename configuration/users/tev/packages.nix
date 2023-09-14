@@ -118,11 +118,11 @@
         osu-lazer
 
         # python
-        pkgs.python3.withPackages (pythonPackages: with pythonPackages; [
+        (pkgs.python3.withPackages (pythonPackages: with pythonPackages; [
           ipykernel
           pandas
           scikit-learn
-        ])
+        ]))
         
         (callPackage ./packages/arch-theme.pkg.nix { arch-theme = attrs.arch-theme; })
         (callPackage ./packages/papirus-icons.pkg.nix { papirus = attrs.papirus; })
