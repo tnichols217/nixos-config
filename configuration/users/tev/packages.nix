@@ -122,6 +122,7 @@
           ipykernel
           pandas
           scikit-learn
+          pip
         ]))
         
         (callPackage ./packages/arch-theme.pkg.nix { arch-theme = attrs.arch-theme; })
