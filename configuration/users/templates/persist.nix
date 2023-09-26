@@ -54,6 +54,7 @@
           ".local/share/kscreen"
           ".local/share/direnv/allow"
           ".local/share/MuseScore"
+          ".local/share/Anki2"
           ".config/lutris"
           ".config/kdeconnect"
           ".config/VSCodium"
