@@ -76,6 +76,7 @@
         sonic-visualiser
         xsettingsd
         wacomtablet
+        anki
 
         # programs
         filezilla
