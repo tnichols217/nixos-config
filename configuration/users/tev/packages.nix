@@ -76,9 +76,10 @@
         sonic-visualiser
         xsettingsd
         wacomtablet
-        anki
+        config.boot.kernelPackages.usbip
 
         # programs
+        anki
         filezilla
         filelight
         libreoffice
