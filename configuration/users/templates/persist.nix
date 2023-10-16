@@ -68,7 +68,7 @@
           ".config/obs-studio/plugin_config"
           ".config/dolphin-emu"
           ".config/calibre"
-          .config/Yubico
+          ".config/Yubico'
         ];
         files = pkgs.lib.lists.map mapFile [
           ".config/gh/hosts.yml"
