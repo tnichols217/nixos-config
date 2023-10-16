@@ -97,5 +97,7 @@ pkgs.wrapFirefox pkgs.firefox-esr-unwrapped {
       defaultPref("security.identityblock.show_extended_validation", true);
       defaultPref("browser.tabs.insertAfterCurrent", true);
       defaultPref("dom.importMaps.enabled", true);
+      defaultPref("signon.autofillForms", true);
+      defaultPref("signon.rememberSignons", true);
     '' ;
 }
