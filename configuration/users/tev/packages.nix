@@ -97,6 +97,7 @@
         dolphin-emu
         qbittorrent
         calibre
+        krita
 
         # vscode
 
