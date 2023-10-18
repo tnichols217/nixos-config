@@ -98,6 +98,7 @@
         qbittorrent
         calibre
         krita
+        btop
 
         # vscode
 
