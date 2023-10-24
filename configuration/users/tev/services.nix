@@ -8,7 +8,7 @@
       Restart = "on-failure";
     };
     serviceConfig = {
-      Environment = "HOME=/home/${username}\" XDG_CONFIG_HOME=/home/${username}/.config \"";
+      Environment = "\"HOME=/home/${username}\" XDG_CONFIG_HOME=/home/${username}/.config";
     };
     wantedBy = ["multi-user.target"];
   };
