@@ -2,7 +2,7 @@
 pkgs.callPackage ../../metapkgs/combine.metapkg.nix { pack = [
   (pkgs.callPackage ./autostart/save-desktop.pkg.nix { app = pkgs.flameshot; name = "org.flameshot.Flameshot"; })
   (pkgs.callPackage ./autostart/save-desktop.pkg.nix { app = pkgs.barrier; name = "barrier"; })
-  (pkgs.callPackage ./autostart/custom-autostart.pkg.nix { app = pkgs.sunshine; name = "sunshine"; })
+  (pkgs.callPackage ./autostart/custom-autostart.pkg.nix { pkg = pkgs.sunshine; name = "sunshine"; })
   (pkgs.callPackage ./autostart/custom-autostart.pkg.nix { pkg = pkgs.bash; name = "bash"; args = let
     algo = "ed25519";
     plugin = "org.kde.image";
