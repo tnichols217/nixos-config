@@ -77,6 +77,7 @@
         xsettingsd
         wacomtablet
         config.boot.kernelPackages.usbip
+        sunshine
 
         # programs
         anki
