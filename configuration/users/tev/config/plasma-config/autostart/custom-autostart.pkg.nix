@@ -1,4 +1,4 @@
-{ pkgs ? import <nixpkgs> {}, pkg ? "", exec ? "/bin/", icon ? "", name ? "", path-config ? "", terminal ? "False", type ? "Application", args ? "", ... }:
+{ pkgs ? import <nixpkgs> {}, pkg ? "", exec ? "/bin/", icon ? "", name ? "", delim ? " ", path-config ? "", terminal ? "False", type ? "Application", args ? "", ... }:
 pkgs.stdenv.mkDerivation 
 rec {
   pname = "generate-desktop-file";
@@ -14,7 +14,7 @@ rec {
 
   mkdir -p $out/autostart/
 
-  ${kc} --file $out/autostart/${name}.desktop --group "Desktop Entry" --key Exec "${pkg + exec + name + " " + args}"
+  ${kc} --file $out/autostart/${name}.desktop --group "Desktop Entry" --key Exec "${pkg + exec + name + delim + args}"
   ${kc} --file $out/autostart/${name}.desktop --group "Desktop Entry" --key Icon "${icon}"
   ${kc} --file $out/autostart/${name}.desktop --group "Desktop Entry" --key Name "${name}"
   ${kc} --file $out/autostart/${name}.desktop --group "Desktop Entry" --key Path "${path-config}"
