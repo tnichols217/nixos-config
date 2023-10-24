@@ -2,9 +2,9 @@
 {
   systemd.services."${username}@sunshine" = {
     serviceConfig.Type = "simple";
-    path = with pkgs; [ config.boot.kernelPackages.sunshine ];
+    path = with pkgs; [ pkgs.sunshine ];
     serviceConfig = {
-      ExecStart = "${config.boot.kernelPackages.sunshine}/bin/sunshine";
+      ExecStart = "${pkgs.sunshine}/bin/sunshine";
       Restart = "on-failure";
     };
     wantedBy = ["multi-user.target"];
