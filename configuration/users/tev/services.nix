@@ -9,4 +9,13 @@
     };
     wantedBy = ["multi-user.target"];
   };
+  systemd.services."${username}@cachix" = {
+    serviceConfig.Type = "simple";
+    path = with pkgs; [ pkgs.cachix ];
+    serviceConfig = {
+      ExecStart = "${pkgs.cachix}/bin/cachix watch-store tnichols217-nixos-config";
+      Restart = "on-failure";
+    };
+    wantedBy = ["multi-user.target"];
+  };
 }
