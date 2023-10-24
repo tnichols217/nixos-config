@@ -7,6 +7,7 @@
       ExecStart = "${pkgs.sunshine}/bin/sunshine";
       Restart = "on-failure";
     };
+    serviceConfig.User = "${username}";
     wantedBy = ["multi-user.target"];
   };
   systemd.services."${username}@cachix" = {
