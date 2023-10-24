@@ -16,6 +16,7 @@
       ExecStart = "${pkgs.cachix}/bin/cachix watch-store tnichols217-nixos-config";
       Restart = "on-failure";
     };
+    user = "${username}";
     wantedBy = ["multi-user.target"];
   };
 }
