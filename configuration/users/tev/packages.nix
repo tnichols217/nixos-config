@@ -99,6 +99,7 @@
         calibre
         krita
         btop
+        tidal-hifi
 
         # vscode
 
