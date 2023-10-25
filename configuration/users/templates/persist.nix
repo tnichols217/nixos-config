@@ -70,6 +70,7 @@
           ".config/dolphin-emu"
           ".config/calibre"
           ".config/sunshine/credentials"
+          ".config/Moonlight Game Streaming Project"
           ".config/Yubico"
         ];
         files = pkgs.lib.lists.map mapFile [

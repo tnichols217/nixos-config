@@ -101,6 +101,7 @@
         krita
         btop
         tidal-hifi
+        moonlight-qt
 
         # vscode
 
