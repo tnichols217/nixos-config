@@ -18,6 +18,10 @@ in
   home-manager.users.${username} = {
     gtk = {
       enable = true;
+      theme = {
+        package = pkgs.gnome.gnome-themes-extra;
+        name = "Adwaita-dark";
+      };
     };
   };
 }
