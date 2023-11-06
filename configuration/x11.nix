@@ -23,6 +23,7 @@
     ];
     enableDefaultPackages = true;
   };
+  programs.dconf.enable = true;
 } // (if host-name == "ROG" then {
   hardware.opengl.driSupport = true;
   hardware.opengl.driSupport32Bit = true;
