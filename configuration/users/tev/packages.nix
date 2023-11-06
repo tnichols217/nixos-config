@@ -78,6 +78,7 @@
         wacomtablet
         config.boot.kernelPackages.usbip
         sunshine
+        dconf
 
         # programs
         anki
