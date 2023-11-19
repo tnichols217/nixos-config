@@ -44,7 +44,6 @@
       redhat.vscode-xml
       tabnine.tabnine-vscode
       vscode_exts.tht13.html-preview-vscode
-      vscode_exts.tht13.python
       vscode-icons-team.vscode-icons
       vscode_exts.yzane.markdown-pdf
       vscode_exts.aaron-bond.better-comments
