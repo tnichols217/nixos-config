@@ -131,6 +131,9 @@
           pandas
           scikit-learn
           pip
+          numpy
+          scipy
+          matplotlib
         ]))
         
         (callPackage ./packages/arch-theme.pkg.nix { arch-theme = attrs.arch-theme; })
