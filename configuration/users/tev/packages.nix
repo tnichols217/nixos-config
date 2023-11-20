@@ -122,7 +122,7 @@
         whatsapp-for-linux
         minecraft
         prismlauncher
-
+        localsend
         osu-lazer
 
         # python
