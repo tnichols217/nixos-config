@@ -79,6 +79,7 @@
         config.boot.kernelPackages.usbip
         sunshine
         dconf
+        openfortivpn
 
         # programs
         anki
