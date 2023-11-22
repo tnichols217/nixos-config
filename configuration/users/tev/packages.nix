@@ -104,6 +104,7 @@
         btop
         tidal-hifi
         moonlight-qt
+        korganizer
 
         # vscode
 
