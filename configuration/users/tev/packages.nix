@@ -104,6 +104,7 @@
         btop
         tidal-hifi
         moonlight-qt
+        kalendar
 
         # vscode
 
