@@ -127,7 +127,11 @@
           type = "app";
           program = ./nix/scripts/test.sh;
         };
-        default = test;
+        build = {
+          type = "app";
+          program = ./nix/scripts/build.sh;
+        };
+        default = build;
       };
     }
   );
