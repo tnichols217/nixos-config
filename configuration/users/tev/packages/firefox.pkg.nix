@@ -3,7 +3,7 @@
 let 
   firefox_exts = config.nur.repos.rycee.firefox-addons;
 in
-pkgs.wrapFirefox pkgs.librewolf-unwrapped {
+pkgs.wrapFirefox pkgs.firefox-devedition-unwrapped {
   nixExtensions = with firefox_exts; let
     fetchFFAddon = pkgs.callPackage (import ./firefox/fetchFirefoxAddonFlake.metapkg.nix) {};
   in
