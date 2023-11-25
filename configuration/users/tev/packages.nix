@@ -126,6 +126,7 @@
         prismlauncher
         localsend
         osu-lazer
+        tartube-yt-dlp
 
         # python
         (pkgs.python3.withPackages (pythonPackages: with pythonPackages; [
