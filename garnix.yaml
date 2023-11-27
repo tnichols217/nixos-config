@@ -1,6 +1,4 @@
 builds:
   exclude: []
   include:
-    - 'nixosConfigurations.ASUS.config.system.build.toplevel'
-    - 'nixosConfigurations.MSI.config.system.build.toplevel'
-    - 'nixosConfigurations.ROG.config.system.build.toplevel'
+    - 'nixosConfigurations.*'
