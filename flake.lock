@@ -658,11 +658,11 @@
         "nixpkgs": "nixpkgs_5"
       },
       "locked": {
-        "lastModified": 1700891002,
-        "narHash": "sha256-QqmxMAsX33xwR+2EHzXU0UMTyUHvYzDBMiCuQEToDIU=",
+        "lastModified": 1701068589,
+        "narHash": "sha256-KtZCHvI5QCz6W0F7ErabaKB23RX1yUQltViKEBxKggU=",
         "owner": "tnichols217",
         "repo": "nixos-program-extensions",
-        "rev": "216051bae27a8cde8f3c561f56ca5ab8413a6ce0",
+        "rev": "fbe3ac26043e87e93a9b91acc6b632dad8f48e19",
         "type": "github"
       },
       "original": {
