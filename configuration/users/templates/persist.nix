@@ -72,6 +72,7 @@
           ".config/sunshine/credentials"
           ".config/Moonlight Game Streaming Project"
           ".config/Yubico"
+          ".config/tartube"
         ];
         files = pkgs.lib.lists.map mapFile [
           ".config/gh/hosts.yml"

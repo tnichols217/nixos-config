@@ -105,6 +105,7 @@
         tidal-hifi
         moonlight-qt
         korganizer
+        tartube-yt-dlp
 
         # vscode
 
