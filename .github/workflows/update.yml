@@ -1,5 +1,5 @@
 name: Update repo
-run-name: ${{ github.actor }} is updating the extensions
+run-name: ${{ github.actor }} is updating the flake lock
 on:
   schedule:
     - cron: "0 0/6 * * *"
