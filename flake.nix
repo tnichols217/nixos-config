@@ -131,6 +131,10 @@
           type = "app";
           program = ./nix/scripts/build.sh;
         };
+        ciBuild = {
+          type = "app";
+          program = ./nix/scripts/ci-build.sh;
+        };
         default = build;
       };
     }
