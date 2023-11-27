@@ -94,7 +94,7 @@
         kcalc
         libsForQt5.kdeconnect-kde
         musescore
-        pureref
+        # pureref # because of ci build failiures
         audacity
         lutris
         dolphin-emu
