@@ -14,7 +14,7 @@ in
         };
       };
     };
-    home.file."${config.xdg.configHome}/.xbindkeysrc" = {
+    home.file.".xbindkeysrc" = {
       source = ./config/.xbindkeysrc;
     };
   };
