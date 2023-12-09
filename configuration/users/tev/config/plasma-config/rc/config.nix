@@ -1472,7 +1472,8 @@ in
         "port" = "24800";
         "requireClientCertificate" = "false";
         "screenName" = "${host-name}";
-        "serverHostname" = "129.22.38.12";
+        # "serverHostname" = "192.168.100.200";
+        "serverHostname" = "tln32asus.student.cwru.edu";
         "startedBefore" = "true";
         "useExternalConfig" = "true";
         "useInternalConfig" = "false";
