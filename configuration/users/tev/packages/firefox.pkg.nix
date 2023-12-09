@@ -3,7 +3,7 @@
 let 
   firefox_exts = config.nur.repos.rycee.firefox-addons;
 in
-pkgs.wrapFirefox pkgs.firefox-esr-unwrapped {
+pkgs.wrapFirefox (pkgs.firefox-devedition-unwrapped // { requireSigning = false; allowAddonSideload = true; }) {
   nixExtensions = with firefox_exts; let
     fetchFFAddon = pkgs.callPackage (import ./firefox/fetchFirefoxAddonFlake.metapkg.nix) {};
   in
@@ -97,5 +97,7 @@ pkgs.wrapFirefox pkgs.firefox-esr-unwrapped {
       defaultPref("security.identityblock.show_extended_validation", true);
       defaultPref("browser.tabs.insertAfterCurrent", true);
       defaultPref("dom.importMaps.enabled", true);
+      defaultPref("signon.autofillForms", true);
+      defaultPref("signon.rememberSignons", true);
     '' ;
 }

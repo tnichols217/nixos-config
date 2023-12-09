@@ -4,3 +4,4 @@
 /configuration/persistence/local/*
 !/configuration/persistence/local/.empty
 !/configuration/persistence/local/var/log/.empty
+result

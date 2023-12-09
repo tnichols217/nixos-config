@@ -73,9 +73,12 @@
       url = "github:Mic92/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+
+    flake-utils.url = "github:numtide/flake-utils";
   };
   
-  outputs = { self, nixpkgs, nixos-generators, nix-index-database, nixpkgs_old, nix-vscode-extensions, arion, minecraft-arion, ... }@attrs: let 
+  outputs = { self, nixpkgs, nixos-generators, nix-index-database, nixpkgs_old, nix-vscode-extensions, arion, minecraft-arion, flake-utils, ... }@attrs: let 
       mods = [
           attrs.home-manager.nixosModules.default
           attrs.impermanence.nixosModules.impermanence
@@ -117,5 +120,23 @@
       };
       default = iso;
     };
-  };
+  } // flake-utils.lib.eachDefaultSystem (system:
+    {
+      apps = rec {
+        test = {
+          type = "app";
+          program = ./nix/scripts/test.sh;
+        };
+        build = {
+          type = "app";
+          program = ./nix/scripts/build.sh;
+        };
+        ciBuild = {
+          type = "app";
+          program = ./nix/scripts/ci-build.sh;
+        };
+        default = build;
+      };
+    }
+  );
 }

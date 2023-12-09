@@ -8,6 +8,7 @@ in
     ((import ./templates/persist.nix) (args // { inherit username; }))
     ((import ./templates/normal_sudo.nix) (args // { inherit username; }))
     ((import ./templates/default_home_manager.nix) (args // { inherit pkgs username host-name version attrs; }))
+    ((import ./tev/services.nix) (args // { inherit username; }))
     ((import ./tev/config.nix) (args // { inherit username; }))
     ((import ./tev/packages.nix) (args // { inherit username; }))
   ];
@@ -17,6 +18,10 @@ in
   home-manager.users.${username} = {
     gtk = {
       enable = true;
+      theme = {
+        package = pkgs.gnome.gnome-themes-extra;
+        name = "Adwaita-dark";
+      };
     };
   };
 }

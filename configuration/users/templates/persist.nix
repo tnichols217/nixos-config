@@ -16,6 +16,7 @@
           "Videos"
           "Public"
           "Templates"
+          "Calibre Library"
         ];
       };
     };
@@ -53,10 +54,12 @@
           ".local/share/kscreen"
           ".local/share/direnv/allow"
           ".local/share/MuseScore"
+          ".local/share/Anki2"
           ".config/lutris"
           ".config/kdeconnect"
           ".config/VSCodium"
           ".config/discord"
+          ".config/tidal-hifi"
           ".config/Microsoft/Microsoft Teams"
           ".config/teams"
           ".config/obsidian"
@@ -65,6 +68,11 @@
           ".config/obs-studio/basic"
           ".config/obs-studio/plugin_config"
           ".config/dolphin-emu"
+          ".config/calibre"
+          ".config/sunshine/credentials"
+          ".config/Moonlight Game Streaming Project"
+          ".config/Yubico"
+          ".config/tartube"
         ];
         files = pkgs.lib.lists.map mapFile [
           ".config/gh/hosts.yml"

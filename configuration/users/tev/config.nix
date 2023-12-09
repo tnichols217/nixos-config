@@ -14,5 +14,8 @@ in
         };
       };
     };
+    home.file.".xbindkeysrc" = {
+      source = ./config/.xbindkeysrc;
+    };
   };
 }

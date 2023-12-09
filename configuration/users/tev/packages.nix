@@ -3,6 +3,33 @@
   environment.sessionVariables = {
     MOZ_USE_XINPUT2 = "1";
   };
+  # users.users.jupyter.group = "jupyter";
+  # users.groups.jupyter = {};
+  # services.jupyter = {
+  #   enable = true;
+  #   password = "sha1:1b961dc713fb:88483270a63e57d18d43cf337e629539de1436ba";
+  #   kernels = {
+  #     python3 = let
+  #       env = (pkgs.python3.withPackages (pythonPackages: with pythonPackages; [
+  #               ipykernel
+  #               pandas
+  #               scikit-learn
+  #             ]));
+  #     in {
+  #       displayName = "Python 3 for machine learning";
+  #       argv = [
+  #         "${env.interpreter}"
+  #         "-m"
+  #         "ipykernel_launcher"
+  #         "-f"
+  #         "{connection_file}"
+  #       ];
+  #       language = "python";
+  #       # logo32 = ${env.sitePackages}/ipykernel/resources/logo-32x32.png;
+  #       # logo64 = ${env.sitePackages}/ipykernel/resources/logo-64x64.png;
+  #     };
+  #   };
+  # };
   home-manager.users.${username} = {
     home = {
       packages = with pkgs; [
@@ -12,7 +39,6 @@
         poppler
         libsForQt5.qt5.qttools
         fswatch
-        python3
         konsole
         meld
         neofetch
@@ -49,8 +75,14 @@
         pdfslicer
         sonic-visualiser
         xsettingsd
+        wacomtablet
+        config.boot.kernelPackages.usbip
+        sunshine
+        dconf
+        openfortivpn
 
         # programs
+        anki
         filezilla
         filelight
         libreoffice
@@ -62,11 +94,18 @@
         kcalc
         libsForQt5.kdeconnect-kde
         musescore
-        pureref
+        # pureref # because of ci build failiures
         audacity
         lutris
         dolphin-emu
         qbittorrent
+        calibre
+        krita
+        btop
+        tidal-hifi
+        moonlight-qt
+        korganizer
+        tartube-yt-dlp
 
         # vscode
 
@@ -86,8 +125,20 @@
         whatsapp-for-linux
         minecraft
         prismlauncher
-
+        localsend
         osu-lazer
+        tartube-yt-dlp
+
+        # python
+        (pkgs.python3.withPackages (pythonPackages: with pythonPackages; [
+          ipykernel
+          pandas
+          scikit-learn
+          pip
+          numpy
+          scipy
+          matplotlib
+        ]))
         
         (callPackage ./packages/arch-theme.pkg.nix { arch-theme = attrs.arch-theme; })
         (callPackage ./packages/papirus-icons.pkg.nix { papirus = attrs.papirus; })
@@ -107,24 +158,29 @@
           # port = 27180;
         in {
           "MSI" = {
-            hostname = "192.168.100.250";
+            # hostname = "192.168.100.250";
+            hostname = "tln32msi.student.cwru.edu";
+            inherit user port identityFile;
+          };
+          "ROG" = {
+            hostname = "tln32rog.student.cwru.edu";
             inherit user port identityFile;
           };
           "ASUS" = {
             # hostname = "192.168.100.200";
-            hostname = "129.22.38.12";
+            hostname = "tln32asus.student.cwru.edu";
             inherit user port identityFile;
 
           };
-          "heyo" = {
-            hostname = "heyo.ydns.eu";
-            inherit user port identityFile;
+          # "heyo" = {
+          #   hostname = "heyo.ydns.eu";
+          #   inherit user port identityFile;
 
-          };
-          "pigs" = {
-            hostname = "pigsgo.mooo.com";
-            inherit user port identityFile;
-          };
+          # };
+          # "pigs" = {
+          #   hostname = "pigsgo.mooo.com";
+          #   inherit user port identityFile;
+          # };
           "gh" = {
             hostname = "github.com";
             user = "git";
