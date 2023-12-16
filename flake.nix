@@ -100,6 +100,8 @@
         oldpkgs = import nixpkgs_old { system = "x86_64-linux"; config = config;};
         vscode_exts = attrs.nix-vscode-extensions.extensions.x86_64-linux.vscode-marketplace;
         openvsx_exts = attrs.nix-vscode-extensions.extensions.x86_64-linux.open-vsx;
+        host-name = "ROG";
+        is-iso = false;
       };
     in {
     nixosConfigurations = {
@@ -110,7 +112,7 @@
       };
       ROG = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = fullAttrs // { host-name = "ROG"; };
+        specialArgs = fullAttrs;
         modules = mods;
       };
       ASUS = nixpkgs.lib.nixosSystem {
@@ -121,7 +123,7 @@
     };
     packages.x86_64-linux = rec {
       iso = nixos-generators.nixosGenerate {
-        specialArgs = fullAttrs // { host-name = "ROG"; is-iso = true; };
+        specialArgs = fullAttrs // { is-iso = true; };
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         modules = mods;
         format = "iso";
