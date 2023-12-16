@@ -1,7 +1,7 @@
-{ config, lib, pkgs, modulesPath, ... }:
+{ config, lib, pkgs, modulesPath, is-iso, ... }:
 
 {
-  fileSystems = {
+  fileSystems = (if is-iso then {
     # combine
     "/" = {
       device = "none";
@@ -14,13 +14,6 @@
     "/nix" = {
       device = "/dev/disk/by-label/NIXROOT";
       fsType = "ext4";
-      neededForBoot = true;
-    };
-
-    # boot
-    "/boot" = {
-      device = "/dev/disk/by-label/NIXBOOT";
-      fsType = "vfat";
       neededForBoot = true;
     };
 
@@ -42,6 +35,13 @@
     "/nix/persist/etc/nixos/configuration/persistence/bucket" = {
       device = "/dev/disk/by-label/NIXBUCKET";
       fsType = "ext4";
+      neededForBoot = true;
+    };
+  } else {}) // {
+    # boot
+    "/boot" = {
+      device = "/dev/disk/by-label/NIXBOOT";
+      fsType = "vfat";
       neededForBoot = true;
     };
   };

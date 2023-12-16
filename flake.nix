@@ -87,9 +87,17 @@
           ./configuration.nix
         ];
       version = "23.05";
+      config = {
+        allowUnfree = true;
+        # TODO until obsidian updates electron
+        permittedInsecurePackages = [
+          "electron-25.9.0"
+        ];
+      };
       fullAttrs = {
         inherit attrs version;
-        oldpkgs = import nixpkgs_old { system = "x86_64-linux"; config = {allowUnfree = true;};};
+        pkgs = import nixpkgs { system = "x86_64-linux"; config = config;};
+        oldpkgs = import nixpkgs_old { system = "x86_64-linux"; config = config;};
         vscode_exts = attrs.nix-vscode-extensions.extensions.x86_64-linux.vscode-marketplace;
         openvsx_exts = attrs.nix-vscode-extensions.extensions.x86_64-linux.open-vsx;
       };
@@ -113,7 +121,7 @@
     };
     packages.x86_64-linux = rec {
       iso = nixos-generators.nixosGenerate {
-        specialArgs = fullAttrs // { host-name = "MSI"; };
+        specialArgs = fullAttrs // { host-name = "ROG"; is-iso = true; };
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         modules = mods;
         format = "iso";

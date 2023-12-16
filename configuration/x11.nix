@@ -7,7 +7,8 @@
   services.xserver.enable = true;
   services.printing.enable = true;
   services.avahi.enable = true;
-  services.avahi.nssmdns = true;
+  services.avahi.nssmdns4 = true;
+  services.avahi.nssmdns6 = true;
   services.avahi.openFirewall = true;
   services.printing.drivers = [ pkgs.gutenprintBin pkgs.hplipWithPlugin pkgs.brgenml1lpr pkgs.brgenml1cupswrapper pkgs.cnijfilter2 ];
   services.xserver.libinput.enable = true;

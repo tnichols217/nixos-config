@@ -46,6 +46,7 @@
           ".gnupg"
           ".nixops"
           ".mozilla"
+          ".local/state/nix/profiles"
           ".local/share/PolyMC" # move to prismlauncher
           ".local/share/PrismLauncher" # move to prismlauncher
           ".local/share/barrier"

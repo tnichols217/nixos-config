@@ -49,14 +49,6 @@
     zsh.enable = true;
   };
 
-  nixpkgs = {
-    config = {
-      allowUnfree = true;
-    };
-  };
-  nixpkgs.config = {
-  };
-
   boot.kernelPackages = pkgs.linuxPackages_zen;
 
   system.autoUpgrade = {
