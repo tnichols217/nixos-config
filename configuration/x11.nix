@@ -9,7 +9,14 @@
       enable = true;
       libinput.enable = true;
       wacom.enable = true;
-      videoDrivers = [ "modesetting" "fbdev" "amdgpu" "nvidia" "virtualbox" "hyperv_fb" ];
+      videoDrivers = [
+        "amdgpu"
+        "nvidia"
+        "virtualbox"
+        "hyperv_fb"
+        "fbdev"
+        "modesetting"
+      ];
     };
     avahi = {
       enable = true;
