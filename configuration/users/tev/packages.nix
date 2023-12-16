@@ -80,6 +80,8 @@
         sunshine
         dconf
         openfortivpn
+        xautomation
+        xbindkeys
 
         # programs
         anki
