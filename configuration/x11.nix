@@ -14,7 +14,7 @@
   services.xserver.libinput.enable = true;
   services.xserver.wacom.enable = true;
   hardware.opengl.enable = true;
-  services.xserver.videoDrivers = if host-name == "ROG" then [ "amdgpu" ] else [ "nvidia" ];
+  services.xserver.videoDrivers = [ "amdgpu" "nvidia" "virtualbox" ];
   fonts = {
     packages = with pkgs; [
       nerdfonts
