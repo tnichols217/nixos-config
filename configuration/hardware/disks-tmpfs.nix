@@ -1,7 +1,16 @@
 { config, lib, pkgs, modulesPath, is-iso, ... }:
 
 {
-  fileSystems = (if is-iso then {
+  fileSystems = (if is-iso then {} else {
+    
+    # boot
+    "/boot" = {
+      device = "/dev/disk/by-label/NIXBOOT";
+      fsType = "vfat";
+      neededForBoot = true;
+    };
+    
+  }) // {
     # combine
     "/" = {
       device = "none";
@@ -37,14 +46,8 @@
       fsType = "ext4";
       neededForBoot = true;
     };
-  } else {}) // {
-    # boot
-    "/boot" = {
-      device = "/dev/disk/by-label/NIXBOOT";
-      fsType = "vfat";
-      neededForBoot = true;
-    };
   };
+
 
   swapDevices = [
     { 
