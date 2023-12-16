@@ -4,17 +4,25 @@
     [
       ./x11/plasma5.nix
     ];
-  services.xserver.enable = true;
-  services.printing.enable = true;
-  services.avahi.enable = true;
-  services.avahi.nssmdns4 = true;
-  services.avahi.nssmdns6 = true;
-  services.avahi.openFirewall = true;
-  services.printing.drivers = [ pkgs.gutenprintBin pkgs.hplipWithPlugin pkgs.brgenml1lpr pkgs.brgenml1cupswrapper pkgs.cnijfilter2 ];
-  services.xserver.libinput.enable = true;
-  services.xserver.wacom.enable = true;
+  services = {
+    xserver = {
+      enable = true;
+      libinput.enable = true;
+      wacom.enable = true;
+      videoDrivers = [ "modesetting" "fbdev" "amdgpu" "nvidia" "virtualbox" "hyperv_fb" ];
+    };
+    avahi = {
+      enable = true;
+      nssmdns4 = true;
+      nssmdns6 = true;
+      openFirewall = true;
+    };
+    printing = {
+      enable = true;
+      drivers = [ pkgs.gutenprintBin pkgs.hplipWithPlugin pkgs.brgenml1lpr pkgs.brgenml1cupswrapper pkgs.cnijfilter2 ];
+    };
+  };
   hardware.opengl.enable = true;
-  services.xserver.videoDrivers = [ "amdgpu" "nvidia" "virtualbox" ];
   fonts = {
     packages = with pkgs; [
       nerdfonts
@@ -26,10 +34,12 @@
   };
   programs.dconf.enable = true;
 } // (if host-name == "ROG" then {
-  hardware.opengl.driSupport = true;
-  hardware.opengl.driSupport32Bit = true;
-  hardware.opengl.extraPackages = with pkgs; [
-    rocm-opencl-icd
-    rocm-opencl-runtime
-  ];
+  hardware.opengl = {
+    driSupport = true;
+    driSupport32Bit = true;
+    extraPackages = with pkgs; [
+      rocm-opencl-icd
+      rocm-opencl-runtime
+    ];
+  };
 } else {})
