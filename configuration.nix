@@ -17,8 +17,10 @@
       ./configuration/programs.nix
     ];
 
+  systemd.tmpfiles.rules = [ "d /etc/nix/ 0755 root root" ];
+
   nix = {
-    package = pkgs.nixVersions.stable;
+    package = pkgs.nix;
     extraOptions = ''experimental-features = nix-command flakes'';
     settings = {
       trusted-substituters = [

@@ -16,6 +16,11 @@
     )
   ];
 
+  systemd.tmpfiles.rules = [
+    "d /home/${username} 0700 ${username} users"
+    "f /home/${username}/.nix-profile/manifest 0755 ${username} users"
+  ];
+
   home-manager.users.${username} = {
     home = {
       stateVersion = version;
