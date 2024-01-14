@@ -72,7 +72,8 @@
         miraclecast
         mpv
         imagemagick
-        pdfslicer
+        # pdfslicer
+        pdfsam-basic
         sonic-visualiser
         xsettingsd
         wacomtablet
