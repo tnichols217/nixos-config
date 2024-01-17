@@ -24,11 +24,11 @@
     extraOptions = ''experimental-features = nix-command flakes'';
     settings = {
       trusted-substituters = [
+        "https://cache.garnix.io"
         "https://cache.nixos.org/"
         "https://tnichols217-nixos-config.cachix.org"
         # "https://pigsgo.mooo.com:5000/"
         "https://tln32asus.student.cwru.edu:5000/"
-        "https://cache.garnix.io"
       ];
       trusted-public-keys = [
         "tnichols217-nixos-config.cachix.org-1:B9JhBiPS+OHykLW16qovoOelAvtdH5sIjYU7BZvs7q8="
