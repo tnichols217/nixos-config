@@ -20,8 +20,8 @@
     "d /home/${username} 0700 ${username} users"
     "Z /home/${username} 0700 ${username} users"
     "f /home/${username}/.local/state/nix/profiles/tmp/manifest.json 0755 ${username} users"
-    "L+ /home/${username}/.local/state/nix/profiles/profile 0755 ${username} users /home/${username}/.local/state/nix/profiles/tmp"
-    "L+ /home/${username}/.nix-profile 0755 ${username} users /home/${username}/.local/state/nix/profiles/profile"
+    "L+ /home/${username}/.local/state/nix/profiles/profile 0755 ${username} users 0 /home/${username}/.local/state/nix/profiles/tmp"
+    "L+ /home/${username}/.nix-profile 0755 ${username} users 0 /home/${username}/.local/state/nix/profiles/profile"
     # "f /home/${username}/.nix-profile/manifest 0755 ${username} users"
   ];
 
