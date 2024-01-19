@@ -33,8 +33,6 @@
     # "f /home/${username}/.nix-profile/manifest.json 0755 ${username} users"
   ];
 
-  home-manager.forceNixProfiles = true;
-
   home-manager.users.${username} = {
     home = {
       stateVersion = version;
@@ -43,6 +41,7 @@
           lsd
           xclip
       ];
+      forceNixProfiles = true;
     };
     programs = {
       git = {
