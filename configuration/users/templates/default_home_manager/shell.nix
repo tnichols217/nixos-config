@@ -1,10 +1,10 @@
-{ pkgs, attrs, username, host-name, version, lib, nix-index-database, ... }:
+{ pkgs, attrs, username, host-name, version, lib, nix-index-database, ... }@ args:
 {
   imports = [
-    ./shell/kitty.nix
-    ./shell/comma.nix
-    ./shell/fish.nix
-    ./shell/zsh.nix
+    (import ./shell/kitty.nix args)
+    (import ./shell/comma.nix args)
+    (import ./shell/fish.nix args)
+    (import ./shell/zsh.nix args)
   ];
 
   users.users.${username} = {

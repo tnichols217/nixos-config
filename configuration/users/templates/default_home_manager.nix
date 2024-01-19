@@ -1,7 +1,7 @@
-{ pkgs, attrs, username, host-name, version, lib, nix-index-database, ... }:
+{ pkgs, attrs, username, host-name, version, lib, nix-index-database, ... }@ args:
 {
   imports = [
-    # ./default_home_manager/shell.nix
+    (import ./default_home_manager/shell.nix args)
   ];
 
   home-manager.backupFileExtension = "backup";

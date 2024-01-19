@@ -60,7 +60,7 @@
           da = "direnv allow";
           fsw = "fswatch -rax ";
           black = "kill (pidof plasmashell); plasmashell &; disown (pidof plasmashell)";
-          kitty = "${pkgs.callPackage ./packages/kitty.pkg.nix { self = pkgs; inherit attrs; }}/bin/kitty";
+          kitty = "${pkgs.callPackage ./kitty/kitty.pkg.nix { self = pkgs; inherit attrs; }}/bin/kitty";
         };
       };
     };
