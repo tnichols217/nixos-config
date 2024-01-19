@@ -22,7 +22,7 @@
 
   systemd.tmpfiles.rules = [
     "d /home/${username} 0700 ${username} users"
-    "Z /home/${username} 0700 ${username} users"
+    "z /home/${username} 0700 ${username} users"
     "f /home/${username}/.local/state/nix/profiles/tmp/manifest.json 0755 ${username} users"
     "L /home/${username}/.local/state/nix/profiles/profile 0755 ${username} users - /home/${username}/.local/state/nix/profiles/tmp"
     "L /home/${username}/.local/state/nix/profiles/home-manager 0755 ${username} users - /home/${username}/.local/state/nix/profiles/tmp"
