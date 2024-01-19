@@ -82,9 +82,6 @@
   outputs = { self, nixpkgs, nixos-generators, nix-index-database, nixpkgs_old, nix-vscode-extensions, arion, minecraft-arion, flake-utils, ... }@attrs: let 
       mods = [
           attrs.home-manager.nixosModules.default
-          # nix-index-database.hmModules.nix-index
-          nix-index-database.nixosModules.nix-index
-          { programs.nix-index-database.comma.enable = true; }
 
           attrs.impermanence.nixosModules.impermanence
           attrs.nur.nixosModules.nur
@@ -105,6 +102,7 @@
         oldpkgs = import nixpkgs_old { system = "x86_64-linux"; config = config;};
         vscode_exts = attrs.nix-vscode-extensions.extensions.x86_64-linux.vscode-marketplace;
         openvsx_exts = attrs.nix-vscode-extensions.extensions.x86_64-linux.open-vsx;
+        nix-index-database = nix-index-database.packages."x86_64-linux";
         host-name = "ROG";
         is-iso = false;
       };
