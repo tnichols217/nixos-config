@@ -22,6 +22,7 @@
   services = {
     ratbagd.enable = true;
     xserver.libinput = {
+      enable = true;
       mouse = {
         scrollMethod = "button";
         scrollButton = 3;
@@ -30,6 +31,7 @@
       touchpad = {
         naturalScrolling = true;
         accelProfile = "flat";
+        tappingButtonMap = "lrm";
       };
     };
   };
