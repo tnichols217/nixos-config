@@ -4,7 +4,6 @@
     wayland.windowManager = {
       hyprland = {
         enable = true;
-        enableNvidiaPatches = true;
         plugins = [];
         settings = {
           general = {
