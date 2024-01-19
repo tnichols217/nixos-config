@@ -33,6 +33,8 @@
     # "f /home/${username}/.nix-profile/manifest.json 0755 ${username} users"
   ];
 
+  programs.command-not-found.enable = pkgs.lib.mkForce false;
+
   home-manager.users.${username} = {
     home = {
       stateVersion = version;
@@ -61,7 +63,7 @@
         };
       };
       nix-index.enable = true;
-      # command-not-found.enable = false;
+      command-not-found.enable = false;
       fish = {
         enable = true;
         shellAliases = {
