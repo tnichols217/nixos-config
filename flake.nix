@@ -81,16 +81,16 @@
   
   outputs = { self, nixpkgs, nixos-generators, nix-index-database, nixpkgs_old, nix-vscode-extensions, arion, minecraft-arion, flake-utils, ... }@attrs: let 
       mods = [
+          ./configuration.nix
 
           attrs.home-manager.nixosModules.default
-          nix-index-database.hmModules.nix-index
-          # nix-index-database.nixosModules.nix-index
+          # nix-index-database.hmModules.nix-index
+          nix-index-database.nixosModules.nix-index
           { programs.nix-index-database.comma.enable = true; }
 
           attrs.impermanence.nixosModules.impermanence
           attrs.nur.nixosModules.nur
           # nix-index-database.nixosModules.nix-index
-          ./configuration.nix
         ];
       version = "23.05";
       config = {
