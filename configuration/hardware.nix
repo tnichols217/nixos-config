@@ -19,7 +19,20 @@
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
   hardware.bluetooth.enable = true;
-  services.ratbagd.enable = true;
-  services.xserver.libinput.mouse.scrollMethod = "button";
-  services.xserver.libinput.mouse.scrollButton = 3;
+
+  services = {
+    ratbagd.enable = true;
+    xserver.libinput = {
+      mouse = {
+        scrollMethod = "button";
+        scrollButton = 3;
+      };
+      touchpad = {
+        naturalScrolling = true;
+        accelProfile = "flat";
+      };
+    };
+
+  };
+
 }
