@@ -126,6 +126,9 @@
               enabled = false;
             };
           };
+          misc = {
+            disable_hyprland_logo = true;
+          };
         };
         xwayland.enable = true;
       };
