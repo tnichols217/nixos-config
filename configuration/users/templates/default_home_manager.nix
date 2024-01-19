@@ -1,9 +1,9 @@
 { pkgs, attrs, username, host-name, version, lib, nix-index-database, ... }:
 {
   imports = [
-    ./default_home_manager/shell.nix
+    # ./default_home_manager/shell.nix
   ];
-  
+
   home-manager.backupFileExtension = "backup";
 
   systemd.services."home-manager-${username}" = {
