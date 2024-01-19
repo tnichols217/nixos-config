@@ -7,7 +7,9 @@
       url = github:NixOS/nixpkgs/nixos-22.11;
     };
     home-manager = {
-      url = github:nix-community/home-manager;
+      # url = github:nix-community/home-manager;
+      # Until home-manager merges my diff maybe
+      url = github:tnichols217/home-manager;
       inputs.nixpkgs.follows = "nixpkgs";
     };
     impermanence = {
