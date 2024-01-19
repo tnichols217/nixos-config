@@ -12,6 +12,12 @@
       url = github:tnichols217/home-manager;
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nix-index-database = {
+      url = "github:Mic92/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     impermanence = {
       url = github:nix-community/impermanence;
     };
@@ -70,19 +76,16 @@
       flake = false;
     };
 
-    # nix-index
-    nix-index-database = {
-      url = "github:Mic92/nix-index-database";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-
     flake-utils.url = "github:numtide/flake-utils";
   };
   
   outputs = { self, nixpkgs, nixos-generators, nix-index-database, nixpkgs_old, nix-vscode-extensions, arion, minecraft-arion, flake-utils, ... }@attrs: let 
       mods = [
+
           attrs.home-manager.nixosModules.default
+          nix-index-database.hmModules.nix-index
+          { programs.nix-index-database.comma.enable = true; }
+
           attrs.impermanence.nixosModules.impermanence
           attrs.nur.nixosModules.nur
           # nix-index-database.nixosModules.nix-index
