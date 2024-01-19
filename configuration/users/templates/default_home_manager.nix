@@ -16,7 +16,7 @@
     )
   ];
 
-  systemd.user.services."home-manager-dep" = {
+  systemd.user.services."home-manager-dep-${username}" = {
     after = [ "systemd-tmpfiles-setup.service" ];
     before = [ "home-manager-${username}.service" ];
     script = "echo home-manager-${username} force dep on tmpfiles";
