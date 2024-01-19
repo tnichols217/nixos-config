@@ -83,8 +83,8 @@
       mods = [
 
           attrs.home-manager.nixosModules.default
-          # nix-index-database.hmModules.nix-index
-          nix-index-database.nixosModules.nix-index
+          nix-index-database.hmModules.nix-index
+          # nix-index-database.nixosModules.nix-index
           { programs.nix-index-database.comma.enable = true; }
 
           attrs.impermanence.nixosModules.impermanence
