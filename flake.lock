@@ -259,11 +259,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1705670016,
-        "narHash": "sha256-5S6t7KFkW4zpMyUU2iE7gWU2DFfr9Lr9Sk+PM/Vjy3M=",
+        "lastModified": 1705670358,
+        "narHash": "sha256-owxI8j/D9ysyi0Nm+MovKCVoqm0fuqw/Dt7Hzv3dQjg=",
         "owner": "tnichols217",
         "repo": "home-manager",
-        "rev": "fa55dc326b88258fbf9a286310cdfffa3617f94c",
+        "rev": "52640b1ec41295135e8b496aa435b4ddc87e0c3d",
         "type": "github"
       },
       "original": {
