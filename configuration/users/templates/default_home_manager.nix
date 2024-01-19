@@ -16,7 +16,7 @@
     )
   ];
 
-  systemd.user.services."home-manager-${username}" = {
+  systemd.user.services."home-manager-${username}" = lib.mkForce {
     after = lib.mkForce [ "nix-daemon.socket" "systemd-tmpfiles-setup.service" ];
   };
 
