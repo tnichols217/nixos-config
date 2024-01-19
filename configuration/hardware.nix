@@ -1,5 +1,4 @@
 { config, lib, pkgs, modulesPath, ... }:
-
 {
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
@@ -26,13 +25,12 @@
       mouse = {
         scrollMethod = "button";
         scrollButton = 3;
+        accelProfile = "flat";
       };
       touchpad = {
         naturalScrolling = true;
         accelProfile = "flat";
       };
     };
-
   };
-
 }
