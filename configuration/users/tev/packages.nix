@@ -114,7 +114,8 @@
 
         obsidian
         stremio
-        barrier
+        # barrier
+        input-leap
         flameshot
         spotify
         (blender-hip.override { cudaSupport = true; } )
