@@ -68,7 +68,6 @@
         swtpm
         piper
         darling-dmg
-        comma
         miraclecast
         mpv
         quartus-prime-lite

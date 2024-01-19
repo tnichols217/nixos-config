@@ -42,7 +42,7 @@
           bat
           lsd
           xclip
-          # nix-index-database.comma-with-db
+          nix-index-database.comma-with-db
       ];
       forceNixProfiles = true;
     };
