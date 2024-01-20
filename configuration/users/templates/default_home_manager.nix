@@ -21,6 +21,8 @@
     "z /home/${username}/.config 0755 ${username} users"
     "d /home/${username}/.local 0755 ${username} users"
     "z /home/${username}/.local 0755 ${username} users"
+    "d /home/${username}/.local/state 0755 ${username} users"
+    "z /home/${username}/.local/state 0755 ${username} users"
     "d /home/${username}/.config/dconf 0755 ${username} users"
     "z /home/${username}/.config/dconf 0755 ${username} users"
     # "f /home/${username}/.local/state/nix/profiles/tmp/manifest.json 0755 ${username} users"
