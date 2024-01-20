@@ -569,11 +569,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1705753414,
-        "narHash": "sha256-HYrIj8oxGuxVCqOqVJPckQSiIJ2InUJblwpV5l1TseU=",
+        "lastModified": 1705774552,
+        "narHash": "sha256-7e06RrcMVEqEMdrE/UID5/E9vcGmMyV0EeL6dZg87Zg=",
         "owner": "tnichols217",
         "repo": "nixos-program-extensions",
-        "rev": "919c12bdc97f27a84e774284f477a6642283bec3",
+        "rev": "da57ef41d466962c1ce53f895b48190a42c81c27",
         "type": "github"
       },
       "original": {
