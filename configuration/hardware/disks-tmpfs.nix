@@ -1,7 +1,24 @@
 { config, lib, pkgs, modulesPath, is-iso, ... }:
 
 {
-  fileSystems = (if is-iso then {} else {
+  fileSystems = (if is-iso then
+  {
+    # software
+    "/nix/.rw-store" = pkgs.lib.mkForce {
+      device = "/dev/disk/by-label/NIXROOT";
+      fsType = "ext4";
+      neededForBoot = true;
+    };
+  } 
+  else 
+  {
+
+    # software
+    "/nix" = {
+      device = "/dev/disk/by-label/NIXROOT";
+      fsType = "ext4";
+      neededForBoot = true;
+    };
     
     # boot
     "/boot" = {
@@ -19,11 +36,9 @@
       neededForBoot = true;
     };
 
-    # software
-    "/nix" = {
-      device = "/dev/disk/by-label/NIXROOT";
-      fsType = "ext4";
-      neededForBoot = true;
+    # iso-build support
+    "/nix/.rw-store" = pkgs.lib.mkForce {
+
     };
 
     # local data
