@@ -4,9 +4,10 @@
   fileSystems = (if is-iso then
   {
     # software
-    "/nix/.rw-store" = pkgs.lib.mkForce {
+    "/nix/.rw-store" = lib.mkForce {
       device = "/dev/disk/by-label/NIXROOT";
       fsType = "ext4";
+      options = [ "defaults" ];
       neededForBoot = true;
     };
   } 
@@ -34,11 +35,6 @@
       fsType = "tmpfs";
       options = [ "defaults" "size=64G" "mode=755" ];
       neededForBoot = true;
-    };
-
-    # iso-build support
-    "/nix/.rw-store" = pkgs.lib.mkForce {
-
     };
 
     # local data
