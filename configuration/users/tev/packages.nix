@@ -70,7 +70,6 @@
         darling-dmg
         miraclecast
         mpv
-        quartus-prime-lite
         imagemagick
         # pdfslicer
         pdfsam-basic
