@@ -7,13 +7,6 @@
 
   home-manager.backupFileExtension = "backup";
 
-  systemd.services."home-manager-${username}" = {
-    after = [ "systemd-tmpfiles-setup.service" ];
-    # before = [ "home-manager-${username}.service" ];
-    # script = "echo home-manager-${username} force dep on tmpfiles";
-    # description = "home-manager-${username} force dep on tmpfiles";
-  };
-
   systemd.tmpfiles.rules = [
     "d! /home/${username} 0700 ${username} users"
     "d! /home/${username}/.config 0755 ${username} users"

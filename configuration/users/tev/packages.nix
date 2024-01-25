@@ -109,6 +109,7 @@
         moonlight-qt
         korganizer
         tartube-yt-dlp
+        attrs.quartus
 
         # vscode
 
