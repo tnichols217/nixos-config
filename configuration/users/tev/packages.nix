@@ -82,6 +82,7 @@
         openfortivpn
         xautomation
         xbindkeys
+        ani-cli
 
         # programs
         anki
