@@ -58,11 +58,11 @@
     "bungeecord": {
       "flake": false,
       "locked": {
-        "lastModified": 1688551103,
-        "narHash": "sha256-ngkOwqcN4OTDhNRQchP42RJzZNWgtDhbzwQ6/KSfjyo=",
+        "lastModified": 1705700517,
+        "narHash": "sha256-i4KU6okU2rgqqsuQ9MYaM4BLWjqVISUMge+ocFCYnsM=",
         "ref": "refs/heads/master",
-        "rev": "9f5ace9025cc28d4d1f43e0a1cd4fddd6505c4dc",
-        "revCount": 1900,
+        "rev": "a1cd694363a4adbd4dcf8c7f8680cb6faf16cf50",
+        "revCount": 1974,
         "type": "git",
         "url": "https://github.com/SpigotMC/BungeeCord"
       },
@@ -168,11 +168,11 @@
         "systems": "systems_2"
       },
       "locked": {
-        "lastModified": 1687709756,
-        "narHash": "sha256-Y5wKlQSkgEK2weWdOu4J3riRd+kV/VCgHsqLNTTWQ/0=",
+        "lastModified": 1705309234,
+        "narHash": "sha256-uNRRNRKmJyCRC/8y1RqBkqWBLM034y4qN7EprSdmgyA=",
         "owner": "numtide",
         "repo": "flake-utils",
-        "rev": "dbabf0ca0c0c4bce6ea5eaf65af5cb694d2082c7",
+        "rev": "1ef2e671c3b0c19053962c07dbda38332dcebf26",
         "type": "github"
       },
       "original": {
@@ -388,11 +388,11 @@
         "spigot": "spigot"
       },
       "locked": {
-        "lastModified": 1701898628,
-        "narHash": "sha256-NbAhU8k+FPYF7G/3jRKy9LSP5mL277jsfx0FwK79XVY=",
+        "lastModified": 1706242250,
+        "narHash": "sha256-3Mso444F7m3A/mSYNlfISapaZiMncwO1EwFL5+BZ5po=",
         "owner": "tnichols217",
         "repo": "nix-minecraft-server",
-        "rev": "6a12cd89827b84458c6d687ca73275841eb08b2c",
+        "rev": "cb3f8b333c8c9b4c28b1fa6117dbc76a88c8ccb4",
         "type": "github"
       },
       "original": {
@@ -428,11 +428,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1706145905,
-        "narHash": "sha256-zABEBEl2Nn7Ea0CyqNvc+gOboN8M9RXNOI2Qeamx0WY=",
+        "lastModified": 1706232054,
+        "narHash": "sha256-AjwmVarytm50C6CNvybuabXhu0zewLOXuxcmuiGyz8U=",
         "owner": "nix-community",
         "repo": "nix-vscode-extensions",
-        "rev": "272df61ec787306e2c5c777ff84fbe5ed2a3eb10",
+        "rev": "e7db4235e6fcdff0d55925b4309bf8fe900501f0",
         "type": "github"
       },
       "original": {
@@ -573,11 +573,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1706224280,
-        "narHash": "sha256-NjNVRbhfqLcQ1mbv4p8sJWUykdVS1K1+kvOFYCcjL/o=",
+        "lastModified": 1706242084,
+        "narHash": "sha256-gKURnfuuw+4cqM3xSkWqBeaIumxNF81Xs8ZV+XkJwa4=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "d4d60da6551ad5425b2456f7e7081364fd17d7dd",
+        "rev": "07501c238ab0ad1b2ab8e30d9c9edfa4a8e500e0",
         "type": "github"
       },
       "original": {
@@ -624,11 +624,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1706206668,
-        "narHash": "sha256-Y1takfslM3yns90xrT6R7ATFQZfn5IVHd/bhuJ7+t9c=",
+        "lastModified": 1706230674,
+        "narHash": "sha256-wmwQk/4dmFgeHtcIaBzrWLTR/NlMQ8BqtC9/h5IBS/0=",
         "owner": "tnichols217",
         "repo": "nixos-program-extensions",
-        "rev": "f7b92b3a15a06d7ac520fdf27597bf0b8644af30",
+        "rev": "a6cbde763a9c99fe79af291ed72ba96d221a7aea",
         "type": "github"
       },
       "original": {
@@ -697,11 +697,11 @@
     "spigot": {
       "flake": false,
       "locked": {
-        "lastModified": 1687164037,
-        "narHash": "sha256-EO/wfsn1t8nc26x1kJaJwudCV/hN+k9ORCYnYgldSNs=",
+        "lastModified": 1705394401,
+        "narHash": "sha256-thq3QYy+pR3u5fDcGs5kDZmMoGFvbSp86dejsj+HZ5I=",
         "ref": "refs/heads/master",
-        "rev": "2836244c7570cce607f5b5d124bdc7b4f28aa0ee",
-        "revCount": 155,
+        "rev": "eced56f204df982a16d7be02b2f2bbad626d9851",
+        "revCount": 163,
         "type": "git",
         "url": "https://hub.spigotmc.org/stash/scm/spigot/buildtools.git"
       },
