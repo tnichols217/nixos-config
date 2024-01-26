@@ -83,6 +83,7 @@
         xautomation
         xbindkeys
         ani-cli
+        graphviz
 
         # programs
         anki
