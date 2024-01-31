@@ -112,6 +112,7 @@
         tartube-yt-dlp
         # attrs.quartus
         quartus-prime-lite
+        element-desktop
 
         # vscode
 
