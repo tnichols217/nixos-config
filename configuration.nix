@@ -21,7 +21,10 @@
 
   nix = {
     package = pkgs.nix;
-    extraOptions = ''experimental-features = nix-command flakes'';
+    extraOptions = ''
+      experimental-features = nix-command flakes
+      builders-use-substitutes = true
+    '';
     settings = {
       trusted-substituters = [
         "https://cache.garnix.io"
