@@ -9,7 +9,7 @@
         hideMounts = false;
         users.${username} = {
           directories = pkgs.lib.lists.map mapDirAttr dirs;
-          files = pkgs.lib.lists.map mapFileAttr dirs;
+          files = pkgs.lib.lists.map mapFileAttr files;
         };
       };
       systemd.tmpfiles.rules = pkgs.lib.lists.map mapTmp dirs ++ pkgs.lib.lists.map mapTmp files;
