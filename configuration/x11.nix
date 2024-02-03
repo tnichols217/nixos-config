@@ -13,10 +13,10 @@
       videoDrivers = [
         # "amdgpu"
         "nvidia"
-        "virtualbox"
-        "hyperv_fb"
-        "fbdev"
-        "modesetting"
+        # "virtualbox"
+        # "hyperv_fb"
+        # "fbdev"
+        # "modesetting"
       ];
     };
     avahi = {
