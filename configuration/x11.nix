@@ -13,8 +13,8 @@
       videoDrivers = [
         "amdgpu"
         "nvidia"
-        "virtualbox"
-        "hyperv_fb"
+        # "virtualbox"
+        # "hyperv_fb"
         # "fbdev"
         # "modesetting"
       ];
