@@ -30,7 +30,11 @@
       drivers = [ pkgs.gutenprintBin pkgs.hplipWithPlugin pkgs.brgenml1lpr pkgs.brgenml1cupswrapper pkgs.cnijfilter2 ];
     };
   };
-  hardware.opengl.enable = true;
+  hardware.opengl = {
+    enable = true;
+    driSupport = true;
+    driSupport32Bit = true;
+  };
   fonts = {
     packages = with pkgs; [
       nerdfonts
@@ -43,8 +47,6 @@
   programs.dconf.enable = true;
 } // (if host-name == "ROG" then {
   hardware.opengl = {
-    driSupport = true;
-    driSupport32Bit = true;
     extraPackages = with pkgs; [
       rocm-opencl-icd
       rocm-opencl-runtime
