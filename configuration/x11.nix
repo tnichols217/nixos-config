@@ -11,10 +11,10 @@
       libinput.enable = true;
       wacom.enable = true;
       videoDrivers = [
-        # "amdgpu"
+        "amdgpu"
         "nvidia"
-        # "virtualbox"
-        # "hyperv_fb"
+        "virtualbox"
+        "hyperv_fb"
         "fbdev"
         "modesetting"
       ];
