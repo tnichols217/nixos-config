@@ -14,5 +14,5 @@
     font = "Lat2-Terminus16";
     keyMap = "us";
   };
-  services.xserver.layout = "us";
+  services.xserver.xkb.layout = "us";
 }

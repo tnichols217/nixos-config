@@ -20,7 +20,7 @@
   services.nextcloud = {
     enable = true;
     hostName = "tln32asus.student.cwru.edu";
-    package = pkgs.nextcloud27;
+    package = pkgs.nextcloud28;
     configureRedis = true;
     # nginx.enable = true;
 
@@ -29,9 +29,9 @@
     autoUpdateApps.enable = true;
     autoUpdateApps.startAt = "05:00:00";
 
-    config = {
-      overwriteProtocol = "https";
+    settings.overwriteProtocol = "https";
 
+    config = {
       dbtype = "pgsql";
       dbuser = "nextcloud";
       dbhost = "/run/postgresql"; # nextcloud will add /.s.PGSQL.5432 by itself
