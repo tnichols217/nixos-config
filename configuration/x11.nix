@@ -3,7 +3,7 @@
   imports =
     [
       ./x11/plasma5.nix
-      # ./x11/hyprland.nix
+      ./x11/hyprland.nix
     ];
   services = {
     xserver = {
@@ -11,10 +11,10 @@
       libinput.enable = true;
       wacom.enable = true;
       videoDrivers = [
-        # "amdgpu"
+        "amdgpu"
         "nvidia"
-        # "virtualbox"
-        # "hyperv_fb"
+        "virtualbox"
+        "hyperv_fb"
         # "fbdev"
         # "modesetting"
       ];
