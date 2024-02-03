@@ -4,7 +4,7 @@
   hardware.nvidia = {
     prime.nvidiaBusId = "PCI:1:0:0";
     modesetting.enable = true;
-    open = false;
+    open = true;
     
     powerManagement.enable = false;
     powerManagement.finegrained = false;
