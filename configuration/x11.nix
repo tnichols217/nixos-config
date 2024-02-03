@@ -11,12 +11,12 @@
       libinput.enable = true;
       wacom.enable = true;
       videoDrivers = [
-        "amdgpu"
+        # "amdgpu"
         "nvidia"
-        # "virtualbox"
-        # "hyperv_fb"
-        # "fbdev"
-        # "modesetting"
+        "virtualbox"
+        "hyperv_fb"
+        "fbdev"
+        "modesetting"
       ];
     };
     avahi = {
