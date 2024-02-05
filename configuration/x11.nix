@@ -10,13 +10,14 @@
       enable = true;
       libinput.enable = true;
       wacom.enable = true;
-      videoDrivers = [
-        # "amdgpu"
+      videoDrivers = (if host-name == "ASUS" then [] else [
+        "amdgpu"
+        "virtualbox"
+        "hyperv_fb"
+        "fbdev"
+        "modesetting"
+      ]) ++ [
         "nvidia"
-        # "virtualbox"
-        # "hyperv_fb"
-        # "fbdev"
-        # "modesetting"
       ];
     };
     avahi = {
