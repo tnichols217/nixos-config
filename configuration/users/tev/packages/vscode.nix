@@ -63,7 +63,6 @@
       firefox-devtools.vscode-firefox-debug
       vscode_exts.vscjava.vscode-java-test
       vscode_exts.vscjava.vscode-java-debug
-      vscode_exts.VisualStudioExptTeam.vscodeintellicode
     ];
   }) // { pname = "vscodium"; };
   userSettings = {
