@@ -61,6 +61,7 @@
       vscode_exts.orta.vscode-twoslash-queries
       vscode_exts.paulober.pico-w-go
       firefox-devtools.vscode-firefox-debug
+      vscode_exts.vscjava.vscode-java-test
     ];
   }) // { pname = "vscodium"; };
   userSettings = {
