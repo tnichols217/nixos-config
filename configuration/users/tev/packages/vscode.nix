@@ -62,6 +62,7 @@
       vscode_exts.paulober.pico-w-go
       firefox-devtools.vscode-firefox-debug
       vscode_exts.vscjava.vscode-java-test
+      vscode_exts.vscjava.vscode-java-debug
     ];
   }) // { pname = "vscodium"; };
   userSettings = {
