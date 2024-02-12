@@ -38,6 +38,7 @@
         ".local/share/SHENZHEN IO"
         ".local/share/Celeste"
         ".local/share/dolphin-emu"
+        ".local/share/waydroid"
         ".minecraft"
         "Games"
         ".wine"

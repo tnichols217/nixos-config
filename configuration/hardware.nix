@@ -9,7 +9,7 @@
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usbhid" "sd_mod" "virtio_pci" "sr_mod" "virtio_blk" "usb_storage" "usbhid" "rtsx_usb_sdmmc" "btrfs" "usbip_host" "sdhci_pci" ];
   boot.initrd.kernelModules = [ "amdgpu" "nvidia" ];
-  boot.kernelModules = [ "kvm-intel" "binder" "ashmem" ];
+  boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = with config.boot.kernelPackages; [
     v4l2loopback
     nvidia_x11
