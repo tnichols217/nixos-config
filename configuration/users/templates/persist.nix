@@ -68,6 +68,7 @@
         ".config/kdeconnect"
         ".config/VSCodium"
         ".config/discord"
+        ".config/Element"
         ".config/tidal-hifi"
         ".config/Microsoft/Microsoft Teams"
         ".config/teams"

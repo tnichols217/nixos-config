@@ -54,7 +54,7 @@
     zsh.enable = true;
   };
 
-  boot.kernelPackages = pkgs.linuxPackages_6_6;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   system.autoUpgrade = {
     enable = true;
