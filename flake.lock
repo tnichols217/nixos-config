@@ -214,45 +214,6 @@
         "type": "github"
       }
     },
-    "flake-utils_5": {
-      "inputs": {
-        "systems": "systems_4"
-      },
-      "locked": {
-        "lastModified": 1705309234,
-        "narHash": "sha256-uNRRNRKmJyCRC/8y1RqBkqWBLM034y4qN7EprSdmgyA=",
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "rev": "1ef2e671c3b0c19053962c07dbda38332dcebf26",
-        "type": "github"
-      },
-      "original": {
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "type": "github"
-      }
-    },
-    "gitignore": {
-      "inputs": {
-        "nixpkgs": [
-          "quartus",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1703887061,
-        "narHash": "sha256-gGPa9qWNc6eCXT/+Z5/zMkyYOuRZqeFZBDbopNZQkuY=",
-        "owner": "hercules-ci",
-        "repo": "gitignore.nix",
-        "rev": "43e1aa1308018f37118e34d3a9cb4f5e75dc11d5",
-        "type": "github"
-      },
-      "original": {
-        "owner": "hercules-ci",
-        "repo": "gitignore.nix",
-        "type": "github"
-      }
-    },
     "haskell-flake": {
       "locked": {
         "lastModified": 1675296942,
@@ -539,22 +500,6 @@
         "type": "github"
       }
     },
-    "nixpkgs_5": {
-      "locked": {
-        "lastModified": 1706006310,
-        "narHash": "sha256-nDPz0fj0IFcDhSTlXBU2aixcnGs2Jm4Zcuoj0QtmiXQ=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "b43bb235efeab5324c5e486882ef46749188eee2",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixpkgs-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "nixpkgs_old": {
       "locked": {
         "lastModified": 1688392541,
@@ -637,27 +582,6 @@
         "type": "github"
       }
     },
-    "quartus": {
-      "inputs": {
-        "flake-utils": "flake-utils_5",
-        "gitignore": "gitignore",
-        "nixpkgs": "nixpkgs_5",
-        "source": "source"
-      },
-      "locked": {
-        "lastModified": 1706212664,
-        "narHash": "sha256-wznuJumd7YPYi2cy+VFcjgLrJeM0d9VvIrTRvoQRt54=",
-        "owner": "tnichols217",
-        "repo": "quartus-prime-nix",
-        "rev": "d0563c91b15e15b27bf1c210ca9144f8e18f53ec",
-        "type": "github"
-      },
-      "original": {
-        "owner": "tnichols217",
-        "repo": "quartus-prime-nix",
-        "type": "github"
-      }
-    },
     "root": {
       "inputs": {
         "arch-theme": "arch-theme",
@@ -678,20 +602,7 @@
         "nur": "nur",
         "p10k": "p10k",
         "papirus": "papirus",
-        "program-extensions": "program-extensions",
-        "quartus": "quartus"
-      }
-    },
-    "source": {
-      "flake": false,
-      "locked": {
-        "narHash": "sha256-cwGYMaCP4vxzz3775IAYA9TmPH3GyuIWEpmYay+pnl8=",
-        "type": "file",
-        "url": "https://downloads.intel.com/akdlm/software/acdsinst/20.1std.1/720/ib_tar/Quartus-lite-20.1.1.720-linux.tar"
-      },
-      "original": {
-        "type": "file",
-        "url": "https://downloads.intel.com/akdlm/software/acdsinst/20.1std.1/720/ib_tar/Quartus-lite-20.1.1.720-linux.tar"
+        "program-extensions": "program-extensions"
       }
     },
     "spigot": {
@@ -741,21 +652,6 @@
       }
     },
     "systems_3": {
-      "locked": {
-        "lastModified": 1681028828,
-        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
-        "owner": "nix-systems",
-        "repo": "default",
-        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-systems",
-        "repo": "default",
-        "type": "github"
-      }
-    },
-    "systems_4": {
       "locked": {
         "lastModified": 1681028828,
         "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",

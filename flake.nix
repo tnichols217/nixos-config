@@ -76,10 +76,6 @@
       flake = false;
     };
 
-    quartus = {
-      url = "github:tnichols217/quartus-prime-nix";
-    };
-
     flake-utils.url = "github:numtide/flake-utils";
   };
   
