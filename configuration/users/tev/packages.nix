@@ -124,7 +124,7 @@
         spotify
         (blender-hip.override { cudaSupport = true; } )
         gimp
-        inkscape
+        inkscape-with-extensions.override { inkscapeExtensions = [ inkscape-extensions.textext ]; }
         brave
         # teams
 
