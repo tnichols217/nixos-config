@@ -1,6 +1,7 @@
 { pkgs, attrs, config, ... }:
 {
   systemd.services."generate-nix-serve-certs" = {
+    # FIXME
     serviceConfig.Type = "oneshot";
     path = with pkgs; [ nix ];
     script = ''

@@ -84,6 +84,8 @@
         xbindkeys
         ani-cli
         graphviz
+        texliveFull
+        pstoedit
 
         # programs
         anki
