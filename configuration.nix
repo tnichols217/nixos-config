@@ -30,7 +30,6 @@
         "https://cache.garnix.io"
         "https://cache.nixos.org/"
         "https://tnichols217-nixos-config.cachix.org"
-        # "https://pigsgo.mooo.com:5000/"
         "https://${addresses.default}:5000/"
       ];
       trusted-public-keys = [
