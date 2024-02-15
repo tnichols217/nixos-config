@@ -1,4 +1,4 @@
-{ config, pkgs, username, attrs, host-name, nixpkgs, oldpkgs, vscode_exts, openvsx_exts, ... }:
+{ config, pkgs, username, attrs, host-name, nixpkgs, oldpkgs, vscode_exts, openvsx_exts, addresses, ... }:
 {
   environment.sessionVariables = {
     MOZ_USE_XINPUT2 = "1";
@@ -171,28 +171,19 @@
         in {
           "MSI" = {
             # hostname = "192.168.100.250";
-            hostname = "tln32msi.student.cwru.edu";
+            hostname = "${addresses.msi}";
             inherit user port identityFile;
           };
           "ROG" = {
-            hostname = "tln32rog.student.cwru.edu";
+            hostname = "${addresses.rog}";
             inherit user port identityFile;
           };
           "ASUS" = {
             # hostname = "192.168.100.200";
-            hostname = "tln32asus.student.cwru.edu";
+            hostname = "${addresses.asus}";
             inherit user port identityFile;
 
           };
-          # "heyo" = {
-          #   hostname = "heyo.ydns.eu";
-          #   inherit user port identityFile;
-
-          # };
-          # "pigs" = {
-          #   hostname = "pigsgo.mooo.com";
-          #   inherit user port identityFile;
-          # };
           "gh" = {
             hostname = "github.com";
             user = "git";

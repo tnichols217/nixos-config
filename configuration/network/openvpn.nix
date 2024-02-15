@@ -1,9 +1,9 @@
-{ ... }:
+{ addresses, ... }:
 {
   services.openvpn.servers = let 
     configString = {adapt, port?"1194"}: 
       let 
-        addr = "tln32asus.student.cwru.edu";
+        addr = "${addresses.default}";
         # get from server
         ca = "/var/lib/openvpn/ca.crt";
         # easyrsa build-client-full client

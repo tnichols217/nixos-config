@@ -1,4 +1,4 @@
-{ config, pkgs, version, host-name, attrs, oldnixpkgs, ... }:
+{ config, pkgs, version, host-name, attrs, oldnixpkgs, addresses, ... }:
 {
   imports =
     [
@@ -31,11 +31,11 @@
         "https://cache.nixos.org/"
         "https://tnichols217-nixos-config.cachix.org"
         # "https://pigsgo.mooo.com:5000/"
-        "https://tln32asus.student.cwru.edu:5000/"
+        "https://${addresses.default}:5000/"
       ];
       trusted-public-keys = [
         "tnichols217-nixos-config.cachix.org-1:B9JhBiPS+OHykLW16qovoOelAvtdH5sIjYU7BZvs7q8="
-        "tln32asus.student.cwru.edu:V8MCTN/ox+Y5GxqFsjAml4IfcUvTacLFIqw48A9Ic/o="
+        "${addresses.default}:V8MCTN/ox+Y5GxqFsjAml4IfcUvTacLFIqw48A9Ic/o="
         "cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g="
       ];
       auto-optimise-store = true;

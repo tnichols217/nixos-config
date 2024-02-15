@@ -1,4 +1,4 @@
-{ pkgs, attrs, config, ... }:
+{ pkgs, attrs, config, addresses, ... }:
 {
   # users.users.nginx.extraGroups = ["wwwrun"];
 
@@ -11,11 +11,9 @@
     virtualHosts = {
       "nix-serve" = {
         locations."/".proxyPass = "http://${config.services.nix-serve.bindAddress}:${toString config.services.nix-serve.port}";
-        useACMEHost = "pigsgo.mooo.com";
-        serverName = "pigsgo.mooo.com";
+        useACMEHost = "${addresses.default}";
+        serverName = "${addresses.default}";
         forceSSL = true;
-        # sslCertificateKey = "/var/lib/acme/pigsgo.mooo.com/key.pem";
-        # sslCertificate = "/var/lib/acme/pigsgo.mooo.com/cert.pem";
         listen = [
           {
             addr = "0.0.0.0";
@@ -26,8 +24,8 @@
       };
       "nextcloud" = {
         locations."/".proxyPass = "http://localhost:80";
-        useACMEHost = "pigsgo.mooo.com";
-        serverName = "pigsgo.mooo.com";
+        useACMEHost = "${addresses.default}";
+        serverName = "${addresses.default}";
         forceSSL = true;
         listen = [
           {

@@ -1,4 +1,4 @@
-{ pkgs, attrs, config, ... }:
+{ pkgs, attrs, config, addresses, ... }:
 {
   security.acme = {
     acceptTerms = true;
@@ -8,9 +8,9 @@
       group = "nginx";
     };
     certs = {
-      "heyo.ydns.eu" = {};
-      "pigsgo.mooo.com" = {};
-      "tln32asus.student.cwru.edu" = {};
+      "${addresses.heyo}" = {};
+      "${addresses.pigs}" = {};
+      "${addesses.asus}" = {};
     };
   };
 }

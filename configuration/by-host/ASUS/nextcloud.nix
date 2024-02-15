@@ -1,4 +1,4 @@
-{ pkgs, attrs, config, lib, ... }:
+{ pkgs, attrs, config, lib, addresses, ... }:
 {
   services.postgresql = {
     enable = true;
@@ -19,7 +19,7 @@
 
   services.nextcloud = {
     enable = true;
-    hostName = "tln32asus.student.cwru.edu";
+    hostName = "${addresses.default}";
     package = pkgs.nextcloud28;
     configureRedis = true;
     # nginx.enable = true;

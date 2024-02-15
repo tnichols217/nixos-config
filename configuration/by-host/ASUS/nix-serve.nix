@@ -1,4 +1,4 @@
-{ pkgs, attrs, config, ... }:
+{ pkgs, attrs, config, addresses, ... }:
 {
   systemd.services."generate-nix-serve-certs" = {
     # FIXME
@@ -6,7 +6,7 @@
     path = with pkgs; [ nix ];
     script = ''
       if [ ! -f "/var/lib/nix-serve/cache-priv-key.pem" ] || [ ! -f "/var/lib/nix-serve/cache-pub-key.pem" ]; then
-        nix-store --generate-binary-cache-key pigsgo.mooo.com /var/lib/nix-serve/cache-priv-key.pem /var/lib/nix-serve/cache-pub-key.pem
+        nix-store --generate-binary-cache-key ${addresses.default} /var/lib/nix-serve/cache-priv-key.pem /var/lib/nix-serve/cache-pub-key.pem
         chown nix-serve /var/lib/nix-serve/cache-priv-key.pem
         chmod 600 /var/lib/nix-serve/cache-priv-key.pem
       fi
@@ -18,6 +18,7 @@
   services.nix-serve = {
     enable = true;
     port = 4999;
+    secretKeyFile = "/var/lib/nix-serve/cache-priv-key.pem";
   };
 
 }

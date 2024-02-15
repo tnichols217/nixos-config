@@ -1,4 +1,4 @@
-{ pkgs, host-name }:
+{ pkgs, host-name, addresses }:
 let
 background = (import ./config/background.nix { inherit host-name; });
 in
@@ -1478,7 +1478,7 @@ in
         "requireClientCertificate" = "false";
         "screenName" = "${host-name}";
         # "serverHostname" = "192.168.100.200";
-        "serverHostname" = "tln32asus.student.cwru.edu";
+        "serverHostname" = "${addresses.default}";
         "startedBefore" = "true";
         "useExternalConfig" = "true";
         "useInternalConfig" = "false";

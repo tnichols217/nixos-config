@@ -96,8 +96,16 @@
           "electron-25.9.0"
         ];
       };
+      addresses = rec {
+        pigs = "pigsgo.mooo.com";
+        heyo = "heyo.ydns.eu";
+        asus = "tln32asus.student.cwru.edu";
+        rog = "tln32rog.student.cwru.edu";
+        msi = "tln32msi.student.cwru.edu";
+        default = asus;
+      };
       fullAttrs = {
-        inherit attrs version;
+        inherit attrs version addresses;
         pkgs = import nixpkgs { system = "x86_64-linux"; config = config;};
         oldpkgs = import nixpkgs_old { system = "x86_64-linux"; config = config;};
         vscode_exts = attrs.nix-vscode-extensions.extensions.x86_64-linux.vscode-marketplace;
