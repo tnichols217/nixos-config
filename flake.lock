@@ -349,11 +349,11 @@
         "spigot": "spigot"
       },
       "locked": {
-        "lastModified": 1708017812,
-        "narHash": "sha256-5rrYOM8ZG9hr2JYDdRqacsUGRyl9BDeAdHYC3lhObFY=",
+        "lastModified": 1708025420,
+        "narHash": "sha256-mtoPnqkqY/hxiu9PUR0A7Vrvf9t2l3bknJ3GHSmY7H0=",
         "owner": "tnichols217",
         "repo": "nix-minecraft-server",
-        "rev": "8921c365e15af80dcaaac8398c5bcb3b51c9d833",
+        "rev": "4432f0c599b626052adcd02845c39dfe6dbd861c",
         "type": "github"
       },
       "original": {
@@ -518,11 +518,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1708019139,
-        "narHash": "sha256-s7k60xuZUIHbMn2vgiu1NUNqeGeh8SJLFkUpR9MJs7w=",
+        "lastModified": 1708024193,
+        "narHash": "sha256-axgMdKTKHEvcUNg7n0Ba0BxU8Q5zvLElXFxUdejuPVo=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "80519ce11b5ccd1c66cd39c412eb0fd500d4a799",
+        "rev": "4f80eef9d04a980c8a75ac943640e2a2d64b348b",
         "type": "github"
       },
       "original": {
@@ -569,11 +569,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1707999771,
-        "narHash": "sha256-kmPekw8rT27vyLZBQDwnGIxTGenr3onnvg3UDiC6/nw=",
+        "lastModified": 1708021020,
+        "narHash": "sha256-XjG3+ysXPxaP+dL0B2aLkYAayKCVIRVsUHbz6P4axgo=",
         "owner": "tnichols217",
         "repo": "nixos-program-extensions",
-        "rev": "fdf64dbf2a389b10464c19f7ffda11618fe75527",
+        "rev": "82a8eab2bc8aacbecd1bbc4e7709b75195ad5779",
         "type": "github"
       },
       "original": {
