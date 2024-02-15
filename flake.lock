@@ -349,11 +349,11 @@
         "spigot": "spigot"
       },
       "locked": {
-        "lastModified": 1706242250,
-        "narHash": "sha256-3Mso444F7m3A/mSYNlfISapaZiMncwO1EwFL5+BZ5po=",
+        "lastModified": 1707973735,
+        "narHash": "sha256-9o/DcFHYe6kVnp/tomH5DJq8sWKcGc0CVNsMPr+3VEg=",
         "owner": "tnichols217",
         "repo": "nix-minecraft-server",
-        "rev": "cb3f8b333c8c9b4c28b1fa6117dbc76a88c8ccb4",
+        "rev": "5f7bccb8d2cc1e01cc6e335a4a3fec61798d4103",
         "type": "github"
       },
       "original": {
@@ -518,11 +518,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1707967780,
-        "narHash": "sha256-ZRUGZEY4OyI8wBerRO4ZRAkHeB5c0OFQ/GRhZlmV7aU=",
+        "lastModified": 1707969968,
+        "narHash": "sha256-z5fFoJCGRJAgXSnp5SXPC72FQbGObDBwh6LgUpeqeXE=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "59a17cf7763df662667440487b80d68156252c7c",
+        "rev": "56e8d835ee623651ba211d0486b34f0db10a4d47",
         "type": "github"
       },
       "original": {
