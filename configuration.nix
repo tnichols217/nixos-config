@@ -35,7 +35,7 @@
       ];
       trusted-public-keys = [
         "tnichols217-nixos-config.cachix.org-1:B9JhBiPS+OHykLW16qovoOelAvtdH5sIjYU7BZvs7q8="
-        "${addresses.default}:V8MCTN/ox+Y5GxqFsjAml4IfcUvTacLFIqw48A9Ic/o="
+        "${addresses.default}:lT5jwGHgyaGJkTJtl/pTN4GqLSSkC/siY0EAfDoGpjo="
         "cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g="
       ];
       auto-optimise-store = true;
