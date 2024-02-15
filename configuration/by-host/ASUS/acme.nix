@@ -10,7 +10,7 @@
     certs = {
       "${addresses.heyo}" = {};
       "${addresses.pigs}" = {};
-      "${addesses.asus}" = {};
+      "${addresses.asus}" = {};
     };
   };
 }
