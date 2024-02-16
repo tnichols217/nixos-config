@@ -1,4 +1,4 @@
-{ config, lib, pkgs, modulesPath, is-iso, ... }:
+{ config, lib, pkgs, modulesPath, is-iso, persistence, ... }:
 
 {
   fileSystems = (if is-iso then
@@ -38,21 +38,21 @@
     };
 
     # local data
-    "/nix/persist" = {
+    "${persistence.local}" = {
       device = "/dev/disk/by-label/NIXPERSIST";
       fsType = "ext4";
       neededForBoot = true;
     };
 
     # data
-    "/nix/persist/etc/nixos/configuration/persistence/data" = {
+    "${persistence.data}" = {
       device = "/dev/disk/by-label/NIXDATA";
       fsType = "ext4";
       neededForBoot = true;
     };
 
     # bucket
-    "/nix/persist/etc/nixos/configuration/persistence/bucket" = {
+    "${persistence.bucket}" = {
       device = "/dev/disk/by-label/NIXBUCKET";
       fsType = "ext4";
       neededForBoot = true;

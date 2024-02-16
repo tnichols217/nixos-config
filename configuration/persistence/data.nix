@@ -1,6 +1,6 @@
-{ config, pkgs, ... }:
+{ config, pkgs, persistence, ... }:
 {
-  environment.persistence."/nix/persist/etc/nixos/configuration/persistence/data" = {
+  environment.persistence."${persistence.data}" = {
     hideMounts = false;
     directories = [
       "/root"

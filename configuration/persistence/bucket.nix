@@ -1,6 +1,6 @@
-{ config, pkgs, ... }:
+{ config, pkgs, persistence, ... }:
 {
-  environment.persistence."/nix/persist/etc/nixos/configuration/persistence/bucket" = {
+  environment.persistence."${persistence.bucket}" = {
     hideMounts = false;
     directories = [
       "/var/lib/libvirt"

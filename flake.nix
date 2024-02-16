@@ -104,8 +104,14 @@
         msi = "tln32msi.student.cwru.edu";
         default = asus;
       };
+      persistence = rec {
+        default = "/nix/persist";
+        local = "${default}/local";
+        data = "${default}/data";
+        bucket = "${default}/bucket";
+      };
       fullAttrs = {
-        inherit attrs version addresses;
+        inherit attrs version addresses persistence;
         pkgs = import nixpkgs { system = "x86_64-linux"; config = config;};
         oldpkgs = import nixpkgs_old { system = "x86_64-linux"; config = config;};
         vscode_exts = attrs.nix-vscode-extensions.extensions.x86_64-linux.vscode-marketplace;

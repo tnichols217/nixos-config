@@ -1,4 +1,4 @@
-{ config, pkgs, version, host-name, attrs, oldnixpkgs, addresses, ... }:
+{ config, pkgs, version, host-name, attrs, oldnixpkgs, addresses, persistence, ... }:
 {
   imports =
     [
@@ -17,7 +17,10 @@
       ./configuration/programs.nix
     ];
 
-  systemd.tmpfiles.rules = [ "d /etc/nix/ 0755 root root" ];
+  systemd.tmpfiles.rules = [
+    "d /etc/nix/ 0777 root root"
+    "d /${persistence.default} 0777 root root"
+  ];
 
   nix = {
     package = pkgs.nix;

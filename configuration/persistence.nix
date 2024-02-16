@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, persistence, ... }:
 {
   imports =
     [
@@ -6,7 +6,7 @@
       ./persistence/local.nix
       ./persistence/bucket.nix
     ];
-  environment.persistence."/nix/persist" = {
+  environment.persistence."${persistence.local}" = {
     hideMounts = false;
     directories = [
       "/etc/nixos"

@@ -1,6 +1,6 @@
-{ config, pkgs, ... }:
+{ config, pkgs, persistence, ... }:
 {
-  environment.persistence."/nix/persist/etc/nixos/configuration/persistence/local" = {
+  environment.persistence."${persistence.local}" = {
     hideMounts = false;
     directories = [
       "/var/log"

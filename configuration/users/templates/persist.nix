@@ -1,4 +1,4 @@
-{ config, pkgs, username, ... }:
+{ config, pkgs, username, persistence, ... }:
 {
   imports = let 
     mapDirAttr = ( x: { directory = x; mode = "0700"; user = "${username}"; } );
@@ -26,7 +26,7 @@
         "Public"
         "Templates"
         "Calibre Library"
-      ] "/nix/persist/etc/nixos/configuration/persistence/data"
+      ] "${persistence.data}"
     )
     (
       mapConf [] [
@@ -42,7 +42,7 @@
         ".minecraft"
         "Games"
         ".wine"
-      ] "/nix/persist/etc/nixos/configuration/persistence/bucket"
+      ] "${persistence.bucket}"
     )
     (
       mapConf [
@@ -83,7 +83,7 @@
         ".config/Moonlight Game Streaming Project"
         ".config/Yubico"
         ".config/tartube"
-      ] "/nix/persist/etc/nixos/configuration/persistence/local"
+      ] "${persistence.local}"
     )
   ];
 }
