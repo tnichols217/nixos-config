@@ -22,17 +22,20 @@
 
   services = {
     ratbagd.enable = true;
-    xserver.libinput = {
-      enable = true;
-      mouse = {
-        scrollMethod = "button";
-        scrollButton = 3;
-        accelProfile = "flat";
-      };
-      touchpad = {
-        naturalScrolling = true;
-        accelProfile = "flat";
-        tappingButtonMap = "lrm";
+    xserver = {
+      digimend.enable = true;
+      libinput = {
+        enable = true;
+        mouse = {
+          scrollMethod = "button";
+          scrollButton = 3;
+          accelProfile = "flat";
+        };
+        touchpad = {
+          naturalScrolling = true;
+          accelProfile = "flat";
+          tappingButtonMap = "lrm";
+        };
       };
     };
   };
