@@ -92,7 +92,7 @@
         filezilla
         filelight
         libreoffice
-        Davinci doesnt work on the latest nixpkgs
+        # Davinci doesnt work on the latest nixpkgs
         davinci-resolve
         # (pkgs.callPackage ./packages/davinci.nix {})
         lolcat
