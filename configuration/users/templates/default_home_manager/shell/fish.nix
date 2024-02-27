@@ -20,6 +20,7 @@
           c = "codium .";
           rssound = "systemctl --user restart pipewire";
           ls = "lsd";
+          la = "lsd -lAgh";
           cat = "bat";
           da = "direnv allow";
           fsw = "fswatch -rax ";
