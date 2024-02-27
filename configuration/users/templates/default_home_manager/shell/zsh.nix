@@ -56,7 +56,7 @@
           c = "codium .";
           rssound = "systemctl --user restart pipewire";
           ls = "lsd";
-          ca = "bat";
+          cat = "bat";
           da = "direnv allow";
           fsw = "fswatch -rax ";
           black = "kill (pidof plasmashell); plasmashell &; disown (pidof plasmashell)";
