@@ -99,7 +99,7 @@
         htop
         kcalc
         libsForQt5.kdeconnect-kde
-        # musescore
+        musescore
         # pureref # because of ci build failiures
         audacity
         lutris

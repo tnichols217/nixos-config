@@ -20,6 +20,8 @@
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
   hardware.bluetooth.enable = true;
 
+  powerManagement.powertop.enable
+
   services = {
     ratbagd.enable = true;
     xserver = {
