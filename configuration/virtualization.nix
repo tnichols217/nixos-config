@@ -8,4 +8,7 @@
     podman.dockerSocket.enable = true;
     podman.dockerCompat = true;
   };
+  environment.systemPackages = [
+    swtpm
+  ];
 }
