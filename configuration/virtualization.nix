@@ -1,5 +1,6 @@
 { pkgs, ... }:
 {
+  security.tpm2.enable = true;
   programs.virt-manager.enable = true;
   virtualisation = {
     libvirtd.enable = true;
