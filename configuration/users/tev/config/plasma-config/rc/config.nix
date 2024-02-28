@@ -287,6 +287,7 @@ in
         "DesktopListLayout" = "org.kde.breeze.desktop";
         "BorderActivate" = "9";
         "LayoutName" = "thumbnail_grid";
+        "MultiScreenMode" = "1";
       };
     };
     "Windows" = {
