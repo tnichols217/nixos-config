@@ -9,6 +9,6 @@
     podman.dockerCompat = true;
   };
   environment.systemPackages = [
-    swtpm
+    pkgs.swtpm
   ];
 }
