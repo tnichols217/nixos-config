@@ -35,6 +35,19 @@
           }
         ];
       };
+      "lidarr" = {
+        locations."/".proxyPass = "http://localhost:8686";
+        useACMEHost = "${addresses.default}";
+        serverName = "${addresses.default}";
+        forceSSL = true;
+        listen = [
+          {
+            addr = "0.0.0.0";
+            port = 8687;
+            ssl = true;
+          }
+        ];
+      };
     };
   };
 }
