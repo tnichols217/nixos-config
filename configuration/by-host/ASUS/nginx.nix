@@ -48,6 +48,19 @@
           }
         ];
       };
+      "prowlarr" = {
+        locations."/".proxyPass = "http://localhost:9696";
+        useACMEHost = "${addresses.default}";
+        serverName = "${addresses.default}";
+        forceSSL = true;
+        listen = [
+          {
+            addr = "0.0.0.0";
+            port = 9697;
+            ssl = true;
+          }
+        ];
+      };
       "jellyfin" = {
         locations."/".proxyPass = "http://localhost:8096";
         useACMEHost = "${addresses.default}";
