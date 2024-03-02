@@ -3,6 +3,9 @@ let
   group = "servarr";
 in
 {
+
+  users.groups."${group}" = {};
+
   services = {
     lidarr = {
       enable = true;
