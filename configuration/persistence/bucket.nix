@@ -8,8 +8,9 @@
       "/var/lib/container-storage/volumes"
       "/var/lib/nextcloud/data"
       "/var/lib/lidarr"
-      "/var/lib/rtorrent"
+      "/var/lib/private/prowlarr"
       "/var/lib/jellyfin"
+      "/var/lib/transmission"
     ];
   };
 }

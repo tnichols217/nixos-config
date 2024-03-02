@@ -1,15 +1,13 @@
 { pkgs, ... } :
 let
-  group = "transmission";
-  un = "lidarr";
-  jf = "jellyfin";
+  group = "servarr";
 in
 {
   services = {
     lidarr = {
       enable = true;
-      user = "${un}";
       dataDir = "/var/lib/lidarr/.config/Lidarr";
+      group = "${group}";
     };
     transmission = {
       enable = true;
@@ -17,10 +15,11 @@ in
     };
     prowlarr = {
       enable = true;
+      group = "${group}";
     };
     jellyfin = {
       enable = true;
-      user = "${jf}";
+      group = "${group}";
     };
   };
 
@@ -39,8 +38,9 @@ in
     };
   };
 
-
-  users.users."${un}".extraGroups = [ "${group}" ];
-  users.users."${jf}".extraGroups = [ "${un}" ];
-
+  systemd.tmpfiles.rules = [
+    "Z! /var/lib/lidarr 0775 lidarr ${group}"
+    "Z! /var/lib/jellyfin 0775 jellyfin ${group}"
+    "Z! /var/lib/transmission 0775 transmission ${group}"
+  ];
 }
