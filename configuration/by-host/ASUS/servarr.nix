@@ -1,6 +1,6 @@
 { pkgs, ... } :
 let
-  group = "rtorrent";
+  group = "transmission";
   un = "lidarr";
 in
 {
@@ -10,7 +10,7 @@ in
       user = "${un}";
       dataDir = "/var/lib/lidarr/.config/Lidarr";
     };
-    rtorrent = {
+    transmission = {
       enable = true;
       group = "${group}";
     };
