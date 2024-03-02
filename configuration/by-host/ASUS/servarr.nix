@@ -1,4 +1,4 @@
-{ ... } :
+{ pkgs, ... } :
 let
   group = "rtorrent";
   un = "lidarr";
