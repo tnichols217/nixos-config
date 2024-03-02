@@ -114,6 +114,7 @@
         tartube-yt-dlp
         element-desktop
         jellyfin-media-player
+        jellycli
 
         # vscode
 

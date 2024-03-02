@@ -3,6 +3,7 @@
   imports =
     [
       ./users/tev.nix
+      ./users/soda.nix
       ./users/root.nix
     ];
   users.mutableUsers = false;
