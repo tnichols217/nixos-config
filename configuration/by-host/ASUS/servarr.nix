@@ -15,7 +15,7 @@ in
       group = "${group}";
     };
 
-    users.users."${un}".extraGroups = [ "${group}" ];
   };
+  users.users."${un}".extraGroups = [ "${group}" ];
 
 }
