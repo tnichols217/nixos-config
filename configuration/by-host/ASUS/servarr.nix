@@ -14,6 +14,9 @@ in
       enable = true;
       group = "${group}";
     };
+    prowlarr = {
+      enable = true;
+    };
     jellyfin = {
       enable = true;
     };

@@ -113,6 +113,7 @@
         korganizer
         tartube-yt-dlp
         element-desktop
+        jellyfin-media-player
 
         # vscode
 
