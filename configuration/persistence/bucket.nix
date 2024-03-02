@@ -7,7 +7,8 @@
       "/var/lib/waydroid"
       "/var/lib/container-storage/volumes"
       "/var/lib/nextcloud/data"
-      "/var/lib/lidarr/"
+      "/var/lib/lidarr"
+      "/var/lib/rtorrent"
     ];
   };
 }
