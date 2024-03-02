@@ -9,7 +9,7 @@
       "/var/lib/nextcloud/data"
       "/var/lib/lidarr"
       "/var/lib/rtorrent"
-      "/var/lib/plex"
+      "/var/lib/jellyfin"
     ];
   };
 }

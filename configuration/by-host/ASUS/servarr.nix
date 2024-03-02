@@ -14,7 +14,7 @@ in
       enable = true;
       group = "${group}";
     };
-    plex = {
+    jellyfin = {
       enable = true;
     };
   };
