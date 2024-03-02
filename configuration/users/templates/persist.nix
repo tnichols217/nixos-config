@@ -83,6 +83,7 @@
         ".config/Moonlight Game Streaming Project"
         ".config/Yubico"
         ".config/tartube"
+        ".config/jellyfin.org"
       ] "${persistence.local}"
     )
   ];
