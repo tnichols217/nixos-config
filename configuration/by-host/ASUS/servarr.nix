@@ -14,7 +14,9 @@ in
       enable = true;
       group = "${group}";
     };
-
+    plex = {
+      enable = true;
+    };
   };
   users.users."${un}".extraGroups = [ "${group}" ];
 
