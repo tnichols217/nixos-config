@@ -48,6 +48,19 @@
           }
         ];
       };
+      "jellyfin" = {
+        locations."/".proxyPass = "http://localhost:8096";
+        useACMEHost = "${addresses.default}";
+        serverName = "${addresses.default}";
+        forceSSL = true;
+        listen = [
+          {
+            addr = "0.0.0.0";
+            port = 8090;
+            ssl = true;
+          }
+        ];
+      };
     };
   };
 }
