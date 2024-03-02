@@ -2,6 +2,7 @@
 let
   group = "transmission";
   un = "lidarr";
+  jf = "jellyfin";
 in
 {
   services = {
@@ -19,6 +20,7 @@ in
     };
     jellyfin = {
       enable = true;
+      user = "${jf}";
     };
   };
 
@@ -39,5 +41,6 @@ in
 
 
   users.users."${un}".extraGroups = [ "${group}" ];
+  users.users."${jf}".extraGroups = [ "${un}" ];
 
 }
