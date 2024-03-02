@@ -15,7 +15,6 @@ in
     };
     prowlarr = {
       enable = true;
-      group = "${group}";
     };
     jellyfin = {
       enable = true;
