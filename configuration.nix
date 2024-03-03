@@ -19,6 +19,7 @@
 
   systemd.tmpfiles.rules = [
     "d /etc/nix/ 0777 root root"
+    "d /home 0755 root users"
     "d /${persistence.default} 0777 root root"
   ];
 
