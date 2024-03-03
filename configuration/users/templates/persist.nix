@@ -64,6 +64,9 @@
         ".local/share/direnv/allow"
         ".local/share/MuseScore"
         ".local/share/Anki2"
+        ".local/share/jellyfinmediaplayer"
+        ".local/share/Jellyfin Media Player"
+        ".config/jellyfin.org"
         ".config/lutris"
         ".config/kdeconnect"
         ".config/VSCodium"
@@ -83,7 +86,6 @@
         ".config/Moonlight Game Streaming Project"
         ".config/Yubico"
         ".config/tartube"
-        ".config/jellyfin.org"
       ] "${persistence.local}"
     )
   ];
