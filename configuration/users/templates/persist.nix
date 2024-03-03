@@ -1,4 +1,4 @@
-{ config, pkgs, username, persistence, ... }:
+{ config, pkgs, username, persistence, lib, ... }:
 {
   imports = let 
     mapDirAttr = ( x: { directory = x; mode = "0700"; user = "${username}"; } );
