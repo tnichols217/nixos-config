@@ -84,6 +84,7 @@
         xbindkeys
         ani-cli
         (pkgs.callPackage ./packages/ani-cli-batch.pkg.nix { inherit attrs; })
+        mov-cli
         graphviz
         texliveFull
         pstoedit
