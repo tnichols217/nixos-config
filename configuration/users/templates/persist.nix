@@ -3,7 +3,7 @@
   imports = let 
     mapDirAttr = ( x: { directory = x; mode = "0700"; user = "${username}"; } );
     mapFileAttr = ( x: { file = x; parentDirectory = { mode = "700"; user = "${username}"; }; } );
-    mapTmp = ( x: "Z! /home/${username}/${x} 0700 ${username} users" );
+    mapTmp = ( x: "Z! /home/${username}/${lib.strings.stringAsChars (c: if c == " " then "\\x20" else c) x} 0700 ${username} users" );
     mapConf = ( files: dirs: loc: {
       environment.persistence."${loc}" = {
         hideMounts = false;
