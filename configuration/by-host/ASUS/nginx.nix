@@ -48,6 +48,19 @@
           }
         ];
       };
+      "radarr" = {
+        locations."/".proxyPass = "http://localhost:7878";
+        useACMEHost = "${addresses.default}";
+        serverName = "${addresses.default}";
+        forceSSL = true;
+        listen = [
+          {
+            addr = "0.0.0.0";
+            port = 7879;
+            ssl = true;
+          }
+        ];
+      };
       "prowlarr" = {
         locations."/".proxyPass = "http://localhost:9696";
         useACMEHost = "${addresses.default}";

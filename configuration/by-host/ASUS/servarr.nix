@@ -9,10 +9,13 @@ in
   services = {
     lidarr = {
       enable = true;
-      dataDir = "/var/lib/lidarr/.config/Lidarr";
       group = "${group}";
     };
-    transmission = {
+    radarr = {
+      enable = true;
+      group = "${group}";
+    };
+    transmission = { # port 9091
       enable = true;
       group = "${group}";
     };

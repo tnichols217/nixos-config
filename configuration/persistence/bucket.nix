@@ -8,6 +8,7 @@
       "/var/lib/container-storage/volumes"
       "/var/lib/nextcloud/data"
       "/var/lib/lidarr"
+      "/var/lib/radarr"
       "/var/lib/private/prowlarr"
       "/var/lib/jellyfin"
       "/var/lib/transmission"
