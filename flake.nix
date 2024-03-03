@@ -56,6 +56,10 @@
       url = github:romkatv/powerlevel10k;
       flake = false;
     };
+    ani-cli-batch = {
+      url = github:75rx/ani-cli-batch;
+      flake = false;
+    };
     # kitty themes
     kitty-themes = {
       url = github:dexpota/kitty-themes;

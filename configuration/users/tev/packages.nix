@@ -83,6 +83,7 @@
         xautomation
         xbindkeys
         ani-cli
+        (pkgs.callPackage ./packages/ani-cli-batch.nix {})
         graphviz
         texliveFull
         pstoedit
