@@ -10,18 +10,22 @@ in
     lidarr = {
       enable = true;
       group = "${group}";
+      dataDir = "/var/lib/lidarr/.config/Lidarr";
     };
     radarr = {
       enable = true;
       group = "${group}";
+      dataDir = "/var/lib/radarr/.config/Radarr";
     };
     sonarr = {
       enable = true;
       group = "${group}";
+      dataDir = "/var/lib/sonarr/.config/Sonarr";
     };
     readarr = {
       enable = true;
       group = "${group}";
+      dataDir = "/var/lib/readarr/.config/Readarr";
     };
     transmission = { # port 9091
       enable = true;
