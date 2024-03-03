@@ -61,6 +61,7 @@
           da = "direnv allow";
           fsw = "fswatch -rax ";
           black = "kill (pidof plasmashell); plasmashell &; disown (pidof plasmashell)";
+          huion = "xsetwacom set `xinput | grep HUION | grep stylus | head -1 | awk '{print $7;}' | cut -d \"=\" -f2` \"mapToOutput\" `xrandr | grep \" connected\" | grep \"Display\" | awk '{print $1;}'`";
           kitty = "${pkgs.callPackage ./kitty/kitty.pkg.nix { self = pkgs; inherit attrs; }}/bin/kitty";
         };
       };
