@@ -15,6 +15,14 @@ in
       enable = true;
       group = "${group}";
     };
+    sonarr = {
+      enable = true;
+      group = "${group}";
+    };
+    readarr = {
+      enable = true;
+      group = "${group}";
+    };
     transmission = { # port 9091
       enable = true;
       group = "${group}";

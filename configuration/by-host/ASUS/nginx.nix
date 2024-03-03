@@ -61,6 +61,32 @@
           }
         ];
       };
+      "sonarr" = {
+        locations."/".proxyPass = "http://localhost:8989";
+        useACMEHost = "${addresses.default}";
+        serverName = "${addresses.default}";
+        forceSSL = true;
+        listen = [
+          {
+            addr = "0.0.0.0";
+            port = 8990;
+            ssl = true;
+          }
+        ];
+      };
+      "readarr" = {
+        locations."/".proxyPass = "http://localhost:8787";
+        useACMEHost = "${addresses.default}";
+        serverName = "${addresses.default}";
+        forceSSL = true;
+        listen = [
+          {
+            addr = "0.0.0.0";
+            port = 8788;
+            ssl = true;
+          }
+        ];
+      };
       "prowlarr" = {
         locations."/".proxyPass = "http://localhost:9696";
         useACMEHost = "${addresses.default}";
