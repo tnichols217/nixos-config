@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "ani-cli-batch": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1708536083,
+        "narHash": "sha256-s/TE6btL0Q+MB2DOnNt6GZbf3QcrtI4u8uJnFg5yKbk=",
+        "owner": "75rx",
+        "repo": "ani-cli-batch",
+        "rev": "04c15c7373778d5335c95f3ddf742b428c04a6cc",
+        "type": "github"
+      },
+      "original": {
+        "owner": "75rx",
+        "repo": "ani-cli-batch",
+        "type": "github"
+      }
+    },
     "arch-theme": {
       "flake": false,
       "locked": {
@@ -518,11 +534,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1709435989,
-        "narHash": "sha256-FIfPH8/hTdxnJSFikIu4yjngwPswghThaV7TB7s6Hb4=",
+        "lastModified": 1709438156,
+        "narHash": "sha256-9rOroPeynGV8OCX33WfRzyiEhdkiI1B/lhgFCS1dO4c=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "d0e7c87274c040ed3635789b45fabce03fe05b92",
+        "rev": "468520fc9249021033a70c0fc8580e37e0b0ceec",
         "type": "github"
       },
       "original": {
@@ -584,6 +600,7 @@
     },
     "root": {
       "inputs": {
+        "ani-cli-batch": "ani-cli-batch",
         "arch-theme": "arch-theme",
         "arion": "arion",
         "btf": "btf",
