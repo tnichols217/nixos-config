@@ -10,7 +10,7 @@
       "/var/lib/lidarr"
       "/var/lib/radarr"
       "/var/lib/sonarr"
-      "/var/lib/radarr"
+      "/var/lib/readarr"
       "/var/lib/private/prowlarr"
       "/var/lib/jellyfin"
       "/var/lib/transmission"
