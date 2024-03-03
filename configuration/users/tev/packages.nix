@@ -83,7 +83,7 @@
         xautomation
         xbindkeys
         ani-cli
-        (pkgs.callPackage ./packages/ani-cli-batch.nix { attrs })
+        (pkgs.callPackage ./packages/ani-cli-batch.nix { inherit attrs; })
         graphviz
         texliveFull
         pstoedit
