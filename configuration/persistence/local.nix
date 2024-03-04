@@ -12,6 +12,12 @@
       "/var/lib/nextcloud"
       "/etc/NetworkManager/system-connections"
       "/etc/letsencrypt"
+      "/var/lib/lidarr/.config"
+      "/var/lib/radarr/.config"
+      "/var/lib/sonarr/.config"
+      "/var/lib/readarr/.config"
+      "/var/lib/private/prowlarr"
+      "/var/lib/jellyfin"
       # "/etc/ssh"
       { directory = "/var/lib/colord"; user = "colord"; group = "colord"; mode = "u=rwx,g=rx,o="; }
     ];

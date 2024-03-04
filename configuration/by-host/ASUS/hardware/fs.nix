@@ -7,10 +7,10 @@
     #   fsType = "ext4";
     #   neededForBoot = false;
     # };
-    "/lgass" = {
-      device = "/dev/disk/by-label/LGASS";
-      fsType = "ext4";
-      neededForBoot = false;
-    };
+    # "/lgass" = {
+    #   device = "/dev/disk/by-label/LGASS";
+    #   fsType = "ext4";
+    #   neededForBoot = false;
+    # };
   };
 }

@@ -7,12 +7,10 @@
       "/var/lib/waydroid"
       "/var/lib/container-storage/volumes"
       "/var/lib/nextcloud/data"
-      "/var/lib/lidarr"
-      "/var/lib/radarr"
-      "/var/lib/sonarr"
-      "/var/lib/readarr"
-      "/var/lib/private/prowlarr"
-      "/var/lib/jellyfin"
+      "/var/lib/lidarr/data"
+      "/var/lib/radarr/data"
+      "/var/lib/sonarr/data"
+      "/var/lib/readarr/data"
       "/var/lib/transmission"
     ];
   };
