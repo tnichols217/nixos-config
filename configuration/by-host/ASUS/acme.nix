@@ -9,14 +9,14 @@
     };
     certs = {
       "${addresses.default}" = {};
-      "${serve.default}" = {};
-      "${nextcloud.default}" = {};
-      "${lidarr.default}" = {};
-      "${radarr.default}" = {};
-      "${sonarr.default}" = {};
-      "${readarr.default}" = {};
-      "${prowlarr.default}" = {};
-      "${jellyfin.default}" = {};
+      "${addresses.serve}" = {};
+      "${addresses.nextcloud}" = {};
+      "${addresses.lidarr}" = {};
+      "${addresses.radarr}" = {};
+      "${addresses.sonarr}" = {};
+      "${addresses.readarr}" = {};
+      "${addresses.prowlarr}" = {};
+      "${addresses.jellyfin}" = {};
     };
   };
 }
