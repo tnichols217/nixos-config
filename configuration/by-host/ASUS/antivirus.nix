@@ -3,7 +3,7 @@
   services.clamav.daemon = {
     enable = true;
     settings = {
-      User = "root";
+      User = lib.mkForce "root";
     };
   };
 }
