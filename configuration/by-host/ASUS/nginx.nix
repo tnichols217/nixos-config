@@ -36,7 +36,7 @@
         ];
       };
       "lidarr" = {
-        locations."/".proxyPass = "http://localhost:${ports.lidarr}";
+        locations."/".proxyPass = "http://localhost:${toString ports.lidarr}";
         useACMEHost = "${addresses.lidarr}";
         serverName = "${addresses.lidarr}";
         forceSSL = true;
@@ -49,7 +49,7 @@
         ];
       };
       "radarr" = {
-        locations."/".proxyPass = "http://localhost:${ports.radarr}";
+        locations."/".proxyPass = "http://localhost:${toString ports.radarr}";
         useACMEHost = "${addresses.radarr}";
         serverName = "${addresses.radarr}";
         forceSSL = true;
@@ -62,7 +62,7 @@
         ];
       };
       "sonarr" = {
-        locations."/".proxyPass = "http://localhost:${ports.sonarr}";
+        locations."/".proxyPass = "http://localhost:${toString ports.sonarr}";
         useACMEHost = "${addresses.sonarr}";
         serverName = "${addresses.sonarr}";
         forceSSL = true;
@@ -75,7 +75,7 @@
         ];
       };
       "readarr" = {
-        locations."/".proxyPass = "http://localhost:${ports.readarr}";
+        locations."/".proxyPass = "http://localhost:${toString ports.readarr}";
         useACMEHost = "${addresses.readarr}";
         serverName = "${addresses.readarr}";
         forceSSL = true;
@@ -88,7 +88,7 @@
         ];
       };
       "prowlarr" = {
-        locations."/".proxyPass = "http://localhost:${ports.prowlarr}";
+        locations."/".proxyPass = "http://localhost:${toString ports.prowlarr}";
         useACMEHost = "${addresses.prowlarr}";
         serverName = "${addresses.prowlarr}";
         forceSSL = true;
@@ -101,7 +101,7 @@
         ];
       };
       "jellyfin" = {
-        locations."/".proxyPass = "http://localhost:${ports.jellyfin}";
+        locations."/".proxyPass = "http://localhost:${toString ports.jellyfin}";
         useACMEHost = "${addresses.jellyfin}";
         serverName = "${addresses.jellyfin}";
         forceSSL = true;
