@@ -1,4 +1,4 @@
-{ pkgs, attrs, config, addresses, ... }:
+{ pkgs, attrs, config, addresses, ports, ... }:
 {
   # users.users.nginx.extraGroups = ["wwwrun"];
 
@@ -11,21 +11,34 @@
     virtualHosts = {
       "nix-serve" = {
         locations."/".proxyPass = "http://${config.services.nix-serve.bindAddress}:${toString config.services.nix-serve.port}";
-        useACMEHost = "${addresses.default}";
-        serverName = "${addresses.default}";
+        useACMEHost = "${addresses.serve}";
+        serverName = "${addresses.serve}";
         forceSSL = true;
         listen = [
           {
             addr = "0.0.0.0";
-            port = 5000;
+            port = ports.serve;
             ssl = true;
           }
         ];
       };
       "nextcloud" = {
         locations."/".proxyPass = "http://localhost:80";
-        useACMEHost = "${addresses.default}";
-        serverName = "${addresses.default}";
+        useACMEHost = "${addresses.nextcloud}";
+        serverName = "${addresses.nextcloud}";
+        forceSSL = true;
+        listen = [
+          {
+            addr = "0.0.0.0";
+            port = ports.nextcloud;
+            ssl = true;
+          }
+        ];
+      };
+      "lidarr" = {
+        locations."/".proxyPass = "http://localhost:${ports.lidarr}";
+        useACMEHost = "${addresses.lidarr}";
+        serverName = "${addresses.lidarr}";
         forceSSL = true;
         listen = [
           {
@@ -35,80 +48,67 @@
           }
         ];
       };
-      "lidarr" = {
-        locations."/".proxyPass = "http://localhost:8686";
-        useACMEHost = "${addresses.default}";
-        serverName = "${addresses.default}";
-        forceSSL = true;
-        listen = [
-          {
-            addr = "0.0.0.0";
-            port = 8687;
-            ssl = true;
-          }
-        ];
-      };
       "radarr" = {
-        locations."/".proxyPass = "http://localhost:7878";
-        useACMEHost = "${addresses.default}";
-        serverName = "${addresses.default}";
+        locations."/".proxyPass = "http://localhost:${ports.radarr}";
+        useACMEHost = "${addresses.radarr}";
+        serverName = "${addresses.radarr}";
         forceSSL = true;
         listen = [
           {
             addr = "0.0.0.0";
-            port = 7879;
+            port = 443;
             ssl = true;
           }
         ];
       };
       "sonarr" = {
-        locations."/".proxyPass = "http://localhost:8989";
-        useACMEHost = "${addresses.default}";
-        serverName = "${addresses.default}";
+        locations."/".proxyPass = "http://localhost:${ports.sonarr}";
+        useACMEHost = "${addresses.sonarr}";
+        serverName = "${addresses.sonarr}";
         forceSSL = true;
         listen = [
           {
             addr = "0.0.0.0";
-            port = 8990;
+            port = 443;
             ssl = true;
           }
         ];
       };
       "readarr" = {
-        locations."/".proxyPass = "http://localhost:8787";
-        useACMEHost = "${addresses.default}";
-        serverName = "${addresses.default}";
+        locations."/".proxyPass = "http://localhost:${ports.readarr}";
+        useACMEHost = "${addresses.readarr}";
+        serverName = "${addresses.readarr}";
         forceSSL = true;
         listen = [
           {
             addr = "0.0.0.0";
-            port = 8788;
+            port = 443;
             ssl = true;
           }
         ];
       };
       "prowlarr" = {
-        locations."/".proxyPass = "http://localhost:9696";
-        useACMEHost = "${addresses.default}";
-        serverName = "${addresses.default}";
+        locations."/".proxyPass = "http://localhost:${ports.prowlarr}";
+        useACMEHost = "${addresses.prowlarr}";
+        serverName = "${addresses.prowlarr}";
         forceSSL = true;
         listen = [
           {
             addr = "0.0.0.0";
-            port = 9697;
+            port = 443;
             ssl = true;
           }
         ];
       };
       "jellyfin" = {
-        locations."/".proxyPass = "http://localhost:8096";
-        useACMEHost = "${addresses.default}";
-        serverName = "${addresses.default}";
+        locations."/".proxyPass = "http://localhost:${ports.jellyfin}";
+        useACMEHost = "${addresses.jellyfin}";
+        serverName = "${addresses.jellyfin}";
         forceSSL = true;
         listen = [
           {
             addr = "0.0.0.0";
-            port = 8090;
+            port = 443;
             ssl = true;
           }
         ];

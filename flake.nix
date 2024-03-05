@@ -103,10 +103,30 @@
       addresses = rec {
         pigs = "pigsgo.mooo.com";
         heyo = "heyo.ydns.eu";
+        square = "pigsgomoo.com";
         asus = "tln32asus.student.cwru.edu";
         rog = "tln32rog.student.cwru.edu";
         msi = "tln32msi.student.cwru.edu";
-        default = asus;
+        default = square;
+
+        serve = "serve.${addresses.default}";
+        nextcloud = "nextcloud.${addresses.default}";
+        lidarr = "lidarr.${addresses.default}";
+        radarr = "radarr.${addresses.default}";
+        sonarr = "sonarr.${addresses.default}";
+        readarr = "readarr.${addresses.default}";
+        prowlarr = "prowlarr.${addresses.default}";
+        jellyfin = "jellyfin.${addresses.default}";
+      };
+      ports = {
+        serve = 5000;
+        nextcloud = 443;
+        lidarr = 8686;
+        radarr = 7878;
+        sonarr = 8989;
+        readarr = 8787;
+        prowlarr = 9696;
+        jellyfin = 8096;
       };
       persistence = rec {
         default = "/nix/persist";
@@ -115,7 +135,7 @@
         bucket = "${default}/bucket";
       };
       fullAttrs = {
-        inherit attrs version addresses persistence;
+        inherit attrs version addresses persistence ports;
         pkgs = import nixpkgs { system = "x86_64-linux"; config = config;};
         oldpkgs = import nixpkgs_old { system = "x86_64-linux"; config = config;};
         vscode_exts = attrs.nix-vscode-extensions.extensions.x86_64-linux.vscode-marketplace;

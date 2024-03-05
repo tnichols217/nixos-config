@@ -8,9 +8,15 @@
       group = "nginx";
     };
     certs = {
-      "${addresses.heyo}" = {};
-      "${addresses.pigs}" = {};
-      "${addresses.asus}" = {};
+      "${addresses.default}" = {};
+      "${serve.default}" = {};
+      "${nextcloud.default}" = {};
+      "${lidarr.default}" = {};
+      "${radarr.default}" = {};
+      "${sonarr.default}" = {};
+      "${readarr.default}" = {};
+      "${prowlarr.default}" = {};
+      "${jellyfin.default}" = {};
     };
   };
 }
