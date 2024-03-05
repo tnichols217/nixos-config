@@ -12,5 +12,6 @@
     ./ASUS/ovpn.nix
     ./ASUS/pipewire.nix
     ./ASUS/servarr.nix
+    ./ASUS/antivirus.nix
   ];
 }
