@@ -58,11 +58,11 @@
     "btf": {
       "flake": false,
       "locked": {
-        "lastModified": 1709587755,
-        "narHash": "sha256-EPXuXbX6P5JrHn5f40UBdShhhzkwkyfcA5jVDGD/4R8=",
+        "lastModified": 1709651787,
+        "narHash": "sha256-8nxaTTGiohyYFyJ9v6uGpltcLd+iFdEdQhPgcPGjTsg=",
         "owner": "oh-my-fish",
         "repo": "theme-bobthefish",
-        "rev": "dc70af567ed67e459a1683bd50ae16dedf307cc9",
+        "rev": "39cf45635bbf7acac32b38b2acdc79dd849b4dbb",
         "type": "github"
       },
       "original": {
@@ -534,11 +534,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1709635743,
-        "narHash": "sha256-vjhHdcG/uEHFSsZSQuE/yBRk9dljsw9JFwdpEi7060M=",
+        "lastModified": 1709649736,
+        "narHash": "sha256-HRrzvBWIRQlSN4joPI+rroqtEPWEcZK/ETY4cAkDwOs=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "5501b1db6763f09b9e0afa0a75285bd1e3390ecc",
+        "rev": "c715d34e7040f934a2edfa7024a1f04e86536b9e",
         "type": "github"
       },
       "original": {
@@ -585,11 +585,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1709619384,
-        "narHash": "sha256-CQuyBTgntJXFOxUbc9DcOfms0wv+tMQQGEhh/jsiV3U=",
+        "lastModified": 1709641392,
+        "narHash": "sha256-pHifh5ivyQlWqiXR6MSosPT/u3ttubA0+wAsQu7N0+w=",
         "owner": "tnichols217",
         "repo": "nixos-program-extensions",
-        "rev": "2860f57975b4fdeb9493bac55e245dbfc028eb09",
+        "rev": "aa79856500df23bb4c3dca01b39eb7c02489c246",
         "type": "github"
       },
       "original": {
