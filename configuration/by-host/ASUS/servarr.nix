@@ -1,4 +1,4 @@
-{ pkgs, ports, version, mkMerge, ... } :
+{ pkgs, ports, version, mkMerge, lib, ... } :
 let
   group = "servarr";
   confCont = { name }: {
