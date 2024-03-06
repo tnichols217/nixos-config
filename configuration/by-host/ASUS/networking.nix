@@ -10,6 +10,8 @@
   #   };
   # };
 
+  networking.useNetworkd = true;
+
   systemd.services."ssh-tunnel" = {
     serviceConfig = {
       RestartSec = "5";
