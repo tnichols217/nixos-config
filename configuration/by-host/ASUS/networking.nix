@@ -55,7 +55,7 @@
     networks = {
       "10-wg0" = {
         matchConfig.Name = "wg0";
-        networkConfig.Bridge = "brwg";
+        # networkConfig.Bridge = "brwg";
         linkConfig.RequiredForOnline = "yes";
         address = ["10.67.135.222/32" "fc00:bbbb:bbbb:bb01::4:87dd/128"];
         dns = ["10.64.0.1"];

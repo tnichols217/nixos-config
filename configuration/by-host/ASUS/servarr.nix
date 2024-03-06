@@ -5,6 +5,7 @@ let
     autoStart = true;
     privateNetwork = true;
     hostBridge = "brwg";
+    interfaces = [ "wg0" ];
     forwardPorts = [
       {
         containerPort = ports.${name};
