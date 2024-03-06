@@ -17,13 +17,11 @@
     bridges.brwg.interfaces = [ "wg0" ];
 
     nat = {
-      networking.nat = {
-        enable = true;
-        internalInterfaces = ["ve-+"];
-        externalInterface = "wg0";
-        # Lazy IPv6 connectivity for the container
-        enableIPv6 = true;
-      };
+      enable = true;
+      internalInterfaces = ["ve-+"];
+      externalInterface = "wg0";
+      # Lazy IPv6 connectivity for the container
+      enableIPv6 = true;
     };
   };
 
