@@ -27,6 +27,7 @@ let
     config = {
       system.stateVersion = version;
       networking.firewall.enable = false;
+      networking.useNetworkd = true;
       users.groups."${group}" = {};
       services = {
         ${name} = {
@@ -35,13 +36,18 @@ let
       };
     };
   };
-  confContGr = { name }: lib.mkMerge [(confCont { inherit name; })  {
+  mapFunc = name: {
     bindMounts = {
       "/var/lib/${name}" = {
         hostPath = "/var/lib/${name}";
         isReadOnly = false;
       };
     };
+  };
+  mounts = { names }: {
+    lib.mkMerge (pkgs.lib.lists.map mapFunc names)
+  };
+  confContGr = { name }: lib.mkMerge [(confCont { inherit name; }) (mounts [ name ]) {
     config = {
       services = {
         "${name}" = {
@@ -59,6 +65,12 @@ let
       };
     };
   }];
+  confContJelly = { name }: lib.mkMerge [(confContGr { inherit name; } ) (mounts [
+    "lidarr/data"
+    "radarr/data"
+    "sonarr/data"
+    "readarr/data"
+  ])];
   confContProw = { name }: lib.mkMerge [(confContGr { inherit name; } ) {
     bindMounts = {
       "/var/lib/private/${name}" = {
@@ -108,7 +120,7 @@ in
     transmission = confContGr {
       name = "transmission";
     };
-    jellyfin = confContGr {
+    jellyfin = confContJelly {
       name = "jellyfin";
     };
     prowlarr = confCont {

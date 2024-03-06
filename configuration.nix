@@ -69,6 +69,7 @@
     nano
     btrfs-progs
     zrok
+    bridge-utils
   ];
 
   system.stateVersion = version;
