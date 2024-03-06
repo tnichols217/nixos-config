@@ -18,6 +18,7 @@
       "/var/lib/readarr/.config"
       "/var/lib/private/prowlarr"
       "/var/lib/jellyfin"
+      "/var/lib/mullvad"
       # "/etc/ssh"
       { directory = "/var/lib/colord"; user = "colord"; group = "colord"; mode = "u=rwx,g=rx,o="; }
     ];
