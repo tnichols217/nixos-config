@@ -1,59 +1,148 @@
-{ pkgs, ... } :
+{ pkgs, ports, ... } :
 let
   group = "servarr";
+  confCont = { name }: {
+    autoStart = true;
+    privateNetwork = true;
+    hostBridge = "brwg";
+    bindMounts = {
+      "/var/lib/${name}" = {
+        hostPath = "/var/lib/${name}";
+        isReadOnly = false;
+      };
+    };
+    forwardPorts = [
+      {
+        containerPort = ports.${name};
+        hostPort = ports.${name};
+        protocol = "tcp";
+      }
+    ];
+    config = {
+      services = {
+        "${name}" = {
+          enable = true;
+        };
+      };
+    };
+  };
+  confContGr = { name }: (confCont { inherit name; }) // {
+    config = {
+      services = {
+        "${name}" = {
+          group = "${group}";
+        };
+      };
+    };
+  };
+  confContArr = { name, capName }: (confContGr { inherit name; } ) // {
+    config = {
+      services = {
+        "${name}" = {
+          dataDir = "/var/lib/${name}/.config/${capName}";
+        };
+      };
+    };
+  };
+  confContProw = { name }: (confContGr { inherit name; } ) // {
+    config = {
+      virtualisation.oci-containers.containers = {
+        flaresolverr = {
+          ports = [
+            "8191:8191"
+          ];
+          imageFile = pkgs.dockerTools.pullImage{
+            imageName = "flaresolverr/flaresolverr";
+            finalImageTag = "v3.3.16";
+            imageDigest = "sha256:35feb16defbc4a0012143ec14e7eabdf361a1a1f31075db49e85ccd8cc1ee485";
+            sha256 = "000rsk86w398v9gdf1r2vy1b9190kimqmlnifsnj16nxk0bma1f4";
+          };
+          image = "flaresolverr/flaresolverr";
+        };
+      };
+    };
+  };
 in
 {
 
   users.groups."${group}" = {};
 
-  services = {
-    lidarr = {
-      enable = true;
-      group = "${group}";
-      dataDir = "/var/lib/lidarr/.config/Lidarr";
+  containers = {
+    lidarr = confContArr {
+      name = "lidarr";
+      capName = "Lidarr";
     };
-    radarr = {
-      enable = true;
-      group = "${group}";
-      dataDir = "/var/lib/radarr/.config/Radarr";
+    radarr = confContArr {
+      name = "radarr";
+      capName = "Radarr";
     };
-    sonarr = {
-      enable = true;
-      group = "${group}";
-      dataDir = "/var/lib/sonarr/.config/Sonarr";
+    sonarr = confContArr {
+      name = "sonarr";
+      capName = "Sonarr";
     };
-    readarr = {
-      enable = true;
-      group = "${group}";
-      dataDir = "/var/lib/readarr/.config/Readarr";
+    readarr = confContArr {
+      name = "readarr";
+      capName = "Readarr";
     };
-    transmission = { # port 9091
-      enable = true;
-      group = "${group}";
+    transmission = confContGr {
+      name = "transmission";
     };
-    prowlarr = {
-      enable = true;
+    jellyfin = confContGr {
+      name = "jellyfin";
     };
-    jellyfin = {
-      enable = true;
-      group = "${group}";
+    prowlarr = confCont {
+      name = "prowlarr";
     };
   };
 
-  virtualisation.oci-containers.containers = {
-    flaresolverr = {
-      ports = [
-        "8191:8191"
-      ];
-      imageFile = pkgs.dockerTools.pullImage{
-        imageName = "flaresolverr/flaresolverr";
-        finalImageTag = "v3.3.16";
-        imageDigest = "sha256:35feb16defbc4a0012143ec14e7eabdf361a1a1f31075db49e85ccd8cc1ee485";
-        sha256 = "000rsk86w398v9gdf1r2vy1b9190kimqmlnifsnj16nxk0bma1f4";
-      };
-      image = "flaresolverr/flaresolverr";
-    };
-  };
+  # services = {
+  #   lidarr = {
+  #     enable = true;
+  #     group = "${group}";
+  #     dataDir = "/var/lib/lidarr/.config/Lidarr";
+  #   };
+  #   radarr = {
+  #     enable = true;
+  #     group = "${group}";
+  #     dataDir = "/var/lib/radarr/.config/Radarr";
+  #   };
+  #   sonarr = {
+  #     enable = true;
+  #     group = "${group}";
+  #     dataDir = "/var/lib/sonarr/.config/Sonarr";
+  #   };
+  #   readarr = {
+  #     enable = true;
+  #     group = "${group}";
+  #     dataDir = "/var/lib/readarr/.config/Readarr";
+  #   };
+  #   transmission = { # port 9091
+  #     enable = true;
+  #     group = "${group}";
+  #   };
+  #   prowlarr = {
+  #     enable = true;
+  #   };
+  #   jellyfin = {
+  #     enable = true;
+  #     group = "${group}";
+  #   };
+  # };
+
+  # virtualisation.oci-containers.containers = {
+  #   flaresolverr = {
+  #     ports = [
+  #       "8191:8191"
+  #     ];
+  #     imageFile = pkgs.dockerTools.pullImage{
+  #       imageName = "flaresolverr/flaresolverr";
+  #       finalImageTag = "v3.3.16";
+  #       imageDigest = "sha256:35feb16defbc4a0012143ec14e7eabdf361a1a1f31075db49e85ccd8cc1ee485";
+  #       sha256 = "000rsk86w398v9gdf1r2vy1b9190kimqmlnifsnj16nxk0bma1f4";
+  #     };
+  #     image = "flaresolverr/flaresolverr";
+  #   };
+  # };
 
   systemd.tmpfiles.rules = [
     "Z /var/lib/lidarr 0775 lidarr ${group}"

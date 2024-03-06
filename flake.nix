@@ -126,6 +126,7 @@
         sonarr = 8989;
         readarr = 8787;
         prowlarr = 9696;
+        transmission = 9091;
         jellyfin = 8096;
       };
       persistence = rec {
