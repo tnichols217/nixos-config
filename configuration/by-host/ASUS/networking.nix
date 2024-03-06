@@ -1,4 +1,4 @@
-{ pkgs, attrs, config, ... }:
+{ pkgs, attrs, config, addresses, ... }:
 {
   # networking.wireless = {
   #   enable = true;
@@ -9,6 +9,18 @@
   #     };
   #   };
   # };
+
+  systemd.services."ssh-tunnel" = {
+    serviceConfig = {
+      RestartSec = "5";
+      Restart = "always";
+    };
+    path = with pkgs; [ nix ];
+    script = ''
+      ${pkgs.openssh}/bin/ssh -NR 4430:localhost:443 -R 8000:localhost:80 ec2-user@${addresses.default} -i /var/lib/mullvad/ec2.cert
+    '';
+    wantedBy = ["multi-user.target"];
+  };
 
   systemd.network = {
     enable = true;
