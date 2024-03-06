@@ -5,12 +5,6 @@ let
     autoStart = true;
     privateNetwork = true;
     hostBridge = "brwg";
-    bindMounts = {
-      "/var/lib/${name}" = {
-        hostPath = "/var/lib/${name}";
-        isReadOnly = false;
-      };
-    };
     forwardPorts = [
       {
         containerPort = ports.${name};
@@ -28,6 +22,12 @@ let
     };
   };
   confContGr = { name }: (confCont { inherit name; }) // {
+    bindMounts = {
+      "/var/lib/${name}" = {
+        hostPath = "/var/lib/${name}";
+        isReadOnly = false;
+      };
+    };
     config = {
       services = {
         "${name}" = {
@@ -46,6 +46,12 @@ let
     };
   };
   confContProw = { name }: (confContGr { inherit name; } ) // {
+    bindMounts = {
+      "/var/lib/private/${name}" = {
+        hostPath = "/var/lib/private/${name}";
+        isReadOnly = false;
+      };
+    };
     config = {
       virtualisation.oci-containers.containers = {
         flaresolverr = {
