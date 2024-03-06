@@ -27,7 +27,6 @@ let
     config = {
       system.stateVersion = version;
       networking.firewall.enable = false;
-      networking.useNetworkd = true;
       users.groups."${group}" = {};
       services = {
         ${name} = {
