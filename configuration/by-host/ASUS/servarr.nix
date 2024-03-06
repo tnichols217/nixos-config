@@ -1,4 +1,4 @@
-{ pkgs, ports, ... } :
+{ pkgs, ports, version, ... } :
 let
   group = "servarr";
   confCont = { name }: {
@@ -19,6 +19,7 @@ let
       }
     ];
     config = {
+      system.stateVersion = version;
       services = {
         "${name}" = {
           enable = true;
