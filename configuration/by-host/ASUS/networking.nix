@@ -53,17 +53,17 @@
       };
     };
     networks = {
-      wg0 = {
+      "10-wg0" = {
         matchConfig.Name = "wg0";
         networkConfig.Bridge = "brwg";
-        linkConfig.RequiredForOnline = "no";
+        linkConfig.RequiredForOnline = "yes";
         address = ["10.67.135.222/32" "fc00:bbbb:bbbb:bb01::4:87dd/128"];
+        dns = ["10.64.0.1"];
         networkConfig = {
           IPMasquerade = "ipv4";
           IPForward = true;
         };
         DHCP = "no";
-        dns = ["10.64.0.1"];
       };
       "40-br0" = {
         matchConfig.Name ="brwg";
