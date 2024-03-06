@@ -14,6 +14,7 @@ let
     ];
     config = {
       system.stateVersion = version;
+      users.groups."${group}" = {};
       services = {
         ${name} = {
           enable = true;
