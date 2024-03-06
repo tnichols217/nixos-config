@@ -16,12 +16,14 @@
 
     bridges.brwg.interfaces = [ "wg0" ];
 
-    interfaces.brwg = {
-      useDHCP = true;
-      ipv4.addresses = [{
-        address = "192.168.100.3";
-        prefixLength = 24;
-      }];
+    nat = {
+      networking.nat = {
+        enable = true;
+        internalInterfaces = ["ve-+"];
+        externalInterface = "wg0";
+        # Lazy IPv6 connectivity for the container
+        enableIPv6 = true;
+      };
     };
   };
 
