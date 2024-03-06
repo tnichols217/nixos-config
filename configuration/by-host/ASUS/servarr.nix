@@ -77,82 +77,82 @@ in
 
   users.groups."${group}" = {};
 
-  containers = {
-    lidarr = confContArr {
-      name = "lidarr";
-      capName = "Lidarr";
+  # containers = {
+  #   lidarr = confContArr {
+  #     name = "lidarr";
+  #     capName = "Lidarr";
+  #   };
+  #   radarr = confContArr {
+  #     name = "radarr";
+  #     capName = "Radarr";
+  #   };
+  #   sonarr = confContArr {
+  #     name = "sonarr";
+  #     capName = "Sonarr";
+  #   };
+  #   readarr = confContArr {
+  #     name = "readarr";
+  #     capName = "Readarr";
+  #   };
+  #   transmission = confContGr {
+  #     name = "transmission";
+  #   };
+  #   jellyfin = confContGr {
+  #     name = "jellyfin";
+  #   };
+  #   prowlarr = confCont {
+  #     name = "prowlarr";
+  #   };
+  # };
+
+  services = {
+    lidarr = {
+      enable = true;
+      group = "${group}";
+      dataDir = "/var/lib/lidarr/.config/Lidarr";
     };
-    radarr = confContArr {
-      name = "radarr";
-      capName = "Radarr";
+    radarr = {
+      enable = true;
+      group = "${group}";
+      dataDir = "/var/lib/radarr/.config/Radarr";
     };
-    sonarr = confContArr {
-      name = "sonarr";
-      capName = "Sonarr";
+    sonarr = {
+      enable = true;
+      group = "${group}";
+      dataDir = "/var/lib/sonarr/.config/Sonarr";
     };
-    readarr = confContArr {
-      name = "readarr";
-      capName = "Readarr";
+    readarr = {
+      enable = true;
+      group = "${group}";
+      dataDir = "/var/lib/readarr/.config/Readarr";
     };
-    transmission = confContGr {
-      name = "transmission";
+    transmission = { # port 9091
+      enable = true;
+      group = "${group}";
     };
-    jellyfin = confContGr {
-      name = "jellyfin";
+    prowlarr = {
+      enable = true;
     };
-    prowlarr = confCont {
-      name = "prowlarr";
+    jellyfin = {
+      enable = true;
+      group = "${group}";
     };
   };
 
-  # services = {
-  #   lidarr = {
-  #     enable = true;
-  #     group = "${group}";
-  #     dataDir = "/var/lib/lidarr/.config/Lidarr";
-  #   };
-  #   radarr = {
-  #     enable = true;
-  #     group = "${group}";
-  #     dataDir = "/var/lib/radarr/.config/Radarr";
-  #   };
-  #   sonarr = {
-  #     enable = true;
-  #     group = "${group}";
-  #     dataDir = "/var/lib/sonarr/.config/Sonarr";
-  #   };
-  #   readarr = {
-  #     enable = true;
-  #     group = "${group}";
-  #     dataDir = "/var/lib/readarr/.config/Readarr";
-  #   };
-  #   transmission = { # port 9091
-  #     enable = true;
-  #     group = "${group}";
-  #   };
-  #   prowlarr = {
-  #     enable = true;
-  #   };
-  #   jellyfin = {
-  #     enable = true;
-  #     group = "${group}";
-  #   };
-  # };
-
-  # virtualisation.oci-containers.containers = {
-  #   flaresolverr = {
-  #     ports = [
-  #       "8191:8191"
-  #     ];
-  #     imageFile = pkgs.dockerTools.pullImage{
-  #       imageName = "flaresolverr/flaresolverr";
-  #       finalImageTag = "v3.3.16";
-  #       imageDigest = "sha256:35feb16defbc4a0012143ec14e7eabdf361a1a1f31075db49e85ccd8cc1ee485";
-  #       sha256 = "000rsk86w398v9gdf1r2vy1b9190kimqmlnifsnj16nxk0bma1f4";
-  #     };
-  #     image = "flaresolverr/flaresolverr";
-  #   };
-  # };
+  virtualisation.oci-containers.containers = {
+    flaresolverr = {
+      ports = [
+        "8191:8191"
+      ];
+      imageFile = pkgs.dockerTools.pullImage{
+        imageName = "flaresolverr/flaresolverr";
+        finalImageTag = "v3.3.16";
+        imageDigest = "sha256:35feb16defbc4a0012143ec14e7eabdf361a1a1f31075db49e85ccd8cc1ee485";
+        sha256 = "000rsk86w398v9gdf1r2vy1b9190kimqmlnifsnj16nxk0bma1f4";
+      };
+      image = "flaresolverr/flaresolverr";
+    };
+  };
 
   systemd.tmpfiles.rules = [
     "Z /var/lib/lidarr 0775 lidarr ${group}"
