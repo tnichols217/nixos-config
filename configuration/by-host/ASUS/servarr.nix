@@ -6,7 +6,7 @@ let
     ephemeral = true;
     privateNetwork = true;
     hostBridge = "brwg";
-    interfaces = [ "wg0" ];
+    # interfaces = [ "wg0" ];
     forwardPorts = [
       {
         containerPort = ports.${name};
