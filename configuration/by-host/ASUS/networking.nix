@@ -31,7 +31,7 @@
           Name = "brwg";
         };
       };
-      "50-wg0" = {
+      "10-wg0" = {
         netdevConfig = {
           Kind = "wireguard";
           Name = "wg0";
@@ -39,7 +39,7 @@
         };
         wireguardConfig = {
           PrivateKeyFile = "/var/lib/mullvad/priv";
-          ListenPort = 51820;
+          ListenPort = 9918;
         };
         wireguardPeers = [
           {
@@ -62,6 +62,13 @@
           IPMasquerade = "ipv4";
           IPForward = true;
         };
+        DHCP = "no";
+        dns = ["fc00::53"];
+        ntp = ["fc00::123"];
+        gateway = [
+          "fc00::1"
+          "10.100.0.1"
+        ];
       };
       "40-br0" = {
         matchConfig.Name ="brwg";
