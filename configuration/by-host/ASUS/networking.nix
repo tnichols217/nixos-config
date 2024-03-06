@@ -35,17 +35,15 @@
         netdevConfig = {
           Kind = "wireguard";
           Name = "wg0";
-          MTUBytes = "1300";
         };
         wireguardConfig = {
           PrivateKeyFile = "/var/lib/mullvad/priv";
-          ListenPort = 9918;
         };
         wireguardPeers = [
           {
             wireguardPeerConfig = {
               PublicKey = "0qSP0VxoIhEhRK+fAHVvmfRdjPs2DmmpOCNLFP/7cGw=";
-              AllowedIPs = ["10.67.135.222/32" "fc00:bbbb:bbbb:bb01::4:87dd/128"];
+              AllowedIPs = ["0.0.0.0/0" "::0/0"];
               Endpoint = "193.32.248.66:51820";
             };
           }
@@ -57,18 +55,13 @@
         matchConfig.Name = "wg0";
         networkConfig.Bridge = "brwg";
         linkConfig.RequiredForOnline = "no";
-        address = ["10.100.0.1/24"];
+        address = ["10.67.135.222/32" "fc00:bbbb:bbbb:bb01::4:87dd/128"];
         networkConfig = {
           IPMasquerade = "ipv4";
           IPForward = true;
         };
         DHCP = "no";
-        dns = ["fc00::53"];
-        ntp = ["fc00::123"];
-        gateway = [
-          "fc00::1"
-          "10.100.0.1"
-        ];
+        dns = ["10.64.0.1"];
       };
       "40-br0" = {
         matchConfig.Name ="brwg";
