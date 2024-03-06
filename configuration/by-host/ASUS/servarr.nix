@@ -44,7 +44,7 @@ let
       };
     };
   };
-  mounts = { names }: lib.mkMerge (pkgs.lib.lists.map mapFunc names);
+  mounts = names: lib.mkMerge (pkgs.lib.lists.map mapFunc names);
   confContGr = { name }: lib.mkMerge [(confCont { inherit name; }) (mounts [ name ]) {
     config = {
       services = {
