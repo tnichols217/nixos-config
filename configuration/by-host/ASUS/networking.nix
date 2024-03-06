@@ -10,9 +10,20 @@
   #   };
   # };
 
-  networking.useNetworkd = true;
+  networking = {
 
-  networking.bridges.brwg.interfaces = [ "wg0" ];
+    useNetworkd = true;
+
+    bridges.brwg.interfaces = [ "wg0" ];
+
+    interfaces.brwg = {
+      useDHCP = true;
+      ipv4.addresses = [{
+        address = "192.168.100.3";
+        prefixLength = 24;
+      }];
+    };
+  };
 
   systemd.services."ssh-tunnel" = {
     serviceConfig = {
