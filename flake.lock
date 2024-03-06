@@ -58,11 +58,11 @@
     "btf": {
       "flake": false,
       "locked": {
-        "lastModified": 1709684851,
-        "narHash": "sha256-Ya/H1EjcJa/0KOCr+BzeJfejufIwwrNw12QdU2DFyGk=",
+        "lastModified": 1709685417,
+        "narHash": "sha256-FhRI2NCQLmPIvKvFUbKTG61GVwV+zl5yyKpvlZytIGQ=",
         "owner": "oh-my-fish",
         "repo": "theme-bobthefish",
-        "rev": "7216de5cac0216169c822597c9a3a75d32597406",
+        "rev": "6e0ceba5dbe326a171abdaaac6159fb60a8fd049",
         "type": "github"
       },
       "original": {
@@ -534,11 +534,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1709684606,
-        "narHash": "sha256-dOzOu3gpSAy2PHOYB7DNJVN+vz0XZ0/DnmeF1y06oKk=",
+        "lastModified": 1709685936,
+        "narHash": "sha256-cLHzKGV/GORmnDiAr2rSvvBcp9+k2ZoNGhtDK99+ehg=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "73761ba861f07b13d9717c13fbd500eec0a5ab0a",
+        "rev": "d92ff072d96bcbdf4eae2481f6d5bf7f55d6d312",
         "type": "github"
       },
       "original": {
