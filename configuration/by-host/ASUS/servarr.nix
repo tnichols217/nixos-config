@@ -16,6 +16,7 @@ let
     ];
     config = {
       system.stateVersion = version;
+      networking.firewall.enable = false;
       users.groups."${group}" = {};
       services = {
         ${name} = {
