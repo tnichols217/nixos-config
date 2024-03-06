@@ -3,6 +3,7 @@ let
   group = "servarr";
   confCont = { name }: {
     autoStart = true;
+    ephemeral = true;
     privateNetwork = true;
     hostBridge = "brwg";
     interfaces = [ "wg0" ];

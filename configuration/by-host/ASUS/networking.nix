@@ -12,6 +12,8 @@
 
   networking.useNetworkd = true;
 
+  networking.bridges.brwg.interfaces = [ "wg0" ];
+
   systemd.services."ssh-tunnel" = {
     serviceConfig = {
       RestartSec = "5";
