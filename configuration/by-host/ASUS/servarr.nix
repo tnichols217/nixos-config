@@ -1,4 +1,4 @@
-{ pkgs, ports, version, ... } :
+{ pkgs, ports, version, mkMerge, ... } :
 let
   group = "servarr";
   confCont = { name }: {
@@ -15,13 +15,13 @@ let
     config = {
       system.stateVersion = version;
       services = {
-        "${name}" = {
+        ${name} = {
           enable = true;
         };
       };
     };
   };
-  confContGr = { name }: (confCont { inherit name; }) // {
+  confContGr = { name }: lib.mkMerge [(confCont { inherit name; })  {
     bindMounts = {
       "/var/lib/${name}" = {
         hostPath = "/var/lib/${name}";
@@ -35,8 +35,8 @@ let
         };
       };
     };
-  };
-  confContArr = { name, capName }: (confContGr { inherit name; } ) // {
+  }];
+  confContArr = { name, capName }: lib.mkMerge [(confContGr { inherit name; } ) {
     config = {
       services = {
         "${name}" = {
@@ -44,8 +44,8 @@ let
         };
       };
     };
-  };
-  confContProw = { name }: (confContGr { inherit name; } ) // {
+  }];
+  confContProw = { name }: lib.mkMerge [(confContGr { inherit name; } ) {
     bindMounts = {
       "/var/lib/private/${name}" = {
         hostPath = "/var/lib/private/${name}";
@@ -68,7 +68,7 @@ let
         };
       };
     };
-  };
+  }];
 in
 {
 
