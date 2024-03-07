@@ -16,6 +16,14 @@
 
     bridges.brwg.interfaces = [ "wg0" ];
 
+    interfaces.brwg.useDHCP = true;
+    interfaces.brwg.ipv4.addresses = [{
+      address = "10.0.0.3";
+      prefixLength = 24;
+    }];
+    defaultGateway = "10.0.0.1";
+    nameservers = [ "10.0.0.1" ];
+
     nat = {
       enable = true;
       internalInterfaces = [ "vb-+" "brwg" ];
