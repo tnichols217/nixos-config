@@ -14,13 +14,13 @@
 
     useNetworkd = true;
 
-    bridges.brwg.interfaces = [ "wg0" ];
+    # bridges.brwg.interfaces = [ "wg0" ];
 
-    interfaces.brwg.useDHCP = true;
-    interfaces.brwg.ipv4.addresses = [{
-      address = "10.0.0.3";
-      prefixLength = 24;
-    }];
+    # interfaces.brwg.useDHCP = true;
+    # interfaces.brwg.ipv4.addresses = [{
+    #   address = "10.0.0.3";
+    #   prefixLength = 24;
+    # }];
 
     nat = {
       enable = true;
@@ -46,12 +46,12 @@
   systemd.network = {
     enable = true;
     netdevs = {
-      "20-brwg" = {
-        netdevConfig = {
-          Kind = "bridge";
-          Name = "brwg";
-        };
-      };
+      # "20-brwg" = {
+      #   netdevConfig = {
+      #     Kind = "bridge";
+      #     Name = "brwg";
+      #   };
+      # };
       "20-vservarr" = {
         netdevConfig = {
           Kind = "veth";

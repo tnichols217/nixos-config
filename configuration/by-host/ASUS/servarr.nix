@@ -1,21 +1,24 @@
 { pkgs, ports, version, mkMerge, lib, ... } :
 let
-  localAddresses = {
-    lidarr = "10.0.0.10";
-    radarr = "10.0.0.11";
-    sonarr = "10.0.0.12";
-    readarr = "10.0.0.13";
-    transmission = "10.0.0.14";
-    jellyfin = "10.0.0.15";
-    prowlarr = "10.0.0.16";
+  addressNumbers = {
+    lidarr = "10";
+    radarr = "11";
+    sonarr = "12";
+    readarr = "13";
+    transmission = "14";
+    jellyfin = "15";
+    prowlarr = "16";
   };
+  localAddress = host: "10.0.0.${addressNumbers.${host}}";
+  hostAddress = host: "10.0.1.${addressNumbers.${host}}";
   group = "servarr";
   confCont = { name }: {
     autoStart = true;
     ephemeral = true;
     privateNetwork = true;
     # hostBridge = "brwg";
-    localAddress = "${localAddresses.${name}}/24";
+    localAddress = "${localAddress name}";
+    hostAddress = "${hostAddress name}";
     # interfaces = [ "wg0" ];
     forwardPorts = [
       {
