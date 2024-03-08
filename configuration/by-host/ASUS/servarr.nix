@@ -11,13 +11,13 @@ let
     localAddress = "${localAddress name}";
     hostAddress = "${hostAddress name}";
     # interfaces = [ "wg0" ];
-    forwardPorts = [
-      {
-        containerPort = ports.${name};
-        hostPort = ports.${name};
-        protocol = "tcp";
-      }
-    ];
+    # forwardPorts = [
+    #   {
+    #     containerPort = ports.${name};
+    #     hostPort = ports.${name};
+    #     protocol = "tcp";
+    #   }
+    # ];
     config = {
       system.stateVersion = version;
       networking.firewall.enable = false;

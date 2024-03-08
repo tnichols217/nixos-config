@@ -21,10 +21,13 @@
     #   address = "10.0.0.3";
     #   prefixLength = 24;
     # }];
+
+    networkmanager.unmanaged = [ "interface-name:ve-*" ];
+
     nat = {
       enable = true;
       internalInterfaces = [ "ve-+" "vb-+" ];
-      externalInterface = "enp7s0";
+      externalInterface = "wg0";
       enableIPv6 = true;
     };
   };
@@ -50,12 +53,6 @@
       #     Name = "brwg";
       #   };
       # };
-      "20-vservarr" = {
-        netdevConfig = {
-          Kind = "veth";
-          Name = "vservarr";
-        };
-      };
       "10-wg0" = {
         netdevConfig = {
           Kind = "wireguard";
@@ -94,10 +91,6 @@
           Name = "vb-+";
         };
         networkConfig = {
-          # KeepMaster = "yes";
-          # LinkLocalAddressing = "no";
-          # LLDP = "yes";
-          # EmitLLDP = "nearest-bridge";
           IPMasquerade = "both";
         };
       };
