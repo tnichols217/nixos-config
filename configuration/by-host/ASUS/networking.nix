@@ -94,10 +94,10 @@
           Name = "vb-+";
         };
         networkConfig = {
-          KeepMaster = "yes";
-          LinkLocalAddressing = "no";
-          LLDP = "yes";
-          EmitLLDP = "nearest-bridge";
+          # KeepMaster = "yes";
+          # LinkLocalAddressing = "no";
+          # LLDP = "yes";
+          # EmitLLDP = "nearest-bridge";
           IPMasquerade = "both";
         };
       };
