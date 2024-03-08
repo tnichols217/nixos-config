@@ -26,7 +26,6 @@
       enable = true;
       internalInterfaces = [ "vb-+" ];
       externalInterface = "wg0";
-      # Lazy IPv6 connectivity for the container
       enableIPv6 = true;
     };
   };

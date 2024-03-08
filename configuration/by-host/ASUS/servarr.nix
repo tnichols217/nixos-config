@@ -30,6 +30,7 @@ let
     config = {
       system.stateVersion = version;
       networking.firewall.enable = false;
+      networking.useHostResolvConf = lib.mkForce false;
       users.groups."${group}" = {};
       services = {
         ${name} = {
