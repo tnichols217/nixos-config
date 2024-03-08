@@ -92,7 +92,9 @@
       };
       "20-ve" ={
         matchConfig.Name = "ve-+";
-        IPMasquerade = "both";
+        networkConfig = {
+          IPMasquerade = "both";
+        };
       };
       # "40-br0" = {
       #   matchConfig.Name ="brwg";
