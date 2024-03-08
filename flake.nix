@@ -129,6 +129,15 @@
         transmission = 9091;
         jellyfin = 8096;
       };
+      addressNumbers = {
+        lidarr = "10";
+        radarr = "11";
+        sonarr = "12";
+        readarr = "13";
+        transmission = "14";
+        jellyfin = "15";
+        prowlarr = "16";
+      };
       persistence = rec {
         default = "/nix/persist";
         local = "${default}/local";
@@ -136,7 +145,7 @@
         bucket = "${default}/bucket";
       };
       fullAttrs = {
-        inherit attrs version addresses persistence ports;
+        inherit attrs version addresses persistence ports addressNumbers;
         pkgs = import nixpkgs { system = "x86_64-linux"; config = config;};
         oldpkgs = import nixpkgs_old { system = "x86_64-linux"; config = config;};
         vscode_exts = attrs.nix-vscode-extensions.extensions.x86_64-linux.vscode-marketplace;

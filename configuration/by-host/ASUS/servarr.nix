@@ -1,14 +1,5 @@
-{ pkgs, ports, version, mkMerge, lib, ... } :
+{ pkgs, ports, version, mkMerge, lib, addressNumbers, ... } :
 let
-  addressNumbers = {
-    lidarr = "10";
-    radarr = "11";
-    sonarr = "12";
-    readarr = "13";
-    transmission = "14";
-    jellyfin = "15";
-    prowlarr = "16";
-  };
   localAddress = host: "10.0.0.${addressNumbers.${host}}";
   hostAddress = host: "10.0.1.${addressNumbers.${host}}";
   group = "servarr";

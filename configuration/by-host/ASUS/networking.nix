@@ -24,7 +24,7 @@
     nat = {
       enable = true;
       internalInterfaces = [ "ve-+" "vb-+" ];
-      externalInterface = "wg0";
+      externalInterface = "enp7s0";
       enableIPv6 = true;
     };
   };
