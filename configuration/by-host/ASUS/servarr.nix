@@ -14,7 +14,7 @@ let
     autoStart = true;
     ephemeral = true;
     privateNetwork = true;
-    hostBridge = "brwg";
+    # hostBridge = "brwg";
     localAddress = "${localAddresses.${name}}/24";
     # interfaces = [ "wg0" ];
     forwardPorts = [

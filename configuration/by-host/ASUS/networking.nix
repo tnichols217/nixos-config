@@ -24,7 +24,7 @@
 
     nat = {
       enable = true;
-      internalInterfaces = [ "vb-+" "brwg" ];
+      internalInterfaces = [ "vb-+" ];
       externalInterface = "wg0";
       # Lazy IPv6 connectivity for the container
       enableIPv6 = true;
@@ -50,6 +50,12 @@
         netdevConfig = {
           Kind = "bridge";
           Name = "brwg";
+        };
+      };
+      "20-vservarr" = {
+        netdevConfig = {
+          Kind = "veth";
+          Name = "vservarr";
         };
       };
       "10-wg0" = {
@@ -83,6 +89,10 @@
         #   IPForward = true;
         # };
         DHCP = "no";
+      };
+      "20-ve" ={
+        matchConfig.Name = "ve-+";
+        IPMasquerade = "both";
       };
       # "40-br0" = {
       #   matchConfig.Name ="brwg";
