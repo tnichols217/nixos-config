@@ -14,17 +14,21 @@
 
     useNetworkd = true;
 
-    # bridges.brwg.interfaces = [ "wg0" ];
+    # bridges.brwg.interfaces = [ ];
 
     # interfaces.brwg.useDHCP = true;
     # interfaces.brwg.ipv4.addresses = [{
     #   address = "10.0.0.3";
     #   prefixLength = 24;
     # }];
-
+    # bridges = {
+    #   brwg = {
+    #     interfaces = [];
+    #   };
+    # };
     nat = {
       enable = true;
-      internalInterfaces = [ "vb-+" ];
+      internalInterfaces = [ "ve-+" ];
       externalInterface = "wg0";
       enableIPv6 = true;
     };
