@@ -16,9 +16,9 @@ let
     autoStart = true;
     ephemeral = true;
     privateNetwork = true;
-    # hostBridge = "brwg";
+    hostBridge = "brwg";
     localAddress = "${localAddress name}";
-    hostAddress = "${hostAddress name}";
+    # hostAddress = "${hostAddress name}";
     # interfaces = [ "wg0" ];
     forwardPorts = [
       {
@@ -125,7 +125,7 @@ in
     jellyfin = confContJelly {
       name = "jellyfin";
     };
-    prowlarr = confCont {
+    prowlarr = confContProw {
       name = "prowlarr";
     };
   };
