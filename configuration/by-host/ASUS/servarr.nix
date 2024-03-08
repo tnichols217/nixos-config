@@ -73,7 +73,7 @@ let
     "sonarr/data"
     "readarr/data"
   ])];
-  confContProw = { name }: lib.mkMerge [(confContGr { inherit name; } ) {
+  confContProw = { name }: lib.mkMerge [(confCont { inherit name; } ) {
     bindMounts = {
       "/var/lib/private/${name}" = {
         hostPath = "/var/lib/private/${name}";
