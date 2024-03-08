@@ -33,6 +33,7 @@ let
       networking.useHostResolvConf = lib.mkForce false;
       users.groups."${group}" = {};
       services = {
+        resolved.enable = true;
         ${name} = {
           enable = true;
         };
