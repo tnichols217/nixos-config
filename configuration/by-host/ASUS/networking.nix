@@ -14,7 +14,7 @@
 
     useNetworkd = true;
 
-    bridges.brwg.interfaces = [ ];
+    # bridges.brwg.interfaces = [ ];
 
     # interfaces.brwg.useDHCP = true;
     # interfaces.brwg.ipv4.addresses = [{
@@ -23,7 +23,7 @@
     # }];
     nat = {
       enable = true;
-      internalInterfaces = [ "ve-+" "vb-+" "brwg" ];
+      internalInterfaces = [ "ve-+" "vb-+" ];
       externalInterface = "wg0";
       enableIPv6 = true;
     };
@@ -88,9 +88,16 @@
         # };
         DHCP = "no";
       };
-      "20-ve" ={
-        matchConfig.Name = "ve-+";
+      "10-vb" ={
+        matchConfig = {
+          Kind = "veth";
+          Name = "vb-+";
+        };
         networkConfig = {
+          KeepMaster = "yes";
+          LinkLocalAddressing = "no";
+          LLDP = "yes";
+          EmitLLDP = "nearest-bridge";
           IPMasquerade = "both";
         };
       };
