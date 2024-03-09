@@ -26,8 +26,8 @@
 
     nat = {
       enable = true;
-      # internalInterfaces = [ "ve-+" "vb-+" ];
-      internalInterfaces = [ "ve-sonarr" "ve-prowlarr" "ve-transmission" "ve-lidarr" "ve-jellyfin" "ve-radarr" "ve-readarr" ];
+      internalInterfaces = [ "ve-+" "vb-+" ];
+      # internalInterfaces = [ "ve-sonarr" "ve-prowlarr" "ve-transmission" "ve-lidarr" "ve-jellyfin" "ve-radarr" "ve-readarr" ];
       externalInterface = "wg0";
       enableIPv6 = true;
     };
@@ -86,10 +86,10 @@
         # };
         DHCP = "no";
       };
-      "10-vb" ={
+      "10-ve" = {
         matchConfig = {
           Kind = "veth";
-          Name = "vb-+";
+          Name = "ve-*";
         };
         networkConfig = {
           IPMasquerade = "both";
