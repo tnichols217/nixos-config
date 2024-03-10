@@ -3,7 +3,7 @@
   security.acme = {
     acceptTerms = true;
     defaults = {
-      webroot = "/var/lib/acme/acme-challenge";
+      # webroot = "/var/lib/acme/acme-challenge";
       email = "62992267+tnichols217@users.noreply.github.com";
       group = "nginx";
     };
