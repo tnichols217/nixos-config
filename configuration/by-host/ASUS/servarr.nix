@@ -171,11 +171,11 @@ in
   # };
 
   systemd.tmpfiles.rules = [
-    "Z /var/lib/lidarr 0775 lidarr ${group}"
-    "Z /var/lib/radarr 0775 radarr ${group}"
-    "Z /var/lib/sonarr 0775 sonarr ${group}"
-    "Z /var/lib/readarr 0775 readarr ${group}"
-    "Z /var/lib/jellyfin 0775 jellyfin ${group}"
-    "Z /var/lib/transmission 0775 transmission ${group}"
+    "Z /var/lib/lidarr 0775 root ${group}"
+    "Z /var/lib/radarr 0775 root ${group}"
+    "Z /var/lib/sonarr 0775 root ${group}"
+    "Z /var/lib/readarr 0775 root ${group}"
+    "Z /var/lib/jellyfin 0775 root ${group}"
+    "Z /var/lib/transmission 0775 root ${group}"
   ];
 }
