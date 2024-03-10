@@ -12,6 +12,15 @@ in
     recommendedProxySettings = true;
     recommendedTlsSettings = true;
     virtualHosts = {
+      "acme" = {
+        root = "/var/lib/acme/acme-challenge";
+        listen = [
+          {
+            addr = "0.0.0.0";
+            port = 80;
+          }
+        ];
+      };
       "nix-serve" = {
         locations."/".proxyPass = "http://${config.services.nix-serve.bindAddress}:${toString config.services.nix-serve.port}";
         useACMEHost = "${addresses.serve}";
