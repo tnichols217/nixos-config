@@ -6,7 +6,13 @@
      ] else [];
   networking.hostName = host-name;
   hardware.enableRedistributableFirmware = true;
-  networking.firewall.enable = false;
+  networking.firewall = {
+    enable = true;
+    allowedTCPPorts = [ 80 443 ];
+    allowedUDPPortRanges = [
+      { from = 4000; to = 9999; }
+    ];
+  };
   networking.timeServers = [
       "0.nixos.pool.ntp.org"
       "1.nixos.pool.ntp.org"
