@@ -100,6 +100,10 @@ let
   )];
   confContProw = { name }: lib.mkMerge [(confCont { inherit name; } ) {
     containers.${name} = {
+      localAddress = "${localAddress name}";
+      hostBridge = lib.mkForce null;
+      interfaces = [ "wg0" ];
+
       bindMounts = {
         "/var/lib/private/${name}" = {
           hostPath = "/var/lib/private/${name}";
@@ -122,6 +126,13 @@ let
           };
         };
       };
+    };
+  }];
+  confContTran = { name }: lib.mkMerge [(confContGr { inherit name; } ) {
+    containers.${name} = {
+      localAddress = "${localAddress name}";
+      hostBridge = lib.mkForce null;
+      interfaces = [ "wg0" ];
     };
   }];
 in
@@ -155,7 +166,7 @@ lib.mkMerge [
     name = "readarr";
     capName = "Readarr";
   })
-  (confContGr {
+  (confContTran {
     name = "transmission";
   })
   (confContJelly {
