@@ -100,10 +100,6 @@ let
   )];
   confContProw = { name }: lib.mkMerge [(confCont { inherit name; } ) {
     containers.${name} = {
-      localAddress = "${localAddress name}";
-      hostBridge = lib.mkForce null;
-      interfaces = [ "wg0" ];
-
       bindMounts = {
         "/var/lib/private/${name}" = {
           hostPath = "/var/lib/private/${name}";
