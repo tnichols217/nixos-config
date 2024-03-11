@@ -49,7 +49,7 @@ let
           inherit gid;
         };
         services = {
-          resolved.enable = true;
+          # resolved.enable = true;
           ${name} = {
             enable = true;
           };
