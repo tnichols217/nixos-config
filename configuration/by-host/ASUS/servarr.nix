@@ -25,19 +25,19 @@ let
       #     protocol = "tcp";
       #   }
       # ];
-      # extraVeths = {
-      #   "ve2-${name}" = {
-      #     localAddress = "${localExtraAddress name}";
-      #     hostAddress = "${hostAddress name}";
-      #     forwardPorts = [
-      #       {
-      #         containerPort = ports.${name};
-      #         hostPort = ports.${name};
-      #         protocol = "tcp";
-      #       }
-      #     ];
-      #   };
-      # };
+      extraVeths = {
+        "ve2-${name}" = {
+          localAddress = "${localExtraAddress name}";
+          hostAddress = "${hostAddress name}";
+          forwardPorts = [
+            {
+              containerPort = ports.${name};
+              hostPort = ports.${name};
+              protocol = "tcp";
+            }
+          ];
+        };
+      };
       config = {
         system.stateVersion = version;
         networking = {
