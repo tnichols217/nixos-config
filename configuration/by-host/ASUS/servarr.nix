@@ -5,7 +5,7 @@ let
   group = "servarr";
   gid = 1000;
   confCont = { name }: {
-    interfaces."ve-${name}".ipv4.addresses = [{
+    networking.interfaces."ve-${name}".ipv4.addresses = [{
       address = hostAddress name;
       prefixLength = 24;
     }];
