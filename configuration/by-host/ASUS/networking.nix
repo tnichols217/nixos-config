@@ -14,20 +14,20 @@
 
     useNetworkd = true;
 
-    # bridges.brwg.interfaces = [ ];
+    bridges.brwg.interfaces = [ ];
 
-    # interfaces.brwg.useDHCP = true;
-    # interfaces.brwg.ipv4.addresses = [{
-    #   address = "10.0.0.3";
-    #   prefixLength = 24;
-    # }];
+    interfaces.brwg.useDHCP = false;
+    interfaces.brwg.ipv4.addresses = [{
+      address = "10.0.1.3";
+      prefixLength = 24;
+    }];
 
     networkmanager.unmanaged = [ "interface-name:ve-*" ];
 
     nat = {
       enable = true;
-      # internalInterfaces = [ "ve-+" ];
-      internalIPs = [ "10.0.1.0/24" ];
+      internalInterfaces = [ "ve-+" "brwg" ];
+      # internalIPs = [ "10.0.1.0/24" ];
       # internalInterfaces = [ "ve-sonarr" "ve-prowlarr" "ve-transmission" "ve-lidarr" "ve-jellyfin" "ve-radarr" "ve-readarr" ];
       externalInterface = "wg0";
       enableIPv6 = true;
