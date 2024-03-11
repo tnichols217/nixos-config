@@ -13,9 +13,9 @@ let
     containers.${name} = {
       autoStart = true;
       ephemeral = true;
-      privateNetwork = true;
-      hostBridge = "brwg";
-      localAddress = "${localAddress name}";
+      privateNetwork = false;
+      # hostBridge = "brwg";
+      # localAddress = "${localAddress name}";
       # hostAddress = "${hostAddress name}";
       # interfaces = [ "wg0" ];
       # forwardPorts = [
@@ -25,19 +25,19 @@ let
       #     protocol = "tcp";
       #   }
       # ];
-      extraVeths = {
-        "ve2-${name}" = {
-          localAddress = "${localExtraAddress name}";
-          hostAddress = "${hostAddress name}";
-          forwardPorts = [
-            {
-              containerPort = ports.${name};
-              hostPort = ports.${name};
-              protocol = "tcp";
-            }
-          ];
-        };
-      };
+      # extraVeths = {
+      #   "ve2-${name}" = {
+      #     localAddress = "${localExtraAddress name}";
+      #     hostAddress = "${hostAddress name}";
+      #     forwardPorts = [
+      #       {
+      #         containerPort = ports.${name};
+      #         hostPort = ports.${name};
+      #         protocol = "tcp";
+      #       }
+      #     ];
+      #   };
+      # };
       config = {
         system.stateVersion = version;
         networking = {
