@@ -14,7 +14,7 @@
 
     useNetworkd = true;
 
-    bridges.brwg.interfaces = [ ];
+    # bridges.brwg.interfaces = [ ];
 
     # interfaces.brwg.useDHCP = true;
     # interfaces.brwg.ipv4.addresses = [{
@@ -26,7 +26,7 @@
 
     nat = {
       enable = true;
-      internalInterfaces = [ "ve-+" "brwg" ];
+      internalInterfaces = [ "ve-+" ];
       # internalIPs = [ "10.0.1.0/24" ];
       # internalInterfaces = [ "ve-sonarr" "ve-prowlarr" "ve-transmission" "ve-lidarr" "ve-jellyfin" "ve-radarr" "ve-readarr" ];
       externalInterface = "wg0";
