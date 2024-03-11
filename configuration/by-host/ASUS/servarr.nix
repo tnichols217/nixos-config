@@ -13,7 +13,7 @@ let
     containers.${name} = {
       autoStart = true;
       ephemeral = true;
-      privateNetwork = true;
+      privateNetwork = false;
       hostBridge = "brwg";
       localAddress = "${localAddress name}";
       # hostAddress = "${hostAddress name}";
@@ -26,7 +26,7 @@ let
       #   }
       # ];
       extraVeths = {
-        "ve-${name}" = {
+        "ve2-${name}" = {
           localAddress = "${localExtraAddress name}";
           hostAddress = "${hostAddress name}";
           forwardPorts = [
@@ -43,6 +43,9 @@ let
         networking = {
           firewall.enable = false;
           useHostResolvConf = lib.mkForce false;
+          interfaces."" = {
+
+          };
           defaultGateway = "10.0.2.1";
         };
         users.groups."${group}" = {
@@ -126,6 +129,7 @@ let
   }];
   confContTran = { name }: lib.mkMerge [(confContGr { inherit name; } ) {
     containers.${name} = {
+      privateNetwork = true;
       localAddress = "${localAddress name}";
       hostBridge = lib.mkForce null;
       interfaces = [ "wg0" ];
