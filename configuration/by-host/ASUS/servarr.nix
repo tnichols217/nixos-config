@@ -58,7 +58,7 @@ let
           };
         };
       };
-    } mounts [ name ]];
+    } (mounts [ name ])];
   }];
   confContArr = { name, capName }: lib.mkMerge [(confContGr { inherit name; } ) {
     containers.${name} = {
