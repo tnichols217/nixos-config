@@ -5,10 +5,10 @@ let
   group = "servarr";
   gid = 1000;
   confCont = { name }: {
-    networking.interfaces."vb-${name}".ipv4.addresses = [{
-      address = hostAddress name;
-      prefixLength = 24;
-    }];
+    # networking.interfaces."vb-${name}".ipv4.addresses = [{
+    #   address = hostAddress name;
+    #   prefixLength = 24;
+    # }];
     containers.${name} = {
       autoStart = true;
       ephemeral = true;
@@ -17,13 +17,26 @@ let
       localAddress = "${localAddress name}";
       # hostAddress = "${hostAddress name}";
       # interfaces = [ "wg0" ];
-      forwardPorts = [
-        {
-          containerPort = ports.${name};
-          hostPort = ports.${name};
-          protocol = "tcp";
-        }
-      ];
+      # forwardPorts = [
+      #   {
+      #     containerPort = ports.${name};
+      #     hostPort = ports.${name};
+      #     protocol = "tcp";
+      #   }
+      # ];
+      extraVeths = {
+        "ve-${name}" = {
+          localAddress = "${localAddress name}";
+          hostAddress = "${hostAddress name}";
+          forwardPorts = [
+            {
+              containerPort = ports.${name};
+              hostPort = ports.${name};
+              protocol = "tcp";
+            }
+          ];
+        };
+      };
       config = {
         system.stateVersion = version;
         networking.firewall.enable = false;
