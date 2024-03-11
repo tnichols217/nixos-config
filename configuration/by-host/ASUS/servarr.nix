@@ -163,9 +163,9 @@ lib.mkMerge [
     name = "readarr";
     capName = "Readarr";
   })
-  # (confContTran {
-  #   name = "transmission";
-  # })
+  (confContTran {
+    name = "transmission";
+  })
   (confContJelly {
     name = "jellyfin";
   })
