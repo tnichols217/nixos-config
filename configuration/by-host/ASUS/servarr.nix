@@ -126,7 +126,7 @@ let
   }];
   confContTran = { name }: lib.mkMerge [(confContGr { inherit name; } ) {
     containers.${name} = {
-      privateNetwork = lib.mkForce true;
+      # privateNetwork = lib.mkForce true;
       localAddress = "${localAddress name}";
       hostBridge = lib.mkForce null;
       interfaces = [ "wg0" ];
