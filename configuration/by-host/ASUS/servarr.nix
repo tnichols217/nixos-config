@@ -1,6 +1,7 @@
 { pkgs, ports, version, mkMerge, lib, addressNumbers, ... } :
 let
-  localAddress = host: "10.0.0.${addressNumbers.${host}}";
+  localAddress = host: "10.0.2.${addressNumbers.${host}}";
+  localExtraAddress = host: "10.0.0.${addressNumbers.${host}}";
   hostAddress = host: "10.0.1.${addressNumbers.${host}}";
   group = "servarr";
   gid = 1000;
@@ -26,7 +27,7 @@ let
       # ];
       extraVeths = {
         "ve-${name}" = {
-          localAddress = "${localAddress name}";
+          localAddress = "${localExtraAddress name}";
           hostAddress = "${hostAddress name}";
           forwardPorts = [
             {
@@ -39,8 +40,11 @@ let
       };
       config = {
         system.stateVersion = version;
-        networking.firewall.enable = false;
-        networking.useHostResolvConf = lib.mkForce false;
+        networking = {
+          firewall.enable = false;
+          useHostResolvConf = lib.mkForce false;
+          defaultGateway = "10.0.2.1";
+        };
         users.groups."${group}" = {
           inherit gid;
         };
