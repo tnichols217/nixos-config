@@ -7,7 +7,7 @@
   networking.hostName = host-name;
   hardware.enableRedistributableFirmware = true;
   networking.firewall = {
-    enable = true;
+    enable = false;
     allowedTCPPorts = [
       80 # Nginx
       443 # Nginx
