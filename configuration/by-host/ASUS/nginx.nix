@@ -1,6 +1,6 @@
 { pkgs, attrs, config, addresses, ports, addressNumbers, ... }:
 let
-  hostAddress = host: "10.0.1.${addressNumbers.${host}}";
+  hostAddress = host: "10.1.${addressNumbers.${host}}.1";
 in
 {
   # users.users.nginx.extraGroups = ["wwwrun"];
