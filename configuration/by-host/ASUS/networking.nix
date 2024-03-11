@@ -18,7 +18,7 @@
 
     interfaces.brwg.useDHCP = false;
     interfaces.brwg.ipv4.addresses = [{
-      address = "10.0.1.1";
+      address = "10.0.2.1";
       prefixLength = 24;
     }];
 
