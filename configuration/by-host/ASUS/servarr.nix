@@ -13,9 +13,9 @@ let
     containers.${name} = {
       autoStart = true;
       ephemeral = true;
-      privateNetwork = false;
-      # hostBridge = "brwg";
-      # localAddress = "${localAddress name}";
+      privateNetwork = true;
+      hostBridge = "brwg";
+      localAddress = "${localAddress name}";
       # hostAddress = "${hostAddress name}";
       # interfaces = [ "wg0" ];
       # forwardPorts = [
