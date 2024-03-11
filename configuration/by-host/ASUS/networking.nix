@@ -13,6 +13,7 @@
   networking = {
 
     useNetworkd = true;
+    nftables.enable = true;
 
     bridges.brwg.interfaces = [ ];
 
