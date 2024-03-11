@@ -15,7 +15,7 @@ let
       ephemeral = true;
       privateNetwork = false;
       # hostBridge = "brwg";
-      localAddress = "${localAddress name}";
+      # localAddress = "${localAddress name}";
       # hostAddress = "${hostAddress name}";
       # interfaces = [ "wg0" ];
       # forwardPorts = [
@@ -25,28 +25,25 @@ let
       #     protocol = "tcp";
       #   }
       # ];
-      extraVeths = {
-        "ve2-${name}" = {
-          localAddress = "${localExtraAddress name}";
-          hostAddress = "${hostAddress name}";
-          forwardPorts = [
-            {
-              containerPort = ports.${name};
-              hostPort = ports.${name};
-              protocol = "tcp";
-            }
-          ];
-        };
-      };
+      # extraVeths = {
+      #   "ve2-${name}" = {
+      #     localAddress = "${localExtraAddress name}";
+      #     hostAddress = "${hostAddress name}";
+      #     forwardPorts = [
+      #       {
+      #         containerPort = ports.${name};
+      #         hostPort = ports.${name};
+      #         protocol = "tcp";
+      #       }
+      #     ];
+      #   };
+      # };
       config = {
         system.stateVersion = version;
         networking = {
           firewall.enable = false;
-          useHostResolvConf = lib.mkForce false;
-          interfaces."" = {
-
-          };
-          defaultGateway = "10.0.2.1";
+          # useHostResolvConf = lib.mkForce false;
+          # defaultGateway = "10.0.2.1";
         };
         users.groups."${group}" = {
           inherit gid;
