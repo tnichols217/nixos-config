@@ -1,8 +1,8 @@
 { pkgs, ports, version, mkMerge, lib, addressNumbers, ... } :
 let
-  localAddress = host: "10.1.${addressNumbers.${host}}.3/24";
-  localExtraAddress = host: "10.1.${addressNumbers.${host}}.2/24";
-  hostAddress = host: "10.1.${addressNumbers.${host}}.1/24";
+  localAddress = host: "10.1.${addressNumbers.${host}}.3";
+  localExtraAddress = host: "10.1.${addressNumbers.${host}}.2";
+  hostAddress = host: "10.1.${addressNumbers.${host}}.1";
   group = "servarr";
   gid = 1000;
   confCont = { name }: {
