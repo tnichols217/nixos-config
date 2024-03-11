@@ -111,6 +111,14 @@ lib.mkMerge [
     users.groups."${group}" = {
       inherit gid;
     };
+    systemd.tmpfiles.rules = [
+      "Z /var/lib/lidarr 0775 root ${group}"
+      "Z /var/lib/radarr 0775 root ${group}"
+      "Z /var/lib/sonarr 0775 root ${group}"
+      "Z /var/lib/readarr 0775 root ${group}"
+      "Z /var/lib/jellyfin 0775 root ${group}"
+      "Z /var/lib/transmission 0775 root ${group}"
+    ];
   }
   confContArr {
     name = "lidarr";
@@ -187,13 +195,3 @@ lib.mkMerge [
   #     image = "flaresolverr/flaresolverr";
   #   };
   # };
-
-  systemd.tmpfiles.rules = [
-    "Z /var/lib/lidarr 0775 root ${group}"
-    "Z /var/lib/radarr 0775 root ${group}"
-    "Z /var/lib/sonarr 0775 root ${group}"
-    "Z /var/lib/readarr 0775 root ${group}"
-    "Z /var/lib/jellyfin 0775 root ${group}"
-    "Z /var/lib/transmission 0775 root ${group}"
-  ];
-}
