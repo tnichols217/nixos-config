@@ -8,7 +8,14 @@
   hardware.enableRedistributableFirmware = true;
   networking.firewall = {
     enable = true;
-    allowedTCPPorts = [ 80 443 24800 ];
+    allowedTCPPorts = [
+      80 # Nginx
+      443 # Nginx
+      8000
+      4430
+      24800 # Barrier
+      #TODO add binary cache
+    ];
     allowedUDPPortRanges = [
       { from = 4000; to = 25000; }
     ];
