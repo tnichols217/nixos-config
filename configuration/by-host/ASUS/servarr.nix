@@ -142,7 +142,7 @@ let
         };
       };
       hostBridge = lib.mkForce null;
-      interfaces = [ "wg0" ];
+      # interfaces = [ "wg0" ];
     };
   }];
 in
