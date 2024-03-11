@@ -41,18 +41,16 @@ let
     };
   };
   mapFunc = name: {
-    containers.${name} = {
-      bindMounts = {
-        "/var/lib/${name}" = {
-          hostPath = "/var/lib/${name}";
-          isReadOnly = false;
-        };
+    bindMounts = {
+      "/var/lib/${name}" = {
+        hostPath = "/var/lib/${name}";
+        isReadOnly = false;
       };
     };
   };
   mounts = names: lib.mkMerge (pkgs.lib.lists.map mapFunc names);
-  confContGr = { name }: lib.mkMerge [(confCont { inherit name; }) (mounts [ name ]) {
-    containers.${name} = {
+  confContGr = { name }: lib.mkMerge [(confCont { inherit name; }) {
+    containers.${name} = lib.mkMerge [{
       config = {
         services = {
           "${name}" = {
@@ -60,7 +58,7 @@ let
           };
         };
       };
-    };
+    } mounts [ name ]];
   }];
   confContArr = { name, capName }: lib.mkMerge [(confContGr { inherit name; } ) {
     containers.${name} = {
@@ -73,12 +71,16 @@ let
       };
     };
   }];
-  confContJelly = { name }: lib.mkMerge [(confContGr { inherit name; } ) (mounts [
-    "lidarr/data"
-    "radarr/data"
-    "sonarr/data"
-    "readarr/data"
-  ])];
+  confContJelly = { name }: lib.mkMerge [(confContGr { inherit name; } ) (
+    {
+      containers.${name} = mounts [
+        "lidarr/data"
+        "radarr/data"
+        "sonarr/data"
+        "readarr/data"
+      ];
+    }
+  )];
   confContProw = { name }: lib.mkMerge [(confCont { inherit name; } ) {
     containers.${name} = {
       bindMounts = {
