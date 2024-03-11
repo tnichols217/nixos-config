@@ -120,31 +120,31 @@ lib.mkMerge [
       "Z /var/lib/transmission 0775 root ${group}"
     ];
   }
-  confContArr {
+  (confContArr {
     name = "lidarr";
     capName = "Lidarr";
-  }
-  confContArr {
+  })
+  (confContArr {
     name = "radarr";
     capName = "Radarr";
-  }
-  confContArr {
+  })
+  (confContArr {
     name = "sonarr";
     capName = "Sonarr";
-  }
-  confContArr {
+  })
+  (confContArr {
     name = "readarr";
     capName = "Readarr";
-  }
-  confContGr {
+  })
+  (confContGr {
     name = "transmission";
-  }
-  confContJelly {
+  })
+  (confContJelly {
     name = "jellyfin";
-  }
-  confContProw {
+  })
+  (confContProw {
     name = "prowlarr";
-  }
+  })
 ]
 
   # services = {
