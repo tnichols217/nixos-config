@@ -8,9 +8,9 @@
   hardware.enableRedistributableFirmware = true;
   networking.firewall = {
     enable = true;
-    allowedTCPPorts = [ 80 443 ];
+    allowedTCPPorts = [ 80 443 24800 ];
     allowedUDPPortRanges = [
-      { from = 4000; to = 9999; }
+      { from = 4000; to = 25000; }
     ];
   };
   networking.timeServers = [
