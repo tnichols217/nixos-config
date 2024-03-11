@@ -3,6 +3,7 @@ let
   localAddress = host: "10.0.0.${addressNumbers.${host}}";
   hostAddress = host: "10.0.1.${addressNumbers.${host}}";
   group = "servarr";
+  gid = 1000;
   confCont = { name }: {
     autoStart = true;
     ephemeral = true;
@@ -22,7 +23,9 @@ let
       system.stateVersion = version;
       networking.firewall.enable = false;
       networking.useHostResolvConf = lib.mkForce false;
-      users.groups."${group}" = {};
+      users.groups."${group}" = {
+        inherit gid;
+      };
       services = {
         resolved.enable = true;
         ${name} = {
@@ -91,7 +94,9 @@ let
 in
 {
 
-  users.groups."${group}" = {};
+  users.groups."${group}" = {
+    inherit gid;
+  };
 
   containers = {
     lidarr = confContArr {
