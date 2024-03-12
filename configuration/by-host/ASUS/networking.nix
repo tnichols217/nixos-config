@@ -42,7 +42,7 @@
     };
     path = with pkgs; [ nix ];
     script = ''
-      ${pkgs.openssh}/bin/ssh -NR 4430:localhost:443 -R 8000:localhost:80 ec2-user@${addresses.default} -i /var/lib/mullvad/ec2.cert
+      ${pkgs.openssh}/bin/ssh -NR 4430:localhost:443 -R 8000:localhost:80 -R 2200:localhost:22 ec2-user@${addresses.default} -i /var/lib/mullvad/ec2.cert
     '';
     wantedBy = ["multi-user.target"];
   };
