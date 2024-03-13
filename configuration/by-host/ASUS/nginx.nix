@@ -114,7 +114,10 @@ in
         ];
       };
       "jellyfin" = {
-        locations."/".proxyPass = "http://${hostAddress "jellyfin"}:${toString ports.jellyfin}";
+        locations."/" = {
+          proxyPass = "http://${hostAddress "jellyfin"}:${toString ports.jellyfin}";
+          proxyWebsockets = true;
+        };
         useACMEHost = "${addresses.jellyfin}";
         serverName = "${addresses.jellyfin}";
         forceSSL = true;
