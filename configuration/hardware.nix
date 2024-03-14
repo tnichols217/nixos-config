@@ -11,7 +11,7 @@
   boot.initrd.kernelModules = [ "amdgpu" "nvidia" ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = with config.boot.kernelPackages; [
-    v4l2loopback
+    # v4l2loopback # broken for now
     nvidia_x11
   ];
   boot.supportedFilesystems = [ "ntfs" "btrfs" ];
