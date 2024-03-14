@@ -13,10 +13,10 @@ let
     containers.${name} = {
       autoStart = true;
       ephemeral = true;
-      privateNetwork = false;
+      privateNetwork = true;
       # hostBridge = "brwg";
-      # localAddress = "${localAddress name}";
-      # hostAddress = "${hostAddress name}";
+      localAddress = "${localAddress name}";
+      hostAddress = "${hostAddress name}";
       # interfaces = [ "wg0" ];
       # forwardPorts = [
       #   {
@@ -176,9 +176,9 @@ lib.mkMerge [
     name = "readarr";
     capName = "Readarr";
   })
-  (confContTran {
-    name = "transmission";
-  })
+  # (confContTran {
+  #   name = "transmission";
+  # })
   (confContJelly {
     name = "jellyfin";
   })

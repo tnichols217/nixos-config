@@ -15,13 +15,13 @@
     useNetworkd = true;
     nftables.enable = true;
 
-    bridges.brwg.interfaces = [ ];
+    # bridges.brwg.interfaces = [ ];
 
-    interfaces.brwg.useDHCP = false;
-    interfaces.brwg.ipv4.addresses = [{
-      address = "10.0.2.1";
-      prefixLength = 24;
-    }];
+    # interfaces.brwg.useDHCP = false;
+    # interfaces.brwg.ipv4.addresses = [{
+    #   address = "10.0.2.1";
+    #   prefixLength = 24;
+    # }];
 
     networkmanager.unmanaged = [ "interface-name:ve-*" ];
 
@@ -82,21 +82,21 @@
         linkConfig.RequiredForOnline = "yes";
         address = ["10.67.135.222/32" "fc00:bbbb:bbbb:bb01::4:87dd/128"];
         dns = ["10.64.0.1"];
-        # networkConfig = {
-        #   IPMasquerade = "ipv4";
-        #   IPForward = true;
-        # };
-        DHCP = "no";
-      };
-      "10-ve" = {
-        matchConfig = {
-          Kind = "veth";
-          Name = "ve-*";
-        };
         networkConfig = {
           IPMasquerade = "both";
+          # IPForward = true;
         };
+        DHCP = "no";
       };
+      # "10-ve" = {
+      #   matchConfig = {
+      #     Kind = "veth";
+      #     Name = "ve-*";
+      #   };
+      #   networkConfig = {
+      #     IPMasquerade = "both";
+      #   };
+      # };
       # "40-br0" = {
       #   matchConfig.Name ="brwg";
       #   bridgeConfig = {};
