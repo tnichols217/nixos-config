@@ -3,7 +3,7 @@
   services.udev.packages = [ pkgs.yubikey-personalization ];
   programs.gnupg.agent = {
     enable = true;
-    pinentryPackage = pkgs.pinentry-qt;
+    # pinentryPackage = pkgs.pinentry-qt;
     enableSSHSupport = true;
   };
 
