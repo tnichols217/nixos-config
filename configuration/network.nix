@@ -17,9 +17,6 @@
       25565 # Minecraft
       #TODO add binary cache
     ];
-    allowedUDPPortRanges = [
-      { from = 4000; to = 25000; }
-    ];
   };
   networking.timeServers = [
       "0.nixos.pool.ntp.org"
