@@ -80,15 +80,23 @@
       flake = false;
     };
 
+    # beta
+
+    qbittorrent-module = {
+      url = "github:nu-nu-ko/nixpkgs/init-nixos-qbittorrent";
+      flake = false;
+    };
+
     flake-utils.url = "github:numtide/flake-utils";
   };
   
-  outputs = { self, nixpkgs, nixos-generators, nix-index-database, nixpkgs_old, nix-vscode-extensions, arion, minecraft-arion, flake-utils, ... }@attrs: let 
+  outputs = { self, nixpkgs, nixos-generators, nix-index-database, nixpkgs_old, nix-vscode-extensions, arion, minecraft-arion, flake-utils, qbittorrent-module, ... }@attrs: let 
       mods = [
           attrs.home-manager.nixosModules.default
 
           attrs.impermanence.nixosModules.impermanence
           attrs.nur.nixosModules.nur
+          (qbittorrent-module + "/nixos/modules/services/torrent/qbittorrent.nix")
           # nix-index-database.nixosModules.nix-index
           ./configuration.nix
         ];
