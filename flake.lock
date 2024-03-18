@@ -534,11 +534,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1710758009,
-        "narHash": "sha256-E60fc4liidYWo+0FKGwDFndhcmV40ZNwfDbROTwaInA=",
+        "lastModified": 1710784043,
+        "narHash": "sha256-WwftVdCEpHY9sk1NI4u5Lm7cIXGKJ+8lwgcPOt5acl0=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "fc4f9acb61749a12a7ff7ac4020142b121a5dd25",
+        "rev": "bb403301dadfcdca02aa14360f8e88746f537541",
         "type": "github"
       },
       "original": {
@@ -550,11 +550,11 @@
     "p10k": {
       "flake": false,
       "locked": {
-        "lastModified": 1710601435,
-        "narHash": "sha256-KkjJXxQl7wo0Yi3KIGlQQCcFbpJFl869xKRqsQvejxg=",
+        "lastModified": 1710777235,
+        "narHash": "sha256-bI7AOPO8rqYbLL5Sy2jIXIp8+O1Qewj8i6Kn749na9g=",
         "owner": "romkatv",
         "repo": "powerlevel10k",
-        "rev": "6836bfe2da51bf32472b67df062347cfc4b1952e",
+        "rev": "3fe8706d248e330c9902baaf3399ab8d7d8f60ee",
         "type": "github"
       },
       "original": {
@@ -585,16 +585,33 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1710742651,
-        "narHash": "sha256-u7bquiwnQoOQzwlgc1UJJszUEzHWTE7+I3Z37t5AkU8=",
+        "lastModified": 1710764599,
+        "narHash": "sha256-B9bSucVvg7zjuFGTEzPUXSjdzbPeRTVnb4iYmjE9jB8=",
         "owner": "tnichols217",
         "repo": "nixos-program-extensions",
-        "rev": "91e7e7c97933cb1100939c338cea14c70095a5dc",
+        "rev": "3e7c7f7b71e11291ccfe3d11b05c567fab6ac1b6",
         "type": "github"
       },
       "original": {
         "owner": "tnichols217",
         "repo": "nixos-program-extensions",
+        "type": "github"
+      }
+    },
+    "qbittorrent-module": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1708776995,
+        "narHash": "sha256-Afn3I8rr+RYGYQz4vke0R/ABIvaOVY9lYe+5uyatfBM=",
+        "owner": "nu-nu-ko",
+        "repo": "nixpkgs",
+        "rev": "c28923389fb43052aab146d424f2c5fceaed42b7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nu-nu-ko",
+        "ref": "init-nixos-qbittorrent",
+        "repo": "nixpkgs",
         "type": "github"
       }
     },
@@ -619,7 +636,8 @@
         "nur": "nur",
         "p10k": "p10k",
         "papirus": "papirus",
-        "program-extensions": "program-extensions"
+        "program-extensions": "program-extensions",
+        "qbittorrent-module": "qbittorrent-module"
       }
     },
     "spigot": {
