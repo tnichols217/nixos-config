@@ -13,10 +13,10 @@ let
     containers.${name} = {
       autoStart = true;
       ephemeral = true;
-      privateNetwork = true;
+      privateNetwork = false;
       # hostBridge = "brwg";
-      localAddress = "${localAddress name}";
-      hostAddress = "${hostAddress name}";
+      # localAddress = "${localAddress name}";
+      # hostAddress = "${hostAddress name}";
       # interfaces = [ "wg0" ];
       # forwardPorts = [
       #   {
