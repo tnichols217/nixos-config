@@ -14,6 +14,7 @@
       8000
       4430
       24800 # Barrier
+      25565 # Minecraft
       #TODO add binary cache
     ];
     allowedUDPPortRanges = [
