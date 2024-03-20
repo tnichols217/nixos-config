@@ -90,7 +90,7 @@ let
   }];
   confContQbit = { name }: lib.mkMerge [(confContGr { inherit name; } ) {
     containers.${name} = {
-      config = {
+      config = lib.mkMerge [(qbittorrent-module + "/nixos/modules/services/torrent/qbittorrent.nix") {
         services = {
           "${name}" = {
             profileDir = "/var/lib/${name}";
@@ -138,7 +138,7 @@ let
             };
           };
         };
-      };
+      }];
     };
   }];
   confContJelly = { name }: lib.mkMerge [(confContGr { inherit name; } ) (
