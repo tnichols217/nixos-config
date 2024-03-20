@@ -15,6 +15,7 @@
       4430
       24800 # Barrier
       25565 # Minecraft
+      9009 # qbittorrent
       #TODO add binary cache
     ];
   };
