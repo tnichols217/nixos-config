@@ -88,9 +88,11 @@
         };
         routes = [
           {
-            Gateway = "10.64.0.1";
-            Destination = "10.64.0.0/16";
-            GatewayOnLink = "yes";
+            routeConfig = {
+              Gateway = "10.64.0.1";
+              Destination = "10.64.0.0/16";
+              GatewayOnLink = "yes";
+            };
           }
         ];
         DHCP = "no";
