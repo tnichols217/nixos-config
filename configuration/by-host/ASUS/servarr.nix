@@ -103,6 +103,7 @@ let
                   AddExtensionToIncompleteFiles = true;
                   Preallocation = true;
                   QueueingSystemEnabled = false;
+                  ProxyPeerConnections = true;
                 };
               };
               Core = {
