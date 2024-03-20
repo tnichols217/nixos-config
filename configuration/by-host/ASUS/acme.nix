@@ -17,6 +17,7 @@
       "${addresses.readarr}" = {};
       "${addresses.prowlarr}" = {};
       "${addresses.jellyfin}" = {};
+      "${addresses.qbittorrent}" = {};
     };
   };
 }
