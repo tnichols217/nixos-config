@@ -232,6 +232,9 @@ lib.mkMerge [
   # (confContTran {
   #   name = "transmission";
   # })
+  (confContQbit {
+    name = "qbittorrent"
+  })
   (confContJelly {
     name = "jellyfin";
   })
