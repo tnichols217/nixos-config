@@ -88,7 +88,7 @@ let
       };
     };
   }];
-  confContQbit = { name, capName }: lib.mkMerge [(confContGr { inherit name; } ) {
+  confContQbit = { name }: lib.mkMerge [(confContGr { inherit name; } ) {
     containers.${name} = {
       config = {
         services = {
