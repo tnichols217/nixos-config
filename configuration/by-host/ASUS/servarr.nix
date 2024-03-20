@@ -233,7 +233,7 @@ lib.mkMerge [
   #   name = "transmission";
   # })
   (confContQbit {
-    name = "qbittorrent"
+    name = "qbittorrent";
   })
   (confContJelly {
     name = "jellyfin";
