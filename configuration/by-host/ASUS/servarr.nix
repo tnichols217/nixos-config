@@ -211,6 +211,7 @@ lib.mkMerge [
       "Z /var/lib/readarr 0775 root ${group}"
       "Z /var/lib/jellyfin 0775 root ${group}"
       "Z /var/lib/transmission 0775 root ${group}"
+      "Z /var/lib/qbittorrent 0775 root ${group}"
     ];
   }
   (confContArr {
