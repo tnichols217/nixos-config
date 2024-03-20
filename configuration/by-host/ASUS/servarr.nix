@@ -128,7 +128,7 @@ let
               };
               Preferences = {
                 WebUI = {
-                  Username = "user";
+                  Username = "admin";
                   Password_PBKDF2 = "@ByteArray(e88apKuE5EKe2cJXamorDg==:r96TVu5Ow7h376EbTOjgDUHiSJA3tKpyLmiRG8LwN89RaUi9WJkblqutLW1ogT6hWzEKgh4tFdXVJL7e2/Noyw==)";
                   ReverseProxySupportEnabled = true;
                 };
