@@ -88,6 +88,61 @@ let
       };
     };
   }];
+  confContQbit = { name, capName }: lib.mkMerge [(confContGr { inherit name; } ) {
+    containers.${name} = {
+      config = {
+        services = {
+          "${name}" = {
+            profileDir = "/var/lib/${name}";
+            openFirewall = true;
+            webuiPort = ports.qbitfe;
+            torrentingPort = ports.qbittorrent;
+            serverConfig = {
+              {
+                BitTorrent = {
+                  Session = {
+                    AddExtensionToIncompleteFiles = true;
+                    Preallocation = true;
+                    QueueingSystemEnabled = false;
+                  };
+                };
+                Core = {
+                  AutoDeleteAddedTorrentFile = "Never";
+                };
+                LegalNotice = {
+                  Accepted = true;
+                };
+                Network = {
+                  Proxy = {
+                    AuthEnabled = false;
+                    HostnameLookupEnabled = true;
+                    IP = "10.64.0.1";
+                    Password = "";
+                    Port = "@Variant(\\0\\0\\0\\x85\\x4\\x38)";
+                    Profiles = {
+                      Misc = true;
+                      RSS = true;
+                    };
+                    Type = "SOCKS5";
+                    Username = "";
+                  };
+                };
+                Preferences = {
+                  WebUI = {
+                    Username = "user";
+                    Password_PBKDR2 = "@ByteArray(e88apKuE5EKe2cJXamorDg==:r96TVu5Ow7h376EbTOjgDUHiSJA3tKpyLmiRG8LwN89RaUi9WJkblqutLW1ogT6hWzEKgh4tFdXVJL7e2/Noyw==)";
+                    ReverseProxySupportEnabled = true;
+                  };
+                  General.Locale = "en";
+                  MailNotification.req_auth = true;
+                };
+              }
+            };
+          };
+        };
+      };
+    };
+  }];
   confContJelly = { name }: lib.mkMerge [(confContGr { inherit name; } ) (
     {
       containers.${name} = mounts [

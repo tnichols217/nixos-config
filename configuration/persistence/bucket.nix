@@ -12,6 +12,7 @@
       "/var/lib/sonarr/data"
       "/var/lib/readarr/data"
       "/var/lib/transmission"
+      "/var/lib/qbittorrent"
     ];
   };
 }

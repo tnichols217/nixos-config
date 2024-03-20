@@ -125,6 +125,7 @@
         readarr = "readarr.${addresses.default}";
         prowlarr = "prowlarr.${addresses.default}";
         jellyfin = "jellyfin.${addresses.default}";
+        qbittorrent = "qbit.${addresses.default}";
       };
       ports = {
         serve = 5000;
@@ -135,6 +136,8 @@
         readarr = 8787;
         prowlarr = 9696;
         transmission = 9091;
+        qbitfe = 9090;
+        qbittorrent = 9009;
         jellyfin = 8096;
       };
       addressNumbers = {

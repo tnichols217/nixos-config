@@ -129,6 +129,21 @@ in
           }
         ];
       };
+      "qbittorrent" = {
+        locations."/" = {
+          proxyPass = "http://${hostAddress "jellyfin"}:${toString ports.qbitfe}";
+        };
+        useACMEHost = "${addresses.qbittorrent}";
+        serverName = "${addresses.qbittorrent}";
+        forceSSL = true;
+        listen = [
+          {
+            addr = "0.0.0.0";
+            port = 443;
+            ssl = true;
+          }
+        ];
+      };
     };
   };
 }
