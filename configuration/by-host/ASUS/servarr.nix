@@ -118,6 +118,7 @@ let
                   IP = "10.64.0.1";
                   Password = "";
                   Port = "@Variant(\\0\\0\\0\\x85\\x4\\x38)";
+                  "Profiles\\BitTorrent" = true;
                   "Profiles\\Misc" = true;
                   "Profiles\\RSS" = true;
                   Type = "SOCKS5";
