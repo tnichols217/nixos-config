@@ -98,6 +98,10 @@ let
             webuiPort = ports.qbitfe;
             torrentingPort = ports.qbittorrent;
             serverConfig = {
+              AutoRun = {
+                enabled = true;
+                program="chmod -R 775 \\\"%F\\\""
+              };
               BitTorrent = {
                 Session = {
                   AddExtensionToIncompleteFiles = true;
@@ -205,13 +209,13 @@ lib.mkMerge [
       inherit gid;
     };
     systemd.tmpfiles.rules = [
-      "Z /var/lib/lidarr 0775 root ${group}"
-      "Z /var/lib/radarr 0775 root ${group}"
-      "Z /var/lib/sonarr 0775 root ${group}"
-      "Z /var/lib/readarr 0775 root ${group}"
-      "Z /var/lib/jellyfin 0775 root ${group}"
-      "Z /var/lib/transmission 0775 root ${group}"
-      "Z /var/lib/qbittorrent 0775 root ${group}"
+      "Z /var/lib/lidarr 2775 root ${group}"
+      "Z /var/lib/radarr 2775 root ${group}"
+      "Z /var/lib/sonarr 2775 root ${group}"
+      "Z /var/lib/readarr 2775 root ${group}"
+      "Z /var/lib/jellyfin 2775 root ${group}"
+      "Z /var/lib/transmission 2775 root ${group}"
+      "Z /var/lib/qbittorrent 2775 root ${group}"
     ];
   }
   (confContArr {
