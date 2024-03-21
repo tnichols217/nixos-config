@@ -100,7 +100,7 @@ let
             serverConfig = {
               AutoRun = {
                 enabled = true;
-                program="chmod -R 775 \\\"%F\\\""
+                program="chmod -R 775 \\\"%F\\\"";
               };
               BitTorrent = {
                 Session = {
