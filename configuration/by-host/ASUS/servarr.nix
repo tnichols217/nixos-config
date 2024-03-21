@@ -79,6 +79,12 @@ let
   }];
   confContArr = { name, capName }: lib.mkMerge [(confContGr { inherit name; } ) {
     containers.${name} = {
+      bindMounts = {
+        "/var/lib/qbittorrent" = {
+          hostPath = "/var/lib/qbittorrent";
+          isReadOnly = false;
+        };
+      };
       config = {
         services = {
           "${name}" = {
