@@ -405,11 +405,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1710983758,
-        "narHash": "sha256-KsWZYxqHWf4ktJwYbUbyKdnqmZ53BgEAjuqQHnGZk/k=",
+        "lastModified": 1711070085,
+        "narHash": "sha256-qrvSvaIKZGThRwmZMDpcdtbjwXY4dh1AdtkaL7WjhFs=",
         "owner": "nix-community",
         "repo": "nix-vscode-extensions",
-        "rev": "931bc7b3df7fa8892094a36aed49177133e01787",
+        "rev": "c969bafb141eb5736083e832ad218bb14bbdc182",
         "type": "github"
       },
       "original": {
@@ -534,11 +534,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1711052752,
-        "narHash": "sha256-wHgyWnWvjG7P+8PX3E2PZrtpsnIsmzodXt/7r+SyhBk=",
+        "lastModified": 1711080615,
+        "narHash": "sha256-0jbDy3AN5JgVqZxfUYliGQKEtXIcLFaB0krYfg/lUz0=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "a01b1fe8e4253ca176ece6733d4e71ab8e65fa9f",
+        "rev": "c098cf85b6a8fe7b90566c2f06c1b1253d28d498",
         "type": "github"
       },
       "original": {
@@ -585,11 +585,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1711044976,
-        "narHash": "sha256-MD6VcA2UeRjBorswoPBf1tSYy5WDuwxL5xgKEEMDZ/w=",
+        "lastModified": 1711069025,
+        "narHash": "sha256-x/FX+0xN0FjsFi/zhjwpJEgkXlHJwNwsdC5AL95RcRU=",
         "owner": "tnichols217",
         "repo": "nixos-program-extensions",
-        "rev": "bf291ca290dc62c72d239ec5dd325e2349002fe6",
+        "rev": "0be3e28ac9f40c986b1674d336f97de43869dd13",
         "type": "github"
       },
       "original": {
