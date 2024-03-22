@@ -12,6 +12,13 @@ in
     recommendedOptimisation = true;
     recommendedProxySettings = true;
     recommendedTlsSettings = true;
+    streamConfig = ''
+      server {
+        listen 0.0.0.0:15565 tcp;
+        proxy_timeout 20s;
+        proxy_pass localhost:25565;
+      }
+    '';
     virtualHosts = {
       "acme" = {
         root = "/var/lib/acme/acme-challenge";
