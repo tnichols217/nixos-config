@@ -60,7 +60,7 @@
         pandoc
         rustc
         cargo
-        nvtop
+        nvtopPackages.full
         qpwgraph
         yt-dlp
         ffmpeg
