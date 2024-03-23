@@ -16,6 +16,7 @@
       "/var/lib/radarr/.config"
       "/var/lib/sonarr/.config"
       "/var/lib/readarr/.config"
+      "/var/lib/www-allow"
       "/var/lib/private/prowlarr"
       "/var/lib/jellyfin"
       "/var/lib/mullvad"
