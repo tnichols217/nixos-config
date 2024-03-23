@@ -13,7 +13,7 @@ in
     recommendedProxySettings = true;
     recommendedTlsSettings = true;
     streamConfig = ''
-      include /var/www-allow/allow.conf;
+      include /var/lib/www-allow/allow.conf;
       server {
         listen 0.0.0.0:15565;
         if ($deny) { deny all; }
