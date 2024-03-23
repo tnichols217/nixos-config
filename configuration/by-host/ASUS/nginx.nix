@@ -12,15 +12,14 @@ in
     recommendedOptimisation = true;
     recommendedProxySettings = true;
     recommendedTlsSettings = true;
-    # streamConfig = ''
-    #   include /var/lib/www-allow/allow.conf;
-    #   server {
-    #     listen 0.0.0.0:15565;
-    #     if ($deny) { deny all; }
-    #     proxy_timeout 20s;
-    #     proxy_pass localhost:25565;
-    #   }
-    # '';
+    streamConfig = ''
+      server {
+        listen 0.0.0.0:15565;
+        include /var/lib/www-allow/allow.conf;
+        proxy_timeout 20s;
+        proxy_pass localhost:25565;
+      }
+    '';
     virtualHosts = {
       "acme" = {
         root = "/var/lib/acme/acme-challenge";
