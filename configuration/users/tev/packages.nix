@@ -214,7 +214,7 @@ in
       };
     };
   };
-  programs = {
-    inherit ssh;
-  };
+  # programs = {
+  #   inherit ssh;
+  # };
 }
