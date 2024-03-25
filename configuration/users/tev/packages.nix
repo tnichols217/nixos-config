@@ -216,5 +216,5 @@ in
   };
   programs = {
     inherit ssh;
-  }
+  };
 }
