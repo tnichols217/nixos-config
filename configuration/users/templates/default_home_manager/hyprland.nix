@@ -59,7 +59,7 @@
           };
           animations = {
             enabled = true;
-            first_launch_anumation = true;
+            first_launch_animation = true;
           };
           input = {
             # kb_model = "pc104";

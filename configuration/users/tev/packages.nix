@@ -1,4 +1,47 @@
 { config, pkgs, username, attrs, host-name, nixpkgs, oldpkgs, vscode_exts, openvsx_exts, addresses, ... }:
+let
+ssh = {
+  enable = true;
+  matchBlocks = let 
+    identityFile = "/home/${username}/.ssh/ed25519";
+    identityFileAWS = "/home/${username}/.ssh/ROG.pem";
+    user = "${username}";
+    port = 22;
+    # port = 27180;
+  in {
+    "MSI" = {
+      hostname = "${addresses.msi}";
+      inherit user port identityFile;
+    };
+    "ROG" = {
+      hostname = "${addresses.rog}";
+      inherit user port identityFile;
+    };
+    "ASUS" = {
+      hostname = "${addresses.asus}";
+      inherit user port identityFile;
+    };
+    "AWS" = {
+      hostname = "${addresses.default}";
+      identityFile = identityFileAWS;
+      inherit user port;
+    };
+    "AWST" = {
+      hostname = "${addresses.default}";
+      identityFile = identityFileAWS;
+      port = 2222;
+    };
+    "gh" = {
+      hostname = "github.com";
+      user = "git";
+      inherit identityFile;
+    };
+    "*" = {
+      inherit identityFile;
+    };
+  };
+};
+in
 {
   environment.sessionVariables = {
     MOZ_USE_XINPUT2 = "1";
@@ -164,44 +207,14 @@
       ];
     };
     programs = {
-      ssh = {
-        enable = true;
-        matchBlocks = let 
-          identityFile = "/home/${username}/.ssh/ed25519";
-          identityFileRsa = "/home/${username}/.ssh/rsa";
-          user = "${username}";
-          port = 22;
-          # port = 27180;
-        in {
-          "MSI" = {
-            # hostname = "192.168.100.250";
-            hostname = "${addresses.msi}";
-            inherit user port identityFile;
-          };
-          "ROG" = {
-            hostname = "${addresses.rog}";
-            inherit user port identityFile;
-          };
-          "ASUS" = {
-            # hostname = "192.168.100.200";
-            hostname = "${addresses.asus}";
-            inherit user port identityFile;
-
-          };
-          "gh" = {
-            hostname = "github.com";
-            user = "git";
-            inherit identityFile;
-          };
-          "*" = {
-            inherit identityFile;
-          };
-        };
-      };
+      inherit ssh; 
       vscode = import ./packages/vscode.nix ({ inherit pkgs attrs config vscode_exts openvsx_exts; });
       obs-studio = {
         enable = true;
       };
     };
   };
+  programs = {
+    inherit ssh;
+  }
 }

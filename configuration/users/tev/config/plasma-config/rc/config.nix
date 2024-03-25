@@ -1478,8 +1478,7 @@ in
         "port" = "24800";
         "requireClientCertificate" = "false";
         "screenName" = "${host-name}";
-        # "serverHostname" = "192.168.100.200";
-        "serverHostname" = "${addresses.default}";
+        "serverHostname" = "${addresses.asus}";
         "startedBefore" = "true";
         "useExternalConfig" = "true";
         "useInternalConfig" = "false";
