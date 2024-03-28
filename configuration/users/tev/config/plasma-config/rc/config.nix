@@ -1456,7 +1456,7 @@ in
       };
     };
   };
-  "/Debauchee/Barrier.conf" = {
+  "/InputLeap/InputLeap.conf" = {
     "General" = {
       "items" = {
         "autoConfig" = "false";

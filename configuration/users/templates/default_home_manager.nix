@@ -12,7 +12,7 @@
     "d! /home/${username}/.config 0755 ${username} users"
     "d! /home/${username}/.config/dconf 0755 ${username} users"
     "d! /home/${username}/.local 0755 ${username} users"
-    "Z! /home/${username}/.config/{dconf,Microsoft,obs-studio,sunshine} 0755 ${username} users"
+    "Z! /home/${username}/.config/{dconf,Microsoft,obs-studio,sunshine,InputLeap} 0755 ${username} users"
     "z! /home/${username}/.config 0755 ${username} users"
     "Z! /home/${username}/.local/{state,share} 0755 ${username} users"
     "z! /home/${username}/.local 0755 ${username} users"

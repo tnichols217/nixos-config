@@ -57,7 +57,6 @@
         # ".local/state/nix/profiles"
         ".local/share/PolyMC" # move to prismlauncher
         ".local/share/PrismLauncher" # move to prismlauncher
-        ".local/share/barrier"
         ".local/share/TelegramDesktop"
         ".local/share/kwalletd"
         ".local/share/kscreen"
