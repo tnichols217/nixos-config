@@ -12,7 +12,7 @@
       wacom.enable = true;
       videoDrivers = (if host-name == "ASUS" then [] else [
         "amdgpu"
-        "virtualbox"
+        # "virtualbox"
         "hyperv_fb"
         "fbdev"
         "modesetting"
