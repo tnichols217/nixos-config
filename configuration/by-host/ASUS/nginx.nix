@@ -13,6 +13,47 @@ in
         settings = {
           default_2fa_method = "webauthn";
           server.port = ports.authelia;
+  
+          authentication_backend = {
+            file = {
+              path = "/var/lib/authelia-main/users_database.yml";
+            };
+          };
+      
+          access_control = {
+            default_policy = "deny";
+            rules = [
+              {
+                domain = ["auth.example.com"];
+                policy = "bypass";
+              }
+              {
+                domain = ["*.example.com"];
+                policy = "two_factor";
+              }
+            ];
+          };
+      
+          session = {
+            name = "authelia_session";
+            expiration = "12h";
+            inactivity = "45m";
+            remember_me_duration = "1M";
+            domain = "example.com";
+            redis.host = "/run/redis-authelia-pigs/redis.sock";
+          };
+      
+          regulation = {
+            max_retries = 3;
+            find_time = "5m";
+            ban_time = "15m";
+          };
+      
+          storage = {
+            local = {
+              path = "/var/lib/authelia/db.sqlite3";
+            };
+          };
         };
         secrets = {
           storageEncryptionKeyFile = "/var/lib/authelia/encrypt.pem";
@@ -20,6 +61,15 @@ in
         };
       };
     };
+
+    redis.servers.authelia-main = {
+      enable = true;
+      user = "authelia-pigs";   
+      port = 0;
+      unixSocket = "/run/redis-authelia-pigs/redis.sock";
+      unixSocketPerm = 600;
+    };
+
     nginx = {
       enable = true;
       recommendedGzipSettings = true;
@@ -157,6 +207,21 @@ in
           };
           useACMEHost = "${addresses.qbittorrent}";
           serverName = "${addresses.qbittorrent}";
+          forceSSL = true;
+          listen = [
+            {
+              addr = "0.0.0.0";
+              port = 443;
+              ssl = true;
+            }
+          ];
+        };
+        "authelia" = {
+          locations."/" = {
+            proxyPass = "http://localhost:${toString ports.authelia}";
+          };
+          useACMEHost = "${addresses.authelia}";
+          serverName = "${addresses.authelia}";
           forceSSL = true;
           listen = [
             {
