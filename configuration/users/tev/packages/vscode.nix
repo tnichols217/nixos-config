@@ -41,6 +41,7 @@
       ms-toolsai.jupyter
       ms-toolsai.jupyter-keymap
       ms-toolsai.jupyter-renderers
+      mshr-h.veriloghdl
       redhat.vscode-xml
       tabnine.tabnine-vscode
       vscode_exts.tht13.html-preview-vscode

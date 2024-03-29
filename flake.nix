@@ -139,6 +139,7 @@
         qbitfe = 9090;
         qbittorrent = 9009;
         jellyfin = 8096;
+        authelia = 9191;
       };
       addressNumbers = {
         lidarr = "10";
