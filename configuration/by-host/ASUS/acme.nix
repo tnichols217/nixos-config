@@ -18,6 +18,7 @@
       "${addresses.prowlarr}" = {};
       "${addresses.jellyfin}" = {};
       "${addresses.qbittorrent}" = {};
+      "${addresses.authelia}" = {};
     };
   };
 }
