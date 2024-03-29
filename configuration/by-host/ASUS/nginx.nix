@@ -24,11 +24,11 @@ in
             default_policy = "deny";
             rules = [
               {
-                domain = ["auth.example.com"];
+                domain = [addresses.authelia];
                 policy = "bypass";
               }
               {
-                domain = ["*.example.com"];
+                domain = ["*.${addresses.square}"];
                 policy = "two_factor";
               }
             ];
