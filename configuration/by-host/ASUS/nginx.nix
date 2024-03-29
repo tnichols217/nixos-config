@@ -14,6 +14,10 @@ in
           default_2fa_method = "webauthn";
           server.port = ports.authelia;
         };
+        secrets = {
+          storageEncryptionKeyFile = "/var/lib/authelia/encrypt.pem";
+          jwtSecretFile = "/var/lib/authelia/jwt.pem";
+        };
       };
     };
     nginx = {
