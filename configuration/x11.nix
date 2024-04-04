@@ -2,7 +2,7 @@
 {
   imports =
     [
-      ./x11/plasma5.nix
+      ./x11/plasma.nix
       ./x11/hyprland.nix
     ];
   services = {
