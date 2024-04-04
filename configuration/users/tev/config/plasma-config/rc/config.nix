@@ -982,13 +982,13 @@ in
     # Desktop Applets
     "ActionPlugins" = {
       "groups" = {
-        "0" = {
+        "11" = {
           "items" = {
             "RightButton;NoModifier" = "org.kde.contextmenu";
             "wheel:Vertical;NoModifier" = "org.kde.switchdesktop";
           };
         };
-        "1" = {
+        "12" = {
           "items" = {
             "RightButton;NoModifier" = "org.kde.contextmenu";
           };
@@ -1007,27 +1007,10 @@ in
             "immutability" = "1";
             "lastScreen" = "0";
             "location" = "0";
-            "plugin" = "org.kde.desktopcontainment";
+            "plugin" = "org.kde.plasma.folder";
             "wallpaperplugin" = "org.kde.image";
           };
           "groups" = {
-            "ConfigDialog" = {
-              "items" = {
-                "DialogHeight" = "776";
-                "DialogWidth" = "1131";
-              };
-            };
-            "Configuration" = {
-              "items" = {
-                "PreloadWeight" = "0";
-              };
-            };
-            "General" = {
-              "items" = {
-                "ToolBoxButtonState" = "topcenter";
-                "ToolBoxButtonX" = "768";
-              };
-            };
             "Wallpaper" = {
               "groups" = {
                 "org.kde.image" = {
@@ -1035,7 +1018,6 @@ in
                     "General" = {
                       "items" = {
                         "Image" = "${background}";
-                        "SlidePaths" = "/usr/share/wallpapers";
                       };
                     };
                   };
@@ -1058,49 +1040,7 @@ in
           "groups" = {
             "Applets" = {
               "groups" = {
-                "4" = {
-                  "items" = {
-                    "immutability" = "1";
-                    "plugin" = "org.kde.plasma.marginsseparator";
-                  };
-                };
-                "5" = {
-                  "items" = {
-                    "immutability" = "1";
-                    "plugin" = "org.kde.plasma.marginsseparator";
-                  };
-                };
-                "6" = {
-                  "items" = {
-                    "immutability" = "1";
-                    "plugin" = "org.kde.plasma.kickoff";
-                  };
-                  "groups" = {
-                    "Configuration" = {
-                      "items" = {
-                        "PreloadWeight" = "100";
-                      };
-                      "groups" = {
-                        "General" = {
-                          "items" = {
-                            "favoritesPortedToKAstats" = "true";
-                          };
-                        };
-                        "Shortcuts" = {
-                          "items" = {
-                            "global" = "Alt+F1";
-                          };
-                        };
-                      };
-                    };
-                    "Shortcuts" = {
-                      "items" = {
-                        "global" = "Alt+F1";
-                      };
-                    };
-                  };
-                };
-                "7" = {
+                "31" = {
                   "items" = {
                     "immutability" = "1";
                     "plugin" = "org.kde.plasma.icontasks";
@@ -1113,23 +1053,11 @@ in
                       "groups" = {
                         "General" = {
                           "items" = {
-                            "launchers" = "applications:systemsettings.desktop,applications:kitty.desktop,preferred://filemanager,preferred://browser";
+                            "launchers" = "";
                           };
                         };
                       };
                     };
-                  };
-                };
-                "8" = {
-                  "items" = {
-                    "immutability" = "1";
-                    "plugin" = "org.kde.plasma.marginsseparator";
-                  };
-                };
-                "9" = {
-                  "items" = {
-                    "immutability" = "1";
-                    "plugin" = "org.kde.plasma.marginsseparator";
                   };
                 };
               };
@@ -1141,13 +1069,13 @@ in
             };
             "General" = {
               "items" = {
-                "AppletOrder" = "4;5;6;7;8;9";
+                "AppletOrder" = "31";
               };
             };
           };
         };
         # Bottom Right Panel
-        "10" = {
+        "4" = {
           "items" = {
             "activityId" = "";
             "formfactor" = "2";
@@ -1160,37 +1088,13 @@ in
           "groups" = {
             "Applets" = {
               "groups" = {
-                "11" = {
-                  "items" = {
-                    "immutability" = "1";
-                    "plugin" = "org.kde.plasma.marginsseparator";
-                  };
-                };
-                "12" = {
-                  "items" = {
-                    "immutability" = "1";
-                    "plugin" = "org.kde.plasma.marginsseparator";
-                  };
-                };
-                "13" = {
-                  "items" = {
-                    "immutability" = "1";
-                    "plugin" = "org.kde.plasma.marginsseparator";
-                  };
-                };
-                "14" = {
-                  "items" = {
-                    "immutability" = "1";
-                    "plugin" = "org.kde.plasma.marginsseparator";
-                  };
-                };
-                "15" = {
+                "41" = {
                   "items" = {
                     "immutability" = "1";
                     "plugin" = "org.kde.plasma.pager";
                   };
                 };
-                "16" = {
+                "42" = {
                   "items" = {
                     "immutability" = "1";
                     "plugin" = "org.kde.plasma.systemtray";
@@ -1199,12 +1103,12 @@ in
                     "Configuration" = {
                       "items" = {
                         "PreloadWeight" = "55";
-                        "SystrayContainmentId" = "24";
+                        "SystrayContainmentId" = "5";
                       };
                     };
                   };
                 };
-                "17" = {
+                "43" = {
                   "items" = {
                     "immutability" = "1";
                     "plugin" = "org.kde.plasma.digitalclock";
@@ -1215,7 +1119,8 @@ in
                         "Appearance" = {
                           "items" = {
                             "displayTimezoneFormat" = "FullText";
-                            "showSeconds" = "true";
+                            "fontWeight" = "400";
+                            "showSeconds" = "2";
                             "use24hFormat" = "2";
                           };
                         };
@@ -1223,57 +1128,28 @@ in
                     };
                   };
                 };
-                "18" = {
+                "44" = {
                   "items" = {
                     "immutability" = "1";
                     "plugin" = "org.kde.plasma.showdesktop";
                   };
                 };
-                "19" = {
-                  "items" = {
-                    "immutability" = "1";
-                    "plugin" = "org.kde.plasma.marginsseparator";
-                  };
-                };
-                "20" = {
-                  "items" = {
-                    "immutability" = "1";
-                    "plugin" = "org.kde.plasma.marginsseparator";
-                  };
-                };
-                "21" = {
-                  "items" = {
-                    "immutability" = "1";
-                    "plugin" = "org.kde.plasma.marginsseparator";
-                  };
-                };
-                "22" = {
-                  "items" = {
-                    "immutability" = "1";
-                    "plugin" = "org.kde.plasma.marginsseparator";
-                  };
-                };
-                "23" = {
-                  "items" = {
-                    "immutability" = "1";
-                    "plugin" = "org.kde.plasma.marginsseparator";
-                  };
-                };
               };
             };
             "General" = {
               "items" = {
-                "AppletOrder" = "11;12;13;14;15;16;17;18;19;20;21;22;23";
+                "AppletOrder" = "41;42;43";
               };
             };
           };
         };
         # Systray Bottom Right Panel
-        "24" = {
+        "5" = {
           "groups" = {
             "General" = {
               "items" = {
-                "extraItems" = "org.kde.plasma.volume,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.devicenotifier,org.kde.kscreen,org.kde.kdeconnect,org.kde.plasma.keyboardlayout,org.kde.plasma.keyboardindicator,org.kde.plasma.networkmanagement,touchpad,org.kde.plasma.clipboard,org.kde.plasma.notifications,Barrier,org.kde.plasma.printmanager,org.kde.plasma.mediacontroller";
+                "extraItems" = "org.kde.plasma.volume,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.devicenotifier,org.kde.kscreen,org.kde.plasma.keyboardlayout,org.kde.plasma.keyboardindicator,org.kde.plasma.networkmanagement,org.kde.plasma.clipboard,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.mediacontroller,org.kde.plasma.brightness,org.kde.plasma.manage-inputmethod,org.kde.plasma.cameraindicator";
+                "knownItems" = "org.kde.plasma.brightness,org.kde.plasma.battery,org.kde.plasma.manage-inputmethod,org.kde.plasma.notifications,org.kde.plasma.cameraindicator,org.kde.plasma.devicenotifier,org.kde.plasma.clipboard,org.kde.plasma.mediacontroller,org.kde.plasma.bluetooth,org.kde.plasma.printmanager,org.kde.plasma.keyboardlayout,org.kde.plasma.volume,org.kde.plasma.keyboardindicator,org.kde.kscreen,org.kde.plasma.networkmanagement";
               };
             };
           };
@@ -1288,7 +1164,7 @@ in
           };
         };
         # Top Panel
-        "25" = {
+        "6" = {
           "items" = {
             "activityId" = "";
             "formfactor" = "2";
@@ -1301,19 +1177,7 @@ in
           "groups" = {
             "Applets" = {
               "groups" = {
-                "26" = {
-                  "items" = {
-                    "immutability" = "1";
-                    "plugin" = "org.kde.plasma.marginsseparator";
-                  };
-                };
-                "27" = {
-                  "items" = {
-                    "immutability" = "1";
-                    "plugin" = "org.kde.plasma.marginsseparator";
-                  };
-                };
-                "28" = {
+                "61" = {
                   "items" = {
                     "immutability" = "1";
                     "plugin" = "org.kde.plasma.appmenu";
@@ -1331,47 +1195,11 @@ in
                     };
                   };
                 };
-                "29" = {
-                  "items" = {
-                    "immutability" = "1";
-                    "plugin" = "org.kde.plasma.marginsseparator";
-                  };
-                };
-                "30" = {
-                  "items" = {
-                    "immutability" = "1";
-                    "plugin" = "org.kde.plasma.marginsseparator";
-                  };
-                };
-                "31" = {
-                  "items" = {
-                    "immutability" = "1";
-                    "plugin" = "org.kde.plasma.marginsseparator";
-                  };
-                };
-                "32" = {
-                  "items" = {
-                    "immutability" = "1";
-                    "plugin" = "org.kde.plasma.marginsseparator";
-                  };
-                };
-                "33" = {
-                  "items" = {
-                    "immutability" = "1";
-                    "plugin" = "org.kde.plasma.marginsseparator";
-                  };
-                };
-                "34" = {
-                  "items" = {
-                    "immutability" = "1";
-                    "plugin" = "org.kde.plasma.marginsseparator";
-                  };
-                };
               };
             };
             "General" = {
               "items" = {
-                "AppletOrder" = "26;27;28;29;30;31;32;33;34";
+                "AppletOrder" = "61";
               };
             };
           };
