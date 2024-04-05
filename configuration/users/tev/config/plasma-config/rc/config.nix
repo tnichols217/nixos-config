@@ -1,6 +1,57 @@
 { pkgs, host-name, addresses }:
 let
 background = (import ./config/background.nix { inherit host-name; });
+applets = {
+  desktop-applet = {
+    groups = {
+      "1" = {
+        number = "11";
+      };
+      "2" = {
+        number = "12";
+      };
+    };
+  };
+  desktop = {
+    number = "2";
+  };
+  left = {
+    number = "3";
+    applets = {
+      tasks = {
+        number = "31";
+      };
+    };
+  };
+  right = {
+    number = "4";
+    applets = {
+      pager = {
+        number = "41";
+      };
+      tray = {
+        number = "42";
+      };
+      clock = {
+        number = "43";
+      };
+      desktop = {
+        number = "44";
+      };
+    };
+  };
+  tray = {
+    number = "5";
+  };
+  top = {
+    number = "6";
+    applets = {
+      menu = {
+        number = "61";
+      };
+    };
+  };
+};
 in
 {
   "/plasma-localerc" = {
@@ -982,13 +1033,13 @@ in
     # Desktop Applets
     "ActionPlugins" = {
       "groups" = {
-        "11" = {
+        "${applets.desktop-applet.groups."1".number}" = {
           "items" = {
             "RightButton;NoModifier" = "org.kde.contextmenu";
             "wheel:Vertical;NoModifier" = "org.kde.switchdesktop";
           };
         };
-        "12" = {
+        "${applets.desktop-applet.groups."2".number}" = {
           "items" = {
             "RightButton;NoModifier" = "org.kde.contextmenu";
           };
@@ -999,7 +1050,7 @@ in
     "Containments" = {
       "groups" = {
         # Desktop Background applet
-        "2" = {
+        "${applets.desktop.number}" = {
           "items" = {
             "ItemGeometriesHorizontal" = "";
             "activityId" = "b8c38c6a-90a5-4db9-b967-11a6c016ca90";
@@ -1027,7 +1078,7 @@ in
           };
         };
         # Bottom Left Panel
-        "3" = {
+        "${applets.left.number}" = {
           "items" = {
             "activityId" = "";
             "formfactor" = "2";
@@ -1040,7 +1091,7 @@ in
           "groups" = {
             "Applets" = {
               "groups" = {
-                "31" = {
+                "${applets.left.applets.tasks.number}" = {
                   "items" = {
                     "immutability" = "1";
                     "plugin" = "org.kde.plasma.icontasks";
@@ -1069,13 +1120,13 @@ in
             };
             "General" = {
               "items" = {
-                "AppletOrder" = "31";
+                "AppletOrder" = "${applets.left.applets.tasks.number}";
               };
             };
           };
         };
         # Bottom Right Panel
-        "4" = {
+        "${applets.right.number}" = {
           "items" = {
             "activityId" = "";
             "formfactor" = "2";
@@ -1088,13 +1139,13 @@ in
           "groups" = {
             "Applets" = {
               "groups" = {
-                "41" = {
+                "${applets.right.applets.pager.number}" = {
                   "items" = {
                     "immutability" = "1";
                     "plugin" = "org.kde.plasma.pager";
                   };
                 };
-                "42" = {
+                "${applets.right.applets.tray.number}" = {
                   "items" = {
                     "immutability" = "1";
                     "plugin" = "org.kde.plasma.systemtray";
@@ -1103,12 +1154,12 @@ in
                     "Configuration" = {
                       "items" = {
                         "PreloadWeight" = "55";
-                        "SystrayContainmentId" = "5";
+                        "SystrayContainmentId" = "${applets.tray.number}";
                       };
                     };
                   };
                 };
-                "43" = {
+                "${applets.right.applets.clock.number}" = {
                   "items" = {
                     "immutability" = "1";
                     "plugin" = "org.kde.plasma.digitalclock";
@@ -1128,7 +1179,7 @@ in
                     };
                   };
                 };
-                "44" = {
+                "${applets.right.applets.desktop.number}" = {
                   "items" = {
                     "immutability" = "1";
                     "plugin" = "org.kde.plasma.showdesktop";
@@ -1138,13 +1189,13 @@ in
             };
             "General" = {
               "items" = {
-                "AppletOrder" = "41;42;43";
+                "AppletOrder" = "${applets.right.applets.pager.number};${applets.right.applets.tray.number};${applets.right.applets.clock.number};${applets.right.applets.desktop.number}";
               };
             };
           };
         };
         # Systray Bottom Right Panel
-        "5" = {
+        "${applets.tray.number}" = {
           "groups" = {
             "General" = {
               "items" = {
@@ -1164,7 +1215,7 @@ in
           };
         };
         # Top Panel
-        "6" = {
+        "${applets.top.number}" = {
           "items" = {
             "activityId" = "";
             "formfactor" = "2";
@@ -1177,7 +1228,7 @@ in
           "groups" = {
             "Applets" = {
               "groups" = {
-                "61" = {
+                "${applets.top.applets.menu.number}" = {
                   "items" = {
                     "immutability" = "1";
                     "plugin" = "org.kde.plasma.appmenu";
@@ -1199,7 +1250,7 @@ in
             };
             "General" = {
               "items" = {
-                "AppletOrder" = "61";
+                "AppletOrder" = "${applets.top.applets.menu.number}";
               };
             };
           };
@@ -1221,46 +1272,46 @@ in
     };
     "PlasmaViews" = {
       "groups" = {
-        "Panel 3" = {
+        "Panel ${applets.left.number}" = {
           "items" = {
             "alignment" = "1";
             "floating" = "1";
-            "panelVisibility" = "1";
+            "panelLengthMode" = "1";
+            "panelVisibility" = "2";
           };
           "groups" = {
             "Defaults" = {
               "items" = {
-                "minLength" = "0";
                 "thickness" = "35";
               };
             };
           };
         };
-        "Panel 10" = {
+        "Panel ${applets.right.number}" = {
           "items" = {
-            "alignment" = "2";
+            "alignment" = "1";
             "floating" = "1";
-            "panelVisibility" = "1";
+            "panelLengthMode" = "1";
+            "panelVisibility" = "2";
           };
           "groups" = {
             "Defaults" = {
               "items" = {
-                "minLength" = "0";
                 "thickness" = "35";
               };
             };
           };
         };
-        "Panel 25" = {
+        "Panel ${applets.top.number}" = {
           "items" = {
             "alignment" = "132";
             "floating" = "1";
-            "panelVisibility" = "1";
+            "panelLengthMode" = "1";
+            "panelVisibility" = "2";
           };
           "groups" = {
             "Defaults" = {
               "items" = {
-                "minLength" = "0";
                 "thickness" = "35";
               };
             };
