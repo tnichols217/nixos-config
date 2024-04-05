@@ -25,6 +25,7 @@
           da = "direnv allow";
           fsw = "fswatch -rax ";
           black = "kill (pidof plasmashell); plasmashell &; disown (pidof plasmashell)";
+          logout = "qdbus org.kde.LogoutPrompt /LogoutPrompt org.kde.LogoutPrompt.promptLogout";
         };
         functions = {
           gc = "git clone git@github.com:tnichols217/$argv";
