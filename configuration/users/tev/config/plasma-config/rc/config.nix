@@ -177,7 +177,7 @@ in
       "items" = {
         "RunClipboard" = "Alt+Shift+F2,Alt+Shift+F2,Run command on clipboard contents";
         "_k_friendly_name" = "KRunner";
-        "_launch" = "Alt+Space\tAlt+F2\tSearch,Alt+Space\tAlt+F2\tSearch,KRunner";
+        "_launch" = "Alt+Space\tAlt+F1\tAlt+F2\tSearch,Alt+Space\tAlt+F1\tAlt+F2\tSearch,KRunner";
       };
     };
     "org.kde.plasma.emojier.desktop" = {
