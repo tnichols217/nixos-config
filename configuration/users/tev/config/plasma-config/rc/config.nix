@@ -228,7 +228,13 @@ in
         "kitty.desktop" = {
           "items" = {
             "_k_friendly_name" = "Kitty";
-            "_launch" = "Ctrl+Alt+T,none,Kitty";
+            "_launch" = "Ctrl+Alt+T";
+          };
+        };
+        "firefox.desktop" = {
+          "items" = {
+            "_k_friendly_name" = "Firefox";
+            "_launch" = "Ctrl+Alt+F";
           };
         };
         "org.kde.konsole.desktop" = {
