@@ -51,6 +51,7 @@ applets = {
       };
     };
   };
+  panel-size = "35";
 };
 in
 {
@@ -1282,14 +1283,14 @@ in
           "groups" = {
             "Defaults" = {
               "items" = {
-                "thickness" = "35";
+                "thickness" = "${applets.panel-size}";
               };
             };
           };
         };
         "Panel ${applets.right.number}" = {
           "items" = {
-            "alignment" = "3";
+            "alignment" = "2";
             "floating" = "1";
             "panelLengthMode" = "1";
             "panelVisibility" = "2";
@@ -1297,7 +1298,7 @@ in
           "groups" = {
             "Defaults" = {
               "items" = {
-                "thickness" = "35";
+                "thickness" = "${applets.panel-size}";
               };
             };
           };
@@ -1312,7 +1313,7 @@ in
           "groups" = {
             "Defaults" = {
               "items" = {
-                "thickness" = "35";
+                "thickness" = "${applets.panel-size}";
               };
             };
           };
