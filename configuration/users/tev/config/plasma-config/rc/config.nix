@@ -116,7 +116,7 @@ in
         "ExposeAll" = "Meta+Shift+Tab\tLaunch (C)\tCtrl+F10,Ctrl+F10\tLaunch (C),Toggle Present Windows (All desktops)";
         "ExposeClass" = "Ctrl+F7,Ctrl+F7,Toggle Present Windows (Window class)";
         "Kill Window" = "Ctrl+Alt+Esc,Ctrl+Alt+Esc,Kill Window";
-        "Show Desktop" = "Meta+D,Meta+D,Show Desktop";
+        "Show Desktop" = "none,,Show Desktop";
         "ShowDesktopGrid" = "Ctrl+F8,Ctrl+F8,Show Desktop Grid";
         "Suspend Compositing" = "Alt+Shift+F12,Alt+Shift+F12,Suspend Compositing";
         "Switch One Desktop Down" = "Meta+Ctrl+@\tMeta+Down,Meta+Ctrl+Down,Switch One Desktop Down";
@@ -228,13 +228,19 @@ in
         "kitty.desktop" = {
           "items" = {
             "_k_friendly_name" = "Kitty";
-            "_launch" = "Ctrl+Alt+D";
+            "_launch" = "Meta+D; Ctrl+Alt+D";
           };
         };
         "firefox.desktop" = {
           "items" = {
             "_k_friendly_name" = "Firefox";
-            "_launch" = "Ctrl+Alt+F";
+            "_launch" = "Meta+F; Ctrl+Alt+F";
+          };
+        };
+        "obsidian.desktop" = {
+          "items" = {
+            "_k_friendly_name" = "Obsidian";
+            "_launch" = "Meta+A; Ctrl+Alt+A";
           };
         };
         "org.kde.konsole.desktop" = {
