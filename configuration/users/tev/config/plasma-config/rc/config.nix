@@ -173,12 +173,6 @@ in
         "_launch" = "Meta+E,Meta+E,Dolphin";
       };
     };
-    "kitty.desktop" = {
-      "items" = {
-        "_k_friendly_name" = "Kitty";
-        "_launch" = "Ctrl+Alt+T,none,Kitty";
-      };
-    };
     "org.kde.krunner.desktop" = {
       "items" = {
         "RunClipboard" = "Alt+Shift+F2,Alt+Shift+F2,Run command on clipboard contents";
@@ -227,6 +221,21 @@ in
       "items" = {
         "_k_friendly_name" = "System Settings";
         "_launch" = "Tools,Tools,System Settings";
+      };
+    };
+    "services" = {
+      "groups" = {
+        "kitty.desktop" = {
+          "items" = {
+            "_k_friendly_name" = "Kitty";
+            "_launch" = "Ctrl+Alt+T,none,Kitty";
+          };
+        };
+        "org.kde.konsole.desktop" = {
+          "items" = {
+            "_launch" = "none";
+          };
+        };
       };
     };
   };
