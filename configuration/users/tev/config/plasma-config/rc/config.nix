@@ -1289,7 +1289,7 @@ in
         };
         "Panel ${applets.right.number}" = {
           "items" = {
-            "alignment" = "1";
+            "alignment" = "3";
             "floating" = "1";
             "panelLengthMode" = "1";
             "panelVisibility" = "2";
