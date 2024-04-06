@@ -1,4 +1,4 @@
-{ pkgs, attrs, config, username, ... }:
+{ pkgs, attrs, config, username, addresses, ... }:
 {
   # systemd.services."${username}@sunshine" = {
   #   serviceConfig.Type = "simple";
@@ -22,4 +22,27 @@
     serviceConfig.User = "${username}";
     wantedBy = ["multi-user.target"];
   };
-}
+  
+} // (if (host-name == "ASUS") then {
+  systemd.services."synergy" = {
+    serviceConfig.Type = "simple";
+    path = with pkgs; [ pkgs.synergy ];
+    serviceConfig = {
+      ExecStart = "${pkgs.synergy}/bin/synergys -c ${./services/synergy/ASUS.conf}";
+      Restart = "on-failure";
+    };
+    serviceConfig.User = "${username}";
+    wantedBy = ["multi-user.target"];
+  };
+} else {
+  systemd.services."waynergy" = {
+    serviceConfig.Type = "simple";
+    path = with pkgs; [ pkgs.waynergy ];
+    serviceConfig = {
+      ExecStart = "${pkgs.waynergy}/bin/waynergy -b wlr -N ${host-name} -E -c ${addresses.asus}";
+      Restart = "on-failure";
+    };
+    serviceConfig.User = "${username}";
+    wantedBy = ["multi-user.target"];
+  };
+})
