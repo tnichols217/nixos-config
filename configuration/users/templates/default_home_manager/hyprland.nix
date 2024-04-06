@@ -1,4 +1,7 @@
 { pkgs, attrs, username, host-name, version, lib, nix-index-database, ... }@ args:
+let
+  appmod = "CTRLALT";
+in
 {
   home-manager.users.${username} = {
     wayland.windowManager = {
@@ -6,6 +9,13 @@
         enable = true;
         plugins = [];
         settings = {
+          bind = [
+            "${appmod}, S, exec, flameshot gui"
+            "METASHIFT, S, exec, flameshot gui"
+            "${appmod}, F, exec, firefox"
+            "${appmod}, T, exec, kitty"
+            "${appmod}, D, exec, kitty"
+          ];
           general = {
             border_size = 1;
             gaps_in = 5;
