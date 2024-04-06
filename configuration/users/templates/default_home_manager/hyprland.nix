@@ -16,6 +16,11 @@ in
             "${appmod}, T, exec, kitty"
             "${appmod}, D, exec, kitty"
           ];
+          monitor = [
+            "eDP-2, 2560x1600@120, 0x0, 1"
+            "HDMI-A-1, 2560x1440@120, 2560x0, 1"
+            "DP-1, 2560x1440@120, 2560x1440, 1"
+          ];
           general = {
             border_size = 1;
             gaps_in = 5;
