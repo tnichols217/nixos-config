@@ -11,7 +11,6 @@ in
         settings = {
           bind = [
             "${appmod}, S, exec, flameshot gui"
-            "METASHIFT, S, exec, flameshot gui"
             "${appmod}, F, exec, firefox"
             "${appmod}, T, exec, kitty"
             "${appmod}, D, exec, kitty"
@@ -19,7 +18,7 @@ in
           monitor = [
             "eDP-2, 2560x1600@120, 0x0, 1"
             "HDMI-A-1, 2560x1440@120, 2560x0, 1"
-            "DP-1, 2560x1440@120, 2560x1440, 1"
+            "DP-1, 2560x1440@60, 2560x1440, 1"
           ];
           general = {
             border_size = 1;
