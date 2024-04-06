@@ -24,7 +24,7 @@
   };
   
 } // (if (host-name == "ASUS") then {
-  systemd.services."synergy" = {
+  systemd.services."synergy@${username}" = {
     serviceConfig.Type = "simple";
     path = with pkgs; [ pkgs.synergy ];
     serviceConfig = {
@@ -35,7 +35,7 @@
     wantedBy = ["multi-user.target"];
   };
 } else {
-  systemd.services."waynergy" = {
+  systemd.services."waynergy@${username}" = {
     serviceConfig.Type = "simple";
     path = with pkgs; [ pkgs.waynergy ];
     serviceConfig = {
