@@ -10,7 +10,8 @@ in
         plugins = [];
         settings = {
           bind = [
-            "${appmod}, S, exec, flameshot gui"
+            "${appmod}, S, exec, ${pkgs.grim}/bin/grim -g \"$(${pkgs.slurp}/bin/slurp)\""
+            "SUPER_SHIFT, S, exec, ${pkgs.grim}/bin/grim -g \"$(${pkgs.slurp}/bin/slurp)\""
             "${appmod}, F, exec, firefox"
             "${appmod}, T, exec, kitty"
             "${appmod}, D, exec, kitty"
