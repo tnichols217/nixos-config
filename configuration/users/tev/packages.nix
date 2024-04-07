@@ -81,6 +81,8 @@ in
         wl-clipboard
         grim
         slurp
+        rofi
+        jq
         gnupg
         poppler
         libsForQt5.qt5.qttools

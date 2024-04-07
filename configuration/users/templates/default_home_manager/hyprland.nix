@@ -12,9 +12,21 @@ in
           bind = [
             "${appmod}, S, exec, ${pkgs.grim}/bin/grim -g \"$(${pkgs.slurp}/bin/slurp)\""
             "SUPER_SHIFT, S, exec, ${pkgs.grim}/bin/grim -g \"$(${pkgs.slurp}/bin/slurp)\""
+            "SUPER_SHIFT, L, exec, hyprctl dispatch exit"
             "${appmod}, F, exec, firefox"
             "${appmod}, T, exec, kitty"
             "${appmod}, D, exec, kitty"
+            "ALT, Tab, cyclenext, floating"
+            "ALT, Tab, bringactivetotop"
+            "ALT, Space,  ${pkgs.grim}/bin/rofi -show run"
+          ];
+          bindl = [
+            ", switch:on:[switch name], exec, hyprctl keyword monitor \"eDP-2, disable\""
+            ", switch:off:[switch name], exec, hyprctl keyword monitor \"eDP-2, 2560x1600@120, 0x0, 1\""
+          ];
+          bindm = [
+            "SUPER, mouse:272, movewindow"
+            "SUPER, mouse:274, resizewindow"
           ];
           monitor = [
             "eDP-2, 2560x1600@120, 0x0, 1"
