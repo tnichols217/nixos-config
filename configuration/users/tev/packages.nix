@@ -78,6 +78,9 @@ in
       packages = with pkgs; [
         # utils
         cachix
+        wl-clipboard
+        grim
+        slurp
         gnupg
         poppler
         libsForQt5.qt5.qttools
