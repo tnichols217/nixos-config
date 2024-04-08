@@ -69,7 +69,7 @@ in
             "${pkgs.hyprpaper}/bin/hyprpaper"
             "${pkgs.networkmanagerapplet}/bin/nm-applet --indicatior"
             "${pkgs.waybar}/bin/waybar"
-            "${pkgs.killall}/bin/killall -SIGUSR1 waybar"
+            "${pkgs.toybox}/bin/killall -SIGUSR1 waybar"
           ] ++ (if host-name != "ASUS" then [
             "${pkgs.waynergy}/bin/waynergy -b wlr -N ${host-name} -E -c ${addresses.asus}"
           ] else []);
