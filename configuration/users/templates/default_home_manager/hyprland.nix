@@ -38,6 +38,8 @@ in
             "SUPER_SHIFT, G, moveoutofgroup"
             "ALT, F4, killactive"
             "CTRL_ALT_SHIFT, right, pin"
+            "SUPER, ], fullscreen, 2"
+            "SUPER_SHIFT, ], fakefullscreen"
           ];
           bindl = [
             ", switch:on:[switch name], exec, hyprctl keyword monitor \"eDP-2, disable\""
@@ -51,6 +53,9 @@ in
             "eDP-2, 2560x1600@120, 0x0, 1"
             "HDMI-A-1, 2560x1440@120, 2560x0, 1"
             "DP-1, 2560x1440@60, 2560x1440, 1"
+          ];
+          exec-once = [
+            "${pkgs.dunst}/bin/dunst"
           ];
           # windowrulev2 = [
           #   "float, class:.*"
@@ -75,6 +80,9 @@ in
             extend_border_grab_area = 15;
             hover_icon_on_border = true;
             allow_tearing = false;
+          };
+          binds = {
+            movefocus_cycles_fullscreen = false;
           };
           decoration = {
             rounding = 8;
@@ -185,6 +193,7 @@ in
           };
           misc = {
             disable_hyprland_logo = true;
+            focus_on_activate = true;
           };
         };
         xwayland.enable = true;

@@ -119,6 +119,7 @@ in
         miraclecast
         mpv
         imagemagick
+        hyprpaper
         # pdfslicer
         pdfsam-basic
         sonic-visualiser
