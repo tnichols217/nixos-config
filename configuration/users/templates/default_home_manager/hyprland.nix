@@ -11,7 +11,6 @@ in
       "waybar/config.jsonc" = {
         text = import ./hyprland/waybar.nix { };
       };
-      }
     };
     wayland.windowManager = {
       hyprland = {

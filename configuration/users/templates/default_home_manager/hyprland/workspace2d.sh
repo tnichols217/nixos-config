@@ -41,4 +41,4 @@ case "$1" in
 	"move_left" | "move_right" | "move_up" | "move_down") hyprctl dispatch movetoworkspace $ws ;;
 esac
 
-# reload_waybar
+reload_waybar
