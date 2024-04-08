@@ -6,11 +6,10 @@ builtins.toJSON {
     # "width" = 1280; # Waybar width
     "spacing" = 4; # Gaps between modules (4px)
     # Choose the order of the modules
-    "modules-left" = [
-        "custom/media"
-    ];
-    "modules-center" = [
-    ];
+    # "modules-left" = [
+    # ];
+    # "modules-center" = [
+    # ];
     "modules-right" = [
         "mpris"
         "privacy"
