@@ -10,8 +10,8 @@ in
         plugins = [];
         settings = {
           bind = [
-            "${appmod}, S, exec, ${pkgs.grim}/bin/grim -g \"$(${pkgs.slurp}/bin/slurp)\""
-            "SUPER_SHIFT, S, exec, ${pkgs.grim}/bin/grim -g \"$(${pkgs.slurp}/bin/slurp)\""
+            "${appmod}, S, exec, ${grimblast}/bin/grimblast copy area"
+            "SUPER_SHIFT, S, exec, ${grimblast}/bin/grimblast copy area"
             "SUPER_SHIFT, L, exec, hyprctl dispatch exit"
             "${appmod}, F, exec, firefox"
             "${appmod}, T, exec, kitty"
@@ -19,6 +19,15 @@ in
             "ALT, Tab, cyclenext, floating"
             "ALT, Tab, bringactivetotop"
             "ALT, Space, exec, ${pkgs.rofi}/bin/rofi -show run"
+            "ALT, Space, focuswindow, rofi"
+            "SUPER_CTRL, 1, exec, ${./hyprland/workspace2d.sh} right"
+            "SUPER_CTRL_ALT, 1, exec, ${./hyprland/workspace2d.sh} move_right"
+            "SUPER_CTRL, 2, exec, ${./hyprland/workspace2d.sh} left"
+            "SUPER_CTRL_ALT, 2, exec, ${./hyprland/workspace2d.sh} move_left"
+            "SUPER_CTRL_SHIFT, 1, exec, ${./hyprland/workspace2d.sh} up"
+            "SUPER_CTRL_SHIFT_ALT, 1, exec, ${./hyprland/workspace2d.sh} move_up"
+            "SUPER_CTRL_SHIFT, 2, exec, ${./hyprland/workspace2d.sh} down"
+            "SUPER_CTRL_SHIFT_ALT, 2, exec, ${./hyprland/workspace2d.sh} move_down"
           ];
           bindl = [
             ", switch:on:[switch name], exec, hyprctl keyword monitor \"eDP-2, disable\""
