@@ -68,7 +68,7 @@ in
           windowrulev2 = [
             # "float, class:.*"
             # "fullscreen,title:^(Firefox)(.*)$"
-            "rule=float,class:^(kitty)$"
+            "float,class:^(kitty)$"
           ];
           # animation = [
           #   "workspaces,1,8,default,slide"
