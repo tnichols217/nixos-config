@@ -88,7 +88,7 @@ builtins.toJSON {
         "mpv" = "🎵";
       };
       "status-icons" = {
-        "paused" = "⏸"
+        "paused" = "⏸";
       };
       # "ignored-players": ["firefox"]
     };
