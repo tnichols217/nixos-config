@@ -41,7 +41,7 @@
         };
         in builtins.concatStringsSep " " (lib.attrsets.mapAttrsToList (name: value: "${name}() {${value}};") functions) ;
         shellAliases = {
-          clip = "xclip -selection clipboard -r";
+          clip = "tee >(xclip -selection clipboard -r) >(wl-copy) >/dev/null | echo";
           gac = "git add -A && git commit -am ";
           gp = "git push ";
           gpl = "git pull ";
