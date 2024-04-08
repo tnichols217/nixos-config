@@ -43,7 +43,9 @@ in
             "SUPER_SHIFT, G, moveoutofgroup"
             "ALT, F4, killactive"
             "CTRL_ALT_SHIFT, right, pin"
-            "SUPER, bracketright, fullscreen, 2"
+            "SUPER, bracketright, resizeactive, 100% 100%"
+            "SUPER, bracketright, moveactive, 0 0"
+            # "SUPER, bracketright, fullscreen, 2"
             "SUPER_SHIFT, bracketright, fakefullscreen"
           ];
           bindl = [
