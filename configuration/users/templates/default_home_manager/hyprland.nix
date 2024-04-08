@@ -8,6 +8,10 @@ in
       "hypr/hyprpaper.conf" = {
         text = import ./hyprland/hyprpaper.nix { inherit host-name; };
       };
+      "waybar/config.jsonc" = {
+        text = import ./hyprland/waybar.nix { };
+      };
+      }
     };
     wayland.windowManager = {
       hyprland = {
