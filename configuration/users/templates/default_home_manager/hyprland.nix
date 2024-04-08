@@ -80,6 +80,16 @@ in
             "float,class:^(kitty)$"
             "float,class:^(pavucontrol)$"
           ];
+          device = [
+            {
+              name = "huion-huion-tablet_gt1602";
+              output = "DP-1";
+            }
+            {
+              name = "huion-huion-tablet_gt1602-1";
+              output = "DP-1";
+            }
+          ];
           # animation = [
           #   "workspaces,1,8,default,slide"
           # ];
