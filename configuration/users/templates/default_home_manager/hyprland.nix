@@ -32,7 +32,7 @@ in
             "SUPER_SHIFT, Tab, changegroupactive, b"
             "ALT, Tab, bringactivetotop"
             "ALT, Space, exec, ${pkgs.tofi}/bin/tofi-drun --drun-launch=true"
-            "ALT, Space, focuswindow, rofi"
+            "SUPER, Space, exec, ${pkgs.killall}/bin/killall -SIGUSR1 waybar"
             "SUPER_CTRL, 1, exec, sh ${./hyprland/workspace2d.sh} right"
             "SUPER_CTRL_ALT, 1, exec, sh ${./hyprland/workspace2d.sh} move_right"
             "SUPER_CTRL, 2, exec, sh ${./hyprland/workspace2d.sh} left"
@@ -68,12 +68,14 @@ in
             "${pkgs.dunst}/bin/dunst"
             "${pkgs.hyprpaper}/bin/hyprpaper"
             "${pkgs.networkmanagerapplet}/bin/nm-applet --indicatior"
+            "${pkgs.waybar}/bin/waybar"
+            "${pkgs.killall}/bin/killall -SIGUSR1 waybar"
           ];
           windowrulev2 = [
             # "float, class:.*"
             # "fullscreen,title:^(Firefox)(.*)$"
             "float,class:^(kitty)$"
-            "float,class:^(dolphin)$"
+            "float,class:^(pavucontrol)$"
           ];
           # animation = [
           #   "workspaces,1,8,default,slide"

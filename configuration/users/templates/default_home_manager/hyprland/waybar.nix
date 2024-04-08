@@ -25,7 +25,6 @@ builtins.toJSON {
         "keyboard-state"
         "sway/language"
         "battery"
-        "battery#bat2"
         "clock"
         "tray"
     ];
@@ -171,9 +170,6 @@ builtins.toJSON {
         # "format-good" = ""; # An empty format will hide the module
         # "format-full" = "";
         "format-icons" = ["" "" "" "" ""];
-    };
-    "battery#bat2" = {
-        "bat" = "BAT2";
     };
     "power-profiles-daemon" = {
       "format" = "{icon}";
