@@ -67,7 +67,7 @@ in
           exec-once = [
             "${pkgs.dunst}/bin/dunst"
             "${pkgs.hyprpaper}/bin/hyprpaper"
-            "${pkgs.nm-applet}/bin/nm-applet --indicatior"
+            "${pkgs.networkmanagerapplet}/bin/nm-applet --indicatior"
           ];
           windowrulev2 = [
             # "float, class:.*"
