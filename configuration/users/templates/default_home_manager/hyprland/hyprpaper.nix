@@ -1,6 +1,6 @@
 { host-name, ... }:
 let
-  wallpaper = import ./hyprpaper/background.nix {host-name};
+  wallpaper = import ./hyprpaper/background.nix { inherit host-name; };
 in
 ''
 preload=${wallpaper}

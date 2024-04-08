@@ -6,8 +6,8 @@ in
   home-manager.users.${username} = {
     xdg.configFile = {
       "hypr.hyprpaper.conf" = {
-        text = import ./hyprland/hyprpaper.nix { host-name };
-      }
+        text = import ./hyprland/hyprpaper.nix { inherit host-name; };
+      };
     };
     wayland.windowManager = {
       hyprland = {
