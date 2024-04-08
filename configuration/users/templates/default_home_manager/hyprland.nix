@@ -16,6 +16,8 @@ in
             "${appmod}, F, exec, firefox"
             "${appmod}, T, exec, kitty"
             "${appmod}, D, exec, kitty"
+            "${appmod}, E, exec, dolphin"
+            "SUPER, E, exec, dolphin"
             "ALT, Tab, cyclenext"
             "ALT_SHIFT, Tab, cyclenext, prev"
             "SUPER, Tab, changegroupactive, f"
@@ -33,6 +35,7 @@ in
             "SUPER_CTRL_SHIFT_ALT, 2, exec, sh ${./hyprland/workspace2d.sh} move_down"
             "SUPER, F, togglefloating"
             "SUPER, G, togglegroup"
+            "SUPER_SHIFT, G, moveoutofgroup"
             "ALT, F4, killactive"
             "CTRL_ALT_SHIFT, right, pin"
           ];
@@ -172,6 +175,12 @@ in
             "col.border_locked_inactive" = "0x55ffffff";
             groupbar = {
               enabled = true;
+              font_family = "monospace";
+              height = 14;
+                "col.active" = "0x44ffffff";
+                "col.inactive" = "0x33ffffff";
+                "col.locked_active" = "0x66ffffff";
+                "col.locked_inactive" = "0x55ffffff";
             };
           };
           misc = {
