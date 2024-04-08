@@ -65,6 +65,7 @@
           kitty = "${pkgs.callPackage ./kitty/kitty.pkg.nix { self = pkgs; inherit attrs; }}/bin/kitty";
           logout = "qdbus org.kde.LogoutPrompt /LogoutPrompt org.kde.LogoutPrompt.promptLogout";
           f = "xplr";
+          cdf = "cd $(xplr)"
         };
       };
     };
