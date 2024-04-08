@@ -95,7 +95,8 @@ builtins.toJSON {
         # "timezone" = "America/New_York";
         "tooltip-format" = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
         "format" = "{:%Y-%m-%dT%T%Ez}";
-        "format-alt" = "{:%Y-%m-%d}";
+        "interval" = 1;
+        "format-alt" = "{:%b %a %T}";
     };
     "cpu" = {
         "format" = "{usage}% ";
