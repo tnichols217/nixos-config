@@ -4,6 +4,11 @@ let
 in
 {
   home-manager.users.${username} = {
+    xdg.configFile = {
+      "hypr.hyprpaper.conf" = {
+        text = import ./hyprland/hyprpaper.nix { host-name };
+      }
+    };
     wayland.windowManager = {
       hyprland = {
         enable = true;
@@ -56,6 +61,7 @@ in
           ];
           exec-once = [
             "${pkgs.dunst}/bin/dunst"
+            "${pkgs.hyprpaper}/bin/hyprpaper"
           ];
           # windowrulev2 = [
           #   "float, class:.*"
