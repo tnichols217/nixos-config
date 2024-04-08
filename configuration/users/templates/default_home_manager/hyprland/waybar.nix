@@ -14,6 +14,7 @@ builtins.toJSON {
     "modules-right" = [
         "mpris"
         "idle_inhibitor"
+        "hyprland/workspaces"
         "pulseaudio"
         "network"
         "power-profiles-daemon"
@@ -92,6 +93,9 @@ builtins.toJSON {
         "paused" = "⏸";
       };
       # "ignored-players": ["firefox"]
+    };
+    "hyprland/workspaces" = {
+      "format" = "{name}";
     };
     "idle_inhibitor" = {
         "format" = "{icon}";
