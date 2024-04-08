@@ -29,6 +29,7 @@ in
             "SUPER_CTRL_SHIFT, 2, exec, sh ${./hyprland/workspace2d.sh} down"
             "SUPER_CTRL_SHIFT_ALT, 2, exec, sh ${./hyprland/workspace2d.sh} move_down"
             "SUPER, F, togglefloating"
+            "SUPER, G, togglegroup"
             "ALT, F4, killactive"
             "CTRL_ALT_SHIFT, right, pin"
           ];
@@ -70,7 +71,7 @@ in
             allow_tearing = false;
           };
           decoration = {
-            rounding = 20;
+            rounding = 8;
             active_opacity = 1.0;
             inactive_opacity = 1.0;
             fullscreen_opacity = 1.0;
