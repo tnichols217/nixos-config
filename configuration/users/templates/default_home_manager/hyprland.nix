@@ -171,7 +171,7 @@ in
             "col.border_locked_active" = "0x66ffffff";
             "col.border_locked_inactive" = "0x55ffffff";
             groupbar = {
-              enabled = false;
+              enabled = true;
             };
           };
           misc = {
