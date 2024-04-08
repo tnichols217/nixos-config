@@ -43,8 +43,8 @@ in
             "SUPER_SHIFT, G, moveoutofgroup"
             "ALT, F4, killactive"
             "CTRL_ALT_SHIFT, right, pin"
-            "SUPER, ], fullscreen, 2"
-            "SUPER_SHIFT, ], fakefullscreen"
+            "SUPER, bracketright, fullscreen, 2"
+            "SUPER_SHIFT, bracketright, fakefullscreen"
           ];
           bindl = [
             ", switch:on:[switch name], exec, hyprctl keyword monitor \"eDP-2, disable\""
@@ -80,7 +80,7 @@ in
             "col.nogroup_border_active" = "0x55dd7777";
             cursor_inactive_timeout = 10;
             layout = "dwindle";
-            no_cursor_warps = false;
+            no_cursor_warps = true;
             no_focus_fallback = false;
             resize_on_border = true;
             extend_border_grab_area = 15;
