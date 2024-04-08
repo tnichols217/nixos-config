@@ -33,7 +33,7 @@ case "$1" in
 esac
 
 ## Generate new workspace number
-ws=$((($y * $matrix_size + $x - 1) * $active_monitor + 1))
+ws=$(($matrix_max * $active_monitor + ($y + 1) * $matrix_size + $x + 1))
 
 case "$1" in
 	"left" | "right" | "up" | "down") hyprctl dispatch workspace $ws ;;
