@@ -1,6 +1,5 @@
 { ... }:
-builtins.toJSON 
-{
+builtins.toJSON {
     "layer" = "top"; # Waybar at top layer
     # "position" = "bottom"; # Waybar position (top|bottom|left|right)
     "height" = 30; # Waybar height (to be removed for auto height)
@@ -8,13 +7,9 @@ builtins.toJSON
     "spacing" = 4; # Gaps between modules (4px)
     # Choose the order of the modules
     "modules-left" = [
-        "sway/workspaces"
-        "sway/mode"
-        "sway/scratchpad"
         "custom/media"
     ];
     "modules-center" = [
-        "sway/window"
     ];
     "modules-right" = [
         "mpd"
@@ -59,16 +54,6 @@ builtins.toJSON
             "unlocked" = "";
         };
     };
-    "sway/mode" = {
-        "format" = "<span style=\"italic\">{}</span>";
-    };
-    "sway/scratchpad" = {
-        "format" = "{icon} {count}";
-        "show-empty" = false;
-        "format-icons" = ["" ""];
-        "tooltip" = true;
-        "tooltip-format" = "{app} = {title}";
-    };
     "mpd" = {
         "format" = "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ";
         "format-disconnected" = "Disconnected ";
@@ -109,6 +94,7 @@ builtins.toJSON
     "clock" = {
         # "timezone" = "America/New_York";
         "tooltip-format" = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
+        "format" = "";
         "format-alt" = "{:%Y-%m-%d}";
     };
     "cpu" = {
@@ -163,7 +149,7 @@ builtins.toJSON
     "network" = {
         # "interface" = "wlp2*"; # (Optional) To force the use of this interface
         "format-wifi" = "{essid} ({signalStrength}%) ";
-        "format-ethernet" = "{ipaddr}/{cidr} ";
+        "format-ethernet" = "{ipaddr}/{cidr} 󰈀";
         "tooltip-format" = "{ifname} via {gwaddr} ";
         "format-linked" = "{ifname} (No IP) ";
         "format-disconnected" = "Disconnected ⚠";
@@ -186,18 +172,6 @@ builtins.toJSON
             "car" = "";
             "default" = ["" "" ""];
         };
-        "on-click" = "pavucontrol";
-    };
-    "custom/media" = {
-        "format" = "{icon} {}";
-        "return-type" = "json";
-        "max-length" = 40;
-        "format-icons" = {
-            "spotify" = "";
-            "default" = "🎜";
-        };
-        "escape" = true;
-        "exec" = "$HOME/.config/waybar/mediaplayer.py 2> /dev/null"; # Script in resources folder
-        # "exec" = "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" # Filter player based on name
+        "on-click" = "${pkgs.pavucontrol}/bin/pavucontrol";
     };
 }
