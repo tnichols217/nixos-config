@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 builtins.toJSON {
     "layer" = "top"; # Waybar at top layer
     # "position" = "bottom"; # Waybar position (top|bottom|left|right)
@@ -94,7 +94,7 @@ builtins.toJSON {
     "clock" = {
         # "timezone" = "America/New_York";
         "tooltip-format" = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
-        "format" = "";
+        "format" = "{:%Y-%m-%dT%T%Ez}";
         "format-alt" = "{:%Y-%m-%d}";
     };
     "cpu" = {

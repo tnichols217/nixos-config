@@ -9,7 +9,7 @@ in
         text = import ./hyprland/hyprpaper.nix { inherit host-name; };
       };
       "waybar/config.jsonc" = {
-        text = import ./hyprland/waybar.nix { };
+        text = import ./hyprland/waybar.nix args;
       };
     };
     wayland.windowManager = {
