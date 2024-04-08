@@ -30,6 +30,7 @@ in
             "SUPER_CTRL_SHIFT_ALT, 2, exec, sh ${./hyprland/workspace2d.sh} move_down"
             "SUPER, F, togglefloating"
             "ALT, F4, killactive"
+            "CTRL_ALT_SHIFT, right, pin"
           ];
           bindl = [
             ", switch:on:[switch name], exec, hyprctl keyword monitor \"eDP-2, disable\""
