@@ -41,19 +41,18 @@ in
             "SUPER_CTRL_SHIFT_ALT, 1, exec, sh ${./hyprland/workspace2d.sh} move_up"
             "SUPER_CTRL_SHIFT, 2, exec, sh ${./hyprland/workspace2d.sh} down"
             "SUPER_CTRL_SHIFT_ALT, 2, exec, sh ${./hyprland/workspace2d.sh} move_down"
+            "SUPER, V, exec, ${pkgs.cliphist}/bin/cliphist list | ${pkgs.tofi}/bin/tofi | ${pkgs.cliphist}/bin/cliphist decode | ${pkgs.wl-clipboard}/bin/wl-copy"
             "SUPER, F, togglefloating"
             "SUPER, G, togglegroup"
             "SUPER_SHIFT, G, moveoutofgroup"
             "ALT, F4, killactive"
             "CTRL_ALT_SHIFT, right, pin"
-            # "SUPER, bracketright, resizeactive, exact 100% 100%"
-            # "SUPER, bracketright, moveactive, exact 0 0"
             "SUPER, bracketright, fullscreen, 2"
             "SUPER_SHIFT, bracketright, fakefullscreen"
           ];
           bindl = [
-            ", switch:on:[switch name], exec, hyprctl keyword monitor \"eDP-2, disable\""
-            ", switch:off:[switch name], exec, hyprctl keyword monitor \"eDP-2, 2560x1600@120, 0x0, 1\""
+            ", switch:on:2a29c40, exec, hyprctl keyword monitor \"eDP-2, disable\""
+            ", switch:off:2a29c40, exec, hyprctl keyword monitor \"eDP-2, 2560x1600@120, 0x0, 1\""
           ];
           bindm = [
             "SUPER, mouse:272, movewindow"
@@ -70,6 +69,8 @@ in
             "${pkgs.networkmanagerapplet}/bin/nm-applet --indicatior"
             "${pkgs.waybar}/bin/waybar"
             "${pkgs.toybox}/bin/killall -SIGUSR1 waybar"
+            "${pkgs.wl-clipboard}/bin/wl-paste --type text --watch ${pkgs.cliphist}/bin/cliphist store"
+            "${pkgs.wl-clipboard}/bin/wl-paste --type image --watch ${pkgs.cliphist}/bin/cliphist store"
           ] ++ (if host-name != "ASUS" then [
             "${pkgs.waynergy}/bin/waynergy -b wlr -N ${host-name} -E -c ${addresses.asus}"
           ] else []);
