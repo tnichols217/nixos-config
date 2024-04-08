@@ -81,6 +81,7 @@ builtins.toJSON {
         "tooltip-format-disconnected" = "MPD (disconnected)";
     };
     "mpris" = {
+      "player" = "${pkgs.playerctl}/bin/playerctl";
       "format" = "{player_icon} {dynamic}";
       "format-paused" = "{status_icon} <i>{dynamic}</i>";
       "player-icons" = {
@@ -138,7 +139,7 @@ builtins.toJSON {
         };
         "format" = "{capacity}% {icon}";
         "format-full" = "{capacity}% {icon}";
-        "format-charging" = "{capacity}% ";
+        "format-charging" = "{capacity}% ⚡";
         "format-plugged" = "{capacity}% ";
         "format-alt" = "{time} {icon}";
         # "format-good" = ""; # An empty format will hide the module
