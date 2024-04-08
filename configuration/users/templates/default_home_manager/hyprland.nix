@@ -80,16 +80,16 @@ in
             "float,class:^(kitty)$"
             "float,class:^(pavucontrol)$"
           ];
-          device = [
-            {
-              name = "huion-huion-tablet_gt1602";
-              output = "DP-1";
-            }
-            {
-              name = "huion-huion-tablet_gt1602-1";
-              output = "DP-1";
-            }
-          ];
+          # device = [
+          #   {
+          #     name = "huion-huion-tablet_gt1602";
+          #     output = "DP-1";
+          #   }
+          #   {
+          #     name = "huion-huion-tablet_gt1602-1";
+          #     output = "DP-1";
+          #   }
+          # ];
           # animation = [
           #   "workspaces,1,8,default,slide"
           # ];
@@ -188,7 +188,8 @@ in
               transform = 0;
               region_position = "0 0";
               region_size = "0 0";
-              relative_input = true;
+              relative_input = false;
+              output = "DP-1";
             };
           };
           gestures = {
