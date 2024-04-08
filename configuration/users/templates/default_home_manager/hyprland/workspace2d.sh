@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-matrix_size=9
+matrix_size=5
 matrix_max=$(($matrix_size ** 2))
 
 ## Functions
