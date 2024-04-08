@@ -17,9 +17,9 @@ in
             "${appmod}, T, exec, kitty"
             "${appmod}, D, exec, kitty"
             "ALT, Tab, cyclenext"
-            "ALT_SHIFT, Tab, cyclenext prev"
-            "SUPER, Tab, changegroupactive f"
-            "SUPER_SHIFT, Tab, changegroupactive b"
+            "ALT_SHIFT, Tab, cyclenext, prev"
+            "SUPER, Tab, changegroupactive, f"
+            "SUPER_SHIFT, Tab, changegroupactive, b"
             "ALT, Tab, bringactivetotop"
             "ALT, Space, exec, ${pkgs.tofi}/bin/tofi-drun --drun-launch=true"
             "ALT, Space, focuswindow, rofi"
@@ -57,9 +57,9 @@ in
           # ];
           general = {
             border_size = 1;
-            gaps_in = 5;
-            gaps_out = 8;
-            gaps_workspaces = 0;
+            gaps_in = 3;
+            gaps_out = 5;
+            gaps_workspaces = 3;
             "col.inactive_border" = "0x33ffffff";
             "col.active_border" = "0x44ffffff";
             "col.nogroup_border" = "0x44dd7777";
