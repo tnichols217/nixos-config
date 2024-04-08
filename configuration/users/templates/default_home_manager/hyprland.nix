@@ -32,7 +32,7 @@ in
             "SUPER_SHIFT, Tab, changegroupactive, b"
             "ALT, Tab, bringactivetotop"
             "ALT, Space, exec, ${pkgs.tofi}/bin/tofi-drun --drun-launch=true"
-            "SUPER, Space, exec, ${pkgs.killall}/bin/killall -SIGUSR1 waybar"
+            "SUPER, Space, exec, ${pkgs.toybox}/bin/killall -SIGUSR1 waybar"
             "SUPER_CTRL, 1, exec, sh ${./hyprland/workspace2d.sh} right"
             "SUPER_CTRL_ALT, 1, exec, sh ${./hyprland/workspace2d.sh} move_right"
             "SUPER_CTRL, 2, exec, sh ${./hyprland/workspace2d.sh} left"
