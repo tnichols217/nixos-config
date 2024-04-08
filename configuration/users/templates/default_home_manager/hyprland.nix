@@ -65,16 +65,18 @@ in
             "${pkgs.dunst}/bin/dunst"
             "${pkgs.hyprpaper}/bin/hyprpaper"
           ];
-          # windowrulev2 = [
-          #   "float, class:.*"
-          # ];
+          windowrulev2 = [
+            # "float, class:.*"
+            # "windowrule=fullscreen,title:^(Firefox)(.*)$"
+            "windowrule=float,class:^(kitty)(.*)$"
+          ];
           # animation = [
           #   "workspaces,1,8,default,slide"
           # ];
           general = {
-            border_size = 1;
+            border_size = 0;
             gaps_in = 3;
-            gaps_out = 5;
+            gaps_out = 0;
             gaps_workspaces = 3;
             "col.inactive_border" = "0x33ffffff";
             "col.active_border" = "0x44ffffff";
