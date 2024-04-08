@@ -69,6 +69,7 @@ in
             # "float, class:.*"
             # "fullscreen,title:^(Firefox)(.*)$"
             "float,class:^(kitty)$"
+            "float,class:^(dolphin)$"
           ];
           # animation = [
           #   "workspaces,1,8,default,slide"
@@ -117,7 +118,7 @@ in
               passes = 3;
               ignore_opacity = false;
               xray = false;
-              noise = 0.05;
+              noise = 0.00;
               contrast = 0.9;
               brightness = 0.8;
               vibrancy = 0.1;

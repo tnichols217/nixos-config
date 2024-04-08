@@ -120,6 +120,7 @@ in
         mpv
         imagemagick
         hyprpaper
+        xplr
         # pdfslicer
         pdfsam-basic
         sonic-visualiser
