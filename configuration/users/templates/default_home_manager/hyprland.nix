@@ -1,4 +1,4 @@
-{ pkgs, attrs, username, host-name, version, lib, nix-index-database, ... }@ args:
+{ pkgs, attrs, username, host-name, version, lib, nix-index-database, addresses, ... }@ args:
 let
   appmod = "CTRLALT";
 in
@@ -70,7 +70,9 @@ in
             "${pkgs.networkmanagerapplet}/bin/nm-applet --indicatior"
             "${pkgs.waybar}/bin/waybar"
             "${pkgs.killall}/bin/killall -SIGUSR1 waybar"
-          ];
+          ] ++ (if host-name != "ASUS" then [
+            "${pkgs.waynergy}/bin/waynergy -b wlr -N ${host-name} -E -c ${addresses.asus}"
+          ] else []);
           windowrulev2 = [
             # "float, class:.*"
             # "fullscreen,title:^(Firefox)(.*)$"
