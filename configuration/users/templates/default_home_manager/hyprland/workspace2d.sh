@@ -2,6 +2,7 @@
 
 matrix_size=5
 matrix_max=$(($matrix_size ** 2))
+max_screens=10
 
 ## Functions
 function reload_waybar {
@@ -18,7 +19,7 @@ function y_value {
 
 ## Get active workspace and translate to x / y
 active_ws=$(hyprctl monitors -j | jq '.[] | select(.focused) | .activeWorkspace.id')
-active_ws=$((($active_ws - 1) % $matrix_max))
+active_ws=$((($active_ws - 1) / $matrix_max))
 active_monitor=$(hyprctl monitors -j | jq '.[] | select(.focused) | .id')
 
 x=$(x_value $active_ws)
@@ -33,7 +34,7 @@ case "$1" in
 esac
 
 ## Generate new workspace number
-ws=$(($matrix_max * $active_monitor + ($y + 1) * $matrix_size + $x + 1))
+ws=$(($max_screens * ($y * $matrix_size + $x) + $active_monitor))
 
 case "$1" in
 	"left" | "right" | "up" | "down") hyprctl dispatch workspace $ws ;;
