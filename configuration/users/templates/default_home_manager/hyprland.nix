@@ -16,7 +16,7 @@ in
             "${appmod}, F, exec, firefox"
             "${appmod}, T, exec, kitty"
             "${appmod}, D, exec, kitty"
-            "ALT, Tab, cyclenext, floating"
+            "ALT, Tab, cyclenext"
             "ALT, Tab, bringactivetotop"
             "ALT, Space, exec, ${pkgs.tofi}/bin/tofi-drun --drun-launch=true"
             "ALT, Space, focuswindow, rofi"
@@ -28,6 +28,7 @@ in
             "SUPER_CTRL_SHIFT_ALT, 1, exec, sh ${./hyprland/workspace2d.sh} move_up"
             "SUPER_CTRL_SHIFT, 2, exec, sh ${./hyprland/workspace2d.sh} down"
             "SUPER_CTRL_SHIFT_ALT, 2, exec, sh ${./hyprland/workspace2d.sh} move_down"
+            "SUPER, F, togglefloating"
           ];
           bindl = [
             ", switch:on:[switch name], exec, hyprctl keyword monitor \"eDP-2, disable\""
@@ -42,9 +43,12 @@ in
             "HDMI-A-1, 2560x1440@120, 2560x0, 1"
             "DP-1, 2560x1440@60, 2560x1440, 1"
           ];
-          animation = [
-            "workspaces,1,8,default,slide"
-          ];
+          # windowrulev2 = [
+          #   "float, class:.*"
+          # ];
+          # animation = [
+          #   "workspaces,1,8,default,slide"
+          # ];
           general = {
             border_size = 1;
             gaps_in = 5;
