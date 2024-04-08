@@ -18,7 +18,7 @@ in
             "${appmod}, D, exec, kitty"
             "ALT, Tab, cyclenext, floating"
             "ALT, Tab, bringactivetotop"
-            "ALT, Space, exec, ${pkgs.rofi}/bin/rofi -show run"
+            "ALT, Space, exec, ${pkgs.tofi}/bin/tofi-drun --drun-launch=true"
             "ALT, Space, focuswindow, rofi"
             "SUPER_CTRL, 1, exec, ${./hyprland/workspace2d.sh} right"
             "SUPER_CTRL_ALT, 1, exec, ${./hyprland/workspace2d.sh} move_right"
