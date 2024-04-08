@@ -75,24 +75,9 @@ in
             "${pkgs.waynergy}/bin/waynergy -b wlr -N ${host-name} -E -c ${addresses.asus}"
           ] else []);
           windowrulev2 = [
-            # "float, class:.*"
-            # "fullscreen,title:^(Firefox)(.*)$"
             "float,class:^(kitty)$"
             "float,class:^(pavucontrol)$"
           ];
-          # device = [
-          #   {
-          #     name = "huion-huion-tablet_gt1602";
-          #     output = "DP-1";
-          #   }
-          #   {
-          #     name = "huion-huion-tablet_gt1602-1";
-          #     output = "DP-1";
-          #   }
-          # ];
-          # animation = [
-          #   "workspaces,1,8,default,slide"
-          # ];
           general = {
             border_size = 0;
             gaps_in = 3;
@@ -151,6 +136,10 @@ in
             enabled = true;
             first_launch_animation = true;
           };
+          animation = [
+            "workspaces,1,1,default"
+            "windows,1,1,default"
+          ];
           input = {
             # kb_model = "pc104";
             kb_layout = "us";
