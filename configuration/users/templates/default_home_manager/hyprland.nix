@@ -5,7 +5,7 @@ in
 {
   home-manager.users.${username} = {
     xdg.configFile = {
-      "hypr.hyprpaper.conf" = {
+      "hypr/hyprpaper.conf" = {
         text = import ./hyprland/hyprpaper.nix { inherit host-name; };
       };
     };
