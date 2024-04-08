@@ -19,14 +19,14 @@ function y_value {
 
 ## Get active workspace and translate to x / y
 active_ws=$(hyprctl monitors -j | jq '.[] | select(.focused) | .activeWorkspace.id')
-active_ws=$((($active_ws - 1) / $matrix_max))
+active_ws=$((($active_ws  - 1) / $max_screens))
 active_monitor=$(hyprctl monitors -j | jq '.[] | select(.focused) | .id')
 
 x=$(x_value $active_ws)
 y=$(y_value $active_ws)
 
 case "$1" in
-	"left" | "move_left") x=$((($x + $matrix_size - 1) % $matrix_size)) ;;
+	"left" | "move_left") x=$((($x + $matrix_size - 1) % $matrix_size));  ;;
 	"right" | "move_right") x=$((($x + 1) % $matrix_size)) ;;
 	"up" | "move_up") y=$((($y + $matrix_size - 1) % $matrix_size)) ;;
 	"down" | "move_down") y=$((($y + 1) % $matrix_size)) ;;

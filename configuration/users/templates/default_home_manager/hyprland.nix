@@ -42,6 +42,9 @@ in
             "HDMI-A-1, 2560x1440@120, 2560x0, 1"
             "DP-1, 2560x1440@60, 2560x1440, 1"
           ];
+          animation = [
+            "workspaces,1,8,default slide"
+          ];
           general = {
             border_size = 1;
             gaps_in = 5;
