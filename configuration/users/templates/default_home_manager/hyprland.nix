@@ -43,7 +43,7 @@ in
             "DP-1, 2560x1440@60, 2560x1440, 1"
           ];
           animation = [
-            "workspaces,1,8,default slide"
+            "workspaces,1,8,default,slide"
           ];
           general = {
             border_size = 1;
