@@ -12,7 +12,7 @@ builtins.toJSON {
     "modules-center" = [
     ];
     "modules-right" = [
-        "mpd"
+        "mpris"
         "idle_inhibitor"
         "pulseaudio"
         "network"
@@ -80,6 +80,18 @@ builtins.toJSON {
         "tooltip-format" = "MPD (connected)";
         "tooltip-format-disconnected" = "MPD (disconnected)";
     };
+    "mpris" = {
+      "format" = "{player_icon} {dynamic}";
+      "format-paused" = "{status_icon} <i>{dynamic}</i>";
+      "player-icons" = {
+        "default" = "▶";
+        "mpv" = "🎵";
+      };
+      "status-icons" = {
+        "paused" = "⏸"
+      };
+      # "ignored-players": ["firefox"]
+    };
     "idle_inhibitor" = {
         "format" = "{icon}";
         "format-icons" = {
@@ -95,7 +107,7 @@ builtins.toJSON {
         # "timezone" = "America/New_York";
         "tooltip-format" = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
         "format" = "{:%Y-%m-%dT%T%Ez}";
-        "interval" = 1;
+        "interval" = 0.5;
         "format-alt" = "{:%b %a %T}";
     };
     "cpu" = {
