@@ -18,7 +18,7 @@ in
             "${appmod}, D, exec, kitty"
             "ALT, Tab, cyclenext, floating"
             "ALT, Tab, bringactivetotop"
-            "ALT, Space,  ${pkgs.rofi}/bin/rofi -show run"
+            "ALT, Space, exec, ${pkgs.rofi}/bin/rofi -show run"
           ];
           bindl = [
             ", switch:on:[switch name], exec, hyprctl keyword monitor \"eDP-2, disable\""
