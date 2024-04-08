@@ -3,13 +3,7 @@ builtins.toJSON {
     "layer" = "top"; # Waybar at top layer
     # "position" = "bottom"; # Waybar position (top|bottom|left|right)
     "height" = 30; # Waybar height (to be removed for auto height)
-    # "width" = 1280; # Waybar width
     "spacing" = 4; # Gaps between modules (4px)
-    # Choose the order of the modules
-    # "modules-left" = [
-    # ];
-    # "modules-center" = [
-    # ];
     "modules-right" = [
       "mpris"
       "privacy"
@@ -28,23 +22,6 @@ builtins.toJSON {
       "clock"
       "tray"
     ];
-    # Modules configuration
-    # "sway/workspaces" = {
-    #     "disable-scroll" = true;
-    #     "all-outputs" = true;
-    #     "warp-on-scroll" = false;
-    #     "format" = "{name} = {icon}";
-    #     "format-icons" = {
-    #         "1" = "";
-    #         "2" = "";
-    #         "3" = "";
-    #         "4" = "";
-    #         "5" = "";
-    #         "urgent" = "";
-    #         "focused" = "";
-    #         "default" = "";
-    #     }
-    # };
     "keyboard-state" = {
       "numlock" = true;
       "capslock" = true;
@@ -145,6 +122,7 @@ builtins.toJSON {
         "format" = "{}% ";
     };
     "temperature" = {
+      "interval" = 1;
       # "thermal-zone" = 2;
       # "hwmon-path" = "/sys/class/hwmon/hwmon2/temp1_input";
       "critical-threshold" = 80;
