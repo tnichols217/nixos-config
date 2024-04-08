@@ -13,6 +13,7 @@ builtins.toJSON {
     ];
     "modules-right" = [
         "mpris"
+        "privacy"
         "idle_inhibitor"
         "hyprland/workspaces"
         "pulseaudio"
@@ -93,6 +94,28 @@ builtins.toJSON {
         "paused" = "⏸";
       };
       # "ignored-players": ["firefox"]
+    };
+    "privacy" = {
+      "icon-spacing" = 4;
+      "icon-size" = 18;
+      "transition-duration" = 250;
+      "modules" = [
+        {
+          "type" = "screenshare";
+          "tooltip" = true;
+          "tooltip-icon-size" = 24;
+        }
+        {
+          "type" = "audio-out";
+          "tooltip" = true;
+          "tooltip-icon-size" = 24;
+        }
+        {
+          "type" = "audio-in";
+          "tooltip" = true;
+          "tooltip-icon-size" = 24;
+        }
+      ];
     };
     "hyprland/workspaces" = {
       "format" = "{name}";

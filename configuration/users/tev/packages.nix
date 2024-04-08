@@ -138,6 +138,7 @@ in
         graphviz
         texliveFull
         pstoedit
+        playerctl
 
         # programs
         anki
