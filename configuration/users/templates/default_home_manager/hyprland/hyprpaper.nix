@@ -5,4 +5,6 @@ in
 ''
 preload=${wallpaper}
 wallpaper=,${wallpaper}
+splash = false
+ipc = false
 ''
