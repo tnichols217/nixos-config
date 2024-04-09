@@ -3,7 +3,7 @@ let
   appmod = "CTRLALT";
   monitors = {
     "ASUS" = [
-      "DP-0, 2560x1440@60, 2560x1440, 1"
+      "DP-1, 2560x1440@170, 2560x1440, 1"
       "DP-4, disable"
     ];
     "ROG" = [
