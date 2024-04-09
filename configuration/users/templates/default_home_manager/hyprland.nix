@@ -68,7 +68,7 @@ in
             "${pkgs.hyprpaper}/bin/hyprpaper"
             "${pkgs.networkmanagerapplet}/bin/nm-applet --indicatior"
             "${pkgs.waybar}/bin/waybar"
-            "${pkgs.toybox}/bin/killall -SIGUSR1 waybar"
+            "sleep 1000; ${pkgs.toybox}/bin/killall -SIGUSR1 waybar"
             "${pkgs.wl-clipboard}/bin/wl-paste --type text --watch ${pkgs.cliphist}/bin/cliphist store"
             "${pkgs.wl-clipboard}/bin/wl-paste --type image --watch ${pkgs.cliphist}/bin/cliphist store"
           ] ++ (if host-name != "ASUS" then [
