@@ -24,6 +24,8 @@ in
             "${appmod}, F, exec, firefox"
             "${appmod}, T, exec, kitty"
             "${appmod}, D, exec, kitty"
+            "${appmod}, O, exec, obsidian"
+            "${appmod}, J, exec, jellyfinmediaplayer"
             "${appmod}, E, exec, dolphin"
             "SUPER, E, exec, dolphin"
             "ALT, Tab, cyclenext"
