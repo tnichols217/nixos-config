@@ -110,6 +110,7 @@ in
             "${pkgs.networkmanagerapplet}/bin/nm-applet --indicatior"
             "${pkgs.waybar}/bin/waybar"
             "${pkgs.hypridle}/bin/hypridle"
+            "${pkgs.blueman}/bin/blueman-applet"
             "${pkgs.wl-clipboard}/bin/wl-paste --type text --watch ${pkgs.cliphist}/bin/cliphist store"
             "${pkgs.wl-clipboard}/bin/wl-paste --type image --watch ${pkgs.cliphist}/bin/cliphist store"
           ] ++ (if host-name != "ASUS" then [
