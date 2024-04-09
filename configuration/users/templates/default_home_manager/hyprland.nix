@@ -110,6 +110,7 @@ in
             "${pkgs.networkmanagerapplet}/bin/nm-applet --indicatior"
             "${pkgs.waybar}/bin/waybar"
             "${pkgs.hypridle}/bin/hypridle"
+            "${pkgs.blueman}/bin/blueman-applet"
             "${pkgs.wl-clipboard}/bin/wl-paste --type text --watch ${pkgs.cliphist}/bin/cliphist store"
             "${pkgs.wl-clipboard}/bin/wl-paste --type image --watch ${pkgs.cliphist}/bin/cliphist store"
           ] ++ (if host-name != "ASUS" then [
@@ -187,6 +188,7 @@ in
             # kb_model = "pc104";
             kb_layout = "us";
             # kb_variant = "qwerty";
+            kb_options = "compose:ralt";
             numlock_by_default = false;
             repeat_rate = 25;
             repeat_delay = 500;
