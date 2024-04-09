@@ -23,26 +23,4 @@
     wantedBy = ["multi-user.target"];
   };
   
-} // (if (host-name == "ASUS") then {
-  systemd.services."synergy@${username}" = {
-    serviceConfig.Type = "simple";
-    path = with pkgs; [ pkgs.synergy ];
-    serviceConfig = {
-      ExecStart = "${pkgs.synergy}/bin/synergys -c ${./services/synergy/ASUS.conf}";
-      Restart = "on-failure";
-    };
-    serviceConfig.User = "${username}";
-    wantedBy = ["multi-user.target"];
-  };
-} else {
-  systemd.services."waynergy@${username}" = {
-    serviceConfig.Type = "simple";
-    path = with pkgs; [ pkgs.waynergy ];
-    serviceConfig = {
-      ExecStart = "${pkgs.waynergy}/bin/waynergy -b wlr -N ${host-name} -E -c ${addresses.asus}";
-      Restart = "on-failure";
-    };
-    serviceConfig.User = "${username}";
-    wantedBy = ["multi-user.target"];
-  };
-})
+}

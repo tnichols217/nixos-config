@@ -106,7 +106,9 @@ in
             "${pkgs.wl-clipboard}/bin/wl-paste --type image --watch ${pkgs.cliphist}/bin/cliphist store"
           ] ++ (if host-name != "ASUS" then [
             "${pkgs.waynergy}/bin/waynergy -b wlr -N ${host-name} -E -c ${addresses.asus}"
-          ] else []);
+          ] else [
+            "${pkgs.synergy}/bin/synergys -c ${./hyprland/synergy/ASUS.conf}"
+          ]);
           windowrulev2 = [
             "float,class:^(kitty)$"
             "float,class:^(pavucontrol)$"
