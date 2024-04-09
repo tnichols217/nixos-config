@@ -38,6 +38,7 @@ in
           bind = [
             "${appmod}, S, exec, ${pkgs.grimblast}/bin/grimblast copy area"
             "SUPER_SHIFT, S, exec, ${pkgs.grimblast}/bin/grimblast copy area"
+            "SUPER, L, exec, pidof hyprlock || ${pkgs.hyprlock}/bin/hyprlock"
             "SUPER_SHIFT, L, exec, hyprctl dispatch exit"
             "${appmod}, F, exec, firefox"
             "${appmod}, T, exec, kitty"
