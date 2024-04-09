@@ -33,7 +33,6 @@ in
     wayland.windowManager = {
       hyprland = {
         enable = true;
-        enableNvidiaPatches = host-name != "ROG";
         plugins = [];
         settings = {
           bind = [
@@ -103,6 +102,13 @@ in
           bindm = [
             "SUPER, mouse:272, movewindow"
             "SUPER, mouse:274, resizewindow"
+          ];
+          env = [
+            "LIBVA_DRIVER_NAME,nvidia"
+            "XDG_SESSION_TYPE,wayland"
+            "GBM_BACKEND,nvidia-drm"
+            "__GLX_VENDOR_LIBRARY_NAME,nvidia"
+            "WLR_NO_HARDWARE_CURSORS,1"
           ];
           monitor = monitors."${host-name}";
           exec-once = [
