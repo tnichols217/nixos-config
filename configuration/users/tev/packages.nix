@@ -139,6 +139,7 @@ in
         texliveFull
         pstoedit
         playerctl
+        parallel
 
         # programs
         anki

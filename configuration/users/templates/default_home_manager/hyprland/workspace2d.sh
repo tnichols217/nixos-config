@@ -3,6 +3,8 @@
 matrix_size=5
 matrix_max=$(($matrix_size ** 2))
 max_screens=10
+direction=$1
+is_all=$2
 
 ## Functions
 function reload_waybar {
@@ -18,10 +20,11 @@ function y_value {
 }
 
 function moveWorkspace {
-    direction=$1
-    screen=$2
-    x=$3
-    y=$4
+    local direction=$1
+    local screen=$2
+    local ws=$((($3 - 1) / $max_screens))
+    local x=$(x_value $ws)
+    local y=$(y_value $ws)
     case "$direction" in
         "left" | "move_left") x=$((($x + $matrix_size - 1) % $matrix_size));  ;;
         "right" | "move_right") x=$((($x + 1) % $matrix_size)) ;;
@@ -30,7 +33,9 @@ function moveWorkspace {
         "query") echo "($x,$y)"; exit ;;
     esac
 
-    ws=$(($max_screens * ($y * $matrix_size + $x) + $active_monitor + 1))
+    local ws=$(($max_screens * ($y * $matrix_size + $x) + $active_monitor + 1))
+
+    hyprctl dispatch focusmonitor $screen
 
     case "$direction" in
         "left" | "right" | "up" | "down") hyprctl dispatch workspace $ws ;;
@@ -39,14 +44,29 @@ function moveWorkspace {
 }
 
 ## Get active workspace and translate to x / y
-active_ws=$(hyprctl monitors -j | jq '.[] | select(.focused) | .activeWorkspace.id')
-active_ws=$((($active_ws  - 1) / $max_screens))
-active_monitor=$(hyprctl monitors -j | jq '.[] | select(.focused) | .id')
+# active_ws=$(hyprctl monitors -j | jq '.[] | select(.focused) | .activeWorkspace.id')
+# active_monitor=$(hyprctl monitors -j | jq '.[] | select(.focused) | .id')
 
-x=$(x_value $active_ws)
-y=$(y_value $active_ws)
+orig_mon=$(hyprctl monitors -j | jq '.[] | select(.focused) | .id, .activeWorkspace.id')
+moveWorkspace $direction $(echo $orig_mon)
 
-moveWorkspace $1 $active_monitor $x $y
+if [ "$is_all" = "all" ]; then
+    all_ws=$(hyprctl monitors -j | jq '.[] | select(.focused | not) | .id, .activeWorkspace.id')
+    local direction_all=$direction
+    case "$direction" in
+        "move_left") direction_all="left";;
+        "move_right") direction_all="right";;
+        "move_up") direction_all="up";;
+        "move_down") direction_all="down";;
+    esac
+    set -- $all_ws
+    while [ ! -z "$1"]
+    do
+        moveWorkspace $direction_all $1 $2
+        shift 2
+    done
+    moveWorkspace $direction_all $(echo $orig_mon)
+fi
 
 # case "$1" in
 # 	"left" | "move_left") x=$((($x + $matrix_size - 1) % $matrix_size));  ;;
