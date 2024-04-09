@@ -188,6 +188,7 @@ in
             # kb_model = "pc104";
             kb_layout = "us";
             # kb_variant = "qwerty";
+            kb_options = "compose:ralt";
             numlock_by_default = false;
             repeat_rate = 25;
             repeat_delay = 500;
