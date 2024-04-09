@@ -33,6 +33,7 @@ in
     wayland.windowManager = {
       hyprland = {
         enable = true;
+        enableNvidiaPatches = host-name != "ROG";
         plugins = [];
         settings = {
           bind = [
