@@ -52,7 +52,7 @@ moveWorkspace $direction $(echo $orig_mon)
 
 if [ "$is_all" = "all" ]; then
     all_ws=$(hyprctl monitors -j | jq '.[] | select(.focused | not) | .id, .activeWorkspace.id')
-    local direction_all=$direction
+    direction_all=$direction
     case "$direction" in
         "move_left") direction_all="left";;
         "move_right") direction_all="right";;
@@ -60,7 +60,7 @@ if [ "$is_all" = "all" ]; then
         "move_down") direction_all="down";;
     esac
     set -- $all_ws
-    while [ ! -z "$1"]
+    while [ ! -z "$1" ]
     do
         moveWorkspace $direction_all $1 $2
         shift 2
