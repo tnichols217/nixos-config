@@ -33,7 +33,7 @@ function moveWorkspace {
         "query") echo "($x,$y)"; exit ;;
     esac
 
-    local ws=$(($max_screens * ($y * $matrix_size + $x) + $active_monitor + 1))
+    local ws=$(($max_screens * ($y * $matrix_size + $x) + $screen + 1))
 
     hyprctl dispatch focusmonitor $screen
 
