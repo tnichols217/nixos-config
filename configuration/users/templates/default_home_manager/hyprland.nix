@@ -20,6 +20,12 @@ in
       "hypr/hyprpaper.conf" = {
         text = import ./hyprland/hyprpaper.nix { inherit host-name; };
       };
+      "hypr/hyprlock.conf" = {
+        text = import ./hyprland/hyprlock.nix { inherit host-name; };
+      };
+      "hypr/hypridle.conf" = {
+        text = import ./hyprland/hypridle.nix { inherit pkgs; };
+      };
       "waybar/config.jsonc" = {
         text = import ./hyprland/waybar.nix args;
       };
@@ -102,6 +108,7 @@ in
             "${pkgs.hyprpaper}/bin/hyprpaper"
             "${pkgs.networkmanagerapplet}/bin/nm-applet --indicatior"
             "${pkgs.waybar}/bin/waybar"
+            "${pkgs.hypridle}/bin/hypridle"
             "${pkgs.wl-clipboard}/bin/wl-paste --type text --watch ${pkgs.cliphist}/bin/cliphist store"
             "${pkgs.wl-clipboard}/bin/wl-paste --type image --watch ${pkgs.cliphist}/bin/cliphist store"
           ] ++ (if host-name != "ASUS" then [
