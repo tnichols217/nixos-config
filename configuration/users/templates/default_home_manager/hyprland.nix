@@ -1,6 +1,18 @@
 { pkgs, attrs, username, host-name, version, lib, nix-index-database, addresses, ... }@ args:
 let
   appmod = "CTRLALT";
+  monitors = {
+    "ASUS" = [
+      "DP-0, 2560x1440@60, 2560x1440, 1"
+      "DP-4, disable"
+    ];
+    "ROG" = [
+      "eDP-2, 2560x1600@120, 0x0, 1"
+      "HDMI-A-1, 2560x1440@120, 2560x0, 1"
+      "DP-1, 2560x1440@60, 2560x1440, 1"
+    ];
+    "MSI" = [];
+  };
 in
 {
   home-manager.users.${username} = {
@@ -84,11 +96,7 @@ in
             "SUPER, mouse:272, movewindow"
             "SUPER, mouse:274, resizewindow"
           ];
-          monitor = [
-            "eDP-2, 2560x1600@120, 0x0, 1"
-            "HDMI-A-1, 2560x1440@120, 2560x0, 1"
-            "DP-1, 2560x1440@60, 2560x1440, 1"
-          ];
+          monitor = monitors."${host-name}";
           exec-once = [
             "${pkgs.dunst}/bin/dunst"
             "${pkgs.hyprpaper}/bin/hyprpaper"
