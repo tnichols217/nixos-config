@@ -4,6 +4,7 @@ builtins.toJSON {
     # "position" = "bottom"; # Waybar position (top|bottom|left|right)
     "height" = 30; # Waybar height (to be removed for auto height)
     "spacing" = 4; # Gaps between modules (4px)
+    "start_hidden" = true;
     "modules-right" = [
       "mpris"
       "privacy"
