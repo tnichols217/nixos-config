@@ -3,7 +3,7 @@ let
   appmod = "CTRLALT";
   monitors = {
     "ASUS" = [
-      "DP-0, 2560x1440@60, 2560x1440, 1"
+      "DP-1, 2560x1440@170, 2560x1440, 1"
       "DP-4, disable"
     ];
     "ROG" = [
@@ -103,6 +103,13 @@ in
             "SUPER, mouse:272, movewindow"
             "SUPER, mouse:274, resizewindow"
           ];
+          env = if host-name != "ROG" then [
+            "LIBVA_DRIVER_NAME,nvidia"
+            "XDG_SESSION_TYPE,wayland"
+            "GBM_BACKEND,nvidia-drm"
+            "__GLX_VENDOR_LIBRARY_NAME,nvidia"
+            "WLR_NO_HARDWARE_CURSORS,1"
+          ] else [];
           monitor = monitors."${host-name}";
           exec-once = [
             "${pkgs.dunst}/bin/dunst"
