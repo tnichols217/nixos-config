@@ -140,6 +140,7 @@ in
         pstoedit
         playerctl
         parallel
+        nautilus
 
         # programs
         anki
