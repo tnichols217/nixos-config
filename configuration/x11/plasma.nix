@@ -1,8 +1,8 @@
 { config, pkgs, attrs, ... }:
 {
-  services.xserver.displayManager.sddm.enable = true;
-  services.xserver.displayManager.sddm.enableHidpi = true;
-  services.xserver.displayManager.sddm.theme = "${attrs.chili}";
+  services.displayManager.sddm.enable = true;
+  services.displayManager.sddm.enableHidpi = true;
+  services.displayManager.sddm.theme = "${attrs.chili}";
   # services.xserver.desktopManager.plasma5.enable = true;
   services.desktopManager.plasma6.enable = true;
   programs.xwayland.enable = true;
