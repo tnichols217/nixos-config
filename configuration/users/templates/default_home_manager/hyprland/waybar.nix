@@ -188,5 +188,7 @@ builtins.toJSON {
         "default" = ["" "" ""];
       };
       "on-click" = "${pkgs.pavucontrol}/bin/pavucontrol";
+      "on-scroll-up" = "${pkgs.pulseaudio}/bin/pactl set-sink-volume @DEFAULT_SINK@ +1%";
+      "on-scroll-down" = "${pkgs.pulseaudio}/bin/pactl set-sink-volume @DEFAULT_SINK@ -1%";
     };
 }

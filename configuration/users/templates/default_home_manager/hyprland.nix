@@ -43,7 +43,7 @@ in
             "${appmod}, F, exec, firefox"
             "${appmod}, T, exec, ${pkgs.kitty}/bin/kitty"
             "${appmod}, D, exec, ${pkgs.kitty}/bin/kitty"
-            "${appmod}, U, exec, ${pkgs.kitty}/bin/kitty upg"
+            "${appmod}, U, exec, ${pkgs.kitty}/bin/kitty sudo bash -c \"cd /etc/nixos; git stash; git stash clear; git pull; nixos-rebuild switch --flake \\\".#${host-name}\\\"\""
             "${appmod}, O, exec, obsidian"
             "${appmod}, J, exec, jellyfinmediaplayer"
             "${appmod}, E, exec, nautilus"
@@ -95,6 +95,10 @@ in
             "CTRL_ALT_SHIFT, right, pin"
             "SUPER, bracketright, fullscreen, 2"
             "SUPER_SHIFT, bracketright, fakefullscreen"
+            ", XF86AudioLowerVolume, exec, ${pkgs.pulseaudio}/bin/pactl set-sink-volume @DEFAULT_SINK@ -1%"
+            ", XF86AudioRaiseVolume, exec, ${pkgs.pulseaudio}/bin/pactl set-sink-volume @DEFAULT_SINK@ +1%"
+            ", XF86AudioMicMute, exec, ${pkgs.pulseaudio}/bin/pactl set-sink-mute @DEFAULT_SINK@ toggle"
+            ", XF86Launch1, exec, ${pkgs.kitty}/bin/kitty sudo bash -c \"cd /etc/nixos; git stash; git stash clear; git pull; nixos-rebuild switch --flake \\\".#${host-name}\\\"\""
           ];
           bindl = [
             ", switch:on:2a29c40, exec, hyprctl keyword monitor \"eDP-2, disable\""
