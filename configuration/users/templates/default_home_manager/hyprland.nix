@@ -95,9 +95,7 @@ in
             "CTRL_ALT_SHIFT, right, pin"
             "SUPER, bracketright, fullscreen, 2"
             "SUPER_SHIFT, bracketright, fakefullscreen"
-            ", XF86AudioLowerVolume, exec, ${pkgs.pulseaudio}/bin/pactl set-sink-volume @DEFAULT_SINK@ -1%"
-            ", XF86AudioRaiseVolume, exec, ${pkgs.pulseaudio}/bin/pactl set-sink-volume @DEFAULT_SINK@ +1%"
-            ", XF86AudioMicMute, exec, ${pkgs.pulseaudio}/bin/pactl set-sink-mute @DEFAULT_SINK@ toggle"
+            ", XF86AudioMicMute, exec, ${pkgs.wireplumber}/bin/wpctl set-mute @DEFAULT_SINK@ toggle"
             ", XF86Launch1, exec, ${pkgs.kitty}/bin/kitty sudo bash -c \"cd /etc/nixos; git stash; git stash clear; git pull; nixos-rebuild switch --flake \\\".#${host-name}\\\"\""
           ];
           bindl = [
@@ -107,6 +105,10 @@ in
           bindm = [
             "SUPER, mouse:272, movewindow"
             "SUPER, mouse:274, resizewindow"
+          ];
+          binde = [
+            ", XF86AudioLowerVolume, exec, ${pkgs.wireplumber}/bin/wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 1%-"
+            ", XF86AudioRaiseVolume, exec, ${pkgs.wireplumber}/bin/wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 1%+"
           ];
           env = if host-name != "ROG" then [
             "LIBVA_DRIVER_NAME,nvidia"
