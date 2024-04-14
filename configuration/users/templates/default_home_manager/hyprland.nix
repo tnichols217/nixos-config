@@ -204,8 +204,9 @@ in
             accel_profile = "flat";
             force_no_accel = false;
             left_handed = false;
-            scroll_method = "2fg";
-            scroll_button = 0;
+            # scroll_method = "2fg";
+            scroll_method = "on_button_down";
+            scroll_button = "mouse:274";
             scroll_button_lock = true;
             natural_scroll = false;
             follow_mouse = 2;
