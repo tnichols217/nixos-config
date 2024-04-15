@@ -39,7 +39,7 @@ in
             "${appmod}, S, exec, ${pkgs.grimblast}/bin/grimblast copy area"
             "SUPER_SHIFT, S, exec, ${pkgs.grimblast}/bin/grimblast copy area"
             "SUPER, L, exec, pidof hyprlock || ${pkgs.hyprlock}/bin/hyprlock"
-            "SUPER_SHIFT, L, exec, hyprctl dispatch exit"
+            "SUPER_SHIFT, L, exit"
             "${appmod}, F, exec, firefox"
             "${appmod}, T, exec, ${pkgs.kitty}/bin/kitty"
             "${appmod}, D, exec, ${pkgs.kitty}/bin/kitty"
@@ -109,6 +109,8 @@ in
           binde = [
             ", XF86AudioLowerVolume, exec, ${pkgs.wireplumber}/bin/wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 1%-"
             ", XF86AudioRaiseVolume, exec, ${pkgs.wireplumber}/bin/wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 1%+"
+            ", XF86MonBrightnessDown, exec, ${pkgs.brightnessctl}/bin/brightnessctl -d $(${pkgs.brightnessctl}/bin/brightnessctl -l -c backlight -m | cut -f 1 -d \",\") s 1%-"
+            ", XF86MonBrightnessUp, exec, ${pkgs.brightnessctl}/bin/brightnessctl -d $(${pkgs.brightnessctl}/bin/brightnessctl -l -c backlight -m | cut -f 1 -d \",\") s 1%+"
           ];
           env = if host-name != "ROG" then [
             "LIBVA_DRIVER_NAME,nvidia"

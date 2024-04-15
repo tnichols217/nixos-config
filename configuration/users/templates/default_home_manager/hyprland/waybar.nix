@@ -134,6 +134,8 @@ builtins.toJSON {
     "backlight" = {
       "format" = "{percent}% {icon}";
       "format-icons" = ["" "" "" "" "" "" "" "" ""];
+      "on-scroll-up" = "${pkgs.brightnessctl}/bin/brightnessctl -d $(${pkgs.brightnessctl}/bin/brightnessctl -l -c backlight -m | cut -f 1 -d \",\") s 1%+";
+      "on-scroll-down" = "${pkgs.brightnessctl}/bin/brightnessctl -d $(${pkgs.brightnessctl}/bin/brightnessctl -l -c backlight -m | cut -f 1 -d \",\") s 1%-";
     };
     "battery" = {
       "states" = {

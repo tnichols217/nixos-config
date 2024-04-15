@@ -1,4 +1,4 @@
-{ pkgs ? import <nixpkgs> {}, attrs, self, ... }:
+{ pkgs ? import <nixpkgs> {}, attrs, self ? pkgs, ... }:
 
 pkgs.stdenv.mkDerivation rec {
   pname = "dot-config";
