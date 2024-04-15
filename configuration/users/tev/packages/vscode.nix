@@ -65,7 +65,7 @@
       vscode_exts.vscjava.vscode-java-test
       vscode_exts.vscjava.vscode-java-debug
       vscode_exts.vscjava.vscode-maven
-      genuitecllc.codetogether
+      openvsx_exts.genuitecllc.codetogether
     ];
   }) // { pname = "vscodium"; };
   userSettings = {
