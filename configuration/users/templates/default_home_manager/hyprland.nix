@@ -185,7 +185,7 @@ in
             dim_around = 0.4;
             blur = {
               enabled = true;
-              size = 8;
+              size = 30;
               passes = 1;
               ignore_opacity = false;
               xray = false;
