@@ -142,6 +142,9 @@ in
             "float,class:^(kitty)$"
             "float,class:^(pavucontrol)$"
           ];
+          layerrule = [
+            "blur,overlay"
+          ];
           general = {
             border_size = 0;
             gaps_in = 3;
