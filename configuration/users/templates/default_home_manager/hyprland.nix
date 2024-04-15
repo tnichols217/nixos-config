@@ -1,4 +1,4 @@
-{ pkgs, attrs, username, host-name, version, lib, nix-index-database, addresses, hy3, ... }@ args:
+{ pkgs, attrs, username, host-name, version, lib, nix-index-database, addresses, ... }@ args:
 let
   appmod = "CTRLALT";
   monitors = {
@@ -37,7 +37,7 @@ in
       hyprland = {
         enable = true;
         plugins = [
-          hy3.packages.x86_64-linux.hy3
+          attrs.hy3.packages.x86_64-linux.hy3
         ];
         settings = {
           bind = [
