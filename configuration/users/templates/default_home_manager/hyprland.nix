@@ -1,4 +1,4 @@
-{ pkgs, attrs, username, host-name, version, lib, nix-index-database, addresses, ... }@ args:
+{ pkgs, attrs, username, host-name, version, lib, nix-index-database, addresses, hy3, ... }@ args:
 let
   appmod = "CTRLALT";
   monitors = {
@@ -36,7 +36,9 @@ in
     wayland.windowManager = {
       hyprland = {
         enable = true;
-        plugins = [];
+        plugins = [
+          hy3.packages.x86_64-linux.hy3
+        ];
         settings = {
           bind = [
             "${appmod}, S, exec, ${pkgs.grimblast}/bin/grimblast copy area"
@@ -107,7 +109,7 @@ in
             ", switch:off:2a29c40, exec, hyprctl keyword monitor \"eDP-2, 2560x1600@120, 0x0, 1\""
           ];
           bindm = [
-            "SUPER, mouse:272, movewindow"
+            "SUPER, mouse:272, hy3:movewindow"
             "SUPER, mouse:274, resizewindow"
           ];
           binde = [
@@ -141,6 +143,7 @@ in
           windowrulev2 = [
             "float,class:^(kitty)$"
             "float,class:^(pavucontrol)$"
+            "float,class:^(org\.gnome\.nautilus)$"
           ];
           layerrule = [
             "blur,launcher"
@@ -155,7 +158,8 @@ in
             "col.nogroup_border" = "0x44dd7777";
             "col.nogroup_border_active" = "0x55dd7777";
             cursor_inactive_timeout = 10;
-            layout = "dwindle";
+            # layout = "dwindle";
+            layout = "hy3";
             no_cursor_warps = true;
             no_focus_fallback = false;
             resize_on_border = true;
