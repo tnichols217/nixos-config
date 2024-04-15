@@ -95,7 +95,8 @@ in
             "CTRL_ALT_SHIFT, right, pin"
             "SUPER, bracketright, fullscreen, 2"
             "SUPER_SHIFT, bracketright, fakefullscreen"
-            ", XF86AudioMicMute, exec, ${pkgs.wireplumber}/bin/wpctl set-mute @DEFAULT_SINK@ toggle"
+            ", XF86AudioMicMute, exec, ${pkgs.wireplumber}/bin/wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+            "SHIFT, XF86AudioMicMute, exec, ${pkgs.wireplumber}/bin/wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
             ", XF86Launch1, exec, ${pkgs.kitty}/bin/kitty sudo bash -c \"cd /etc/nixos; git stash; git stash clear; git pull; nixos-rebuild switch --flake \\\".#${host-name}\\\"\""
           ];
           bindl = [

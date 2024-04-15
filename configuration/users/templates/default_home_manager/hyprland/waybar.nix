@@ -190,7 +190,7 @@ builtins.toJSON {
         "default" = ["" "" ""];
       };
       "on-click" = "${pkgs.pavucontrol}/bin/pavucontrol";
-      "on-click-right" = "${pkgs.wireplumber}/bin/wpctl set-mute @DEFAULT_SINK@ toggle";
+      "on-click-right" = "${pkgs.wireplumber}/bin/wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
       "on-scroll-up" = "${pkgs.wireplumber}/bin/wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 1%+";
       "on-scroll-down" = "${pkgs.wireplumber}/bin/wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 1%-";
     };
