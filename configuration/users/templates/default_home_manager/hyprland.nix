@@ -37,7 +37,7 @@ in
       hyprland = {
         enable = true;
         plugins = [
-          attrs.hy3.packages.x86_64-linux.hy3
+          # attrs.hy3.packages.x86_64-linux.hy3
         ];
         settings = {
           bind = [
@@ -109,7 +109,7 @@ in
             ", switch:off:2a29c40, exec, hyprctl keyword monitor \"eDP-2, 2560x1600@120, 0x0, 1\""
           ];
           bindm = [
-            "SUPER, mouse:272, hy3:movewindow"
+            "SUPER, mouse:272, movewindow"
             "SUPER, mouse:274, resizewindow"
           ];
           binde = [
@@ -158,8 +158,8 @@ in
             "col.nogroup_border" = "0x44dd7777";
             "col.nogroup_border_active" = "0x55dd7777";
             cursor_inactive_timeout = 10;
-            # layout = "dwindle";
-            layout = "hy3";
+            layout = "dwindle";
+            # layout = "hy3";
             no_cursor_warps = true;
             no_focus_fallback = false;
             resize_on_border = true;
