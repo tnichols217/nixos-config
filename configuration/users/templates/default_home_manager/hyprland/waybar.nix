@@ -18,7 +18,6 @@ builtins.toJSON {
       "temperature"
       "backlight"
       "keyboard-state"
-      "sway/language"
       "battery"
       "clock"
       "tray"

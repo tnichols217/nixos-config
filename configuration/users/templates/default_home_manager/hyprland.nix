@@ -26,6 +26,9 @@ in
       "hypr/hypridle.conf" = {
         text = import ./hyprland/hypridle.nix { inherit pkgs; };
       };
+      "tofi/config" = {
+        text = import ./hyprland/tofi.nix args;
+      };
       "waybar/config.jsonc" = {
         text = import ./hyprland/waybar.nix args;
       };
