@@ -6,6 +6,7 @@ placeholder-color = #FFF9
 selection-color = #FFFFFF
 input-color = #FFFFFF
 text-color = #FFF9
+corner-radius = 10
 prompt-padding = 0
 width = 20%
 height = 30%
