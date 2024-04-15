@@ -1,6 +1,11 @@
 { ... }:
 ''
+placeholder-text = "> Search"
 prompt-text = ""
+placeholder-color = #FFF9
+selection-color = #FFFFFF
+input-color = #FFFFFF
+text-color = #FFF9
 prompt-padding = 0
 width = 20%
 height = 30%
