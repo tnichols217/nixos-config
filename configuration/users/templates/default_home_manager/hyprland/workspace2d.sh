@@ -41,6 +41,8 @@ function moveWorkspace {
         "left" | "right" | "up" | "down") hyprctl dispatch workspace $ws ;;
         "move_left" | "move_right" | "move_up" | "move_down") hyprctl dispatch movetoworkspace $ws ;;
     esac
+
+    hyprctl dispatch moveworkspacetomonitor $ws $screen
 }
 
 ## Get active workspace and translate to x / y
