@@ -143,7 +143,7 @@ in
             "float,class:^(pavucontrol)$"
           ];
           layerrule = [
-            "blur,overlay"
+            "blur,launcher"
           ];
           general = {
             border_size = 0;
