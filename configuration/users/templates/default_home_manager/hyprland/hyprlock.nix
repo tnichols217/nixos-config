@@ -7,7 +7,7 @@ background {
     monitor =
     path = ${wallpaper}
     color = rgba(25, 20, 20, 1.0)
-    blur_passes = 1
+    blur_passes = 0
     blur_size = 7
     noise = 0.0
     contrast = 0.9
