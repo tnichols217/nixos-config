@@ -10,6 +10,10 @@
   security.pam.u2f.enable = true;
 
   security.pam.services = {
+    hyprland = {
+      u2fAuth = true;
+      unixAuth = true;
+    };
     sddm.u2fAuth = true;
     sddm-greeter.u2fAuth = true;
     login.u2fAuth = true;
