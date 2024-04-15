@@ -212,7 +212,7 @@ in
             left_handed = false;
             # scroll_method = "2fg";
             scroll_method = "on_button_down";
-            scroll_button = 274;
+            scroll_button = 273;
             scroll_button_lock = true;
             natural_scroll = false;
             follow_mouse = 2;
