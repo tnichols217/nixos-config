@@ -65,6 +65,7 @@
       vscode_exts.vscjava.vscode-java-test
       vscode_exts.vscjava.vscode-java-debug
       vscode_exts.vscjava.vscode-maven
+      vscode_exts.ms-vsliveshare.vsliveshare
     ];
   }) // { pname = "vscodium"; };
   userSettings = {
