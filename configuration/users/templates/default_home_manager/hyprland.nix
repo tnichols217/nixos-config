@@ -213,7 +213,7 @@ in
             # scroll_method = "2fg";
             scroll_method = "on_button_down";
             scroll_button = 273;
-            scroll_button_lock = true;
+            scroll_button_lock = false;
             natural_scroll = false;
             follow_mouse = 2;
             mouse_refocus = true;
