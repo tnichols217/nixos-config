@@ -11,4 +11,5 @@
   environment.systemPackages = [
     pkgs.swtpm
   ];
+  programs.nix-ld.dev.enable = true
 }

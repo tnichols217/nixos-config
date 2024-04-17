@@ -87,6 +87,9 @@
       flake = false;
     };
 
+    
+    nix-ld.url = "github:Mic92/nix-ld";
+
     hy3 = {
       url = "github:outfoxxed/hy3";
     };
@@ -94,12 +97,12 @@
     flake-utils.url = "github:numtide/flake-utils";
   };
   
-  outputs = { self, nixpkgs, nixos-generators, nix-index-database, nixpkgs_old, nix-vscode-extensions, arion, minecraft-arion, flake-utils, qbittorrent-module, hy3, ... }@attrs: let 
+  outputs = { self, nixpkgs, nixos-generators, nix-index-database, nixpkgs_old, nix-vscode-extensions, arion, minecraft-arion, flake-utils, qbittorrent-module, hy3, nix-ld ... }@attrs: let 
       mods = [
           attrs.home-manager.nixosModules.default
-
           attrs.impermanence.nixosModules.impermanence
           attrs.nur.nixosModules.nur
+          nix-ld.nixosModules.nix-ld
           (qbittorrent-module + "/nixos/modules/services/torrent/qbittorrent.nix")
           # nix-index-database.nixosModules.nix-index
           ./configuration.nix
