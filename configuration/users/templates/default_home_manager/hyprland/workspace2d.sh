@@ -26,6 +26,10 @@ function moveWorkspace {
     local x=$(x_value $ws)
     local y=$(y_value $ws)
     case "$direction" in
+        "left" | "right" | "move_left" | "move_right") hyprctl keyword animation "workspaces,1,1,default,slide"; ;;
+        "up" | "down" | "move_up" | "move_down") hyprctl keyword animation "workspaces,1,1,default,slidevert"; ;;
+    esac
+    case "$direction" in
         "left" | "move_left") x=$((($x + $matrix_size - 1) % $matrix_size));  ;;
         "right" | "move_right") x=$((($x + 1) % $matrix_size)) ;;
         "up" | "move_up") y=$((($y + $matrix_size - 1) % $matrix_size)) ;;
