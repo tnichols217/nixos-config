@@ -141,6 +141,7 @@ in
         playerctl
         parallel
         gnome.nautilus
+        kdePackages.ksshaskpass
 
         # programs
         anki
