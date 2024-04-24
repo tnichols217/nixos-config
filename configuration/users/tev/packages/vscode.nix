@@ -66,6 +66,7 @@
       vscode_exts.vscjava.vscode-java-debug
       vscode_exts.vscjava.vscode-maven
       openvsx_exts.genuitecllc.codetogether
+      pkgs.vscode-extensions."13xforever".language-x86-64-assembly
     ];
   }) // { pname = "vscodium"; };
   userSettings = {
