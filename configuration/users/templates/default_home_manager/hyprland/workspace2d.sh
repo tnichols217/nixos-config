@@ -5,6 +5,7 @@ matrix_max=$(($matrix_size ** 2))
 max_screens=10
 direction=$1
 is_all=$2
+is_sync=$3
 
 ## Functions
 function reload_waybar {
@@ -49,10 +50,6 @@ function moveWorkspace {
     hyprctl dispatch moveworkspacetomonitor $ws $screen
 }
 
-## Get active workspace and translate to x / y
-# active_ws=$(hyprctl monitors -j | jq '.[] | select(.focused) | .activeWorkspace.id')
-# active_monitor=$(hyprctl monitors -j | jq '.[] | select(.focused) | .id')
-
 orig_mon=$(hyprctl monitors -j | jq '.[] | select(.focused) | .id, .activeWorkspace.id')
 moveWorkspace $direction $(echo $orig_mon)
 
@@ -68,26 +65,14 @@ if [ "$is_all" = "all" ]; then
     set -- $all_ws
     while [ ! -z "$1" ]
     do
-        moveWorkspace $direction_all $1 $2
+        if [ "$is_sync" = "sync" ]; then
+            moveWorkspace $direction_all $1 $(echo $orig_mon | awk '{print $2}')
+        else
+            moveWorkspace $direction_all $1 $2
+        fi
         shift 2
     done
     moveWorkspace $direction_all $(echo $orig_mon)
 fi
-
-# case "$1" in
-# 	"left" | "move_left") x=$((($x + $matrix_size - 1) % $matrix_size));  ;;
-# 	"right" | "move_right") x=$((($x + 1) % $matrix_size)) ;;
-# 	"up" | "move_up") y=$((($y + $matrix_size - 1) % $matrix_size)) ;;
-# 	"down" | "move_down") y=$((($y + 1) % $matrix_size)) ;;
-# 	"query") echo "($x,$y)"; exit ;;
-# esac
-
-# ## Generate new workspace number
-# ws=$(($max_screens * ($y * $matrix_size + $x) + $active_monitor + 1))
-
-# case "$1" in
-# 	"left" | "right" | "up" | "down") hyprctl dispatch workspace $ws ;;
-# 	"move_left" | "move_right" | "move_up" | "move_down") hyprctl dispatch movetoworkspace $ws ;;
-# esac
 
 reload_waybar
