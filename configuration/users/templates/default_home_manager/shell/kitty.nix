@@ -16,6 +16,10 @@
           background_opacity = "0.5";
           background_blur = 5;
         };
+        keybindings = {
+          "ctrl+shift+t" = "new_tab_with_cwd !neighbor";
+          "ctrl+shift+alt+t" = "new_tab !neighbor";
+        };
       };
     };
   };
