@@ -73,6 +73,10 @@
     nix-vscode-extensions = {
       url = "github:nix-community/nix-vscode-extensions";
     };
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # firefox addons
     librewolfConfig = {
@@ -102,6 +106,7 @@
           attrs.home-manager.nixosModules.default
           attrs.impermanence.nixosModules.impermanence
           attrs.nur.nixosModules.nur
+          attrs.nixvim.homeManagerModules.nixvim
           nix-ld.nixosModules.nix-ld
           (qbittorrent-module + "/nixos/modules/services/torrent/qbittorrent.nix")
           # nix-index-database.nixosModules.nix-index
