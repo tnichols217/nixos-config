@@ -1,0 +1,90 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "monospace";
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+    color: #464646 ;
+}
+
+#window {
+    font-weight: bold;
+    font-family: "monospace";
+}
+
+#workspaces button {
+    padding: 0 5px;
+    background: transparent;
+    color: #464646 ;
+    border-top: 2px solid transparent;
+}
+#workspaces button.active {
+    color: #464646;
+    border-top: 2px solid #464646;
+}
+#mode {
+    background: #464646;
+    border-bottom: 3px solid white;
+}
+
+#clock, #battery, #power-profiles-daemon, #idle_inhibitor, #backlight, #network, #pulseaudio, #tray, #mode {
+    padding: 0 4px;
+    margin: 0 3px;
+}
+
+#clock {
+    font-weight: bold;
+}
+
+#battery {
+}
+
+#battery icon {
+    color: red;
+}
+
+#battery.charging {
+    color: #464646; 
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #464646 ;
+    }
+}
+
+#battery.warning:not(.charging) {
+    color: #464646 ;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#cpu {
+}
+
+#memory {
+}
+
+#network {
+}
+
+#network.disconnected {
+    color: #f53c3c;
+}
+
+#pulseaudio {
+}
+
+#pulseaudio.muted {
+}
+
+#tray {
+}

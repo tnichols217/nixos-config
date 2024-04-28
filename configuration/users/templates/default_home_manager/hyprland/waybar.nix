@@ -6,21 +6,26 @@ builtins.toJSON {
     "spacing" = 4; # Gaps between modules (4px)
     "start_hidden" = true;
     "modules-right" = [
-      "mpris"
-      "privacy"
-      "idle_inhibitor"
-      "hyprland/workspaces"
+      # "mpris"
       "pulseaudio"
+      "keyboard-state"
+      "clock"
+      "tray"
+    ];
+    "modules-center" = [
+      "battery"
+      "backlight"
       "network"
-      "power-profiles-daemon"
       "cpu"
       "memory"
       "temperature"
-      "backlight"
-      "keyboard-state"
-      "battery"
-      "clock"
-      "tray"
+      "power-profiles-daemon"
+
+    ];
+    "modules-left" = [
+      "hyprland/workspaces"
+      "idle_inhibitor"
+      "privacy"
     ];
     "keyboard-state" = {
       "numlock" = true;
@@ -193,4 +198,38 @@ builtins.toJSON {
       "on-scroll-up" = "${pkgs.wireplumber}/bin/wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 1%+";
       "on-scroll-down" = "${pkgs.wireplumber}/bin/wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 1%-";
     };
+    "group/group-power" = {
+      "orientation" = "inherit";
+      "drawer" = {
+        "transition-duration" = 500;
+        "children-class" = "not-power";
+        "transition-left-to-right" = false;
+      };
+      "modules"= [
+        "custom/power"
+        "custom/quit"
+        "custom/lock"
+        "custom/reboot"
+      ];
+    };
+    "custom/quit"= {
+      "format"= "󰗼";
+      "tooltip"= false;
+      "on-click"= "hyprctl dispatch exit";
+    };
+    "custom/lock"= {
+      "format"= "󰍁";
+      "tooltip"= false;
+      "on-click"= "hyprlock";
+    };
+    "custom/reboot"= {
+      "format"= "󰜉";
+      "tooltip"= false;
+      "on-click"= "reboot";
+    };
+    "custom/power"= {
+      "format"= "";
+      "tooltip"= false;
+      "on-click"= "poweroff";
+    }
 }
