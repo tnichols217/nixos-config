@@ -1,7 +1,7 @@
 { ... }:
 ''
-placeholder-text = "> Search"
-prompt-text = ""
+placeholder-text = "Search"
+prompt-text = "> "
 placeholder-color = #FFF9
 selection-color = #FFFFFF
 input-color = #FFFFFF
