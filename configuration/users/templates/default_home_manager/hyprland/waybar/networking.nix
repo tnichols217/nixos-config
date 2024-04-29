@@ -1,5 +1,5 @@
 { pkgs, ... }:
-pkgs.writeShellScriptBin "networking.sh" (''
+pkgs.writeShellScriptBin "networking.sh" ''
 NMCLI_COMMAND=${pkgs.networkmanager + "/bin/nmcli"}
 ROFI_COMMAND=${pkgs.tofi + "/bin/tofi"}
 NOTI_COMMAND=${pkgs.libnotify + "/bin/notify-send"}
