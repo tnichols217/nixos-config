@@ -175,6 +175,8 @@ builtins.toJSON {
       "format-linked" = "{ifname} (No IP) ";
       "format-disconnected" = "Disconnected ⚠";
       "format-alt" = "{ifname} = {ipaddr}/{cidr}";
+      "on-click-right" = "${(pkgs.callPackage ./waybar/networking.nix) + "/bin/networking.sh"} connect_new";
+      "on-click-middle" = "${(pkgs.callPackage ./waybar/networking.nix) + "/bin/networking.sh"} disconnect";
     };
     "pulseaudio" = {
       # "scroll-step" = 1; # %; can be a float
