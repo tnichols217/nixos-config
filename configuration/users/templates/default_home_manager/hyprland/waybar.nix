@@ -233,5 +233,5 @@ builtins.toJSON {
       "format"= "";
       "tooltip"= false;
       "on-click"= "poweroff";
-    }
+    };
 }
