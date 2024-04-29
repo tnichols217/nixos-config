@@ -106,7 +106,7 @@
           attrs.home-manager.nixosModules.default
           attrs.impermanence.nixosModules.impermanence
           attrs.nur.nixosModules.nur
-          attrs.nixvim.homeManagerModules.nixvim
+          # attrs.nixvim.homeManagerModules.nixvim
           nix-ld.nixosModules.nix-ld
           (qbittorrent-module + "/nixos/modules/services/torrent/qbittorrent.nix")
           # nix-index-database.nixosModules.nix-index
