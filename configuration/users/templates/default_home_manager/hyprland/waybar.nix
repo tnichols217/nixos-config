@@ -203,11 +203,11 @@ builtins.toJSON {
     };
     "group/group-power" = {
       "orientation" = "inherit";
-      "drawer" = {
-        "transition-duration" = 500;
-        "children-class" = "not-power";
-        "transition-left-to-right" = false;
-      };
+      # "drawer" = {
+      #   "transition-duration" = 500;
+      #   "children-class" = "not-power";
+      #   "transition-left-to-right" = false;
+      # };
       "modules"= [
         "custom/power"
         "custom/quit"
