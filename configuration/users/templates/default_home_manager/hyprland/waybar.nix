@@ -27,11 +27,18 @@ builtins.toJSON {
   ############################# LEFT
   "modules-left" = [
     "hyprland/workspaces"
-    "idle_inhibitor"
-    "privacy"
+    "group/group-info"
     "pulseaudio"
-    "keyboard-state"
   ];
+
+  "group/group-info" = {
+    "orientation" = "inherit";
+    "modules" = [
+      "idle_inhibitor"
+      "privacy"
+      "keyboard-state"
+    ];
+  };
 
   "hyprland/workspaces" = {
     "format" = "{name}";
