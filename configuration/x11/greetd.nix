@@ -4,7 +4,8 @@
     enable = true;
     settings = {
       default_session = {
-        command = "Hyprland";
+        command = "tuigreet --cmd Hyprland";
+        user = "greeter";
       };
     };
     package = pkgs.greetd.tuigreet;
