@@ -31,7 +31,8 @@ button:hover {
 }
 
 widget,
-widget > label
+widget > label,
+box > box > box
 {
     padding: 0 10px;
     /* background-color: transparent; */
@@ -72,9 +73,6 @@ widget > label
 {
     padding-right: 15px;
 }
-
-/* window > box > box > widget {
-} */
 
 widget.disconnected,
 widget.critical,
