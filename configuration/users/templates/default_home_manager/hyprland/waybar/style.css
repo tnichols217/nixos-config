@@ -5,8 +5,7 @@
 }
 
 window#waybar {
-
-    background: #3338;
+    background: rgba(46, 46, 46, 0.533);
     border-bottom: 0;
     color: #ffffff;
     transition-property: background-color;
@@ -17,12 +16,10 @@ window#waybar.hidden {
     opacity: 0;
 }
 
-window#waybar.termite {
-    background-color: #3338;
-}
-
-window#waybar.chromium {
-    background-color: #3338;
+window#waybar.chromium,
+window#waybar.termite
+{
+    background-color: rgba(46, 46, 46, 0.533);
     border: none;
 }
 
