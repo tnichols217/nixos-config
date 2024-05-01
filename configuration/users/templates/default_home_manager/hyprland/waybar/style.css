@@ -38,8 +38,8 @@ widget > label
     color: #ffffff;
 }
 
-box > box > box,
-box > box > widget
+window > box > box > box,
+window > box > box > widget
 {
     border-radius: 26px;
     background-color: rgba(46, 46, 46, 0.533);
