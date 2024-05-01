@@ -29,7 +29,7 @@ builtins.toJSON {
     "hyprland/workspaces"
     "idle_inhibitor"
     "privacy"
-    "wireplumber"
+    "pulseaudio"
     "keyboard-state"
   ];
 
