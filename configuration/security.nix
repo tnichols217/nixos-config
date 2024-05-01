@@ -15,6 +15,7 @@
       unixAuth = true;
     };
     sddm.u2fAuth = true;
+    greetd.u2fAuth = true;
     sddm-greeter.u2fAuth = true;
     login.u2fAuth = true;
     sudo.u2fAuth = true;
