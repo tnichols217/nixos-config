@@ -36,6 +36,7 @@ widget > label
     padding: 0 10px;
     /* background-color: transparent; */
     color: #ffffff;
+    border-radius: 26px;
 }
 
 #window,
@@ -73,7 +74,6 @@ widget > label
 
 window > box > box > widget {
     background-color: rgba(46, 46, 46, 0.533);
-    border-radius: 26px;
 }
 
 widget.disconnected,
