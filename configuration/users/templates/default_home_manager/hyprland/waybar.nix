@@ -184,37 +184,25 @@ builtins.toJSON {
     "critical-threshold" = 80;
     # "format-critical" = "{temperatureC}°C {icon}";
     "format" = "{temperatureC}°C {icon}";
-    "format-icons" = ["" "" ""];
+    "format-icons" = ["" "" ""];
   };
 
   "group/group-power" = {
     "orientation" = "inherit";
     "modules"= [
       "custom/power"
-      "custom/quit"
-      "custom/lock"
       "custom/reboot"
     ];
-  };
-  "custom/quit"= {
-    "format"= "󰗼";
-    "tooltip"= false;
-    "on-click"= "hyprctl dispatch exit";
-  };
-  "custom/lock"= {
-    "format"= "󰍁";
-    "tooltip"= false;
-    "on-click"= "hyprlock";
-  };
-  "custom/reboot"= {
-    "format"= "󰜉";
-    "tooltip"= false;
-    "on-click"= "reboot";
   };
   "custom/power"= {
     "format"= "";
     "tooltip"= false;
     "on-click"= "poweroff";
+  };
+  "custom/reboot"= {
+    "format"= "󰜉";
+    "tooltip"= false;
+    "on-click"= "reboot";
   };
 
 
