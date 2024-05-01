@@ -34,7 +34,7 @@ widget,
 widget > label
 {
     padding: 0 10px;
-    /* background-color: transparent; */
+    padding-right: 15px;
     color: #ffffff;
 }
 
@@ -71,12 +71,13 @@ window > box > box > widget
     animation-direction: alternate;
 }
 
-#power-profiles-daemon,
+/* #power-profiles-daemon,
+#privacy,
 #custom-reboot,
 #custom-power
 {
     padding-right: 15px;
-}
+} */
 
 widget.disconnected,
 widget.critical,
