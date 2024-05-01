@@ -108,7 +108,7 @@ builtins.toJSON {
     "network"
     "power-profiles-daemon"
     "group/group-monitor"
-    "group/group-power"
+    # "group/group-power"
   ];
 
   "network" = {
@@ -118,6 +118,7 @@ builtins.toJSON {
     "format-linked" = "{ifname} (No IP) ";
     "format-disconnected" = "Disconnected ⚠";
     "format-alt" = "{ifname} = {ipaddr}/{cidr}";
+    "on-click" = "${pkgs.networkmanagerapplet}/bin/nm-connection-editor";
     "on-click-right" = "bash ${(pkgs.callPackage ./waybar/networking.nix {}) + "/bin/networking.sh"} connect_new";
     "on-click-middle" = "bash ${(pkgs.callPackage ./waybar/networking.nix {}) + "/bin/networking.sh"} disconnect";
   };
