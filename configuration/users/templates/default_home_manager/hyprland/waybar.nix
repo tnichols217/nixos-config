@@ -20,6 +20,7 @@ builtins.toJSON {
       "memory"
       "temperature"
       "power-profiles-daemon"
+      "group/group-power"
 
     ];
     "modules-left" = [
