@@ -132,7 +132,7 @@ in
           exec-once = [
             "${pkgs.dunst}/bin/dunst"
             "${pkgs.hyprpaper}/bin/hyprpaper"
-            "${pkgs.networkmanagerapplet}/bin/nm-applet --indicatior"
+            # "${pkgs.networkmanagerapplet}/bin/nm-applet --indicatior"
             "${pkgs.waybar}/bin/waybar"
             "${pkgs.hypridle}/bin/hypridle"
             "${pkgs.blueman}/bin/blueman-applet"
