@@ -29,7 +29,7 @@ builtins.toJSON {
     "hyprland/workspaces"
     "idle_inhibitor"
     "privacy"
-    "pulseaudio"
+    "wireplumber"
     "keyboard-state"
   ];
 
@@ -86,6 +86,12 @@ builtins.toJSON {
     "on-click-right" = "${pkgs.wireplumber}/bin/wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
     "on-scroll-up" = "${pkgs.wireplumber}/bin/wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 1%+";
     "on-scroll-down" = "${pkgs.wireplumber}/bin/wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 1%-";
+  };
+  "wireplumber" = {
+    "format" = "{volume}% {icon}";
+    "format-muted" = "";
+    "on-click" = "helvum";
+    "format-icons" = ["" "" ""];
   };
   "keyboard-state" = {
     "numlock" = true;

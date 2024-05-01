@@ -32,6 +32,9 @@ in
       "waybar/config.jsonc" = {
         text = import ./hyprland/waybar.nix args;
       };
+      "waybar/style.css" = {
+        sources = ./hyprland/waybar/style.css;
+      };
     };
     wayland.windowManager = {
       hyprland = {
