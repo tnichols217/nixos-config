@@ -2,7 +2,6 @@
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: FontAwesome, monospace;
     font-size: 13px;
-    --critical: #f53c3c;
 }
 
 window#waybar {
@@ -103,7 +102,6 @@ button:hover {
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-    background-color: var(--critical);
     color: #ffffff;
     animation-name: blink;
     animation-duration: 0.5s;
@@ -121,32 +119,21 @@ button:hover {
     padding-right: 15px;
 }
 
-#network.disconnected {
-    background-color: var(--critical);
-}
-
+#network.disconnected,
+#temperature.critical,
 #wireplumber.muted,
-#pulseaudio.muted
+#pulseaudio.muted,
+#mpd.disconnected,
+#workspaces button.urgent,
+#tray > .needs-attention,
+#battery.critical:not(.charging)
 {
-    background-color: var(--critical);
-}
-
-#temperature.critical {
-    background-color: var(--critical);
-}
-
-#tray > .needs-attention {
-    -gtk-icon-effect: highlight;
-    background-color: var(--critical);
+    background-color: #f53c3c;
 }
 
 #idle_inhibitor.activated {
     background-color: #ecf0f1;
     color: #2d3436;
-}
-
-#mpd.disconnected {
-    background-color: var(--critical);
 }
 
 #privacy-item {
@@ -177,8 +164,4 @@ button:hover {
 
 #workspaces button.focused {
     background-color: rgba(0, 0, 0, 0.5);
-}
-
-#workspaces button.urgent {
-    background-color: var(--critical);
 }
