@@ -7,9 +7,9 @@
       ./x11/greetd.nix
     ];
   services = {
+    libinput.enable = true;
     xserver = {
       enable = true;
-      libinput.enable = true;
       wacom.enable = true;
       videoDrivers = (if host-name == "ASUS" then [] else [
         "amdgpu"

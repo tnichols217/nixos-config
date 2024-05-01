@@ -27,18 +27,18 @@
     ratbagd.enable = true;
     xserver = {
       digimend.enable = true;
-      libinput = {
-        enable = true;
-        mouse = {
-          scrollMethod = "button";
-          scrollButton = 3;
-          accelProfile = "flat";
-        };
-        touchpad = {
-          naturalScrolling = true;
-          accelProfile = "flat";
-          tappingButtonMap = "lrm";
-        };
+    };
+    libinput = {
+      enable = true;
+      mouse = {
+        scrollMethod = "button";
+        scrollButton = 3;
+        accelProfile = "flat";
+      };
+      touchpad = {
+        naturalScrolling = true;
+        accelProfile = "flat";
+        tappingButtonMap = "lrm";
       };
     };
   };

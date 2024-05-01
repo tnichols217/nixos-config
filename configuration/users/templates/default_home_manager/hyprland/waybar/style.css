@@ -37,6 +37,7 @@ widget > label
     /* background-color: transparent; */
     color: #ffffff;
     border-radius: 26px;
+    background-color: rgba(46, 46, 46, 0.533);
 }
 
 #window,
@@ -72,9 +73,8 @@ widget > label
     padding-right: 15px;
 }
 
-window > box > box > widget {
-    background-color: rgba(46, 46, 46, 0.533);
-}
+/* window > box > box > widget {
+} */
 
 widget.disconnected,
 widget.critical,
