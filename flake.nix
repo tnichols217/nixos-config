@@ -112,7 +112,7 @@
           # nix-index-database.nixosModules.nix-index
           ./configuration.nix
         ];
-      version = "23.05";
+      version = "24.11";
       config = {
         allowUnfree = true;
         # TODO until obsidian updates electron
