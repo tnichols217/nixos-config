@@ -17,7 +17,8 @@ window#waybar.hidden {
 }
 
 widget,
-widget > label
+widget > label,
+revealer > box
 {
     padding: 0 15px 0 10px;
     border-radius: 26px;
@@ -70,6 +71,10 @@ button.urgent,
 #idle_inhibitor.activated {
     background-color: #ecf0f1;
     color: #2d3436;
+}
+
+#privacy-item {
+    padding: 0 5px;
 }
 
 #privacy-item.screenshare {
