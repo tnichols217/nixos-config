@@ -32,6 +32,9 @@
             src = ./zsh;
           }
         ];
+        history = {
+          share = false;
+        };
         initExtra = let
         functions = {
           gc = "git clone git@github.com:tnichols217/$argv";

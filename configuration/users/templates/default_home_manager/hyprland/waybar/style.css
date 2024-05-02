@@ -77,6 +77,10 @@ button.urgent,
     padding: 0 5px;
 }
 
+#tray {
+    padding: 0px 10px;
+}
+
 #privacy-item.screenshare {
     background-color: #cf5700;
 }
