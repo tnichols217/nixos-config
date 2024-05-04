@@ -5,6 +5,7 @@
     (modulesPath + "/profiles/qemu-guest.nix")
     ./hardware/disks-tmpfs.nix
     ./hardware/usbip.nix
+    ./hardware/rkvm.nix
   ];
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usbhid" "sd_mod" "virtio_pci" "sr_mod" "virtio_blk" "usb_storage" "usbhid" "rtsx_usb_sdmmc" "btrfs" "usbip_host" "sdhci_pci" ];
