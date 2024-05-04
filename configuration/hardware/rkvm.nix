@@ -1,4 +1,4 @@
-{ host-name, ports, addresses, ... }:
+{ host-name, ports, addresses, pkgs, ... }:
 let
   path = "/var/lib/rkvm";
   cert = "${path}/certificate.pem";
