@@ -1,9 +1,10 @@
-{ host-name, ports, addresses, pkgs, ... }:
+{ host-name, lib, ports, addresses, pkgs, ... }:
 let
   path = "/var/lib/rkvm";
   cert = "${path}/certificate.pem";
   key = "${path}/key.pem";
 in
+lib.mkMerge [
 {
   systemd.tmpfiles.rules = [
     "d ${path} 0777 root root"
@@ -43,7 +44,7 @@ in
       };
     };
   };
-} // (if host-name == "ASUS" then {
+} (if host-name == "ASUS" then {
   systemd.services."rkvm-gen" = {
     serviceConfig.Type = "oneshot";
     path = with pkgs; [ rkvm ];
@@ -62,4 +63,4 @@ in
     '';
     wantedBy = ["rkvm-server.service" "rkvm-server.service"];
   };
-})
+})]
