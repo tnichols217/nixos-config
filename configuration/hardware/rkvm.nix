@@ -16,12 +16,11 @@ lib.mkMerge [
       enable = if host-name == "ASUS" then true else false;
       settings = {
         switch-keys = [
-          "left-alt"
           "left-meta"
           "left-ctrl"
-          "esc"
+          "f13"
         ];
-        propagate-switch-keys = false;
+        propagate-switch-keys = true;
         key = "${key}";
         certificate = "${cert}";
         listen = "0.0.0.0:${toString ports.rkvm}";
