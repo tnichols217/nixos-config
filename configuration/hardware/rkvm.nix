@@ -15,7 +15,7 @@ lib.mkMerge [
     serviceConfig.Type = "oneshot";
     path = with pkgs; [ rkvm ];
     script = ''
-      ${pkgs.rkvm}/bin/rkvm-certificate-gen -d ${addresses.asus} ${cert} ${key}
+      ${pkgs.rkvm}/bin/rkvm-certificate-gen -d ${host-name} ${cert} ${key}
     '';
     wantedBy = ["rkvm-server.service" "rkvm-server.service"];
   };
