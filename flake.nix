@@ -153,6 +153,7 @@
         qbittorrent = 9009;
         jellyfin = 8096;
         authelia = 9191;
+        rkvm = 5258;
       };
       addressNumbers = {
         lidarr = "10";
