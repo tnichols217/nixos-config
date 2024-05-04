@@ -4,6 +4,8 @@ let
   monitors = {
     "ASUS" = [
       "DP-1, 2560x1440@170, 2560x1440, 1"
+      "DP-2, disable"
+      "DP-3, disable"
       "DP-4, disable"
     ];
     "ROG" = [
@@ -139,11 +141,7 @@ in
             "${pkgs.blueman}/bin/blueman-applet"
             "${pkgs.wl-clipboard}/bin/wl-paste --type text --watch ${pkgs.cliphist}/bin/cliphist store"
             "${pkgs.wl-clipboard}/bin/wl-paste --type image --watch ${pkgs.cliphist}/bin/cliphist store"
-          ] ++ (if host-name != "ASUS" then [
-            "${pkgs.waynergy}/bin/waynergy -b wlr -N ${host-name} -E -c ${addresses.asus}"
-          ] else [
-            "${pkgs.synergy}/bin/synergys -c ${./hyprland/synergy/ASUS.conf}"
-          ]);
+          ];
           windowrulev2 = [
             "float,class:^(kitty)$"
             "float,class:^(pavucontrol)$"
