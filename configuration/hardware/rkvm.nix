@@ -19,7 +19,9 @@ lib.mkMerge [
           "left-alt"
           "left-meta"
           "left-ctrl"
+          "esc"
         ];
+        propagate-switch-keys = false;
         key = "${key}";
         certificate = "${cert}";
         listen = "0.0.0.0:${toString ports.rkvm}";
