@@ -11,15 +11,6 @@ lib.mkMerge [
     "z ${path} 0777 root root"
   ];
 
-  systemd.services."rkvm-gen" = {
-    serviceConfig.Type = "oneshot";
-    path = with pkgs; [ rkvm ];
-    script = ''
-      ${pkgs.rkvm}/bin/rkvm-certificate-gen -d ${host-name} -d ${addresses.asus} -d tln32asus ${cert} ${key}
-    '';
-    wantedBy = ["rkvm-server.service" "rkvm-server.service"];
-  };
-
   services.rkvm = {
     server = {
       enable = if host-name == "ASUS" then true else false;
@@ -49,7 +40,7 @@ lib.mkMerge [
     serviceConfig.Type = "oneshot";
     path = with pkgs; [ rkvm ];
     script = ''
-      ${pkgs.rkvm}/bin/rkvm-certificate-gen -d ${addresses.asus} ${cert} ${key}
+      ${pkgs.rkvm}/bin/rkvm-certificate-gen -d ${host-name} -d ${addresses.asus} -d tln32asus ${cert} ${key}
       chmod 777 ${cert}
     '';
     wantedBy = ["rkvm-server.service" "rkvm-server.service"];
