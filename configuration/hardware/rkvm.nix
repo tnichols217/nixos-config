@@ -6,8 +6,8 @@ let
 in
 {
   systemd.tmpfiles.rules = [
-    "d ${path}/ 0777 root root"
-    "z ${path}/ 0777 root root"
+    "d ${path} 0777 root root"
+    "z ${path} 0777 root root"
   ];
 
   systemd.services."rkvm-gen" = {
