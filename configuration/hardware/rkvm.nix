@@ -30,7 +30,7 @@ in
         ];
         key = "${key}";
         certificate = "${cert}";
-        listen = "0.0.0.0:${ports.rkvm}";
+        listen = "0.0.0.0:${toString ports.rkvm}";
         password = "0123456789";
       };
     };
@@ -38,7 +38,7 @@ in
       enable = if host-name == "ASUS" then false else true;
       settings = {
         certificate = "${cert}";
-        server = "${addresses.asus}:${ports.rkvm}";
+        server = "${addresses.asus}:${toString ports.rkvm}";
         password = "0123456789";
       };
     };
