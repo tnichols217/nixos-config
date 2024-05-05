@@ -132,7 +132,10 @@ in
             "WLR_NO_HARDWARE_CURSORS,1"
           ] else [];
           monitor = monitors."${host-name}";
-          exec-once = [
+          exec-once = 
+          let
+            algo = "ed25519";
+          in [
             "${pkgs.dunst}/bin/dunst"
             "${pkgs.hyprpaper}/bin/hyprpaper"
             # "${pkgs.networkmanagerapplet}/bin/nm-applet --indicatior"
@@ -141,6 +144,7 @@ in
             "${pkgs.blueman}/bin/blueman-applet"
             "${pkgs.wl-clipboard}/bin/wl-paste --type text --watch ${pkgs.cliphist}/bin/cliphist store"
             "${pkgs.wl-clipboard}/bin/wl-paste --type image --watch ${pkgs.cliphist}/bin/cliphist store"
+            "if [ ! -f ~/.ssh/${algo} ]; then ${pkgs.openssh}/bin/ssh-keygen -t ${algo} -f ~/.ssh/${algo} -N \"\" fi"
           ];
           windowrulev2 = [
             "float,class:^(kitty)$"
