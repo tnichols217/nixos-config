@@ -199,27 +199,39 @@
             specialArgs = fullAttrs // { host-name = "ASUS"; };
             modules = mods ++ [ arion.nixosModules.arion ];
           };
+          linode = nixpkgs.lib.nixosSystem {
+            inherit system;
+            specialArgs = fullAttrs // { host-name = "linode"; };
+            modules = [ ./linode.nix ];
+          };
         };
         packages = 
         let 
-          pack = rec {
-            iso = nixos-generators.nixosGenerate {
-              specialArgs = fullAttrs // { is-iso = true; };
-              pkgs = nixpkgs.legacyPackages.${system};
-              modules = mods;
-              format = "iso";
-            };
-            default = iso;
+          isoargs = {
+            specialArgs = fullAttrs // { is-iso = true; };
+            modules = mods;
+            format = "iso";
           };
-        in pack // {
+          linodeargs = {
+            specialArgs = fullAttrs // { host-name = "linode"; };
+            modules = [ ./linode.nix ];
+            format = "linode";
+          };
+        in rec {
+          iso = nixos-generators.nixosGenerate (isoargs // {
+            pkgs = nixpkgs.legacyPackages.${system};
+          });
+          linode = nixos-generators.nixosGenerate (linodeargs // {
+            pkgs = nixpkgs.legacyPackages.${system};
+          });
+          default = iso;
           cross = (flake-utils.lib.eachDefaultSystem (sys: rec {
-            iso = nixos-generators.nixosGenerate {
-              specialArgs = fullAttrs // { is-iso = true; };
+            iso = nixos-generators.nixosGenerate (isoargs // {
               pkgs = import nixpkgs { localSystem = system; crossSystem = sys; };
-              modules = mods;
-              system = sys;
-              format = "iso";
-            };
+            });
+            linode = nixos-generators.nixosGenerate (linodeargs // {
+              pkgs = import nixpkgs { localSystem = system; crossSystem = sys; };
+            });
             default = iso;
           }));
         };

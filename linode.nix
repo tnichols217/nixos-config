@@ -1,0 +1,6 @@
+{ ... }:
+{
+  imports = [
+    ./linode/configuration.nix
+  ];
+}
