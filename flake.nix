@@ -170,45 +170,59 @@
         data = "${default}/data";
         bucket = "${default}/bucket";
       };
+    in flake-utils.lib.eachDefaultSystem (system:
+    let
       fullAttrs = {
         inherit attrs version addresses persistence ports addressNumbers;
-        pkgs = import nixpkgs { system = "x86_64-linux"; config = config;};
-        oldpkgs = import nixpkgs_old { system = "x86_64-linux"; config = config;};
-        vscode_exts = attrs.nix-vscode-extensions.extensions.x86_64-linux.vscode-marketplace;
-        openvsx_exts = attrs.nix-vscode-extensions.extensions.x86_64-linux.open-vsx;
-        nix-index-database = nix-index-database.packages."x86_64-linux";
+        pkgs = import nixpkgs { inherit system; config = config;};
+        oldpkgs = import nixpkgs_old { inherit system; config = config;};
+        vscode_exts = attrs.nix-vscode-extensions.extensions.${system}.vscode-marketplace;
+        openvsx_exts = attrs.nix-vscode-extensions.extensions.${system}.open-vsx;
+        nix-index-database = nix-index-database.packages.${system};
         host-name = "ROG";
         is-iso = false;
       };
     in {
-    nixosConfigurations = {
-      MSI = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = fullAttrs // { host-name = "MSI"; };
-        modules = mods;
+      nixosConfigurations = {
+        MSI = nixpkgs.lib.nixosSystem {
+          inherit system;
+          specialArgs = fullAttrs // { host-name = "MSI"; };
+          modules = mods;
+        };
+        ROG = nixpkgs.lib.nixosSystem {
+          inherit system;
+          specialArgs = fullAttrs;
+          modules = mods;
+        };
+        ASUS = nixpkgs.lib.nixosSystem {
+          inherit system;
+          specialArgs = fullAttrs // { host-name = "ASUS"; };
+          modules = mods ++ [ arion.nixosModules.arion ];
+        };
       };
-      ROG = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = fullAttrs;
-        modules = mods;
+      packages = 
+      let 
+        pack = rec {
+          iso = nixos-generators.nixosGenerate {
+            specialArgs = fullAttrs // { is-iso = true; };
+            pkgs = nixpkgs.legacyPackages.${system};
+            modules = mods;
+            format = "iso";
+          };
+          default = iso;
+        };
+      in pack // {
+        cross = (flake-utils.lib.eachDefaultSystem (sys: rec {
+          iso = nixos-generators.nixosGenerate {
+            specialArgs = fullAttrs // { is-iso = true; };
+            pkgs = import nixpkgs { localSystem = system; crossSystem = sys; };
+            modules = mods;
+            system = sys;
+            format = "iso";
+          };
+          default = iso;
+        }));
       };
-      ASUS = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = fullAttrs // { host-name = "ASUS"; };
-        modules = mods ++ [ arion.nixosModules.arion ];
-      };
-    };
-    packages.x86_64-linux = rec {
-      iso = nixos-generators.nixosGenerate {
-        specialArgs = fullAttrs // { is-iso = true; };
-        pkgs = nixpkgs.legacyPackages.x86_64-linux;
-        modules = mods;
-        format = "iso";
-      };
-      default = iso;
-    };
-  } // flake-utils.lib.eachDefaultSystem (system:
-    {
       apps = rec {
         test = {
           type = "app";
