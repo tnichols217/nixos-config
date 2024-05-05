@@ -170,78 +170,77 @@
         data = "${default}/data";
         bucket = "${default}/bucket";
       };
-    in {
-      nixosConfigurations = 
+      outs = flake-utils.lib.eachDefaultSystem (system:
       let
-        system = "x86_64-linux";
+        fullAttrs = {
+          inherit attrs version addresses persistence ports addressNumbers;
+          pkgs = import nixpkgs { inherit system; config = config;};
+          oldpkgs = import nixpkgs_old { inherit system; config = config;};
+          vscode_exts = attrs.nix-vscode-extensions.extensions.${system}.vscode-marketplace;
+          openvsx_exts = attrs.nix-vscode-extensions.extensions.${system}.open-vsx;
+          nix-index-database = nix-index-database.packages.${system};
+          host-name = "ROG";
+          is-iso = false;
+        };
       in {
-        MSI = nixpkgs.lib.nixosSystem {
-          inherit system;
-          specialArgs = fullAttrs // { host-name = "MSI"; };
-          modules = mods;
-        };
-        ROG = nixpkgs.lib.nixosSystem {
-          inherit system;
-          specialArgs = fullAttrs;
-          modules = mods;
-        };
-        ASUS = nixpkgs.lib.nixosSystem {
-          inherit system;
-          specialArgs = fullAttrs // { host-name = "ASUS"; };
-          modules = mods ++ [ arion.nixosModules.arion ];
-        };
-      };
-    } // flake-utils.lib.eachDefaultSystem (system:
-    let
-      fullAttrs = {
-        inherit attrs version addresses persistence ports addressNumbers;
-        pkgs = import nixpkgs { inherit system; config = config;};
-        oldpkgs = import nixpkgs_old { inherit system; config = config;};
-        vscode_exts = attrs.nix-vscode-extensions.extensions.${system}.vscode-marketplace;
-        openvsx_exts = attrs.nix-vscode-extensions.extensions.${system}.open-vsx;
-        nix-index-database = nix-index-database.packages.${system};
-        host-name = "ROG";
-        is-iso = false;
-      };
-    in {
-      packages = 
-      let 
-        pack = rec {
-          iso = nixos-generators.nixosGenerate {
-            specialArgs = fullAttrs // { is-iso = true; };
-            pkgs = nixpkgs.legacyPackages.${system};
+        nixosConfigurations = {
+          MSI = nixpkgs.lib.nixosSystem {
+            inherit system;
+            specialArgs = fullAttrs // { host-name = "MSI"; };
             modules = mods;
-            format = "iso";
           };
-          default = iso;
-        };
-      in pack // {
-        cross = (flake-utils.lib.eachDefaultSystem (sys: rec {
-          iso = nixos-generators.nixosGenerate {
-            specialArgs = fullAttrs // { is-iso = true; };
-            pkgs = import nixpkgs { localSystem = system; crossSystem = sys; };
+          ROG = nixpkgs.lib.nixosSystem {
+            inherit system;
+            specialArgs = fullAttrs;
             modules = mods;
-            system = sys;
-            format = "iso";
           };
-          default = iso;
-        }));
-      };
-      apps = rec {
-        test = {
-          type = "app";
-          program = ./nix/scripts/test.sh;
+          ASUS = nixpkgs.lib.nixosSystem {
+            inherit system;
+            specialArgs = fullAttrs // { host-name = "ASUS"; };
+            modules = mods ++ [ arion.nixosModules.arion ];
+          };
         };
-        build = {
-          type = "app";
-          program = ./nix/scripts/build.sh;
+        packages = 
+        let 
+          pack = rec {
+            iso = nixos-generators.nixosGenerate {
+              specialArgs = fullAttrs // { is-iso = true; };
+              pkgs = nixpkgs.legacyPackages.${system};
+              modules = mods;
+              format = "iso";
+            };
+            default = iso;
+          };
+        in pack // {
+          cross = (flake-utils.lib.eachDefaultSystem (sys: rec {
+            iso = nixos-generators.nixosGenerate {
+              specialArgs = fullAttrs // { is-iso = true; };
+              pkgs = import nixpkgs { localSystem = system; crossSystem = sys; };
+              modules = mods;
+              system = sys;
+              format = "iso";
+            };
+            default = iso;
+          }));
         };
-        ciBuild = {
-          type = "app";
-          program = ./nix/scripts/ci-build.sh;
+        apps = rec {
+          test = {
+            type = "app";
+            program = ./nix/scripts/test.sh;
+          };
+          build = {
+            type = "app";
+            program = ./nix/scripts/build.sh;
+          };
+          ciBuild = {
+            type = "app";
+            program = ./nix/scripts/ci-build.sh;
+          };
+          default = build;
         };
-        default = build;
-      };
-    }
-  );
+      });
+  in 
+  outs // {
+    nixosConfigurations = outs.nixosConfigurations // outs.nixosConfigurations."x86_64-linux";
+  };
 }
