@@ -5,6 +5,8 @@ builtins.toJSON {
   "height" = 30;
   "spacing" = 4;
   "start_hidden" = true;
+  "exclusive" = false;
+  "passthrough" = true;
 
   ############################# RIGHT
   "modules-right" = [
