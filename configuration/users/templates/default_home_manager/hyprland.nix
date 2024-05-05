@@ -154,6 +154,7 @@ in
           layerrule = [
             "blur,launcher"
             "blur,waybar"
+            "ignorealpha [0.05],waybar"
           ];
           general = {
             border_size = 0;
