@@ -153,6 +153,7 @@ in
           ];
           layerrule = [
             "blur,launcher"
+            "blur,waybar"
           ];
           general = {
             border_size = 0;
