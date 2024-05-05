@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, host-name, ... }:
 builtins.toJSON {
   "layer" = "top";
   "position" = "top";
@@ -143,8 +143,7 @@ builtins.toJSON {
 
   "group/group-monitor" = {
     "orientation" = "inherit";
-    "modules" = [
-      "battery"
+    "modules" = (if host-name == "ASUS" then [] else ["battery"]) ++ [
       "backlight"
       "cpu"
       "memory"
