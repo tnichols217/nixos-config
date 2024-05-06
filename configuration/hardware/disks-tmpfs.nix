@@ -59,7 +59,7 @@
     };
 
     # media
-    "${persistence.bucket}" = {
+    "${persistence.media}" = {
       device = "/dev/disk/by-label/NIXMEDIA";
       fsType = "ext4";
       neededForBoot = true;
