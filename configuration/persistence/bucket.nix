@@ -7,12 +7,6 @@
       "/var/lib/waydroid"
       "/var/lib/container-storage/volumes"
       "/var/lib/nextcloud/data"
-      "/var/lib/lidarr/data"
-      "/var/lib/radarr/data"
-      "/var/lib/sonarr/data"
-      "/var/lib/readarr/data"
-      "/var/lib/transmission"
-      "/var/lib/qbittorrent"
     ];
   };
 }

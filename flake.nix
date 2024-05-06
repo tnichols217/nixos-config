@@ -169,6 +169,7 @@
         local = "${default}/local";
         data = "${default}/data";
         bucket = "${default}/bucket";
+        media = "${default}/media";
       };
       outs = flake-utils.lib.eachDefaultSystem (system:
       let
