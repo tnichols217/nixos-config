@@ -57,6 +57,13 @@
       fsType = "ext4";
       neededForBoot = true;
     };
+
+    # media
+    "${persistence.bucket}" = {
+      device = "/dev/disk/by-label/NIXMEDIA";
+      fsType = "ext4";
+      neededForBoot = true;
+    };
   };
 
 
