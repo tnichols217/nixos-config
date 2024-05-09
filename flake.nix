@@ -139,6 +139,7 @@
         jellyfin = "jellyfin.${addresses.default}";
         qbittorrent = "qbit.${addresses.default}";
         authelia = "auth.${addresses.default}";
+        home-assistant = "hath.${addresses.default}";
       };
       ports = {
         serve = 5000;
