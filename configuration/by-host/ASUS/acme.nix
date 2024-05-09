@@ -19,6 +19,7 @@
       "${addresses.jellyfin}" = {};
       "${addresses.qbittorrent}" = {};
       "${addresses.authelia}" = {};
+      "${addresses.home-assistant}" = {};
     };
   };
 }
