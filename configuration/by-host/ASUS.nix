@@ -5,6 +5,7 @@
     ./ASUS/arion.nix
     ./ASUS/cron.nix
     ./ASUS/hardware.nix
+    ./ASUS/home-assistant.nix
     ./ASUS/networking.nix
     # ./ASUS/nextcloud.nix
     ./ASUS/nginx.nix
