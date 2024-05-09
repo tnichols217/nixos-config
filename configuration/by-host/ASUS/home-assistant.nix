@@ -8,6 +8,7 @@
     extraPackages =  python3Packages: with python3Packages; [
       psycopg2
       numpy
+      aiodhcpwatcher
     ];
     configDir = "/var/lib/hass";
     config = {
