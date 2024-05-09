@@ -154,6 +154,7 @@
         jellyfin = 8096;
         authelia = 9191;
         rkvm = 5258;
+        home-assistant = 8123;
       };
       addressNumbers = {
         lidarr = "10";
