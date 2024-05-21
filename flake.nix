@@ -215,27 +215,42 @@
             modules = mods;
             format = "iso";
           };
+          sdargs = {
+            specialArgs = fullAttrs // { is-iso = true; };
+            modules = mods;
+            format = "sd-aarch64";
+          };
           linodeargs = {
             specialArgs = fullAttrs // { host-name = "linode"; };
             modules = [ ./linode.nix ];
             format = "linode";
           };
+          pkgs = nixpkgs.legacyPackages.${system};
         in rec {
           iso = nixos-generators.nixosGenerate (isoargs // {
-            pkgs = nixpkgs.legacyPackages.${system};
+            inherit pkgs;
+          });
+          sd = nixos-generators.nixosGenerate (isoargs // {
+            inherit pkgs;
           });
           linode = nixos-generators.nixosGenerate (linodeargs // {
-            pkgs = nixpkgs.legacyPackages.${system};
+            inherit pkgs;
           });
           default = iso;
-          cross = (flake-utils.lib.eachDefaultSystem (sys: rec {
-            iso = nixos-generators.nixosGenerate (isoargs // {
+          cross = (flake-utils.lib.eachDefaultSystem (sys:
+          let 
               pkgs = import nixpkgs { localSystem = system; crossSystem = sys; };
+          in rec {
+            iso = nixos-generators.nixosGenerate (isoargs // {
+              inherit pkgs;
+            });
+            sd = nixos-generators.nixosGenerate (isoargs // {
+              inherit pkgs;
             });
             linode = nixos-generators.nixosGenerate (linodeargs // {
-              pkgs = import nixpkgs { localSystem = system; crossSystem = sys; };
+              inherit pkgs;
             });
-            default = iso;
+            default = sd;
           }));
         };
         apps = rec {
