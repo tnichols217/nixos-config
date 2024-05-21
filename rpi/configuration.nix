@@ -3,8 +3,9 @@
   imports = [
     ./configuration/disks.nix
     ((import ../configuration/users/templates/persist.nix) (args // { username = "user"; }))
+    ((import ../configuration/users/templates/normal_sudo.nix) (args // { username = "user"; }))
   ];
-  
+
   networking.hostName = host-name;
 
   time.timeZone = "Asia/Kuala_Lumpur";

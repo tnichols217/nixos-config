@@ -238,17 +238,21 @@
           modules = pre-mods ++ [ ./rpi.nix ];
           format = "sd-aarch64";
         };
+        pkgs = import nixpkgs { inherit system; };
       in rec {
-        iso = nixos-generators.nixosGenerate isoargs;
-        sd = nixos-generators.nixosGenerate sdargs;
-        rpi = nixos-generators.nixosGenerate rpiargs;
-        linode = nixos-generators.nixosGenerate linodeargs;
+        iso = nixos-generators.nixosGenerate (isoargs // { inherit pkgs; });
+        sd = nixos-generators.nixosGenerate (sdargs // { inherit pkgs; });
+        rpi = nixos-generators.nixosGenerate (rpiargs // { inherit pkgs; });
+        linode = nixos-generators.nixosGenerate (linodeargs // { inherit pkgs; });
         default = rpi;
-        cross = (flake-utils.lib.eachDefaultSystem (sys: rec {
-          iso = nixos-generators.nixosGenerate isoargs // { system = sys; };
-          sd = nixos-generators.nixosGenerate sdargs // { system = sys; };
-          rpi = nixos-generators.nixosGenerate rpiargs // { system = sys; };
-          linode = nixos-generators.nixosGenerate linodeargs // { system = sys; };
+        cross = (flake-utils.lib.eachDefaultSystem (sys: 
+        let
+          pkgs = import nixpkgs { localSystem = system; crossSystem = sys; };
+        in rec {
+          iso = nixos-generators.nixosGenerate (isoargs // { inherit pkgs; system = sys; });
+          sd = nixos-generators.nixosGenerate (sdargs // { inherit pkgs; system = sys; });
+          rpi = nixos-generators.nixosGenerate (rpiargs // { inherit pkgs; system = sys; });
+          linode = nixos-generators.nixosGenerate (linodeargs // { inherit pkgs; system = sys; });
           default = rpi;
         }));
       };
