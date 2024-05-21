@@ -1,4 +1,4 @@
-{ config, lib, pkgs, modulesPath, is-iso, persistence, ... }:
+{ config, lib, pkgs, modulesPath, is-iso, persistence, host-name, ... }:
 
 {
   fileSystems = (if is-iso then
@@ -28,44 +28,43 @@
       neededForBoot = true;
     };
     
-  }) // {
-    # combine
-    "/" = {
-      device = "none";
-      fsType = "tmpfs";
-      options = [ "defaults" "size=64G" "mode=755" ];
-      neededForBoot = true;
-    };
+  }) // (if host-name == "ASUS" then {
+      # media
+      "${persistence.media}" = {
+        device = "/dev/disk/by-label/NIXMEDIA";
+        fsType = "ext4";
+        neededForBoot = true;
+      };
+    } else {} // {
+      # combine
+      "/" = {
+        device = "none";
+        fsType = "tmpfs";
+        options = [ "defaults" "size=64G" "mode=755" ];
+        neededForBoot = true;
+      };
 
-    # local data
-    "${persistence.local}" = {
-      device = "/dev/disk/by-label/NIXPERSIST";
-      fsType = "ext4";
-      neededForBoot = true;
-    };
+      # local data
+      "${persistence.local}" = {
+        device = "/dev/disk/by-label/NIXPERSIST";
+        fsType = "ext4";
+        neededForBoot = true;
+      };
 
-    # data
-    "${persistence.data}" = {
-      device = "/dev/disk/by-label/NIXDATA";
-      fsType = "ext4";
-      neededForBoot = true;
-    };
+      # data
+      "${persistence.data}" = {
+        device = "/dev/disk/by-label/NIXDATA";
+        fsType = "ext4";
+        neededForBoot = true;
+      };
 
-    # bucket
-    "${persistence.bucket}" = {
-      device = "/dev/disk/by-label/NIXBUCKET";
-      fsType = "ext4";
-      neededForBoot = true;
-    };
-
-    # media
-    "${persistence.media}" = {
-      device = "/dev/disk/by-label/NIXMEDIA";
-      fsType = "ext4";
-      neededForBoot = true;
-    };
-  };
-
+      # bucket
+      "${persistence.bucket}" = {
+        device = "/dev/disk/by-label/NIXBUCKET";
+        fsType = "ext4";
+        neededForBoot = true;
+      };
+  });
 
   swapDevices = [
     { 
