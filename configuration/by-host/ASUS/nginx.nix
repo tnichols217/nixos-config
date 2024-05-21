@@ -231,6 +231,21 @@ in
             }
           ];
         };
+        "home-assistant" = {
+          locations."/" = {
+            proxyPass = "http://localhost:${toString ports.home-assistant}";
+          };
+          useACMEHost = "${addresses.home-assistant}";
+          serverName = "${addresses.home-assistant}";
+          forceSSL = true;
+          listen = [
+            {
+              addr = "0.0.0.0";
+              port = 443;
+              ssl = true;
+            }
+          ];
+        };
       };
     };
   };

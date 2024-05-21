@@ -20,7 +20,13 @@
     ];
     configDir = "/var/lib/hass";
     config = {
-      http.server_port = ports.home-assistant;
+      http = {
+        use_x_forwarded_for = true;
+        trusted_proxies = [ "127.0.0.1" "::1" ];
+        ip_ban_enabled = true;
+        login_attempts_threshold = 5;
+        server_port = ports.home-assistant;
+      };
       homeassistant.unit_system = "metric";
     };
   };
