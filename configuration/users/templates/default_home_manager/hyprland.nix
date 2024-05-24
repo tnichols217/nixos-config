@@ -156,7 +156,7 @@ in
             "blur,waybar"
             "ignorealpha [0.05],waybar"
           ];
-          workspacerule = [
+          workspace = [
             "w[tg1],rounding:false"
           ];
           general = {
