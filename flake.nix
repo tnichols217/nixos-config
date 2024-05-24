@@ -226,7 +226,7 @@
         sdargs = {
           specialArgs = fullAttrs // { is-iso = true; };
           modules = mods;
-          format = "sd-aarch64";
+          format = "sd-aarch64-installer";
         };
         linodeargs = {
           specialArgs = fullAttrs // { host-name = "linode"; };
@@ -236,7 +236,7 @@
         rpiargs = {
           specialArgs = fullAttrs // { host-name = "rpi"; };
           modules = pre-mods ++ [ ./rpi.nix ];
-          format = "sd-aarch64";
+          format = "iso";
         };
         pkgs = import nixpkgs { inherit system; };
       in rec {
@@ -272,7 +272,7 @@
         default = build;
       };
     });
-  in 
+  in
   outs // {
     nixosConfigurations = outs.nixosConfigurations // outs.nixosConfigurations."x86_64-linux";
   };

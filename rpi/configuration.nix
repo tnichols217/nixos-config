@@ -14,7 +14,7 @@
 
   users.users = {
     root = {
-      hashedPassword = "!";
+      hashedPassword = lib.mkForce "!";
       packages = with pkgs; [
       ];
       openssh.authorizedKeys.keys = [

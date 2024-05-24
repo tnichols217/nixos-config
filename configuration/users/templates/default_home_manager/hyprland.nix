@@ -156,6 +156,9 @@ in
             "blur,waybar"
             "ignorealpha [0.05],waybar"
           ];
+          workspacerule = [
+            "w[tg1],rounding:false"
+          ];
           general = {
             border_size = 0;
             gaps_in = 3;

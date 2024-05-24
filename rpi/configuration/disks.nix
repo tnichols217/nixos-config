@@ -10,12 +10,12 @@
       neededForBoot = true;
     };
     # combine
-    # "/" = {
-    #   device = "none";
-    #   fsType = "tmpfs";
-    #   options = [ "defaults" "size=8G" "mode=755" ];
-    #   neededForBoot = true;
-    # };
+    "/" = {
+      device = "none";
+      fsType = "tmpfs";
+      options = [ "defaults" "size=8G" "mode=755" ];
+      neededForBoot = true;
+    };
 
     # local data
     "${persistence.local}" = {
