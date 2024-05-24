@@ -198,6 +198,7 @@ in
         localsend
         osu-lazer
         tartube-yt-dlp
+        android-studio
 
         # python
         (pkgs.python3.withPackages (pythonPackages: with pythonPackages; [
