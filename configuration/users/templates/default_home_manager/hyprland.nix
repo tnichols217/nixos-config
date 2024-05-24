@@ -158,6 +158,7 @@ in
           ];
           workspace = [
             "w[tg1],rounding:false"
+            "w[t1],rounding:false"
           ];
           general = {
             border_size = 0;
