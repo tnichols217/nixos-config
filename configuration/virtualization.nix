@@ -16,6 +16,8 @@
             secureBoot = true;
             tpmSupport = true;
           }).fd
+
+          pkgs.pkgsCross.aarch64-multiplatform.OVMF.fd
         ];
       };
     };
