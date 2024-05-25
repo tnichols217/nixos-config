@@ -204,7 +204,7 @@
         ASUS = inputs.nixpkgs.lib.nixosSystem {
           inherit system;
           specialArgs = fullAttrs // { host-name = "ASUS"; };
-          modules = mods ++ [ arion.nixosModules.arion ];
+          modules = mods ++ [ inputs.arion.nixosModules.arion ];
         };
         linode = inputs.nixpkgs.lib.nixosSystem {
           inherit system;
