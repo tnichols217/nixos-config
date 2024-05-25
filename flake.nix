@@ -123,6 +123,9 @@
       permittedInsecurePackages = [
         "electron-25.9.0"
       ];
+      overlays = [
+        inputs.raspberry-pi-nix.overlays.core
+      ];
     };
     addresses = rec {
       pigs = "pigsgo.mooo.com";
