@@ -196,7 +196,7 @@
       in {
         MSI = inputs.nixpkgs.lib.nixosSystem {
           inherit system;
-          specialArgs = fullAttrsPkgs // { inherit pkgs; host-name = "MSI"; };
+          specialArgs = fullAttrsPkgs // { host-name = "MSI"; };
           modules = mods;
         };
         ROG = inputs.nixpkgs.lib.nixosSystem {
