@@ -102,7 +102,7 @@
     flake-utils.url = "github:numtide/flake-utils";
   };
   
-  outputs = { self, nixpkgs, nixos-generators, nix-index-database, nixpkgs_old, nix-vscode-extensions, arion, minecraft-arion, flake-utils, qbittorrent-module, hy3, nix-ld, ... }@attrs: let 
+  outputs = { self, ... }@attrs: let 
     pre-mods = [
       attrs.home-manager.nixosModules.default
       attrs.impermanence.nixosModules.impermanence
