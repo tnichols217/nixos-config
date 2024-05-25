@@ -171,15 +171,17 @@ in
             "col.active_border" = "0x44ffffff";
             "col.nogroup_border" = "0x44dd7777";
             "col.nogroup_border_active" = "0x55dd7777";
-            cursor_inactive_timeout = 10;
             layout = "dwindle";
             # layout = "hy3";
-            no_cursor_warps = true;
             no_focus_fallback = false;
             resize_on_border = true;
             extend_border_grab_area = 15;
             hover_icon_on_border = true;
             allow_tearing = false;
+          };
+          cursor = {
+            inactive_timeout = 10;
+            no_warps = true;
           };
           binds = {
             movefocus_cycles_fullscreen = false;

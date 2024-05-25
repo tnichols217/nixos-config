@@ -149,7 +149,7 @@ in
         filelight
         libreoffice
         # Davinci doesnt work on the latest nixpkgs
-        davinci-resolve
+        # davinci-resolve
         # (pkgs.callPackage ./packages/davinci.nix {})
         lolcat
         htop
