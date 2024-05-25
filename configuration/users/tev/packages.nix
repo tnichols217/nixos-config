@@ -1,4 +1,4 @@
-{ config, pkgs, username, attrs, host-name, nixpkgs, oldpkgs, vscode_exts, openvsx_exts, addresses, ... }:
+{ config, pkgs, username, attrs, host-name, vscode_exts, openvsx_exts, addresses, ... }:
 let
 ssh = {
   enable = true;

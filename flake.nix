@@ -3,9 +3,9 @@
     nixpkgs = {
       url = github:NixOS/nixpkgs/nixos-unstable;
     };
-    nixpkgs_old = {
-      url = github:NixOS/nixpkgs/nixos-22.11;
-    };
+    # nixpkgs_old = {
+    #   url = github:NixOS/nixpkgs/nixos-22.11;
+    # };
     home-manager = {
       # url = github:nix-community/home-manager;
       # Until home-manager merges my diff maybe
