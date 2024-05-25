@@ -190,32 +190,40 @@
         is-iso = false;
       };
     in {
-      nixosConfigurations = {
+      nixosConfigurations = let
+      attrs = p: let
+        fullAttrsPkgs = fullAttrs // { pkgs = p; };
+      in {
         MSI = inputs.nixpkgs.lib.nixosSystem {
           inherit system;
-          specialArgs = fullAttrs // { host-name = "MSI"; };
+          specialArgs = fullAttrsPkgs // { inherit pkgs; host-name = "MSI"; };
           modules = mods;
         };
         ROG = inputs.nixpkgs.lib.nixosSystem {
           inherit system;
-          specialArgs = fullAttrs;
+          specialArgs = fullAttrsPkgs;
           modules = mods;
         };
         ASUS = inputs.nixpkgs.lib.nixosSystem {
           inherit system;
-          specialArgs = fullAttrs // { host-name = "ASUS"; };
+          specialArgs = fullAttrsPkgs // { host-name = "ASUS"; };
           modules = mods ++ [ inputs.arion.nixosModules.arion ];
         };
         linode = inputs.nixpkgs.lib.nixosSystem {
           inherit system;
-          specialArgs = fullAttrs // { host-name = "linode"; };
+          specialArgs = fullAttrsPkgs // { host-name = "linode"; };
           modules = [ ./linode.nix ];
         };
         rpi = inputs.nixpkgs.lib.nixosSystem {
           inherit system;
-          specialArgs = fullAttrs // { host-name = "rpi"; };
+          specialArgs = fullAttrsPkgs // { host-name = "rpi"; };
           modules = pre-mods ++ [ inputs.raspberry-pi-nix.nixosModules.raspberry-pi ./rpi.nix ];
         };
+      };
+      in (attrs (import nixpkgs { inherit system config;})) //
+      { cross = (inputs.flake-utils.lib.eachDefaultSystem (sys:
+          (attrs (import nixpkgs { inherit config; localSystem = system; crossSystem = sys; }))
+        ))
       };
       packages = 
       let 
