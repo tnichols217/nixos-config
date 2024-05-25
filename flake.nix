@@ -109,8 +109,8 @@
       inputs.nur.nixosModules.nur
       inputs.nixos-generators.nixosModules.all-formats
       # inputs.nixvim.homeManagerModules.nixvim
-      nix-ld.nixosModules.nix-ld
-      (qbittorrent-module + "/nixos/modules/services/torrent/qbittorrent.nix")
+      inputs.nix-ld.nixosModules.nix-ld
+      (inputs.qbittorrent-module + "/nixos/modules/services/torrent/qbittorrent.nix")
       # nix-index-database.nixosModules.nix-index
     ];
     mods = pre-mods ++ [
