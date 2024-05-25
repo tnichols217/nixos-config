@@ -193,7 +193,7 @@ in
         discord
         tdesktop
         whatsapp-for-linux
-        minecraft
+        # minecraft
         prismlauncher
         localsend
         osu-lazer
