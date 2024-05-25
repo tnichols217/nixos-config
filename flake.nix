@@ -102,13 +102,13 @@
     flake-utils.url = "github:numtide/flake-utils";
   };
   
-  outputs = { self, ... }@attrs: let 
+  outputs = { self, ... }@inputs: let 
     pre-mods = [
-      attrs.home-manager.nixosModules.default
-      attrs.impermanence.nixosModules.impermanence
-      attrs.nur.nixosModules.nur
-      attrs.nixos-generators.nixosModules.all-formats
-      # attrs.nixvim.homeManagerModules.nixvim
+      inputs.home-manager.nixosModules.default
+      inputs.impermanence.nixosModules.impermanence
+      inputs.nur.nixosModules.nur
+      inputs.nixos-generators.nixosModules.all-formats
+      # inputs.nixvim.homeManagerModules.nixvim
       nix-ld.nixosModules.nix-ld
       (qbittorrent-module + "/nixos/modules/services/torrent/qbittorrent.nix")
       # nix-index-database.nixosModules.nix-index
@@ -180,41 +180,41 @@
     outs = flake-utils.lib.eachDefaultSystem (system:
     let
       fullAttrs = {
-        inherit attrs version addresses persistence ports addressNumbers;
+        inherit inputs version addresses persistence ports addressNumbers;
         # pkgs = import nixpkgs { inherit system config;};
         # oldpkgs = import nixpkgs_old { inherit system config;};
-        vscode_exts = attrs.nix-vscode-extensions.extensions.${system}.vscode-marketplace;
-        openvsx_exts = attrs.nix-vscode-extensions.extensions.${system}.open-vsx;
+        vscode_exts = inputs.nix-vscode-extensions.extensions.${system}.vscode-marketplace;
+        openvsx_exts = inputs.nix-vscode-extensions.extensions.${system}.open-vsx;
         nix-index-database = nix-index-database.packages.${system};
         host-name = "ROG";
         is-iso = false;
       };
     in {
       nixosConfigurations = {
-        MSI = nixpkgs.lib.nixosSystem {
+        MSI = inputs.nixpkgs.lib.nixosSystem {
           inherit system;
           specialArgs = fullAttrs // { host-name = "MSI"; };
           modules = mods;
         };
-        ROG = nixpkgs.lib.nixosSystem {
+        ROG = inputs.nixpkgs.lib.nixosSystem {
           inherit system;
           specialArgs = fullAttrs;
           modules = mods;
         };
-        ASUS = nixpkgs.lib.nixosSystem {
+        ASUS = inputs.nixpkgs.lib.nixosSystem {
           inherit system;
           specialArgs = fullAttrs // { host-name = "ASUS"; };
           modules = mods ++ [ arion.nixosModules.arion ];
         };
-        linode = nixpkgs.lib.nixosSystem {
+        linode = inputs.nixpkgs.lib.nixosSystem {
           inherit system;
           specialArgs = fullAttrs // { host-name = "linode"; };
           modules = [ ./linode.nix ];
         };
-        rpi = nixpkgs.lib.nixosSystem {
+        rpi = inputs.nixpkgs.lib.nixosSystem {
           inherit system;
           specialArgs = fullAttrs // { host-name = "rpi"; };
-          modules = pre-mods ++ [ attrs.raspberry-pi-nix.nixosModules.raspberry-pi ./rpi.nix ];
+          modules = pre-mods ++ [ inputs.raspberry-pi-nix.nixosModules.raspberry-pi ./rpi.nix ];
         };
       };
       packages = 
@@ -236,24 +236,24 @@
         };
         rpiargs = {
           specialArgs = fullAttrs // { host-name = "rpi"; };
-          modules = pre-mods ++ [ attrs.raspberry-pi-nix.nixosModules.raspberry-pi ./rpi.nix ];
+          modules = pre-mods ++ [ inputs.raspberry-pi-nix.nixosModules.raspberry-pi ./rpi.nix ];
           format = "iso";
         };
-        pkgs = import nixpkgs { inherit system; };
+        pkgs = import inputs.nixpkgs { inherit system; };
       in rec {
-        iso = nixos-generators.nixosGenerate (isoargs // { inherit pkgs; });
-        sd = nixos-generators.nixosGenerate (sdargs // { inherit pkgs; });
-        rpi = nixos-generators.nixosGenerate (rpiargs // { inherit pkgs; });
-        linode = nixos-generators.nixosGenerate (linodeargs // { inherit pkgs; });
+        iso = inputs.nixos-generators.nixosGenerate (isoargs // { inherit pkgs; });
+        sd = inputs.nixos-generators.nixosGenerate (sdargs // { inherit pkgs; });
+        rpi = inputs.nixos-generators.nixosGenerate (rpiargs // { inherit pkgs; });
+        linode = inputs.nixos-generators.nixosGenerate (linodeargs // { inherit pkgs; });
         default = rpi;
-        cross = (flake-utils.lib.eachDefaultSystem (sys: 
+        cross = (inputs.flake-utils.lib.eachDefaultSystem (sys: 
         let
-          pkgs = import nixpkgs { localSystem = system; crossSystem = sys; };
+          pkgs = import inputs.nixpkgs { localSystem = system; crossSystem = sys; };
         in rec {
-          iso = nixos-generators.nixosGenerate (isoargs // { inherit pkgs; system = sys; });
-          sd = nixos-generators.nixosGenerate (sdargs // { inherit pkgs; system = sys; });
-          rpi = nixos-generators.nixosGenerate (rpiargs // { inherit pkgs; system = sys; });
-          linode = nixos-generators.nixosGenerate (linodeargs // { inherit pkgs; system = sys; });
+          iso = inputs.nixos-generators.nixosGenerate (isoargs // { inherit pkgs; system = sys; });
+          sd = inputs.nixos-generators.nixosGenerate (sdargs // { inherit pkgs; system = sys; });
+          rpi = inputs.nixos-generators.nixosGenerate (rpiargs // { inherit pkgs; system = sys; });
+          linode = inputs.nixos-generators.nixosGenerate (linodeargs // { inherit pkgs; system = sys; });
           default = rpi;
         }));
       };
