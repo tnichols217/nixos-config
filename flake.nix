@@ -185,7 +185,7 @@
         # oldpkgs = import nixpkgs_old { inherit system config;};
         vscode_exts = inputs.nix-vscode-extensions.extensions.${system}.vscode-marketplace;
         openvsx_exts = inputs.nix-vscode-extensions.extensions.${system}.open-vsx;
-        nix-index-database = nix-index-database.packages.${system};
+        nix-index-database = inputs.nix-index-database.packages.${system};
         host-name = "ROG";
         is-iso = false;
       };
