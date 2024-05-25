@@ -1,4 +1,4 @@
-{ pkgs, username, host-name, version, lib, nix-index-database, addresses, ... }@ args:
+{ pkgs, username, host-name, version, lib, nix-index-database, addresses, inputs, ... }@ args:
 let
   appmod = "CTRLALT";
   monitors = {
@@ -53,7 +53,7 @@ in
             "SUPER, L, exec, pidof hyprlock || ${pkgs.hyprlock}/bin/hyprlock"
             "SUPER_SHIFT, L, exit"
             "${appmod}, F, exec, firefox"
-            "${appmod}, T, exec, ${import ./shell/kitty/kitty.pkg.nix { inherit pkgs; }}/bin/kitty"
+            "${appmod}, T, exec, ${import ./shell/kitty/kitty.pkg.nix { inherit pkgs inputs; }}/bin/kitty"
             "${appmod}, D, exec, ${pkgs.kitty}/bin/kitty"
             "${appmod}, U, exec, ${pkgs.kitty}/bin/kitty --hold sudo bash -c \"cd /etc/nixos; git stash; git stash clear; git pull; nixos-rebuild switch --flake \\\".#${host-name}\\\"\""
             "${appmod}, O, exec, obsidian"
