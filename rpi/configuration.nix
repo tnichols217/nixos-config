@@ -1,4 +1,4 @@
-{ config, lib, pkgs, host-name, version, ... }@args :
+{ config, lib, pkgs, host-name, version, inputs, ... }@args :
 {
   imports = [
     # ./configuration/disks.nix
