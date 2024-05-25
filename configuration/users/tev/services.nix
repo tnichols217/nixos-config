@@ -1,4 +1,4 @@
-{ pkgs, attrs, config, username, addresses, host-name, ... }:
+{ pkgs, config, username, addresses, host-name, ... }:
 {
   # systemd.services."${username}@sunshine" = {
   #   serviceConfig.Type = "simple";

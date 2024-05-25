@@ -1,4 +1,4 @@
-{ pkgs, attrs, config, addresses, ports, addressNumbers, ... }:
+{ pkgs, config, addresses, ports, addressNumbers, ... }:
 let
   # hostAddress = host: "10.1.${addressNumbers.${host}}.1";
   hostAddress = host: "localhost";

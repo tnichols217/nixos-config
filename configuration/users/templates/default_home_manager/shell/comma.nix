@@ -1,4 +1,4 @@
-{ pkgs, attrs, username, host-name, version, lib, nix-index-database, ... }:
+{ pkgs, username, host-name, version, lib, nix-index-database, ... }:
 {
   programs.command-not-found.enable = pkgs.lib.mkForce false;
 

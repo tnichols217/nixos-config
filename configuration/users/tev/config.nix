@@ -1,7 +1,7 @@
-{ config, pkgs, username, host-name, attrs, addresses, ... }:
+{ config, pkgs, username, host-name, addresses, ... }:
 let pack = [
   (pkgs.callPackage ./config/dot-config.pkg.nix {})
-  (pkgs.callPackage ./config/plasma-config.pkg.nix { inherit host-name attrs addresses; })
+  (pkgs.callPackage ./config/plasma-config.pkg.nix { inherit host-name addresses; })
 ];
 in
 {

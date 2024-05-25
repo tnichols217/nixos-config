@@ -1,2 +1,2 @@
-{ pkgs, attrs, ... }:
-pkgs.writeShellScriptBin "ani-cli-batch" (builtins.readFile "${attrs.ani-cli-batch}/ani-cli-batch")
+{ pkgs, inputs, ... }:
+pkgs.writeShellScriptBin "ani-cli-batch" (builtins.readFile "${inputs.ani-cli-batch}/ani-cli-batch")

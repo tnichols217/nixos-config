@@ -1,4 +1,4 @@
-{ pkgs, attrs, config, addresses, ... }:
+{ pkgs, config, addresses, ... }:
 {
   systemd.services."generate-nix-serve-certs" = {
     # FIXME

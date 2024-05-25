@@ -1,4 +1,4 @@
-{ config, lib, pkgs, host-name, attrs, version, ... }@args :
+{ config, lib, pkgs, host-name, version, ... }@args :
 {
   imports = [
     # ./configuration/disks.nix
@@ -25,7 +25,7 @@
     user = {
       hashedPassword = ''$y$j9T$3l9ddjue6Mjm4IInm6JDV.$O1sVWAOlnxsF//uh1euVEFPCyh7AD8lCYBIfWMKe4L6'';
       packages = with pkgs; [
-        (callPackage ../configuration/users/tev/packages/firefox.pkg.nix { inherit attrs config; })
+        (callPackage ../configuration/users/tev/packages/firefox.pkg.nix { inherit inputs config; })
         qbittorrent
       ];
       openssh.authorizedKeys.keys = [

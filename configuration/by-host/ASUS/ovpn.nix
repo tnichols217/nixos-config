@@ -1,4 +1,4 @@
-{ pkgs, attrs, config, ... }:
+{ pkgs, config, ... }:
 {
   services.openvpn.servers = let 
     configString = {adapt, port?"1194"}:

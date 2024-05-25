@@ -1,4 +1,4 @@
-{ pkgs, attrs, config, ... }:
+{ pkgs, config, ... }:
 {
   imports = [
     ./ASUS/acme.nix

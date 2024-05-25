@@ -1,4 +1,4 @@
-{ pkgs, attrs, username, host-name, version, lib, nix-index-database, ... }:
+{ pkgs, username, host-name, version, lib, nix-index-database, ... }:
 {
   home-manager.users.${username} = {
     programs = {
@@ -65,7 +65,7 @@
           fsw = "fswatch -rax ";
           black = "kill (pidof plasmashell); plasmashell &; disown (pidof plasmashell)";
           huion = "xsetwacom set `xinput | grep HUION | grep \"Pen stylus\" | head -1 | awk '{print $7;}' | cut -d \"=\" -f2` \"mapToOutput\" `xrandr | grep \" connected\" | grep \"Display\" | awk '{print $1;}'`; xsetwacom set `xinput | grep HUION | grep \"stylus\" | tac | head -1 | awk '{print $7;}' | cut -d \"=\" -f2` \"mapToOutput\" `xrandr | grep \" connected\" | grep \"Display\" | awk '{print $1;}'`";
-          kitty = "${pkgs.callPackage ./kitty/kitty.pkg.nix { self = pkgs; inherit attrs; }}/bin/kitty";
+          kitty = "${pkgs.callPackage ./kitty/kitty.pkg.nix { self = pkgs; inherit inputs; }}/bin/kitty";
           logout = "qdbus org.kde.LogoutPrompt /LogoutPrompt org.kde.LogoutPrompt.promptLogout";
           f = "xplr";
           cdf = "cd $(xplr)";
