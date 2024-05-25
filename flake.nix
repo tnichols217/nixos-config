@@ -223,7 +223,7 @@
       in (attrs (import nixpkgs { inherit system config;})) //
       { cross = (inputs.flake-utils.lib.eachDefaultSystem (sys:
           (attrs (import nixpkgs { inherit config; localSystem = system; crossSystem = sys; }))
-        ))
+        ));
       };
       packages = 
       let 
