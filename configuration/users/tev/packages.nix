@@ -151,6 +151,7 @@ in
         # Davinci doesnt work on the latest nixpkgs
         # davinci-resolve
         # (pkgs.callPackage ./packages/davinci.nix {})
+        signal-desktop
         lolcat
         htop
         kcalc
