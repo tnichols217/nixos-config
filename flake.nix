@@ -123,9 +123,6 @@
       permittedInsecurePackages = [
         "electron-25.9.0"
       ];
-      overlays = [
-        inputs.raspberry-pi-nix.overlays.core
-      ];
     };
     addresses = rec {
       pigs = "pigsgo.mooo.com";
@@ -219,7 +216,7 @@
         };
         rpi = inputs.nixpkgs.lib.nixosSystem {
           inherit system;
-          specialArgs = fullAttrsPkgs // { host-name = "rpi"; };
+          specialArgs = fullAttrs // { host-name = "rpi"; };
           modules = pre-mods ++ [ inputs.raspberry-pi-nix.nixosModules.raspberry-pi ./rpi.nix ];
         };
       };

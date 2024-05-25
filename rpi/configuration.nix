@@ -3,6 +3,8 @@
   imports = [
     # ./configuration/disks.nix
     ./configuration/hardware.nix
+    ../configuration/x11/greetd.nix
+    ../configuration/x11/hyprland.nix
     ((import ../configuration/users/templates/persist.nix) (args // { username = "user"; }))
     ((import ../configuration/users/templates/normal_sudo.nix) (args // { username = "user"; }))
   ];
@@ -52,8 +54,8 @@
 
   networking = {
     hostName = host-name;
-    useDHCP = false;
-    interfaces = { wlan0.useDHCP = true; };
+    # useDHCP = false;
+    # interfaces = { wlan0.useDHCP = true; };
     nftables.enable = true;
     firewall = {
       enable = true;
@@ -65,10 +67,6 @@
       ];
     };
   };
-
-  nixpkgs.overlays = [
-    inputs.raspberry-pi-nix.overlays.core
-  ];
 
   system.stateVersion = version;
 }
