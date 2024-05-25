@@ -2,7 +2,16 @@
 {
   programs.virt-manager.enable = true;
   virtualisation = {
-    libvirtd.enable = true;
+    libvirtd = {
+      enable = true;
+      qemu = {
+        swtpm.enable = true;
+        ovmf.packages = [(pkgs.OVMF.override {
+          secureBoot = true;
+          tpmSupport = true;
+        }).fd];
+      };
+    };
     waydroid.enable = true;
     podman.enable = true;
     podman.dockerSocket.enable = true;
