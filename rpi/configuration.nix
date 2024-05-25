@@ -66,6 +66,10 @@
     };
   };
 
+  nixpkgs.overlays = [
+    inputs.raspberry-pi-nix.overlays.core
+  ];
+
   system.stateVersion = version;
 }
 
