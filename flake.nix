@@ -177,7 +177,7 @@
       bucket = "${default}/bucket";
       media = "${default}/media";
     };
-    outs = flake-utils.lib.eachDefaultSystem (system:
+    outs = inputs.flake-utils.lib.eachDefaultSystem (system:
     let
       fullAttrs = {
         inherit inputs version addresses persistence ports addressNumbers;
