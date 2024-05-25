@@ -10,7 +10,7 @@
       neededForBoot = true;
     };
     # combine
-    "/" = {
+    "/" = lib.mkForce {
       device = "none";
       fsType = "tmpfs";
       options = [ "defaults" "size=8G" "mode=755" ];

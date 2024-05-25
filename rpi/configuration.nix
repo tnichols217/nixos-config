@@ -1,12 +1,11 @@
-{ config, lib, pkgs, host-name, attrs, ... }@args :
+{ config, lib, pkgs, host-name, attrs, version, ... }@args :
 {
   imports = [
-    ./configuration/disks.nix
+    # ./configuration/disks.nix
+    ./configuration/hardware.nix
     ((import ../configuration/users/templates/persist.nix) (args // { username = "user"; }))
     ((import ../configuration/users/templates/normal_sudo.nix) (args // { username = "user"; }))
   ];
-
-  networking.hostName = host-name;
 
   time.timeZone = "Asia/Kuala_Lumpur";
 
@@ -39,6 +38,8 @@
   environment.systemPackages = with pkgs; [
     nano
     coreutils
+    bluez
+    bluez-tools
   ];
 
   services.openssh = {
@@ -49,7 +50,10 @@
     };
   };
 
-  networking = { 
+  networking = {
+    hostName = host-name;
+    useDHCP = false;
+    interfaces = { wlan0.useDHCP = true; };
     nftables.enable = true;
     firewall = {
       enable = true;
@@ -61,6 +65,7 @@
       ];
     };
   };
-  
-  system.stateVersion = "24.05";
+
+  system.stateVersion = version;
 }
+

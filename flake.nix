@@ -91,6 +91,7 @@
       flake = false;
     };
 
+    raspberry-pi-nix.url = "github:tstat/raspberry-pi-nix";
     
     nix-ld.url = "github:Mic92/nix-ld";
 
@@ -180,8 +181,8 @@
     let
       fullAttrs = {
         inherit attrs version addresses persistence ports addressNumbers;
-        pkgs = import nixpkgs { inherit system config;};
-        oldpkgs = import nixpkgs_old { inherit system config;};
+        # pkgs = import nixpkgs { inherit system config;};
+        # oldpkgs = import nixpkgs_old { inherit system config;};
         vscode_exts = attrs.nix-vscode-extensions.extensions.${system}.vscode-marketplace;
         openvsx_exts = attrs.nix-vscode-extensions.extensions.${system}.open-vsx;
         nix-index-database = nix-index-database.packages.${system};
@@ -213,7 +214,7 @@
         rpi = nixpkgs.lib.nixosSystem {
           inherit system;
           specialArgs = fullAttrs // { host-name = "rpi"; };
-          modules = pre-mods ++ [ ./rpi.nix ];
+          modules = pre-mods ++ [ attrs.raspberry-pi-nix.nixosModules.raspberry-pi ./rpi.nix ];
         };
       };
       packages = 
@@ -235,7 +236,7 @@
         };
         rpiargs = {
           specialArgs = fullAttrs // { host-name = "rpi"; };
-          modules = pre-mods ++ [ ./rpi.nix ];
+          modules = pre-mods ++ [ attrs.raspberry-pi-nix.nixosModules.raspberry-pi ./rpi.nix ];
           format = "iso";
         };
         pkgs = import nixpkgs { inherit system; };
