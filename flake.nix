@@ -191,7 +191,7 @@
       };
     in {
       nixosConfigurations = let
-      attrs = p: let
+      configs = p: let
         fullAttrsPkgs = fullAttrs // { pkgs = p; };
       in {
         MSI = inputs.nixpkgs.lib.nixosSystem {
@@ -220,9 +220,9 @@
           modules = pre-mods ++ [ inputs.raspberry-pi-nix.nixosModules.raspberry-pi ./rpi.nix ];
         };
       };
-      in (attrs (import inputs.nixpkgs { inherit system config;})) //
+      in (configs (import inputs.nixpkgs { inherit system config;})) //
       { cross = (inputs.flake-utils.lib.eachDefaultSystem (sys:
-          (attrs (import inputs.nixpkgs { inherit config; localSystem = system; crossSystem = sys; }))
+          (configs (import inputs.nixpkgs { inherit config; localSystem = system; crossSystem = sys; }))
         ));
       };
       packages = 
