@@ -220,9 +220,9 @@
           modules = pre-mods ++ [ inputs.raspberry-pi-nix.nixosModules.raspberry-pi ./rpi.nix ];
         };
       };
-      in (attrs (import nixpkgs { inherit system config;})) //
+      in (attrs (import inputs.nixpkgs { inherit system config;})) //
       { cross = (inputs.flake-utils.lib.eachDefaultSystem (sys:
-          (attrs (import nixpkgs { inherit config; localSystem = system; crossSystem = sys; }))
+          (attrs (import inputs.nixpkgs { inherit config; localSystem = system; crossSystem = sys; }))
         ));
       };
       packages = 
