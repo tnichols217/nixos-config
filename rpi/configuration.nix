@@ -3,6 +3,7 @@
   imports = [
     # ./configuration/disks.nix
     ./configuration/hardware.nix
+    ./configuration/disks.nix
     ../configuration/x11/greetd.nix
     ../configuration/x11/hyprland.nix
     ((import ../configuration/users/templates/persist.nix) (args // { username = "user"; }))
@@ -117,6 +118,16 @@
       dates = "weekly";
       options = "--delete-older-than 30d";
     };
+  };
+
+  fonts = {
+    packages = with pkgs; [
+      nerdfonts
+      noto-fonts
+      noto-fonts-cjk
+      noto-fonts-emoji
+    ];
+    enableDefaultPackages = true;
   };
 
   system.stateVersion = version;

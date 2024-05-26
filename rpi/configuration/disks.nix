@@ -9,19 +9,19 @@
     #   options = [ "defaults" ];
     #   neededForBoot = true;
     # };
-    "/nix/.rw-store" = lib.mkForce {
-      device = "none";
-      fsType = "tmpfs";
-      options = [ "defaults" "size=16G" "mode=755" ];
-      neededForBoot = true;
-    };
-    # combine
-    "/" = lib.mkForce {
-      device = "none";
-      fsType = "tmpfs";
-      options = [ "defaults" "size=8G" "mode=755" ];
-      neededForBoot = true;
-    };
+    # "/nix/.rw-store" = lib.mkForce {
+    #   device = "none";
+    #   fsType = "tmpfs";
+    #   options = [ "defaults" "size=16G" "mode=755" ];
+    #   neededForBoot = true;
+    # };
+    # # combine
+    # "/" = lib.mkForce {
+    #   device = "none";
+    #   fsType = "tmpfs";
+    #   options = [ "defaults" "size=8G" "mode=755" ];
+    #   neededForBoot = true;
+    # };
 
     # local data
     "${persistence.local}" = {
