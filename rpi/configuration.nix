@@ -40,10 +40,8 @@
   };
 
   home-manager.users.user = {
-    xdg.configFile = {
-      "nix/nix.conf" = {
-        source = ../configuration/users/tev/config/dot-config/nix/nix.conf; 
-      };
+    nix.settings = {
+      experimental-features = [ "nix-command" "flakes" ];
     };
   };
 
