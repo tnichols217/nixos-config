@@ -55,6 +55,7 @@
     bluez-tools
     kitty
     ungoogled-chromium
+    fastfetch
   ];
 
   programs = {
