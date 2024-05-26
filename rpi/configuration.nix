@@ -54,6 +54,7 @@
     bluez
     bluez-tools
     kitty
+    ungoogled-chromium
   ];
 
   programs = {
