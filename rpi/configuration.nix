@@ -44,6 +44,7 @@
     networkmanager
     bluez
     bluez-tools
+    kitty
   ];
 
   programs = {
@@ -59,6 +60,14 @@
   };
 
   networking = {
+    networkmanager = {
+      enable = true;
+      plugins = with pkgs; [
+        networkmanager-openvpn
+        networkmanager-openconnect
+      ];
+    };
+
     hostName = host-name;
     # useDHCP = false;
     # interfaces = { wlan0.useDHCP = true; };

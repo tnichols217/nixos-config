@@ -16,6 +16,9 @@ let
       "DP-1, highrr, 2560x1440, 1"
     ];
     "MSI" = [];
+    "rpi" = [
+      ", highrr, auto, 1"
+    ];
   };
 in
 {
