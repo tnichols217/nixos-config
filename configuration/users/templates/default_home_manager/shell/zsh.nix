@@ -27,6 +27,11 @@
             src = "${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k";
           }
           {
+            file = "zlong_alert.zsh";
+            name = "zlong-alert";
+            src = "${inputs.zlong_alert}";
+          }
+          {
             file = "p10k.zsh";
             name = "powerlevel10k-config";
             src = ./zsh;

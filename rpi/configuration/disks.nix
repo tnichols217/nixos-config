@@ -3,10 +3,16 @@
 {
   fileSystems = {
     # software
+    # "/nix/.rw-store" = lib.mkForce {
+    #   device = "/dev/disk/by-label/NIXROOT";
+    #   fsType = "ext4";
+    #   options = [ "defaults" ];
+    #   neededForBoot = true;
+    # };
     "/nix/.rw-store" = lib.mkForce {
-      device = "/dev/disk/by-label/NIXROOT";
-      fsType = "ext4";
-      options = [ "defaults" ];
+      device = "none";
+      fsType = "tmpfs";
+      options = [ "defaults" "size=16G" "mode=755" ];
       neededForBoot = true;
     };
     # combine

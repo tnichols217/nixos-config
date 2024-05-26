@@ -1149,7 +1149,8 @@
         "papirus": "papirus",
         "program-extensions": "program-extensions",
         "qbittorrent-module": "qbittorrent-module",
-        "raspberry-pi-nix": "raspberry-pi-nix"
+        "raspberry-pi-nix": "raspberry-pi-nix",
+        "zlong_alert": "zlong_alert"
       }
     },
     "rpi-bluez-firmware-src": {
@@ -1390,6 +1391,22 @@
       "original": {
         "owner": "hyprwm",
         "repo": "xdg-desktop-portal-hyprland",
+        "type": "github"
+      }
+    },
+    "zlong_alert": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1676145490,
+        "narHash": "sha256-liwaOzv70igaJy9bEom2ntu/x64BitjLxvuMUcgajVw=",
+        "owner": "kevinywlui",
+        "repo": "zlong_alert.zsh",
+        "rev": "8df5b6808bba4bf896f6765cca28b5705a048bad",
+        "type": "github"
+      },
+      "original": {
+        "owner": "kevinywlui",
+        "repo": "zlong_alert.zsh",
         "type": "github"
       }
     }

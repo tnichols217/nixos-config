@@ -17,6 +17,10 @@
       url = "github:Mic92/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    zlong_alert = {
+      url = "github:kevinywlui/zlong_alert.zsh";
+      flake = false;
+    };
 
     impermanence = {
       url = github:nix-community/impermanence;

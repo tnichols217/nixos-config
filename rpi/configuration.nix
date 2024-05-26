@@ -7,6 +7,7 @@
     ../configuration/x11/hyprland.nix
     ((import ../configuration/users/templates/persist.nix) (args // { username = "user"; }))
     ((import ../configuration/users/templates/normal_sudo.nix) (args // { username = "user"; }))
+    ((import ../configuration/users/templates/default_home_manager.nix) (args // { username = "user"; }))
   ];
 
   time.timeZone = "Asia/Kuala_Lumpur";
@@ -40,6 +41,7 @@
   environment.systemPackages = with pkgs; [
     nano
     coreutils
+    networkmanager
     bluez
     bluez-tools
   ];
