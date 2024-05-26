@@ -56,6 +56,8 @@
     kitty
     ungoogled-chromium
     fastfetch
+    yewtube
+    qbittorrent
   ];
 
   programs = {
