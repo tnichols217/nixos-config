@@ -142,6 +142,7 @@ in
         parallel
         gnome.nautilus
         kdePackages.ksshaskpass
+        units
 
         # programs
         anki
