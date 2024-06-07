@@ -182,10 +182,10 @@ in
             hover_icon_on_border = true;
             allow_tearing = false;
           };
-          cursor = {
-            inactive_timeout = 10;
-            no_warps = true;
-          };
+          # cursor = {
+          #   inactive_timeout = 10;
+          #   no_warps = true;
+          # };
           binds = {
             movefocus_cycles_fullscreen = false;
           };
