@@ -1052,11 +1052,11 @@
         "nixpkgs": "nixpkgs_6"
       },
       "locked": {
-        "lastModified": 1717741246,
-        "narHash": "sha256-uB57GIByqOZE90vO7i4YruzAVqA5Bf0tzYBhTmRuFPQ=",
+        "lastModified": 1717993850,
+        "narHash": "sha256-f6g0+Zvtx5piBFoHJhqWHiVDf2MK+a/92xucsq10n9Q=",
         "owner": "tnichols217",
         "repo": "nixos-program-extensions",
-        "rev": "633256dd8564a79b5e5a55f3e9c79d84e01e0a3e",
+        "rev": "e7543934aeb0ca1b296d55166f52ed4e1b1a545b",
         "type": "github"
       },
       "original": {
