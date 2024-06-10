@@ -143,7 +143,7 @@ in
         gnome.nautilus
         kdePackages.ksshaskpass
         units
-        notify-send
+        libnotify
 
         # programs
         anki
