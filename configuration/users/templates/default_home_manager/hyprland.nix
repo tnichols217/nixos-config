@@ -181,11 +181,13 @@ in
             extend_border_grab_area = 15;
             hover_icon_on_border = true;
             allow_tearing = false;
+            no_cursor_warps = true;
+            cursor_inactive_timeout = 10;
           };
-          cursor = {
-            inactive_timeout = 10;
-            no_warps = true;
-          };
+          # cursor = {
+          #   inactive_timeout = 10;
+          #   no_warps = true;
+          # };
           binds = {
             movefocus_cycles_fullscreen = false;
           };

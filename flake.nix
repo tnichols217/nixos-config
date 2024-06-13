@@ -193,7 +193,7 @@
         host-name = "ROG";
         is-iso = false;
       };
-    in {
+    in rec {
       nixosConfigurations = let
       configs = {p, sys}: let
         fullAttrsPkgs = fullAttrs // { pkgs = p; };
@@ -246,16 +246,16 @@
           modules = [ ./linode.nix ];
           format = "linode";
         };
-        rpiargs = {
-          specialArgs = fullAttrs // { host-name = "rpi"; };
-          modules = pre-mods ++ [ inputs.raspberry-pi-nix.nixosModules.raspberry-pi ./rpi.nix ];
-          format = "iso";
-        };
+        # rpiargs = {
+        #   specialArgs = fullAttrs // { host-name = "rpi"; };
+        #   modules = pre-mods ++ [ inputs.raspberry-pi-nix.nixosModules.raspberry-pi ./rpi.nix ];
+        #   format = "iso";
+        # };
         pkgs = import inputs.nixpkgs { inherit system; };
       in rec {
         iso = inputs.nixos-generators.nixosGenerate (isoargs // { inherit pkgs; });
         sd = inputs.nixos-generators.nixosGenerate (sdargs // { inherit pkgs; });
-        rpi = inputs.nixos-generators.nixosGenerate (rpiargs // { inherit pkgs; });
+        rpi = nixosConfigurations.rpi.config.system.build.sdImage;
         linode = inputs.nixos-generators.nixosGenerate (linodeargs // { inherit pkgs; });
         default = rpi;
         cross = (inputs.flake-utils.lib.eachDefaultSystem (sys: 
@@ -264,7 +264,7 @@
         in rec {
           iso = inputs.nixos-generators.nixosGenerate (isoargs // { inherit pkgs; system = sys; });
           sd = inputs.nixos-generators.nixosGenerate (sdargs // { inherit pkgs; system = sys; });
-          rpi = inputs.nixos-generators.nixosGenerate (rpiargs // { inherit pkgs; system = sys; });
+          rpi = nixosConfigurations.cross.rpi.${sys}.config.system.build.sdImage;
           linode = inputs.nixos-generators.nixosGenerate (linodeargs // { inherit pkgs; system = sys; });
           default = rpi;
         }));

@@ -1,7 +1,7 @@
 { config, lib, pkgs, host-name, version, inputs, ... }@args :
 {
   imports = [
-    # ./configuration/disks.nix
+    ./configuration/disks.nix
     ./configuration/hardware.nix
     ./configuration/disks.nix
     ../configuration/x11/greetd.nix
@@ -10,6 +10,8 @@
     ((import ../configuration/users/templates/normal_sudo.nix) (args // { username = "user"; }))
     ((import ../configuration/users/templates/default_home_manager.nix) (args // { username = "user"; }))
   ];
+
+  sdImage.expandOnBoot = false;
 
   time.timeZone = "Asia/Kuala_Lumpur";
 

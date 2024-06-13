@@ -96,7 +96,7 @@ in
         nodejs
         nodePackages.nodemon
         nodePackages.npm
-        openjdk16-bootstrap
+        openjdk17-bootstrap
         virt-manager
         ark
         pstree
@@ -142,6 +142,8 @@ in
         parallel
         gnome.nautilus
         kdePackages.ksshaskpass
+        units
+        libnotify
 
         # programs
         anki
