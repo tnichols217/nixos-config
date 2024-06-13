@@ -264,7 +264,7 @@
         in rec {
           iso = inputs.nixos-generators.nixosGenerate (isoargs // { inherit pkgs; system = sys; });
           sd = inputs.nixos-generators.nixosGenerate (sdargs // { inherit pkgs; system = sys; });
-          rpi = nixosConfigurations.rpi.config.system.build.sdImage;
+          rpi = nixosConfigurations.cross.rpi.${sys}.config.system.build.sdImage;
           linode = inputs.nixos-generators.nixosGenerate (linodeargs // { inherit pkgs; system = sys; });
           default = rpi;
         }));
