@@ -20,7 +20,7 @@
     "/nix/.ro-store" = lib.mkForce {
       device = "/dev/disk/by-label/NIXOS_SD";
       fsType = "ext4";
-      options = [ "ro" ]
+      options = [ "ro" ];
     };
 
     "/nix/store" = lib.mkForce {
