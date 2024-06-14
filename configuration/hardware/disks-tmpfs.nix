@@ -35,7 +35,7 @@
         fsType = "ext4";
         neededForBoot = true;
       };
-    } else {} // {
+    } else {}) // {
       # combine
       "/" = {
         device = "none";
@@ -64,7 +64,7 @@
         fsType = "ext4";
         neededForBoot = true;
       };
-  });
+  };
 
   swapDevices = [
     { 
