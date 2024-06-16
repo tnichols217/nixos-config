@@ -32,7 +32,7 @@
         "workdir=/nix/.rw-store/work"
       ];
       depends = [
-        "/nix/.ro-store"
+        "/nix/.ro-store/nix/store"
         "/nix/.rw-store/store"
         "/nix/.rw-store/work"
       ];

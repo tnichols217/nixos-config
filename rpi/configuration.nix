@@ -1,7 +1,7 @@
 { config, lib, pkgs, host-name, version, inputs, ... }@args :
 {
   imports = [
-    ./configuration/disks.nix
+    # ./configuration/disks.nix
     ./configuration/hardware.nix
     ./configuration/disks.nix
     ../configuration/x11/greetd.nix
@@ -12,6 +12,7 @@
   ];
 
   sdImage.expandOnBoot = false;
+  sdImage.compressImage = false;
 
   time.timeZone = "Asia/Kuala_Lumpur";
 
