@@ -1030,11 +1030,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1718903079,
-        "narHash": "sha256-88DWxDvExI5zWwmUfjSfVS3dCjme+SanWStVpAIxa8k=",
+        "lastModified": 1718922816,
+        "narHash": "sha256-mxLkqeIuGPi2G5uGYPaS3EFS7VgobRAGXrBSD10qyU8=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "733c103717ffbf4629b7418c650798bc4a3ad1df",
+        "rev": "e01fdcaa77b0729f1ed08ed60e64d6a9ae33a4c2",
         "type": "github"
       },
       "original": {
@@ -1081,11 +1081,11 @@
         "nixpkgs": "nixpkgs_6"
       },
       "locked": {
-        "lastModified": 1718886433,
-        "narHash": "sha256-DK38fwXR7lQRHohnBj5thAjTtAw8N3dhUspOBNbrnIM=",
+        "lastModified": 1718907602,
+        "narHash": "sha256-J+hmO41Dad20e3wuyOSpskwrBO/UPkU4ldaaOASSpB8=",
         "owner": "tnichols217",
         "repo": "nixos-program-extensions",
-        "rev": "e9b7caa53a40790ebafb53163a2a6d684ef0e0b0",
+        "rev": "1029285e48b158a38773923ca41c01e46d10354e",
         "type": "github"
       },
       "original": {
@@ -1097,11 +1097,11 @@
     "qbittorrent-module": {
       "flake": false,
       "locked": {
-        "lastModified": 1716944003,
-        "narHash": "sha256-+29j8Hoe11icjFhtqukrYlwvbL87vIT7Dy9iBAZSsfc=",
+        "lastModified": 1718930337,
+        "narHash": "sha256-ZaGBrcBceJL6GjrXgZR9Vtzlf3xU5r1cPClWKJzNKw4=",
         "owner": "nu-nu-ko",
         "repo": "nixpkgs",
-        "rev": "54909815ec599710b4a1684393c85e54e0ca6455",
+        "rev": "ddcebe9456534c520db31fb0f0a7c500f8d1e31f",
         "type": "github"
       },
       "original": {
