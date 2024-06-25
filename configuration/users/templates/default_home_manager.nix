@@ -3,7 +3,7 @@
   imports = [
     (import ./default_home_manager/shell.nix args)
     (import ./default_home_manager/hyprland.nix args)
-    (import ./default_home_manager/neovim.nix args)
+    # (import ./default_home_manager/neovim.nix args)
   ];
 
   home-manager.backupFileExtension = "backup";
