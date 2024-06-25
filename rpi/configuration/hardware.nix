@@ -6,14 +6,20 @@ let
   # };
 in
 {
-  # boot = {
-  #   kernelPackages = lib.mkDefault (pkgs.linuxPackagesFor linux_rpi5);
-  #   initrd.availableKernelModules = [
-  #     "nvme"
-  #     "usbhid"
-  #     "usb_storage"
-  #   ];
-  # };
+  boot = {
+    # kernelPackages = lib.mkDefault (pkgs.linuxPackagesFor linux_rpi5);
+    initrd.availableKernelModules = [
+      "nvme"
+      "usbhid"
+      "usb_storage"
+      "xhci_pci"
+      "ahci"
+      "virtio_pci"
+      "btrfs"
+      "usbip_host"
+      "sdhci_pci"
+    ];
+  };
 
   hardware = {
     bluetooth.enable = true;

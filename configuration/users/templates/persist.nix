@@ -71,6 +71,7 @@
         ".config/VSCodium"
         ".config/discord"
         ".config/Element"
+        ".config/Signal"
         ".config/tidal-hifi"
         ".config/Microsoft/Microsoft Teams"
         ".config/teams"
