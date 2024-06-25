@@ -112,7 +112,7 @@
       inputs.impermanence.nixosModules.impermanence
       inputs.nur.nixosModules.nur
       inputs.nixos-generators.nixosModules.all-formats
-      # inputs.nixvim.homeManagerModules.nixvim
+      inputs.nixvim.homeManagerModules.nixvim
       inputs.nix-ld.nixosModules.nix-ld
       (inputs.qbittorrent-module + "/nixos/modules/services/torrent/qbittorrent.nix")
       # nix-index-database.nixosModules.nix-index
