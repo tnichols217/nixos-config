@@ -9,7 +9,7 @@
     home-manager = {
       # url = github:nix-community/home-manager;
       # Until home-manager merges my diff maybe
-      url = github:tnichols217/home-manager;
+      url = github:tnichols217/home-manager/forceFlakes;
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
