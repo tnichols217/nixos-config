@@ -19,7 +19,7 @@
           nvim-autopairs.enable = true;
           indent-blankline.enable = true;
 
-          cmp-tabnine.enable = true;
+          # cmp-tabnine.enable = true;
           cmp-path.enable = true;
           cmp-cmdline.enable = true;
           cmp-buffer.enable = true;
