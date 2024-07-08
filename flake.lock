@@ -155,22 +155,6 @@
         "url": "https://flakehub.com/f/edolstra/flake-compat/1.tar.gz"
       }
     },
-    "flake-compat_3": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1696426674,
-        "narHash": "sha256-kvjfFW7WAETZlt09AgDn1MrtKzP7t90Vf7vypd3OL1U=",
-        "owner": "edolstra",
-        "repo": "flake-compat",
-        "rev": "0f9255e01c2351cc7d116c072cb317785dd33b33",
-        "type": "github"
-      },
-      "original": {
-        "owner": "edolstra",
-        "repo": "flake-compat",
-        "type": "github"
-      }
-    },
     "flake-parts": {
       "inputs": {
         "nixpkgs-lib": [
@@ -323,7 +307,10 @@
     },
     "git-hooks": {
       "inputs": {
-        "flake-compat": "flake-compat_3",
+        "flake-compat": [
+          "nixvim",
+          "flake-compat"
+        ],
         "gitignore": "gitignore",
         "nixpkgs": [
           "nixvim",
@@ -1020,11 +1007,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1720367057,
-        "narHash": "sha256-ZdSDmunn2oDPWm19RlFTwlK9BoAi9uw9QliWE4FnQc4=",
+        "lastModified": 1720382751,
+        "narHash": "sha256-i+wpxx7NMEIoxAl0IQ3bNDX4faTcO13ZJ6j75SJUIzA=",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "a6cc4c6c331c86e6b1ff7316fdc076f4ca7b163b",
+        "rev": "41794c222a5eaa966e5513c707c0b3f5e7abf5e0",
         "type": "github"
       },
       "original": {
@@ -1035,11 +1022,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1720368590,
-        "narHash": "sha256-tsP5OrP3TxjlBWbgJriUmviFXu4Oxp8aCs1JrCpPtuQ=",
+        "lastModified": 1720399085,
+        "narHash": "sha256-B9jK9Rp/tJGGX+N4LdIjIv2R91qtOqKBUnz5g++xIyA=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "ddceaa6035f27b4b80048d9a18965b72a22387d7",
+        "rev": "813dad69e6de057962406a0eb78fb53881ce4aea",
         "type": "github"
       },
       "original": {
@@ -1086,11 +1073,11 @@
         "nixpkgs": "nixpkgs_6"
       },
       "locked": {
-        "lastModified": 1720355144,
-        "narHash": "sha256-qS1VtwrsaKfXbcU9OZIvy4Odf8WWQgP85OF6/idM/xk=",
+        "lastModified": 1720376285,
+        "narHash": "sha256-v5Ktw19woCAhm06YXG0Xy8a56zzK9fQ9S7q+LutkSt0=",
         "owner": "tnichols217",
         "repo": "nixos-program-extensions",
-        "rev": "af33e2c2e25c906e1db7fdcb31fb945ae10a9aa6",
+        "rev": "d02e9fba491b10f42a429f3b8c7baa5daeca4aef",
         "type": "github"
       },
       "original": {
