@@ -35,5 +35,5 @@
     "x86_64-windows"
     "aarch64-linux"
   ];
-  programs.nix-ld.dev.enable = true;
+  # programs.nix-ld.dev.enable = true;
 }
