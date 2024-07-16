@@ -140,7 +140,7 @@ in
         pstoedit
         playerctl
         parallel
-        gnome.nautilus
+        nautilus
         kdePackages.ksshaskpass
         kdePackages.okular
         units
@@ -171,7 +171,7 @@ in
         tidal-hifi
         moonlight-qt
         korganizer
-        tartube-yt-dlp
+        # tartube-yt-dlp
         element-desktop
         jellyfin-media-player
         jellycli
@@ -201,7 +201,7 @@ in
         prismlauncher
         localsend
         osu-lazer
-        tartube-yt-dlp
+        # tartube-yt-dlp
         android-studio
 
         # python
