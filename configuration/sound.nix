@@ -1,6 +1,5 @@
 { config, pkgs, ... }:
 {
-  sound.enable = true;
   services.pipewire = {
     enable = true;
     wireplumber.enable = true;
