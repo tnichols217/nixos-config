@@ -309,6 +309,9 @@ in
             disable_hyprland_logo = true;
             focus_on_activate = true;
           };
+          debug = {
+            enable_stdout_logs = true;
+          };
         };
         xwayland.enable = true;
       };
