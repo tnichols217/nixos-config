@@ -14,6 +14,8 @@
   sdImage.expandOnBoot = false;
   sdImage.compressImage = false;
 
+  raspberry-pi-nix.board = "bcm2712";
+
   time.timeZone = "Asia/Kuala_Lumpur";
 
   # environment.noXlibs = true;
