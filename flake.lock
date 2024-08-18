@@ -1080,11 +1080,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1723976478,
-        "narHash": "sha256-eF815/buOMQlX2XbtNgN3GtA9bwv4psLbckU9iTBsxs=",
+        "lastModified": 1723992327,
+        "narHash": "sha256-w0DhauBqGC7zBlsm0i0IXVvhBGqBvsJPGnc5b9jffvA=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "575ee4dc4dc7c031663bdcfe2e8779abacc80d0a",
+        "rev": "adee26fc0c486560152c814b963ae27851eef658",
         "type": "github"
       },
       "original": {
@@ -1153,11 +1153,11 @@
         "nixpkgs": "nixpkgs_6"
       },
       "locked": {
-        "lastModified": 1723962007,
-        "narHash": "sha256-zaAE8a3QC5FxL/8bQ0euR1GHXNESn8GKaQccBNHU83w=",
+        "lastModified": 1723984127,
+        "narHash": "sha256-YfObyIz0wcA8SJuBEq/tCJ17Mfw92WfJWPwX3aoY3HM=",
         "owner": "tnichols217",
         "repo": "nixos-program-extensions",
-        "rev": "d67bcf3a3878681a147a0ce8528462fec9ac79dc",
+        "rev": "9d8d74736ff4a3049a93f31e2ae1fa4fc4887306",
         "type": "github"
       },
       "original": {
@@ -1197,11 +1197,11 @@
         "u-boot-src": "u-boot-src"
       },
       "locked": {
-        "lastModified": 1723755330,
-        "narHash": "sha256-kmJPdoDIhbGz6J7mIUPK6JYJLY6YDkeZPdtzpWPCk0I=",
+        "lastModified": 1723990852,
+        "narHash": "sha256-72GMGaEOC0f7ExJMBSJhtMLX7Q3CnaXQHMjMO2NkRQA=",
         "owner": "tstat",
         "repo": "raspberry-pi-nix",
-        "rev": "6d61a9b18b1d3786ebd1cc73b7a3b37959bf4557",
+        "rev": "a993f0cd595ecc0836ca82640657527b934f9c9e",
         "type": "github"
       },
       "original": {
