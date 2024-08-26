@@ -194,6 +194,22 @@
       }
     },
     "flake-compat_3": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1696426674,
+        "narHash": "sha256-kvjfFW7WAETZlt09AgDn1MrtKzP7t90Vf7vypd3OL1U=",
+        "owner": "edolstra",
+        "repo": "flake-compat",
+        "rev": "0f9255e01c2351cc7d116c072cb317785dd33b33",
+        "type": "github"
+      },
+      "original": {
+        "owner": "edolstra",
+        "repo": "flake-compat",
+        "type": "github"
+      }
+    },
+    "flake-compat_4": {
       "locked": {
         "lastModified": 1696426674,
         "narHash": "sha256-kvjfFW7WAETZlt09AgDn1MrtKzP7t90Vf7vypd3OL1U=",
@@ -884,9 +900,30 @@
         "type": "github"
       }
     },
-    "nix-vscode-extensions": {
+    "nix-matlab": {
       "inputs": {
         "flake-compat": "flake-compat_2",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1724582045,
+        "narHash": "sha256-JDMtluYxFvnZvHh73WFHIDkk/DQkj0Pz/MkpKP/Lctk=",
+        "owner": "doronbehar",
+        "repo": "nix-matlab",
+        "rev": "7e1c9b261a331ac2db5a0ca55c96a3b1196d4238",
+        "type": "gitlab"
+      },
+      "original": {
+        "owner": "doronbehar",
+        "repo": "nix-matlab",
+        "type": "gitlab"
+      }
+    },
+    "nix-vscode-extensions": {
+      "inputs": {
+        "flake-compat": "flake-compat_3",
         "flake-utils": "flake-utils_4",
         "nixpkgs": "nixpkgs_4"
       },
@@ -1053,7 +1090,7 @@
     "nixvim": {
       "inputs": {
         "devshell": "devshell",
-        "flake-compat": "flake-compat_3",
+        "flake-compat": "flake-compat_4",
         "flake-parts": "flake-parts_3",
         "git-hooks": "git-hooks",
         "home-manager": "home-manager_2",
@@ -1080,11 +1117,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1724669217,
-        "narHash": "sha256-LcNevLp1iVbTSn3tyWt52tIVtrd3KI8dgcxaNcU1ZsI=",
+        "lastModified": 1724682398,
+        "narHash": "sha256-4yrmOgCXNlkJxQrnPWeyc+e5mL8DtToc6dpj0DaDXKs=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "c750bf577d9d49ee35178aa0c38dda55f1f04a14",
+        "rev": "629eca9f3b9f7e13ae0aa344f86065e3d49d8ea2",
         "type": "github"
       },
       "original": {
@@ -1153,11 +1190,11 @@
         "nixpkgs": "nixpkgs_6"
       },
       "locked": {
-        "lastModified": 1724653335,
-        "narHash": "sha256-PUApEY5wzlCsAzML1q9utjtkUpnOx1M8P5WKy6pygIQ=",
+        "lastModified": 1724675385,
+        "narHash": "sha256-4JVgYY0U/96fKtMTVtpLc748sm3aukDl3Ta7lY9Wnio=",
         "owner": "tnichols217",
         "repo": "nixos-program-extensions",
-        "rev": "cd471d2ed47be997ef45aa909f50bd14fbb8e6af",
+        "rev": "cd1a1ae0744b0b28c13e3eecc73ee58f1cb720ff",
         "type": "github"
       },
       "original": {
@@ -1226,6 +1263,7 @@
         "minecraft-arion": "minecraft-arion",
         "nix-index-database": "nix-index-database",
         "nix-ld": "nix-ld",
+        "nix-matlab": "nix-matlab",
         "nix-vscode-extensions": "nix-vscode-extensions",
         "nixos-generators": "nixos-generators",
         "nixpkgs": "nixpkgs_5",
