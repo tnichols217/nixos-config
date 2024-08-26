@@ -214,6 +214,8 @@ in
           scipy
           matplotlib
         ]))
+
+        inputs.nix-matlab.packages.x86_64-linux.matlab
         
         (callPackage ./packages/arch-theme.pkg.nix { arch-theme = inputs.arch-theme; })
         (callPackage ./packages/papirus-icons.pkg.nix { papirus = inputs.papirus; })

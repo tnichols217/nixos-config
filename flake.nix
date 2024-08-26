@@ -1,7 +1,7 @@
 {
   inputs = {
     nixpkgs = {
-      url = github:NixOS/nixpkgs/nixos-unstable;
+      url = "github:NixOS/nixpkgs/nixos-unstable";
     };
     # nixpkgs_old = {
     #   url = github:NixOS/nixpkgs/nixos-22.11;
@@ -9,7 +9,7 @@
     home-manager = {
       # url = github:nix-community/home-manager;
       # Until home-manager merges my diff maybe
-      url = github:tnichols217/home-manager/forceFlakes;
+      url = "github:tnichols217/home-manager/forceFlakes";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -23,13 +23,13 @@
     };
 
     impermanence = {
-      url = github:nix-community/impermanence;
+      url = "github:nix-community/impermanence";
     };
     nur = {
-      url = github:nix-community/NUR;
+      url = "github:nix-community/NUR";
     };
     arion = {
-      url = github:hercules-ci/arion;
+      url = "github:hercules-ci/arion";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixos-generators = {
@@ -41,32 +41,37 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     btf = {
-      url = github:oh-my-fish/theme-bobthefish;
+      url = "github:oh-my-fish/theme-bobthefish";
       flake = false;
     };
     arch-theme = {
-      url = github:rkstrdee/Arch;
+      url = "github:rkstrdee/Arch";
       flake = false;
     };
     papirus = {
-      url = github:PapirusDevelopmentTeam/papirus-icon-theme;
+      url = "github:PapirusDevelopmentTeam/papirus-icon-theme";
       flake = false;
     };
     chili = {
-      url = github:MarianArlt/kde-plasma-chili;
+      url = "github:MarianArlt/kde-plasma-chili";
       flake = false;
     };
     p10k = {
-      url = github:romkatv/powerlevel10k;
+      url = "github:romkatv/powerlevel10k";
       flake = false;
     };
     ani-cli-batch = {
-      url = github:75rx/ani-cli-batch;
+      url = "github:75rx/ani-cli-batch";
       flake = false;
     };
+    nix-matlab = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "gitlab:doronbehar/nix-matlab";
+    };
+
     # kitty themes
     kitty-themes = {
-      url = github:dexpota/kitty-themes;
+      url = "github:dexpota/kitty-themes";
       flake = false;
     };
 
