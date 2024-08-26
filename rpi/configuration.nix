@@ -15,7 +15,7 @@
   sdImage.compressImage = false;
 
   raspberry-pi-nix = {
-    uboot.enable = false;
+    uboot.enable = true;
     board = "bcm2712";
   };
 

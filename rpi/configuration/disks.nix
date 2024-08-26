@@ -38,6 +38,11 @@
       ];
     };
 
+    "/boot" = lib.mkForce {
+      device = "/nix/.ro-store/boot";
+      options = ["bind"];
+    };
+
     "/" = lib.mkForce {
       device = "none";
       fsType = "tmpfs";
