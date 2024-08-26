@@ -25,18 +25,17 @@
     # "f /home/${username}/.nix-profile/manifest.json 0755 ${username} users"
   ];
 
-  xdg.configFile = {
-      "matlab/nix.sh" = {
-        text = "INSTALL_DIR=$HOME/.config/matlab/installation";
-      };
-  };
-
   programs.command-not-found.enable = pkgs.lib.mkForce false;
 
   home-manager.users.${username} = {
     home = {
       stateVersion = version;
       forceNixProfiles = true;
+    };
+    xdg.configFile = {
+      "matlab/nix.sh" = {
+        text = "INSTALL_DIR=$HOME/.config/matlab/installation";
+      };
     };
     services = {
       xsettingsd = {
