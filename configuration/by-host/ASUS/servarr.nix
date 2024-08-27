@@ -139,7 +139,7 @@ let
               Preferences = {
                 WebUI = {
                   Username = "admin";
-                  Password_PBKDF2 = "@ByteArray(e88apKuE5EKe2cJXamorDg==:r96TVu5Ow7h376EbTOjgDUHiSJA3tKpyLmiRG8LwN89RaUi9WJkblqutLW1ogT6hWzEKgh4tFdXVJL7e2/Noyw==)";
+                  Password_PBKDF2 = "@ByteArray(N/U9E25upwHP6aSJL7Y3uw==:4qzpiWofCqhCBmY2jPVf9+IBO/1IRQkIz82k+9wN4L+022XEMRdueuxjCQkHRY5C23UR7YpiAPwFAG8ii2kbcA==)";
                   ReverseProxySupportEnabled = true;
                 };
                 General.Locale = "en";
