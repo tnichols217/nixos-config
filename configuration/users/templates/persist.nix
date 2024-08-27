@@ -39,6 +39,7 @@
         ".local/share/Celeste"
         ".local/share/dolphin-emu"
         ".local/share/waydroid"
+        ".local/share/ryujinx"
         ".minecraft"
         "Games"
         ".wine"
