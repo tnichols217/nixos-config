@@ -2,6 +2,6 @@
 {
   users.users.${username} = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "libvirtd" "networkmanager" "docker" "podman" "servarr" ];
+    extraGroups = [ "wheel" "libvirtd" "networkmanager" "docker" "podman" "servarr" "input" ];
   };
 }
