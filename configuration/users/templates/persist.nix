@@ -47,7 +47,6 @@
     (
       mapConf [
         ".config/gh/hosts.yml"
-        ".local/share/applications/steam.desktop"
         ".config/cachix/cachix.dhall"
       ] [
         ".ssh"
