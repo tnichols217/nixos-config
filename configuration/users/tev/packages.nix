@@ -201,6 +201,7 @@ in
         prismlauncher
         localsend
         osu-lazer
+        ryujinx
         # tartube-yt-dlp
         android-studio
 
