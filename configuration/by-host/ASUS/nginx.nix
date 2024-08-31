@@ -7,68 +7,68 @@ in
   # users.users.nginx.extraGroups = ["wwwrun"];
 
   services = {
-    authelia.instances = {
-      pigs = {
-        enable = true;
-        settings = {
-          default_2fa_method = "webauthn";
-          server.port = ports.authelia;
+    # authelia.instances = {
+    #   pigs = {
+    #     enable = true;
+    #     settings = {
+    #       default_2fa_method = "webauthn";
+    #       server.port = ports.authelia;
   
-          authentication_backend = {
-            file = {
-              path = "/var/lib/authelia-main/users_database.yml";
-            };
-          };
+    #       authentication_backend = {
+    #         file = {
+    #           path = "/var/lib/authelia-main/users_database.yml";
+    #         };
+    #       };
       
-          access_control = {
-            default_policy = "deny";
-            rules = [
-              {
-                domain = [addresses.authelia];
-                policy = "bypass";
-              }
-              {
-                domain = ["*.${addresses.square}"];
-                policy = "two_factor";
-              }
-            ];
-          };
+    #       access_control = {
+    #         default_policy = "deny";
+    #         rules = [
+    #           {
+    #             domain = [addresses.authelia];
+    #             policy = "bypass";
+    #           }
+    #           {
+    #             domain = ["*.${addresses.square}"];
+    #             policy = "two_factor";
+    #           }
+    #         ];
+    #       };
       
-          session = {
-            name = "authelia_session";
-            expiration = "12h";
-            inactivity = "45m";
-            remember_me_duration = "1M";
-            domain = "example.com";
-            redis.host = "/run/redis-authelia-pigs/redis.sock";
-          };
+    #       session = {
+    #         name = "authelia_session";
+    #         expiration = "12h";
+    #         inactivity = "45m";
+    #         remember_me_duration = "1M";
+    #         domain = "example.com";
+    #         redis.host = "/run/redis-authelia-pigs/redis.sock";
+    #       };
       
-          regulation = {
-            max_retries = 3;
-            find_time = "5m";
-            ban_time = "15m";
-          };
+    #       regulation = {
+    #         max_retries = 3;
+    #         find_time = "5m";
+    #         ban_time = "15m";
+    #       };
       
-          storage = {
-            local = {
-              path = "/var/lib/authelia/db.sqlite3";
-            };
-          };
-        };
-        secrets = {
-          storageEncryptionKeyFile = "/var/lib/authelia/encrypt.pem";
-          jwtSecretFile = "/var/lib/authelia/jwt.pem";
-        };
-      };
-    };
+    #       storage = {
+    #         local = {
+    #           path = "/var/lib/authelia/db.sqlite3";
+    #         };
+    #       };
+    #     };
+    #     secrets = {
+    #       storageEncryptionKeyFile = "/var/lib/authelia/encrypt.pem";
+    #       jwtSecretFile = "/var/lib/authelia/jwt.pem";
+    #     };
+    #   };
+    # };
 
-    redis.servers.authelia-main = {
-      enable = true;
-      user = "authelia-pigs";   
-      port = 0;
-      unixSocket = "/run/redis-authelia-pigs/redis.sock";
-      unixSocketPerm = 600;
-    };
+    # redis.servers.authelia-main = {
+    #   enable = true;
+    #   user = "authelia-pigs";   
+    #   port = 0;
+    #   unixSocket = "/run/redis-authelia-pigs/redis.sock";
+    #   unixSocketPerm = 600;
+    # };
 
     nginx = {
       enable = true;
