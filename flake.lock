@@ -178,8 +178,6 @@
       }
     },
     "flake-compat_2": {
-<<<<<<< HEAD
-=======
       "flake": false,
       "locked": {
         "lastModified": 1696426674,
@@ -196,7 +194,6 @@
       }
     },
     "flake-compat_3": {
->>>>>>> cbb52e4af8ee462ea6c0fcf9218bc4dd65cc941d
       "flake": false,
       "locked": {
         "lastModified": 1696426674,
@@ -212,11 +209,7 @@
         "type": "github"
       }
     },
-<<<<<<< HEAD
-    "flake-compat_3": {
-=======
     "flake-compat_4": {
->>>>>>> cbb52e4af8ee462ea6c0fcf9218bc4dd65cc941d
       "locked": {
         "lastModified": 1696426674,
         "narHash": "sha256-kvjfFW7WAETZlt09AgDn1MrtKzP7t90Vf7vypd3OL1U=",
@@ -495,19 +488,11 @@
         ]
       },
       "locked": {
-<<<<<<< HEAD
-        "lastModified": 1725659467,
-        "narHash": "sha256-UNdGEP+OWqRXSWA8X9mBgdWvXavAlyjhV8JCOP9hu2s=",
-        "owner": "tnichols217",
-        "repo": "home-manager",
-        "rev": "0918282cc210e80e8055a28aeae9a7fb5cb67137",
-=======
         "lastModified": 1718010519,
         "narHash": "sha256-xF14jsOG6VLPj8UZbq0gK8beSSR2nRouXfh+mCwzyGY=",
         "owner": "tnichols217",
         "repo": "home-manager",
         "rev": "ad2f4c786c1b6ecbd270c061d47b7b5b71399674",
->>>>>>> cbb52e4af8ee462ea6c0fcf9218bc4dd65cc941d
         "type": "github"
       },
       "original": {
@@ -938,11 +923,7 @@
     },
     "nix-vscode-extensions": {
       "inputs": {
-<<<<<<< HEAD
-        "flake-compat": "flake-compat_2",
-=======
         "flake-compat": "flake-compat_3",
->>>>>>> cbb52e4af8ee462ea6c0fcf9218bc4dd65cc941d
         "flake-utils": "flake-utils_4",
         "nixpkgs": "nixpkgs_4"
       },
@@ -1109,11 +1090,7 @@
     "nixvim": {
       "inputs": {
         "devshell": "devshell",
-<<<<<<< HEAD
-        "flake-compat": "flake-compat_3",
-=======
         "flake-compat": "flake-compat_4",
->>>>>>> cbb52e4af8ee462ea6c0fcf9218bc4dd65cc941d
         "flake-parts": "flake-parts_3",
         "git-hooks": "git-hooks",
         "home-manager": "home-manager_2",
@@ -1140,19 +1117,11 @@
     },
     "nur": {
       "locked": {
-<<<<<<< HEAD
         "lastModified": 1725659086,
         "narHash": "sha256-tBESqtOQzsUJzY07lkcZ44HaiPve5QxaCsOlvP3WcM4=",
         "owner": "nix-community",
         "repo": "NUR",
         "rev": "676dd41bd95bb0a1d612c5e70ae9539efd2d8fab",
-=======
-        "lastModified": 1725643706,
-        "narHash": "sha256-W3T6S6HW1gJBgxoELQS6dAkSMYUo4ZgnlI5vUOZ0MtU=",
-        "owner": "nix-community",
-        "repo": "NUR",
-        "rev": "9e5f0ee9815088b03c619b3f10e8cc944faffae9",
->>>>>>> cbb52e4af8ee462ea6c0fcf9218bc4dd65cc941d
         "type": "github"
       },
       "original": {
@@ -1221,19 +1190,11 @@
         "nixpkgs": "nixpkgs_6"
       },
       "locked": {
-<<<<<<< HEAD
         "lastModified": 1725646896,
         "narHash": "sha256-9DJJ91WEJd5CNDvsZso+XJ6XM8X/2sMKwJAQjqsQMu0=",
         "owner": "tnichols217",
         "repo": "nixos-program-extensions",
         "rev": "e9a52907d6428f47924088d5d040880d3e1fe743",
-=======
-        "lastModified": 1725625803,
-        "narHash": "sha256-w4hMZmFH2jF73Ag5LmXHwqmBvV1O4t+U8qZuks1waXE=",
-        "owner": "tnichols217",
-        "repo": "nixos-program-extensions",
-        "rev": "8ab0e4ded8f73dc79b7eab781e0d8d4f23c576e3",
->>>>>>> cbb52e4af8ee462ea6c0fcf9218bc4dd65cc941d
         "type": "github"
       },
       "original": {
@@ -1545,8 +1506,6 @@
         "type": "github"
       }
     },
-<<<<<<< HEAD
-=======
     "u-boot-src": {
       "flake": false,
       "locked": {
@@ -1560,7 +1519,6 @@
         "url": "https://ftp.denx.de/pub/u-boot/u-boot-2024.04.tar.bz2"
       }
     },
->>>>>>> cbb52e4af8ee462ea6c0fcf9218bc4dd65cc941d
     "utils": {
       "locked": {
         "lastModified": 1620759905,
