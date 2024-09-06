@@ -20,7 +20,10 @@
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
   hardware.bluetooth.enable = true;
+  hardware.xone.enable = true;
+  hardware.nvidia.open = true;
   services.blueman.enable = true;
+  services.power-profiles-daemon.enable = true;
 
   # powerManagement.powertop.enable = true;
 

@@ -1,4 +1,4 @@
-{ pkgs, attrs, config, ... }:
+{ pkgs, config, ... }:
 {
   fileSystems = {
     # server drive

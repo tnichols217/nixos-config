@@ -1,15 +1,15 @@
 {
   inputs = {
     nixpkgs = {
-      url = github:NixOS/nixpkgs/nixos-unstable;
+      url = "github:NixOS/nixpkgs/nixos-unstable";
     };
-    nixpkgs_old = {
-      url = github:NixOS/nixpkgs/nixos-22.11;
-    };
+    # nixpkgs_old = {
+    #   url = github:NixOS/nixpkgs/nixos-22.11;
+    # };
     home-manager = {
       # url = github:nix-community/home-manager;
       # Until home-manager merges my diff maybe
-      url = github:tnichols217/home-manager;
+      url = "github:tnichols217/home-manager/forceFlakes";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -17,15 +17,19 @@
       url = "github:Mic92/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    zlong_alert = {
+      url = "github:kevinywlui/zlong_alert.zsh";
+      flake = false;
+    };
 
     impermanence = {
-      url = github:nix-community/impermanence;
+      url = "github:nix-community/impermanence";
     };
     nur = {
-      url = github:nix-community/NUR;
+      url = "github:nix-community/NUR";
     };
     arion = {
-      url = github:hercules-ci/arion;
+      url = "github:hercules-ci/arion";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixos-generators = {
@@ -37,32 +41,37 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     btf = {
-      url = github:oh-my-fish/theme-bobthefish;
+      url = "github:oh-my-fish/theme-bobthefish";
       flake = false;
     };
     arch-theme = {
-      url = github:rkstrdee/Arch;
+      url = "github:rkstrdee/Arch";
       flake = false;
     };
     papirus = {
-      url = github:PapirusDevelopmentTeam/papirus-icon-theme;
+      url = "github:PapirusDevelopmentTeam/papirus-icon-theme";
       flake = false;
     };
     chili = {
-      url = github:MarianArlt/kde-plasma-chili;
+      url = "github:MarianArlt/kde-plasma-chili";
       flake = false;
     };
     p10k = {
-      url = github:romkatv/powerlevel10k;
+      url = "github:romkatv/powerlevel10k";
       flake = false;
     };
     ani-cli-batch = {
-      url = github:75rx/ani-cli-batch;
+      url = "github:75rx/ani-cli-batch";
       flake = false;
     };
+    nix-matlab = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "gitlab:doronbehar/nix-matlab";
+    };
+
     # kitty themes
     kitty-themes = {
-      url = github:dexpota/kitty-themes;
+      url = "github:dexpota/kitty-themes";
       flake = false;
     };
 
@@ -91,6 +100,7 @@
       flake = false;
     };
 
+    raspberry-pi-nix.url = "github:tstat/raspberry-pi-nix";
     
     nix-ld.url = "github:Mic92/nix-ld";
 
@@ -101,160 +111,186 @@
     flake-utils.url = "github:numtide/flake-utils";
   };
   
-  outputs = { self, nixpkgs, nixos-generators, nix-index-database, nixpkgs_old, nix-vscode-extensions, arion, minecraft-arion, flake-utils, qbittorrent-module, hy3, nix-ld, ... }@attrs: let 
-      mods = [
-          attrs.home-manager.nixosModules.default
-          attrs.impermanence.nixosModules.impermanence
-          attrs.nur.nixosModules.nur
-          # attrs.nixvim.homeManagerModules.nixvim
-          nix-ld.nixosModules.nix-ld
-          (qbittorrent-module + "/nixos/modules/services/torrent/qbittorrent.nix")
-          # nix-index-database.nixosModules.nix-index
-          ./configuration.nix
-        ];
-      version = "24.05";
-      config = {
-        allowUnfree = true;
-        # TODO until obsidian updates electron
-        permittedInsecurePackages = [
-          "electron-25.9.0"
-        ];
-      };
-      addresses = rec {
-        pigs = "pigsgo.mooo.com";
-        heyo = "heyo.ydns.eu";
-        square = "pigsgomoo.com";
-        asus = "tln32asus.student.cwru.edu";
-        rog = "tln32rog.student.cwru.edu";
-        msi = "tln32msi.student.cwru.edu";
-        default = square;
+  outputs = { self, ... }@inputs: let 
+    pre-mods = [
+      inputs.home-manager.nixosModules.default
+      inputs.impermanence.nixosModules.impermanence
+      inputs.nur.nixosModules.nur
+      inputs.nixos-generators.nixosModules.all-formats
+      # inputs.nixvim.homeManagerModules.nixvim
+      # inputs.nix-ld.nixosModules.nix-ld
+      (inputs.qbittorrent-module + "/nixos/modules/services/torrent/qbittorrent.nix")
+      # nix-index-database.nixosModules.nix-index
+    ];
+    mods = pre-mods ++ [
+      ./configuration.nix
+    ];
+    version = "24.05";
+    config = {
+      allowUnfree = true;
+      # TODO until obsidian updates electron
+      permittedInsecurePackages = [
+        "electron-25.9.0"
+      ];
+    };
+    addresses = rec {
+      pigs = "pigsgo.mooo.com";
+      heyo = "heyo.ydns.eu";
+      square = "pigsgomoo.com";
+      asus = "tln32asus.student.cwru.edu";
+      rog = "tln32rog.student.cwru.edu";
+      msi = "tln32msi.student.cwru.edu";
+      default = square;
 
-        serve = "serve.${addresses.default}";
-        nextcloud = "nextcloud.${addresses.default}";
-        lidarr = "lidarr.${addresses.default}";
-        radarr = "radarr.${addresses.default}";
-        sonarr = "sonarr.${addresses.default}";
-        readarr = "readarr.${addresses.default}";
-        prowlarr = "prowlarr.${addresses.default}";
-        jellyfin = "jellyfin.${addresses.default}";
-        qbittorrent = "qbit.${addresses.default}";
-        authelia = "auth.${addresses.default}";
-        home-assistant = "hath.${addresses.default}";
+      serve = "serve.${addresses.default}";
+      nextcloud = "nextcloud.${addresses.default}";
+      lidarr = "lidarr.${addresses.default}";
+      radarr = "radarr.${addresses.default}";
+      sonarr = "sonarr.${addresses.default}";
+      readarr = "readarr.${addresses.default}";
+      prowlarr = "prowlarr.${addresses.default}";
+      jellyfin = "jellyfin.${addresses.default}";
+      qbittorrent = "qbit.${addresses.default}";
+      authelia = "auth.${addresses.default}";
+      home-assistant = "hath.${addresses.default}";
+    };
+    ports = {
+      serve = 5000;
+      nextcloud = 443;
+      lidarr = 8686;
+      radarr = 7878;
+      sonarr = 8989;
+      readarr = 8787;
+      prowlarr = 9696;
+      transmission = 9091;
+      qbitfe = 9090;
+      qbittorrent = 9009;
+      jellyfin = 8096;
+      authelia = 9191;
+      rkvm = 5258;
+      home-assistant = 8123;
+    };
+    addressNumbers = {
+      lidarr = "10";
+      radarr = "11";
+      sonarr = "12";
+      readarr = "13";
+      transmission = "14";
+      jellyfin = "15";
+      prowlarr = "16";
+    };
+    persistence = rec {
+      default = "/nix/persist";
+      local = "${default}/local";
+      data = "${default}/data";
+      bucket = "${default}/bucket";
+      media = "${default}/media";
+    };
+    outs = inputs.flake-utils.lib.eachDefaultSystem (system:
+    let
+      fullAttrs = {
+        inherit inputs version addresses persistence ports addressNumbers;
+        # pkgs = import nixpkgs { inherit system config;};
+        # oldpkgs = import nixpkgs_old { inherit system config;};
+        vscode_exts = inputs.nix-vscode-extensions.extensions.${system}.vscode-marketplace;
+        openvsx_exts = inputs.nix-vscode-extensions.extensions.${system}.open-vsx;
+        nix-index-database = inputs.nix-index-database.packages.${system};
+        host-name = "ROG";
+        is-iso = false;
       };
-      ports = {
-        serve = 5000;
-        nextcloud = 443;
-        lidarr = 8686;
-        radarr = 7878;
-        sonarr = 8989;
-        readarr = 8787;
-        prowlarr = 9696;
-        transmission = 9091;
-        qbitfe = 9090;
-        qbittorrent = 9009;
-        jellyfin = 8096;
-        authelia = 9191;
-        rkvm = 5258;
-        home-assistant = 8123;
-      };
-      addressNumbers = {
-        lidarr = "10";
-        radarr = "11";
-        sonarr = "12";
-        readarr = "13";
-        transmission = "14";
-        jellyfin = "15";
-        prowlarr = "16";
-      };
-      persistence = rec {
-        default = "/nix/persist";
-        local = "${default}/local";
-        data = "${default}/data";
-        bucket = "${default}/bucket";
-        media = "${default}/media";
-      };
-      outs = flake-utils.lib.eachDefaultSystem (system:
-      let
-        fullAttrs = {
-          inherit attrs version addresses persistence ports addressNumbers;
-          pkgs = import nixpkgs { inherit system; config = config;};
-          oldpkgs = import nixpkgs_old { inherit system; config = config;};
-          vscode_exts = attrs.nix-vscode-extensions.extensions.${system}.vscode-marketplace;
-          openvsx_exts = attrs.nix-vscode-extensions.extensions.${system}.open-vsx;
-          nix-index-database = nix-index-database.packages.${system};
-          host-name = "ROG";
-          is-iso = false;
-        };
+    in rec {
+      nixosConfigurations = let
+      configs = {p, sys}: let
+        fullAttrsPkgs = fullAttrs // { pkgs = p; };
       in {
-        nixosConfigurations = {
-          MSI = nixpkgs.lib.nixosSystem {
-            inherit system;
-            specialArgs = fullAttrs // { host-name = "MSI"; };
-            modules = mods;
-          };
-          ROG = nixpkgs.lib.nixosSystem {
-            inherit system;
-            specialArgs = fullAttrs;
-            modules = mods;
-          };
-          ASUS = nixpkgs.lib.nixosSystem {
-            inherit system;
-            specialArgs = fullAttrs // { host-name = "ASUS"; };
-            modules = mods ++ [ arion.nixosModules.arion ];
-          };
-          linode = nixpkgs.lib.nixosSystem {
-            inherit system;
-            specialArgs = fullAttrs // { host-name = "linode"; };
-            modules = [ ./linode.nix ];
-          };
+        MSI = inputs.nixpkgs.lib.nixosSystem {
+          system = sys;
+          specialArgs = fullAttrsPkgs // { host-name = "MSI"; };
+          modules = mods;
         };
-        packages = 
-        let 
-          isoargs = {
-            specialArgs = fullAttrs // { is-iso = true; };
-            modules = mods;
-            format = "iso";
-          };
-          linodeargs = {
-            specialArgs = fullAttrs // { host-name = "linode"; };
-            modules = [ ./linode.nix ];
-            format = "linode";
-          };
+        ROG = inputs.nixpkgs.lib.nixosSystem {
+          system = sys;
+          specialArgs = fullAttrsPkgs;
+          modules = mods;
+        };
+        ASUS = inputs.nixpkgs.lib.nixosSystem {
+          system = sys;
+          specialArgs = fullAttrsPkgs // { host-name = "ASUS"; };
+          modules = mods ++ [ inputs.arion.nixosModules.arion ];
+        };
+        linode = inputs.nixpkgs.lib.nixosSystem {
+          system = sys;
+          specialArgs = fullAttrsPkgs // { host-name = "linode"; };
+          modules = [ ./linode.nix ];
+        };
+        rpi = inputs.nixpkgs.lib.nixosSystem {
+          system = sys;
+          specialArgs = fullAttrs // { host-name = "rpi"; };
+          modules = pre-mods ++ [ inputs.raspberry-pi-nix.nixosModules.raspberry-pi ./rpi.nix ];
+        };
+      };
+      in (configs { p = (import inputs.nixpkgs { inherit system config;}); sys = system; }) //
+      { cross = (inputs.flake-utils.lib.eachDefaultSystem (sys:
+          (configs { p = (import inputs.nixpkgs { inherit config; localSystem = system; crossSystem = sys; }); inherit sys;})
+        ));
+      };
+      packages = 
+      let 
+        isoargs = {
+          specialArgs = fullAttrs // { is-iso = true; };
+          modules = mods;
+          format = "iso";
+        };
+        sdargs = {
+          specialArgs = fullAttrs // { is-iso = true; };
+          modules = mods;
+          format = "sd-aarch64-installer";
+        };
+        linodeargs = {
+          specialArgs = fullAttrs // { host-name = "linode"; };
+          modules = [ ./linode.nix ];
+          format = "linode";
+        };
+        # rpiargs = {
+        #   specialArgs = fullAttrs // { host-name = "rpi"; };
+        #   modules = pre-mods ++ [ inputs.raspberry-pi-nix.nixosModules.raspberry-pi ./rpi.nix ];
+        #   format = "iso";
+        # };
+        pkgs = import inputs.nixpkgs { inherit system; };
+      in rec {
+        iso = inputs.nixos-generators.nixosGenerate (isoargs // { inherit pkgs; });
+        sd = inputs.nixos-generators.nixosGenerate (sdargs // { inherit pkgs; });
+        rpi = nixosConfigurations.rpi.config.system.build.sdImage;
+        linode = inputs.nixos-generators.nixosGenerate (linodeargs // { inherit pkgs; });
+        default = rpi;
+        cross = (inputs.flake-utils.lib.eachDefaultSystem (sys: 
+        let
+          pkgs = import inputs.nixpkgs { localSystem = system; crossSystem = sys; };
         in rec {
-          iso = nixos-generators.nixosGenerate (isoargs // {
-            pkgs = nixpkgs.legacyPackages.${system};
-          });
-          linode = nixos-generators.nixosGenerate (linodeargs // {
-            pkgs = nixpkgs.legacyPackages.${system};
-          });
-          default = iso;
-          cross = (flake-utils.lib.eachDefaultSystem (sys: rec {
-            iso = nixos-generators.nixosGenerate (isoargs // {
-              pkgs = import nixpkgs { localSystem = system; crossSystem = sys; };
-            });
-            linode = nixos-generators.nixosGenerate (linodeargs // {
-              pkgs = import nixpkgs { localSystem = system; crossSystem = sys; };
-            });
-            default = iso;
-          }));
+          iso = inputs.nixos-generators.nixosGenerate (isoargs // { inherit pkgs; system = sys; });
+          sd = inputs.nixos-generators.nixosGenerate (sdargs // { inherit pkgs; system = sys; });
+          rpi = nixosConfigurations.cross.rpi.${sys}.config.system.build.sdImage;
+          linode = inputs.nixos-generators.nixosGenerate (linodeargs // { inherit pkgs; system = sys; });
+          default = rpi;
+        }));
+      };
+      apps = rec {
+        test = {
+          type = "app";
+          program = ./nix/scripts/test.sh;
         };
-        apps = rec {
-          test = {
-            type = "app";
-            program = ./nix/scripts/test.sh;
-          };
-          build = {
-            type = "app";
-            program = ./nix/scripts/build.sh;
-          };
-          ciBuild = {
-            type = "app";
-            program = ./nix/scripts/ci-build.sh;
-          };
-          default = build;
+        build = {
+          type = "app";
+          program = ./nix/scripts/build.sh;
         };
-      });
-  in 
+        ciBuild = {
+          type = "app";
+          program = ./nix/scripts/ci-build.sh;
+        };
+        default = build;
+      };
+    });
+  in
   outs // {
     nixosConfigurations = outs.nixosConfigurations // outs.nixosConfigurations."x86_64-linux";
   };

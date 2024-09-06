@@ -1,4 +1,4 @@
-{ config, pkgs, attrs, ... }:
+{ config, pkgs, ... }:
 {
   programs.xwayland.enable = true;
   programs.hyprland.enable = true;

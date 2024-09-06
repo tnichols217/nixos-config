@@ -1,4 +1,4 @@
-{ pkgs, attrs, config, ... }:
+{ pkgs, config, ... }:
 {
   imports = [
     ./hardware/fs.nix

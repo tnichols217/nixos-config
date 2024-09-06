@@ -1,9 +1,9 @@
-{ pkgs, attrs, username, host-name, version, lib, nix-index-database, ... }:
+{ pkgs, username, host-name, version, lib, nix-index-database, inputs, ... }:
 {
   nixpkgs.overlays = [
     (
       self: super: {
-            kitty = import ./kitty/kitty.pkg.nix { pkgs = super; inherit self; inherit attrs; };
+            kitty = import ./kitty/kitty.pkg.nix { pkgs = super; inherit self; inherit inputs; };
           }
     )
   ];

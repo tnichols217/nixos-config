@@ -1,7 +1,7 @@
-{ pkgs, attrs, config, ... }:
+{ pkgs, inputs, config, ... }:
 {
   nixpkgs.overlays = [
-    # attrs.minecraft-arion.overlays.x86_64-linux
+    # inputs.minecraft-arion.overlays.x86_64-linux
   ];
 
   environment.variables = {
@@ -15,7 +15,7 @@
   virtualisation.arion = {
     backend = "podman-socket";
     projects.minecraft.settings = {
-      imports = [ attrs.minecraft-arion.arion-module ];
+      imports = [ inputs.minecraft-arion.arion-module ];
     };
   };
 }

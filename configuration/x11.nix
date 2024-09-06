@@ -2,8 +2,8 @@
 {
   imports =
     [
-      ./x11/plasma.nix
-      # ./x11/hyprland.nix
+      # ./x11/plasma.nix
+      ./x11/hyprland.nix
       ./x11/greetd.nix
     ];
   services = {
@@ -32,11 +32,16 @@
       drivers = [ pkgs.gutenprintBin pkgs.hplipWithPlugin pkgs.brgenml1lpr pkgs.brgenml1cupswrapper pkgs.cnijfilter2 ];
     };
   };
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
-  };
+    enable32Bit = true;
+  } // (if host-name == "ROG" then {
+    extraPackages = with pkgs; [
+      rocm-opencl-icd
+      rocm-opencl-runtime
+    ];
+  } else {});
+
   fonts = {
     packages = with pkgs; [
       nerdfonts
@@ -47,11 +52,4 @@
     enableDefaultPackages = true;
   };
   programs.dconf.enable = true;
-} // (if host-name == "ROG" then {
-  hardware.opengl = {
-    extraPackages = with pkgs; [
-      rocm-opencl-icd
-      rocm-opencl-runtime
-    ];
-  };
-} else {})
+} 

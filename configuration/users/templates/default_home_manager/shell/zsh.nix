@@ -1,4 +1,4 @@
-{ pkgs, attrs, username, host-name, version, lib, nix-index-database, ... }:
+{ pkgs, username, host-name, version, lib, nix-index-database, inputs, ... }:
 {
   home-manager.users.${username} = {
     programs = {
@@ -27,6 +27,11 @@
             src = "${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k";
           }
           {
+            file = "zlong_alert.zsh";
+            name = "zlong-alert";
+            src = "${inputs.zlong_alert}";
+          }
+          {
             file = "p10k.zsh";
             name = "powerlevel10k-config";
             src = ./zsh;
@@ -52,7 +57,7 @@
           "..." = "cd ../..";
           "...." = "cd ../../..";
           cdg = "cd $(git rev-parse --show-toplevel)";
-          upg = "sudo bash -c \"cd /etc/nixos; git stash; git stash clear; git pull; nixos-rebuild switch --flake \\\".#${host-name}\\\"\"";
+          upg = "sudo bash -c \"cd /etc/nixos; git stash; git stash clear; git pull; nixos-rebuild switch --flake \\\".#${host-name}\\\" $argv\"";
           sci = "ssh-copy-id -i ~/.ssh/ed25519 ";
           pathof = "path resolve ";
           code = "codium";
@@ -65,7 +70,7 @@
           fsw = "fswatch -rax ";
           black = "kill (pidof plasmashell); plasmashell &; disown (pidof plasmashell)";
           huion = "xsetwacom set `xinput | grep HUION | grep \"Pen stylus\" | head -1 | awk '{print $7;}' | cut -d \"=\" -f2` \"mapToOutput\" `xrandr | grep \" connected\" | grep \"Display\" | awk '{print $1;}'`; xsetwacom set `xinput | grep HUION | grep \"stylus\" | tac | head -1 | awk '{print $7;}' | cut -d \"=\" -f2` \"mapToOutput\" `xrandr | grep \" connected\" | grep \"Display\" | awk '{print $1;}'`";
-          kitty = "${pkgs.callPackage ./kitty/kitty.pkg.nix { self = pkgs; inherit attrs; }}/bin/kitty";
+          kitty = "${pkgs.callPackage ./kitty/kitty.pkg.nix { self = pkgs; inherit inputs; }}/bin/kitty";
           logout = "qdbus org.kde.LogoutPrompt /LogoutPrompt org.kde.LogoutPrompt.promptLogout";
           f = "xplr";
           cdf = "cd $(xplr)";

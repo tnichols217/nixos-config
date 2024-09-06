@@ -1,4 +1,4 @@
-{ pkgs, attrs, config, ... }:
+{ pkgs, config, ... }:
 {
   systemd.services."usbipd" = {
     serviceConfig.Type = "simple";

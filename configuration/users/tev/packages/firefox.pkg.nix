@@ -1,4 +1,4 @@
-{ pkgs, attrs, config, ... }:
+{ pkgs, config, inputs, ... }:
 
 let 
   firefox_exts = config.nur.repos.rycee.firefox-addons;
@@ -7,9 +7,9 @@ pkgs.wrapFirefox (pkgs.firefox-devedition-unwrapped // { requireSigning = false;
   nixExtensions = with firefox_exts; let
     fetchFFAddon = pkgs.callPackage (import ./firefox/fetchFirefoxAddonFlake.metapkg.nix) {};
   in
-    pkgs.lib.lists.forEach (builtins.attrNames (builtins.readDir (attrs.program-extensions.packages."x86_64-linux".default + "/firefox"))) (x: 
+    pkgs.lib.lists.forEach (builtins.attrNames (builtins.readDir (inputs.program-extensions.packages."x86_64-linux".default + "/firefox"))) (x: 
       let 
-        name = attrs.program-extensions.packages."x86_64-linux".default + "/firefox/" + x;
+        name = inputs.program-extensions.packages."x86_64-linux".default + "/firefox/" + x;
       in
       fetchFFAddon name
     )
@@ -72,7 +72,7 @@ pkgs.wrapFirefox (pkgs.firefox-devedition-unwrapped // { requireSigning = false;
   };
 
   extraPrefs = builtins.readFile (pkgs.callPackage ./firefox/overrideSetting.metapkg.nix { 
-      input-file = attrs.librewolfConfig + "/librewolf.cfg"; 
+      input-file = inputs.librewolfConfig + "/librewolf.cfg"; 
       overrides = [ 
         { 
           re = "network.dns.disableIPv6";

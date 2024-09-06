@@ -1,6 +1,6 @@
-{ config, pkgs, attrs, ... }:
+{ config, pkgs, inputs, ... }:
 {
   services.displayManager.sddm.enable = true;
   services.displayManager.sddm.enableHidpi = true;
-  services.displayManager.sddm.theme = "${attrs.chili}";
+  services.displayManager.sddm.theme = "${inputs.chili}";
 }

@@ -1,4 +1,4 @@
-{ pkgs, attrs, username, host-name, version, lib, nix-index-database, addresses, ... }@ args:
+{ pkgs, username, host-name, version, lib, nix-index-database, addresses, inputs, ... }@ args:
 let
   appmod = "CTRLALT";
   monitors = {
@@ -9,11 +9,17 @@ let
       "DP-4, disable"
     ];
     "ROG" = [
-      "eDP-2, 2560x1600@120, 0x0, 1"
-      "HDMI-A-1, 2560x1440@120, 2560x0, 1"
-      "DP-1, 2560x1440@60, 2560x1440, 1"
+      "eDP-2, 2560x1600@120, 0x1440, 1"
+      # "HDMI-A-1, 2560x1440@120, 2560x0, 1"
+      # "HDMI-A-1, highrr, 2560x0, 1"
+      "HDMI-A-1, highrr, 0x0, 1"
+      # "DP-1, 2560x1440@60, 2560x1440, 1"
+      "DP-1, highrr, 2560x1440, 1"
     ];
     "MSI" = [];
+    "rpi" = [
+      ", highres, auto, 1"
+    ];
   };
 in
 {
@@ -42,7 +48,7 @@ in
       hyprland = {
         enable = true;
         plugins = [
-          # attrs.hy3.packages.x86_64-linux.hy3
+          # inputs.hy3.packages.x86_64-linux.hy3
         ];
         settings = {
           bind = [
@@ -51,7 +57,7 @@ in
             "SUPER, L, exec, pidof hyprlock || ${pkgs.hyprlock}/bin/hyprlock"
             "SUPER_SHIFT, L, exit"
             "${appmod}, F, exec, firefox"
-            "${appmod}, T, exec, ${import ./shell/kitty/kitty.pkg.nix { inherit attrs pkgs; }}/bin/kitty"
+            "${appmod}, T, exec, ${import ./shell/kitty/kitty.pkg.nix { inherit pkgs inputs; }}/bin/kitty"
             "${appmod}, D, exec, ${pkgs.kitty}/bin/kitty"
             "${appmod}, U, exec, ${pkgs.kitty}/bin/kitty --hold sudo bash -c \"cd /etc/nixos; git stash; git stash clear; git pull; nixos-rebuild switch --flake \\\".#${host-name}\\\"\""
             "${appmod}, O, exec, obsidian"
@@ -104,8 +110,8 @@ in
             "SUPER_SHIFT, G, moveoutofgroup"
             "ALT, F4, killactive"
             "CTRL_ALT_SHIFT, right, pin"
-            "SUPER, bracketright, fullscreen, 2"
-            "SUPER_SHIFT, bracketright, fakefullscreen"
+            "SUPER, bracketright, fullscreen, 1"
+            # "SUPER_SHIFT, bracketright, fakefullscreen"
             ", XF86AudioMicMute, exec, ${pkgs.wireplumber}/bin/wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
             "SHIFT, XF86AudioMicMute, exec, ${pkgs.wireplumber}/bin/wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
             ", XF86Launch1, exec, ${pkgs.kitty}/bin/kitty sudo bash -c \"cd /etc/nixos; git stash; git stash clear; git pull; nixos-rebuild switch --flake \\\".#${host-name}\\\"\""
@@ -156,6 +162,10 @@ in
             "blur,waybar"
             "ignorealpha [0.05],waybar"
           ];
+          workspace = [
+            "w[tg1],rounding:false"
+            "w[t1],rounding:false"
+          ];
           general = {
             border_size = 0;
             gaps_in = 3;
@@ -165,15 +175,19 @@ in
             "col.active_border" = "0x44ffffff";
             "col.nogroup_border" = "0x44dd7777";
             "col.nogroup_border_active" = "0x55dd7777";
-            cursor_inactive_timeout = 10;
             layout = "dwindle";
             # layout = "hy3";
-            no_cursor_warps = true;
             no_focus_fallback = false;
             resize_on_border = true;
             extend_border_grab_area = 15;
             hover_icon_on_border = true;
             allow_tearing = false;
+            # no_cursor_warps = true;
+            # cursor_inactive_timeout = 10;
+          };
+          cursor = {
+            inactive_timeout = 10;
+            no_warps = true;
           };
           binds = {
             movefocus_cycles_fullscreen = false;
@@ -295,6 +309,9 @@ in
           misc = {
             disable_hyprland_logo = true;
             focus_on_activate = true;
+          };
+          debug = {
+            enable_stdout_logs = true;
           };
         };
         xwayland.enable = true;

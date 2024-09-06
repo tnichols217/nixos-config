@@ -1,4 +1,4 @@
-{ pkgs, attrs, config, vscode_exts, openvsx_exts }:
+{ pkgs, config, vscode_exts, openvsx_exts, ... }:
 {
   enable = true;
   # package = with vscode_exts; (pkgs.vscode-with-extensions.override {

@@ -39,6 +39,7 @@
         ".local/share/Celeste"
         ".local/share/dolphin-emu"
         ".local/share/waydroid"
+        ".local/share/ryujinx"
         ".minecraft"
         "Games"
         ".wine"
@@ -47,7 +48,6 @@
     (
       mapConf [
         ".config/gh/hosts.yml"
-        ".local/share/applications/steam.desktop"
         ".config/cachix/cachix.dhall"
       ] [
         ".ssh"
@@ -65,12 +65,15 @@
         ".local/share/Anki2"
         ".local/share/jellyfinmediaplayer"
         ".local/share/Jellyfin Media Player"
+        ".config/Ryujinx"
+        ".config/matlab/installation"
         ".config/jellyfin.org"
         ".config/lutris"
         ".config/kdeconnect"
         ".config/VSCodium"
         ".config/discord"
         ".config/Element"
+        ".config/Signal"
         ".config/tidal-hifi"
         ".config/Microsoft/Microsoft Teams"
         ".config/teams"

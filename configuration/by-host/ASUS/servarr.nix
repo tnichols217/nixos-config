@@ -1,4 +1,4 @@
-{ pkgs, ports, version, mkMerge, lib, addressNumbers, attrs, ... } :
+{ pkgs, ports, version, mkMerge, lib, addressNumbers, inputs, ... } :
 let
   localAddress = host: "10.1.${addressNumbers.${host}}.3";
   localExtraAddress = host: "10.1.${addressNumbers.${host}}.2";
@@ -96,7 +96,7 @@ let
   }];
   confContQbit = { name }: lib.mkMerge [(confContGr { inherit name; } ) {
     containers.${name} = {
-      config = lib.mkMerge [(attrs.qbittorrent-module + "/nixos/modules/services/torrent/qbittorrent.nix") {
+      config = lib.mkMerge [(inputs.qbittorrent-module + "/nixos/modules/services/torrent/qbittorrent.nix") {
         services = {
           "${name}" = {
             profileDir = "/var/lib/${name}";
@@ -139,7 +139,7 @@ let
               Preferences = {
                 WebUI = {
                   Username = "admin";
-                  Password_PBKDF2 = "@ByteArray(e88apKuE5EKe2cJXamorDg==:r96TVu5Ow7h376EbTOjgDUHiSJA3tKpyLmiRG8LwN89RaUi9WJkblqutLW1ogT6hWzEKgh4tFdXVJL7e2/Noyw==)";
+                  Password_PBKDF2 = "@ByteArray(lXfSkW9dPNXrh43Fzfq56Q==:hcgoTt7oCXwhmKjGaf12Nh/tM0IKAVY/nXcHVf91C3zWdHZy90queYzOFGC1Z47gD42O6FHsqdi1nA9AaYxnPw==)";
                   ReverseProxySupportEnabled = true;
                 };
                 General.Locale = "en";

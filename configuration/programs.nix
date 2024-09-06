@@ -1,11 +1,12 @@
 { config, pkgs, ... }:
 {
+  xdg.portal.enable = true;
   services.flatpak.enable = true;
   programs.gamemode.enable = true;
   # nixpkgs.overlays = [
   #   (
   #     self: super: {
-  #           kitty = import ./kitty/kitty.pkg.nix { pkgs = super; inherit self; inherit attrs; };
+  #           kitty = import ./kitty/kitty.pkg.nix { pkgs = super; inherit self; inherit; };
   #         }
   #   )
   # ];

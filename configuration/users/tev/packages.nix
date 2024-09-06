@@ -1,4 +1,4 @@
-{ config, pkgs, username, attrs, host-name, nixpkgs, oldpkgs, vscode_exts, openvsx_exts, addresses, ... }:
+{ config, pkgs, username, host-name, vscode_exts, openvsx_exts, addresses, inputs,  ... }:
 let
 ssh = {
   enable = true;
@@ -96,7 +96,7 @@ in
         nodejs
         nodePackages.nodemon
         nodePackages.npm
-        openjdk16-bootstrap
+        openjdk17-bootstrap
         virt-manager
         ark
         pstree
@@ -133,15 +133,18 @@ in
         xautomation
         xbindkeys
         ani-cli
-        (pkgs.callPackage ./packages/ani-cli-batch.pkg.nix { inherit attrs; })
+        (pkgs.callPackage ./packages/ani-cli-batch.pkg.nix { inherit inputs; })
         mov-cli
         graphviz
         texliveFull
         pstoedit
         playerctl
         parallel
-        gnome.nautilus
+        nautilus
         kdePackages.ksshaskpass
+        kdePackages.okular
+        units
+        libnotify
 
         # programs
         anki
@@ -149,8 +152,9 @@ in
         filelight
         libreoffice
         # Davinci doesnt work on the latest nixpkgs
-        davinci-resolve
+        # davinci-resolve
         # (pkgs.callPackage ./packages/davinci.nix {})
+        signal-desktop
         lolcat
         htop
         kcalc
@@ -167,7 +171,7 @@ in
         tidal-hifi
         moonlight-qt
         korganizer
-        tartube-yt-dlp
+        # tartube-yt-dlp
         element-desktop
         jellyfin-media-player
         jellycli
@@ -193,11 +197,13 @@ in
         discord
         tdesktop
         whatsapp-for-linux
-        minecraft
+        # minecraft
         prismlauncher
         localsend
         osu-lazer
-        tartube-yt-dlp
+        ryujinx
+        # tartube-yt-dlp
+        android-studio
 
         # python
         (pkgs.python3.withPackages (pythonPackages: with pythonPackages; [
@@ -209,17 +215,19 @@ in
           scipy
           matplotlib
         ]))
+
+        inputs.nix-matlab.packages.x86_64-linux.matlab
         
-        (callPackage ./packages/arch-theme.pkg.nix { arch-theme = attrs.arch-theme; })
-        (callPackage ./packages/papirus-icons.pkg.nix { papirus = attrs.papirus; })
+        (callPackage ./packages/arch-theme.pkg.nix { arch-theme = inputs.arch-theme; })
+        (callPackage ./packages/papirus-icons.pkg.nix { papirus = inputs.papirus; })
         (callPackage ./packages/kwin-scripts.pkg.nix {})
         (callPackage ./packages/konsole-themes.pkg.nix {})
-        (callPackage ./packages/firefox.pkg.nix { inherit attrs config; })
+        (callPackage ./packages/firefox.pkg.nix { inherit inputs config; })
       ];
     };
     programs = {
       inherit ssh; 
-      vscode = import ./packages/vscode.nix ({ inherit pkgs attrs config vscode_exts openvsx_exts; });
+      vscode = import ./packages/vscode.nix ({ inherit pkgs inputs config vscode_exts openvsx_exts; });
       obs-studio = {
         enable = true;
       };

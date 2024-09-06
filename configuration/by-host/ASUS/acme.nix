@@ -1,4 +1,4 @@
-{ pkgs, attrs, config, addresses, ... }:
+{ pkgs, config, addresses, ... }:
 {
   security.acme = {
     acceptTerms = true;

@@ -1,4 +1,4 @@
-{ pkgs, attrs, username, host-name, version, lib, nix-index-database, ... }:
+{ pkgs, username, host-name, version, lib, nix-index-database, inputs, ... }:
 {
   home-manager.users.${username} = {
     programs = {
@@ -36,7 +36,7 @@
         plugins = [
           {
             name = "theme-bobthefish";
-            src = attrs.btf;
+            src = inputs.btf;
           }
         ];
       };

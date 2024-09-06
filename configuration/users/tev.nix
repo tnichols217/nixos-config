@@ -1,4 +1,4 @@
-args@{ attrs, config, pkgs, version, host-name, nixpkgs, ... }:
+args@{ config, pkgs, version, host-name, nixpkgs, ... }:
 let
   username = "tev";
 in
@@ -7,7 +7,7 @@ in
   [
     ((import ./templates/persist.nix) (args // { inherit username; }))
     ((import ./templates/normal_sudo.nix) (args // { inherit username; }))
-    ((import ./templates/default_home_manager.nix) (args // { inherit pkgs username host-name version attrs; }))
+    ((import ./templates/default_home_manager.nix) (args // { inherit pkgs username host-name version; }))
     ((import ./tev/services.nix) (args // { inherit username; }))
     ((import ./tev/config.nix) (args // { inherit username; }))
     ((import ./tev/packages.nix) (args // { inherit username; }))
@@ -19,7 +19,7 @@ in
     gtk = {
       enable = true;
       theme = {
-        package = pkgs.gnome.gnome-themes-extra;
+        package = pkgs.gnome-themes-extra;
         name = "Adwaita-dark";
       };
     };

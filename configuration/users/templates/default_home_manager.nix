@@ -1,4 +1,4 @@
-{ pkgs, attrs, username, host-name, version, lib, nix-index-database, ... }@ args:
+{ pkgs, username, host-name, version, lib, nix-index-database, ... }@ args:
 {
   imports = [
     (import ./default_home_manager/shell.nix args)
@@ -13,7 +13,7 @@
     "d! /home/${username}/.config 0755 ${username} users"
     "d! /home/${username}/.config/dconf 0755 ${username} users"
     "d! /home/${username}/.local 0755 ${username} users"
-    "Z! /home/${username}/.config/{dconf,Microsoft,obs-studio,sunshine,InputLeap} 0755 ${username} users"
+    "Z! /home/${username}/.config/{dconf,Microsoft,obs-studio,sunshine,InputLeap,matlab} 0755 ${username} users"
     "z! /home/${username}/.config 0755 ${username} users"
     "Z! /home/${username}/.local/{state,share} 0755 ${username} users"
     "z! /home/${username}/.local 0755 ${username} users"
@@ -31,6 +31,11 @@
     home = {
       stateVersion = version;
       forceNixProfiles = true;
+    };
+    xdg.configFile = {
+      "matlab/nix.sh" = {
+        text = "INSTALL_DIR=$HOME/.config/matlab/installation";
+      };
     };
     services = {
       xsettingsd = {

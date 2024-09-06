@@ -1,4 +1,4 @@
-{ pkgs, attrs, username, host-name, version, lib, nix-index-database, ... }@ args:
+{ pkgs, username, host-name, version, lib, nix-index-database, ... }@ args:
 {
   imports = [
     (import ./shell/kitty.nix args)

@@ -1,4 +1,4 @@
-{ config, pkgs, version, host-name, attrs, oldnixpkgs, addresses, persistence, ... }:
+{ config, pkgs, version, host-name, oldnixpkgs, addresses, persistence, ... }:
 {
   imports =
     [
@@ -34,11 +34,13 @@
       trusted-substituters = [
         "https://cache.garnix.io"
         "https://cache.nixos.org/"
+        "https://raspberry-pi-nix.cachix.org"
         "https://tnichols217-nixos-config.cachix.org"
         "https://${addresses.default}:5000/"
       ];
       trusted-public-keys = [
         "tnichols217-nixos-config.cachix.org-1:B9JhBiPS+OHykLW16qovoOelAvtdH5sIjYU7BZvs7q8="
+        "raspberry-pi-nix.cachix.org-1:WmV2rdSangxW0rZjY/tBvBDSaNFQ3DyEQsVw8EvHn9o="
         "${addresses.default}:lT5jwGHgyaGJkTJtl/pTN4GqLSSkC/siY0EAfDoGpjo="
         "cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g="
       ];
