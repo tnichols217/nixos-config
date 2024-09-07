@@ -65,6 +65,8 @@
         ".local/share/Anki2"
         ".local/share/jellyfinmediaplayer"
         ".local/share/Jellyfin Media Player"
+        ".local/share/suyu"
+        ".config/suyu"
         ".config/Ryujinx"
         ".config/matlab/installation"
         ".config/jellyfin.org"

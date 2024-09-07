@@ -202,6 +202,7 @@ in
         localsend
         osu-lazer
         ryujinx
+        inputs.suyu.packages.x86_64-linux.suyu
         # tartube-yt-dlp
         android-studio
 
