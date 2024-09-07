@@ -717,11 +717,11 @@
     },
     "impermanence": {
       "locked": {
-        "lastModified": 1724489415,
-        "narHash": "sha256-ey8vhwY/6XCKoh7fyTn3aIQs7WeYSYtLbYEG87VCzX4=",
+        "lastModified": 1725690722,
+        "narHash": "sha256-4qWg9sNh5g1qPGO6d/GV2ktY+eDikkBTbWSg5/iD2nY=",
         "owner": "nix-community",
         "repo": "impermanence",
-        "rev": "c7f5b394397398c023000cf843986ee2571a1fd7",
+        "rev": "63f4d0443e32b0dd7189001ee1894066765d18a5",
         "type": "github"
       },
       "original": {
@@ -1117,11 +1117,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1725687722,
-        "narHash": "sha256-LPv282y5okYk8ebiBsEbDXy2WykwdBPpAthjKSmTfNI=",
+        "lastModified": 1725709306,
+        "narHash": "sha256-Jfzymp64NZ98NvuSWL4VIrjuLVOv3XE3HjMlSFLMNg0=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "ff7f8143f33751c4f37caec678ed1eb63006c0d3",
+        "rev": "6cde470a1684505b54e667109e187ede54d7d3ac",
         "type": "github"
       },
       "original": {
@@ -1190,11 +1190,11 @@
         "nixpkgs": "nixpkgs_6"
       },
       "locked": {
-        "lastModified": 1725671402,
-        "narHash": "sha256-TsCnKAKdgwbrVwA9bT1VUAmAxO4kbD7mXv9xsmbGBjc=",
+        "lastModified": 1725690035,
+        "narHash": "sha256-ECX1Q5kyQmN2xZPZ82sqUFFDSpVcIHdpoU30DHMnLn0=",
         "owner": "tnichols217",
         "repo": "nixos-program-extensions",
-        "rev": "e79d85280057373cea6980531f0bd65461957eb5",
+        "rev": "5182a6c5a8e763c74e1fddf2d25584c0bb42655d",
         "type": "github"
       },
       "original": {
@@ -1274,6 +1274,7 @@
         "program-extensions": "program-extensions",
         "qbittorrent-module": "qbittorrent-module",
         "raspberry-pi-nix": "raspberry-pi-nix",
+        "suyu": "suyu",
         "zlong_alert": "zlong_alert"
       }
     },
@@ -1395,6 +1396,27 @@
         "url": "https://hub.spigotmc.org/stash/scm/spigot/buildtools.git"
       }
     },
+    "suyu": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "systems": "systems_7"
+      },
+      "locked": {
+        "lastModified": 1714727263,
+        "narHash": "sha256-R+x0UZrBedeR6w+h44JaGwuQJrut5VVD2yjNgYNt9f4=",
+        "ref": "refs/heads/master",
+        "rev": "4013bb63ca2217eab5c4a25e266d68d908b96791",
+        "revCount": 15,
+        "type": "git",
+        "url": "https://git.suyu.dev/suyu/nix-flake"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.suyu.dev/suyu/nix-flake"
+      }
+    },
     "systems": {
       "locked": {
         "lastModified": 1681028828,
@@ -1482,6 +1504,21 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
+        "type": "github"
+      }
+    },
+    "systems_7": {
+      "locked": {
+        "lastModified": 1689347949,
+        "narHash": "sha256-12tWmuL2zgBgZkdoB6qXZsgJEH9LR3oUgpaQq2RbI80=",
+        "owner": "nix-systems",
+        "repo": "default-linux",
+        "rev": "31732fcf5e8fea42e59c2488ad31a0e651500f68",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default-linux",
         "type": "github"
       }
     },
