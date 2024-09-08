@@ -222,6 +222,7 @@ lib.mkMerge [
       "Z /var/lib/jellyfin 2775 root ${group}"
       "Z /var/lib/transmission 2775 root ${group}"
       "Z /var/lib/qbittorrent 2775 root ${group}"
+      "z /var/lib/qbittorrent/qBittorrent 2770 root ${group}"
     ];
   }
   (confContArr {
