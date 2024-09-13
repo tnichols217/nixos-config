@@ -759,8 +759,8 @@
       },
       "original": {
         "owner": "raspberrypi",
-        "ref": "v0.3.1+rpt20240906",
         "repo": "libcamera",
+        "rev": "69a894c4adad524d3063dd027f5c4774485cf9db",
         "type": "github"
       }
     },
@@ -1118,11 +1118,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1726162003,
-        "narHash": "sha256-PC7MiWMv7VdUAHZlgj4GB55w0P6BFyN7QRrwTJmZIp0=",
+        "lastModified": 1726186085,
+        "narHash": "sha256-kz++CbXfIcAWqQ0U6N7f+Ig2GSmsDjXwMqo/4daDx2s=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "9be9e1393ec09e94d41df2b1576ef255b80c6442",
+        "rev": "2eae4ae33e23857bd5784b1a5b7200573dbf3b01",
         "type": "github"
       },
       "original": {
@@ -1191,11 +1191,11 @@
         "nixpkgs": "nixpkgs_6"
       },
       "locked": {
-        "lastModified": 1726144238,
-        "narHash": "sha256-Tc09OvIRP2ewWM/lAttExi+RqgpQ+HVRBP4ThglAHAA=",
+        "lastModified": 1726165332,
+        "narHash": "sha256-D4yzCwK0Ju16Uw9yDqIKbmsyo5oypbtDHHRjDomZQOU=",
         "owner": "tnichols217",
         "repo": "nixos-program-extensions",
-        "rev": "62287168faf9b42a07df805b3ef44d65674a3e06",
+        "rev": "a315d17ea671fcd55b7299d778a81aa740e3916c",
         "type": "github"
       },
       "original": {
@@ -1235,11 +1235,11 @@
         "u-boot-src": "u-boot-src"
       },
       "locked": {
-        "lastModified": 1726102018,
-        "narHash": "sha256-GRXzdZzMqa1aR0orAStuvlfYqDWNziyOhaz1R4LG1MI=",
+        "lastModified": 1726173668,
+        "narHash": "sha256-K+XJBQZ8UZwTjZQTmf5l0OKKy942agFpkEktGcED4NU=",
         "owner": "tstat",
         "repo": "raspberry-pi-nix",
-        "rev": "3236d867b336c58f68923bafbcb85ef36e64690c",
+        "rev": "351301b1a13c108f5cb9d7b7b1f813583d3b5d10",
         "type": "github"
       },
       "original": {
