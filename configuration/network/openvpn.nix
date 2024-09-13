@@ -42,10 +42,12 @@
   in {
     clientTun = {
       config = configString{adapt = "tun"; port = "1195";};
+      extraArgs = [];
       autoStart = false;
     };
     clientTap = {
       config = configString{adapt = "tap";};
+      extraArgs = [];
       autoStart = false;
     };
   };
