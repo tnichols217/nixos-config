@@ -66,7 +66,7 @@
       (openvsx_exts.ms-toolsai.jupyter.overrideAttrs (final: prev: (prev // {
         buildPhase = prev.buildPhase + ''
           pkg=package.json
-          cat $pkg | ${pkgs.jq}/bin/jq ".engines.vscode=\"^1.93.0\"" > $pkg
+          cat $pkg | ${pkgs.jq}/bin/jq ".engines.vscode=\"^1.92.0\"" > $pkg
         '';
       })))
       openvsx_exts.ms-toolsai.vscode-jupyter-cell-tags
