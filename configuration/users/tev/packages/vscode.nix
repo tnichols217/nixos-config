@@ -38,8 +38,6 @@
       jnoortheen.nix-ide
       openvsx_exts.ms-python.python
       ms-python.vscode-pylance
-      ms-toolsai.jupyter-keymap
-      ms-toolsai.jupyter-renderers
       mshr-h.veriloghdl
       redhat.vscode-xml
       tabnine.tabnine-vscode
@@ -65,7 +63,11 @@
       vscode_exts.vscjava.vscode-java-debug
       vscode_exts.vscjava.vscode-maven
       openvsx_exts.genuitecllc.codetogether
-      openvsx_exts.luma.jupyter
+      # openvsx_exts.ms-toolsai.jupyter
+      openvsx_exts.ms-toolsai.vscode-jupyter-cell-tags
+      openvsx_exts.ms-toolsai.vscode-jupyter-slideshow
+      ms-toolsai.jupyter-keymap
+      ms-toolsai.jupyter-renderers
       pkgs.vscode-extensions."13xforever".language-x86-64-assembly
     ];
   }) // { pname = "vscodium"; };
