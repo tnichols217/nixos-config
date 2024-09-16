@@ -65,7 +65,11 @@
       vscode_exts.vscjava.vscode-java-debug
       vscode_exts.vscjava.vscode-maven
       openvsx_exts.genuitecllc.codetogether
-      openvsx_exts.ms-toolsai.jupyter
+      (openvsx_exts.ms-toolsai.jupyter.overrideAttrs (final: prev: (prev // {
+        buildPhase = prev.buildPhase + ''
+          cat $out/package.json | ${pkgs.jq}/bin/jq ".engines.vscode=\"^0.0.0\"" > $out/package.json
+        '';
+      })))
       pkgs.vscode-extensions."13xforever".language-x86-64-assembly
     ];
   }) // { pname = "vscodium"; };
