@@ -22,5 +22,7 @@
     serviceConfig.User = "${username}";
     wantedBy = ["multi-user.target"];
   };
-  
+  services.jupyter.enable = true;
+  users.users.jupyter.group = "jupyter";
+  users.groups.jupyter = {};
 }
