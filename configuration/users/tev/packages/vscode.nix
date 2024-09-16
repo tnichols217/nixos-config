@@ -63,7 +63,12 @@
       vscode_exts.vscjava.vscode-java-debug
       vscode_exts.vscjava.vscode-maven
       openvsx_exts.genuitecllc.codetogether
-      # openvsx_exts.ms-toolsai.jupyter
+      (openvsx_exts.ms-toolsai.jupyter.overrideAttrs (final: prev: (prev // {
+        buildPhase = prev.buildPhase + ''
+          pkg=package.json
+          cat $pkg | ${pkgs.jq}/bin/jq ".engines.vscode=\"^1.93.0\"" > $pkg
+        '';
+      })))
       openvsx_exts.ms-toolsai.vscode-jupyter-cell-tags
       openvsx_exts.ms-toolsai.vscode-jupyter-slideshow
       ms-toolsai.jupyter-keymap
