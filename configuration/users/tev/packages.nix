@@ -234,6 +234,7 @@ in
       };
     };
   };
+  services.jupyter.enable = true;
   # programs = {
   #   inherit ssh;
   # };
