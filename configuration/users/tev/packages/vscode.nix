@@ -36,7 +36,7 @@
       vscode_exts.ecmel.vscode-html-css
       grapecity.gc-excelviewer
       jnoortheen.nix-ide
-      ms-python.python
+      openvsx_exts.ms-python.python
       ms-python.vscode-pylance
       ms-toolsai.jupyter
       ms-toolsai.jupyter-keymap
@@ -66,6 +66,7 @@
       vscode_exts.vscjava.vscode-java-debug
       vscode_exts.vscjava.vscode-maven
       openvsx_exts.genuitecllc.codetogether
+      openvsx_exts.ms-toolsai.jupyter
       pkgs.vscode-extensions."13xforever".language-x86-64-assembly
     ];
   }) // { pname = "vscodium"; };

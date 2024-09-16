@@ -89,7 +89,7 @@
 
     suyu = {
       url = "git+https://git.suyu.dev/suyu/nix-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
+      # inputs.nixpkgs.follows = "nixpkgs";
     };
 
     # firefox addons
