@@ -68,6 +68,7 @@
       (openvsx_exts.ms-toolsai.jupyter.overrideAttrs (final: prev: (prev // {
         buildPhase = prev.buildPhase + ''
           pkg=./**/package.json
+          ls
           echo $pkg
           cat $pkg | ${pkgs.jq}/bin/jq ".engines.vscode=\"^0.0.0\"" > $pkg
         '';
