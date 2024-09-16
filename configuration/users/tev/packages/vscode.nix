@@ -67,9 +67,7 @@
       openvsx_exts.genuitecllc.codetogether
       (openvsx_exts.ms-toolsai.jupyter.overrideAttrs (final: prev: (prev // {
         buildPhase = prev.buildPhase + ''
-          pkg=./**/package.json
-          ls
-          echo $pkg
+          pkg=package.json
           cat $pkg | ${pkgs.jq}/bin/jq ".engines.vscode=\"^0.0.0\"" > $pkg
         '';
       })))
