@@ -75,6 +75,7 @@
       openvsx_exts.ms-toolsai.vscode-jupyter-slideshow
       ms-toolsai.jupyter-keymap
       ms-toolsai.jupyter-renderers
+      ms-python.vscode-pylance
       pkgs.vscode-extensions."13xforever".language-x86-64-assembly
     ];
   }) // { pname = "vscodium"; };
