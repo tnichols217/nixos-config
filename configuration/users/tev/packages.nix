@@ -5,6 +5,7 @@ ssh = {
   matchBlocks = let 
     identityFile = "/home/${username}/.ssh/ed25519";
     identityFileAWS = "/home/${username}/.ssh/ROG.pem";
+    identityFileAI4EDU = "/home/${username}/.ssh/AI4EDU.pem";
     user = "${username}";
     port = 22;
     # port = 27180;
@@ -30,6 +31,12 @@ ssh = {
       hostname = "${addresses.default}";
       identityFile = identityFileAWS;
       port = 2222;
+    };
+    "AIEDU" = {
+      inherit port;
+      hostname = "3.137.184.99";
+      identityFile = identityFileAI4EDU;
+      user = "ec2-user";
     };
     "gh" = {
       hostname = "github.com";
