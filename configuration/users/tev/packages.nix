@@ -198,7 +198,7 @@ in
         ]))
 
         inputs.nix-matlab.packages.x86_64-linux.matlab
-        inputs.lockdev-redirect.packages.lockdev-redirect
+        inputs.lockdev-redirect.packages.x86_64-linux.lockdev-redirect
         
         (callPackage ./packages/arch-theme.pkg.nix { arch-theme = inputs.arch-theme; })
         (callPackage ./packages/papirus-icons.pkg.nix { papirus = inputs.papirus; })
