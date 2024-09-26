@@ -68,6 +68,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
       url = "gitlab:doronbehar/nix-matlab";
     };
+    lockdev-redirect = {
+      url = "github:tnichols217/lockdev-redirect";
+    };
 
     # kitty themes
     kitty-themes = {
