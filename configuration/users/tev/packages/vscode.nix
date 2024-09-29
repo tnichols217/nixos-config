@@ -89,6 +89,16 @@
     "editor.semanticHighlighting.enabled" = true;
     "workbench.colorTheme" = "Default Dark+";
     "workbench.iconTheme" = "vscode-icons";
+    "editor.tokenColorCustomizations" = {
+      "textMateRules"= [
+        {
+          "scope" = "meta.function-call.generic.python";
+          "settings" = {
+            "foreground" = "#dcdcaa";
+          };
+        }
+      ];
+    };
     "tabnine.experimentalAutoImports" = true;
     "java.inlayHints.parameterNames.enabled" = "all";
     "git.autofetch" = true;
