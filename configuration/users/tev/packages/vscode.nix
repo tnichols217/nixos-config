@@ -76,7 +76,7 @@
       ms-toolsai.jupyter-keymap
       ms-toolsai.jupyter-renderers
       ms-python.vscode-pylance
-      MathWorks.language-matlab
+      vscode_exts.mathworks.language-matlab
       pkgs.vscode-extensions."13xforever".language-x86-64-assembly
     ];
   }) // { pname = "vscodium"; };
