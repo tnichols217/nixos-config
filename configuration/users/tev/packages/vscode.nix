@@ -76,7 +76,7 @@
       ms-toolsai.jupyter-keymap
       ms-toolsai.jupyter-renderers
       ms-python.vscode-pylance
-      ms-mssql.mssql
+      vscode_exts.ms-mssql.mssql
       vscode_exts.mathworks.language-matlab
       pkgs.vscode-extensions."13xforever".language-x86-64-assembly
     ];
