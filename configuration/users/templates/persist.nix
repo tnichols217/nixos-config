@@ -66,6 +66,7 @@
         ".local/share/jellyfinmediaplayer"
         ".local/share/Jellyfin Media Player"
         ".local/share/suyu"
+        ".local/share/DBeaverData"
         ".config/suyu"
         ".config/Ryujinx"
         ".config/matlab/installation"
