@@ -147,7 +147,7 @@ in
             # "${pkgs.networkmanagerapplet}/bin/nm-applet --indicatior"
             "${pkgs.waybar}/bin/waybar"
             "${pkgs.hypridle}/bin/hypridle"
-            "${pkgs.blueman}/bin/blueman-applet"
+            "${pkgs.blueman}/bin/blueman-tray"
             "${pkgs.wl-clipboard}/bin/wl-paste --type text --watch ${pkgs.cliphist}/bin/cliphist store"
             "${pkgs.wl-clipboard}/bin/wl-paste --type image --watch ${pkgs.cliphist}/bin/cliphist store"
             "if [ ! -f ~/.ssh/${algo} ]; then ${pkgs.openssh}/bin/ssh-keygen -t ${algo} -f ~/.ssh/${algo} -N \"\" fi"
