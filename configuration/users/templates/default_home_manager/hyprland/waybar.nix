@@ -4,7 +4,7 @@ builtins.toJSON {
   "position" = "top";
   "height" = 30;
   "spacing" = 4;
-  # "start_hidden" = true;
+  "start_hidden" = true;
   "exclusive" = false;
   # "passthrough" = true;
 
