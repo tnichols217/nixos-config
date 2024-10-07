@@ -105,5 +105,8 @@
     "java.inlayHints.parameterNames.enabled" = "all";
     "git.autofetch" = true;
     "omnisharp.path" = "${pkgs.omnisharp-roslyn + "/bin/OmniSharp"}";
+    "terminal.integrated.commandsToSkipShell" = [
+      "matlab.interrupt"
+    ];
   };
 }
