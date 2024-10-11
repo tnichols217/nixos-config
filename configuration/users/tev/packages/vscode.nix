@@ -36,7 +36,14 @@
       vscode_exts.ecmel.vscode-html-css
       grapecity.gc-excelviewer
       jnoortheen.nix-ide
-      openvsx_exts.ms-python.python
+      (openvsx_exts.ms-python.python.overrideAttrs (final: prev: (prev // {
+        buildPhase = prev.buildPhase + ''
+          pkg=package.json
+          cat $pkg | ${pkgs.jq}/bin/jq ".engines.vscode=\"^1.92.0\"" > $pkg.new
+          rm $pkg
+          mv $pkg.new $pkg
+        '';
+      })))
       ms-python.vscode-pylance
       mshr-h.veriloghdl
       redhat.vscode-xml
