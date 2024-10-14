@@ -44,7 +44,8 @@
           mv $pkg.new $pkg
         '';
       })))
-      ms-python.vscode-pylance
+      openvsx_exts.detachhead.basedpyright
+      # ms-python.vscode-pylance
       mshr-h.veriloghdl
       redhat.vscode-xml
       tabnine.tabnine-vscode
