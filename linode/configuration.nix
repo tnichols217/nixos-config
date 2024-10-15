@@ -5,7 +5,7 @@
 
   time.timeZone = "America/Toronto";
 
-  environment.noXlibs = true;
+  # environment.noXlibs = true;
 
   users.users.root = {
     hashedPassword = "!";
