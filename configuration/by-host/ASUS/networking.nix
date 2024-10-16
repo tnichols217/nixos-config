@@ -45,7 +45,7 @@
     #   ${pkgs.openssh}/bin/ssh -NR 4430:localhost:443 -R 8000:localhost:80 -R 2200:localhost:22 -R 25565:localhost:25565 ec2-user@${addresses.default} -i /var/lib/mullvad/ec2.cert
     # '';
     script = ''
-      ${pkgs.openssh}/bin/ssh -NR 443:localhost:443 -R 80:localhost:80 -R 2200:localhost:22 -R 25565:localhost:25565 root@${addresses.default} -i /home/tev/.ssh/ed25519
+      ${pkgs.openssh}/bin/ssh -NR 443:localhost:443 -R 80:localhost:80 -R 2200:localhost:22 -R 25565:localhost:25565 ports@${addresses.default} -i /home/tev/.ssh/ed25519
     '';
     wantedBy = ["multi-user.target"];
   };
