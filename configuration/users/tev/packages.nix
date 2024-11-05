@@ -205,7 +205,8 @@ in
         (callPackage ./packages/konsole-themes.pkg.nix {})
         (callPackage ./packages/firefox.pkg.nix { inherit inputs config; })
       ] ++ (if host-name == "ASUS" then [
-        (blender.override { cudaSupport = true; } )
+        # (blender.override { cudaSupport = true; } )
+        # Blender build is broken right now??
       ] else [
         blender-hip
       ]);
