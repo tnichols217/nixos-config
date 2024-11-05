@@ -69,11 +69,11 @@
         };
         wireguardPeers = [
           {
-            wireguardPeerConfig = {
-              PublicKey = "0qSP0VxoIhEhRK+fAHVvmfRdjPs2DmmpOCNLFP/7cGw=";
-              AllowedIPs = ["0.0.0.0/0" "::0/0"];
-              Endpoint = "193.32.248.66:51820";
-            };
+            # wireguardPeerConfig = {
+            PublicKey = "0qSP0VxoIhEhRK+fAHVvmfRdjPs2DmmpOCNLFP/7cGw=";
+            AllowedIPs = ["0.0.0.0/0" "::0/0"];
+            Endpoint = "193.32.248.66:51820";
+            # };
           }
         ];
       };
@@ -91,11 +91,11 @@
         };
         routes = [
           {
-            routeConfig = {
-              Gateway = "10.64.0.1";
-              Destination = "10.64.0.0/16";
-              GatewayOnLink = "yes";
-            };
+            # routeConfig = {
+            Gateway = "10.64.0.1";
+            Destination = "10.64.0.0/16";
+            GatewayOnLink = "yes";
+            # };
           }
         ];
         DHCP = "no";
