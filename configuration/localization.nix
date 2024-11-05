@@ -1,7 +1,7 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 {
   # time.timeZone = "Asia/Kuala_Lumpur";
-  time.timeZone = "America/New_York";
+  time.timeZone = lib.mkForce "America/New_York";
   i18n = {
     defaultLocale = "en_SG.UTF-8";
     supportedLocales = [
