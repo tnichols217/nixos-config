@@ -104,7 +104,7 @@
     # beta
 
     qbittorrent-module = {
-      url = "github:nu-nu-ko/nixpkgs/init-nixos-qbittorrent";
+      url = "github:fsnkty/nixpkgs/init-nixos-qbittorrent";
       flake = false;
     };
 
