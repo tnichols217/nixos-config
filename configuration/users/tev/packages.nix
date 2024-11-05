@@ -164,7 +164,6 @@ in
         input-leap
         flameshot
         spotify
-        (blender-hip.override { cudaSupport = true; } )
         gimp
         (inkscape-with-extensions.override { inkscapeExtensions = [ inkscape-extensions.textext ]; } )
           ghostscript
@@ -205,7 +204,11 @@ in
         (callPackage ./packages/kwin-scripts.pkg.nix {})
         (callPackage ./packages/konsole-themes.pkg.nix {})
         (callPackage ./packages/firefox.pkg.nix { inherit inputs config; })
-      ];
+      ] ++ (if host-name == "ASUS" then [
+        (blender.override { cudaSupport = true; } )
+      ] else [
+        blender-hip
+      ]);
     };
     programs = {
       inherit ssh; 
