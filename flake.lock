@@ -1140,11 +1140,11 @@
     },
     "nixpkgs_6": {
       "locked": {
-        "lastModified": 1731300529,
-        "narHash": "sha256-PwzToM8oltfO3GlHpo3hIqmhPZwTbwkdnMIe4NpaN4g=",
+        "lastModified": 1731346085,
+        "narHash": "sha256-JWC3hvUZGsJGisC9d3d40wQalUkSsbaOgAJIOlHn6Qs=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "3f42f0b61e6c45ca80d87cec5dd11e121d6b9c14",
+        "rev": "3a7266fcefcb9ce353df49ba3f292d06443760bb",
         "type": "github"
       },
       "original": {
@@ -1217,11 +1217,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1731343336,
-        "narHash": "sha256-Lav5cfODZsBCHtiMpy7Sd7HZIEZp3J/FLDYvGX6TEhA=",
+        "lastModified": 1731356813,
+        "narHash": "sha256-w0TJwJwZd9so/chWYFFEtOQdnXTCvmNXIHs1FWJDlMM=",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "4ea34656c234855a0c70b09f760d658f4efc9641",
+        "rev": "c892aa20732f982d4cc2b3ef2e2276a2a9a4d45b",
         "type": "github"
       },
       "original": {
@@ -1232,11 +1232,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1731347056,
-        "narHash": "sha256-LJr8SQWMGstlN25QEoz3t2TOFdDabvcPxWoU0VBF6MM=",
+        "lastModified": 1731365127,
+        "narHash": "sha256-nLtHRaEG/MIMmU+5H29GWTi2B8RsQ/BMi6XU4YD2Su0=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "c9dd484837f7874e86ee20741f1876f833f9cc6e",
+        "rev": "02bf26939ee7b23e1ec45a33372b42fcefdd59cd",
         "type": "github"
       },
       "original": {
@@ -1331,11 +1331,11 @@
         "nixpkgs": "nixpkgs_7"
       },
       "locked": {
-        "lastModified": 1731328356,
-        "narHash": "sha256-3key5M7jFJOLAGgtxzG2rEHlXp+IFxvqEsbuqTMESeA=",
+        "lastModified": 1731349280,
+        "narHash": "sha256-XiSC8bbWBEYJ4DUjwTfgbWz/mvICMDdO/SGPSdQQRIA=",
         "owner": "tnichols217",
         "repo": "nixos-program-extensions",
-        "rev": "14ddc26ff0d5c09541d8c56dd372b4b0e39f233d",
+        "rev": "09307d3882c857e77cc39d5c95f4b851df5fe9d1",
         "type": "github"
       },
       "original": {
