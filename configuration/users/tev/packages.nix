@@ -193,6 +193,7 @@ in
           pip
           numpy
           scipy
+          sympy
           matplotlib
         ]))
 
