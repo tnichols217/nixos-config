@@ -37,7 +37,7 @@
     enable32Bit = true;
   } // (if host-name == "ROG" then {
     extraPackages = with pkgs; [
-      rocm-opencl-icd
+      # rocm-opencl-icd
       rocm-opencl-runtime
     ];
   } else {});
