@@ -173,7 +173,10 @@ in
         brave
         # teams
 
-        discord
+        (discord.override {
+          withOpenASAR = true;
+          withVencord = true;
+        })
         tdesktop
         whatsapp-for-linux
         # minecraft
