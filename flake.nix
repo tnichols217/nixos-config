@@ -123,7 +123,7 @@
     pre-mods = [
       inputs.home-manager.nixosModules.default
       inputs.impermanence.nixosModules.impermanence
-      inputs.nur.nixosModules.nur
+      inputs.nur.modules.nixos.default
       inputs.nixos-generators.nixosModules.all-formats
       # inputs.nixvim.homeManagerModules.nixvim
       # inputs.nix-ld.nixosModules.nix-ld
