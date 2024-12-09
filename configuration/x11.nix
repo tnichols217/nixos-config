@@ -1,4 +1,4 @@
-{ config, pkgs, host-name, ... }:
+{ config, pkgs, host-name, lib, ... }:
 {
   imports =
     [
@@ -47,7 +47,7 @@
       noto-fonts
       noto-fonts-cjk-sans
       noto-fonts-emoji
-    ] ++ builtins.attrValues nerd-fonts;
+    ] ++ lib.lists.filter (builtins.typeOf != "lambda") (builtins.attrValues nerd-fonts);
     enableDefaultPackages = true;
   };
   programs.dconf.enable = true;
