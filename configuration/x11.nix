@@ -44,11 +44,10 @@
 
   fonts = {
     packages = with pkgs; [
-      nerdfonts
       noto-fonts
       noto-fonts-cjk-sans
       noto-fonts-emoji
-    ];
+    ] ++ builtins.attrValues nerd-fonts;
     enableDefaultPackages = true;
   };
   programs.dconf.enable = true;
