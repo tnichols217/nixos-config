@@ -47,7 +47,7 @@
       noto-fonts
       noto-fonts-cjk-sans
       noto-fonts-emoji
-    ] ++ lib.lists.filter (a: builtins.typeOf a != "lambda") (builtins.attrValues nerd-fonts);
+    ] ++ lib.lists.filter (a: builtins.typeOf a == "path") (builtins.attrValues nerd-fonts);
     enableDefaultPackages = true;
   };
   programs.dconf.enable = true;
