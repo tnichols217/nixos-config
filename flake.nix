@@ -65,7 +65,7 @@
       flake = false;
     };
     nix-matlab = {
-      inputs.nixpkgs.follows = "nixpkgs";
+      # inputs.nixpkgs.follows = "nixpkgs";
       url = "gitlab:doronbehar/nix-matlab";
     };
     lockdev-redirect = {
