@@ -47,6 +47,7 @@
       noto-fonts
       noto-fonts-cjk-sans
       noto-fonts-emoji
+      font-awesome
     ] ++ lib.lists.filter (a: builtins.typeOf a == "path") (builtins.attrValues nerd-fonts);
     enableDefaultPackages = true;
   };
