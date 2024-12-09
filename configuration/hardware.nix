@@ -31,9 +31,9 @@
 
   services = {
     ratbagd.enable = true;
-    xserver = {
-      digimend.enable = true;
-    };
+    # xserver = {
+    #   digimend.enable = true;
+    # };
     libinput = {
       enable = true;
       mouse = {
