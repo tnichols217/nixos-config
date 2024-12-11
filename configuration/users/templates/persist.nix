@@ -75,6 +75,7 @@
         ".config/kdeconnect"
         ".config/VSCodium"
         ".config/discord"
+        ".config/Vencord"
         ".config/Element"
         ".config/Signal"
         ".config/tidal-hifi"
