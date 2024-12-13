@@ -1227,11 +1227,11 @@
     },
     "nixpkgs_7": {
       "locked": {
-        "lastModified": 1734014226,
-        "narHash": "sha256-RcDCLav9GZYWYGoPcU5LzDxrqdDO+a4UYg4pSDyfV9c=",
+        "lastModified": 1734057604,
+        "narHash": "sha256-EC3eHb8Mk54jnk+C8Mtq2sRAaPJzg6zPvRY6OdNHwSc=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "0b04b1f3548f38d045f46821d8f41cab5680fed7",
+        "rev": "403845c37839bd698e8c36587f0601e36f76d2a8",
         "type": "github"
       },
       "original": {
@@ -1243,11 +1243,11 @@
     },
     "nixpkgs_8": {
       "locked": {
-        "lastModified": 1733759999,
-        "narHash": "sha256-463SNPWmz46iLzJKRzO3Q2b0Aurff3U1n0nYItxq7jU=",
+        "lastModified": 1733940404,
+        "narHash": "sha256-Pj39hSoUA86ZePPF/UXiYHHM7hMIkios8TYG29kQT4g=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "a73246e2eef4c6ed172979932bc80e1404ba2d56",
+        "rev": "5d67ea6b4b63378b9c13be21e2ec9d1afc921713",
         "type": "github"
       },
       "original": {
@@ -1308,11 +1308,11 @@
         "treefmt-nix": "treefmt-nix_2"
       },
       "locked": {
-        "lastModified": 1734070681,
-        "narHash": "sha256-cd5Mk03c70j7FhpPat8zxy0DDBx/HCPw5HwAbil+ScM=",
+        "lastModified": 1734085758,
+        "narHash": "sha256-I0rYdasxMIexab0Gq63Lee10bve50DMzBacVxNBtdfc=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "3e32d21cd67c4201bd69331e5a23610bb8fadf60",
+        "rev": "209f123249e367ef2ee1654b42d44cce3f740ef0",
         "type": "github"
       },
       "original": {
@@ -1407,11 +1407,11 @@
         "nixpkgs": "nixpkgs_9"
       },
       "locked": {
-        "lastModified": 1734052999,
-        "narHash": "sha256-HxUCMsSgdFVQ2kJelbwHdXKtbr1O0cU3WZ8Wrd5jNM0=",
+        "lastModified": 1734071139,
+        "narHash": "sha256-KLvVNmXqYrSoma1D/MFxFpIKFnrOB2JzEBbgy+l1s0E=",
         "owner": "tnichols217",
         "repo": "nixos-program-extensions",
-        "rev": "db787b66cf87dfa9145b27dd2d00ec81eaee93d6",
+        "rev": "2a4fab1f37b36d8d0e77a3b14346704957aff1f1",
         "type": "github"
       },
       "original": {
