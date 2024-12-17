@@ -1036,11 +1036,11 @@
         "nixpkgs": "nixpkgs_6"
       },
       "locked": {
-        "lastModified": 1734314392,
-        "narHash": "sha256-EydUadS7omV3SO/4TLeMkLT2JUugvPEtvBoAF43ggWU=",
+        "lastModified": 1734400565,
+        "narHash": "sha256-vfyvUlF1wVVXy/Au3fQpa8NMQbocg/oTgNuPS7MoesA=",
         "owner": "nix-community",
         "repo": "nix-vscode-extensions",
-        "rev": "4ef033412f0732794077fcc25af4f79f097ad1e1",
+        "rev": "c2efba4b42988d8573f914cad6431b5bd614935d",
         "type": "github"
       },
       "original": {
@@ -1288,11 +1288,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1734368549,
-        "narHash": "sha256-D8LYUU+IWbpmyjOAKEnKVOhd7Qfe7q+DvUNZTYoitKY=",
+        "lastModified": 1734412481,
+        "narHash": "sha256-U2CM2IisVgI+iKjkBw0KglyP7DwCIUwTBaz2bhMcTak=",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "6c30476a4d5f761149945a65e74179f4492b1ea6",
+        "rev": "30895485c3a31bb16ace513def4f3a36bfeb68c6",
         "type": "github"
       },
       "original": {
@@ -1308,11 +1308,11 @@
         "treefmt-nix": "treefmt-nix_2"
       },
       "locked": {
-        "lastModified": 1734397662,
-        "narHash": "sha256-1biWlCMmSh3gpRnIzUmQZ1M6bEcjCHX04+3yWWsm8Mo=",
+        "lastModified": 1734416530,
+        "narHash": "sha256-xIpKwMz6M4XJBvw3ZjFqb7D91z+LgwxOs4L0IgNIlBM=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "081940ad8fa838350b572386584fbe63a0ca6fcb",
+        "rev": "863f86643df36b79f4c439a8076bec5cb7e6d358",
         "type": "github"
       },
       "original": {
@@ -1407,11 +1407,11 @@
         "nixpkgs": "nixpkgs_9"
       },
       "locked": {
-        "lastModified": 1734373488,
-        "narHash": "sha256-TPSaK4yEYFzrxyfPuw9yoBu+1SmPL1m60+8WtevFJw0=",
+        "lastModified": 1734398536,
+        "narHash": "sha256-LDzd4QzFL3KASLdB8+iXJKJYYdN8FYmezr4Gbojuu9k=",
         "owner": "tnichols217",
         "repo": "nixos-program-extensions",
-        "rev": "df9c469084fec7b03dab96880968c38c9eaec615",
+        "rev": "c2632467f91977c83e13a480221b1f6b5e8dbc1d",
         "type": "github"
       },
       "original": {
