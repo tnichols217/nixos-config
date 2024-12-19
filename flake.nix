@@ -137,8 +137,10 @@
     config = {
       allowUnfree = true;
       # TODO until obsidian updates electron
+      # TODO until sonarr fixes dep
       permittedInsecurePackages = [
         "electron-25.9.0"
+        "dotnet-sdk-6.0.428"
       ];
     };
     addresses = rec {
