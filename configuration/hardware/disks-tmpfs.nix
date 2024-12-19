@@ -33,7 +33,7 @@
       "${persistence.media}" = {
         device = "/dev/disk/by-label/NIXMEDIA";
         fsType = "ext4";
-        neededForBoot = false;
+        neededForBoot = true;
       };
     } else {}) // {
       # combine
