@@ -140,7 +140,10 @@
       # TODO until sonarr fixes dep
       permittedInsecurePackages = [
         "electron-25.9.0"
+        "aspnetcore-runtime-6.0.36"
+        "aspnetcore-runtime-wrapped-6.0.36"
         "dotnet-sdk-6.0.428"
+        "dotnet-sdk-wrapped-6.0.428"
       ];
     };
     addresses = rec {
