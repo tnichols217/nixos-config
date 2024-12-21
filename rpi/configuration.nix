@@ -11,8 +11,8 @@
     ((import ../configuration/users/templates/default_home_manager.nix) (args // { username = "user"; }))
   ];
 
-  sdImage.expandOnBoot = false;
-  sdImage.compressImage = false;
+  # sdImage.expandOnBoot = false;
+  # sdImage.compressImage = false;
 
   raspberry-pi-nix = {
     uboot.enable = true;

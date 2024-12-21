@@ -1407,11 +1407,11 @@
         "nixpkgs": "nixpkgs_9"
       },
       "locked": {
-        "lastModified": 1734718921,
-        "narHash": "sha256-6NAeOSKN/dzIGkp9oaCNNCne8csdS21tpxphwhnwW60=",
+        "lastModified": 1734743684,
+        "narHash": "sha256-5eT8IdWZavYXcgoZVU7RnU/jpIMsVBhzSPV2s5jMNj4=",
         "owner": "tnichols217",
         "repo": "nixos-program-extensions",
-        "rev": "c5127a782bb0b4985dc690542a325ea9153954db",
+        "rev": "a7dd0def2a608c05f598405c65ee011c29de2f56",
         "type": "github"
       },
       "original": {
@@ -1453,13 +1453,13 @@
       "locked": {
         "lastModified": 1731941843,
         "narHash": "sha256-/QG4C9WVP79A7jRFC3Ci1q1l6ah7gr3/SF/MWUk/hhM=",
-        "owner": "tstat",
+        "owner": "nix-community",
         "repo": "raspberry-pi-nix",
         "rev": "aaec735faf81ff05356d65c7408136d2c1522d34",
         "type": "github"
       },
       "original": {
-        "owner": "tstat",
+        "owner": "nix-community",
         "repo": "raspberry-pi-nix",
         "type": "github"
       }

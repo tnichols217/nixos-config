@@ -108,7 +108,7 @@
       flake = false;
     };
 
-    raspberry-pi-nix.url = "github:tstat/raspberry-pi-nix";
+    raspberry-pi-nix.url = "github:nix-community/raspberry-pi-nix";
     
     nix-ld.url = "github:Mic92/nix-ld";
 
