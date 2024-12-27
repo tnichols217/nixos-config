@@ -11,8 +11,10 @@
     ((import ../configuration/users/templates/default_home_manager.nix) (args // { username = "user"; }))
   ];
 
-  # sdImage.expandOnBoot = false;
-  # sdImage.compressImage = false;
+  sdImage = {
+    expandOnBoot = false;
+    compressImage = false;
+  };
 
   raspberry-pi-nix = {
     uboot.enable = true;
@@ -134,11 +136,10 @@
 
   fonts = {
     packages = with pkgs; [
-      nerdfonts
       noto-fonts
       noto-fonts-cjk-sans
       noto-fonts-emoji
-    ];
+    ] ++ lib.lists.filter lib.isDerivation (builtins.attrValues nerd-fonts);
     enableDefaultPackages = true;
   };
 

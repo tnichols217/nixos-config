@@ -239,7 +239,11 @@
         rpi = inputs.nixpkgs.lib.nixosSystem {
           system = sys;
           specialArgs = fullAttrs // { host-name = "rpi"; };
-          modules = pre-mods ++ [ inputs.raspberry-pi-nix.nixosModules.raspberry-pi ./rpi.nix ];
+          modules = pre-mods ++ [
+            inputs.raspberry-pi-nix.nixosModules.raspberry-pi
+            inputs.raspberry-pi-nix.nixosModules.sd-image
+            ./rpi.nix
+          ];
         };
       };
       in (configs { p = (import inputs.nixpkgs { inherit system config;}); sys = system; }) //
