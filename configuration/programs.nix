@@ -29,5 +29,5 @@
       "x-scheme-handler/unknown" = brow;
     };
   };
-  environment.sessionVariables.DEFAULT_BROWSER = "firefox"
+  environment.sessionVariables.DEFAULT_BROWSER = "firefox";
 }
