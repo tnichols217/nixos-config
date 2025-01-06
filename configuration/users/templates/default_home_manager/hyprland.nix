@@ -57,6 +57,7 @@ in
             "SUPER, L, exec, pidof hyprlock || ${pkgs.hyprlock}/bin/hyprlock"
             "SUPER_SHIFT, L, exit"
             "${appmod}, F, exec, firefox"
+            "${appmod}, W, exec, pkill .waybar-wrapped; ${pkgs.waybar}/bin/waybar"
             "${appmod}, T, exec, ${import ./shell/kitty/kitty.pkg.nix { inherit pkgs inputs; }}/bin/kitty"
             "${appmod}, D, exec, ${pkgs.kitty}/bin/kitty"
             "${appmod}, U, exec, ${pkgs.kitty}/bin/kitty --hold sudo bash -c \"cd /etc/nixos; git stash; git stash clear; git pull; nixos-rebuild switch --flake \\\".#${host-name}\\\"\""
