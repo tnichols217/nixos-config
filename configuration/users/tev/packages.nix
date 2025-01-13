@@ -96,7 +96,7 @@ in
         swtpm
         piper
         darling-dmg
-        miraclecast
+        # miraclecast
         mpv
         imagemagick
         hyprpaper

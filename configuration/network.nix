@@ -30,7 +30,7 @@
       "time4.google.com"
   ];
 
-  services.dbus.packages = [
-    pkgs.miraclecast
-  ];
+  # services.dbus.packages = [
+  #   pkgs.miraclecast
+  # ];
 }
