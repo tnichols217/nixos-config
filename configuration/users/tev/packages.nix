@@ -103,7 +103,7 @@ in
         xplr
         # pdfslicer
         pdfsam-basic
-        sonic-visualiser
+        # sonic-visualiser
         xsettingsd
         wacomtablet
         config.boot.kernelPackages.usbip
