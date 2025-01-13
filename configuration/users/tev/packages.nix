@@ -156,10 +156,10 @@ in
         jellyfin-media-player
         jellycli
         (rstudioWrapper.override {
-          packages = with rPackages; [ ggplot2 dplyr xts languageserver ];
+          packages = with rPackages; [ ggplot2 dplyr xts languageserver radian httpgd ];
         })
         (rWrapper.override {
-          packages = with rPackages; [ ggplot2 dplyr xts languageserver ];
+          packages = with rPackages; [ ggplot2 dplyr xts languageserver radian httpgd ];
         })
 
 
