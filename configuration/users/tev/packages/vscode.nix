@@ -81,7 +81,7 @@
       })))
       openvsx_exts.ms-toolsai.vscode-jupyter-cell-tags
       openvsx_exts.ms-toolsai.vscode-jupyter-slideshow
-      openvsx_exts.REditorSupport.r
+      openvsx_exts.reditorsupport.r
       ms-toolsai.jupyter-keymap
       ms-toolsai.jupyter-renderers
       ms-python.vscode-pylance
