@@ -156,10 +156,10 @@ in
         jellyfin-media-player
         jellycli
         (rstudioWrapper.override {
-          packages = with rPackages; [ ggplot2 dplyr xts languageserver radian httpgd ];
+          packages = with rPackages; [ ggplot2 dplyr xts languageserver httpgd ];
         })
         (rWrapper.override {
-          packages = with rPackages; [ ggplot2 dplyr xts languageserver radian httpgd ];
+          packages = with rPackages; [ ggplot2 dplyr xts languageserver httpgd ];
         })
 
 
@@ -205,6 +205,7 @@ in
           scipy
           sympy
           matplotlib
+          radian
         ]))
 
         inputs.nix-matlab.packages.x86_64-linux.matlab
