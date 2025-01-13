@@ -88,7 +88,7 @@ in
         pandoc
         rustc
         cargo
-        nvtopPackages.full
+        # nvtopPackages.full
         qpwgraph
         yt-dlp
         ffmpeg
