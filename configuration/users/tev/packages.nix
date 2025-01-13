@@ -158,6 +158,9 @@ in
         (rstudioWrapper.override {
           packages = with rPackages; [ ggplot2 dplyr xts languageserver ];
         })
+        (rWrapper.override {
+          packages = with rPackages; [ ggplot2 dplyr xts languageserver ];
+        })
 
 
         # vscode
