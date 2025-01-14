@@ -38,6 +38,11 @@ ssh = {
       identityFile = identityFileAI4EDU;
       user = "ec2-user";
     };
+    "M" = {
+      inherit port identityFile;
+      user = "tln32";
+      hostname = "markov.case.edu";
+    };
     "gh" = {
       hostname = "github.com";
       user = "git";
