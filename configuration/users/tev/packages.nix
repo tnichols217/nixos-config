@@ -48,6 +48,11 @@ ssh = {
       user = "git";
       inherit identityFile;
     };
+    "bb" = {
+      hostname = "bitbucket.org";
+      user = "git";
+      inherit identityFile;
+    };
     "*" = {
       inherit identityFile;
     };
