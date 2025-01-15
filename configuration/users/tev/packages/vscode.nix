@@ -88,6 +88,7 @@
       vscode_exts.ms-mssql.mssql
       vscode_exts.mathworks.language-matlab
       pkgs.vscode-extensions."13xforever".language-x86-64-assembly
+      pkgs.vscode-extensions.uiua-lang.uiua-vscode
     ];
   }) // { pname = "vscodium"; };
   userSettings = {

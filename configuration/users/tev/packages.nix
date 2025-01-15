@@ -166,10 +166,10 @@ in
         jellyfin-media-player
         jellycli
         (rstudioWrapper.override {
-          packages = with rPackages; [ ggplot2 dplyr xts languageserver httpgd ];
+          packages = with rPackages; [ ggplot2 dplyr xts languageserver httpgd tidyverse ];
         })
         (rWrapper.override {
-          packages = with rPackages; [ ggplot2 dplyr xts languageserver httpgd ];
+          packages = with rPackages; [ ggplot2 dplyr xts languageserver httpgd tidyverse ];
         })
 
 
@@ -200,6 +200,7 @@ in
         prismlauncher
         localsend
         osu-lazer
+        uiua
         ryujinx
         inputs.suyu.packages.x86_64-linux.suyu
         # tartube-yt-dlp
