@@ -203,6 +203,7 @@ in
         uiua
         ryujinx
         inputs.suyu.packages.x86_64-linux.suyu
+        yuzu
         # tartube-yt-dlp
         android-studio
 
