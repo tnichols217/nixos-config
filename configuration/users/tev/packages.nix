@@ -204,6 +204,7 @@ in
         ryujinx
         inputs.suyu.packages.x86_64-linux.suyu
         yuzu
+        (pkgs.callPackage ./packages/display3d.pkg.nix {})
         # tartube-yt-dlp
         android-studio
 
