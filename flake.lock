@@ -210,12 +210,12 @@
     },
     "flake-compat_4": {
       "locked": {
-        "lastModified": 1696426674,
-        "narHash": "sha256-kvjfFW7WAETZlt09AgDn1MrtKzP7t90Vf7vypd3OL1U=",
-        "rev": "0f9255e01c2351cc7d116c072cb317785dd33b33",
-        "revCount": 57,
+        "lastModified": 1733328505,
+        "narHash": "sha256-NeCCThCEP3eCl2l/+27kNNK7QrwZB1IJCrXfrbv5oqU=",
+        "rev": "ff81ac966bb2cae68946d5ed5fc4994f96d0ffec",
+        "revCount": 69,
         "type": "tarball",
-        "url": "https://api.flakehub.com/f/pinned/edolstra/flake-compat/1.0.1/018afb31-abd1-7bff-a5e4-cff7e18efb7a/source.tar.gz"
+        "url": "https://api.flakehub.com/f/pinned/edolstra/flake-compat/1.1.0/01948eb7-9cba-704f-bbf3-3fa956735b52/source.tar.gz"
       },
       "original": {
         "type": "tarball",
@@ -1268,11 +1268,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1737565460,
-        "narHash": "sha256-2vD76xQLAJ05DFWlRH6+7atsRxNMpj3wtzODbZg2F7g=",
+        "lastModified": 1737578990,
+        "narHash": "sha256-49M9B1nni54cuOH6qPM90U106VSWhAVqpy6f3sz0q4Q=",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "31b0e36087e939844d6e5f0f332389b4094d124a",
+        "rev": "a2a4befdaf825d36a50e2fda4a004682ea6b1a22",
         "type": "github"
       },
       "original": {
@@ -1288,11 +1288,11 @@
         "treefmt-nix": "treefmt-nix_2"
       },
       "locked": {
-        "lastModified": 1737567928,
-        "narHash": "sha256-sEzFdKcrWwAexTov0DF+Wb1slW3xpr8gkh3kd0u/B98=",
+        "lastModified": 1737589637,
+        "narHash": "sha256-6p5XIJl8xCAN+Y7lug6wI2OlY+L1NjwmqR9MxVNNADA=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "97d401870a48c93051751dea10d5f0e6f2724d95",
+        "rev": "5cf76add9c23d4d5545990b00a57c68979ba84fc",
         "type": "github"
       },
       "original": {
@@ -1386,11 +1386,11 @@
         "nixpkgs": "nixpkgs_9"
       },
       "locked": {
-        "lastModified": 1737549137,
-        "narHash": "sha256-hfzRxLkCP7mScA1G2m3rk8cOYbgxLglMtb0wsay1J4o=",
+        "lastModified": 1737570183,
+        "narHash": "sha256-vCgkBFCHCte1Z8NikCpkzBCXE3VhBVL1CBReOTvk/MY=",
         "owner": "tnichols217",
         "repo": "nixos-program-extensions",
-        "rev": "229510629c6019a010ece439b965f3418c56a0b6",
+        "rev": "6ef724ee3eb48ea56bcb709da03169ef51f5c88d",
         "type": "github"
       },
       "original": {
