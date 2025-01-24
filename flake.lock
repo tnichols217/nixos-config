@@ -1088,11 +1088,11 @@
         "nixpkgs": "nixpkgs_7"
       },
       "locked": {
-        "lastModified": 1737596814,
-        "narHash": "sha256-hfMz2iTGrM95jvnxgFD3kQmCBr4qvLtoJxT7pU20QN0=",
+        "lastModified": 1737683312,
+        "narHash": "sha256-Y3jubm5btIuVzVxfTgtsq8qQbiON0wOg+hwxjUS/N8k=",
         "owner": "nix-community",
         "repo": "nix-vscode-extensions",
-        "rev": "2dc18aa9f519bb9c7f908c38a141562619ce01fb",
+        "rev": "1f956a973c46701da8366418f2245352586bb4bc",
         "type": "github"
       },
       "original": {
@@ -1340,11 +1340,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1737667561,
-        "narHash": "sha256-BKUapQPTji3V2uxymGq62/UWF1XMjfHvKd565jj1HlA=",
+        "lastModified": 1737696582,
+        "narHash": "sha256-jneHyhbt6ZF9YZxkFLWuDAMEZjOIEQI4iLko+WZh4+k=",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "aab2b81792567237c104b90c3936e073d28a9ac6",
+        "rev": "c7a600c3f3878f3c60b03b2f68c2080c742793e8",
         "type": "github"
       },
       "original": {
@@ -1360,11 +1360,11 @@
         "treefmt-nix": "treefmt-nix_2"
       },
       "locked": {
-        "lastModified": 1737676011,
-        "narHash": "sha256-NqRCQ98D1LY1txY8juG8ufvdSCfvvnoYjV6U6KLRHQ8=",
+        "lastModified": 1737698865,
+        "narHash": "sha256-4Fl0S5ln+7TDKgG9oX5gRZ6RSm0gJfoOIADTNqnmjJU=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "470a60434e82a09ea60adb564919923e1017feb7",
+        "rev": "41993ec440a05ca78d4e970a6795bc6a76137de5",
         "type": "github"
       },
       "original": {
@@ -1458,11 +1458,11 @@
         "nixpkgs": "nixpkgs_10"
       },
       "locked": {
-        "lastModified": 1737656530,
-        "narHash": "sha256-9sqteNKPQMUBS3rzV62GtwGgIMpNqgbK1t7Z3pi78zg=",
+        "lastModified": 1737681259,
+        "narHash": "sha256-dvqJ8UBtnSnWSHPzUEtK1slvZB30hgMO0Tfk1MVapUk=",
         "owner": "tnichols217",
         "repo": "nixos-program-extensions",
-        "rev": "8eeaf6c7bfb831c4b75150a518c232f8d4eb3c4a",
+        "rev": "8e07d615fe0ef3443aa28f90a142f4910b94d172",
         "type": "github"
       },
       "original": {
