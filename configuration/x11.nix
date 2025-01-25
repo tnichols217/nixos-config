@@ -11,15 +11,15 @@
     xserver = {
       enable = true;
       wacom.enable = true;
-      videoDrivers = (if host-name == "ASUS" then [] else [
+      videoDrivers = (if host-name == "ASUS" then [
+        "nvidia"
+      ] else [
         "amdgpu"
         # "virtualbox"
         "hyperv_fb"
         "fbdev"
         "modesetting"
-      ]) ++ [
-        "nvidia"
-      ];
+      ]) ++ [];
     };
     avahi = {
       enable = true;
