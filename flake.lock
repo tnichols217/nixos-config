@@ -1340,11 +1340,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1737735875,
-        "narHash": "sha256-uZpZbT5kH7whiMpaMQjSPxRbRTmH5LaoBat6eQBHHaY=",
+        "lastModified": 1737747541,
+        "narHash": "sha256-dA54OnUCUtVZfnSuD1dAEcosZzx/tch9KvtDz/Y3FIo=",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "bd3184f4957d5484bb5ebef4b9bc6f9cc53cfad5",
+        "rev": "5fda6e093da13f37c63a5577888a668c38f30dc7",
         "type": "github"
       },
       "original": {
@@ -1360,11 +1360,11 @@
         "treefmt-nix": "treefmt-nix_2"
       },
       "locked": {
-        "lastModified": 1737741834,
-        "narHash": "sha256-/4ubDn4hpBpydsOUP7JV8wsA6VHwbYvRvVE55sMaKBg=",
+        "lastModified": 1737765506,
+        "narHash": "sha256-IFef023lEMUrpdFRUvywGzcQx5tyA3jqvnzuqvCnslc=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "bedb9b4ffa6252b82bd1504796d8a8cf665c1dc3",
+        "rev": "b73815f566b417ed2cebf8f3c81ebf2f1b12dd9e",
         "type": "github"
       },
       "original": {
@@ -1415,11 +1415,11 @@
     "papirus": {
       "flake": false,
       "locked": {
-        "lastModified": 1737728137,
-        "narHash": "sha256-WsnGDin7xSPo9W8jiqDPEq8R4OMZsOypHOCLp1zqWgY=",
+        "lastModified": 1737744929,
+        "narHash": "sha256-uqiEtjdYNVDu5YGbIWHHy9g0MVxgsdUP9d8/Za5YJUU=",
         "owner": "PapirusDevelopmentTeam",
         "repo": "papirus-icon-theme",
-        "rev": "71df330c450a515c8bb4b70ba5f4ddecc7b9b99f",
+        "rev": "985f829a6297c7da2366405286bd3a6db574943f",
         "type": "github"
       },
       "original": {
@@ -1458,11 +1458,11 @@
         "nixpkgs": "nixpkgs_10"
       },
       "locked": {
-        "lastModified": 1737721891,
-        "narHash": "sha256-sZMwke8+qrQcrntwzYwjqSAUEC8lmorIHFCz5VRoMTs=",
+        "lastModified": 1737742909,
+        "narHash": "sha256-PdPrfs4wg+btUxCALqinER/1GNonGMdXA8WTQyxjDXs=",
         "owner": "tnichols217",
         "repo": "nixos-program-extensions",
-        "rev": "1d2056c1dc37c35eebdf646565f36f3aa3fa66f9",
+        "rev": "f391f85a3919e5e62f01aac42b7640b44671f4b9",
         "type": "github"
       },
       "original": {
