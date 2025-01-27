@@ -166,7 +166,7 @@ in
         jellyfin-media-player
         jellycli
         (rstudioWrapper.override {
-          packages = with rPackages; [ ggplot2 dplyr xts languageserver httpgd tidyverse ];
+          packages = with rPackages; [ ggplot2 dplyr xts languageserver httpgd ];
         })
         (rWrapper.override {
           packages = with rPackages; [ ggplot2 dplyr xts languageserver httpgd tidyverse ];
