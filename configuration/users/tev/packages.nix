@@ -194,6 +194,7 @@ in
           withOpenASAR = true;
           withVencord = true;
         })
+        bruno
         tdesktop
         whatsapp-for-linux
         # minecraft
