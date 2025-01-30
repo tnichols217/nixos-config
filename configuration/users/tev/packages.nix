@@ -223,6 +223,7 @@ in
           pyyaml
           nbformat
           nbclient
+          jupyter
         ]))
         julia
         quarto
