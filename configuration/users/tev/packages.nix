@@ -221,6 +221,7 @@ in
           matplotlib
           radian
         ]))
+        julia
 
         inputs.nix-matlab.packages.x86_64-linux.matlab
         inputs.lockdev-redirect.packages.x86_64-linux.lockdev-redirect
