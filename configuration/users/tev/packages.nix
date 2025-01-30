@@ -221,6 +221,7 @@ in
           matplotlib
           radian
           pyyaml
+          nbformat
         ]))
         julia
         quarto
