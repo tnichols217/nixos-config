@@ -220,6 +220,7 @@ in
           sympy
           matplotlib
           radian
+          yaml
         ]))
         julia
         quarto
