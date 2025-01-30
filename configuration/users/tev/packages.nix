@@ -222,6 +222,7 @@ in
           radian
           pyyaml
           nbformat
+          nbclient
         ]))
         julia
         quarto
