@@ -203,8 +203,6 @@
     let
       fullAttrs = {
         inherit inputs version addresses persistence ports addressNumbers;
-        # pkgs = import nixpkgs { inherit system config;};
-        # oldpkgs = import nixpkgs_old { inherit system config;};
         vscode_exts = inputs.nix-vscode-extensions.extensions.${system}.vscode-marketplace;
         openvsx_exts = inputs.nix-vscode-extensions.extensions.${system}.open-vsx;
         nix-index-database = inputs.nix-index-database.packages.${system};
