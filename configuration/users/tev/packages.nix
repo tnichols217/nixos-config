@@ -8,7 +8,6 @@ ssh = {
     identityFileAI4EDU = "/home/${username}/.ssh/AI4EDU.pem";
     user = "${username}";
     port = 22;
-    # port = 27180;
   in {
     "MSI" = {
       hostname = "${addresses.msi}";
@@ -67,150 +66,134 @@ in
   home-manager.users.${username} = {
     home = {
       packages = with pkgs; [
-        # utils
-        cachix
+        # WM
+        hyprpaper
+
+        # Learning
+        anki
+        obsidian
+        graphviz
+
+        # Utils
+        libnotify
+        dconf
+        wacomtablet
+        xsettingsd
+        config.boot.kernelPackages.usbip
+        darling-dmg
+        piper
+        xbindkeys
+        xautomation
+        libtpms
+        swtpm
+        libsForQt5.qt5.qttools
+        openfortivpn
+        kdePackages.ksshaskpass
+
+        # Apps
+        qbittorrent
+        libsForQt5.kdeconnect-kde
+        virt-manager
+        filelight
+        filezilla
+        libreoffice
+        brave
+        kdePackages.okular
+        nautilus
+        pdfsam-basic
+        mpv
+        konsole
+        ark
+        gparted
+        texliveFull
+
+        # Tools
+        htop
+        btop
+        kcalc
+        lolcat
+        input-leap
+        localsend
+        flameshot
+        (pkgs.callPackage ./packages/display3d.pkg.nix {})
+        xplr
+        qpwgraph
+        parallel
+        units
+        pstoedit
+        ipfs
+        yt-dlp
+        ffmpeg
+        scrcpy
         wl-clipboard
         grim
         slurp
         rofi
         jq
         gnupg
-        poppler
-        libsForQt5.qt5.qttools
-        fswatch
-        konsole
-        meld
-        neofetch
-        gparted
-        podman
-        yarn
-        nodejs
-        nodePackages.nodemon
-        nodePackages.npm
-        openjdk17-bootstrap
-        virt-manager
-        ark
         pstree
-        scrcpy
-        android-tools
-        plasma-browser-integration
-        ipfs
-        dotnet-sdk
+        fswatch
+        cachix
+        poppler
+        neofetch
         pandoc
-        rustc
-        cargo
-        # nvtopPackages.full
-        qpwgraph
-        yt-dlp
-        ffmpeg
-        libtpms
-        swtpm
-        piper
-        darling-dmg
-        # miraclecast
-        mpv
         imagemagick
-        hyprpaper
-        xplr
-        # pdfslicer
-        pdfsam-basic
-        # sonic-visualiser
-        xsettingsd
-        wacomtablet
-        config.boot.kernelPackages.usbip
-        sunshine
-        dconf
-        openfortivpn
-        xautomation
-        xbindkeys
-        ani-cli
-        (pkgs.callPackage ./packages/ani-cli-batch.pkg.nix { inherit inputs; })
-        # mov-cli
-        graphviz
-        texliveFull
-        pstoedit
-        playerctl
-        parallel
-        nautilus
-        kdePackages.ksshaskpass
-        kdePackages.okular
-        units
-        libnotify
 
-        # programs
-        anki
-        filezilla
-        filelight
-        libreoffice
-        # Davinci doesnt work on the latest nixpkgs
-        # davinci-resolve
-        # (pkgs.callPackage ./packages/davinci.nix {})
-        signal-desktop
-        lolcat
-        htop
-        kcalc
-        libsForQt5.kdeconnect-kde
-        # musescore cmake broken
-        # pureref # because of ci build failiures
-        audacity
-        lutris
-        dolphin-emu
-        qbittorrent
-        calibre
-        krita
-        btop
-        tidal-hifi
-        moonlight-qt
-        korganizer
-        # tartube-yt-dlp
-        element-desktop
-        jellyfin-media-player
-        jellycli
-        # (rstudioWrapper.override {
-        #   packages = with rPackages; [ ggplot2 dplyr xts languageserver httpgd ];
-        # })
-        (rWrapper.override {
-          packages = with rPackages; [ ggplot2 dplyr xts languageserver httpgd tidyverse ];
-        })
-
-
-        # vscode
-
-        obsidian
-        stremio
-        # barrier
-        input-leap
-        flameshot
-        spotify
+        # Art
         gimp
         (inkscape-with-extensions.override { inkscapeExtensions = [ inkscape-extensions.textext ]; } )
           ghostscript
           optipng
           fig2dev
           scribus
-        brave
-        # teams
+        krita
+        audacity
 
-        (discord.override {
-          withOpenASAR = true;
-          withVencord = true;
-        })
-        bruno
+        # Messaging
         tdesktop
         whatsapp-for-linux
-        # minecraft
-        prismlauncher
-        localsend
-        osu-lazer
-        uiua
-        ryujinx
-        inputs.suyu.packages.x86_64-linux.suyu
-        torzu
-        (pkgs.callPackage ./packages/display3d.pkg.nix {})
-        # tartube-yt-dlp
-        android-studio
+        element-desktop
+        signal-desktop
 
-        # python
+        # Media
+        spotify
+        stremio
+        jellyfin-media-player
+        jellycli
+        tidal-hifi
+        calibre
+        playerctl
+        ani-cli
+        (pkgs.callPackage ./packages/ani-cli-batch.pkg.nix { inherit inputs; })
+
+        # Games
+        sunshine
+        dolphin-emu
+        lutris
+        moonlight-qt
+        osu-lazer
+        prismlauncher
+        torzu
+        inputs.suyu.packages.x86_64-linux.suyu
+        ryujinx
+
+        # Programming Tools
+        android-studio
+        bruno
+        podman
+        yarn
+        android-tools
+        meld
+
+        # Programming Languages
+        nodejs
+        nodePackages.nodemon
+        nodePackages.npm
+        openjdk17-bootstrap
+        dotnet-sdk
+        rustc
+        cargo
+        uiua
         (pkgs.python3.withPackages (pythonPackages: with pythonPackages; [
           ipykernel
           pandas
@@ -228,18 +211,36 @@ in
         ]))
         julia
         quarto
-
+        (rWrapper.override {
+          packages = with rPackages; [ ggplot2 dplyr xts languageserver httpgd tidyverse ];
+        })
         inputs.nix-matlab.packages.x86_64-linux.matlab
-        inputs.lockdev-redirect.packages.x86_64-linux.lockdev-redirect
         
+        # Theming
         (callPackage ./packages/arch-theme.pkg.nix { arch-theme = inputs.arch-theme; })
         (callPackage ./packages/papirus-icons.pkg.nix { papirus = inputs.papirus; })
         (callPackage ./packages/kwin-scripts.pkg.nix {})
         (callPackage ./packages/konsole-themes.pkg.nix {})
+
+        # Customized packages
         (callPackage ./packages/firefox.pkg.nix { inherit inputs config; })
+        (discord.override {
+          withOpenASAR = true;
+          withVencord = true;
+        })
+
+        # Broken things
+        # Davinci doesnt work on the latest nixpkgs
+        # davinci-resolve
+        # (pkgs.callPackage ./packages/davinci.nix {})
+        # musescore cmake broken
+        # pureref # because of ci build failiures
+        # pdfslicer
+        # sonic-visualiser
+        # nvtopPackages.full
+        # miraclecast
       ] ++ (if host-name == "ASUS" then [
         # (blender.override { cudaSupport = true; } )
-        # Blender build is broken right now??
       ] else [
         blender-hip
       ]);
@@ -252,7 +253,4 @@ in
       };
     };
   };
-  # programs = {
-  #   inherit ssh;
-  # };
 }

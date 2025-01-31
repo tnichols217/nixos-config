@@ -2,14 +2,24 @@
 {
   xdg.portal.enable = true;
   services.flatpak.enable = true;
-  programs.gamemode.enable = true;
-  # nixpkgs.overlays = [
-  #   (
-  #     self: super: {
-  #           kitty = import ./kitty/kitty.pkg.nix { pkgs = super; inherit self; inherit; };
-  #         }
-  #   )
-  # ];
+
+  services.openssh = { 
+    enable = true;
+  };
+
+  programs = {
+    steam.enable = true;
+    fish.enable = true;
+    zsh.enable = true;
+    gamemode.enable = true;
+  };
+
+  environment.systemPackages = with pkgs; [
+    nano
+    btrfs-progs
+    bridge-utils
+  ];
+
   xdg.mime = {
     enable = true;
     defaultApplications = let 
