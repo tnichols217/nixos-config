@@ -84,6 +84,7 @@
       openvsx_exts.quarto.quarto
       openvsx_exts.reditorsupport.r
       openvsx_exts.julialang.language-julia
+      openvsx_exts.charliermarsh.ruff
       ms-toolsai.jupyter-keymap
       ms-toolsai.jupyter-renderers
       ms-python.vscode-pylance
