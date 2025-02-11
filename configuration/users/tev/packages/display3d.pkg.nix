@@ -16,7 +16,7 @@ rustPlatform.buildRustPackage rec {
     hash = "sha256-1EAqnLlX/J9KkPKwa1LlLt8pvIS/eZth1OgVei82eP4=";
   };
 
-  cargoHash = "sha256-VKnB5iiEAFB4rE2le0KZyqvDSrnLzDGRirmR9q11NRE=";
+  cargoHash = "sha256-PWmXN4qR1Skbfsxlb9zaItztQ9Wqq5vj7U0YYbqDp6U=";
 
   meta = {
     description = "CLI for rendering and animating 3D objects";
