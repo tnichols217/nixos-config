@@ -1429,11 +1429,11 @@
         "nixpkgs": "nixpkgs_9"
       },
       "locked": {
-        "lastModified": 1739341402,
-        "narHash": "sha256-kXWJiiwTAplwHmgRsD613DiH0IvY6aIcDEZyRFcIejo=",
+        "lastModified": 1739363558,
+        "narHash": "sha256-C0IrUb2hHWmt/JOHPPedYUdFixjD4fr8D/pq3VDKkVg=",
         "owner": "tnichols217",
         "repo": "nixos-program-extensions",
-        "rev": "305c2bcb2257e881e1db054e90e59db1a7f1db26",
+        "rev": "745235a75cb459c809c3d72e2f45dd3c9bd1cf77",
         "type": "github"
       },
       "original": {
