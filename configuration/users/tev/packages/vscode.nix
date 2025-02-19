@@ -85,7 +85,7 @@
       openvsx_exts.reditorsupport.r
       openvsx_exts.julialang.language-julia
       openvsx_exts.charliermarsh.ruff
-      openvsx_exts.tamasfe.even-better-toml
+      # openvsx_exts.tamasfe.even-better-toml
       ms-toolsai.jupyter-keymap
       ms-toolsai.jupyter-renderers
       ms-python.vscode-pylance
