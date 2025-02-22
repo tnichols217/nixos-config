@@ -1075,11 +1075,11 @@
         "nixpkgs": "nixpkgs_6"
       },
       "locked": {
-        "lastModified": 1740102704,
-        "narHash": "sha256-Gs3BREQKsFcfkFyes2PTq1tNAkMHq8Tq0bYME7ZhyjY=",
+        "lastModified": 1740188781,
+        "narHash": "sha256-3FDg6k9kQXq5M6ZHc2f9KsPydvWBtqacU9lWA7nIFYI=",
         "owner": "nix-community",
         "repo": "nix-vscode-extensions",
-        "rev": "1262db8fa5e165ed5da3d91ec8202bfe640264ef",
+        "rev": "ba52a14c907e0cece9734e0ff59c3c742b6b1075",
         "type": "github"
       },
       "original": {
@@ -1331,11 +1331,11 @@
         "treefmt-nix": "treefmt-nix_2"
       },
       "locked": {
-        "lastModified": 1740174476,
-        "narHash": "sha256-a7BqCnEOLyFAW7GYej7nQOXtbHZe9QNtHmlcYP0xrQU=",
+        "lastModified": 1740203399,
+        "narHash": "sha256-zhw0N0JHGUGi4d8oguwB5BuMqzLcGHYkMstTr8ob/oU=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "5128cf795f0f565506346599f0de1d6c1c5dfa28",
+        "rev": "35cc96a38e78a66b7c6ac1af49c0e14299dad13a",
         "type": "github"
       },
       "original": {
@@ -1429,11 +1429,11 @@
         "nixpkgs": "nixpkgs_9"
       },
       "locked": {
-        "lastModified": 1740162135,
-        "narHash": "sha256-gb0XYHSTVP6qdwUhAi3D53qjOfYtINQweW9NFXG1HaU=",
+        "lastModified": 1740186855,
+        "narHash": "sha256-Ryht6HpWcdbRion+gFNkXUXY3lCyfKWPtqn2UqQW29I=",
         "owner": "tnichols217",
         "repo": "nixos-program-extensions",
-        "rev": "8977ca588d17a369e302f57660da867473b121b1",
+        "rev": "ac4650751c4cb27cf0247d8d96a38a63864f0e5b",
         "type": "github"
       },
       "original": {
@@ -1470,15 +1470,14 @@
         "rpi-linux-6_12_11-src": "rpi-linux-6_12_11-src",
         "rpi-linux-6_6_67-src": "rpi-linux-6_6_67-src",
         "rpi-linux-stable-src": "rpi-linux-stable-src",
-        "rpicam-apps-src": "rpicam-apps-src",
-        "u-boot-src": "u-boot-src"
+        "rpicam-apps-src": "rpicam-apps-src"
       },
       "locked": {
-        "lastModified": 1738949424,
-        "narHash": "sha256-w+OitboChUZUZAn2lFA3YGxUBSz4F5TLqBwEkkEtN+0=",
+        "lastModified": 1740187527,
+        "narHash": "sha256-thcUeJlXJ6lD5s1UDKE3jYyzdSRxMjcE/mSWf5Y0KHU=",
         "owner": "nix-community",
         "repo": "raspberry-pi-nix",
-        "rev": "f3171167258766def0851915685b9a6e7ca7e96e",
+        "rev": "4f6706677c4adeca591ada531fc4d7b7b68c0414",
         "type": "github"
       },
       "original": {
@@ -1818,19 +1817,6 @@
         "owner": "numtide",
         "repo": "treefmt-nix",
         "type": "github"
-      }
-    },
-    "u-boot-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1719857238,
-        "narHash": "sha256-mJ2TBy0Y5ZtcGFgtU5RKr0UDUp5FWzojbFb+o/ebRJU=",
-        "type": "tarball",
-        "url": "https://ftp.denx.de/pub/u-boot/u-boot-2024.07.tar.bz2"
-      },
-      "original": {
-        "type": "tarball",
-        "url": "https://ftp.denx.de/pub/u-boot/u-boot-2024.07.tar.bz2"
       }
     },
     "utils": {
