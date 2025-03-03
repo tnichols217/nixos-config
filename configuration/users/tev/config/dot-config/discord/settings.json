@@ -6,8 +6,7 @@
   "MIN_HEIGHT": 500,
   "openasar": {
     "setup": true,
-    "cmdPreset": "battery",
-    "quickstart": true
+    "cmdPreset": "balanced"
   },
   "chromiumSwitches": {}
 }
