@@ -102,7 +102,6 @@ in
         nautilus
         pdfsam-basic
         mpv
-        konsole
         ark
         gparted
         texliveFull
@@ -220,7 +219,7 @@ in
         (callPackage ./packages/arch-theme.pkg.nix { arch-theme = inputs.arch-theme; })
         (callPackage ./packages/papirus-icons.pkg.nix { papirus = inputs.papirus; })
         (callPackage ./packages/kwin-scripts.pkg.nix {})
-        (callPackage ./packages/konsole-themes.pkg.nix {})
+        # (callPackage ./packages/konsole-themes.pkg.nix {})
 
         # Customized packages
         (callPackage ./packages/firefox.pkg.nix { inherit inputs config; })
