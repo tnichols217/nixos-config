@@ -109,7 +109,7 @@ in
         # Tools
         htop
         btop
-        kcalc
+        kdePackages.kcalc
         lolcat
         input-leap
         localsend
