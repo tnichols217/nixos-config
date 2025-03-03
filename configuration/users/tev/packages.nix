@@ -94,7 +94,7 @@ in
         qbittorrent
         libsForQt5.kdeconnect-kde
         virt-manager
-        filelight
+        kdePackages.filelight
         filezilla
         libreoffice
         brave
