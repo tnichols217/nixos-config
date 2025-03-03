@@ -76,7 +76,7 @@
         ".config/lutris"
         ".config/kdeconnect"
         ".config/VSCodium"
-        ".config/discord"
+        ".config/discord/Local Storage"
         ".config/Element"
         ".config/Signal"
         ".config/tidal-hifi"
