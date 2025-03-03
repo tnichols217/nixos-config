@@ -102,7 +102,7 @@ in
         nautilus
         pdfsam-basic
         mpv
-        ark
+        kdePackages.ark
         gparted
         texliveFull
 
