@@ -56,7 +56,7 @@ in
             "SUPER_SHIFT, S, exec, ${pkgs.grimblast}/bin/grimblast copy area"
             "SUPER, L, exec, pidof hyprlock || ${pkgs.hyprlock}/bin/hyprlock"
             "SUPER_SHIFT, L, exit"
-            "${appmod}, F, exec, firefox"
+            "${appmod}, F, exec, firefox-devedition"
             "${appmod}, W, exec, pkill .waybar-wrapped; ${pkgs.waybar}/bin/waybar"
             "${appmod}, T, exec, ${import ./shell/kitty/kitty.pkg.nix { inherit pkgs inputs; }}/bin/kitty"
             "${appmod}, D, exec, ${pkgs.kitty}/bin/kitty"
