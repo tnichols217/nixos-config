@@ -80,7 +80,6 @@ in
         wacomtablet
         xsettingsd
         config.boot.kernelPackages.usbip
-        darling-dmg
         piper
         xbindkeys
         xautomation
@@ -238,6 +237,7 @@ in
         # sonic-visualiser
         # nvtopPackages.full
         # miraclecast
+        # darling-dmg # Build broken
       ] ++ (if host-name == "ASUS" then [
         # (blender.override { cudaSupport = true; } )
       ] else [
