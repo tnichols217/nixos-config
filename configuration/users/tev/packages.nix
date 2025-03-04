@@ -102,6 +102,7 @@ in
         pdfsam-basic
         mpv
         kdePackages.ark
+        asunder
         gparted
         texliveFull
 
