@@ -103,6 +103,7 @@ in
         mpv
         kdePackages.ark
         asunder
+        kdePackages.elisa
         gparted
         texliveFull
 
