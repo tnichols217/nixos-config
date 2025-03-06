@@ -1183,11 +1183,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1741195914,
-        "narHash": "sha256-L6rt25OhG8yrJmxLuLmgEjjog3N4jao+7Sur7AmngDo=",
+        "lastModified": 1741221681,
+        "narHash": "sha256-NsG8qx3Wmyn6jVQLdyPefA0sFjR6hoMc8iDVZ9mefJY=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "ea98e472d2f28ed01b174d9075fe422f8614b5a4",
+        "rev": "7f9073f6f76849057e73ddadc6b1a305f2358f41",
         "type": "github"
       },
       "original": {
@@ -1281,11 +1281,11 @@
         "nixpkgs": "nixpkgs_9"
       },
       "locked": {
-        "lastModified": 1741178055,
-        "narHash": "sha256-gpFO5GS9HTWE/Nt7MWitURM8vkhNux3ulx72vLciRd0=",
+        "lastModified": 1741199085,
+        "narHash": "sha256-f9hwgSe4TLpAP6DmUg7C/qofK27SB45XB5kPAM1tyPI=",
         "owner": "tnichols217",
         "repo": "nixos-program-extensions",
-        "rev": "5a255f7a217064829583d81e2a9042a1fff10f09",
+        "rev": "1c97b54bb552df20016e646222c196b52c86fa49",
         "type": "github"
       },
       "original": {
