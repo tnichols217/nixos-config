@@ -1,13 +1,5 @@
 { pkgs, username, host-name, version, lib, nix-index-database, inputs, ... }:
 {
-  nixpkgs.overlays = [
-    (
-      self: super: {
-            kitty = import ./kitty/kitty.pkg.nix { pkgs = super; inherit self; inherit inputs; };
-          }
-    )
-  ];
-
   home-manager.users.${username} = {
     programs = {
       kitty = {

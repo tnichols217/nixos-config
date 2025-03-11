@@ -1,9 +1,5 @@
 { pkgs, inputs, config, ... }:
 {
-  nixpkgs.overlays = [
-    # inputs.minecraft-arion.overlays.x86_64-linux
-  ];
-
   environment.variables = {
     DOCKER_HOST = "unix:///run/podman/podman.sock";
   };
