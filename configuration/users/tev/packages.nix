@@ -203,7 +203,6 @@ in
           scipy
           sympy
           matplotlib
-          radian
           pyyaml
           nbformat
           nbclient
