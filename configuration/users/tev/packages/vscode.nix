@@ -122,5 +122,6 @@
     "terminal.integrated.commandsToSkipShell" = [
       "matlab.interrupt"
     ];
+    "window.customTitleBarVisibility" = "never";
   };
 }
