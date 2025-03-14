@@ -94,7 +94,7 @@
       pkgs.vscode-extensions."13xforever".language-x86-64-assembly
       pkgs.vscode-extensions.uiua-lang.uiua-vscode
     ];
-  }) // { pname = "vscodium"; };
+  }) // { pname = "vscodium"; version = "1.0.0-trevor"; };
   userSettings = {
     "[nix]"."editor.tabSize" = 2;
     "editor.renderWhitespace" = "all";
