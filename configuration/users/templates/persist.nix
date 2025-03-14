@@ -76,6 +76,7 @@
         ".config/lutris"
         ".config/kdeconnect"
         ".config/VSCodium"
+        ".config/TabNine"
         ".config/discord/Local Storage"
         ".config/Element"
         ".config/Signal"
