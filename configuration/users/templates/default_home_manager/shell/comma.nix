@@ -12,9 +12,6 @@
       nix-index = {
         enable = true;
         package = nix-index-database.nix-index-with-db;
-        enableBashIntegration = true;
-        enableZshIntegration = true;
-        enableFishIntegration = true;
       };
 
       command-not-found.enable = false;

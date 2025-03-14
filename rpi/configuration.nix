@@ -4,8 +4,8 @@
     # ./configuration/disks.nix
     ./configuration/hardware.nix
     ./configuration/disks.nix
-    ../configuration/x11/greetd.nix
-    ../configuration/x11/hyprland.nix
+    ../configuration/userspace/greetd.nix
+    ../configuration/userspace/hyprland.nix
     ((import ../configuration/users/templates/persist.nix) (args // { username = "user"; }))
     ((import ../configuration/users/templates/normal_sudo.nix) (args // { username = "user"; }))
     ((import ../configuration/users/templates/default_home_manager.nix) (args // { username = "user"; }))

@@ -3,7 +3,6 @@
   imports = [
     (import ./shell/kitty.nix args)
     (import ./shell/comma.nix args)
-    (import ./shell/fish.nix args)
     (import ./shell/zsh.nix args)
   ];
 
@@ -20,6 +19,10 @@
           lsd
           xclip
       ];
+      shell = {
+        enableShellIntegration = true;
+        enableFishIntegration = false;
+      };
     };
     programs = {
       git = {
@@ -45,8 +48,6 @@
       };
       fzf = {
         enable = true;
-        enableFishIntegration = true;
-        enableBashIntegration = true;
       };
       direnv = {
         enable = true;

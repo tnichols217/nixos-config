@@ -7,6 +7,6 @@
       ./users/root.nix
     ];
   users.mutableUsers = false;
-  users.defaultUserShell = pkgs.fish;
+  users.defaultUserShell = pkgs.zsh;
   services.logind.extraConfig = "RuntimeDirectorySize=100%";
 }

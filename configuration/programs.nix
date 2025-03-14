@@ -9,7 +9,6 @@
 
   programs = {
     steam.enable = true;
-    fish.enable = true;
     zsh.enable = true;
     gamemode.enable = true;
   };

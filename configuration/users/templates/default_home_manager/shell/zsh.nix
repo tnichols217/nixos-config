@@ -8,7 +8,7 @@
           [[ ! -r "$P10K_INSTANT_PROMPT" ]] || source "$P10K_INSTANT_PROMPT"
         '';
         enable = true;
-        enableAutosuggestions = true;
+        autosuggestion.enable = true;
         syntaxHighlighting.enable = true;
         autocd = true;
         # this line breaks my entire config for some reason
