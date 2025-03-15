@@ -11,6 +11,7 @@
     steam.enable = true;
     zsh.enable = true;
     gamemode.enable = true;
+    gamescope.enable = true;
   };
 
   environment.systemPackages = with pkgs; [
