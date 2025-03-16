@@ -62,7 +62,7 @@ lib.mkMerge [
     };
     path = with pkgs; [ nix ];
     script = ''
-      ${pkgs.openssh}/bin/ssh -NR ${toString ports.rkvm}:localhost:${toString ports.rkvm} tev@${addresses.default} -i /home/tev/.ssh/ed25519
+      ${pkgs.openssh}/bin/ssh -NR ${toString ports.rkvm}:localhost:${toString ports.rkvm} tev@${addresses.default} -p ${toString ports.ssh} -i /home/tev/.ssh/ed25519
     '';
     wantedBy = ["rkvm-client.service"];
   };
