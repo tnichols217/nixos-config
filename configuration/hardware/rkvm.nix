@@ -18,7 +18,7 @@ lib.mkMerge [
         switch-keys = [
           "left-meta"
           "left-ctrl"
-          "f13"
+          "f12"
         ];
         propagate-switch-keys = true;
         key = "${key}";
