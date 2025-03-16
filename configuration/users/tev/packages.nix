@@ -76,6 +76,7 @@ in
         graphviz
 
         # Utils
+        sshfs
         libnotify
         dconf
         wacomtablet
