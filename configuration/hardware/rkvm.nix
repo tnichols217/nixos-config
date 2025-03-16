@@ -51,7 +51,7 @@ lib.mkMerge [
     serviceConfig.Type = "oneshot";
     path = with pkgs; [ rkvm ];
     script = ''
-      ${pkgs.openssh}/bin/scp -P ${ports.ssh} -i /home/tev/.ssh/ed25519 tev@${addresses.default}:${cert} ${cert}
+      ${pkgs.openssh}/bin/scp -P ${toString ports.ssh} -i /home/tev/.ssh/ed25519 tev@${addresses.default}:${cert} ${cert}
     '';
     wantedBy = ["rkvm-client.service"];
   };

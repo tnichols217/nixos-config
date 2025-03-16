@@ -1,4 +1,4 @@
-{ config, pkgs, username, host-name, vscode_exts, openvsx_exts, addresses, inputs,  ... }:
+{ config, pkgs, username, host-name, vscode_exts, openvsx_exts, addresses, inputs, ports, ... }:
 let
 ssh = {
   enable = true;
@@ -18,8 +18,9 @@ ssh = {
       inherit user port identityFile;
     };
     "ASUS" = {
-      hostname = "${addresses.asus}";
-      inherit user port identityFile;
+      hostname = "${addresses.default}";
+      port = ports.ssh;
+      inherit user identityFile;
     };
     "AWS" = {
       hostname = "${addresses.default}";
