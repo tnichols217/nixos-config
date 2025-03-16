@@ -1,4 +1,4 @@
-{ config, lib, pkgs, host-name, version, inputs, ... }@args :
+{ config, lib, pkgs, host-name, version, inputs, ports, ... }@args :
 {
   imports = [
     # ./configuration/disks.nix
@@ -97,11 +97,11 @@
     nftables.enable = true;
     firewall = {
       enable = true;
-      allowedTCPPorts = [
+      allowedTCPPorts = with ports; [
         22      # SSH
         80      # HTTP
         443     # HTTPS
-        2200    # SSH
+        ssh     # SSH
       ];
     };
   };

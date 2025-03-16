@@ -31,7 +31,7 @@ lib.mkMerge [
       enable = if host-name == "ASUS" then false else true;
       settings = {
         certificate = "${cert}";
-        server = "${addresses.asus}:${toString ports.rkvm}";
+        server = "localhost:${toString ports.rkvm}";
         password = "0123456789";
       };
     };
@@ -41,18 +41,29 @@ lib.mkMerge [
     serviceConfig.Type = "oneshot";
     path = with pkgs; [ rkvm ];
     script = ''
-      ${pkgs.rkvm}/bin/rkvm-certificate-gen -d ${host-name} -d ${addresses.asus} -d tln32asus ${cert} ${key}
+      ${pkgs.rkvm}/bin/rkvm-certificate-gen -d ${host-name} -d ${addresses.asus} -d tln32asus -d ${addresses.default} -d localhost ${cert} ${key}
       chmod 777 ${cert}
     '';
-    wantedBy = ["rkvm-server.service" "rkvm-server.service"];
+    wantedBy = ["rkvm-server.service"];
   };
 } else {
   systemd.services."rkvm-copy" = {
     serviceConfig.Type = "oneshot";
     path = with pkgs; [ rkvm ];
     script = ''
-      ${pkgs.openssh}/bin/scp -i /home/tev/.ssh/ed25519 tev@${addresses.asus}:${cert} ${cert}
+      ${pkgs.openssh}/bin/scp -P ${ports.ssh} -i /home/tev/.ssh/ed25519 tev@${addresses.default}:${cert} ${cert}
     '';
-    wantedBy = ["rkvm-server.service" "rkvm-server.service"];
+    wantedBy = ["rkvm-client.service"];
+  };
+  systemd.services."rkvm-tunnel" = {
+    serviceConfig = {
+      RestartSec = "5";
+      Restart = "always";
+    };
+    path = with pkgs; [ nix ];
+    script = ''
+      ${pkgs.openssh}/bin/ssh -NR ${toString ports.rkvm}:localhost:${toString ports.rkvm} tev@${addresses.default} -i /home/tev/.ssh/ed25519
+    '';
+    wantedBy = ["rkvm-client.service"];
   };
 })]

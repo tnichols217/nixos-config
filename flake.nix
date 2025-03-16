@@ -168,6 +168,7 @@
       home-assistant = "hath.${addresses.default}";
     };
     ports = {
+      ssh = 2200;
       serve = 5000;
       nextcloud = 443;
       lidarr = 8686;

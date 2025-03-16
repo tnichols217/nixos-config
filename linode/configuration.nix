@@ -1,4 +1,4 @@
-{ config, lib, pkgs, host-name, ... }:
+{ config, lib, pkgs, host-name, ports, ... }:
 
 {
   networking.hostName = host-name;
@@ -51,11 +51,11 @@
     nftables.enable = true;
     firewall = {
       enable = true;
-      allowedTCPPorts = [
+      allowedTCPPorts = with ports; [
         22      # SSH
         80      # HTTP
         443     # HTTPS
-        2200    # SSH
+        ssh     # SSH
         25565   # Minecraft
       ];
     };
