@@ -85,6 +85,7 @@
       openvsx_exts.reditorsupport.r
       openvsx_exts.julialang.language-julia
       openvsx_exts.charliermarsh.ruff
+      openvsx_exts.labring.open-remote-ssh-for-trae
       # openvsx_exts.tamasfe.even-better-toml
       ms-toolsai.jupyter-keymap
       ms-toolsai.jupyter-renderers
