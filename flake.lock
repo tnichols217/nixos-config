@@ -914,11 +914,11 @@
         "nixpkgs": "nixpkgs_5"
       },
       "locked": {
-        "lastModified": 1741964512,
-        "narHash": "sha256-eI+HsIdy073tbMGoocMXyEPe83pzRnS6LV4sYkXsynY=",
+        "lastModified": 1742223722,
+        "narHash": "sha256-XgapRoKOcdPLyixtKDPo7SHgVdPzFyt4jATKAN30Ko4=",
         "owner": "doronbehar",
         "repo": "nix-matlab",
-        "rev": "f5352b57b268a567eb404c8d0f7b4c7ace968f77",
+        "rev": "14299a8e78f95a8344d8c3f19aaa6450e25d1c91",
         "type": "gitlab"
       },
       "original": {
@@ -969,11 +969,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1740947705,
-        "narHash": "sha256-Co2kAD2SZalOm+5zoxmzEVZNvZ17TyafuFsD46BwSdY=",
+        "lastModified": 1742217219,
+        "narHash": "sha256-pLRjj0jTL1TloB0ptEwVF51IJJX8a17dSxg+gqiWb30=",
         "owner": "nix-community",
         "repo": "nixos-generators",
-        "rev": "507911df8c35939050ae324caccc7cf4ffb76565",
+        "rev": "83900d5154d840dfae1e0367c5290f59b9dccf03",
         "type": "github"
       },
       "original": {
@@ -1078,11 +1078,11 @@
     },
     "nixpkgs_5": {
       "locked": {
-        "lastModified": 1741865919,
-        "narHash": "sha256-4thdbnP6dlbdq+qZWTsm4ffAwoS8Tiq1YResB+RP6WE=",
+        "lastModified": 1742169275,
+        "narHash": "sha256-nkH2Edu9rClcsQp2PYBe8E6fp8LDPi2uDBQ6wyMdeXI=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "573c650e8a14b2faa0041645ab18aed7e60f0c9a",
+        "rev": "5d9b5431f967007b3952c057fc92af49a4c5f3b2",
         "type": "github"
       },
       "original": {
@@ -1108,11 +1108,11 @@
     },
     "nixpkgs_7": {
       "locked": {
-        "lastModified": 1742188618,
-        "narHash": "sha256-5++gjk41YkGulHQ8CflcHxEg5nxb2PJYQl51wF+JDXc=",
+        "lastModified": 1742230170,
+        "narHash": "sha256-BEny83HblVcCGgSG3NHljafuWQE6+yP8XNUIydsIyoA=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "c4929d0eb17ec2ddb04a5eb6bdcd57dffa065acd",
+        "rev": "0f80da4f5e0dbe1f917f6f3643a262bae7dbb34e",
         "type": "github"
       },
       "original": {
@@ -1183,11 +1183,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1742214488,
-        "narHash": "sha256-5b79hPb/f3h38CMfzUd3dbRIJqcl1QrRzYoh7qUC1nk=",
+        "lastModified": 1742235125,
+        "narHash": "sha256-EUvg+Fj2iWOwsOlsp0blA1TEGVoeS2gcqaGs9/pu5KY=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "0958bbbcbf9bf2060906ace7934be2ba5b0ac4cf",
+        "rev": "76ebb0e2ea32e29dec2b82f1ec15945c4b1ec620",
         "type": "github"
       },
       "original": {
@@ -1238,11 +1238,11 @@
     "papirus": {
       "flake": false,
       "locked": {
-        "lastModified": 1742213887,
-        "narHash": "sha256-YIssSq4UXAyBMwcA54Luyh8Zs8p6xKJFkpEiLHDEx/g=",
+        "lastModified": 1742218438,
+        "narHash": "sha256-udH2iIym3v3ZHD3YM/Q2wV451r0VEWXnM+Er9Lp4GmY=",
         "owner": "PapirusDevelopmentTeam",
         "repo": "papirus-icon-theme",
-        "rev": "928b6b7e9582f054df055c00b7c3f0fff320dc57",
+        "rev": "ba54b772fed60f58d1f3b0a961e8be0f02edd7aa",
         "type": "github"
       },
       "original": {
@@ -1281,11 +1281,11 @@
         "nixpkgs": "nixpkgs_9"
       },
       "locked": {
-        "lastModified": 1742192738,
-        "narHash": "sha256-s0Rq4iM2c91FB+phd1DSa1URtCNaGlykbIL5lbk3dyE=",
+        "lastModified": 1742214954,
+        "narHash": "sha256-LPHdN1kwrz9ztOJCzP8pWo3QVDVRb9gbr0VBe717ds4=",
         "owner": "tnichols217",
         "repo": "nixos-program-extensions",
-        "rev": "5c04c17f84cb44228872ed71c411a5d82bcca3e9",
+        "rev": "53ec80e7d5e800b2b0eed3ed3312153ae3e1b01c",
         "type": "github"
       },
       "original": {
@@ -1325,11 +1325,11 @@
         "rpicam-apps-src": "rpicam-apps-src"
       },
       "locked": {
-        "lastModified": 1740928520,
-        "narHash": "sha256-NL5qZi0iEEvQK9kMF6r48FOk5WMdQExCqodRH3kEr0g=",
+        "lastModified": 1742223591,
+        "narHash": "sha256-ZNTz8r5jlJ1jvpqf5+aUYgpnYJSVX0iP14doOc1Hm0E=",
         "owner": "nix-community",
         "repo": "raspberry-pi-nix",
-        "rev": "3bfda6add79c55f9bf143fac928f54484d450e87",
+        "rev": "3e8100d5e976a6a2be363015cb33463af9ef441a",
         "type": "github"
       },
       "original": {
