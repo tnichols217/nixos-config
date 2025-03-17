@@ -404,11 +404,11 @@
         "hyprland": "hyprland"
       },
       "locked": {
-        "lastModified": 1740038356,
-        "narHash": "sha256-V63ssPc9zja75PzL9PyOmOFWQL9PUkIEmJtDl8KZXUc=",
+        "lastModified": 1742158265,
+        "narHash": "sha256-rJz4YIMoPEvWC0/VOaQtdbL+vJUpRGAywsYllslLraI=",
         "owner": "outfoxxed",
         "repo": "hy3",
-        "rev": "0caaffd61445e9e82ba4cc6beb6eb81bbc3ae69a",
+        "rev": "5fd88a3e9572d48bcd8dd6f5d631195b01566b36",
         "type": "github"
       },
       "original": {
@@ -1183,11 +1183,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1742148544,
-        "narHash": "sha256-9JLJR3rJtKenIOwh4Rih7cy8OwZOSOZ3p3rkSpxIjbE=",
+        "lastModified": 1742171246,
+        "narHash": "sha256-L6E4Prz2rvsPJgMnw3sUhnrw6rsrVGBH6IeoPziDR8c=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "267c74ed23b47453dd32b8efd1bae7dc0e5e56ab",
+        "rev": "0a5283e566013225ed1705055fab790563f61a2c",
         "type": "github"
       },
       "original": {
@@ -1281,11 +1281,11 @@
         "nixpkgs": "nixpkgs_9"
       },
       "locked": {
-        "lastModified": 1742128247,
-        "narHash": "sha256-ASLievSBQM6/fmJ/2vq5+l998sflLyvmIkmJRBNtvos=",
+        "lastModified": 1742149353,
+        "narHash": "sha256-GaJHknD0G5ZcLYr6MhvMl1/i8zNogeWBOtTKUqxZtYs=",
         "owner": "tnichols217",
         "repo": "nixos-program-extensions",
-        "rev": "0b1f9ab5f6fe10a761ad6f43d5ed6a7b9bb688e2",
+        "rev": "15a6c146eb4f57eee63be95002a48145db718d29",
         "type": "github"
       },
       "original": {
