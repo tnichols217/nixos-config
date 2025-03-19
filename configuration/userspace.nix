@@ -27,10 +27,10 @@
       nssmdns6 = true;
       openFirewall = true;
     };
-    printing = {
-      enable = true;
-      drivers = [ pkgs.gutenprintBin pkgs.hplipWithPlugin pkgs.brgenml1lpr pkgs.brgenml1cupswrapper pkgs.cnijfilter2 ];
-    };
+    # printing = {
+    #   enable = true;
+    #   drivers = [ pkgs.gutenprintBin pkgs.hplipWithPlugin pkgs.brgenml1lpr pkgs.brgenml1cupswrapper pkgs.cnijfilter2 ];
+    # };
   };
 
   fonts = {
