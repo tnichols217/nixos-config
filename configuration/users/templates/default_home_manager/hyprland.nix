@@ -106,6 +106,7 @@ in
             "SUPER_ALT_CTRL, down, exec, sh ${./hyprland/workspace2d.sh} move_down all"
             "SUPER, V, exec, ${pkgs.cliphist}/bin/cliphist list | ${pkgs.tofi}/bin/tofi | ${pkgs.cliphist}/bin/cliphist decode | ${pkgs.wl-clipboard}/bin/wl-copy"
             "SUPER_SHIFT, V, exec, ${pkgs.openssh}/bin/ssh ${if host-name == "ASUS" then "ROG" else "ASUS"} \"${pkgs.cliphist}/bin/cliphist list\" | ${pkgs.tofi}/bin/tofi | ${pkgs.openssh}/bin/ssh ${if host-name == "ASUS" then "ROG" else "ASUS"} \"${pkgs.cliphist}/bin/cliphist decode\" | ${pkgs.wl-clipboard}/bin/wl-copy"
+            "SUPER_CTRL, V, exec, ${pkgs.wl-clipboard}/bin/wl-paste | ${pkgs.imagemagick}/bin/display"
             "SUPER, F, togglefloating"
             "SUPER, G, togglegroup"
             "SUPER_SHIFT, G, moveoutofgroup"
