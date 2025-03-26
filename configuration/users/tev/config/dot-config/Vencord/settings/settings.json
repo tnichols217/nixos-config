@@ -3,7 +3,7 @@
     "autoUpdateNotification": false,
     "useQuickCss": true,
     "themeLinks": [
-        "https://refact0r.github.io/midnight-discord/midnight.css"
+        "https://refact0r.github.io/midnight-discord/build/midnight.css"
     ],
     "enabledThemes": [],
     "enableReactDevtools": true,
