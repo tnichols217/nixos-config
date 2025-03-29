@@ -14,5 +14,6 @@
     ./ASUS/pipewire.nix
     ./ASUS/servarr.nix
     ./ASUS/antivirus.nix
+    ./ASUS/runners.nix
   ];
 }

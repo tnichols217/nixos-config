@@ -125,5 +125,8 @@
       "matlab.interrupt"
     ];
     "window.customTitleBarVisibility" = "never";
+    "r.rpath.linux" = "R";
+    "r.rterm.linux" = "radian";
+    "r.lsp.promptToInstall" = false;
   };
 }

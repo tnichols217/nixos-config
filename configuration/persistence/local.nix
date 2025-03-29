@@ -21,6 +21,7 @@
       "/var/lib/jellyfin"
       "/var/lib/mullvad"
       "/var/lib/authelia"
+      "/var/lib/secrets"
       # "/etc/ssh"
       { directory = "/var/lib/colord"; user = "colord"; group = "colord"; mode = "u=rwx,g=rx,o="; }
     ];
