@@ -15,5 +15,5 @@
       ephemeral = true;
       url = "https://github.com/tnichols217/nixos-config";
     };
-  }
+  };
 }
