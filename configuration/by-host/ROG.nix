@@ -47,11 +47,25 @@
   #   };
   # };
 
-  nix.distributedBuilds = true;
-
-  nix.settings = {
-    "max-jobs" = 8;
-    "builders" = 
-      ''ssh://tev@${addresses.asus}?ssh-key=/home/tev/.ssh/ed25519 x86_64-linux,i686-linux - 8 5 kvm - c3NoLWVkMjU1MTkgQUFBQUMzTnphQzFsWkRJMU5URTVBQUFBSUExd1hDelZSTkt5VHlLUENVYUZBV0xwaFRRdmt1citpUDZMWEszYWRWY0sgcm9vdEBBU1VTCg=='';
+  nix = {
+    distributedBuilds = true;
+    buildMachines = [
+      {
+        systems = [
+          "x86_64-linux"
+          "i686-linux"
+          "aarch64-linux"
+        ];
+        supportedFeatures = [
+          "kvm"
+        ];
+        sshUser = "tev";
+        sshKey = "/home/tev/.ssh/ed25519";
+        hostName = "${addresses.default}:2200"
+      }
+    ];
+    settings = {
+      "max-jobs" = 8;
+    };
   };
 }
