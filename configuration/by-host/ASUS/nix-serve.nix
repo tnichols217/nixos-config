@@ -1,4 +1,4 @@
-{ pkgs, config, addresses, ... }:
+{ pkgs, config, addresses, ports, ... }:
 {
   systemd.services."generate-nix-serve-certs" = {
     # FIXME
@@ -17,8 +17,7 @@
 
   services.nix-serve = {
     enable = true;
-    port = 4999;
+    port = ports.serve;
     secretKeyFile = "/var/lib/nix-serve/cache-priv-key.pem";
   };
-
 }
