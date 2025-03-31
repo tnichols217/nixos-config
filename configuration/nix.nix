@@ -12,7 +12,7 @@
         "https://cache.nixos.org/"
         "https://raspberry-pi-nix.cachix.org"
         "https://tnichols217-nixos-config.cachix.org"
-        "https://${addresses.default}:5000/"
+        "https://${addresses.serve}"
       ];
       trusted-public-keys = [
         "tnichols217-nixos-config.cachix.org-1:B9JhBiPS+OHykLW16qovoOelAvtdH5sIjYU7BZvs7q8="

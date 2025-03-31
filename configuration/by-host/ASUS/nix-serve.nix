@@ -6,7 +6,7 @@
     path = with pkgs; [ nix ];
     script = ''
       if [ ! -f "/var/lib/nix-serve/cache-priv-key.pem" ] || [ ! -f "/var/lib/nix-serve/cache-pub-key.pem" ]; then
-        nix-store --generate-binary-cache-key ${addresses.default} /var/lib/nix-serve/cache-priv-key.pem /var/lib/nix-serve/cache-pub-key.pem
+        nix-store --generate-binary-cache-key ${addresses.serve} /var/lib/nix-serve/cache-priv-key.pem /var/lib/nix-serve/cache-pub-key.pem
         chown nix-serve /var/lib/nix-serve/cache-priv-key.pem
         chmod 600 /var/lib/nix-serve/cache-priv-key.pem
       fi
