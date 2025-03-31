@@ -61,7 +61,7 @@
         ];
         sshUser = "tev";
         sshKey = "/home/tev/.ssh/ed25519";
-        hostName = "${addresses.default}:2200"
+        hostName = "${addresses.default}:2200";
       }
     ];
     settings = {
