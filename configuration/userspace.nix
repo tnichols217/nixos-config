@@ -4,7 +4,7 @@
     [
       # ./userspace/plasma.nix
       ./userspace/hyprland.nix
-      ./userspace/sddm.nix
+      ./userspace/greetd.nix
     ];
   services = {
     libinput.enable = true;
