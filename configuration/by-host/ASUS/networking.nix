@@ -39,6 +39,7 @@
     serviceConfig = {
       RestartSec = "5";
       Restart = "always";
+      PartOf = [ "sshd.service" ];
     };
     path = with pkgs; [ nix ];
     script = ''
