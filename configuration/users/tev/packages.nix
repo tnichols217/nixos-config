@@ -117,7 +117,7 @@ in
         input-leap
         localsend
         flameshot
-        (pkgs.callPackage ./packages/display3d.pkg.nix {})
+        # (pkgs.callPackage ./packages/display3d.pkg.nix {})
         xplr
         qpwgraph
         parallel
