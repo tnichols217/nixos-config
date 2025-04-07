@@ -933,11 +933,11 @@
         "nixpkgs": "nixpkgs_6"
       },
       "locked": {
-        "lastModified": 1743904774,
-        "narHash": "sha256-dHnwYLz1b6ohGP2DjWKpDFEZ9WOm4vYuPXKUna08awU=",
+        "lastModified": 1743991003,
+        "narHash": "sha256-9nEnUVjeOWMS9MJ/WSPqQHRk4VA4mW+fSCEmYTWSTYU=",
         "owner": "nix-community",
         "repo": "nix-vscode-extensions",
-        "rev": "da51d4cab526bef885e8c95ab2b9455bfe0940d4",
+        "rev": "afea163e70930ffffcf967b66a1c107f8a18be13",
         "type": "github"
       },
       "original": {
@@ -1163,11 +1163,11 @@
         "nuschtosSearch": "nuschtosSearch"
       },
       "locked": {
-        "lastModified": 1743964204,
-        "narHash": "sha256-DFktXTeZWVM4kEET+GQHhI0XlrUG0HUAi+hZ7C/MEp0=",
+        "lastModified": 1744006307,
+        "narHash": "sha256-UwJqsxA9aBso36RNp3NpbE+fGByUoDzFLbICj9nuEQ0=",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "99a2f96cf0f54034201b40d878aa9bb21b72cdf2",
+        "rev": "797c075db2c2b112ae12e098f9bc12913a64ecf3",
         "type": "github"
       },
       "original": {
@@ -1183,11 +1183,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1743983100,
-        "narHash": "sha256-kqpU9g57elV2aDq5BRzuhthb+ob9RyEBQBVfOxNqB2g=",
+        "lastModified": 1743999765,
+        "narHash": "sha256-cAuUX3svgPx1vT6vD2KCZVNgmlY5PFtF07szwZ23gcc=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "e3cc0198f8b8e521b99554d7a44c9fef77f2e729",
+        "rev": "82ec6e35a72d2ebf95fe9ae21a7b316cf7ff2277",
         "type": "github"
       },
       "original": {
@@ -1281,11 +1281,11 @@
         "nixpkgs": "nixpkgs_9"
       },
       "locked": {
-        "lastModified": 1743963719,
-        "narHash": "sha256-S2XX+dFgx1a+NjUhf6dt6w9koR1V1Oe/wmCOrTtEwLs=",
+        "lastModified": 1743989047,
+        "narHash": "sha256-tXJvy1TFQYT6NkiXWESOjN1XfowwUwyK1SXfwAUqAZs=",
         "owner": "tnichols217",
         "repo": "nixos-program-extensions",
-        "rev": "3369e207279f07db37b5a9522c731b1b5c83730b",
+        "rev": "d5d749764d7bd4706056eaf54006e295df92e978",
         "type": "github"
       },
       "original": {
@@ -1297,11 +1297,11 @@
     "qbittorrent-module": {
       "flake": false,
       "locked": {
-        "lastModified": 1743722002,
-        "narHash": "sha256-MAypbzET/N/7hhVov7CgsKndj+82vu/Z2etRRP/Njns=",
+        "lastModified": 1744006283,
+        "narHash": "sha256-sYqVDXMRxf9PlZlBK1I8cm5mQW88fKRjAPhKi80hSjo=",
         "owner": "fsnkty",
         "repo": "nixpkgs",
-        "rev": "5a582c37b3dc1304f2d32a4333bd3f2b345ef9d0",
+        "rev": "be70899721124e48302d76e8796aefce829bec36",
         "type": "github"
       },
       "original": {
