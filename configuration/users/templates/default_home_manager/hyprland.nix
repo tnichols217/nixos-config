@@ -3,18 +3,18 @@ let
   appmod = "CTRLALT";
   monitors = {
     "ASUS" = [
-      "DP-1, 2560x1440@170, 2560x1440, 1"
+      "DP-1, 2560x1440@170, auto, 1"
       "DP-2, disable"
       "DP-3, disable"
       "DP-4, disable"
     ];
     "ROG" = [
-      "eDP-2, 2560x1600@120, 0x1440, 1"
+      "eDP-2, 2560x1600@120, auto-right, 1"
       # "HDMI-A-1, 2560x1440@120, 2560x0, 1"
       # "HDMI-A-1, highrr, 2560x0, 1"
-      "HDMI-A-1, highrr, 0x0, 1"
+      "HDMI-A-1, highrr, auto-up, 1"
       # "DP-1, 2560x1440@60, 2560x1440, 1"
-      "DP-1, 2560x1440@60, 2560x1440, 1"
+      "DP-1, 2560x1440@60, auto, 1"
     ];
     "MSI" = [];
     "rpi" = [
