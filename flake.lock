@@ -1163,11 +1163,11 @@
         "nuschtosSearch": "nuschtosSearch"
       },
       "locked": {
-        "lastModified": 1744200902,
-        "narHash": "sha256-BqTLjxT1C1XfREDBQSxPrfKI9DBpZHBVLHzfXZs+h8M=",
+        "lastModified": 1744272522,
+        "narHash": "sha256-cFuxYOLp/6L0eu5wX7xmaF4VhqEm/aT08awzEHGMMQE=",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "51203927e395535c4a427295efed4e1b2ef8349b",
+        "rev": "33c3f98fdc9a62183ec7d535bf910e04f141284b",
         "type": "github"
       },
       "original": {
@@ -1183,11 +1183,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1744263011,
-        "narHash": "sha256-tZd6iqB1ovWE7RuOCQc9UTCSDKxHnKIF8yGmKoZg8Rw=",
+        "lastModified": 1744287519,
+        "narHash": "sha256-ONQvp68YGULgfKaAif6s+bJeeRiGSYdsK+jUe4Fn3SI=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "8d02750a56fc3cecd1be6f6579d0cbda3d39ce1c",
+        "rev": "ab67d7d5ea3e72e58bb6c0dcbc61846215dcdb61",
         "type": "github"
       },
       "original": {
@@ -1238,11 +1238,11 @@
     "papirus": {
       "flake": false,
       "locked": {
-        "lastModified": 1744106477,
-        "narHash": "sha256-X1841ns8Fxm+h/EBSk/jXAdt4K4HhNQgNnN3Sll1mBY=",
+        "lastModified": 1744279260,
+        "narHash": "sha256-d9ooUM4bkEIQCVaXuUGQAUoVylaCQmhaXXRZmXf5Y+k=",
         "owner": "PapirusDevelopmentTeam",
         "repo": "papirus-icon-theme",
-        "rev": "81c39c5aa8411401d17bb73e242cbe52834963fa",
+        "rev": "93a2018ad66b1004faa04af0bed9f988e6d4f2d2",
         "type": "github"
       },
       "original": {
@@ -1281,11 +1281,11 @@
         "nixpkgs": "nixpkgs_9"
       },
       "locked": {
-        "lastModified": 1744248111,
-        "narHash": "sha256-Lt1Tkdw1Ph2h/KsPEPT+Y4nNgNZR6AuhwROX25SsH8w=",
+        "lastModified": 1744266379,
+        "narHash": "sha256-Lmm297pP7Fi5P+qSU6f4nx4b1InySIv0sn109JPmgeU=",
         "owner": "tnichols217",
         "repo": "nixos-program-extensions",
-        "rev": "b31fbb0449e2abc330d3f8bf151ed57ef316fa4d",
+        "rev": "d51a841417e41aaa761710d30617d6cdd3e8cf3b",
         "type": "github"
       },
       "original": {
