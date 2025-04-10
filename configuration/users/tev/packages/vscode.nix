@@ -95,6 +95,7 @@
       pkgs.vscode-extensions."13xforever".language-x86-64-assembly
       pkgs.vscode-extensions.uiua-lang.uiua-vscode
       mkhl.direnv
+      openvsx_exts.dbaeumer.vscode-eslint
     ];
   }) // { pname = "vscodium"; version = "1.0.0-trevor"; };
   userSettings = {
