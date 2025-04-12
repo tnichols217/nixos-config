@@ -933,11 +933,11 @@
         "nixpkgs": "nixpkgs_6"
       },
       "locked": {
-        "lastModified": 1744336496,
-        "narHash": "sha256-9nn2S/nGB0o0pFV3YUV4D6PM/2/w5+V6FpfPs7ByTgI=",
+        "lastModified": 1744422829,
+        "narHash": "sha256-rvWFZG02MQuzKLueDQryCLEljRV0Ot4uo44hoKC3CHg=",
         "owner": "nix-community",
         "repo": "nix-vscode-extensions",
-        "rev": "f0555ec37883d2bddca658cad7bfe995bc195217",
+        "rev": "eda6606c9e4790ebe074d18ef074906a750f0d53",
         "type": "github"
       },
       "original": {
@@ -1163,11 +1163,11 @@
         "nuschtosSearch": "nuschtosSearch"
       },
       "locked": {
-        "lastModified": 1744383153,
-        "narHash": "sha256-We4ePUixXnMOIqA9IRMWXGEW6efZRTGwTVCv5/yCvcU=",
+        "lastModified": 1744429493,
+        "narHash": "sha256-T3nhF5uBFaLSoR4EM7/Yf5TuD2kghyqRlNCmcN4tQx0=",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "e537d4a6b4c1c81f8b71dfd916fdf970d0d5c987",
+        "rev": "1095b7f89192c1e2bc9b52d0d9660c02752afe5a",
         "type": "github"
       },
       "original": {
@@ -1183,11 +1183,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1744410837,
-        "narHash": "sha256-eIPkQv0bxaDy47lFnRyY0xJCzH5SLj8o/9mUZF0lnhI=",
+        "lastModified": 1744430618,
+        "narHash": "sha256-UznZ7mH3+wcLmt99csY64x9JvjPFIUAd4Xb9DO8dbLA=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "df3270cbd0e9bb799ce24685606128f2a7d11588",
+        "rev": "35cfbb58130a81ac726bfacdd10a14b03aac42e0",
         "type": "github"
       },
       "original": {
@@ -1281,11 +1281,11 @@
         "nixpkgs": "nixpkgs_9"
       },
       "locked": {
-        "lastModified": 1744395896,
-        "narHash": "sha256-9ooF7u5EihR+HGrV9oeDBxUDX17WY+5wo3qC8NadpE0=",
+        "lastModified": 1744420847,
+        "narHash": "sha256-8vZzd3q2zO3qFeggwTGbEeYhxy9ooW4fVuJRUdLOxl8=",
         "owner": "tnichols217",
         "repo": "nixos-program-extensions",
-        "rev": "dfe36aa5482541daad637607b3bdb4797e3f3416",
+        "rev": "b533e85ba3a470c72350c7919f8d149757a8b2d9",
         "type": "github"
       },
       "original": {
