@@ -114,7 +114,6 @@ in
         btop
         kdePackages.kcalc
         lolcat
-        input-leap
         localsend
         flameshot
         # (pkgs.callPackage ./packages/display3d.pkg.nix {})
