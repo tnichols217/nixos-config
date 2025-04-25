@@ -90,11 +90,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    suyu = {
-      url = "git+https://git.suyu.dev/suyu/nix-flake";
-      # inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     # firefox addons
     librewolfConfig = {
       url = "git+https://gitlab.com/librewolf-community/settings.git/";

@@ -96,6 +96,8 @@
       pkgs.vscode-extensions.uiua-lang.uiua-vscode
       mkhl.direnv
       openvsx_exts.dbaeumer.vscode-eslint
+      openvsx_exts.jeanp413.open-remote-ssh
+      openvsx_exts.ms-vscode.js-debug
     ];
   }) // { pname = "vscodium"; version = "1.0.0-trevor"; };
   userSettings = {

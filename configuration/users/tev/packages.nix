@@ -175,7 +175,6 @@ in
         osu-lazer
         prismlauncher
         torzu
-        inputs.suyu.packages.x86_64-linux.suyu
         ryujinx
 
         # Programming Tools
