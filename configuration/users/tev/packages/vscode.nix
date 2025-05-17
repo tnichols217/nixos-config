@@ -31,7 +31,6 @@
           '';
         })))
         detachhead.basedpyright
-        # ms-python.vscode-pylance
         mshr-h.veriloghdl
         redhat.vscode-xml
         tabnine.tabnine-vscode
@@ -72,7 +71,6 @@
         # tamasfe.even-better-toml
         ms-toolsai.jupyter-keymap
         ms-toolsai.jupyter-renderers
-        ms-python.vscode-pylance
         ms-mssql.mssql
         vscode_exts.mathworks.language-matlab
         jeff-hykin.better-m-syntax
