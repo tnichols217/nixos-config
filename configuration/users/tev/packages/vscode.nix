@@ -118,6 +118,6 @@
         "r.rterm.linux" = "radian";
         "r.lsp.promptToInstall" = false;
       };
-    }
+    };
   };
 }
