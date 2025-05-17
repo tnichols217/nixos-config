@@ -13,7 +13,6 @@
         vscode_exts.donjayamanne.git-extension-pack
         donjayamanne.githistory
         eamodio.gitlens
-        mhutchie.git-graph
         qwtel.sqlite-viewer
         svelte.svelte-vscode
         bbenoist.nix
