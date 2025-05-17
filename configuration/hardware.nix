@@ -23,10 +23,20 @@
     enable32Bit = true;
   } // (if host-name == "ROG" then {
     extraPackages = with pkgs; [
-      # rocm-opencl-icd
-      # rocm-opencl-runtime
+      mesa
+      libva
+      libvdpau-va-gl
+      vulkan-loader
+      vulkan-validation-layers
+      amdvlk
+      mesa.opencl
     ];
   } else {});
+
+  environment.variables={
+    RUSTICL_ENABLE = "radeonsi";
+    ROC_ENABLE_PRE_VEGA = "1";
+  };
 
   services = {
     ratbagd.enable = true;

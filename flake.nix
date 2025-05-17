@@ -14,7 +14,7 @@
     };
 
     nix-index-database = {
-      url = "github:Mic92/nix-index-database";
+      url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     zlong_alert = {
@@ -65,11 +65,7 @@
       flake = false;
     };
     nix-matlab = {
-      # inputs.nixpkgs.follows = "nixpkgs";
       url = "gitlab:doronbehar/nix-matlab";
-    };
-    lockdev-redirect = {
-      url = "github:tnichols217/lockdev-redirect";
     };
 
     # kitty themes
