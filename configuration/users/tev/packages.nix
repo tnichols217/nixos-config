@@ -174,7 +174,7 @@ in
         moonlight-qt
         osu-lazer
         prismlauncher
-        torzu
+        (pkgs.callPackage ./packages/torzu.pkg.nix {})
         ryujinx
 
         # Programming Tools
