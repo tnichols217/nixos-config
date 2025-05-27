@@ -211,7 +211,7 @@ in
         julia
         quarto
         (rWrapper.override {
-          packages = with rPackages; [ ggplot2 dplyr xts languageserver httpgd tidyverse ];
+          packages = with rPackages; [ ggplot2 dplyr xts languageserver tidyverse ];
         })
         inputs.nix-matlab.packages.x86_64-linux.matlab
         
