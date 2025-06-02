@@ -1213,11 +1213,11 @@
         "nixpkgs": "nixpkgs_8"
       },
       "locked": {
-        "lastModified": 1748781328,
-        "narHash": "sha256-KVpHoanQwRAArUghvef5Ns/XACayab+vpjw+DrF3jRA=",
+        "lastModified": 1748802256,
+        "narHash": "sha256-Sm+ikQ2Qh9XUyrYY5RXhkJWZR8wU1jiEUF2AiEzr3Pg=",
         "owner": "tnichols217",
         "repo": "nixos-program-extensions",
-        "rev": "8d3ca1739473c7b7e0075e9ba7d8ce543f1ffa7b",
+        "rev": "88bfb0f7035fd59c7e23e80110fcc4db11256a87",
         "type": "github"
       },
       "original": {
