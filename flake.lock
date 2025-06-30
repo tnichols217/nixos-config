@@ -1115,11 +1115,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1751219288,
-        "narHash": "sha256-IQJosUJhcfIVnEiQtMkeUS0klh97CjxqgPXE//xFDNg=",
+        "lastModified": 1751244636,
+        "narHash": "sha256-MnijmNrzovwgwcvMbLxT8c9daqM9kPJ/CIwscGcVI18=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "873e573a93300046272a0b3dec82b0f9e732458f",
+        "rev": "dfff12339d5a14bc0f87aa8a51839a073f9556fa",
         "type": "github"
       },
       "original": {
@@ -1170,11 +1170,11 @@
     "papirus": {
       "flake": false,
       "locked": {
-        "lastModified": 1751221065,
-        "narHash": "sha256-JxSrmRGlE4bseXCDPNyGWkibpPmfa1AOA+pD02yH1l0=",
+        "lastModified": 1751228188,
+        "narHash": "sha256-Wgp683x77Xo3IELR/98yfQRq7y2vlMHUQl6ESAte+kc=",
         "owner": "PapirusDevelopmentTeam",
         "repo": "papirus-icon-theme",
-        "rev": "8572734b0b57afe4e5a4db5c8529bdc9e49776dc",
+        "rev": "57915e83ea914374cf35a236cdae79ef01e2c461",
         "type": "github"
       },
       "original": {
@@ -1213,11 +1213,11 @@
         "nixpkgs": "nixpkgs_8"
       },
       "locked": {
-        "lastModified": 1751200578,
-        "narHash": "sha256-NtOuM0FJO5unhlhqzuSBLBf+A1L7zSsnVbRoH73sgXc=",
+        "lastModified": 1751221507,
+        "narHash": "sha256-fNLcOwhGqP01/Rf7e4UZG4Bq+OIxd+y457ZZghrb7Pk=",
         "owner": "tnichols217",
         "repo": "nixos-program-extensions",
-        "rev": "6606ec1bac80dac8c825dddcc9f7f4b602ae4cdd",
+        "rev": "2668594087c6de9866ee45ecb1d1b4425a12784b",
         "type": "github"
       },
       "original": {
