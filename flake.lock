@@ -1115,11 +1115,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1751263186,
-        "narHash": "sha256-USNK0RUR+bmd20V23h+p9M3kyQ/kqAh99LpD8ohEAq4=",
+        "lastModified": 1751284100,
+        "narHash": "sha256-uSvPrhF+nMj3SL1vs9Z/jFTZcWKy0MGH8DLN9rQKJo8=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "e9da5b425cdd3c4af9cce87f410bd61f4301d4d5",
+        "rev": "39ea90a60847eba96b2ffd28bb8217cb8c190a2a",
         "type": "github"
       },
       "original": {
@@ -1213,11 +1213,11 @@
         "nixpkgs": "nixpkgs_8"
       },
       "locked": {
-        "lastModified": 1751247824,
-        "narHash": "sha256-SxsDxfO2WFZ2Y/zU+ADUbHN3bXxQacDmHN9l1ARgZX0=",
+        "lastModified": 1751265003,
+        "narHash": "sha256-2GhIJGUIBZ7ZuRF01NxWuYed4Bhp23NpG7EKCPkEhYc=",
         "owner": "tnichols217",
         "repo": "nixos-program-extensions",
-        "rev": "4b5378ca823cc1ab41bc11f02285280810783867",
+        "rev": "00c8906f648dcb94d65642967392d7f80430cd3d",
         "type": "github"
       },
       "original": {
@@ -1229,11 +1229,11 @@
     "qbittorrent-module": {
       "flake": false,
       "locked": {
-        "lastModified": 1744007630,
-        "narHash": "sha256-Bp9zvSffazGFv63DW6HnVtJvDBGP8Q44Y6AsrcSKU/Q=",
+        "lastModified": 1751268849,
+        "narHash": "sha256-mt0EZbtWM5BmXlffj16x0SyvU155V5wb8VjijwsuUpc=",
         "owner": "fsnkty",
         "repo": "nixpkgs",
-        "rev": "ae375e942eef10c579ac274e503da4dc50d9629c",
+        "rev": "d3892a329e8e30d534c6ae5cc26675ffe1000246",
         "type": "github"
       },
       "original": {
