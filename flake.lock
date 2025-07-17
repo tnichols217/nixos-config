@@ -896,11 +896,11 @@
         "nixpkgs": "nixpkgs_5"
       },
       "locked": {
-        "lastModified": 1752631969,
-        "narHash": "sha256-G32IrtEm/WJnEvhOfSu+fyysZmnhQyun5d9xdB9FZjk=",
+        "lastModified": 1752718330,
+        "narHash": "sha256-iN2ufkdefeLevXWEkyLhAjdjRewnZ7CWELvYfb7qZqI=",
         "owner": "nix-community",
         "repo": "nix-vscode-extensions",
-        "rev": "575022736bf7c2eadea38de48b9b20cd93bbfce8",
+        "rev": "2fb0690fb9f6b2e62ec130c6744c908a08d39c07",
         "type": "github"
       },
       "original": {
@@ -1114,11 +1114,11 @@
         "nixpkgs": "nixpkgs_7"
       },
       "locked": {
-        "lastModified": 1752705337,
-        "narHash": "sha256-402Buiz6l3GmyhYRaQ69HCsvEwrU1up3T71RDeAdmX0=",
+        "lastModified": 1752727741,
+        "narHash": "sha256-w6v912k6vQ09jinHwUY9ZwC6a26c6idIbHnPAs09dwk=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "bafc355bff627bc38b3ca14c93e755f7aff5f5d4",
+        "rev": "5229ec61691c7b03c73fbef23fda4b3e645039a5",
         "type": "github"
       },
       "original": {
@@ -1169,11 +1169,11 @@
     "papirus": {
       "flake": false,
       "locked": {
-        "lastModified": 1752429019,
-        "narHash": "sha256-m7JjgWS85FO6Jmvjd04VVr88b6wb+i2MST8pGJSKKJU=",
+        "lastModified": 1752732218,
+        "narHash": "sha256-TjqCGbWcIXUWlVpTDQn4hKzeaVm/2DUy+6BeMhxi4nw=",
         "owner": "PapirusDevelopmentTeam",
         "repo": "papirus-icon-theme",
-        "rev": "499efdb60791ad24d6d2e793e238be07500f682a",
+        "rev": "e418d83f19e36bec3e17074e4a4649338acb58f2",
         "type": "github"
       },
       "original": {
@@ -1212,11 +1212,11 @@
         "nixpkgs": "nixpkgs_8"
       },
       "locked": {
-        "lastModified": 1752690554,
-        "narHash": "sha256-GHQPzt9i8YhCTf0CSmW4hNXm0/iOqGt0MhSns/N+re8=",
+        "lastModified": 1752716664,
+        "narHash": "sha256-ybM1M4ndF+F9acQ2JzKSAtJWgBPIdTdG5LNQ+sAl22g=",
         "owner": "tnichols217",
         "repo": "nixos-program-extensions",
-        "rev": "e7afd87983d804141e32755287eb623f6760af4e",
+        "rev": "a9e274b1afc95a46cae910ec10e80d4fe7f8e99b",
         "type": "github"
       },
       "original": {
