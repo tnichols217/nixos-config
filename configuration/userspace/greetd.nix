@@ -11,7 +11,6 @@
         vt = 3;
       };
     };
-    package = pkgs.greetd.tuigreet;
     restart = true;
   };
 }
