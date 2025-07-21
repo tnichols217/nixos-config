@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, lib, ... }:
 let
   # linux_rpi5 = pkgs.linux_rpi4.override {
   #   rpiVersion = 5;
@@ -7,11 +7,25 @@ let
 in
 {
   boot = {
-    # kernelPackages = lib.mkDefault (pkgs.linuxPackagesFor linux_rpi5);
+    loader = {
+      grub.enable = false;
+    };
+
+    consoleLogLevel = lib.mkDefault 7;
+    kernelParams = [
+      "console=tty1"
+      # https://github.com/raspberrypi/firmware/issues/1539#issuecomment-784498108
+      "console=serial0,115200n8"
+    ];
+
+    kernelPackages = pkgs.linuxPackages_rpi4;
     initrd.availableKernelModules = [
-      "nvme"
-      "usbhid"
+      "pcie_brcmstb" # required for the pcie bus to work
+      "reset-raspberrypi" # required for vl805 firmware to load
       "usb_storage"
+      "usbhid"
+      "vc4"
+      "nvme"
       "xhci_pci"
       "ahci"
       "virtio_pci"
@@ -23,20 +37,5 @@ in
 
   hardware = {
     bluetooth.enable = true;
-    raspberry-pi = {
-      config = {
-        all = {
-          base-dt-params = {
-            # enable autoprobing of bluetooth driver
-            # https://github.com/raspberrypi/linux/blob/c8c99191e1419062ac8b668956d19e788865912a/arch/arm/boot/dts/overlays/README#L222-L224
-            krnbt = {
-              enable = true;
-              value = "on";
-            };
-          };
-        };
-      };
-    };
   };
-  raspberry-pi-nix.libcamera-overlay.enable = false;
 }

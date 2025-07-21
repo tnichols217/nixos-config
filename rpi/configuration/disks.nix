@@ -18,7 +18,7 @@
     };
 
     "/nix/.ro-store" = lib.mkForce {
-      device = "/dev/disk/by-label/NIXOS_SD";
+      device = "/dev/disk/by-label/NIXSTORE";
       fsType = "ext4";
       options = [ "ro" ];
     };
@@ -39,7 +39,7 @@
     };
 
     "/boot" = lib.mkForce {
-      device = "/nix/.ro-store/boot";
+      device = "/dev/disk/by-label/NIXBOOT";
       options = ["bind"];
     };
 

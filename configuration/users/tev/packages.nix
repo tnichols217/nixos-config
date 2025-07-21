@@ -188,7 +188,6 @@ in
         # Programming Languages
         nodejs
         nodePackages.nodemon
-        nodePackages.npm
         openjdk17-bootstrap
         dotnet-sdk
         rustc

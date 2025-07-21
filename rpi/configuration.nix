@@ -11,15 +11,15 @@
     ((import ../configuration/users/templates/default_home_manager.nix) (args // { username = "user"; }))
   ];
 
-  sdImage = {
-    expandOnBoot = false;
-    compressImage = false;
-  };
+  # sdImage = {
+  #   expandOnBoot = false;
+  #   compressImage = false;
+  # };
 
-  raspberry-pi-nix = {
-    uboot.enable = true;
-    board = "bcm2712";
-  };
+  # raspberry-pi-nix = {
+  #   uboot.enable = true;
+  #   board = "bcm2712";
+  # };
 
   time.timeZone = "Asia/Kuala_Lumpur";
 
