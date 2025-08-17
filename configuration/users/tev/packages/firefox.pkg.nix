@@ -1,4 +1,4 @@
-{ pkgs, config, inputs, ... }:
+{ pkgs, config, inputs, system, ... }:
 
 let 
   firefox_exts = config.nur.repos.rycee.firefox-addons;
@@ -7,9 +7,9 @@ pkgs.wrapFirefox (pkgs.firefox-devedition-unwrapped // { requireSigning = false;
   nixExtensions = with firefox_exts; let
     fetchFFAddon = pkgs.callPackage (import ./firefox/fetchFirefoxAddonFlake.metapkg.nix) {};
   in
-    pkgs.lib.lists.forEach (builtins.attrNames (builtins.readDir (inputs.program-extensions.packages."x86_64-linux".default + "/firefox"))) (x: 
+    pkgs.lib.lists.forEach (builtins.attrNames (builtins.readDir (inputs.program-extensions.packages."${system}".default + "/firefox"))) (x: 
       let 
-        name = inputs.program-extensions.packages."x86_64-linux".default + "/firefox/" + x;
+        name = inputs.program-extensions.packages."${system}".default + "/firefox/" + x;
       in
       fetchFFAddon name
     )

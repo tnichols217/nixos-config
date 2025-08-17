@@ -1,4 +1,4 @@
-{ config, pkgs, username, host-name, vscode_exts, openvsx_exts, addresses, inputs, ports, ... }:
+{ config, pkgs, username, host-name, vscode_exts, openvsx_exts, addresses, inputs, ports, system, ... }:
 let
 ssh = {
   enable = true;
@@ -212,7 +212,7 @@ in
         (rWrapper.override {
           packages = with rPackages; [ ggplot2 dplyr xts languageserver tidyverse ];
         })
-        inputs.nix-matlab.packages.x86_64-linux.matlab
+        inputs.nix-matlab.packages."${system}".matlab
         
         # Theming
         (callPackage ./packages/arch-theme.pkg.nix { arch-theme = inputs.arch-theme; })
