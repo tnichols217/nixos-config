@@ -107,6 +107,11 @@
       url = "github:outfoxxed/hy3";
     };
 
+    disko = {
+      url = "github:nix-community/disko/latest";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     flake-utils.url = "github:numtide/flake-utils";
   };
   
@@ -232,6 +237,7 @@
           modules = pre-mods ++ [
             # inputs.raspberry-pi-nix.nixosModules.raspberry-pi
             # inputs.raspberry-pi-nix.nixosModules.sd-image
+            inputs.disko.nixosModules.disko
             ./rpi.nix
           ];
         };
@@ -267,7 +273,7 @@
       in rec {
         iso = inputs.nixos-generators.nixosGenerate (isoargs // { inherit pkgs; });
         sd = inputs.nixos-generators.nixosGenerate (sdargs // { inherit pkgs; });
-        rpi = pkgs.callPackage ./rpi/image_builder.nix { inherit pkgs; rpiSys = nixosConfigurations.rpi; };
+        rpi = pkgs.callPackage ./rpi/image_builder.nix { inherit pkgs inputs; rpiSys = nixosConfigurations.rpi; };
         linode = inputs.nixos-generators.nixosGenerate (linodeargs // { inherit pkgs; });
         default = rpi;
         cross = (inputs.flake-utils.lib.eachDefaultSystem (sys: 
@@ -276,7 +282,7 @@
         in rec {
           iso = inputs.nixos-generators.nixosGenerate (isoargs // { inherit pkgs; system = sys; });
           sd = inputs.nixos-generators.nixosGenerate (sdargs // { inherit pkgs; system = sys; });
-          rpi = pkgs.callPackage ./rpi/image_builder.nix { inherit pkgs; rpiSys = nixosConfigurations.cross.rpi.${sys}; };
+          rpi = pkgs.callPackage ./rpi/image_builder.nix { inherit pkgs inputs; rpiSys = nixosConfigurations.cross.rpi.${sys}; };
           linode = inputs.nixos-generators.nixosGenerate (linodeargs // { inherit pkgs; system = sys; });
           default = rpi;
         }));

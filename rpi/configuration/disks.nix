@@ -17,12 +17,6 @@
       neededForBoot = true;
     };
 
-    "/nix/.ro-store" = lib.mkForce {
-      device = "/dev/disk/by-label/NIXSTORE";
-      fsType = "ext4";
-      options = [ "ro" ];
-    };
-
     "/nix/store" = lib.mkForce {
       fsType = "overlay";
       device = "overlay";
@@ -38,11 +32,6 @@
       ];
     };
 
-    "/boot" = lib.mkForce {
-      device = "/dev/disk/by-label/NIXBOOT";
-      options = ["bind"];
-    };
-
     "/" = lib.mkForce {
       device = "none";
       fsType = "tmpfs";
@@ -52,15 +41,11 @@
 
     # local data
     "${persistence.local}" = {
-      device = "/dev/disk/by-label/NIXPERSIST";
-      fsType = "ext4";
       neededForBoot = true;
     };
 
     # data
-    "${persistence.data}" = {
-      device = "/dev/disk/by-label/NIXDATA";
-      fsType = "ext4";
+    "${persistence.default}" = {
       neededForBoot = true;
     };
   };

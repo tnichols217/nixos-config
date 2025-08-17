@@ -4,6 +4,7 @@
     # ./configuration/disks.nix
     ./configuration/hardware.nix
     ./configuration/disks.nix
+    ((import ./configuration/disko.nix) (args // { format = false; }))
     ../configuration/userspace/greetd.nix
     ../configuration/userspace/hyprland.nix
     ((import ../configuration/users/templates/persist.nix) (args // { username = "user"; }))
