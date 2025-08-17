@@ -1,14 +1,14 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 {
   services.greetd = {
     enable = true;
     settings = {
       default_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time  --user-menu --cmd Hyprland";
+        command = "${pkgs.tuigreet}/bin/tuigreet --time  --user-menu --cmd Hyprland";
         user = "greeter";
       };
       terminal = {
-        vt = 3;
+        vt = lib.mkForce 3;
       };
     };
     restart = true;
