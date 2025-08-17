@@ -92,13 +92,6 @@
       flake = false;
     };
 
-    # beta
-
-    qbittorrent-module = {
-      url = "github:fsnkty/nixpkgs/init-nixos-qbittorrent";
-      flake = false;
-    };
-
     raspberry-pi-nix.url = "github:nix-community/raspberry-pi-nix";
     
     nix-ld.url = "github:Mic92/nix-ld";
@@ -123,7 +116,6 @@
       inputs.nixos-generators.nixosModules.all-formats
       # inputs.nixvim.homeManagerModules.nixvim
       # inputs.nix-ld.nixosModules.nix-ld
-      (inputs.qbittorrent-module + "/nixos/modules/services/torrent/qbittorrent.nix")
       # nix-index-database.nixosModules.nix-index
     ];
     mods = pre-mods ++ [

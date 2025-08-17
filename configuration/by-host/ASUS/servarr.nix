@@ -1,4 +1,4 @@
-{ pkgs, ports, version, mkMerge, lib, addressNumbers, inputs, ... } :
+{ pkgs, ports, version, mkMerge, lib, addressNumbers, ... } :
 let
   localAddress = host: "10.1.${addressNumbers.${host}}.3";
   localExtraAddress = host: "10.1.${addressNumbers.${host}}.2";
@@ -96,7 +96,7 @@ let
   }];
   confContQbit = { name }: lib.mkMerge [(confContGr { inherit name; } ) {
     containers.${name} = {
-      config = lib.mkMerge [(inputs.qbittorrent-module + "/nixos/modules/services/torrent/qbittorrent.nix") {
+      config = {
         services = {
           "${name}" = {
             profileDir = "/var/lib/${name}";
@@ -148,7 +148,7 @@ let
             };
           };
         };
-      }];
+      };
     };
   }];
   confContJelly = { name }: lib.mkMerge [(confContGr { inherit name; } ) (
