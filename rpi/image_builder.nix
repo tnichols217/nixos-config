@@ -8,6 +8,7 @@ with rpiSys.pkgs;
 let 
   b = rpiSys.config.system.build.toplevel;
   c = pkgs.buildPackages.closureInfo { rootPaths = b; };
+  size = "476G"; # (476GiB = 512GB)
   rootMountPoint = "/mnt";
   diskoScript = import ("${inputs.disko}/cli.nix") {
     inherit pkgs rootMountPoint;
@@ -25,7 +26,22 @@ let
     sed -i "s@/dev/disk/by-partuuid/${item.uuid}@${dev}p${toString item.index}@" ${file};
   '') subs);
 in
-vmTools.runInLinuxVM (
+(vmTools.override {
+  rootModules = [
+    "virtio_pci"
+    "virtio_mmio"
+    "virtio_blk"
+    "virtio_balloon"
+    "virtio_rng"
+    "ext4"
+    "virtiofs"
+    "crc32c_generic"
+    "nbd"
+    "vfat"
+    "nls_cp437"
+    "nls_iso8859-1"
+  ];
+}).runInLinuxVM (
   runCommand "rpi-image-with-bootloader"
     {
       enableParallelBuildingByDefault = true;
@@ -45,10 +61,12 @@ vmTools.runInLinuxVM (
         qemu
         kmod
         gnused
+        nbd
+        dosfstools
       ];
 
-      postVM = ''
-      '';
+      # postVM = ''
+      # '';
     }
     ''
       echo Importing DB...
@@ -59,8 +77,7 @@ vmTools.runInLinuxVM (
       echo Creating Image...
       mkdir -p $out
       export IMAGE=$out/rpi.qcow2
-      qemu-img create -f qcow2 $IMAGE 512G
-      modprobe nbd max_part=1
+      qemu-img create -f qcow2 $IMAGE ${size}
       qemu-nbd --connect=/dev/nbd0 $IMAGE --sock $(realpath ./qemu-sock)
 
       echo Formatting Image...
@@ -77,6 +94,5 @@ vmTools.runInLinuxVM (
 
       echo Unmounting...
       qemu-nbd -d /dev/nbd0
-      modprobe -r nbd
     ''
 )

@@ -156,6 +156,7 @@ in
           ];
           windowrulev2 = [
             "float,class:^(kitty)$"
+            "float,class:^(Display)$"
             "float,class:^(pavucontrol)$"
             "float,class:^(org\.gnome\.nautilus)$"
           ];

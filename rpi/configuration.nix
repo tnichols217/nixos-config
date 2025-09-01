@@ -12,19 +12,7 @@
     ((import ../configuration/users/templates/default_home_manager.nix) (args // { username = "user"; }))
   ];
 
-  # sdImage = {
-  #   expandOnBoot = false;
-  #   compressImage = false;
-  # };
-
-  # raspberry-pi-nix = {
-  #   uboot.enable = true;
-  #   board = "bcm2712";
-  # };
-
   time.timeZone = "Asia/Kuala_Lumpur";
-
-  # environment.noXlibs = true;
 
   users.users = {
     root = {
@@ -126,7 +114,7 @@
         "cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g="
       ];
       auto-optimise-store = true;
-      trusted-users = [ "tev" ];
+      trusted-users = [ "user" ];
     };
     gc = {
       automatic = true;
