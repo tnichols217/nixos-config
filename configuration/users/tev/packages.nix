@@ -179,7 +179,7 @@ in
         osu-lazer
         prismlauncher
         (pkgs.callPackage ./packages/torzu.pkg.nix {})
-        ryujinx
+        ryubing
 
         # Programming Tools
         android-studio
