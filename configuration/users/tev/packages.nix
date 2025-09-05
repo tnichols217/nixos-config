@@ -91,7 +91,7 @@ in
         xautomation
         libtpms
         swtpm
-        libsForQt5.qt5.qttools
+        # libsForQt5.qt5.qttools
         openfortivpn
         kdePackages.ksshaskpass
 
