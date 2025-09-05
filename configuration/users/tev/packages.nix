@@ -161,10 +161,9 @@ in
 
         # Media
         spotify
-        stremio
         jellyfin-media-player
         jellycli
-        # tidal-hifi
+        tidal-hifi
         calibre
         playerctl
         ani-cli
