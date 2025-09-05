@@ -178,7 +178,7 @@ in
         moonlight-qt
         osu-lazer
         prismlauncher
-        (pkgs.callPackage ./packages/torzu.pkg.nix {})
+        # (pkgs.callPackage ./packages/torzu.pkg.nix {})
         ryubing
 
         # Programming Tools
