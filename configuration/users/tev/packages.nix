@@ -97,7 +97,7 @@ in
 
         # Apps
         qbittorrent
-        libsForQt5.kdeconnect-kde
+        kdePackages.kdeconnect-kde
         virt-manager
         kdePackages.filelight
         filezilla
