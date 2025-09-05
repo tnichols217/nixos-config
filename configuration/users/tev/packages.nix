@@ -156,7 +156,6 @@ in
 
         # Messaging
         tdesktop
-        whatsapp-for-linux
         element-desktop
         signal-desktop
 
@@ -178,7 +177,7 @@ in
         moonlight-qt
         osu-lazer
         prismlauncher
-        # (pkgs.callPackage ./packages/torzu.pkg.nix {})
+        (pkgs.callPackage ./packages/torzu.pkg.nix {})
         ryubing
 
         # Programming Tools
