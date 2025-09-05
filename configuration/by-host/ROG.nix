@@ -8,8 +8,6 @@
     ];
   };
 
-  services.xserver.desktopManager.plasma5.useQtScaling = true;
-
   services.asusd.enable = true;
 
   # TODO move pipewire config to config files instead

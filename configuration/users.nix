@@ -8,5 +8,4 @@
     ];
   users.mutableUsers = false;
   users.defaultUserShell = pkgs.zsh;
-  services.logind.extraConfig = "RuntimeDirectorySize=100%";
 }
