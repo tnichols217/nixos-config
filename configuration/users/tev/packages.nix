@@ -84,7 +84,6 @@ in
         sshfs
         libnotify
         dconf
-        wacomtablet
         xsettingsd
         config.boot.kernelPackages.usbip
         piper
