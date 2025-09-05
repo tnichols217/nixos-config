@@ -43,7 +43,7 @@ let
     qtwayland
     wrapQtAppsHook
     qttools
-    qtwebengine
+    # qtwebengine
     ;
 
   compat-list = stdenv.mkDerivation {
@@ -143,7 +143,7 @@ stdenv.mkDerivation (finalAttrs: {
     qtbase
     qtmultimedia
     qtwayland
-    qtwebengine
+    # qtwebengine
     # intentionally omitted: renderdoc - heavy, developer only
     SDL2
     # intentionally omitted: stb - header only libraries, vendor uses git snapshot
