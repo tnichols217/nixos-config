@@ -161,7 +161,7 @@ in
 
         # Media
         spotify
-        jellyfin-media-player
+        # jellyfin-media-player
         jellycli
         tidal-hifi
         calibre
