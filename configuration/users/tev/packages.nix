@@ -43,6 +43,11 @@ ssh = {
       user = "tln32";
       hostname = "markov.case.edu";
     };
+    "DLL" = {
+      inherit port identityFile;
+      hostname = "cse-d3kgsk74";
+      user = "tln32";
+    };
     "gh" = {
       hostname = "github.com";
       user = "git";
