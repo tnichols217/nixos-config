@@ -76,7 +76,7 @@ in
         hyprpaper
 
         # Learning
-        anki
+        # anki
         obsidian
         graphviz
 
