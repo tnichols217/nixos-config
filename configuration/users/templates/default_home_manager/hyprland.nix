@@ -157,8 +157,10 @@ in
           windowrulev2 = [
             "float,class:^(kitty)$"
             "float,class:^(Display)$"
+            "pin,class:^(Display)$"
             "float,class:^(pavucontrol)$"
             "float,class:^(org\.gnome\.nautilus)$"
+            "rounding 0,fullscreen:1"
           ];
           layerrule = [
             "blur,launcher"
@@ -166,8 +168,6 @@ in
             "ignorealpha [0.05],waybar"
           ];
           workspace = [
-            "w[tg1],rounding:false"
-            "w[t1],rounding:false"
           ];
           general = {
             border_size = 0;
