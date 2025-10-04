@@ -110,7 +110,7 @@
   
   outputs = { self, ... }@inputs: let 
     pre-mods = [
-      nixpkgs.nixosModules.readOnlyPkgs
+      inputs.nixpkgs.nixosModules.readOnlyPkgs
       inputs.home-manager.nixosModules.default
       inputs.impermanence.nixosModules.impermanence
       inputs.nur.modules.nixos.default
