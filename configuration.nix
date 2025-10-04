@@ -17,7 +17,8 @@
     ./configuration/by-host.nix
     ./configuration/programs.nix
   ];
-
+  
+  nixpkgs.pkgs = pkgs;
   system.stateVersion = version;
 }
 
