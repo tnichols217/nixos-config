@@ -6,19 +6,6 @@
       enable = true;
       qemu = {
         swtpm.enable = true;
-        ovmf.packages = [
-          (pkgs.OVMF.override {
-            secureBoot = true;
-            tpmSupport = true;
-          }).fd
-          
-          (pkgs.pkgsCross.aarch64-multiplatform.OVMF.override {
-            secureBoot = true;
-            tpmSupport = true;
-          }).fd
-
-          # pkgs.pkgsCross.aarch64-multiplatform.OVMF.fd
-        ];
       };
     };
     waydroid.enable = true;
