@@ -40,7 +40,7 @@
         steoates.autoimport
         editorconfig.editorconfig
         christian-kohler.path-intellisense
-        vscode_exts.behzad88.aurelia
+        # vscode_exts.behzad88.aurelia
         # ms-dotnettools.csharp
         muhammad-sammy.csharp
         redhat.vscode-yaml
