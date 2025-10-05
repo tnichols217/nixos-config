@@ -19,11 +19,13 @@
     };
     zlong_alert = {
       url = "github:kevinywlui/zlong_alert.zsh";
+      inputs.nixpkgs.follows = "nixpkgs";
       flake = false;
     };
 
     impermanence = {
       url = "github:nix-community/impermanence";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     arion = {
       url = "github:hercules-ci/arion";
@@ -74,6 +76,7 @@
     # addons
     firefox-extensions = {
       url = "github:OsiPog/nix-firefox-addons";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-vscode-extensions = {
       url = "github:nix-community/nix-vscode-extensions";
@@ -91,10 +94,14 @@
 
     raspberry-pi-nix.url = "github:nix-community/raspberry-pi-nix";
     
-    nix-ld.url = "github:Mic92/nix-ld";
+    nix-ld = {
+      url = "github:Mic92/nix-ld";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     hy3 = {
       url = "github:outfoxxed/hy3";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     disko = {

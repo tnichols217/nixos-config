@@ -1,4 +1,4 @@
-{ config, pkgs, username, host-name, vscode_exts, openvsx_exts, addresses, inputs, ports, ... }:
+{ config, pkgs, username, host-name, vscode_exts, openvsx_exts, addresses, inputs, ports, ... }@args:
 let
 ssh = {
   enable = true;
@@ -65,6 +65,9 @@ ssh = {
 };
 in
 {
+  imports = [
+    ((import ./packages/firefox.nix) (args // { inherit username; }))
+  ];
   environment.sessionVariables = {
     MOZ_USE_XINPUT2 = "1";
     NIXOS_OZONE_WL = "1";
@@ -222,8 +225,6 @@ in
         (callPackage ./packages/kwin-scripts.pkg.nix {})
         # (callPackage ./packages/konsole-themes.pkg.nix {})
 
-        # Customized packages
-        (callPackage ./packages/firefox.pkg.nix { inherit inputs config; })
         (discord.override {
           withOpenASAR = true;
           withVencord = true;
