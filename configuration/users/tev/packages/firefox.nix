@@ -70,6 +70,13 @@
               "eBay"
               "Twitter"
             ];
+            Add = [
+              {
+                Name = "NixOS Search";
+                URLTemplate = "https://search.nixos.org/packages?query={searchTerms}";
+                Alias = "nix";
+              }
+            ];
             Default = "DuckDuckGo";
           };
         };
