@@ -149,7 +149,7 @@ in
 
         # Art
         gimp
-        (inkscape-with-extensions.override { inkscapeExtensions = [ inkscape-extensions.textext ]; } )
+        # (inkscape-with-extensions.override { inkscapeExtensions = [ inkscape-extensions.textext ]; } )
           ghostscript
           optipng
           fig2dev
