@@ -10,7 +10,7 @@
         dirHashes = {
           docs  = "$HOME/Documents";
           pr  = "$HOME/Documents/projects";
-          note = "$HOME/Documents/obsidian/notes"
+          note = "$HOME/Documents/obsidian/notes";
         };
         history = {
           share = false;
