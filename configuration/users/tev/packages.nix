@@ -231,7 +231,7 @@ in
 
         # Broken things
         # Davinci doesnt work on the latest nixpkgs
-        davinci-resolve
+        # davinci-resolve
         # (pkgs.callPackage ./packages/davinci.nix {})
         # musescore cmake broken
         # pureref # because of ci build failiures
