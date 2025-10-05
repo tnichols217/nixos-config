@@ -49,7 +49,7 @@
               darkreader
               sponsorblock
               videospeed
-              ipfs-companion
+              # ipfs-companion
               tiled-tab-groups
               nicothin-space
               clut-cycle-last-used-tabs
