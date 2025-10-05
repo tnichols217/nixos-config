@@ -3,40 +3,15 @@
   home-manager.users.${username} = {
     programs = {
       zsh = {
-        initExtraBeforeCompInit = ''
-          P10K_INSTANT_PROMPT="$XDG_CACHE_HOME/p10k-instant-prompt-''${(%):-%n}.zsh"
-          [[ ! -r "$P10K_INSTANT_PROMPT" ]] || source "$P10K_INSTANT_PROMPT"
-        '';
         enable = true;
         autosuggestion.enable = true;
         syntaxHighlighting.enable = true;
         autocd = true;
-        # this line breaks my entire config for some reason
-        # dotDir = ".config/zsh";
         dirHashes = {
           docs  = "$HOME/Documents";
           pr  = "$HOME/Documents/projects";
+          note = "$HOME/Documents/obsidian/notes"
         };
-        oh-my-zsh = {
-          enable = true;
-        };
-        plugins = [
-          # {
-          #   file = "powerlevel10k.zsh-theme";
-          #   name = "powerlevel10k";
-          #   src = "${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k";
-          # }
-          # {
-          #   file = "zlong_alert.zsh";
-          #   name = "zlong-alert";
-          #   src = "${inputs.zlong_alert}";
-          # }
-          # {
-          #   file = "p10k.zsh";
-          #   name = "powerlevel10k-config";
-          #   src = ./zsh;
-          # }
-        ];
         history = {
           share = false;
         };
