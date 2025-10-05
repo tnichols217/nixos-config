@@ -5,7 +5,37 @@
     programs = {
       firefox = {
         enable = true;
-        package = pkgs.firefox-devedition;
+        package = pkgs.wrapFirefox pkgs.firefox-devedition-unwrapped {
+          extraPrefs = builtins.readFile (pkgs.callPackage ./firefox/overrideSetting.metapkg.nix { 
+            input-file = inputs.librewolfConfig + "/librewolf.cfg"; 
+            overrides = [ 
+              { 
+                re = "network.dns.disableIPv6";
+                wi = ''defaultPref(\"network.dns.disableIPv6\", false);'';
+              }
+              { 
+                re = "webgl.disabled";
+                wi = ''defaultPref(\"webgl.disabled\", false);'';
+              }
+              { 
+                re = "media.peerconnection.ice.no_host";
+                wi = ''defaultPref(\"media.peerconnection.ice.no_host\", false);'';
+              }
+            ];
+          } + "/conf" ) + ''
+            defaultPref("privacy.clearOnShutdown.history", false);
+            defaultPref("privacy.clearOnShutdown.downloads", false);
+            defaultPref("privacy.clearOnShutdown.sessions", false);
+            defaultPref("privacy.clearOnShutdown.cache", false);
+            defaultPref("privacy.clearOnShutdown.cookies", false);
+            defaultPref("privacy.clearOnShutdown.offlineApps", false);
+            defaultPref("security.identityblock.show_extended_validation", true);
+            defaultPref("browser.tabs.insertAfterCurrent", true);
+            defaultPref("dom.importMaps.enabled", true);
+            defaultPref("signon.autofillForms", true);
+            defaultPref("signon.rememberSignons", true);
+          '' ;
+        };
         policies = {
           DisableAppUpdate = true;
           OverrideFirstRunPage = "";
@@ -59,35 +89,6 @@
               cliget
               bitwarden-password-manager
             ];
-            extraConfig = builtins.readFile (pkgs.callPackage ./firefox/overrideSetting.metapkg.nix { 
-              input-file = inputs.librewolfConfig + "/librewolf.cfg"; 
-              overrides = [ 
-                { 
-                  re = "network.dns.disableIPv6";
-                  wi = ''defaultPref(\"network.dns.disableIPv6\", false);'';
-                }
-                { 
-                  re = "webgl.disabled";
-                  wi = ''defaultPref(\"webgl.disabled\", false);'';
-                }
-                { 
-                  re = "media.peerconnection.ice.no_host";
-                  wi = ''defaultPref(\"media.peerconnection.ice.no_host\", false);'';
-                }
-              ];
-            } + "/conf" ) + ''
-              defaultPref("privacy.clearOnShutdown.history", false);
-              defaultPref("privacy.clearOnShutdown.downloads", false);
-              defaultPref("privacy.clearOnShutdown.sessions", false);
-              defaultPref("privacy.clearOnShutdown.cache", false);
-              defaultPref("privacy.clearOnShutdown.cookies", false);
-              defaultPref("privacy.clearOnShutdown.offlineApps", false);
-              defaultPref("security.identityblock.show_extended_validation", true);
-              defaultPref("browser.tabs.insertAfterCurrent", true);
-              defaultPref("dom.importMaps.enabled", true);
-              defaultPref("signon.autofillForms", true);
-              defaultPref("signon.rememberSignons", true);
-            '' ;
           };
         };
       };
