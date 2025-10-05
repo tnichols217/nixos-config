@@ -57,7 +57,7 @@
           add_newline = false;
 
           format = "[](fg:white)$os[](fg:white bg:dim bg:cyan)$directory[](fg:cyan bg:red)$git_branch$git_commit$git_status$git_state[](fg:red) ";
-          right_format = "[](fg:green)$status[](bg:green fg:yellow)$cmd_duration[](bg:yellow fg:cyan)$jobs[](bg:cyan fg:blue)$direnv$nix_shell$python$conda$kubernetes$terraform$aws$gcloud[ ](bg:blue fg:white)$time[](fg:white)";
+          right_format = "[](fg:green)$status[](bg:green fg:yellow)$cmd_duration[](bg:yellow fg:cyan)$jobs[](bg:cyan fg:blue)($direnv$nix_shell$python$conda$kubernetes$terraform$aws$gcloud[ ](bg:blue fg:white))[](bg:blue fg:white)$time[](fg:white)";
 
           os = {
             disabled = false;
@@ -149,12 +149,13 @@
 
           status = {
             success_symbol = " ";
+            symbol = " ";
             not_executable_symbol = "󰜺 ";
             not_found_symbol = " ";
             sigint_symbol = "󱈸 ";
             signal_symbol = "󱑺 ";
             format = "[$symbol$status$signal_name ]($style)";
-            style = "bold bg:green";
+            style = "bold bg:green fg:black";
             disabled = false;
           };
 
