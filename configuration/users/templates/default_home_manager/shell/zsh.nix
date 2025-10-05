@@ -22,7 +22,10 @@
           unpersist = "TEMPFILE=$(mktemp); cp $argv $TEMPFILE; rm $argv; cp $TEMPFILE $argv; rm $TEMPFILE";
           gm = "CURBRANCH=$(git branch --show-current); git checkout $argv; git merge $CURBRANCH; git push; git checkout $CURBRANCH";
         };
-        in builtins.concatStringsSep " " (lib.attrsets.mapAttrsToList (name: value: "${name}() {${value}};") functions) ;
+        in builtins.concatStringsSep " " ((lib.attrsets.mapAttrsToList (name: value: "${name}() {${value}};") functions) ++ [
+          ''bindkey "^[[1;5C" forward-word;''
+          ''bindkey "^[[1;5D" backward-word;''
+        ]) ;
         shellAliases = {
           clip = "tee >(xclip -selection clipboard -r) >(wl-copy) >/dev/null | echo";
           gac = "git add -A && git commit -am ";
