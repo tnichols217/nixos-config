@@ -199,6 +199,7 @@
         vscode_exts = inputs.nix-vscode-extensions.extensions.${system}.vscode-marketplace;
         openvsx_exts = inputs.nix-vscode-extensions.extensions.${system}.open-vsx;
         nix-index-database = inputs.nix-index-database.packages.${system};
+        ff-exts = inputs.firefox-extensions.addons.${system};
         host-name = "ROG";
         is-iso = false;
       };

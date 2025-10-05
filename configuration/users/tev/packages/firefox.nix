@@ -1,7 +1,7 @@
-{ inputs, pkgs, username, system, ... }:
+{ inputs, pkgs, username, ff-exts, ... }:
 
 {
-  home-manager.user.${username} = {
+  home-manager.users.${username} = {
     programs = {
       firefox = {
         enable = true;
@@ -44,7 +44,7 @@
         };
         profiles = {
           default = {
-            extensions = with inputs.firefox-extensions.addons.${system}; [
+            extensions = with ff-exts; [
               ublock-origin
               darkreader
               sponsorblock

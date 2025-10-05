@@ -1,4 +1,4 @@
-args@{ config, pkgs, version, host-name, ... }:
+args@{ config, pkgs, version, host-name, system,... }:
 let
   username = "tev";
 in
@@ -10,7 +10,7 @@ in
     ((import ./templates/default_home_manager.nix) (args // { inherit pkgs username host-name version; }))
     ((import ./tev/services.nix) (args // { inherit username; }))
     ((import ./tev/config.nix) (args // { inherit username; }))
-    ((import ./tev/packages.nix) (args // { inherit username; }))
+    ((import ./tev/packages.nix) (args // { inherit username system; }))
   ];
 
   users.users.${username}.hashedPassword = ''$6$jFmvFtj14aQAG7tk$FEl8XyZCoNEnxqTS1RFS821pmt/NynpTizF6JrOS90kO/qUKR1EeVjBMvIl9RywM.cTKhn8kNXqVzt8XYkY8T.'';
