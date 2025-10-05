@@ -35,6 +35,7 @@
             defaultPref("signon.autofillForms", true);
             defaultPref("signon.rememberSignons", true);
             defaultPref("places.history.enabled", false);
+            defaultPref("privacy.userContext.newTabContainerOnLeftClick.enabled", true);
           '' ;
         };
         policies = {
