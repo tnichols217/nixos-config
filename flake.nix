@@ -19,13 +19,11 @@
     };
     zlong_alert = {
       url = "github:kevinywlui/zlong_alert.zsh";
-      inputs.nixpkgs.follows = "nixpkgs";
       flake = false;
     };
 
     impermanence = {
       url = "github:nix-community/impermanence";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
     arion = {
       url = "github:hercules-ci/arion";
@@ -101,7 +99,6 @@
 
     hy3 = {
       url = "github:outfoxxed/hy3";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     disko = {
