@@ -15,7 +15,7 @@
         history = {
           share = false;
         };
-        initExtra = let
+        initContent = let
         functions = {
           gc = "git clone git@github.com:tnichols217/$argv";
           gacp = "git add -A && git commit --allow-empty -am $argv; git push";
