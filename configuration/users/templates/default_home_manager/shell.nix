@@ -56,8 +56,8 @@
         settings = {
           add_newline = false;
 
-          format = "[](fg:white)$os[](fg:white bg:dim bg:cyan)$directory[](fg:cyan bg:red)$git_branch$git_commit$git_status$git_state[](fg:red) ";
-          right_format = "[](fg:green)$status[](bg:green fg:yellow)$cmd_duration[](bg:yellow fg:cyan)$jobs[](bg:cyan fg:blue)($direnv$nix_shell$python$conda$kubernetes$terraform$aws$gcloud[ ](bg:blue fg:white))[](bg:blue fg:white)$time[](fg:white)";
+          format = "[](fg:white)$os[](fg:white bg:dim bg:blue)$directory[](fg:blue bg:green)$git_branch$git_commit$git_status$git_state[](fg:green) ";
+          right_format = "[](fg:black)$status[](bg:black fg:yellow)$cmd_duration[](bg:yellow fg:cyan)$jobs[](bg:cyan fg:blue)($direnv$nix_shell$python$conda$kubernetes$terraform$aws$gcloud[ ](bg:blue fg:white))[](bg:blue fg:white)$time[](fg:white)";
 
           os = {
             disabled = false;
@@ -114,25 +114,25 @@
             truncation_symbol = "…/";
             read_only = " ";
             read_only_style = "red";
-            style = "bold bg:cyan fg:black";
+            style = "bold bg:blue fg:black";
           };
 
           git_branch = {
             symbol = "  ";
             format = "[ $symbol$branch(:$remote_branch) ]($style)";
-            style = "bold bg:red fg:black";
+            style = "bold bg:green fg:black";
             truncation_length = 20;
             truncation_symbol = "…";
           };
 
           git_commit = {
             format = "[($hash$tag)]($style)";
-            style = "bold bg:red fg:black";
+            style = "bold bg:green fg:black";
             tag_disabled = false;
           };
 
           git_state = {
-            style = "bold bg:red fg:black";
+            style = "bold bg:green fg:black";
             rebase = "󰡓 ";
             merge = " ";
             revert = "󱞧 ";
@@ -143,7 +143,7 @@
           };
 
           git_status = {
-            style = "bold bg:red fg:black";
+            style = "bold bg:green fg:black";
             format = "[($all_status$ahead_behind )]($style)";
           };
 
@@ -155,7 +155,7 @@
             sigint_symbol = "󱈸 ";
             signal_symbol = "󱑺 ";
             format = "[$symbol$status$signal_name ]($style)";
-            style = "bold bg:green fg:black";
+            style = "bold bg:black fg:white";
             disabled = false;
           };
 
