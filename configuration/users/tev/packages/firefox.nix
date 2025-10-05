@@ -34,6 +34,7 @@
             defaultPref("dom.importMaps.enabled", true);
             defaultPref("signon.autofillForms", true);
             defaultPref("signon.rememberSignons", true);
+            defaultPref("places.history.enabled", false);
           '' ;
         };
         policies = {
