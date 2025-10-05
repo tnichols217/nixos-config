@@ -25,9 +25,6 @@
     impermanence = {
       url = "github:nix-community/impermanence";
     };
-    nur = {
-      url = "github:nix-community/NUR";
-    };
     arion = {
       url = "github:hercules-ci/arion";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -75,8 +72,8 @@
     };
 
     # addons
-    program-extensions = {
-      url = "github:tnichols217/nixos-program-extensions";
+    firefox-extensions = {
+      url = "github:OsiPog/nix-firefox-addons";
     };
     nix-vscode-extensions = {
       url = "github:nix-community/nix-vscode-extensions";
@@ -113,7 +110,6 @@
       # inputs.nixpkgs.nixosModules.readOnlyPkgs
       inputs.home-manager.nixosModules.default
       inputs.impermanence.nixosModules.impermanence
-      inputs.nur.modules.nixos.default
       inputs.nixos-generators.nixosModules.all-formats
       # inputs.nixvim.homeManagerModules.nixvim
       # inputs.nix-ld.nixosModules.nix-ld

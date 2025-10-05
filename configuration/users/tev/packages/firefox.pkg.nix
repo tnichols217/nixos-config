@@ -1,27 +1,20 @@
 { pkgs, config, inputs, system, ... }:
 
-let 
-  firefox_exts = config.nur.repos.rycee.firefox-addons;
-in
 pkgs.wrapFirefox (pkgs.firefox-devedition-unwrapped // { requireSigning = false; allowAddonSideload = true; }) {
-  nixExtensions = with firefox_exts; let
-    fetchFFAddon = pkgs.callPackage (import ./firefox/fetchFirefoxAddonFlake.metapkg.nix) {};
-  in
-    pkgs.lib.lists.forEach (builtins.attrNames (builtins.readDir (inputs.program-extensions.packages."${system}".default + "/firefox"))) (x: 
-      let 
-        name = inputs.program-extensions.packages."${system}".default + "/firefox/" + x;
-      in
-      fetchFFAddon name
-    )
-    #  ++ [
-    #   ublock-origin
-    #   darkreader
-    #   sponsorblock
-    #   videospeed
-    #   ipfs-companion
-    #   simplelogin
-    # ]
-    ;
+  nixExtensions = with inputs.firefox-extensions.addons.${system}; [
+    ublock-origin
+    darkreader
+    sponsorblock
+    videospeed
+    ipfs-companion
+    tiled-tab-groups
+    nicothin-space
+    clut-cycle-last-used-tabs
+    better-canvas
+    hls-downloader
+    cliget
+    bitwarden-password-manager
+  ];
 
   extraPolicies = {
 
