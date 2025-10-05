@@ -167,7 +167,7 @@ in
         # jellyfin-media-player
         jellycli
         tidal-hifi
-        calibre
+        # calibre
         playerctl
         ani-cli
         (pkgs.callPackage ./packages/ani-cli-batch.pkg.nix { inherit inputs; })
