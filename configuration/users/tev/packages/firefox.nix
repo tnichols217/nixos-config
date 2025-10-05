@@ -81,7 +81,7 @@
           };
         };
         profiles = {
-          default = {
+          "default.dev-edition-default" = {
             extensions.packages = with ff-exts; [
               ublock-origin
               darkreader
