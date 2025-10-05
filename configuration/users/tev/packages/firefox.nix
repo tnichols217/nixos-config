@@ -44,7 +44,7 @@
         };
         profiles = {
           default = {
-            extensions = with ff-exts; [
+            extensions.packages = with ff-exts; [
               ublock-origin
               darkreader
               sponsorblock
