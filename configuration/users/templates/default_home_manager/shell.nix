@@ -51,6 +51,9 @@
         gitCredentialHelper.enable = true;
         settings.git_protocol = "ssh";
       };
+      nushell = {
+        enable = true;
+      };
       starship = {
         enable = true;
         settings = {
