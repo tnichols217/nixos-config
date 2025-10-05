@@ -149,7 +149,7 @@ in
 
         # Art
         # gimp
-        # (inkscape-with-extensions.override { inkscapeExtensions = [ inkscape-extensions.textext ]; } )
+        (inkscape-with-extensions.override { inkscapeExtensions = [ inkscape-extensions.textext ]; } )
           ghostscript
           optipng
           fig2dev
@@ -213,7 +213,7 @@ in
           nbclient
           jupyter
         ]))
-        # julia
+        julia
         quarto
         (rWrapper.override {
           packages = with rPackages; [ ggplot2 dplyr xts languageserver tidyverse ];
