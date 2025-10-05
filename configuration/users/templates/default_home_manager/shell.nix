@@ -57,7 +57,7 @@
           add_newline = false;
 
           format = "[](fg:white)$os[](fg:white bg:dim bg:blue)$directory[](fg:blue bg:green)$git_branch$git_commit$git_status$git_state[](fg:green) ";
-          right_format = "[](fg:black)$status[](bg:black fg:yellow)($cmd_duration$jobs[ ](bg:cyan fg:yellow))[](bg:cyan fg:yellow)($direnv$nix_shell$python$conda$kubernetes$terraform$aws$gcloud[ ](bg:blue fg:white))[](bg:blue fg:white)$time[](fg:white)";
+          right_format = "[](fg:black)$status[](bg:black fg:yellow)($cmd_duration$jobs[ ](bg:yellow fg:blue))[](bg:yellow fg:blue)($direnv$nix_shell$python$conda$kubernetes$terraform$aws$gcloud[ ](bg:blue fg:white))[](bg:blue fg:white)$time[](fg:white)";
 
           os = {
             disabled = false;
@@ -160,7 +160,7 @@
           };
 
           cmd_duration = {
-            format = "[⏱ $duration ]($style)";
+            format = "[⏱ $duration]($style)";
             min_time = 500;
             show_notifications = true;
             disabled = false;
