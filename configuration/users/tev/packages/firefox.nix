@@ -98,6 +98,23 @@
               cliget
               bitwarden-password-manager
             ];
+            containers = {
+              case = {
+                color = "blue";
+                icon = "briefcase";
+                id = 1;
+              };
+              coding = {
+                color = "green";
+                icon = "fence";
+                id = 2;
+              };
+              personal = {
+                color = "red";
+                icon = "fingerprint";
+                id = 3;
+              };
+            };
           };
         };
       };
