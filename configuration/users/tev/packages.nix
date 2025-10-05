@@ -179,7 +179,8 @@ in
         moonlight-qt
         osu-lazer
         prismlauncher
-        (pkgs.callPackage ./packages/torzu.pkg.nix {})
+        # broken :(
+        # (pkgs.callPackage ./packages/torzu.pkg.nix {})
         ryubing
 
         # Programming Tools
