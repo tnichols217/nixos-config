@@ -175,7 +175,7 @@ in
         # Games
         sunshine
         dolphin-emu
-        lutris
+        # lutris
         moonlight-qt
         osu-lazer
         prismlauncher
