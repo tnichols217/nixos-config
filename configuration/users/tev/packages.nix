@@ -148,7 +148,7 @@ in
         imagemagick
 
         # Art
-        gimp
+        # gimp
         # (inkscape-with-extensions.override { inkscapeExtensions = [ inkscape-extensions.textext ]; } )
           ghostscript
           optipng
