@@ -213,7 +213,7 @@ in
           nbclient
           jupyter
         ]))
-        julia
+        # julia
         quarto
         (rWrapper.override {
           packages = with rPackages; [ ggplot2 dplyr xts languageserver tidyverse ];
