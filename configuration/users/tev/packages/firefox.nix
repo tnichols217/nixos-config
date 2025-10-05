@@ -81,7 +81,7 @@
           };
         };
         profiles = {
-          "abcdef.dev-edition-default" = {
+          "default.dev-edition-default" = {
             name = "dev-edition-default";
             extensions.packages = with ff-exts; [
               ublock-origin
