@@ -1073,11 +1073,11 @@
         "systems": "systems_7"
       },
       "locked": {
-        "lastModified": 1759753692,
-        "narHash": "sha256-T9q2dHvB9xAunMTT2BaIfcSLK5IuSEuVlbgJ1/Ub5ro=",
+        "lastModified": 1759768698,
+        "narHash": "sha256-hSTuhdHtDdTvCxCpz51v9dwckRS1HuMXLZeRhqWGZUQ=",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "983e45ff2f58ecdd624f745e503fd1b4326c2ece",
+        "rev": "ca7f98d9366b587c8e5b824f8437e79747d810fb",
         "type": "github"
       },
       "original": {
