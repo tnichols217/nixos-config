@@ -27,7 +27,7 @@
             defaultPref("privacy.clearOnShutdown.downloads", true);
             defaultPref("privacy.clearOnShutdown.sessions", false);
             defaultPref("privacy.clearOnShutdown.cache", true);
-            defaultPref("privacy.clearOnShutdown.cookies", true);
+            defaultPref("privacy.clearOnShutdown.cookies", false);
             defaultPref("privacy.clearOnShutdown.offlineApps", true);
             defaultPref("security.identityblock.show_extended_validation", true);
             defaultPref("browser.tabs.insertAfterCurrent", true);
