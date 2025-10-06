@@ -101,6 +101,7 @@
               hls-downloader
               cliget
               bitwarden-password-manager
+              multi-account-containers
             ];
             containers = {
               case = {
