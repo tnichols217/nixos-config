@@ -115,6 +115,11 @@
                 icon = "fingerprint";
                 id = 3;
               };
+              music = {
+                color = "turquoise";
+                icon = "circle";
+                id = 4;
+              };
             };
           };
         };
