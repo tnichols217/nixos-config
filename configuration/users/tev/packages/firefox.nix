@@ -115,7 +115,7 @@
                 id = 2;
               };
               personal = {
-                color = "red";
+                color = "orange";
                 icon = "fingerprint";
                 id = 3;
               };
@@ -123,6 +123,11 @@
                 color = "turquoise";
                 icon = "circle";
                 id = 4;
+              };
+              misc = {
+                color = "red";
+                icon = "fruit";
+                id = 5;
               };
             };
           };
