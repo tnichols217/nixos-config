@@ -24,11 +24,11 @@
             ];
           } + "/conf" ) + ''
             defaultPref("privacy.clearOnShutdown.history", false);
-            defaultPref("privacy.clearOnShutdown.downloads", false);
+            defaultPref("privacy.clearOnShutdown.downloads", true);
             defaultPref("privacy.clearOnShutdown.sessions", false);
-            defaultPref("privacy.clearOnShutdown.cache", false);
-            defaultPref("privacy.clearOnShutdown.cookies", false);
-            defaultPref("privacy.clearOnShutdown.offlineApps", false);
+            defaultPref("privacy.clearOnShutdown.cache", true);
+            defaultPref("privacy.clearOnShutdown.cookies", true);
+            defaultPref("privacy.clearOnShutdown.offlineApps", true);
             defaultPref("security.identityblock.show_extended_validation", true);
             defaultPref("browser.tabs.insertAfterCurrent", true);
             defaultPref("dom.importMaps.enabled", true);
