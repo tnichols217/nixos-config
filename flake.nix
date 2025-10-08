@@ -113,7 +113,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    flake-utils = "github:numtide/flake-utils";
+    flake-utils.url = "github:numtide/flake-utils";
   };
   
   outputs = { self, ... }@inputs: let 
