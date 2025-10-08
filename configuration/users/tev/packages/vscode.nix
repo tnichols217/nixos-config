@@ -33,7 +33,7 @@
         mshr-h.veriloghdl
         redhat.vscode-xml
         tabnine.tabnine-vscode
-        vscode_exts.vscode-icons-team.vscode-icons
+        # vscode-icons-team.vscode-icons
         aaron-bond.better-comments
         redhat.java
         vscode_exts.aureliaeffect.aurelia
