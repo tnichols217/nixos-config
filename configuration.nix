@@ -16,6 +16,7 @@
     ./configuration/persistence.nix
     ./configuration/by-host.nix
     ./configuration/programs.nix
+    ./configuration/authentik.nix
   ];
   
   nixpkgs.pkgs = pkgs;
