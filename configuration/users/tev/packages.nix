@@ -174,7 +174,7 @@ in
 
         # Games
         sunshine
-        dolphin-emu
+        # dolphin-emu
         # lutris
         moonlight-qt
         osu-lazer
