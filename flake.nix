@@ -110,9 +110,10 @@
 
     authentik-nix = {
       url = "github:nix-community/authentik-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    flake-utils.url = "github:numtide/flake-utils";
+    flake-utils = "github:numtide/flake-utils";
   };
   
   outputs = { self, ... }@inputs: let 
