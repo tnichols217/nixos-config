@@ -223,7 +223,7 @@ in
         # Theming
         # (callPackage ./packages/arch-theme.pkg.nix { arch-theme = inputs.arch-theme; })
         # (callPackage ./packages/papirus-icons.pkg.nix { papirus = inputs.papirus; })
-        (callPackage ./packages/kwin-scripts.pkg.nix {})
+        # (callPackage ./packages/kwin-scripts.pkg.nix {})
         # (callPackage ./packages/konsole-themes.pkg.nix {})
 
         (discord.override {
