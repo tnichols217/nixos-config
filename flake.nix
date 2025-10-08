@@ -106,6 +106,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # testing
+
+    authentik-nix = {
+      url = "github:nix-community/authentik-nix";
+    };
+
     flake-utils.url = "github:numtide/flake-utils";
   };
   
@@ -115,6 +121,7 @@
       inputs.home-manager.nixosModules.default
       inputs.impermanence.nixosModules.impermanence
       inputs.nixos-generators.nixosModules.all-formats
+      inputs.authentik-nix.nixosModules.default
       # inputs.nixvim.homeManagerModules.nixvim
       # inputs.nix-ld.nixosModules.nix-ld
       # nix-index-database.nixosModules.nix-index

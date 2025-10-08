@@ -1,0 +1,19 @@
+{ ... }:
+{
+  services.authentik = {
+    enable = true;
+    environmentFile = "/run/secrets/authentik/authentik-env";
+    settings = {
+      # email = {
+      #   host = "smtp.cwrunix.com";
+      #   port = 587;
+      #   username = "authentik@cwrunix.com";
+      #   use_tls = true;
+      #   use_ssl = false;
+      #   from = "authentik@cwrunix.com";
+      # };
+      disable_startup_analytics = true;
+      avatars = "initials";
+    };
+  };
+}
