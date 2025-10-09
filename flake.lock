@@ -1049,11 +1049,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1759946307,
-        "narHash": "sha256-fETPYtDOEChraiRrbH1BxtVvQ0zHqW6shis7OJC4avQ=",
+        "lastModified": 1759962237,
+        "narHash": "sha256-X8VwuyDxnh4SryLAypztOww+h3DUqVx5fQUIx7NEHvs=",
         "owner": "nix-community",
         "repo": "nix-vscode-extensions",
-        "rev": "43bb3cc3e35c8499951dd92a3863fda2141e1a54",
+        "rev": "4574f7fd057614b1fa4310a122f144311ba3651f",
         "type": "github"
       },
       "original": {
