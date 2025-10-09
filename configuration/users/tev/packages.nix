@@ -104,7 +104,7 @@ in
         virt-manager
         kdePackages.filelight
         filezilla
-        libreoffice
+        # libreoffice
         brave
         kdePackages.okular
         nautilus
