@@ -20,6 +20,6 @@
     authentik-ldap = {
       enable = true;
       environmentFile = "/run/secrets/authentik/authentik-env";
-    }
+    };
   };
 }
