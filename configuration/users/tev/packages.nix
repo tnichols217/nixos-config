@@ -77,6 +77,7 @@ in
       packages = with pkgs; [
         # WM
         hyprpaper
+        rose-pine-hyprcursor
 
         # Learning
         # anki

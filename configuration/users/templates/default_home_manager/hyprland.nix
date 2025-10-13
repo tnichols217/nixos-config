@@ -132,13 +132,15 @@ in
             ", XF86MonBrightnessDown, exec, ${pkgs.brightnessctl}/bin/brightnessctl -d $(${pkgs.brightnessctl}/bin/brightnessctl -l -c backlight -m | cut -f 1 -d \",\") s 1%-"
             ", XF86MonBrightnessUp, exec, ${pkgs.brightnessctl}/bin/brightnessctl -d $(${pkgs.brightnessctl}/bin/brightnessctl -l -c backlight -m | cut -f 1 -d \",\") s 1%+"
           ];
-          env = if host-name != "ROG" then [
+          env = [
+            "HYPRCURSOR_THEME,rose-pine-hyprcursor"
+          ] ++ (if host-name != "ROG" then [
             "LIBVA_DRIVER_NAME,nvidia"
             "XDG_SESSION_TYPE,wayland"
             "GBM_BACKEND,nvidia-drm"
             "__GLX_VENDOR_LIBRARY_NAME,nvidia"
             "WLR_NO_HARDWARE_CURSORS,1"
-          ] else [];
+          ] else []);
           monitor = monitors."${host-name}";
           exec-once = 
           let

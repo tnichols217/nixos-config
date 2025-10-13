@@ -14,7 +14,9 @@
         #   from = "authentik@cwrunix.com";
         # };
         disable_startup_analytics = true;
-        avatars = "initials";
+        disable_update_check = true;
+        error_reporting__enabled = false;
+        avatars = "gravatar,initials";
       };
     };
     authentik-ldap = {
