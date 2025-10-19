@@ -1196,11 +1196,11 @@
         "systems": "systems_7"
       },
       "locked": {
-        "lastModified": 1760833893,
-        "narHash": "sha256-8icptPodvFklgYyuRIPgx0uHvK8AssJUFXOcRcatgqE=",
+        "lastModified": 1760861672,
+        "narHash": "sha256-TNBuBgesZcUO76dOi+xGFraT30umxQyfyogrWqiOJZE=",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "c89994b0ac1b6a322f1db9fd356beec2dac60313",
+        "rev": "b4852e4d359b89241497ee3cb29eaa83ef1510d4",
         "type": "github"
       },
       "original": {
