@@ -1251,11 +1251,11 @@
     "papirus": {
       "flake": false,
       "locked": {
-        "lastModified": 1759984889,
-        "narHash": "sha256-RilVTYV1KSloQQ/6elgboTcmxeYQFH/ezHHVvrwgU9o=",
+        "lastModified": 1762188317,
+        "narHash": "sha256-KFXta/144gDBc3Yw1V9rTF1eb9Aw5BNQQYanklYUs0o=",
         "owner": "PapirusDevelopmentTeam",
         "repo": "papirus-icon-theme",
-        "rev": "586ce5ff45efe21848da6c7aa81ca3556cba4d48",
+        "rev": "29293a47e4673510e2f3af606507272852d147ce",
         "type": "github"
       },
       "original": {
