@@ -130,7 +130,7 @@ in
         parallel
         units
         pstoedit
-        ipfs
+        kubo
         yt-dlp
         ffmpeg
         scrcpy
