@@ -159,7 +159,7 @@ in
         audacity
 
         # Messaging
-        tdesktop
+        telegram-desktop
         element-desktop
         signal-desktop
 
