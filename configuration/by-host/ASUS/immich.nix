@@ -6,5 +6,5 @@
     port = ports.immich;
     accelerationDevices = null;
     mediaLocation = "/var/lib/immich";
-  }
+  };
 }
