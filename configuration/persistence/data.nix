@@ -5,6 +5,7 @@
     directories = [
       "/root"
       "/var/lib/immich"
+      "/var/lib/postgresql"
     ];
   };
 }
