@@ -180,6 +180,7 @@
       authelia = 9191;
       rkvm = 5258;
       home-assistant = 8123;
+      immich = 2283;
     };
     addressNumbers = {
       lidarr = "10";
