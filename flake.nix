@@ -163,6 +163,7 @@
       qbittorrent = "qbit.${addresses.default}";
       authelia = "auth.${addresses.default}";
       home-assistant = "hath.${addresses.default}";
+      immich = "immich.${addresses.default}";
     };
     ports = {
       ssh = 2200;
