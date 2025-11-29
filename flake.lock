@@ -156,11 +156,11 @@
     "bungeecord": {
       "flake": false,
       "locked": {
-        "lastModified": 1729610100,
-        "narHash": "sha256-FXVh1c0nkdEAs4kJ6gsIH3bkZZny468p/ACmYO7cLko=",
+        "lastModified": 1763763833,
+        "narHash": "sha256-vLOSrlCy4f1cYsCbEiIpKQstFjgfM4wj+lUUmzngqg8=",
         "ref": "refs/heads/master",
-        "rev": "4886c4be017761333dc67b9c300acc7481354a7d",
-        "revCount": 2071,
+        "rev": "3929ac422c18673578a229002e3da828907ef945",
+        "revCount": 2219,
         "type": "git",
         "url": "https://github.com/SpigotMC/BungeeCord"
       },
@@ -214,11 +214,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1764301030,
-        "narHash": "sha256-hqzkTyTP39ylNgu6bjev120yWqjzTPEVmKwhqzCxatY=",
+        "lastModified": 1764387437,
+        "narHash": "sha256-yIvc/jrxnyKb52nQll9vCJi2UaeirVrYjaaBWCF+pb0=",
         "owner": "OsiPog",
         "repo": "nix-firefox-addons",
-        "rev": "b0b39031f79e2a25b2155def9a4f2fdee5e07607",
+        "rev": "fcf562d8a0434c486b244465479ba9df8673525c",
         "type": "github"
       },
       "original": {
@@ -397,11 +397,11 @@
         "systems": "systems_5"
       },
       "locked": {
-        "lastModified": 1726560853,
-        "narHash": "sha256-X6rJYSESBVr3hBoH0WbKE5KvhPU5bloyZ2L4K60/fPQ=",
+        "lastModified": 1731533236,
+        "narHash": "sha256-l0KFg5HjrsfsO/JpG+r7fRrqm12kzFHyUHqHCVpMMbI=",
         "owner": "numtide",
         "repo": "flake-utils",
-        "rev": "c1dfcf08411b08f6b8615f7d8971a2bfa81d5e8a",
+        "rev": "11707dc2f618dd54ca8739b309ec4fc024de578b",
         "type": "github"
       },
       "original": {
@@ -493,11 +493,11 @@
         "hyprland": "hyprland"
       },
       "locked": {
-        "lastModified": 1763782027,
-        "narHash": "sha256-jgs0ctD7OuY5UwCoBk1TNwVYJS9vNJBqb0uC5u4HjLo=",
+        "lastModified": 1764414670,
+        "narHash": "sha256-cy/5hZgB3bNo16YjPjDILyr+OZoGeM1AYGlycW6Q8Ws=",
         "owner": "outfoxxed",
         "repo": "hy3",
-        "rev": "1d74cd99a29d5e4fdd5913863499cdfc2e264069",
+        "rev": "43790aaa929d812af288f3820a9aeed199ec28b1",
         "type": "github"
       },
       "original": {
@@ -964,11 +964,11 @@
         "spigot": "spigot"
       },
       "locked": {
-        "lastModified": 1730868509,
-        "narHash": "sha256-CdgXsfhlime+4Ku+UW+LWjdknBYLSh0dEZ09bbhAzNg=",
+        "lastModified": 1764448844,
+        "narHash": "sha256-w+Cz0cZ8miTDjpTiMxEOOyR5VmFoVdI8OUADduQPmlU=",
         "owner": "tnichols217",
         "repo": "nix-minecraft-server",
-        "rev": "fda1ced11be20a732b67fa970fc0653dc6f6b95d",
+        "rev": "079c1fa7bed588f268c1595c295384885962f0d1",
         "type": "github"
       },
       "original": {
@@ -1067,11 +1067,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1764294946,
-        "narHash": "sha256-8BObMeUmCAZW1BTMUQGRGiz9tpNkVt/6/+blpS9Xxgk=",
+        "lastModified": 1764381338,
+        "narHash": "sha256-EBguntbfHsbikHdk9v/2lAyrLzjaZf6tEZeRymXAfJA=",
         "owner": "nix-community",
         "repo": "nix-vscode-extensions",
-        "rev": "134c052c3213dc69ed881e41383b8ed29c5ffe72",
+        "rev": "600e16b6baf213d9192a0035ff15618305fcea60",
         "type": "github"
       },
       "original": {
@@ -1193,11 +1193,11 @@
     },
     "nixpkgs_5": {
       "locked": {
-        "lastModified": 1764288690,
-        "narHash": "sha256-7B7easQXR1V7ALUS0+LtqNYBVo4bQHA+TZoePRCxQLQ=",
+        "lastModified": 1764374374,
+        "narHash": "sha256-naS7hg/D1yLKSZoENx9gvsPLFiNEOTcqamJSu0OEvCA=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "e621b82a26181e7b30f9db2119722b1c00157b47",
+        "rev": "6a49303095abc094ee77dc243a9e351b642e8e75",
         "type": "github"
       },
       "original": {
@@ -1233,11 +1233,11 @@
         "systems": "systems_7"
       },
       "locked": {
-        "lastModified": 1764238240,
-        "narHash": "sha256-7Znm3koZ4sF+O41Y7rJqf651BPEbjIUYF3r9H23GRGw=",
+        "lastModified": 1764443358,
+        "narHash": "sha256-bd9I02P/Mp9yYGcSWgLLdI/Zt0JqF8igSTAfUzknVHk=",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "f1e07ba53abd0fb4872a365cba45562144ad6130",
+        "rev": "6094d2a4396c0ff4e94b22315cc43f55db626c32",
         "type": "github"
       },
       "original": {
@@ -1554,11 +1554,11 @@
     "spigot": {
       "flake": false,
       "locked": {
-        "lastModified": 1729974302,
-        "narHash": "sha256-sMwV/N31ISbQDZnuBxcEl9VjX3pZce5o/SF5Tnz0/pc=",
+        "lastModified": 1761554844,
+        "narHash": "sha256-SEDcuwI4wkDeA/W3z+PXCKtrWeNmO45LpCRNn55A+bs=",
         "ref": "refs/heads/master",
-        "rev": "f901b6f52a44407c6e3311be8bec2abc9cc59c06",
-        "revCount": 180,
+        "rev": "c4a8e0b32cd19b171c2d7d3ec838fd4e16ffe2ca",
+        "revCount": 188,
         "type": "git",
         "url": "https://hub.spigotmc.org/stash/scm/spigot/buildtools.git"
       },
