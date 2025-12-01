@@ -167,6 +167,7 @@ in
         spotify
         # jellyfin-media-player
         jellycli
+        grayjay
         tidal-hifi
         # calibre
         playerctl
