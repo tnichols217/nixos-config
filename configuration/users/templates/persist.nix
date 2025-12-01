@@ -65,6 +65,7 @@
         ".local/share/Anki2"
         ".local/share/jellyfinmediaplayer"
         ".local/share/Jellyfin Media Player"
+        ".local/share/Grayjay"
         ".local/share/suyu"
         ".local/share/yuzu"
         ".local/share/DBeaverData"
