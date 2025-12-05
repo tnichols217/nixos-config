@@ -79,6 +79,7 @@
         dbaeumer.vscode-eslint
         jeanp413.open-remote-ssh
         ms-vscode.js-debug
+        golang.go
       ];
       userSettings = {
         "[nix]"."editor.tabSize" = 2;
