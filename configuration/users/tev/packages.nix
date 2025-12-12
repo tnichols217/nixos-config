@@ -116,6 +116,7 @@ in
         kdePackages.elisa
         gparted
         texliveFull
+        bitwarden-desktop
 
         # Tools
         htop
