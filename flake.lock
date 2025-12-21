@@ -1186,11 +1186,11 @@
         "systems": "systems_6"
       },
       "locked": {
-        "lastModified": 1766273987,
-        "narHash": "sha256-Y8hL2zGyt7xn5J1V806GJ9tMEk6NgVlU7xe4dS4fThE=",
+        "lastModified": 1766326623,
+        "narHash": "sha256-20uzo3X4mJBF+hfneJMdV/ycTm+4j6bpONaIQ6pq6Vc=",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "ff00fe1512dfcb31b01d770738de9299b434449b",
+        "rev": "710ade017755c3b292fd218965f3d282f13a23d7",
         "type": "github"
       },
       "original": {
@@ -1218,11 +1218,11 @@
     "papirus": {
       "flake": false,
       "locked": {
-        "lastModified": 1766064136,
-        "narHash": "sha256-JoWi0ceSFWorkVS4W2v6tGTk84dmEUK4C2E+J5lwD74=",
+        "lastModified": 1766325074,
+        "narHash": "sha256-3F9jTHVTGvyCYcSOW+kyUa56/hwlS2clPlwEkxJCpAs=",
         "owner": "PapirusDevelopmentTeam",
         "repo": "papirus-icon-theme",
-        "rev": "3390a630b535d1c1ccca04881b3959e262264116",
+        "rev": "605cd4df614fa760da42aff658b702ac1bffbad0",
         "type": "github"
       },
       "original": {
