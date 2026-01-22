@@ -1276,11 +1276,11 @@
     "p10k": {
       "flake": false,
       "locked": {
-        "lastModified": 1767778682,
-        "narHash": "sha256-4sXacLFQsfTVgk4UhJbmAuNP7OPwtcz8eQupwHxgUAs=",
+        "lastModified": 1769091011,
+        "narHash": "sha256-lmVBVSc+SEzDr+8z5gaMKA/uSEriaB8rxTT1smgkl1Y=",
         "owner": "romkatv",
         "repo": "powerlevel10k",
-        "rev": "efc9ddd9b615a0042b5bcc36f97f070ca6fdf09e",
+        "rev": "b97926675aba2d8465325d786cc69de9d9fdec84",
         "type": "github"
       },
       "original": {
