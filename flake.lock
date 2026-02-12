@@ -1309,11 +1309,11 @@
     "papirus": {
       "flake": false,
       "locked": {
-        "lastModified": 1770858110,
-        "narHash": "sha256-yWqMjRtDt6L2BFEJrTsbm/hKOnjF31gualKp1nXGviM=",
+        "lastModified": 1770910323,
+        "narHash": "sha256-Vgc0lNdaRiUSnAM2P1dl7BpPspnJpQ+E3y+ufw2eq+k=",
         "owner": "PapirusDevelopmentTeam",
         "repo": "papirus-icon-theme",
-        "rev": "2f36a76402ca590eb3df99f4c2fb58b60b918b2c",
+        "rev": "438cfe184a594698f54ae710bc74be89514a688c",
         "type": "github"
       },
       "original": {
