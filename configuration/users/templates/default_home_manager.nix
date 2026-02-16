@@ -3,6 +3,8 @@
   imports = [
     (import ./default_home_manager/shell.nix args)
     (import ./default_home_manager/hyprland.nix args)
+    (import ./default_home_manager/qt.nix args)
+    (import ./default_home_manager/gtk.nix args)
     # (import ./default_home_manager/neovim.nix args)
   ];
 
