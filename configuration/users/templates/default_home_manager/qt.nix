@@ -21,8 +21,8 @@
       style = {
         name = "adwaita-dark";
       };
+      qt5ctSettings = settings;
+      qt6ctSettings = settings;
     };
-    qt5ctSettings = settings;
-    qt6ctSettings = settings;
   };
 }
