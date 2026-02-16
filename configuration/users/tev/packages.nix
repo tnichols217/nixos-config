@@ -248,7 +248,9 @@ in
       ] ++ (if host-name == "ASUS" then [
         # (blender.override { cudaSupport = true; } )
       ] else [
-        blender-hip
+        (blender.override {
+          config.rocmSupport = true;
+        })
       ]);
     };
     programs = {
