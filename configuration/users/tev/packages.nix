@@ -249,7 +249,7 @@ in
         # (blender.override { cudaSupport = true; } )
       ] else [
         (blender.override {
-          config.rocmSupport = true;
+          rocmSupport = true;
         })
       ]);
     };
