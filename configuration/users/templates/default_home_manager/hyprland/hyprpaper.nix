@@ -4,7 +4,8 @@ let
 in
 ''
   wallpaper {
-    path=${wallpaper}
+    monitor = 
+    path = ${wallpaper}
   }
   splash = false
 ''
