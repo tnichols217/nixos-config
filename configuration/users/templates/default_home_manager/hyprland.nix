@@ -157,17 +157,17 @@ in
             "if [ ! -f ~/.ssh/${algo} ]; then ${pkgs.openssh}/bin/ssh-keygen -t ${algo} -f ~/.ssh/${algo} -N \"\" fi"
           ];
           windowrule = [
-            "match:class ^(kitty)$, float"
-            "match:class ^(Display)$, float"
-            "match:class ^(Display)$, pin"
-            "match:class ^(pavucontrol)$, float"
-            "match:class ^(org\.gnome\.nautilus)$, float"
+            "match:class ^(kitty)$, float 1"
+            "match:class ^(Display)$, float 1"
+            "match:class ^(Display)$, pin 1"
+            "match:class ^(pavucontrol)$, float 1"
+            "match:class ^(org\.gnome\.nautilus)$, float 1"
             "match:fullscreen 1, rounding 0"
           ];
           layerrule = [
-            "match:launcher, blur"
-            "match:waybar, blur"
-            "match:waybar, ignorealpha [0.05]"
+            "match:namespace launcher, blur 1"
+            "match:namespace waybar, blur 1"
+            "match:namespace waybar, ignore_alpha 0.05"
           ];
           workspace = [
           ];
