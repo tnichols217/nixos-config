@@ -12,9 +12,9 @@ let
       "eDP-2, 2560x1600@120, auto-right, 1"
       # "HDMI-A-1, 2560x1440@120, 2560x0, 1"
       # "HDMI-A-1, highrr, 2560x0, 1"
-      "HDMI-A-1, highrr, auto-up, 1"
+      "HDMI-A-1, highrr, auto, 1"
       # "DP-1, 2560x1440@60, 2560x1440, 1"
-      "DP-1, 2560x1440@60, auto, 1"
+      "DP-1, 2560x1440@60, auto-down, 1"
     ];
     "MSI" = [];
     "rpi" = [
@@ -156,18 +156,18 @@ in
             "${pkgs.wl-clipboard}/bin/wl-paste --type image --watch ${pkgs.cliphist}/bin/cliphist store"
             "if [ ! -f ~/.ssh/${algo} ]; then ${pkgs.openssh}/bin/ssh-keygen -t ${algo} -f ~/.ssh/${algo} -N \"\" fi"
           ];
-          windowrulev2 = [
-            "float,class:^(kitty)$"
-            "float,class:^(Display)$"
-            "pin,class:^(Display)$"
-            "float,class:^(pavucontrol)$"
-            "float,class:^(org\.gnome\.nautilus)$"
-            "rounding 0,fullscreen:1"
+          windowrule = [
+            "match:class ^(kitty)$, float"
+            "match:class ^(Display)$, float"
+            "match:class ^(Display)$, pin"
+            "match:class ^(pavucontrol)$, float"
+            "match:class ^(org\.gnome\.nautilus)$, float"
+            "match:fullscreen 1, rounding 0"
           ];
           layerrule = [
-            "blur,launcher"
-            "blur,waybar"
-            "ignorealpha [0.05],waybar"
+            "match:launcher, blur"
+            "match:waybar, blur"
+            "match:waybar, ignorealpha [0.05]"
           ];
           workspace = [
           ];
