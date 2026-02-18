@@ -231,11 +231,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1771302883,
-        "narHash": "sha256-vLIayeWn26W9VDUlpZdWMFIy7sezzsM1qe/fTJEpV2Q=",
+        "lastModified": 1771389418,
+        "narHash": "sha256-QQCjJ4hJnaTv2vEVLaRHpjniJnxM2QQakqRsvZuJ0lA=",
         "owner": "OsiPog",
         "repo": "nix-firefox-addons",
-        "rev": "8b3ebd6807c438b1785bec98f693e848c6eae44f",
+        "rev": "4db5c7a3769b0163cb1ef9e81805bcc7bc01a0b6",
         "type": "github"
       },
       "original": {
@@ -1096,11 +1096,11 @@
         "nixpkgs": "nixpkgs_5"
       },
       "locked": {
-        "lastModified": 1771296295,
-        "narHash": "sha256-nm8qOdnVz/4C/WlmYQkvBXWn+TxlTxPPmUYyN3duLu0=",
+        "lastModified": 1771382968,
+        "narHash": "sha256-Qga57+LqXFbeZkC5U3IfMZPYw14LUst6Am82MvWRP9Y=",
         "owner": "nix-community",
         "repo": "nix-vscode-extensions",
-        "rev": "b82f1bb23901ac24bf973a4a3cbddf5857245c09",
+        "rev": "d273f849f47386c4cbf8d35c38fda8b68690f326",
         "type": "github"
       },
       "original": {
@@ -1309,11 +1309,11 @@
     "papirus": {
       "flake": false,
       "locked": {
-        "lastModified": 1771376535,
-        "narHash": "sha256-fuOzrYXW/niMAFVx5yYmSmgqj/wpDc7xp6LQbsJpAz0=",
+        "lastModified": 1771380929,
+        "narHash": "sha256-L2GkRJ8+PtisHaGmK4AKCt7Fa5kPc2wTIBDY0FkBTho=",
         "owner": "PapirusDevelopmentTeam",
         "repo": "papirus-icon-theme",
-        "rev": "1349cba029b0665fd1bab595a0bcd57777b4b311",
+        "rev": "ac16c47dba8a8d4a17625a87c04d663bbad01ec3",
         "type": "github"
       },
       "original": {
