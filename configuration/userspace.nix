@@ -15,8 +15,6 @@
         "nvidia"
       ] else [
         "amdgpu"
-        # "virtualbox"
-        "hyperv_fb"
         "fbdev"
         "modesetting"
       ]) ++ [];
