@@ -16,7 +16,7 @@
     ./configuration/persistence.nix
     ./configuration/by-host.nix
     ./configuration/programs.nix
-    ./configuration/authentik.nix
+    # ./configuration/authentik.nix
   ];
 
   system.stateVersion = version;
