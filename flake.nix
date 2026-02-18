@@ -3,9 +3,6 @@
     nixpkgs = {
       url = "github:NixOS/nixpkgs/nixos-unstable-small";
     };
-    # nixpkgs_old = {
-    #   url = github:NixOS/nixpkgs/nixos-22.11;
-    # };
     home-manager = {
       # url = github:nix-community/home-manager;
       # Until home-manager merges my diff maybe
@@ -118,12 +115,10 @@
   
   outputs = { self, ... }@inputs: let 
     pre-mods = [
-      # inputs.nixpkgs.nixosModules.readOnlyPkgs
       inputs.home-manager.nixosModules.default
       inputs.impermanence.nixosModules.impermanence
       inputs.nixos-generators.nixosModules.all-formats
       inputs.authentik-nix.nixosModules.default
-      inputs.nixpkgs.nixosModules.readOnlyPkgs
       # inputs.nixvim.homeManagerModules.nixvim
       # inputs.nix-ld.nixosModules.nix-ld
       # nix-index-database.nixosModules.nix-index
@@ -214,27 +209,26 @@
     in rec {
       nixosConfigurations = let
       configs = {p, sys}: let
-        fullAttrsPkgs = fullAttrs // { pkgs = p; };
+        modPkgs = [
+          inputs.nixpkgs.nixosModules.readOnlyPkgs
+          { nixpkgs.pkgs = p; }
+        ] ++ mods;
       in {
         MSI = inputs.nixpkgs.lib.nixosSystem {
-          system = sys;
-          specialArgs = fullAttrsPkgs // { host-name = "MSI"; };
-          modules = mods;
+          specialArgs = fullAttrs // { host-name = "MSI"; };
+          modules = modPkgs;
         };
         ROG = inputs.nixpkgs.lib.nixosSystem {
-          system = sys;
-          specialArgs = fullAttrsPkgs;
-          modules = mods;
+          specialArgs = fullAttrs;
+          modules = modPkgs;
         };
         ASUS = inputs.nixpkgs.lib.nixosSystem {
-          system = sys;
-          specialArgs = fullAttrsPkgs // { host-name = "ASUS"; };
-          modules = mods ++ [ inputs.arion.nixosModules.arion ];
+          specialArgs = fullAttrs // { host-name = "ASUS"; };
+          modules = modPkgs ++ [ inputs.arion.nixosModules.arion ];
         };
         linode = inputs.nixpkgs.lib.nixosSystem {
-          system = sys;
-          specialArgs = fullAttrsPkgs // { host-name = "linode"; };
-          modules = [ ./linode.nix ];
+          specialArgs = fullAttrs // { host-name = "linode"; };
+          modules = [ ./linode.nix { nixpkgs.pkgs = p; }];
         };
         rpi = inputs.nixpkgs.lib.nixosSystem {
           system = sys;
@@ -244,6 +238,7 @@
             # inputs.raspberry-pi-nix.nixosModules.sd-image
             inputs.disko.nixosModules.disko
             ./rpi.nix
+            { nixpkgs.pkgs = p; }
           ];
         };
       };
@@ -300,6 +295,10 @@
         build = {
           type = "app";
           program = ./nix/scripts/build.sh;
+        };
+        switch = {
+          type = "app";
+          program = ./nix/scripts/switch.sh;
         };
         ciBuild = {
           type = "app";

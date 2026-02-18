@@ -18,8 +18,7 @@
     ./configuration/programs.nix
     ./configuration/authentik.nix
   ];
-  
-  nixpkgs.pkgs = pkgs;
+
   system.stateVersion = version;
 }
 

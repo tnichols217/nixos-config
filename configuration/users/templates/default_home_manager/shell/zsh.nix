@@ -35,7 +35,7 @@
           "..." = "cd ../..";
           "...." = "cd ../../..";
           cdg = "cd $(git rev-parse --show-toplevel)";
-          upg = "sudo bash -c \"cd /etc/nixos; git stash; git stash clear; git pull; nixos-rebuild switch --flake \\\".#${host-name}\\\" $argv\"";
+          upg = "sudo ${pkgs.bash}/bin/bash -c \"${pkgs.nixos-rebuild-ng}/bin/nixos-rebuild switch --flake \\\"github:tnichols217/nixos-config#${host-name}\\\" --refresh --log-format internal-json -v |& ${pkgs.nom}/bin/nom --json\"";
           sci = "ssh-copy-id -i ~/.ssh/ed25519 ";
           pathof = "path resolve ";
           code = "codium";

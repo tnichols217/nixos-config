@@ -193,6 +193,7 @@ in
         yarn
         android-tools
         meld
+        nix-output-monitor
 
         # Programming Languages
         nodejs
