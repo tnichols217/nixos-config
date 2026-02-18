@@ -40,6 +40,7 @@
           pathof = "path resolve ";
           code = "codium";
           c = "codium .";
+          n = "nom";
           rssound = "systemctl --user restart pipewire";
           ls = "lsd";
           la = "lsd -lAgh";
