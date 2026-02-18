@@ -9,12 +9,12 @@ let
       "DP-4, disable"
     ];
     "ROG" = [
-      "HDMI-A-1, highrr, auto, 1"
-      "eDP-2, 2560x1600@120, auto-right, 1"
-      # "HDMI-A-1, 2560x1440@120, 2560x0, 1"
+      "desc:GIGA-BYTE TECHNOLOGY CO. LTD. M27Q 0x01010101, highrr, 0x-1440, 1"
+      "desc:BOE 0x0A1D, 2560x1600@120, 0x0, 1" 
+      ", highrr, auto-right, 1"
       # "HDMI-A-1, highrr, 2560x0, 1"
       # "DP-1, 2560x1440@60, 2560x1440, 1"
-      "DP-1, 2560x1440@60, auto-down, 1"
+      "desc:GIGA-BYTE TECHNOLOGY CO. LTD. M27Q 23270B000407, highrr, 2560x-1440, 1"
     ];
     "MSI" = [];
     "rpi" = [

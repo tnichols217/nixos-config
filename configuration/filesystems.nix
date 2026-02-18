@@ -77,4 +77,9 @@
     "z /home 0755 root users"
     "d /${persistence.default} 0777 root root"
   ];
+
+  systemd.services.systemd-tmpfiles-setup = {
+    after = [ "local-fs.mount" ];
+    requires = [ "local-fs.mount" ];
+  };
 }
