@@ -27,17 +27,20 @@
       };
     };
     programs = {
+      diff-so-fancy = {
+        enable = true;
+        enableGitIntegration = true;
+      };
       git = {
         enable = true;
-        userName = "tnichols217";
-        userEmail = "62992267+tnichols217@users.noreply.github.com";
-        diff-so-fancy = {
-          enable = true;
-        };
         lfs = {
           enable = true;
         };
-        extraConfig = {
+        settings = {
+          user = {
+            name = "tnichols217";
+            email = "62992267+tnichols217@users.noreply.github.com";
+          };
           credential = {
             helper = "store";
           };

@@ -12,4 +12,4 @@ upsearch () {
 
 upsearch flake.nix
 
-nixos-rebuild test --flake ".#$(hostname)"
+nixos-rebuild test --flake ".#$(hostname)" --log-format internal-json |& nom --json

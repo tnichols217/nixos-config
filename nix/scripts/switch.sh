@@ -12,4 +12,4 @@ upsearch () {
 
 upsearch flake.nix
 
-sudo bash -cE "nixos-rebuild switch --flake \".#$(hostname)\" --log-format internal-json -v |& nom --json"
+sudo bash -cE "nixos-rebuild switch --flake \".#$(hostname)\" --log-format internal-json |& nom --json"
