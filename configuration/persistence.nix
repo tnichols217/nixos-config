@@ -12,6 +12,7 @@
     hideMounts = false;
     directories = [
       "/etc/nixos"
+      "/var/lib/nixos"
     ];
   };
 }

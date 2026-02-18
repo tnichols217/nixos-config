@@ -2,6 +2,7 @@
 let
 ssh = {
   enable = true;
+  enableDefaultConfig = false;
   matchBlocks = let 
     identityFile = "/home/${username}/.ssh/ed25519";
     identityFileAWS = "/home/${username}/.ssh/ROG.pem";
@@ -60,6 +61,15 @@ ssh = {
     };
     "*" = {
       inherit identityFile;
+      forwardAgent = false;
+      serverAliveInterval = 0;
+      serverAliveCountMax = 3;
+      compression = false;
+      addKeysToAgent = "no";
+      hashKnownHosts = false;
+      userKnownHostsFile = "~/.ssh/known_hosts";
+      controlMaster = "no";
+      controlPersist = "no";
     };
   };
 };
@@ -222,7 +232,7 @@ in
         (rWrapper.override {
           packages = with rPackages; [ ggplot2 dplyr xts languageserver tidyverse ];
         })
-        inputs.nix-matlab.packages."${system}".matlab
+        inputs.nix-matlab.packages."${stdenv.hostPlatform.system}".matlab
         
         # Theming
         # (callPackage ./packages/arch-theme.pkg.nix { arch-theme = inputs.arch-theme; })
