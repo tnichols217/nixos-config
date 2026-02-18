@@ -123,6 +123,7 @@
       inputs.impermanence.nixosModules.impermanence
       inputs.nixos-generators.nixosModules.all-formats
       inputs.authentik-nix.nixosModules.default
+      inputs.nixpkgs.nixosModules.readOnlyPkgs
       # inputs.nixvim.homeManagerModules.nixvim
       # inputs.nix-ld.nixosModules.nix-ld
       # nix-index-database.nixosModules.nix-index
