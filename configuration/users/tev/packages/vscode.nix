@@ -64,6 +64,7 @@
         ms-toolsai.vscode-jupyter-slideshow
         quarto.quarto
         reditorsupport.r
+        REditorSupport.r-syntax
         julialang.language-julia
         charliermarsh.ruff
         labring.open-remote-ssh-for-trae
