@@ -12,7 +12,7 @@
           files = pkgs.lib.lists.map mapFileAttr files;
         };
       };
-      # systemd.tmpfiles.rules = pkgs.lib.lists.map mapTmp dirs ++ pkgs.lib.lists.map mapTmp files;
+      systemd.tmpfiles.rules = pkgs.lib.lists.map mapTmp dirs ++ pkgs.lib.lists.map mapTmp files;
     } );
   in [
     (
