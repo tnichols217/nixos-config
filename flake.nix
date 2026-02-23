@@ -19,6 +19,10 @@
       flake = false;
     };
 
+    nixos-cli = {
+      url = "github:nix-community/nixos-cli";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     impermanence = {
       url = "github:nix-community/impermanence";
     };
@@ -119,6 +123,7 @@
       inputs.impermanence.nixosModules.impermanence
       inputs.nixos-generators.nixosModules.all-formats
       inputs.authentik-nix.nixosModules.default
+      inputs.nixos-cli.nixosModules.nixos-cli
       # inputs.nixvim.homeManagerModules.nixvim
       # inputs.nix-ld.nixosModules.nix-ld
       # nix-index-database.nixosModules.nix-index

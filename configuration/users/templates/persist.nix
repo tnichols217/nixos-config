@@ -1,20 +1,20 @@
 { config, pkgs, username, persistence, lib, ... }:
-{
-  imports = let 
-    mapDirAttr = ( x: { directory = x; mode = "0700"; user = "${username}"; } );
-    mapFileAttr = ( x: { file = x; parentDirectory = { mode = "700"; user = "${username}"; }; } );
-    mapTmp = ( x: "Z! /home/${username}/${lib.strings.stringAsChars (c: if c == " " then "\\x20" else c) x} 0700 ${username} users" );
-    mapConf = ( files: dirs: loc: {
-      environment.persistence."${loc}" = {
-        hideMounts = false;
-        users.${username} = {
-          directories = pkgs.lib.lists.map mapDirAttr dirs;
-          files = pkgs.lib.lists.map mapFileAttr files;
-        };
+let 
+  mapDirAttr = ( x: { directory = x; mode = "0700"; user = "${username}"; } );
+  mapFileAttr = ( x: { file = x; parentDirectory = { mode = "700"; user = "${username}"; }; } );
+  mapTmp = ( x: "Z! /home/${username}/${lib.strings.stringAsChars (c: if c == " " then "\\x20" else c) x} 0700 ${username} users" );
+  mapConf = ( files: dirs: loc: {
+    environment.persistence."${loc}" = {
+      hideMounts = false;
+      users.${username} = {
+        directories = pkgs.lib.lists.map mapDirAttr dirs;
+        files = pkgs.lib.lists.map mapFileAttr files;
       };
-      systemd.tmpfiles.rules = pkgs.lib.lists.map mapTmp dirs ++ pkgs.lib.lists.map mapTmp files;
-    } );
-  in [
+    };
+    # systemd.tmpfiles.rules = pkgs.lib.lists.map mapTmp dirs ++ pkgs.lib.lists.map mapTmp files;
+  } );
+in {
+  imports = [
     (
       mapConf [] [
         "Downloads"

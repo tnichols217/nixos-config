@@ -11,20 +11,15 @@
   home-manager.backupFileExtension = "backup";
 
   systemd.tmpfiles.rules = [
-    "d! /home/${username} 0700 ${username} users"
-    "d! /home/${username}/.config 0755 ${username} users"
-    "d! /home/${username}/.config/dconf 0755 ${username} users"
-    "d! /home/${username}/.local 0755 ${username} users"
-    "Z! /home/${username}/.config/{dconf,Microsoft,obs-studio,sunshine,InputLeap,matlab} 0755 ${username} users"
-    "z! /home/${username}/.config 0755 ${username} users"
-    "Z! /home/${username}/.local/{state,share} 0755 ${username} users"
-    "z! /home/${username}/.local 0755 ${username} users"
-    "z! /home/${username} 0700 ${username} users"
-    # "f /home/${username}/.local/state/nix/profiles/tmp/manifest.json 0755 ${username} users"
-    # "L /home/${username}/.local/state/nix/profiles/profile 0755 ${username} users - /home/${username}/.local/state/nix/profiles/tmp"
-    # "L /home/${username}/.local/state/nix/profiles/home-manager 0755 ${username} users - /home/${username}/.local/state/nix/profiles/tmp"
-    # "L /home/${username}/.nix-profile 0755 ${username} users - /home/${username}/.local/state/nix/profiles/profile"
-    # "f /home/${username}/.nix-profile/manifest.json 0755 ${username} users"
+    # "d! /home/${username} 0700 ${username} users"
+    # "d! /home/${username}/.config 0755 ${username} users"
+    # "d! /home/${username}/.config/dconf 0755 ${username} users"
+    # "d! /home/${username}/.local 0755 ${username} users"
+    # "Z! /home/${username}/.config/{dconf,Microsoft,obs-studio,sunshine,InputLeap,matlab} 0755 ${username} users"
+    # "z! /home/${username}/.config 0755 ${username} users"
+    # "Z! /home/${username}/.local/{state,share} 0755 ${username} users"
+    # "z! /home/${username}/.local 0755 ${username} users"
+    # "z! /home/${username} 0700 ${username} users"
   ];
 
   programs.command-not-found.enable = pkgs.lib.mkForce false;

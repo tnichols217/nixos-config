@@ -79,7 +79,7 @@
   ];
 
   systemd.services.systemd-tmpfiles-setup = {
-    after = [ "local-fs.mount" ];
-    requires = [ "local-fs.mount" ];
+    after = [ "local-fs.target" ];
+    requires = [ "local-fs.target" ];
   };
 }

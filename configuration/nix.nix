@@ -23,10 +23,21 @@
       auto-optimise-store = true;
       trusted-users = [ "tev" ];
     };
+    channel.enable = false;
     gc = {
       automatic = true;
       dates = "weekly";
       options = "--delete-older-than 30d";
+    };
+  };
+
+  programs.nixos-cli = {
+    enable = true;
+    option-cache.enable = true;
+    config = {
+      use_nvd = true;
+      apply.use_nom = true;
+      confirmation.always = true;
     };
   };
 

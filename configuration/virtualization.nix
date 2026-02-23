@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, host-name, ... }:
 {
   programs.virt-manager.enable = true;
   virtualisation = {
@@ -8,9 +8,9 @@
         swtpm.enable = true;
       };
     };
-    waydroid.enable = true;
+    # waydroid.enable = true;
     podman.enable = true;
-    podman.dockerSocket.enable = true;
+    podman.dockerSocket.enable = host-name == "ASUS";
     podman.dockerCompat = true;
   };
   environment.systemPackages = [

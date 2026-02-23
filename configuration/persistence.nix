@@ -2,6 +2,7 @@
 {
   imports =
     [
+      ./persistence/users.nix
       ./persistence/data.nix
       ./persistence/local.nix
       ./persistence/bucket.nix
@@ -12,7 +13,7 @@
     hideMounts = false;
     directories = [
       "/etc/nixos"
-      "/var/lib/nixos"
+      # "/var/lib/nixos"
     ];
   };
 }
