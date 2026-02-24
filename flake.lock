@@ -1184,11 +1184,11 @@
         "optnix": "optnix"
       },
       "locked": {
-        "lastModified": 1771836309,
-        "narHash": "sha256-pUz+wSlbl/06g0KiUHMmqDKF03fkI+du9WUcEFd7BAM=",
+        "lastModified": 1771886929,
+        "narHash": "sha256-kROLSUwP2491ddM1NEU542JkuIW5r0Wh/H9iuEYdr5Q=",
         "owner": "nix-community",
         "repo": "nixos-cli",
-        "rev": "8ec74ee2ae9b8f919702e9596cb51b98e8a22bfb",
+        "rev": "1097d85528dabd733eb9b235f8b3918e6c8dcf58",
         "type": "github"
       },
       "original": {
@@ -1432,11 +1432,11 @@
     "papirus": {
       "flake": false,
       "locked": {
-        "lastModified": 1771647111,
-        "narHash": "sha256-xvZYyCYqovOpM4NO9ZV07XDCv83CyLPSUto0G57aMFQ=",
+        "lastModified": 1771886842,
+        "narHash": "sha256-ZRxbHlmcugHcw9mjkCUKO0PGgVW0jV6cE5m1/2jThPA=",
         "owner": "PapirusDevelopmentTeam",
         "repo": "papirus-icon-theme",
-        "rev": "702499f331aa9c38309e1af99de4021013916297",
+        "rev": "b27cfa572237184010fa846dd15d114aa1ea84ce",
         "type": "github"
       },
       "original": {
