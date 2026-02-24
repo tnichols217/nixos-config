@@ -91,6 +91,7 @@
             bisect = "󱦒 ";
             am = " ";
             am_or_rebase = " 󰡓 ";
+            format = "[\($state( $progress_current/$progress_total)\) ]($style)";
           };
 
           git_status = {
