@@ -1432,11 +1432,11 @@
     "papirus": {
       "flake": false,
       "locked": {
-        "lastModified": 1771979957,
-        "narHash": "sha256-W+oEfgf6+ePgsMdy+ZmAOgH44entEwHOhWGO1gMZy1o=",
+        "lastModified": 1772069430,
+        "narHash": "sha256-L4CD7KETXCh92nVN55D62gl2MZKG00E6AiVcgDeQmrY=",
         "owner": "PapirusDevelopmentTeam",
         "repo": "papirus-icon-theme",
-        "rev": "8742d5469a0c0ef02ce7b3c6889f00407c4d282b",
+        "rev": "001552c61c1533e0495017967e37a637bbfac4d2",
         "type": "github"
       },
       "original": {
