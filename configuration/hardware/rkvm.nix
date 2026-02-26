@@ -44,7 +44,7 @@ lib.mkMerge [
       ${pkgs.rkvm}/bin/rkvm-certificate-gen -d ${host-name} -d ${addresses.asus} -d tln32asus -d ${addresses.default} -d localhost ${cert} ${key}
       chmod 777 ${cert}
     '';
-    wantedBy = ["rkvm-server.service"];
+    wantedBy = [ "rkvm-server.service" ];
   };
 } else {
   systemd.services."rkvm-copy" = {
@@ -53,7 +53,10 @@ lib.mkMerge [
     script = ''
       ${pkgs.openssh}/bin/scp -P ${toString ports.ssh} -i /home/tev/.ssh/ed25519 tev@${addresses.default}:${cert} ${cert}
     '';
-    wantedBy = ["rkvm-client.service"];
+    wants = [ "network-online.target" ];
+    wantedBy = [ "rkvm-client.service" ];
+    after = [ "network-online.target" ];
+    before = [ "rkvm-client.service" ];
   };
   systemd.services."rkvm-tunnel" = {
     serviceConfig = {
@@ -64,6 +67,9 @@ lib.mkMerge [
     script = ''
       ${pkgs.openssh}/bin/ssh -NL ${toString ports.rkvm}:localhost:${toString ports.rkvm} tev@${addresses.default} -p ${toString ports.ssh} -i /home/tev/.ssh/ed25519
     '';
+    wants = [ "network-online.target" ];
     wantedBy = ["rkvm-client.service"];
+    after = [ "network-online.target" ];
+    before = ["rkvm-client.service"];
   };
 })]

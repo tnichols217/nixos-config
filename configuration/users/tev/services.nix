@@ -20,7 +20,9 @@
       Restart = "on-failure";
     };
     serviceConfig.User = "${username}";
-    wantedBy = ["multi-user.target"];
+    wantedBy = [ "multi-user.target" ];
+    wants = [ "network-online.target" ];
+    after = [ "network-online.target" ];
   };
   # users.users.jupyter.group = "jupyter";
   # users.groups.jupyter = {};
