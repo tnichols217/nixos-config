@@ -1184,11 +1184,11 @@
         "optnix": "optnix"
       },
       "locked": {
-        "lastModified": 1771886929,
-        "narHash": "sha256-kROLSUwP2491ddM1NEU542JkuIW5r0Wh/H9iuEYdr5Q=",
+        "lastModified": 1772150270,
+        "narHash": "sha256-3ycodG3Ea6RhD6by0tVcSvIi8Rnk4OG9tbQh9ayQfIs=",
         "owner": "nix-community",
         "repo": "nixos-cli",
-        "rev": "1097d85528dabd733eb9b235f8b3918e6c8dcf58",
+        "rev": "004e3f271164f278dee5343e3c0f2a607797aeb5",
         "type": "github"
       },
       "original": {
