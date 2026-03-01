@@ -231,11 +231,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1772251881,
-        "narHash": "sha256-qNC7fAk5hC2kUv+06Wi6LId0kp/mQYN+cxAzWQ67/Zc=",
+        "lastModified": 1772339929,
+        "narHash": "sha256-DAUQzovfqNCz2mimgurboufsKm6O4bzWqnhqOQLBU+s=",
         "owner": "OsiPog",
         "repo": "nix-firefox-addons",
-        "rev": "aa13498f50c15683627e84073e3aa3e175a698c4",
+        "rev": "a2cd104e1a415c385e63cbe9356128e0b46995f8",
         "type": "github"
       },
       "original": {
@@ -1089,11 +1089,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1771734689,
-        "narHash": "sha256-/phvMgr1yutyAMjKnZlxkVplzxHiz60i4rc+gKzpwhg=",
+        "lastModified": 1772341813,
+        "narHash": "sha256-/PQ0ubBCMj/MVCWEI/XMStn55a8dIKsvztj4ZVLvUrQ=",
         "owner": "nix-community",
         "repo": "nix-index-database",
-        "rev": "8f590b832326ab9699444f3a48240595954a4b10",
+        "rev": "a2051ff239ce2e8a0148fa7a152903d9a78e854f",
         "type": "github"
       },
       "original": {
@@ -1146,11 +1146,11 @@
         "nixpkgs": "nixpkgs_5"
       },
       "locked": {
-        "lastModified": 1772245870,
-        "narHash": "sha256-MkcFNrEGekMhQRUB0/F6Jacp/LBUgNvZuacAwhPt7I0=",
+        "lastModified": 1772333747,
+        "narHash": "sha256-3Zf3U1MS865xg2SdhKeJ8LldAgPtNndahZzPr7k1BSU=",
         "owner": "nix-community",
         "repo": "nix-vscode-extensions",
-        "rev": "71308308af11faffcace34b6512579c59ce45bcd",
+        "rev": "56e29b45cf55aa208eb7e67d7bff6f7ec301485c",
         "type": "github"
       },
       "original": {
@@ -1184,11 +1184,11 @@
         "optnix": "optnix"
       },
       "locked": {
-        "lastModified": 1772150270,
-        "narHash": "sha256-3ycodG3Ea6RhD6by0tVcSvIi8Rnk4OG9tbQh9ayQfIs=",
+        "lastModified": 1772338756,
+        "narHash": "sha256-80+I7XUy47/F0QSJbzP3I0Nm1npCbYBt+1HX8YZQWKs=",
         "owner": "nix-community",
         "repo": "nixos-cli",
-        "rev": "004e3f271164f278dee5343e3c0f2a607797aeb5",
+        "rev": "0d699d6ccc0fbc719e7d684cdce4868e578c7d66",
         "type": "github"
       },
       "original": {
@@ -1432,11 +1432,11 @@
     "papirus": {
       "flake": false,
       "locked": {
-        "lastModified": 1772204144,
-        "narHash": "sha256-VAHdHHPtUATl7CtRjgKvkWRfF/z5KwAV7EafVQy+cNU=",
+        "lastModified": 1772338476,
+        "narHash": "sha256-9RomXTZGgc9k0CAx6DTnIAdvGK0byMtsYRXoDWqG3ww=",
         "owner": "PapirusDevelopmentTeam",
         "repo": "papirus-icon-theme",
-        "rev": "698608fe504d7dd814921ddf4815d1c9264637f3",
+        "rev": "20cbad9bfa69fe889cb368720eb356528e1a0266",
         "type": "github"
       },
       "original": {
