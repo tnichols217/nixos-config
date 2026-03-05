@@ -155,7 +155,7 @@ in
         fswatch
         cachix
         poppler
-        neofetch
+        fastfetch
         pandoc
         imagemagick
 
