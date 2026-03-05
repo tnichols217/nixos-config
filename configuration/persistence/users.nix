@@ -16,18 +16,24 @@
       systemd-coredump.gid = 989;
       systemd-oom.gid = 988;
       wpa_supplicant.gid = 987;
+      nm-iodine.gid = 986;
     };
     users = {
       avahi.uid = 999;
       flatpak.uid = 998;
       geoclue.uid = 997;
       greeter.uid = 996;
-      nm-iodine.uid = 995;
+      nm-iodine = {
+        uid = 995;
+        group = "nm-iodine";
+      };
       nscd.uid = 994;
       sshd.uid = 993;
       systemd-oom.uid = 992;
-      wpa_supplicant.uid = 991;
-
+      wpa_supplicant = {
+        uid = 991;
+        group = "wpa_supplicant";
+      };
       soda.uid = 1000;
       tev.uid = 1001;
     };
