@@ -1390,11 +1390,11 @@
     "p10k": {
       "flake": false,
       "locked": {
-        "lastModified": 1769621797,
-        "narHash": "sha256-xiUNt2zomP3TNiCW/PZn6rS/3pv+uW17YjkzEPc227I=",
+        "lastModified": 1773191384,
+        "narHash": "sha256-yvrBq7RoItTGuI7FDuirPwjGJAa3Ud2vZKoYNm9cMCA=",
         "owner": "romkatv",
         "repo": "powerlevel10k",
-        "rev": "8ed1f58e082e1cce85e1d69235d1a906cf3c643e",
+        "rev": "7ff836131ab462073053dde941c3188ce0e4243c",
         "type": "github"
       },
       "original": {
