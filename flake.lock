@@ -1406,11 +1406,11 @@
     "papirus": {
       "flake": false,
       "locked": {
-        "lastModified": 1773099470,
-        "narHash": "sha256-zoTT4li4ZcUiddDsukBTeyRrFQQFOJDKERBwt2qHGmY=",
+        "lastModified": 1773356600,
+        "narHash": "sha256-AUMZnvcNBtdC6YWlABMp9McEwmWLcERAMbjE4WMSlVE=",
         "owner": "PapirusDevelopmentTeam",
         "repo": "papirus-icon-theme",
-        "rev": "52c7ff33829e442a2b48fa4e5c942725c3253968",
+        "rev": "53e8eb9da659336e429a5d549f9e553072438325",
         "type": "github"
       },
       "original": {
