@@ -25,7 +25,6 @@
       greeter.uid = 996;
       nm-iodine = {
         uid = 995;
-        group = "nm-iodine";
       };
       nscd.uid = 994;
       sshd.uid = 993;
