@@ -1168,11 +1168,11 @@
         "optnix": "optnix"
       },
       "locked": {
-        "lastModified": 1775373899,
-        "narHash": "sha256-V5c/01KFksD459zETtWFmjIG/haiRA5rF3R5DxhtFbQ=",
+        "lastModified": 1775518913,
+        "narHash": "sha256-ulCNK1i9bRcQDBbvasCdPk5NKoGGwKlVms2H4cvBo4w=",
         "owner": "nix-community",
         "repo": "nixos-cli",
-        "rev": "694753213dd9a8dbf38e572f053bc49b6382425f",
+        "rev": "8ecf17b91dd777d2cbfe48a20ea106307fbcccd4",
         "type": "github"
       },
       "original": {
@@ -1310,11 +1310,11 @@
     },
     "nixpkgs_6": {
       "locked": {
-        "lastModified": 1775456833,
-        "narHash": "sha256-UPTA8QB7h0hf64CQoLUXp+vNRy5CUBuVaTjr5fwK8Pg=",
+        "lastModified": 1775502230,
+        "narHash": "sha256-fAftaS6ehYk0cnokkyCyYU78UMFtOzLpxaaIDFFPwVQ=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "e6c8eff62fae8fd177be483d62e370d6806096c7",
+        "rev": "40a78c7b16a0ecd9a8428fa7129246810da242a9",
         "type": "github"
       },
       "original": {
