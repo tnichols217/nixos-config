@@ -26,15 +26,15 @@
     channel.enable = false;
     gc = {
       automatic = true;
-      dates = "weekly";
-      options = "--delete-older-than 30d";
+      dates = "daily";
+      options = "--delete-older-than 7d";
     };
   };
 
   programs.nixos-cli = {
     enable = true;
     option-cache.enable = true;
-    config = {
+    settings = {
       use_nvd = true;
       apply.use_nom = true;
       confirmation.always = true;

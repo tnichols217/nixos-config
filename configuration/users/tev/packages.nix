@@ -207,7 +207,7 @@ in
 
         # Programming Languages
         nodejs
-        nodePackages.nodemon
+        nodemon
         openjdk17-bootstrap
         dotnet-sdk
         rustc
