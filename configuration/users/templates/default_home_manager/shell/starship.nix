@@ -7,7 +7,7 @@
         settings = {
           add_newline = false;
 
-          format = "[](fg:white)$os$hostname$username [](fg:white bg:dim bg:blue)$directory[](fg:blue bg:green)$git_branch$git_commit$git_status$git_state[](fg:green) ";
+          format = "[](fg:white)$os$hostname$username[](fg:white bg:dim bg:blue)$directory[](fg:blue bg:green)$git_branch$git_commit$git_status$git_state[](fg:green) ";
           right_format = "[](fg:black)$status[](bg:black fg:yellow)($cmd_duration$jobs[ ](bg:yellow fg:blue))[](bg:yellow fg:blue)($direnv$nix_shell$python$conda$kubernetes$terraform$aws$gcloud[ ](bg:blue fg:white))[](bg:blue fg:white)$time[](fg:white)";
 
           os = {
@@ -70,7 +70,7 @@
           username = {
             style_user = "bg:white fg:black";
             style_root = "bg:white fg:red";
-            format = "[$user]($style)";
+            format = "[$user ]($style)";
             disabled = false;
             show_always = false;
           };
