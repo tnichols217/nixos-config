@@ -547,11 +547,11 @@
         "hyprland": "hyprland"
       },
       "locked": {
-        "lastModified": 1778736027,
-        "narHash": "sha256-hWTwj5aX9ZOIb8kCArfegvj0mWI0fRfh9Nu8fPl0Ezg=",
+        "lastModified": 1778750252,
+        "narHash": "sha256-P3wwiIfqo89evW7xzI+wOI/qM1WPZBiiSmGNtBmYeVk=",
         "owner": "outfoxxed",
         "repo": "hy3",
-        "rev": "d7e0c58a1116df3d79f24a225f17b988112ca1ad",
+        "rev": "a7282db2d7ca336d3c9faa5d10d75fc43eed37aa",
         "type": "github"
       },
       "original": {
