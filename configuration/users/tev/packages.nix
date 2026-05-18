@@ -233,6 +233,7 @@ in
           packages = with rPackages; [ ggplot2 dplyr xts languageserver tidyverse ];
         })
         inputs.nix-matlab.packages."${stdenv.hostPlatform.system}".matlab
+        zed-editor
         
         # Theming
         # (callPackage ./packages/arch-theme.pkg.nix { arch-theme = inputs.arch-theme; })

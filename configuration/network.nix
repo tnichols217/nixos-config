@@ -6,6 +6,7 @@
      ] else [];
   networking.hostName = host-name;
   hardware.enableRedistributableFirmware = true;
+  services.tailscale.enable = true;
   networking.firewall = {
     enable = false;
     allowedTCPPorts = [

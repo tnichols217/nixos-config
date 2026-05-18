@@ -1,5 +1,7 @@
 { pkgs, addresses, ... }:
 {
+  programs.openvpn3.enable = true;
+
   networking.networkmanager = {
     enable = true;
     plugins = with pkgs; [

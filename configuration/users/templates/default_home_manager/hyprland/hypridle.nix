@@ -31,7 +31,7 @@ listener {
 }
 
 listener {
-    timeout = 1800                                # 30min
+    timeout = 345                                 # 30min
     on-timeout = systemctl suspend                # suspend pc
 }
 ''
