@@ -79,7 +79,7 @@
         mkhl.direnv
         dbaeumer.vscode-eslint
         jeanp413.open-remote-ssh
-        ms-vscode.js-debug
+        # ms-vscode.js-debug
         golang.go
       ];
       userSettings = {
