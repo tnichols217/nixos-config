@@ -256,7 +256,6 @@ in
             ];
           })
           inputs.nix-matlab.packages."${stdenv.hostPlatform.system}".matlab
-          zed-editor
 
           # Theming
           # (callPackage ./packages/arch-theme.pkg.nix { arch-theme = inputs.arch-theme; })
@@ -305,6 +304,7 @@ in
           openvsx_exts
           ;
       };
+      zed-editor = import ./packages/zed.nix { };
       obs-studio = {
         enable = true;
       };
