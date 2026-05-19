@@ -51,7 +51,7 @@
           sci = "ssh-copy-id -i ~/.ssh/ed25519 ";
           pathof = "path resolve ";
           code = "codium";
-          c = "codium .";
+          c = "zeditor .";
           n = "nom";
           rssound = "systemctl --user restart pipewire";
           ls = "lsd";

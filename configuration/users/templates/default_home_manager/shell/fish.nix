@@ -22,7 +22,7 @@
           sci = "ssh-copy-id -i ~/.ssh/ed25519 ";
           pathof = "path resolve ";
           code = "codium";
-          c = "codium .";
+          c = "zeditor .";
           rssound = "systemctl --user restart pipewire";
           ls = "lsd";
           la = "lsd -lAgh";
