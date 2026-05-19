@@ -1,7 +1,12 @@
-{ pkgs, config, addresses, ports, addressNumbers, ... }:
+{
+  config,
+  addresses,
+  ports,
+  ...
+}:
 let
   # hostAddress = host: "10.1.${addressNumbers.${host}}.1";
-  hostAddress = host: "localhost";
+  hostAddress = _: "localhost";
 in
 {
   # users.users.nginx.extraGroups = ["wwwrun"];
@@ -13,13 +18,13 @@ in
     #     settings = {
     #       default_2fa_method = "webauthn";
     #       server.port = ports.authelia;
-  
+
     #       authentication_backend = {
     #         file = {
     #           path = "/var/lib/authelia-main/users_database.yml";
     #         };
     #       };
-      
+
     #       access_control = {
     #         default_policy = "deny";
     #         rules = [
@@ -33,7 +38,7 @@ in
     #           }
     #         ];
     #       };
-      
+
     #       session = {
     #         name = "authelia_session";
     #         expiration = "12h";
@@ -42,13 +47,13 @@ in
     #         domain = "example.com";
     #         redis.host = "/run/redis-authelia-pigs/redis.sock";
     #       };
-      
+
     #       regulation = {
     #         max_retries = 3;
     #         find_time = "5m";
     #         ban_time = "15m";
     #       };
-      
+
     #       storage = {
     #         local = {
     #           path = "/var/lib/authelia/db.sqlite3";
@@ -64,7 +69,7 @@ in
 
     # redis.servers.authelia-main = {
     #   enable = true;
-    #   user = "authelia-pigs";   
+    #   user = "authelia-pigs";
     #   port = 0;
     #   unixSocket = "/run/redis-authelia-pigs/redis.sock";
     #   unixSocketPerm = 600;
@@ -95,7 +100,8 @@ in
           ];
         };
         "nix-serve" = {
-          locations."/".proxyPass = "http://${config.services.nix-serve.bindAddress}:${toString config.services.nix-serve.port}";
+          locations."/".proxyPass =
+            "http://${config.services.nix-serve.bindAddress}:${toString config.services.nix-serve.port}";
           useACMEHost = "${addresses.serve}";
           serverName = "${addresses.serve}";
           forceSSL = true;

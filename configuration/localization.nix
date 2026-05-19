@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ lib, ... }:
 {
   # time.timeZone = "Asia/Kuala_Lumpur";
   time.timeZone = lib.mkForce "America/New_York";

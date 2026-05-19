@@ -1,4 +1,7 @@
-{ config, pkgs, version, host-name, oldnixpkgs, addresses, persistence, ... }:
+{
+  version,
+  ...
+}:
 {
   imports = [
     ./configuration/hardware.nix
@@ -21,4 +24,3 @@
 
   system.stateVersion = version;
 }
-

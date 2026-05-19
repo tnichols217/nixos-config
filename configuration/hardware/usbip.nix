@@ -7,6 +7,6 @@
       ExecStart = "${config.boot.kernelPackages.usbip}/bin/usbipd";
       Restart = "on-failure";
     };
-    wantedBy = ["multi-user.target"];
+    wantedBy = [ "multi-user.target" ];
   };
 }

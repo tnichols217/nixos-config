@@ -1,4 +1,9 @@
-{ pkgs, config, lib, addresses, ... }:
+{
+  pkgs,
+  lib,
+  addresses,
+  ...
+}:
 {
   services.postgresql = {
     enable = true;
@@ -13,8 +18,8 @@
   };
 
   systemd.services."nextcloud-setup" = {
-    requires = ["postgresql.service"];
-    after = ["postgresql.service"];
+    requires = [ "postgresql.service" ];
+    after = [ "postgresql.service" ];
   };
 
   services.nextcloud = {
@@ -25,7 +30,7 @@
     # nginx.enable = true;
 
     https = true;
-    
+
     autoUpdateApps.enable = true;
     autoUpdateApps.startAt = "05:00:00";
 

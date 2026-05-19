@@ -1,4 +1,10 @@
-{ pkgs, username, host-name, version, lib, nix-index-database, addresses, inputs, ... }@ args:
+{
+  pkgs,
+  username,
+  host-name,
+  inputs,
+  ...
+}@args:
 let
   appmod = "CTRLALT";
   monitors = {
@@ -10,13 +16,14 @@ let
     ];
     "ROG" = [
       "desc:GIGA-BYTE TECHNOLOGY CO. LTD. M27Q 0x01010101, highrr, 0x-1440, 1"
-      "desc:BOE 0x0A1D, 2560x1600@120, 0x0, 1" 
+      "desc:BOE 0x0A1D, 2560x1600@120, 0x0, 1"
+      "desc:Dell Inc. DELL AW2518HF 99G1G77A11LU, 1920x1080@143.98Hz, auto-right, 1"
       ", highrr, auto-right, 1"
       # "HDMI-A-1, highrr, 2560x0, 1"
       # "DP-1, 2560x1440@60, 2560x1440, 1"
       "desc:GIGA-BYTE TECHNOLOGY CO. LTD. M27Q 23270B000407, highrr, 2560x-1440, 1"
     ];
-    "MSI" = [];
+    "MSI" = [ ];
     "rpi" = [
       ", highres, auto, 1"
     ];
@@ -105,7 +112,11 @@ in
             "SUPER_SHIFT_ALT_CTRL, F2, exec, sh ${./hyprland/workspace2d.sh} move_down all"
             "SUPER_ALT_CTRL, down, exec, sh ${./hyprland/workspace2d.sh} move_down all"
             "SUPER, V, exec, ${pkgs.cliphist}/bin/cliphist list | ${pkgs.tofi}/bin/tofi | ${pkgs.cliphist}/bin/cliphist decode | ${pkgs.wl-clipboard}/bin/wl-copy"
-            "SUPER_SHIFT, V, exec, ${pkgs.openssh}/bin/ssh ${if host-name == "ASUS" then "ROG" else "ASUS"} \"${pkgs.cliphist}/bin/cliphist list\" | ${pkgs.tofi}/bin/tofi | ${pkgs.openssh}/bin/ssh ${if host-name == "ASUS" then "ROG" else "ASUS"} \"${pkgs.cliphist}/bin/cliphist decode\" | ${pkgs.wl-clipboard}/bin/wl-copy"
+            "SUPER_SHIFT, V, exec, ${pkgs.openssh}/bin/ssh ${
+              if host-name == "ASUS" then "ROG" else "ASUS"
+            } \"${pkgs.cliphist}/bin/cliphist list\" | ${pkgs.tofi}/bin/tofi | ${pkgs.openssh}/bin/ssh ${
+              if host-name == "ASUS" then "ROG" else "ASUS"
+            } \"${pkgs.cliphist}/bin/cliphist decode\" | ${pkgs.wl-clipboard}/bin/wl-copy"
             "SUPER_CTRL, V, exec, ${pkgs.wl-clipboard}/bin/wl-paste | ${pkgs.imagemagick}/bin/display"
             "SUPER, F, togglefloating"
             "SUPER, G, togglegroup"
@@ -134,28 +145,35 @@ in
           ];
           env = [
             "HYPRCURSOR_THEME,rose-pine-hyprcursor"
-          ] ++ (if host-name != "ROG" then [
-            "LIBVA_DRIVER_NAME,nvidia"
-            "XDG_SESSION_TYPE,wayland"
-            "GBM_BACKEND,nvidia-drm"
-            "__GLX_VENDOR_LIBRARY_NAME,nvidia"
-            "WLR_NO_HARDWARE_CURSORS,1"
-          ] else []);
+          ]
+          ++ (
+            if host-name != "ROG" then
+              [
+                "LIBVA_DRIVER_NAME,nvidia"
+                "XDG_SESSION_TYPE,wayland"
+                "GBM_BACKEND,nvidia-drm"
+                "__GLX_VENDOR_LIBRARY_NAME,nvidia"
+                "WLR_NO_HARDWARE_CURSORS,1"
+              ]
+            else
+              [ ]
+          );
           monitor = monitors."${host-name}";
-          exec-once = 
-          let
-            algo = "ed25519";
-          in [
-            "${pkgs.dunst}/bin/dunst"
-            "${pkgs.hyprpaper}/bin/hyprpaper"
-            # "${pkgs.networkmanagerapplet}/bin/nm-applet --indicatior"
-            "${pkgs.waybar}/bin/waybar"
-            "${pkgs.hypridle}/bin/hypridle"
-            "${pkgs.blueman}/bin/blueman-tray"
-            "${pkgs.wl-clipboard}/bin/wl-paste --type text --watch ${pkgs.cliphist}/bin/cliphist store"
-            "${pkgs.wl-clipboard}/bin/wl-paste --type image --watch ${pkgs.cliphist}/bin/cliphist store"
-            "if [ ! -f ~/.ssh/${algo} ]; then ${pkgs.openssh}/bin/ssh-keygen -t ${algo} -f ~/.ssh/${algo} -N \"\" fi"
-          ];
+          exec-once =
+            let
+              algo = "ed25519";
+            in
+            [
+              "${pkgs.dunst}/bin/dunst"
+              "${pkgs.hyprpaper}/bin/hyprpaper"
+              # "${pkgs.networkmanagerapplet}/bin/nm-applet --indicatior"
+              "${pkgs.waybar}/bin/waybar"
+              "${pkgs.hypridle}/bin/hypridle"
+              "${pkgs.blueman}/bin/blueman-tray"
+              "${pkgs.wl-clipboard}/bin/wl-paste --type text --watch ${pkgs.cliphist}/bin/cliphist store"
+              "${pkgs.wl-clipboard}/bin/wl-paste --type image --watch ${pkgs.cliphist}/bin/cliphist store"
+              "if [ ! -f ~/.ssh/${algo} ]; then ${pkgs.openssh}/bin/ssh-keygen -t ${algo} -f ~/.ssh/${algo} -N \"\" fi"
+            ];
           windowrule = [
             "match:class ^(kitty)$, float 1"
             "match:class ^(Display)$, float 1"
@@ -210,7 +228,6 @@ in
               enabled = true;
               range = 5;
               render_power = 3;
-              ignore_window = true;
               color = "0xee1a1a1a";
               color_inactive = "0xee1a1a1a";
               offset = "0 0";
@@ -306,10 +323,10 @@ in
               enabled = true;
               font_family = "monospace";
               height = 14;
-                "col.active" = "0x44ffffff";
-                "col.inactive" = "0x33ffffff";
-                "col.locked_active" = "0x66ffffff";
-                "col.locked_inactive" = "0x55ffffff";
+              "col.active" = "0x44ffffff";
+              "col.inactive" = "0x33ffffff";
+              "col.locked_active" = "0x66ffffff";
+              "col.locked_inactive" = "0x55ffffff";
             };
           };
           misc = {

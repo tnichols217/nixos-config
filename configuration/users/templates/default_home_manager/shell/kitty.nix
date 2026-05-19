@@ -1,4 +1,7 @@
-{ pkgs, username, host-name, version, lib, nix-index-database, inputs, ... }:
+{
+  username,
+  ...
+}:
 {
   home-manager.users.${username} = {
     programs = {

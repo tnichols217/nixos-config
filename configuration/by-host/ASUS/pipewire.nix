@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+_:
 {
   # TODO move pipewire config to config files instead
 

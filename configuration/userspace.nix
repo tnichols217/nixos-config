@@ -1,23 +1,31 @@
-{ config, pkgs, host-name, lib, ... }:
 {
-  imports =
-    [
-      # ./userspace/plasma.nix
-      ./userspace/hyprland.nix
-      ./userspace/greetd.nix
-    ];
+  pkgs,
+  host-name,
+  lib,
+  ...
+}:
+{
+  imports = [
+    # ./userspace/plasma.nix
+    ./userspace/hyprland.nix
+    ./userspace/greetd.nix
+  ];
   services = {
     libinput.enable = true;
     xserver = {
       enable = true;
       wacom.enable = true;
-      videoDrivers = (if host-name == "ASUS" then [
-        "nvidia"
-      ] else [
-        "amdgpu"
-        "fbdev"
-        "modesetting"
-      ]) ++ [];
+      videoDrivers =
+        if host-name == "ASUS" then
+            [
+              "nvidia"
+            ]
+          else
+            [
+              "amdgpu"
+              "fbdev"
+              "modesetting"
+            ];
     };
     avahi = {
       enable = true;
@@ -32,13 +40,16 @@
   };
 
   fonts = {
-    packages = with pkgs; [
-      noto-fonts
-      noto-fonts-cjk-sans
-      noto-fonts-color-emoji
-      font-awesome
-    ] ++ lib.lists.filter lib.isDerivation (builtins.attrValues nerd-fonts);
+    packages =
+      with pkgs;
+      [
+        noto-fonts
+        noto-fonts-cjk-sans
+        noto-fonts-color-emoji
+        font-awesome
+      ]
+      ++ lib.lists.filter lib.isDerivation (builtins.attrValues nerd-fonts);
     enableDefaultPackages = true;
   };
   programs.dconf.enable = true;
-} 
+}

@@ -1,4 +1,13 @@
-{ config, lib, pkgs, host-name, version, inputs, ports, ... }@args :
+{
+  config,
+  lib,
+  pkgs,
+  host-name,
+  version,
+  inputs,
+  ports,
+  ...
+}@args:
 {
   imports = [
     # ./configuration/disks.nix
@@ -9,7 +18,9 @@
     ../configuration/userspace/hyprland.nix
     ((import ../configuration/users/templates/persist.nix) (args // { username = "user"; }))
     ((import ../configuration/users/templates/normal_sudo.nix) (args // { username = "user"; }))
-    ((import ../configuration/users/templates/default_home_manager.nix) (args // { username = "user"; }))
+    ((import ../configuration/users/templates/default_home_manager.nix) (
+      args // { username = "user"; }
+    ))
   ];
 
   time.timeZone = "Asia/Kuala_Lumpur";
@@ -17,8 +28,6 @@
   users.users = {
     root = {
       hashedPassword = lib.mkForce "!";
-      packages = with pkgs; [
-      ];
       openssh.authorizedKeys.keys = [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINILZDzRLWHEXbtv0TfEH+mNG8mN1nN8C7IXT0cqZqWm tev@ROG"
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDwL6Uvhyr+mrXDPcM+d3AUD5l0eN2DoN+UqIHBWntB+ tev@ASUS"
@@ -26,7 +35,7 @@
     };
 
     user = {
-      hashedPassword = ''$y$j9T$3l9ddjue6Mjm4IInm6JDV.$O1sVWAOlnxsF//uh1euVEFPCyh7AD8lCYBIfWMKe4L6'';
+      hashedPassword = "$y$j9T$3l9ddjue6Mjm4IInm6JDV.$O1sVWAOlnxsF//uh1euVEFPCyh7AD8lCYBIfWMKe4L6";
       packages = with pkgs; [
         (callPackage ../configuration/users/tev/packages/firefox.pkg.nix { inherit inputs config; })
         qbittorrent
@@ -36,15 +45,17 @@
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDwL6Uvhyr+mrXDPcM+d3AUD5l0eN2DoN+UqIHBWntB+ tev@ASUS"
       ];
     };
-    
+
   };
 
   home-manager.users.user = {
     nix.settings = {
-      experimental-features = [ "nix-command" "flakes" ];
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
     };
   };
-
 
   environment.systemPackages = with pkgs; [
     nano
@@ -87,10 +98,10 @@
     firewall = {
       enable = true;
       allowedTCPPorts = with ports; [
-        22      # SSH
-        80      # HTTP
-        443     # HTTPS
-        ssh     # SSH
+        22 # SSH
+        80 # HTTP
+        443 # HTTPS
+        ssh # SSH
       ];
     };
   };
@@ -124,14 +135,16 @@
   };
 
   fonts = {
-    packages = with pkgs; [
-      noto-fonts
-      noto-fonts-cjk-sans
-      noto-fonts-color-emoji
-    ] ++ lib.lists.filter lib.isDerivation (builtins.attrValues nerd-fonts);
+    packages =
+      with pkgs;
+      [
+        noto-fonts
+        noto-fonts-cjk-sans
+        noto-fonts-color-emoji
+      ]
+      ++ lib.lists.filter lib.isDerivation (builtins.attrValues nerd-fonts);
     enableDefaultPackages = true;
   };
 
   system.stateVersion = version;
 }
-

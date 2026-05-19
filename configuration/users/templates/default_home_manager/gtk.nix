@@ -1,7 +1,11 @@
-{ pkgs, username, inputs, ... }:
+{
+  pkgs,
+  username,
+  ...
+}:
 {
   home-manager.users.${username} = {
-    gtk ={
+    gtk = {
       enable = true;
       colorScheme = "dark";
       font = {

@@ -1,4 +1,9 @@
-{ pkgs, config, vscode_exts, openvsx_exts, ... }:
+{
+  pkgs,
+  vscode_exts,
+  openvsx_exts,
+  ...
+}:
 {
   enable = true;
   package = pkgs.vscodium;
@@ -21,14 +26,20 @@
         ecmel.vscode-html-css
         grapecity.gc-excelviewer
         jnoortheen.nix-ide
-        (ms-python.python.overrideAttrs (final: prev: (prev // {
-          buildPhase = prev.buildPhase + ''
-            pkg=package.json
-            cat $pkg | ${pkgs.jq}/bin/jq ".engines.vscode=\"^1.92.0\"" > $pkg.new
-            rm $pkg
-            mv $pkg.new $pkg
-          '';
-        })))
+        (ms-python.python.overrideAttrs (
+          _: prev:
+          (
+            prev
+            // {
+              buildPhase = prev.buildPhase + ''
+                pkg=package.json
+                cat $pkg | ${pkgs.jq}/bin/jq ".engines.vscode=\"^1.92.0\"" > $pkg.new
+                rm $pkg
+                mv $pkg.new $pkg
+              '';
+            }
+          )
+        ))
         detachhead.basedpyright
         mshr-h.veriloghdl
         redhat.vscode-xml
@@ -52,14 +63,20 @@
         vscjava.vscode-java-debug
         vscjava.vscode-maven
         genuitecllc.codetogether
-        (ms-toolsai.jupyter.overrideAttrs (final: prev: (prev // {
-          buildPhase = prev.buildPhase + ''
-            pkg=package.json
-            cat $pkg | ${pkgs.jq}/bin/jq ".engines.vscode=\"^1.92.0\"" > $pkg.new
-            rm $pkg
-            mv $pkg.new $pkg
-          '';
-        })))
+        (ms-toolsai.jupyter.overrideAttrs (
+          _: prev:
+          (
+            prev
+            // {
+              buildPhase = prev.buildPhase + ''
+                pkg=package.json
+                cat $pkg | ${pkgs.jq}/bin/jq ".engines.vscode=\"^1.92.0\"" > $pkg.new
+                rm $pkg
+                mv $pkg.new $pkg
+              '';
+            }
+          )
+        ))
         ms-toolsai.vscode-jupyter-cell-tags
         ms-toolsai.vscode-jupyter-slideshow
         quarto.quarto
@@ -93,7 +110,7 @@
         "workbench.colorTheme" = "Default Dark+";
         "workbench.iconTheme" = "vscode-icons";
         "editor.tokenColorCustomizations" = {
-          "textMateRules"= [
+          "textMateRules" = [
             {
               "scope" = "meta.function-call.generic.python";
               "settings" = {

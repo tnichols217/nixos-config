@@ -1,4 +1,9 @@
-{ pkgs, config, addresses, ports, ... }:
+{
+  pkgs,
+  addresses,
+  ports,
+  ...
+}:
 {
   # networking.wireless = {
   #   enable = true;
@@ -27,7 +32,11 @@
 
     nat = {
       enable = true;
-      internalInterfaces = [ "ve-+" "vb-+" "brwg" ];
+      internalInterfaces = [
+        "ve-+"
+        "vb-+"
+        "brwg"
+      ];
       # internalIPs = [ "10.0.1.0/24" ];
       # internalInterfaces = [ "ve-sonarr" "ve-prowlarr" "ve-transmission" "ve-lidarr" "ve-jellyfin" "ve-radarr" "ve-readarr" ];
       externalInterface = "enp7s0";
@@ -45,7 +54,7 @@
     script = ''
       ${pkgs.openssh}/bin/ssh -NR 443:localhost:443 -R 80:localhost:80 -R ${toString ports.ssh}:localhost:22 -R 25565:localhost:25565 ports@${addresses.default} -i /home/tev/.ssh/ed25519
     '';
-    wantedBy = ["multi-user.target"];
+    wantedBy = [ "multi-user.target" ];
   };
 
   systemd.network = {
@@ -69,7 +78,10 @@
           {
             # wireguardPeerConfig = {
             PublicKey = "0qSP0VxoIhEhRK+fAHVvmfRdjPs2DmmpOCNLFP/7cGw=";
-            AllowedIPs = ["0.0.0.0/0" "::0/0"];
+            AllowedIPs = [
+              "0.0.0.0/0"
+              "::0/0"
+            ];
             Endpoint = "193.32.248.66:51820";
             # };
           }
@@ -81,8 +93,11 @@
         matchConfig.Name = "wg0";
         # networkConfig.Bridge = "brwg";
         linkConfig.RequiredForOnline = "yes";
-        address = ["10.67.135.222/32" "fc00:bbbb:bbbb:bb01::4:87dd/128"];
-        dns = ["10.64.0.1"];
+        address = [
+          "10.67.135.222/32"
+          "fc00:bbbb:bbbb:bb01::4:87dd/128"
+        ];
+        dns = [ "10.64.0.1" ];
         networkConfig = {
           IPMasquerade = "both";
           # IPForward = true;

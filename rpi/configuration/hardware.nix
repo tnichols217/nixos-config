@@ -1,10 +1,10 @@
 { pkgs, lib, ... }:
-let
-  # linux_rpi5 = pkgs.linux_rpi4.override {
-  #   rpiVersion = 5;
-  #   argsOverride.defconfig = "bcm2712_defconfig";
-  # };
-in
+# let
+#   linux_rpi5 = pkgs.linux_rpi4.override {
+#     rpiVersion = 5;
+#     argsOverride.defconfig = "bcm2712_defconfig";
+#   };
+# in
 {
   boot = {
     loader = {

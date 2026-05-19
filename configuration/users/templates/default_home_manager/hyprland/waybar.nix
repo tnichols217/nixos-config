@@ -89,7 +89,11 @@ builtins.toJSON {
       "phone" = "";
       "portable" = "";
       "car" = "";
-      "default" = ["" "" ""];
+      "default" = [
+        ""
+        ""
+        ""
+      ];
     };
     "on-click" = "${pkgs.pavucontrol}/bin/pavucontrol";
     "on-click-right" = "${pkgs.qpwgraph}/bin/qpwgraph";
@@ -100,7 +104,11 @@ builtins.toJSON {
     "format" = "{volume}% {icon}";
     "format-muted" = "";
     "on-click" = "helvum";
-    "format-icons" = ["" "" ""];
+    "format-icons" = [
+      ""
+      ""
+      ""
+    ];
   };
   "keyboard-state" = {
     "numlock" = true;
@@ -128,8 +136,12 @@ builtins.toJSON {
     "format-disconnected" = "Disconnected ⚠";
     "format-alt" = "{ifname} = {ipaddr}/{cidr}";
     "on-click" = "${pkgs.networkmanagerapplet}/bin/nm-connection-editor";
-    "on-click-right" = "bash ${(pkgs.callPackage ./waybar/networking.nix {}) + "/bin/networking.sh"} connect_new";
-    "on-click-middle" = "bash ${(pkgs.callPackage ./waybar/networking.nix {}) + "/bin/networking.sh"} disconnect";
+    "on-click-right" = "bash ${
+      (pkgs.callPackage ./waybar/networking.nix { }) + "/bin/networking.sh"
+    } connect_new";
+    "on-click-middle" = "bash ${
+      (pkgs.callPackage ./waybar/networking.nix { }) + "/bin/networking.sh"
+    } disconnect";
   };
   "power-profiles-daemon" = {
     "format" = "{icon}";
@@ -145,7 +157,7 @@ builtins.toJSON {
 
   "group/group-monitor" = {
     "orientation" = "inherit";
-    "modules" = (if host-name == "ASUS" then [] else ["battery"]) ++ [
+    "modules" = (if host-name == "ASUS" then [ ] else [ "battery" ]) ++ [
       "backlight"
       "cpu"
       "memory"
@@ -170,13 +182,31 @@ builtins.toJSON {
     "format-alt" = "{time} {icon}";
     # "format-good" = ""; # An empty format will hide the module
     # "format-full" = "";
-    "format-icons" = ["" "" "" "" ""];
+    "format-icons" = [
+      ""
+      ""
+      ""
+      ""
+      ""
+    ];
   };
   "backlight" = {
     "format" = "{percent}% {icon}";
-    "format-icons" = ["" "" "" "" "" "" "" "" ""];
-    "on-scroll-up" = "${pkgs.brightnessctl}/bin/brightnessctl -d $(${pkgs.brightnessctl}/bin/brightnessctl -l -c backlight -m | cut -f 1 -d \",\") s 1%+";
-    "on-scroll-down" = "${pkgs.brightnessctl}/bin/brightnessctl -d $(${pkgs.brightnessctl}/bin/brightnessctl -l -c backlight -m | cut -f 1 -d \",\") s 1%-";
+    "format-icons" = [
+      ""
+      ""
+      ""
+      ""
+      ""
+      ""
+      ""
+      ""
+      ""
+    ];
+    "on-scroll-up" =
+      "${pkgs.brightnessctl}/bin/brightnessctl -d $(${pkgs.brightnessctl}/bin/brightnessctl -l -c backlight -m | cut -f 1 -d \",\") s 1%+";
+    "on-scroll-down" =
+      "${pkgs.brightnessctl}/bin/brightnessctl -d $(${pkgs.brightnessctl}/bin/brightnessctl -l -c backlight -m | cut -f 1 -d \",\") s 1%-";
   };
   "cpu" = {
     "interval" = 1;
@@ -184,7 +214,7 @@ builtins.toJSON {
     "tooltip" = false;
   };
   "memory" = {
-      "format" = "{}% ";
+    "format" = "{}% ";
   };
   "temperature" = {
     "interval" = 1;
@@ -193,32 +223,30 @@ builtins.toJSON {
     "critical-threshold" = 80;
     # "format-critical" = "{temperatureC}°C {icon}";
     "format" = "{temperatureC}°C {icon}";
-    "format-icons" = ["" "" ""];
+    "format-icons" = [
+      ""
+      ""
+      ""
+    ];
   };
 
   "group/group-power" = {
     "orientation" = "inherit";
-    "modules"= [
+    "modules" = [
       "custom/power"
       "custom/reboot"
     ];
   };
-  "custom/power"= {
-    "format"= "";
-    "tooltip"= false;
-    "on-click"= "poweroff";
+  "custom/power" = {
+    "format" = "";
+    "tooltip" = false;
+    "on-click" = "poweroff";
   };
-  "custom/reboot"= {
-    "format"= "󰜉";
-    "tooltip"= false;
-    "on-click"= "reboot";
+  "custom/reboot" = {
+    "format" = "󰜉";
+    "tooltip" = false;
+    "on-click" = "reboot";
   };
-
-
-
-
-
-
 
   "mpris" = {
     "player" = "${pkgs.playerctl}/bin/playerctl";

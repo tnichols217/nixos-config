@@ -1,58 +1,61 @@
-{ pkgs, host-name, addresses }:
+{
+  host-name,
+  addresses,
+}:
 let
-background = (import ./config/background.nix { inherit host-name; });
-applets = {
-  desktop-applet = {
-    groups = {
-      "1" = {
-        number = "11";
-      };
-      "2" = {
-        number = "12";
-      };
-    };
-  };
-  desktop = {
-    number = "2";
-  };
-  left = {
-    number = "3";
-    applets = {
-      tasks = {
-        number = "31";
+  background = import ./config/background.nix { inherit host-name; };
+  applets = {
+    desktop-applet = {
+      groups = {
+        "1" = {
+          number = "11";
+        };
+        "2" = {
+          number = "12";
+        };
       };
     };
-  };
-  right = {
-    number = "4";
-    applets = {
-      pager = {
-        number = "41";
-      };
-      tray = {
-        number = "42";
-      };
-      clock = {
-        number = "43";
-      };
-      desktop = {
-        number = "44";
+    desktop = {
+      number = "2";
+    };
+    left = {
+      number = "3";
+      applets = {
+        tasks = {
+          number = "31";
+        };
       };
     };
-  };
-  tray = {
-    number = "5";
-  };
-  top = {
-    number = "6";
-    applets = {
-      menu = {
-        number = "61";
+    right = {
+      number = "4";
+      applets = {
+        pager = {
+          number = "41";
+        };
+        tray = {
+          number = "42";
+        };
+        clock = {
+          number = "43";
+        };
+        desktop = {
+          number = "44";
+        };
       };
     };
+    tray = {
+      number = "5";
+    };
+    top = {
+      number = "6";
+      applets = {
+        menu = {
+          number = "61";
+        };
+      };
+    };
+    panel-size = "35";
   };
-  panel-size = "35";
-};
 in
 {
   "/plasma-localerc" = {
@@ -92,9 +95,11 @@ in
     "kmix" = {
       "items" = {
         "_k_friendly_name" = "Audio Volume";
-        "decrease_microphone_volume" = "Microphone Volume Down,Microphone Volume Down,Decrease Microphone Volume";
+        "decrease_microphone_volume" =
+          "Microphone Volume Down,Microphone Volume Down,Decrease Microphone Volume";
         "decrease_volume" = "Volume Down,Volume Down,Decrease Volume";
-        "increase_microphone_volume" = "Microphone Volume Up,Microphone Volume Up,Increase Microphone Volume";
+        "increase_microphone_volume" =
+          "Microphone Volume Up,Microphone Volume Up,Increase Microphone Volume";
         "increase_volume" = "Volume Up,Volume Up,Increase Volume";
         "mic_mute" = "Microphone Mute\tMeta+Volume Mute,Microphone Mute\tMeta+Volume Mute,Mute Microphone";
         "mute" = "Volume Mute,Volume Mute,Mute";
@@ -113,7 +118,8 @@ in
     "kwin" = {
       "items" = {
         "Expose" = "Meta+Tab\tCtrl+F9,Ctrl+F9,Toggle Present Windows (Current desktop)";
-        "ExposeAll" = "Meta+Shift+Tab\tLaunch (C)\tCtrl+F10,Ctrl+F10\tLaunch (C),Toggle Present Windows (All desktops)";
+        "ExposeAll" =
+          "Meta+Shift+Tab\tLaunch (C)\tCtrl+F10,Ctrl+F10\tLaunch (C),Toggle Present Windows (All desktops)";
         "ExposeClass" = "Ctrl+F7,Ctrl+F7,Toggle Present Windows (Window class)";
         "Kill Window" = "Ctrl+Alt+Esc,Ctrl+Alt+Esc,Kill Window";
         "Show Desktop" = "none,,Show Desktop";
@@ -121,26 +127,35 @@ in
         "Suspend Compositing" = "Alt+Shift+F12,Alt+Shift+F12,Suspend Compositing";
         "Switch One Desktop Down" = "Meta+Ctrl+@\tMeta+Down,Meta+Ctrl+Down,Switch One Desktop Down";
         "Switch One Desktop Up" = "Meta+Up\tMeta+Ctrl+!,Meta+Ctrl+Up,Switch One Desktop Up";
-        "Switch One Desktop to the Left" = "Meta+Left\tMeta+Ctrl+2,Meta+Ctrl+Left,Switch One Desktop to the Left";
-        "Switch One Desktop to the Right" = "Meta+Right\tMeta+Ctrl+1,Meta+Ctrl+Right,Switch One Desktop to the Right";
+        "Switch One Desktop to the Left" =
+          "Meta+Left\tMeta+Ctrl+2,Meta+Ctrl+Left,Switch One Desktop to the Left";
+        "Switch One Desktop to the Right" =
+          "Meta+Right\tMeta+Ctrl+1,Meta+Ctrl+Right,Switch One Desktop to the Right";
         "Switch Window Down" = "none,Meta+Alt+Down,Switch to Window Below";
         "Switch Window Left" = "none,Meta+Alt+Left,Switch to Window to the Left";
         "Switch Window Right" = "none,Meta+Alt+Right,Switch to Window to the Right";
         "Switch Window Up" = "none,Meta+Alt+Up,Switch to Window Above";
         "Walk Through Windows" = "Alt+Tab,Alt+Tab,Walk Through Windows";
-        "Walk Through Windows (Reverse)" = "Alt+Shift+Backtab,Alt+Shift+Backtab,Walk Through Windows (Reverse)";
-        "Walk Through Windows of Current Application" = "Alt+`,Alt+`,Walk Through Windows of Current Application";
-        "Walk Through Windows of Current Application (Reverse)" = "Alt+~,Alt+~,Walk Through Windows of Current Application (Reverse)";
+        "Walk Through Windows (Reverse)" =
+          "Alt+Shift+Backtab,Alt+Shift+Backtab,Walk Through Windows (Reverse)";
+        "Walk Through Windows of Current Application" =
+          "Alt+`,Alt+`,Walk Through Windows of Current Application";
+        "Walk Through Windows of Current Application (Reverse)" =
+          "Alt+~,Alt+~,Walk Through Windows of Current Application (Reverse)";
         "Window Above Other Windows" = "Ctrl+Alt+Shift+Up,,Keep Window Above Others";
         "Window Below Other Windows" = "Ctrl+Alt+Shift+Down,,Keep Window Below Others";
         "Window Close" = "Alt+F4,Alt+F4,Close Window";
         "Window Maximize" = "Meta+PgUp\tMeta+],Meta+PgUp,Maximize Window";
         "Window Minimize" = "Meta+PgDown\tMeta+[,Meta+PgDown,Minimize Window";
         "Window On All Desktops" = "Ctrl+Alt+Shift+Right,,Keep Window on All Desktops";
-        "Window One Desktop Down" = "Meta+Ctrl+Shift+Down\tMeta+Ctrl+Down\tMeta+Ctrl+Alt+@,Meta+Ctrl+Shift+Down,Window One Desktop Down";
-        "Window One Desktop Up" = "Meta+Ctrl+Shift+Up\tMeta+Ctrl+Up\tMeta+Ctrl+Alt+!,Meta+Ctrl+Shift+Up,Window One Desktop Up";
-        "Window One Desktop to the Left" = "Meta+Ctrl+Shift+Left\tMeta+Ctrl+Alt+2\tMeta+Ctrl+Left,Meta+Ctrl+Shift+Left,Window One Desktop to the Left";
-        "Window One Desktop to the Right" = "Meta+Ctrl+Shift+Right\tMeta+Ctrl+Right\tMeta+Ctrl+Alt+1,Meta+Ctrl+Shift+Right,Window One Desktop to the Right";
+        "Window One Desktop Down" =
+          "Meta+Ctrl+Shift+Down\tMeta+Ctrl+Down\tMeta+Ctrl+Alt+@,Meta+Ctrl+Shift+Down,Window One Desktop Down";
+        "Window One Desktop Up" =
+          "Meta+Ctrl+Shift+Up\tMeta+Ctrl+Up\tMeta+Ctrl+Alt+!,Meta+Ctrl+Shift+Up,Window One Desktop Up";
+        "Window One Desktop to the Left" =
+          "Meta+Ctrl+Shift+Left\tMeta+Ctrl+Alt+2\tMeta+Ctrl+Left,Meta+Ctrl+Shift+Left,Window One Desktop to the Left";
+        "Window One Desktop to the Right" =
+          "Meta+Ctrl+Shift+Right\tMeta+Ctrl+Right\tMeta+Ctrl+Alt+1,Meta+Ctrl+Shift+Right,Window One Desktop to the Right";
         "Window Operations Menu" = "Alt+F3,Alt+F3,Window Operations Menu";
         "Window Quick Tile Bottom" = "Meta+Alt+Down,Meta+Down,Quick Tile Window to the Bottom";
         "Window Quick Tile Left" = "Meta+Alt+Left,Meta+Left,Quick Tile Window to the Left";
@@ -188,15 +203,20 @@ in
     };
     "org_kde_powerdevil" = {
       "items" = {
-        "Decrease Keyboard Brightness" = "Keyboard Brightness Down,Keyboard Brightness Down,Decrease Keyboard Brightness";
-        "Decrease Screen Brightness" = "Monitor Brightness Down,Monitor Brightness Down,Decrease Screen Brightness";
+        "Decrease Keyboard Brightness" =
+          "Keyboard Brightness Down,Keyboard Brightness Down,Decrease Keyboard Brightness";
+        "Decrease Screen Brightness" =
+          "Monitor Brightness Down,Monitor Brightness Down,Decrease Screen Brightness";
         "Hibernate" = "Hibernate,Hibernate,Hibernate";
-        "Increase Keyboard Brightness" = "Keyboard Brightness Up,Keyboard Brightness Up,Increase Keyboard Brightness";
-        "Increase Screen Brightness" = "Monitor Brightness Up,Monitor Brightness Up,Increase Screen Brightness";
+        "Increase Keyboard Brightness" =
+          "Keyboard Brightness Up,Keyboard Brightness Up,Increase Keyboard Brightness";
+        "Increase Screen Brightness" =
+          "Monitor Brightness Up,Monitor Brightness Up,Increase Screen Brightness";
         "PowerDown" = "Power Down,Power Down,Power Down";
         "PowerOff" = "Power Off,Power Off,Power Off";
         "Sleep" = "Sleep,Sleep,Suspend";
-        "Toggle Keyboard Backlight" = "Keyboard Light On/Off,Keyboard Light On/Off,Toggle Keyboard Backlight";
+        "Toggle Keyboard Backlight" =
+          "Keyboard Light On/Off,Keyboard Light On/Off,Toggle Keyboard Backlight";
         "_k_friendly_name" = "Power Management";
       };
     };
@@ -690,7 +710,8 @@ in
         "StatusBar" = "Disabled";
         "ToolBarsMovable" = "Disabled";
         # konsole wont hide toolbars without a state?
-        "State" = "AAAA/wAAAAD9AAAAAQAAAAAAAAAAAAAAAPwCAAAAAvsAAAAiAFEAdQBpAGMAawBDAG8AbQBtAGEAbgBkAHMARABvAGMAawAAAAAA/////wAAAK0BAAAD+wAAABwAUwBTAEgATQBhAG4AYQBnAGUAcgBEAG8AYwBrAAAAAAD/////AAAA0wEAAAMAAADiAAAAZAAAAAQAAAAEAAAACAAAAAj8AAAAAQAAAAIAAAACAAAAFgBtAGEAaQBuAFQAbwBvAGwAQgBhAHIAAAAAAP////8AAAAAAAAAAAAAABwAcwBlAHMAcwBpAG8AbgBUAG8AbwBsAGIAYQByAAAAAAD/////AAAAAAAAAAA=";
+        "State" =
+          "AAAA/wAAAAD9AAAAAQAAAAAAAAAAAAAAAPwCAAAAAvsAAAAiAFEAdQBpAGMAawBDAG8AbQBtAGEAbgBkAHMARABvAGMAawAAAAAA/////wAAAK0BAAAD+wAAABwAUwBTAEgATQBhAG4AYQBnAGUAcgBEAG8AYwBrAAAAAAD/////AAAA0wEAAAMAAADiAAAAZAAAAAQAAAAEAAAACAAAAAj8AAAAAQAAAAIAAAACAAAAFgBtAGEAaQBuAFQAbwBvAGwAQgBhAHIAAAAAAP////8AAAAAAAAAAAAAABwAcwBlAHMAcwBpAG8AbgBUAG8AbwBsAGIAYQByAAAAAAD/////AAAAAAAAAAA=";
       };
     };
     "SplitView" = {
@@ -735,7 +756,8 @@ in
     "General" = {
       "items" = {
         "dbVersion" = "2";
-        "exclude filters" = "*~,*.part,*.o,*.la,*.lo,*.loT,*.moc,moc_*.cpp,qrc_*.cpp,ui_*.h,cmake_install.cmake,CMakeCache.txt,CTestTestfile.cmake,libtool,config.status,confdefs.h,autom4te,conftest,confstat,Makefile.am,*.gcode,.ninja_deps,.ninja_log,build.ninja,*.csproj,*.m4,*.rej,*.gmo,*.pc,*.omf,*.aux,*.tmp,*.po,*.vm*,*.nvram,*.rcore,*.swp,*.swap,lzo,litmain.sh,*.orig,.histfile.*,.xsession-errors*,*.map,*.so,*.a,*.db,*.qrc,*.ini,*.init,*.img,*.vdi,*.vbox*,vbox.log,*.qcow2,*.vmdk,*.vhd,*.vhdx,*.sql,*.sql.gz,*.ytdl,*.class,*.pyc,*.pyo,*.elc,*.qmlc,*.jsc,*.fastq,*.fq,*.gb,*.fasta,*.fna,*.gbff,*.faa,po,CVS,.svn,.git,_darcs,.bzr,.hg,CMakeFiles,CMakeTmp,CMakeTmpQmake,.moc,.obj,.pch,.uic,.npm,.yarn,.yarn-cache,__pycache__,node_modules,node_packages,nbproject,core-dumps,lost+found";
+        "exclude filters" =
+          "*~,*.part,*.o,*.la,*.lo,*.loT,*.moc,moc_*.cpp,qrc_*.cpp,ui_*.h,cmake_install.cmake,CMakeCache.txt,CTestTestfile.cmake,libtool,config.status,confdefs.h,autom4te,conftest,confstat,Makefile.am,*.gcode,.ninja_deps,.ninja_log,build.ninja,*.csproj,*.m4,*.rej,*.gmo,*.pc,*.omf,*.aux,*.tmp,*.po,*.vm*,*.nvram,*.rcore,*.swp,*.swap,lzo,litmain.sh,*.orig,.histfile.*,.xsession-errors*,*.map,*.so,*.a,*.db,*.qrc,*.ini,*.init,*.img,*.vdi,*.vbox*,vbox.log,*.qcow2,*.vmdk,*.vhd,*.vhdx,*.sql,*.sql.gz,*.ytdl,*.class,*.pyc,*.pyo,*.elc,*.qmlc,*.jsc,*.fastq,*.fq,*.gb,*.fasta,*.fna,*.gbff,*.faa,po,CVS,.svn,.git,_darcs,.bzr,.hg,CMakeFiles,CMakeTmp,CMakeTmpQmake,.moc,.obj,.pch,.uic,.npm,.yarn,.yarn-cache,__pycache__,node_modules,node_packages,nbproject,core-dumps,lost+found";
         "exclude filters version" = "8";
       };
     };
@@ -1211,7 +1233,8 @@ in
             };
             "General" = {
               "items" = {
-                "AppletOrder" = "${applets.right.applets.pager.number};${applets.right.applets.tray.number};${applets.right.applets.clock.number};${applets.right.applets.desktop.number}";
+                "AppletOrder" =
+                  "${applets.right.applets.pager.number};${applets.right.applets.tray.number};${applets.right.applets.clock.number};${applets.right.applets.desktop.number}";
               };
             };
           };
@@ -1221,8 +1244,10 @@ in
           "groups" = {
             "General" = {
               "items" = {
-                "extraItems" = "org.kde.plasma.volume,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.devicenotifier,org.kde.kscreen,org.kde.plasma.keyboardlayout,org.kde.plasma.keyboardindicator,org.kde.plasma.networkmanagement,org.kde.plasma.clipboard,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.mediacontroller,org.kde.plasma.brightness,org.kde.plasma.manage-inputmethod,org.kde.plasma.cameraindicator";
-                "knownItems" = "org.kde.plasma.brightness,org.kde.plasma.battery,org.kde.plasma.manage-inputmethod,org.kde.plasma.notifications,org.kde.plasma.cameraindicator,org.kde.plasma.devicenotifier,org.kde.plasma.clipboard,org.kde.plasma.mediacontroller,org.kde.plasma.bluetooth,org.kde.plasma.printmanager,org.kde.plasma.keyboardlayout,org.kde.plasma.volume,org.kde.plasma.keyboardindicator,org.kde.kscreen,org.kde.plasma.networkmanagement";
+                "extraItems" =
+                  "org.kde.plasma.volume,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.devicenotifier,org.kde.kscreen,org.kde.plasma.keyboardlayout,org.kde.plasma.keyboardindicator,org.kde.plasma.networkmanagement,org.kde.plasma.clipboard,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.mediacontroller,org.kde.plasma.brightness,org.kde.plasma.manage-inputmethod,org.kde.plasma.cameraindicator";
+                "knownItems" =
+                  "org.kde.plasma.brightness,org.kde.plasma.battery,org.kde.plasma.manage-inputmethod,org.kde.plasma.notifications,org.kde.plasma.cameraindicator,org.kde.plasma.devicenotifier,org.kde.plasma.clipboard,org.kde.plasma.mediacontroller,org.kde.plasma.bluetooth,org.kde.plasma.printmanager,org.kde.plasma.keyboardlayout,org.kde.plasma.volume,org.kde.plasma.keyboardindicator,org.kde.kscreen,org.kde.plasma.networkmanagement";
               };
             };
           };
@@ -1502,12 +1527,18 @@ in
       "SceneCollectionFile" = "Untitled";
     };
   };
-} // (if host-name == "ROG" then {
-  "/kcmfonts" = {
-    "General" = {
-      "items" = {
-        "forceFontDPI" = "144";
+}
+// (
+  if host-name == "ROG" then
+    {
+      "/kcmfonts" = {
+        "General" = {
+          "items" = {
+            "forceFontDPI" = "144";
+          };
+        };
       };
-    };
-  };
-} else {})
+    }
+  else
+    { }
+)

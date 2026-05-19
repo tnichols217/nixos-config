@@ -1,4 +1,7 @@
-{ pkgs, config, addresses, ... }:
+{
+  addresses,
+  ...
+}:
 {
   security.acme = {
     acceptTerms = true;
@@ -8,18 +11,18 @@
       group = "nginx";
     };
     certs = {
-      "${addresses.default}" = {};
-      "${addresses.serve}" = {};
-      "${addresses.nextcloud}" = {};
-      "${addresses.lidarr}" = {};
-      "${addresses.radarr}" = {};
-      "${addresses.sonarr}" = {};
-      "${addresses.readarr}" = {};
-      "${addresses.prowlarr}" = {};
-      "${addresses.jellyfin}" = {};
-      "${addresses.qbittorrent}" = {};
-      "${addresses.authelia}" = {};
-      "${addresses.home-assistant}" = {};
+      "${addresses.default}" = { };
+      "${addresses.serve}" = { };
+      "${addresses.nextcloud}" = { };
+      "${addresses.lidarr}" = { };
+      "${addresses.radarr}" = { };
+      "${addresses.sonarr}" = { };
+      "${addresses.readarr}" = { };
+      "${addresses.prowlarr}" = { };
+      "${addresses.jellyfin}" = { };
+      "${addresses.qbittorrent}" = { };
+      "${addresses.authelia}" = { };
+      "${addresses.home-assistant}" = { };
     };
   };
 }

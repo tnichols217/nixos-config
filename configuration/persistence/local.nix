@@ -1,4 +1,7 @@
-{ config, pkgs, persistence, ... }:
+{
+  persistence,
+  ...
+}:
 {
   environment.persistence."${persistence.local}" = {
     hideMounts = false;
@@ -23,11 +26,21 @@
       "/var/lib/authelia"
       "/var/lib/secrets"
       # "/etc/ssh"
-      { directory = "/var/lib/colord"; user = "colord"; group = "colord"; mode = "u=rwx,g=rx,o="; }
+      {
+        directory = "/var/lib/colord";
+        user = "colord";
+        group = "colord";
+        mode = "u=rwx,g=rx,o=";
+      }
     ];
     files = [
       "/etc/machine-id"
-      { file = "/etc/nix/id_rsa"; parentDirectory = { mode = "u=rwx,g=,o="; }; }
+      {
+        file = "/etc/nix/id_rsa";
+        parentDirectory = {
+          mode = "u=rwx,g=,o=";
+        };
+      }
       "/etc/ssh/ssh_host_ed25519_key"
       "/etc/ssh/ssh_host_ed25519_key.pub"
       "/etc/ssh/ssh_host_rsa_key"

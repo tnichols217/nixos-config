@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+_:
 {
   services.desktopManager.plasma6.enable = true;
   programs.xwayland.enable = true;

@@ -1,11 +1,16 @@
-{ pkgs, username, host-name, version, lib, nix-index-database, ... }:
+{
+  pkgs,
+  username,
+  nix-index-database,
+  ...
+}:
 {
   programs.command-not-found.enable = pkgs.lib.mkForce false;
 
   home-manager.users.${username} = {
     home = {
       packages = with pkgs; [
-          nix-index-database.comma-with-db
+        nix-index-database.comma-with-db
       ];
     };
     programs = {

@@ -1,4 +1,8 @@
-{ pkgs, inputs, config, ... }:
+{
+  pkgs,
+  inputs,
+  ...
+}:
 {
   environment.variables = {
     DOCKER_HOST = "unix:///run/podman/podman.sock";

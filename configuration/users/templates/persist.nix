@@ -1,22 +1,44 @@
-{ config, pkgs, username, persistence, lib, ... }:
-let 
-  mapDirAttr = ( x: { directory = x; mode = "0700"; user = "${username}"; } );
-  mapFileAttr = ( x: { file = x; parentDirectory = { mode = "700"; user = "${username}"; }; } );
-  mapTmp = ( x: "Z! /home/${username}/${lib.strings.stringAsChars (c: if c == " " then "\\x20" else c) x} 0700 ${username} users" );
-  mapConf = ( files: dirs: loc: {
-    environment.persistence."${loc}" = {
-      hideMounts = false;
-      users.${username} = {
-        directories = pkgs.lib.lists.map mapDirAttr dirs;
-        files = pkgs.lib.lists.map mapFileAttr files;
+{
+  pkgs,
+  username,
+  persistence,
+  ...
+}:
+let
+  mapDirAttr = x: {
+      directory = x;
+      mode = "0700";
+      user = "${username}";
+    };
+  mapFileAttr = x: {
+      file = x;
+      parentDirectory = {
+        mode = "700";
+        user = "${username}";
       };
     };
-    # systemd.tmpfiles.rules = pkgs.lib.lists.map mapTmp dirs ++ pkgs.lib.lists.map mapTmp files;
-  } );
-in {
+  # mapTmp = (
+  #   x:
+  #   "Z! /home/${username}/${
+  #     lib.strings.stringAsChars (c: if c == " " then "\\x20" else c) x
+  #   } 0700 ${username} users"
+  # );
+  mapConf = files: dirs: loc: {
+      environment.persistence."${loc}" = {
+        hideMounts = false;
+        users.${username} = {
+          directories = pkgs.lib.lists.map mapDirAttr dirs;
+          files = pkgs.lib.lists.map mapFileAttr files;
+        };
+      };
+      # systemd.tmpfiles.rules = pkgs.lib.lists.map mapTmp dirs ++ pkgs.lib.lists.map mapTmp files;
+    };
+in
+{
   imports = [
-    (
-      mapConf [] [
+    (mapConf
+      [ ]
+      [
         "Downloads"
         "Desktop"
         "Music"
@@ -26,10 +48,12 @@ in {
         "Public"
         "Templates"
         "Calibre Library"
-      ] "${persistence.data}"
+      ]
+      "${persistence.data}"
     )
-    (
-      mapConf [] [
+    (mapConf
+      [ ]
+      [
         ".local/share/Steam"
         ".steam"
         ".local/share/osu"
@@ -43,13 +67,15 @@ in {
         ".minecraft"
         "Games"
         ".wine"
-      ] "${persistence.bucket}"
+      ]
+      "${persistence.bucket}"
     )
-    (
-      mapConf [
+    (mapConf
+      [
         ".config/gh/hosts.yml"
         ".config/cachix/cachix.dhall"
-      ] [
+      ]
+      [
         ".ssh"
         ".gnupg"
         ".nixops"
@@ -95,7 +121,8 @@ in {
         ".config/Moonlight Game Streaming Project"
         ".config/Yubico"
         ".config/tartube"
-      ] "${persistence.local}"
+      ]
+      "${persistence.local}"
     )
   ];
 }

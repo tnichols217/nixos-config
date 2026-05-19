@@ -1,0 +1,21 @@
+{
+  "lsp": {
+    "nixd": {
+      "settings": {
+        "nixd": {
+          "nixpkgs": {
+            "expr": "import <nixpkgs> { }",
+          },
+          "options": {
+            "nixos": {
+              "expr": "(builtins.getFlake \"${workspace_root}\").nixosConfigurations.YOUR_HOSTNAME.options",
+            },
+            "home-manager": {
+              "expr": "(builtins.getFlake \"${workspace_root}\").nixosConfigurations.YOUR_HOSTNAME.options.home-manager.users.type.nestedTypes.submodule.type.getSubOptions [ ]",
+            },
+          },
+        },
+      },
+    },
+  },
+}

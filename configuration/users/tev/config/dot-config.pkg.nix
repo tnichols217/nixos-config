@@ -1,4 +1,7 @@
-{ pkgs ? import <nixpkgs> {}, ... }:
+{
+  pkgs ? import <nixpkgs> { },
+  ...
+}:
 
 pkgs.stdenv.mkDerivation rec {
   pname = "dot-config";
@@ -6,11 +9,11 @@ pkgs.stdenv.mkDerivation rec {
 
   src = ./dot-config;
 
-  installPhase =''
+  installPhase = ''
 
-  mkdir $out
+    mkdir $out
 
-  cp -r * $out
+    cp -r * $out
 
   '';
 

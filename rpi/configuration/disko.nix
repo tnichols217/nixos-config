@@ -1,7 +1,11 @@
-{ persistence ? rec {
-  default = "/nix/persist";
-  local = "${default}/local";
-}, format ? true, ... }:
+{
+  persistence ? rec {
+    default = "/nix/persist";
+    local = "${default}/local";
+  },
+  format ? true,
+  ...
+}:
 {
   disko.devices = {
     disk = {
@@ -34,7 +38,7 @@
                 type = "filesystem";
                 format = "ext4";
                 mountpoint = if format then "/nix/store" else "/nix/.ro-store";
-                mountOptions = if format then [] else [ "ro" ];
+                mountOptions = if format then [ ] else [ "ro" ];
               };
             };
 

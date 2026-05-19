@@ -1,4 +1,7 @@
-{ config, pkgs, inputs, ... }:
+{
+  pkgs,
+  ...
+}:
 {
   services.displayManager.sddm.enable = true;
   services.displayManager.sddm.enableHidpi = true;

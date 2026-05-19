@@ -1,4 +1,10 @@
-{ pkgs, username, host-name, version, lib, nix-index-database, ... }@ args:
+{
+  pkgs,
+  username,
+  host-name,
+  version,
+  ...
+}@args:
 {
   imports = [
     (import ./default_home_manager/shell.nix args)
@@ -55,8 +61,8 @@
     };
     dconf.settings = {
       "org/virt-manager/virt-manager/connections" = {
-        autoconnect = ["qemu:///system"];
-        uris = ["qemu:///system"];
+        autoconnect = [ "qemu:///system" ];
+        uris = [ "qemu:///system" ];
       };
     };
   };

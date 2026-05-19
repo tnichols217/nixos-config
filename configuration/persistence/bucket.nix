@@ -1,4 +1,7 @@
-{ config, pkgs, persistence, ... }:
+{
+  persistence,
+  ...
+}:
 {
   environment.persistence."${persistence.bucket}" = {
     hideMounts = false;

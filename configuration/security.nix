@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ pkgs, lib, ... }:
 {
   services.udev.packages = [ pkgs.yubikey-personalization ];
   programs.gnupg.agent = {

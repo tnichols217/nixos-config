@@ -1,29 +1,44 @@
-{ pkgs ? import <nixpkgs> {}, input-file ? ./test, overrides ? [{re="c"; wi="d";}], ... }:
-pkgs.stdenv.mkDerivation 
-rec {
+{
+  pkgs ? import <nixpkgs> { },
+  input-file ? ./test,
+  overrides ? [
+    {
+      re = "c";
+      wi = "d";
+    }
+  ],
+  ...
+}:
+pkgs.stdenv.mkDerivation rec {
   pname = "override firefox config file";
   version = "v1.0.0";
 
   src = ./.;
 
-  installPhase = 
-  let
-  intro = "sed -i \"s/[^\\n]*";
-  outro = "/\" $out/conf \n";
-  concat = intro + pkgs.lib.concatStringsSep (outro + intro) (pkgs.lib.lists.forEach overrides ( x: x.re + "[^\\n]*/" + x.wi )) + outro;
-  in ''
+  installPhase =
+    let
+      intro = "sed -i \"s/[^\\n]*";
+      outro = "/\" $out/conf \n";
+      concat =
+        intro
+        + pkgs.lib.concatStringsSep (outro + intro) (
+          pkgs.lib.lists.forEach overrides (x: x.re + "[^\\n]*/" + x.wi)
+        )
+        + outro;
+    in
+    ''
 
-  mkdir $out
+      mkdir $out
 
-  cp ${input-file} $out/conf
+      cp ${input-file} $out/conf
 
-  ${concat}
+      ${concat}
 
-  cat $out/conf
+      cat $out/conf
 
-  echo ""
+      echo ""
 
-  '';
+    '';
 
   meta = {
     description = "Combines two deriviations (for config files)";

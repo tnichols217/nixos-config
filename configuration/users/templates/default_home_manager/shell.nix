@@ -1,4 +1,4 @@
-{ pkgs, username, host-name, version, lib, nix-index-database, ... }@ args:
+{ pkgs, username, ... }@args:
 {
   imports = [
     (import ./shell/kitty.nix args)
@@ -16,9 +16,9 @@
   home-manager.users.${username} = {
     home = {
       packages = with pkgs; [
-          bat
-          lsd
-          xclip
+        bat
+        lsd
+        xclip
       ];
       shell = {
         enableShellIntegration = true;

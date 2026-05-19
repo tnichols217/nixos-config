@@ -1,4 +1,10 @@
-{ config, lib, pkgs, host-name, ports, ... }:
+{
+  lib,
+  pkgs,
+  host-name,
+  ports,
+  ...
+}:
 
 {
   networking.hostName = host-name;
@@ -8,8 +14,6 @@
   users.users = {
     root = {
       hashedPassword = "!";
-      packages = with pkgs; [
-      ];
       openssh.authorizedKeys.keys = [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINILZDzRLWHEXbtv0TfEH+mNG8mN1nN8C7IXT0cqZqWm tev@ROG"
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDwL6Uvhyr+mrXDPcM+d3AUD5l0eN2DoN+UqIHBWntB+ tev@ASUS"
@@ -19,7 +23,10 @@
       hashedPassword = "!";
       isNormalUser = true;
       home = "/home/ports";
-      extraGroups = [ "wheel" "networkmanager" ];
+      extraGroups = [
+        "wheel"
+        "networkmanager"
+      ];
       openssh.authorizedKeys.keys = [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINILZDzRLWHEXbtv0TfEH+mNG8mN1nN8C7IXT0cqZqWm tev@ROG"
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDwL6Uvhyr+mrXDPcM+d3AUD5l0eN2DoN+UqIHBWntB+ tev@ASUS"
@@ -44,7 +51,7 @@
     };
   };
 
-  networking = { 
+  networking = {
     usePredictableInterfaceNames = false;
     useDHCP = lib.mkForce false;
     interfaces.eth0.useDHCP = true;
@@ -52,11 +59,11 @@
     firewall = {
       enable = true;
       allowedTCPPorts = with ports; [
-        22      # SSH
-        80      # HTTP
-        443     # HTTPS
-        ssh     # SSH
-        25565   # Minecraft
+        22 # SSH
+        80 # HTTP
+        443 # HTTPS
+        ssh # SSH
+        25565 # Minecraft
       ];
     };
   };
@@ -78,6 +85,6 @@
       timeout = 10;
     };
   };
-  
+
   system.stateVersion = "24.05";
 }

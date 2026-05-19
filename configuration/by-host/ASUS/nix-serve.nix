@@ -1,4 +1,9 @@
-{ pkgs, config, addresses, ports, ... }:
+{
+  pkgs,
+  addresses,
+  ports,
+  ...
+}:
 {
   systemd.services."generate-nix-serve-certs" = {
     # FIXME
@@ -11,8 +16,8 @@
         chmod 666 /var/lib/nix-serve/cache-priv-key.pem
       fi
     '';
-    wantedBy = ["multi-user.target"];
-    
+    wantedBy = [ "multi-user.target" ];
+
   };
 
   services.nix-serve = {

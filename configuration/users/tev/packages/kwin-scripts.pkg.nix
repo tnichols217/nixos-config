@@ -1,4 +1,7 @@
-{ pkgs ? import <nixpkgs> {}, ... }:
+{
+  pkgs ? import <nixpkgs> { },
+  ...
+}:
 
 pkgs.stdenv.mkDerivation rec {
   pname = "kwin-scripts";
@@ -6,14 +9,14 @@ pkgs.stdenv.mkDerivation rec {
 
   src = ./kwin-scripts;
 
-  installPhase =''
+  installPhase = ''
 
-  mkdir -p $out/share/kwin/scripts/${pname}
-  mkdir -p $out/share/kservices5
-  cp -r ./* $out/share/kwin/scripts/${pname}
-  ln -s $out/share/kwin/scripts/${pname}/metadata.desktop $out/share/kservices5/kwin-script-grid-tiling.desktop
+    mkdir -p $out/share/kwin/scripts/${pname}
+    mkdir -p $out/share/kservices5
+    cp -r ./* $out/share/kwin/scripts/${pname}
+    ln -s $out/share/kwin/scripts/${pname}/metadata.desktop $out/share/kservices5/kwin-script-grid-tiling.desktop
 
-  echo $out
+    echo $out
 
   '';
 

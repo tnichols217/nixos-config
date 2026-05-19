@@ -1,7 +1,21 @@
-{ config, pkgs, username, ... }:
+{
+  username,
+  ...
+}:
 {
   users.users.${username} = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "libvirtd" "networkmanager" "docker" "podman" "servarr" "input" "dialout" "uucp" "kvm" ];
+    extraGroups = [
+      "wheel"
+      "libvirtd"
+      "networkmanager"
+      "docker"
+      "podman"
+      "servarr"
+      "input"
+      "dialout"
+      "uucp"
+      "kvm"
+    ];
   };
 }

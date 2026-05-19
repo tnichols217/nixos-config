@@ -1,4 +1,4 @@
-{ config, lib, pkgs, modulesPath, is-iso, persistence, host-name, ... }:
+{ lib, persistence, ... }:
 
 {
   fileSystems = {
@@ -13,7 +13,11 @@
     "/nix/.rw-store" = lib.mkForce {
       device = "none";
       fsType = "tmpfs";
-      options = [ "defaults" "size=16G" "mode=755" ];
+      options = [
+        "defaults"
+        "size=16G"
+        "mode=755"
+      ];
       neededForBoot = true;
     };
 
@@ -35,7 +39,11 @@
     "/" = lib.mkForce {
       device = "none";
       fsType = "tmpfs";
-      options = [ "defaults" "size=8G" "mode=755" ];
+      options = [
+        "defaults"
+        "size=8G"
+        "mode=755"
+      ];
       neededForBoot = true;
     };
 
@@ -51,7 +59,7 @@
   };
 
   swapDevices = [
-    { 
+    {
       # swap
       device = "/dev/disk/by-label/NIXSWAP";
     }

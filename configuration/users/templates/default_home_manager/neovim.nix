@@ -1,4 +1,9 @@
-{ pkgs, username, inputs, ... }:
+{
+  pkgs,
+  username,
+  inputs,
+  ...
+}:
 {
   home-manager.users.${username} = {
     home.packages = [

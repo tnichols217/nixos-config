@@ -1,21 +1,28 @@
-{ ... }:
+_:
 let
   user = "github-runner";
-  mkrunner = {name, url, token}: {
-    systemd.tmpfiles.rules = [
-      "d /var/lib/github-runner-${name} 0750 ${user} ${user} -"
-    ];
-    services.github-runners = {
-      "${name}" = {
-        enable = true;
-        inherit name url user;
-        tokenFile = token;
-        ephemeral = true;
-        replace = true;
+  mkrunner =
+    {
+      name,
+      url,
+      token,
+    }:
+    {
+      systemd.tmpfiles.rules = [
+        "d /var/lib/github-runner-${name} 0750 ${user} ${user} -"
+      ];
+      services.github-runners = {
+        "${name}" = {
+          enable = true;
+          inherit name url user;
+          tokenFile = token;
+          ephemeral = true;
+          replace = true;
+        };
       };
     };
-  };
-in {
+in
+{
   imports = [
     (mkrunner {
       name = "nixos1";
@@ -28,7 +35,7 @@ in {
       token = "/var/lib/secrets/nixos-config";
     })
   ];
-  users.groups."${user}" = {};
+  users.groups."${user}" = { };
 
   users.users."${user}" = {
     isSystemUser = true;

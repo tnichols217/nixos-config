@@ -1,17 +1,20 @@
-{ pkgs ? import <nixpkgs> {}, app, name, ... }:
-pkgs.stdenv.mkDerivation 
-rec {
+{
+  pkgs ? import <nixpkgs> { },
+  app,
+  name,
+  ...
+}:
+pkgs.stdenv.mkDerivation rec {
   pname = "get-desktop-file";
   version = "v1.0.0";
 
   src = ./.;
 
-  installPhase = 
-  ''
+  installPhase = ''
 
-  mkdir -p $out/autostart/
+    mkdir -p $out/autostart/
 
-  cp "${app}/share/applications/${name}.desktop" "$out/autostart/${name}.desktop"
+    cp "${app}/share/applications/${name}.desktop" "$out/autostart/${name}.desktop"
 
   '';
 

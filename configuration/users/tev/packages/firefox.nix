@@ -1,4 +1,10 @@
-{ inputs, pkgs, username, ff-exts, ... }:
+{
+  inputs,
+  pkgs,
+  username,
+  ff-exts,
+  ...
+}:
 
 {
   home-manager.users.${username} = {
@@ -6,40 +12,45 @@
       firefox = {
         enable = true;
         package = pkgs.wrapFirefox pkgs.firefox-devedition-unwrapped {
-          extraPrefs = builtins.readFile (pkgs.callPackage ./firefox/overrideSetting.metapkg.nix { 
-            input-file = inputs.librewolfConfig + "/librewolf.cfg"; 
-            overrides = [ 
-              { 
-                re = "network.dns.disableIPv6";
-                wi = ''defaultPref(\"network.dns.disableIPv6\", false);'';
+          extraPrefs =
+            builtins.readFile (
+              pkgs.callPackage ./firefox/overrideSetting.metapkg.nix {
+                input-file = inputs.librewolfConfig + "/librewolf.cfg";
+                overrides = [
+                  {
+                    re = "network.dns.disableIPv6";
+                    wi = ''defaultPref(\"network.dns.disableIPv6\", false);'';
+                  }
+                  {
+                    re = "webgl.disabled";
+                    wi = ''defaultPref(\"webgl.disabled\", false);'';
+                  }
+                  {
+                    re = "media.peerconnection.ice.no_host";
+                    wi = ''defaultPref(\"media.peerconnection.ice.no_host\", false);'';
+                  }
+                ];
               }
-              { 
-                re = "webgl.disabled";
-                wi = ''defaultPref(\"webgl.disabled\", false);'';
-              }
-              { 
-                re = "media.peerconnection.ice.no_host";
-                wi = ''defaultPref(\"media.peerconnection.ice.no_host\", false);'';
-              }
-            ];
-          } + "/conf" ) + ''
-            defaultPref("privacy.clearOnShutdown.history", false);
-            defaultPref("privacy.clearOnShutdown.downloads", true);
-            defaultPref("privacy.clearOnShutdown.sessions", false);
-            defaultPref("privacy.clearOnShutdown.cache", true);
-            defaultPref("privacy.clearOnShutdown.cookies", false);
-            defaultPref("privacy.clearOnShutdown.offlineApps", true);
-            defaultPref("security.identityblock.show_extended_validation", true);
-            defaultPref("browser.tabs.insertAfterCurrent", true);
-            defaultPref("dom.importMaps.enabled", true);
-            defaultPref("signon.autofillForms", true);
-            defaultPref("signon.rememberSignons", true);
-            defaultPref("places.history.enabled", false);
-            defaultPref("privacy.userContext.newTabContainerOnLeftClick.enabled", true);
-            defaultPref("signon.rememberSignons", false);
-            defaultPref("signon.autofillForms", false);
-            defaultPref("extensions.update.autoUpdateDefault", false);
-          '' ;
+              + "/conf"
+            )
+            + ''
+              defaultPref("privacy.clearOnShutdown.history", false);
+              defaultPref("privacy.clearOnShutdown.downloads", true);
+              defaultPref("privacy.clearOnShutdown.sessions", false);
+              defaultPref("privacy.clearOnShutdown.cache", true);
+              defaultPref("privacy.clearOnShutdown.cookies", false);
+              defaultPref("privacy.clearOnShutdown.offlineApps", true);
+              defaultPref("security.identityblock.show_extended_validation", true);
+              defaultPref("browser.tabs.insertAfterCurrent", true);
+              defaultPref("dom.importMaps.enabled", true);
+              defaultPref("signon.autofillForms", true);
+              defaultPref("signon.rememberSignons", true);
+              defaultPref("places.history.enabled", false);
+              defaultPref("privacy.userContext.newTabContainerOnLeftClick.enabled", true);
+              defaultPref("signon.rememberSignons", false);
+              defaultPref("signon.autofillForms", false);
+              defaultPref("extensions.update.autoUpdateDefault", false);
+            '';
         };
         policies = {
           DisableAppUpdate = true;
@@ -68,7 +79,7 @@
             SkipOnboarding = true;
           };
           SearchEngines = {
-            Remove = [ 
+            Remove = [
               "Google"
               "Bing"
               "Amazon.com"
