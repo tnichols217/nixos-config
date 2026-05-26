@@ -37,6 +37,7 @@ _: {
   mutableUserSettings = false;
   mutableUserTasks = false;
   userSettings = {
+    cli_default_open_behavior = "new_window";
     project_panel = {
       dock = "left";
     };

@@ -22,6 +22,7 @@ let
       # "HDMI-A-1, highrr, 2560x0, 1"
       # "DP-1, 2560x1440@60, 2560x1440, 1"
       "desc:GIGA-BYTE TECHNOLOGY CO. LTD. M27Q 23270B000407, highrr, 2560x-1440, 1"
+      "desc:GIGA-BYTE TECHNOLOGY CO. LTD. M27Q 23240B003867, highrr, 2560x-1440, 1"
     ];
     "MSI" = [ ];
     "rpi" = [
