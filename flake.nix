@@ -139,7 +139,7 @@
         # TODO until obsidian updates electron
         # TODO until sonarr fixes dep
         permittedInsecurePackages = [
-          "electron-25.9.0"
+          "electron-39.8.10"
           "aspnetcore-runtime-6.0.36"
           "aspnetcore-runtime-wrapped-6.0.36"
           "dotnet-sdk-6.0.428"
