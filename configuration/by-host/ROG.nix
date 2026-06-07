@@ -1,6 +1,9 @@
 { pkgs, addresses, ... }:
 {
-  programs.openvpn3.enable = true;
+  programs.openvpn3 = {
+    enable = true;
+    netcfg.settings.systemd-resolved = false;
+  };
 
   networking.networkmanager = {
     enable = true;
