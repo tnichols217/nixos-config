@@ -29,6 +29,7 @@
               gacp = "git add -A && git commit --allow-empty -am $argv; git push";
               unpersist = "TEMPFILE=$(mktemp); cp $argv $TEMPFILE; rm $argv; cp $TEMPFILE $argv; rm $TEMPFILE";
               gm = "CURBRANCH=$(git branch --show-current); git checkout $argv; git merge $CURBRANCH; git push; git checkout $CURBRANCH";
+              upgf = "sudo ${pkgs.bash}/bin/bash -c \"cd /etc/nixos; ${pkgs.git}/bin/git stash; ${pkgs.git}/bin/git stash clear; ${pkgs.git}/bin/git pull; ${pkgs.nixos-rebuild-ng}/bin/nixos-rebuild switch --flake \\\".#${host-name}\\\" $argv --refresh --log-format internal-json |& ${pkgs.nix-output-monitor}/bin/nom --json\"";
             };
           in
           builtins.concatStringsSep " " (
