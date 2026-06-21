@@ -9,7 +9,7 @@
 
   home-manager.users.${username} = {
     home = {
-      packages = with pkgs; [
+      packages = [
         nix-index-database.comma-with-db
       ];
     };

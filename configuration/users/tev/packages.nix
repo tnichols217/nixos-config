@@ -19,6 +19,7 @@ let
         identityFile = "/home/${username}/.ssh/ed25519";
         identityFileAWS = "/home/${username}/.ssh/ROG.pem";
         identityFileAI4EDU = "/home/${username}/.ssh/AI4EDU.pem";
+        identityFileIf = "/home/${username}/.ssh/instantfill";
         user = "${username}";
         port = 22;
       in
@@ -71,6 +72,21 @@ let
           hostname = "bitbucket.org";
           user = "git";
           inherit identityFile;
+        };
+        "if" = {
+          hostname = "instantfill-vm.tailc6809.ts.net";
+          user = "trevor";
+          identityFile = identityFileIf;
+        };
+        "ift2" = {
+          hostname = "trader-2.tailc6809.ts.net";
+          user = "trevor";
+          identityFile = identityFileIf;
+        };
+        "iftd" = {
+          hostname = "trader-daemon.tailc6809.ts.net";
+          user = "trevor";
+          identityFile = identityFileIf;
         };
         "*" = {
           inherit identityFile;

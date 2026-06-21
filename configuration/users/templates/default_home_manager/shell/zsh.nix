@@ -50,24 +50,19 @@
           upg = "sudo ${pkgs.bash}/bin/bash -c \"cd /etc/nixos; ${pkgs.git}/bin/git stash; ${pkgs.git}/bin/git stash clear; ${pkgs.git}/bin/git pull; ${pkgs.nixos-rebuild-ng}/bin/nixos-rebuild switch --flake \\\".#${host-name}\\\" --refresh --log-format internal-json |& ${pkgs.nix-output-monitor}/bin/nom --json\"";
           sci = "ssh-copy-id -i ~/.ssh/ed25519 ";
           pathof = "path resolve ";
-          code = "codium";
           c = "zeditor .";
           n = "nom";
-          rssound = "systemctl --user restart pipewire";
           ls = "lsd";
           la = "lsd -lAgh";
           cat = "bat";
           da = "direnv allow";
           fsw = "fswatch -rax ";
-          black = "kill (pidof plasmashell); plasmashell &; disown (pidof plasmashell)";
-          huion = "xsetwacom set `xinput | grep HUION | grep \"Pen stylus\" | head -1 | awk '{print $7;}' | cut -d \"=\" -f2` \"mapToOutput\" `xrandr | grep \" connected\" | grep \"Display\" | awk '{print $1;}'`; xsetwacom set `xinput | grep HUION | grep \"stylus\" | tac | head -1 | awk '{print $7;}' | cut -d \"=\" -f2` \"mapToOutput\" `xrandr | grep \" connected\" | grep \"Display\" | awk '{print $1;}'`";
           kitty = "${
             pkgs.callPackage ./kitty/kitty.pkg.nix {
               self = pkgs;
               inherit inputs;
             }
           }/bin/kitty";
-          logout = "qdbus org.kde.LogoutPrompt /LogoutPrompt org.kde.LogoutPrompt.promptLogout";
           f = "xplr";
           cdf = "cd $(xplr)";
         };
