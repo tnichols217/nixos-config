@@ -81,24 +81,28 @@ let
         "ift1" = {
           hostname = "instantfill-vm.tailc6809.ts.net";
           user = "trevor";
+          identityFile = identityFileIf;
           requestTTY = "yes";
           remoteCommand = "ssh trader-1";
         };
         "ift2" = {
           hostname = "instantfill-vm.tailc6809.ts.net";
           user = "trevor";
+          identityFile = identityFileIf;
           requestTTY = "yes";
           remoteCommand = "ssh trader-2";
         };
         "ift3" = {
           hostname = "instantfill-vm.tailc6809.ts.net";
           user = "trevor";
+          identityFile = identityFileIf;
           requestTTY = "yes";
           remoteCommand = "ssh trader-3";
         };
         "iftd" = {
           hostname = "instantfill-vm.tailc6809.ts.net";
           user = "trevor";
+          identityFile = identityFileIf;
           requestTTY = "yes";
           remoteCommand = "ssh trader-daemon";
         };
