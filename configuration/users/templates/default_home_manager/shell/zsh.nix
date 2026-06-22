@@ -51,6 +51,7 @@
           sci = "ssh-copy-id -i ~/.ssh/ed25519 ";
           pathof = "path resolve ";
           c = "zeditor .";
+          z = "zeditor ";
           n = "nom";
           ls = "lsd";
           la = "lsd -lAgh";
