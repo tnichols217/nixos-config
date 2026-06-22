@@ -79,24 +79,28 @@ let
           identityFile = identityFileIf;
         };
         "ift1" = {
-          hostname = "trader-2.tailc6809.ts.net";
-          user = "trader";
-          proxyJump = "if";
+          hostname = "instantfill-vm.tailc6809.ts.net";
+          user = "trevor";
+          requestTTY = "yes";
+          remoteCommand = "ssh trader-1";
         };
         "ift2" = {
-          hostname = "trader-2.tailc6809.ts.net";
-          user = "trader";
-          proxyJump = "if";
+          hostname = "instantfill-vm.tailc6809.ts.net";
+          user = "trevor";
+          requestTTY = "yes";
+          remoteCommand = "ssh trader-2";
         };
         "ift3" = {
-          hostname = "trader-2.tailc6809.ts.net";
-          user = "trader";
-          proxyJump = "if";
+          hostname = "instantfill-vm.tailc6809.ts.net";
+          user = "trevor";
+          requestTTY = "yes";
+          remoteCommand = "ssh trader-3";
         };
         "iftd" = {
-          hostname = "trader-daemon.tailc6809.ts.net";
-          user = "trader";
-          proxyJump = "if";
+          hostname = "instantfill-vm.tailc6809.ts.net";
+          user = "trevor";
+          requestTTY = "yes";
+          remoteCommand = "ssh trader-daemon";
         };
         "*" = {
           inherit identityFile;
