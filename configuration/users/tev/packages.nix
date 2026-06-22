@@ -14,7 +14,7 @@ let
   ssh = {
     enable = true;
     enableDefaultConfig = false;
-    matchBlocks =
+    settings =
       let
         identityFile = "/home/${username}/.ssh/ed25519";
         identityFileAWS = "/home/${username}/.ssh/ROG.pem";
