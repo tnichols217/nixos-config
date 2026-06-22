@@ -81,22 +81,22 @@ let
         "ift1" = {
           hostname = "trader-2.tailc6809.ts.net";
           user = "trader";
-          jumpHost = "if";
+          proxyJump = "if";
         };
         "ift2" = {
           hostname = "trader-2.tailc6809.ts.net";
           user = "trader";
-          jumpHost = "if";
+          proxyJump = "if";
         };
         "ift3" = {
           hostname = "trader-2.tailc6809.ts.net";
           user = "trader";
-          jumpHost = "if";
+          proxyJump = "if";
         };
         "iftd" = {
           hostname = "trader-daemon.tailc6809.ts.net";
           user = "trader";
-          jumpHost = "if";
+          proxyJump = "if";
         };
         "*" = {
           inherit identityFile;
