@@ -29,7 +29,7 @@
               gacp = "git add -A && git commit --allow-empty -am $argv; git push";
               unpersist = "TEMPFILE=$(mktemp); cp $argv $TEMPFILE; rm $argv; cp $TEMPFILE $argv; rm $TEMPFILE";
               gm = "CURBRANCH=$(git branch --show-current); git checkout $argv; git merge $CURBRANCH; git push; git checkout $CURBRANCH";
-              upgf = "sudo ${pkgs.bash}/bin/bash -c 'cd /etc/nixos; ${pkgs.git}/bin/git stash; ${pkgs.git}/bin/git stash clear; ${pkgs.git}/bin/git pull; ${pkgs.nixos-rebuild-ng}/bin/nixos-rebuild switch --flake \".#${host-name}\" \"\$@\" --refresh --log-format internal-json |& ${pkgs.nix-output-monitor}/bin/nom --json' ${pkgs.bash}/bin/bash \"$@\"";
+              upg = "sudo ${pkgs.bash}/bin/bash -c 'cd /etc/nixos; ${pkgs.git}/bin/git stash; ${pkgs.git}/bin/git stash clear; ${pkgs.git}/bin/git pull; ${pkgs.nixos-rebuild-ng}/bin/nixos-rebuild switch --flake \".#${host-name}\" \"\$@\" --refresh --log-format internal-json |& ${pkgs.nix-output-monitor}/bin/nom --json' ${pkgs.bash}/bin/bash \"$@\"";
             };
           in
           builtins.concatStringsSep " " (
@@ -48,7 +48,6 @@
           "..." = "cd ../..";
           "...." = "cd ../../..";
           cdg = "cd $(git rev-parse --show-toplevel)";
-          upg = "sudo ${pkgs.bash}/bin/bash -c \"cd /etc/nixos; ${pkgs.git}/bin/git stash; ${pkgs.git}/bin/git stash clear; ${pkgs.git}/bin/git pull; ${pkgs.nixos-rebuild-ng}/bin/nixos-rebuild switch --flake \\\".#${host-name}\\\" --refresh --log-format internal-json |& ${pkgs.nix-output-monitor}/bin/nom --json\"";
           sci = "ssh-copy-id -i ~/.ssh/ed25519 ";
           pathof = "path resolve ";
           c = "zeditor .";
