@@ -78,15 +78,25 @@ let
           user = "trevor";
           identityFile = identityFileIf;
         };
+        "ift1" = {
+          hostname = "trader-2.tailc6809.ts.net";
+          user = "trader";
+          jumpHost = "if";
+        };
         "ift2" = {
           hostname = "trader-2.tailc6809.ts.net";
-          user = "trevor";
-          identityFile = identityFileIf;
+          user = "trader";
+          jumpHost = "if";
+        };
+        "ift3" = {
+          hostname = "trader-2.tailc6809.ts.net";
+          user = "trader";
+          jumpHost = "if";
         };
         "iftd" = {
           hostname = "trader-daemon.tailc6809.ts.net";
-          user = "trevor";
-          identityFile = identityFileIf;
+          user = "trader";
+          jumpHost = "if";
         };
         "*" = {
           inherit identityFile;
