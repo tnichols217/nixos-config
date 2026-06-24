@@ -9,7 +9,7 @@
         vhostUserPackages = [ pkgs.virtiofsd ];
       };
     };
-    # waydroid.enable = true;
+    waydroid.enable = true;
     podman.enable = true;
     podman.dockerSocket.enable = host-name == "ASUS";
     podman.dockerCompat = true;
