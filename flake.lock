@@ -1282,11 +1282,11 @@
         "systems": "systems_6"
       },
       "locked": {
-        "lastModified": 1784772793,
-        "narHash": "sha256-59Gavj/9BFDmVVichswIvFRZwnWHhSdh8vsdg8oYzb0=",
+        "lastModified": 1784814601,
+        "narHash": "sha256-T32JXjZ7kIbhBn8/Har171yGg6IBdl97cxAWameqZDE=",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "85d64907a9c132ecf2e8ebe46d0ad842381516ec",
+        "rev": "f316e949e0ed9df0e1e0bf645c6dce721d4e230e",
         "type": "github"
       },
       "original": {
