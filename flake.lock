@@ -106,11 +106,11 @@
         "uv2nix": "uv2nix"
       },
       "locked": {
-        "lastModified": 1785317240,
-        "narHash": "sha256-KEF/HXXmmP8e/AxFbw8Ptlhb+FVEPoASNcew2xk3TQ0=",
+        "lastModified": 1785488913,
+        "narHash": "sha256-5kEMR7Pbaldsz5PBYJ6z5o1AxxdnWbGoDkFngl4SXFI=",
         "owner": "nix-community",
         "repo": "authentik-nix",
-        "rev": "28f0b3bc96b8e0f664aabb540a2ed61a352e8fc7",
+        "rev": "d9a66712def0b044b86dc13f7a319641bbd2a34b",
         "type": "github"
       },
       "original": {
@@ -1243,11 +1243,11 @@
     },
     "nixpkgs_6": {
       "locked": {
-        "lastModified": 1785452004,
-        "narHash": "sha256-k94ksv7XmaLeK5sE1ST/TTdu2aDEO9sfbcgEaNJPTXA=",
+        "lastModified": 1785486925,
+        "narHash": "sha256-pkLRv2U1hO3sW20eRYWmxY073lIcDk+Iii8SQF0pZKA=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "a5e9f2fd9ef6011c6886d6935f3ef678c81385fa",
+        "rev": "6e046a96da8cdd8e784a50f553d7f8357f3e3a47",
         "type": "github"
       },
       "original": {
