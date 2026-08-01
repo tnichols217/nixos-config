@@ -1260,11 +1260,11 @@
     },
     "nixpkgs_6": {
       "locked": {
-        "lastModified": 1785571017,
-        "narHash": "sha256-5WAAreQURim0gSrDulj6Vex5j7V1SnTkur8ZtBuUKNc=",
+        "lastModified": 1785606026,
+        "narHash": "sha256-Je9LEkXta68OIxKxp5rVaLHBroevAvttX2Rknby+Jx4=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "6c64a6dbd73ad31493e95a8cb00f90aef909fa24",
+        "rev": "94121f787ef407d21d7cbb2885eec3ed8f2f55c2",
         "type": "github"
       },
       "original": {
@@ -1356,11 +1356,11 @@
     "papirus": {
       "flake": false,
       "locked": {
-        "lastModified": 1784709188,
-        "narHash": "sha256-a0TN+O14iTaUlviad0oN4A+XF9abYGo5/45ydafG8+k=",
+        "lastModified": 1785595161,
+        "narHash": "sha256-ZmZefBzwtHVV49BUWgHihSnwGQbKFek3+HpUjjXJ36c=",
         "owner": "PapirusDevelopmentTeam",
         "repo": "papirus-icon-theme",
-        "rev": "1b926382757f685622901f9c17a9abce66415ff0",
+        "rev": "5f8b701d7521e27b4859d7e4f9b0da4c423c036c",
         "type": "github"
       },
       "original": {
