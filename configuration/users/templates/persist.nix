@@ -6,17 +6,17 @@
 }:
 let
   mapDirAttr = x: {
-      directory = x;
-      mode = "0700";
+    directory = x;
+    mode = "0700";
+    user = "${username}";
+  };
+  mapFileAttr = x: {
+    file = x;
+    parentDirectory = {
+      mode = "700";
       user = "${username}";
     };
-  mapFileAttr = x: {
-      file = x;
-      parentDirectory = {
-        mode = "700";
-        user = "${username}";
-      };
-    };
+  };
   # mapTmp = (
   #   x:
   #   "Z! /home/${username}/${
@@ -24,15 +24,15 @@ let
   #   } 0700 ${username} users"
   # );
   mapConf = files: dirs: loc: {
-      environment.persistence."${loc}" = {
-        hideMounts = false;
-        users.${username} = {
-          directories = pkgs.lib.lists.map mapDirAttr dirs;
-          files = pkgs.lib.lists.map mapFileAttr files;
-        };
+    environment.persistence."${loc}" = {
+      hideMounts = false;
+      users.${username} = {
+        directories = pkgs.lib.lists.map mapDirAttr dirs;
+        files = pkgs.lib.lists.map mapFileAttr files;
       };
-      # systemd.tmpfiles.rules = pkgs.lib.lists.map mapTmp dirs ++ pkgs.lib.lists.map mapTmp files;
     };
+    # systemd.tmpfiles.rules = pkgs.lib.lists.map mapTmp dirs ++ pkgs.lib.lists.map mapTmp files;
+  };
 in
 {
   imports = [
@@ -95,6 +95,7 @@ in
         ".local/share/suyu"
         ".local/share/yuzu"
         ".local/share/DBeaverData"
+        ".local/share/opencode"
         ".config/suyu"
         ".config/yuzu"
         ".config/Ryujinx"
@@ -121,6 +122,7 @@ in
         ".config/Moonlight Game Streaming Project"
         ".config/Yubico"
         ".config/tartube"
+        ".config/opencode"
       ]
       "${persistence.local}"
     )

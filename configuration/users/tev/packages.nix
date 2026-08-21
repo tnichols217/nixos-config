@@ -207,6 +207,7 @@ in
           fastfetch
           pandoc
           imagemagick
+          opencode
 
           # Art
           # gimp
@@ -227,6 +228,7 @@ in
           spotify
           # jellyfin-media-player
           jellycli
+          # Build broken
           grayjay
           tidal-hifi
           # calibre

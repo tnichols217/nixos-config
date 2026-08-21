@@ -18,10 +18,12 @@
     pkgs.swtpm
   ];
   boot.binfmt.emulatedSystems = [
-    "wasm32-wasi"
-    "wasm64-wasi"
+    "wasm32-wasip1"
+    "wasm64-wasip1"
     "x86_64-windows"
     "aarch64-linux"
+    "riscv32-linux"
+    "riscv64-linux"
   ];
   programs.nix-ld.enable = true;
 }

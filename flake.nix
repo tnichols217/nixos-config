@@ -281,16 +281,16 @@
             })
             // {
               cross = inputs.flake-utils.lib.eachDefaultSystem (
-                  sys:
-                  (configs {
-                    p = import inputs.nixpkgs {
-                        inherit config;
-                        localSystem = system;
-                        crossSystem = sys;
-                      };
-                    inherit sys;
-                  })
-                );
+                sys:
+                (configs {
+                  p = import inputs.nixpkgs {
+                    inherit config;
+                    localSystem = system;
+                    crossSystem = sys;
+                  };
+                  inherit sys;
+                })
+              );
             };
           packages =
             let
@@ -332,62 +332,72 @@
               linode = inputs.nixos-generators.nixosGenerate (linodeargs // { inherit pkgs; });
               default = rpi;
               cross = inputs.flake-utils.lib.eachDefaultSystem (
-                  sys:
-                  let
-                    pkgs = import inputs.nixpkgs {
-                      localSystem = system;
-                      crossSystem = sys;
-                    };
-                  in
-                  rec {
-                    iso = inputs.nixos-generators.nixosGenerate (
-                      isoargs
-                      // {
-                        inherit pkgs;
-                        system = sys;
-                      }
-                    );
-                    sd = inputs.nixos-generators.nixosGenerate (
-                      sdargs
-                      // {
-                        inherit pkgs;
-                        system = sys;
-                      }
-                    );
-                    rpi = pkgs.callPackage ./rpi/image_builder.nix {
-                      inherit pkgs inputs;
-                      rpiSys = nixosConfigurations.cross.rpi.${sys};
-                    };
-                    linode = inputs.nixos-generators.nixosGenerate (
-                      linodeargs
-                      // {
-                        inherit pkgs;
-                        system = sys;
-                      }
-                    );
-                    default = rpi;
-                  }
+                sys:
+                let
+                  pkgs = import inputs.nixpkgs {
+                    localSystem = system;
+                    crossSystem = sys;
+                  };
+                in
+                rec {
+                  iso = inputs.nixos-generators.nixosGenerate (
+                    isoargs
+                    // {
+                      inherit pkgs;
+                      system = sys;
+                    }
+                  );
+                  sd = inputs.nixos-generators.nixosGenerate (
+                    sdargs
+                    // {
+                      inherit pkgs;
+                      system = sys;
+                    }
+                  );
+                  rpi = pkgs.callPackage ./rpi/image_builder.nix {
+                    inherit pkgs inputs;
+                    rpiSys = nixosConfigurations.cross.rpi.${sys};
+                  };
+                  linode = inputs.nixos-generators.nixosGenerate (
+                    linodeargs
+                    // {
+                      inherit pkgs;
+                      system = sys;
+                    }
+                  );
+                  default = rpi;
+                }
+              );
+            };
+          apps =
+            let
+              pkgs = inputs.nixpkgs.legacyPackages.${system};
+            in
+            rec {
+              test = {
+                type = "app";
+                program = pkgs.lib.getExe (pkgs.writeShellScript "test" (pkgs.lib.readFile ./nix/scripts/test.sh));
+              };
+              build = {
+                type = "app";
+                program = pkgs.lib.getExe (
+                  pkgs.writeShellScript "build" (pkgs.lib.readFile ./nix/scripts/build.sh)
                 );
+              };
+              switch = {
+                type = "app";
+                program = pkgs.lib.getExe (
+                  pkgs.writeShellScriptBin "switch" (pkgs.lib.readFile ./nix/scripts/switch.sh)
+                );
+              };
+              ciBuild = {
+                type = "app";
+                program = pkgs.lib.getExe (
+                  pkgs.writeShellScript "ci-build" (pkgs.lib.readFile ./nix/scripts/ci-build.sh)
+                );
+              };
+              default = build;
             };
-          apps = rec {
-            test = {
-              type = "app";
-              program = ./nix/scripts/test.sh;
-            };
-            build = {
-              type = "app";
-              program = ./nix/scripts/build.sh;
-            };
-            switch = {
-              type = "app";
-              program = ./nix/scripts/switch.sh;
-            };
-            ciBuild = {
-              type = "app";
-              program = ./nix/scripts/ci-build.sh;
-            };
-            default = build;
-          };
           devShells =
             let
               pkgs = inputs.nixpkgs.legacyPackages.${system};
