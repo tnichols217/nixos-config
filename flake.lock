@@ -230,11 +230,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1787283241,
-        "narHash": "sha256-9VJ/6nB4SW2AaWTKwXlv3ocZ7Zfbu2701ABEzBMWO9Q=",
+        "lastModified": 1787369102,
+        "narHash": "sha256-IUcaEuUMTROcxQV9BS4l3DiXCogxaSr9Z5H2eAAJsDM=",
         "owner": "OsiPog",
         "repo": "nix-firefox-addons",
-        "rev": "d469ed849b1465bef7a00e335892ca5e85d28aaf",
+        "rev": "9f66671607a7db0b1dfd7c05f787763ffc948c5f",
         "type": "github"
       },
       "original": {
@@ -1080,11 +1080,11 @@
         "nixpkgs": "nixpkgs_5"
       },
       "locked": {
-        "lastModified": 1787276820,
-        "narHash": "sha256-H2WpKgKFlbCnadGLJWJYmJXSfnJHtw57GiyCJsRmkd8=",
+        "lastModified": 1787362606,
+        "narHash": "sha256-KRs7IfccMjEd8RKRG0fbiZhLTvloXCCWDUC9m4MkV8M=",
         "owner": "nix-community",
         "repo": "nix-vscode-extensions",
-        "rev": "df89bf3ab92545d6932675cf9d742cb0e687f428",
+        "rev": "f77d5bd7712b61e4831a5104221d4e0b98d74f86",
         "type": "github"
       },
       "original": {
