@@ -3,11 +3,11 @@
     "ani-cli-batch": {
       "flake": false,
       "locked": {
-        "lastModified": 1735959950,
-        "narHash": "sha256-SJ0W4jsW2BNkldx7FMtzKLzRSYVbPrj6ZofKKnAsCIo=",
+        "lastModified": 1787642931,
+        "narHash": "sha256-wIchODIVBCYMcxw1s+OYQj7SyC/ZiTcVjX49ZpxQu5g=",
         "owner": "75rx",
         "repo": "ani-cli-batch",
-        "rev": "99f9fe02e3079db50b5d739a19750d7670733816",
+        "rev": "7e311554200f5b25f37528abd9151e42eb041242",
         "type": "github"
       },
       "original": {
@@ -1260,11 +1260,11 @@
     },
     "nixpkgs_6": {
       "locked": {
-        "lastModified": 1787608092,
-        "narHash": "sha256-/U5miYtjahf4VLsSwvct6ZJAQZKvTqFQnw6fAQQ9eKM=",
+        "lastModified": 1787642242,
+        "narHash": "sha256-o7cd8Z4pejj8clfwmJGJiRp8PJ496VV0QASk1XLoKLU=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "00ca96cb74b778f8c999d5075624fc10636520fc",
+        "rev": "c31f86faf4b060a186e94ee258278de30c69b90b",
         "type": "github"
       },
       "original": {
