@@ -226,7 +226,7 @@
           nixosConfigurations =
             let
               configs =
-                { p, sys }:
+                { p, pAsus ? p, sys }:
                 let
                   modPkgs = [
                     inputs.nixpkgs.nixosModules.readOnlyPkgs
@@ -249,7 +249,10 @@
                     specialArgs = fullAttrs // {
                       host-name = "ASUS";
                     };
-                    modules = modPkgs ++ [ inputs.arion.nixosModules.arion ];
+                    modules = [
+                      inputs.nixpkgs.nixosModules.readOnlyPkgs
+                      { nixpkgs.pkgs = pAsus; }
+                    ] ++ mods ++ [ inputs.arion.nixosModules.arion ];
                   };
                   linode = inputs.nixpkgs.lib.nixosSystem {
                     specialArgs = fullAttrs // {
@@ -277,6 +280,16 @@
             in
             (configs {
               p = import inputs.nixpkgs { inherit system config; };
+              pAsus = import inputs.nixpkgs {
+                inherit system config;
+                overlays = [
+                  (final: prev: {
+                    onnxruntime = prev.onnxruntime.override {
+                      cudaSupport = true;
+                    };
+                  })
+                ];
+              };
               sys = system;
             })
             // {

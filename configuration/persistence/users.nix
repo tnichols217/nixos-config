@@ -1,5 +1,4 @@
-_:
-{
+_: {
   # Define all undefined users here so we don't need to persist /var/lib/nixos
   users = {
     groups = {

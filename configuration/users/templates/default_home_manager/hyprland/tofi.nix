@@ -1,5 +1,4 @@
-_:
-''
+_: ''
   placeholder-text = "Search"
   prompt-text = "> "
   placeholder-color = #FFF9

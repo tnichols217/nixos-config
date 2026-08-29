@@ -11,8 +11,7 @@ pkgs.stdenv.mkDerivation rec {
 
   installPhase =
     let
-      concat =
-        "\"" + pkgs.lib.concatStringsSep "\" \"" (pkgs.lib.lists.forEach pack toString) + "\"";
+      concat = "\"" + pkgs.lib.concatStringsSep "\" \"" (pkgs.lib.lists.forEach pack toString) + "\"";
     in
     ''
 

@@ -17,15 +17,15 @@
       wacom.enable = true;
       videoDrivers =
         if host-name == "ASUS" then
-            [
-              "nvidia"
-            ]
-          else
-            [
-              "amdgpu"
-              "fbdev"
-              "modesetting"
-            ];
+          [
+            "nvidia"
+          ]
+        else
+          [
+            "amdgpu"
+            "fbdev"
+            "modesetting"
+          ];
     };
     avahi = {
       enable = true;

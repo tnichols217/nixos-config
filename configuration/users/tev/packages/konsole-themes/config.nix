@@ -1,5 +1,4 @@
-_:
-{
+_: {
   "/share/konsole/KonsoleTheme.profile" = {
     "Appearance" = {
       "items" = {
