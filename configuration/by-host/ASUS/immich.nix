@@ -12,5 +12,11 @@
     port = ports.immich;
     accelerationDevices = null;
     mediaLocation = "/var/lib/immich";
+    machine-learning = {
+      enable = true;
+      environment = {
+        LD_LIBRARY_PATH = "/run/opengl-driver/lib";
+      };
+    };
   };
 }

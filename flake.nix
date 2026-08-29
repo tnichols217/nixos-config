@@ -281,7 +281,10 @@
             (configs {
               p = import inputs.nixpkgs { inherit system config; };
               pAsus = import inputs.nixpkgs {
-                inherit system config;
+                inherit system;
+                config = config // {
+                  cudaCapabilities = [ "7.5" ];
+                };
                 overlays = [
                   (final: prev: {
                     onnxruntime = prev.onnxruntime.override {
