@@ -18,6 +18,10 @@ _:
       wpa_supplicant.gid = 987;
       nm-iodine.gid = 986;
       networkmanager.gid = 985;
+      acme.gid = 984;
+      github-runner.gid = 983;
+      immich.gid = 982;
+      redis-immich.gid = 981;
     };
     users = {
       avahi.uid = 999;
@@ -35,6 +39,10 @@ _:
         uid = 991;
         group = "wpa_supplicant";
       };
+      acme.uid = 990;
+      github-runner.uid = 989;
+      immich.uid = 988;
+      redis-immich.uid = 987;
       soda.uid = 1000;
       tev.uid = 1001;
     };
