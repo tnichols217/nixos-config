@@ -17,6 +17,7 @@ _:
       systemd-oom.gid = 988;
       wpa_supplicant.gid = 987;
       nm-iodine.gid = 986;
+      networkmanager.gid = 989;
     };
     users = {
       avahi.uid = 999;
