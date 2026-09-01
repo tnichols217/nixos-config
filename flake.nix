@@ -392,7 +392,10 @@
             rec {
               test = {
                 type = "app";
-                program = pkgs.lib.getExe (pkgs.writeShellScript "test" (pkgs.lib.readFile ./nix/scripts/test.sh));
+                program = pkgs.lib.getExe (pkgs.writeShellApplication {
+                  name = "test";
+                  text = pkgs.lib.readFile ./nix/scripts/test.sh;
+                });
               };
               build = {
                 type = "app";

@@ -1,47 +1,60 @@
-_: {
+{lib, ...}: {
+  # Overrides for stubborn modules
+  ids.gids.networkmanager = lib.mkForce 991;
   # Define all undefined users here so we don't need to persist /var/lib/nixos
   users = {
     groups = {
-      avahi.gid = 999;
-      flatpak.gid = 998;
-      gamemode.gid = 997;
-      geoclue.gid = 996;
-      greeter.gid = 995;
-      nscd.gid = 994;
-      podman.gid = 993;
-      polkituser.gid = 992;
-      resolvconf.gid = 991;
-      sshd.gid = 990;
-      systemd-coredump.gid = 989;
-      systemd-oom.gid = 988;
-      wpa_supplicant.gid = 987;
-      nm-iodine.gid = 986;
-      networkmanager.gid = 985;
-      acme.gid = 984;
-      github-runner.gid = 983;
-      immich.gid = 982;
-      redis-immich.gid = 981;
+      acme.gid = 999;
+      avahi.gid = 998;
+      flatpak.gid = 997;
+      gamemode.gid = 996;
+      geoclue.gid = 995;
+      github-runner.gid = 994;
+      greeter.gid = 993;
+      immich.gid = 992;
+      networkmanager.gid = 991;
+      nscd.gid = 990;
+      podman.gid = 989;
+      polkituser.gid = 988;
+      redis-immich.gid = 987;
+      resolvconf.gid = 986;
+      sshd.gid = 985;
+      systemd-coredump.gid = 984;
+      systemd-oom.gid = 983;
+      wpa_supplicant.gid = 982;
     };
     users = {
-      avahi.uid = 999;
-      flatpak.uid = 998;
-      geoclue.uid = 997;
-      greeter.uid = 996;
-      nm-iodine = {
+      acme = {
+        uid = 999;
+        group = "acme";
+      };
+      avahi.uid = 998;
+      flatpak.uid = 997;
+      geoclue.uid = 996;
+      github-runner = {
         uid = 995;
+        group = "github-runner";
+      };
+      greeter.uid = 994;
+      immich = {
+        uid = 993;
+        group = "immich";
+      };
+      nm-iodine = {
+        uid = 992;
         group = "networkmanager";
       };
-      nscd.uid = 994;
-      sshd.uid = 993;
-      systemd-oom.uid = 992;
+      nscd.uid = 991;
+      redis-immich = {
+        uid = 990;
+        group = "redis-immich";
+      };
+      sshd.uid = 989;
+      systemd-oom.uid = 988;
       wpa_supplicant = {
-        uid = 991;
+        uid = 987;
         group = "wpa_supplicant";
       };
-      acme.uid = 990;
-      github-runner.uid = 989;
-      immich.uid = 988;
-      redis-immich.uid = 987;
       soda.uid = 1000;
       tev.uid = 1001;
     };

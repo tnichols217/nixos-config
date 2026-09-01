@@ -19,6 +19,7 @@
     ./configuration/persistence.nix
     ./configuration/by-host.nix
     ./configuration/programs.nix
+    ./configuration/assert.nix
     # ./configuration/authentik.nix
   ];
 

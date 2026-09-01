@@ -2,14 +2,15 @@
 
 upsearch () {
   local slashes=${PWD//[^\/]/}
-  local directory=$(pwd)
+  local directory
+  directory=$(pwd)
   for (( n=${#slashes}; n>0; --n ))
   do
-    test -e "$directory/$1" && cd $directory 
+    test -e "$directory/$1" && cd "$directory"
     directory="$directory/.."
   done
 }
 
 upsearch flake.nix
 
-nixos-rebuild test --flake ".#$(hostname)" --log-format internal-json |& nom --json
+nixos-rebuild test --flake ".#${1:-$(hostname)}" --log-format internal-json |& nom --json
