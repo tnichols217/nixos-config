@@ -176,6 +176,7 @@ in
           gparted
           texliveFull
           bitwarden-desktop
+          zotero
 
           # Tools
           htop
