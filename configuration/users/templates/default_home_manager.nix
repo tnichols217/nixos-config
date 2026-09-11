@@ -3,6 +3,7 @@
   username,
   host-name,
   version,
+  lib,
   ...
 }@args:
 {
@@ -15,13 +16,6 @@
   ];
 
   home-manager.backupFileExtension = "backup";
-
-  home-manager.users.${username} = { lib, ... }: {
-    # Delete the target backup file before Home Manager verifies store paths
-    home.activation.removeContainersBackup = lib.hm.dag.entryBefore [ "checkLinkTargets" ] ''
-      run rm -f "$HOME/.mozilla/firefox/*/containers.json.backup"
-    '';
-  };
 
   systemd.tmpfiles.rules = [
     # "d! /home/${username} 0700 ${username} users"
@@ -42,6 +36,10 @@
       stateVersion = version;
       forceNixProfiles = true;
     };
+    # Delete the target backup file before Home Manager verifies store paths
+    home.activation.removeContainersBackup = lib.hm.dag.entryBefore [ "checkLinkTargets" ] ''
+      run rm -f "$HOME/.mozilla/firefox/*/containers.json.backup"
+    '';
     xdg.configFile = {
       "matlab/nix.sh" = {
         text = "INSTALL_DIR=$HOME/.config/matlab/installation";
