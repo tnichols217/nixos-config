@@ -2,19 +2,21 @@
 
 let
   # Extract all non-root, non-systemd-DynamicUser accounts
-  usersMissingUid = lib.filterAttrs (name: user:
-      name != "root" && user.uid == null
-    ) config.users.users;
+  usersMissingUid = lib.filterAttrs (
+    name: user: name != "root" && user.uid == null
+  ) config.users.users;
 
-  groupsMissingGid = lib.filterAttrs (name: group:
+  groupsMissingGid = lib.filterAttrs (
+    name: group:
     # Catch any group where gid is not set
     group.gid == null
   ) config.users.groups;
 
-in {
+in
+{
   assertions = [
     {
-      assertion = usersMissingUid == {};
+      assertion = usersMissingUid == { };
       message = ''
         Build failed: The following users are missing explicit static UIDs:
         ${lib.concatStringsSep "\n" (lib.mapAttrsToList (name: _: "  - ${name}") usersMissingUid)}
@@ -23,7 +25,7 @@ in {
       '';
     }
     {
-      assertion = groupsMissingGid == {};
+      assertion = groupsMissingGid == { };
       message = ''
         Build failed: The following groups are missing explicit static GIDs:
         ${lib.concatStringsSep "\n" (lib.mapAttrsToList (name: _: "  - ${name}") groupsMissingGid)}

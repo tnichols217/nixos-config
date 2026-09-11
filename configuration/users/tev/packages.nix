@@ -20,6 +20,7 @@ let
         identityFileAWS = "/home/${username}/.ssh/ROG.pem";
         identityFileAI4EDU = "/home/${username}/.ssh/AI4EDU.pem";
         identityFileIf = "/home/${username}/.ssh/instantfill";
+        identityFileECSE = "/home/${username}/.ssh/ecse303";
         user = "${username}";
         port = 22;
       in
@@ -105,6 +106,11 @@ let
           identityFile = identityFileIf;
           requestTTY = "yes";
           remoteCommand = "ssh trader-daemon";
+        };
+        "ECSE303" = {
+          hostname = "rpi11.ces.cwru.edu";
+          user = "group11";
+          identityFile = identityFileECSE;
         };
         "*" = {
           inherit identityFile;

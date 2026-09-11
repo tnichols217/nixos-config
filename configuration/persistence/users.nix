@@ -1,4 +1,4 @@
-{lib, ...}: {
+{ lib, ... }: {
   # Overrides for stubborn modules
   ids.gids.networkmanager = lib.mkForce 991;
   # Define all undefined users here so we don't need to persist /var/lib/nixos

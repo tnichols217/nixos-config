@@ -16,6 +16,13 @@
 
   home-manager.backupFileExtension = "backup";
 
+  home-manager.users.${username} = { lib, ... }: {
+    # Delete the target backup file before Home Manager verifies store paths
+    home.activation.removeContainersBackup = lib.hm.dag.entryBefore [ "checkLinkTargets" ] ''
+      run rm -f "$HOME/.mozilla/firefox/*/containers.json.backup"
+    '';
+  };
+
   systemd.tmpfiles.rules = [
     # "d! /home/${username} 0700 ${username} users"
     # "d! /home/${username}/.config 0755 ${username} users"

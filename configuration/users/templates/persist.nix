@@ -48,6 +48,7 @@ in
         "Public"
         "Templates"
         "Calibre Library"
+        ".zotero"
       ]
       "${persistence.data}"
     )
