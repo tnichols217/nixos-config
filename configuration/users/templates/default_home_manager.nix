@@ -3,7 +3,6 @@
   username,
   host-name,
   version,
-  lib,
   ...
 }@args:
 {
@@ -31,7 +30,7 @@
 
   programs.command-not-found.enable = pkgs.lib.mkForce false;
 
-  home-manager.users.${username} = {
+  home-manager.users.${username} = { lib, ... }: {
     home = {
       stateVersion = version;
       forceNixProfiles = true;
