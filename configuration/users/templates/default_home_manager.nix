@@ -37,7 +37,7 @@
     };
     # Delete the target backup file before Home Manager verifies store paths
     home.activation.removeContainersBackup = lib.hm.dag.entryBefore [ "checkLinkTargets" ] ''
-      run rm -f "$HOME/.mozilla/firefox/*/containers.json.backup"
+      run rm -f $HOME/.mozilla/firefox/*/containers.json.backup
     '';
     xdg.configFile = {
       "matlab/nix.sh" = {
