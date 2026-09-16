@@ -21,6 +21,8 @@ let
         identityFileAI4EDU = "/home/${username}/.ssh/AI4EDU.pem";
         identityFileIf = "/home/${username}/.ssh/instantfill";
         identityFileECSE = "/home/${username}/.ssh/ecse303";
+        # identityFileECSE318 = "/home/${username}/.ssh/ECSE318";
+        identityFileOrtho = "/home/${username}/.ssh/ortho";
         user = "${username}";
         port = 22;
       in
@@ -111,6 +113,11 @@ let
           hostname = "rpi11.ces.cwru.edu";
           user = "group11";
           identityFile = identityFileECSE;
+        };
+        "wingate" = {
+          hostname = "wingate.case.edu";
+          user = "tln32";
+          identityFile = identityFileOrtho;
         };
         "*" = {
           inherit identityFile;
