@@ -910,11 +910,11 @@
     "kitty-themes": {
       "flake": false,
       "locked": {
-        "lastModified": 1789456511,
-        "narHash": "sha256-hJX0Bojsi2oJm5u1S4+BUmUrKmG2AVhXvZQJOhdMOrk=",
+        "lastModified": 1789573030,
+        "narHash": "sha256-yIe1+GmEfqjU/HTi0ubkqAqErmC7fkXrSQtc28CS7JA=",
         "owner": "dexpota",
         "repo": "kitty-themes",
-        "rev": "889f6f83a9acb9405b6bdf5a7b82d1632329a62f",
+        "rev": "69cdbd19be35470daccc826f34d68d36b6fdf006",
         "type": "github"
       },
       "original": {
@@ -1260,11 +1260,11 @@
     },
     "nixpkgs_6": {
       "locked": {
-        "lastModified": 1789524109,
-        "narHash": "sha256-GZDvT/tbSVQB2KjI86l7VCM5D/vCrJo2sE3PCaaD0oQ=",
+        "lastModified": 1789558842,
+        "narHash": "sha256-qKFz1CjjK8wobzjpyhjcX6zhCwpUcttRcEsZdBn+tU8=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "be3dab5b1a3c41ed2db86093b9f4e048305630b7",
+        "rev": "41461f1b1c2490802fd85c0419f2f1f82a0194cd",
         "type": "github"
       },
       "original": {
