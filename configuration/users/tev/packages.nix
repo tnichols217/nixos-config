@@ -229,7 +229,7 @@ in
           ghostscript
           optipng
           fig2dev
-          scribus
+          # scribus
           krita
           audacity
 
