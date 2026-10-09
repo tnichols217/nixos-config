@@ -107,11 +107,11 @@
         "uv2nix": "uv2nix"
       },
       "locked": {
-        "lastModified": 1791302736,
-        "narHash": "sha256-tCRzA3QXMibbn2HiKALY4RdaPdvE15WomUfiFEYyjGg=",
+        "lastModified": 1791559688,
+        "narHash": "sha256-J3pQaZvHyYB7XmJpjY2xkuOB/YcOv9f/9iEHWY8PQUE=",
         "owner": "nix-community",
         "repo": "authentik-nix",
-        "rev": "d3f9d036c8f3b6202bd69814577967eb09e410ee",
+        "rev": "bc36aa3c2d049aa7b5eea465c867601e89390591",
         "type": "github"
       },
       "original": {
@@ -1299,11 +1299,11 @@
         "systems": "systems_6"
       },
       "locked": {
-        "lastModified": 1791413357,
-        "narHash": "sha256-5l8P7oeBdNQC8QhhyjcadWnDL2NWqfCjhyiEHzf5gMs=",
+        "lastModified": 1791574898,
+        "narHash": "sha256-hZbiKS5wzcqoKR0xwzxhJAyp1JuTL2CloYON040FJNk=",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "2e18a1aee60f0b8193169ca225aa698d424c0d07",
+        "rev": "2c6d56d2df7c159ef629871cfd673de237e1fc38",
         "type": "github"
       },
       "original": {
