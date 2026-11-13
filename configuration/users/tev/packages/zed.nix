@@ -27,6 +27,7 @@ _: {
     "toml"
     "uiua"
     "verilog"
+    "vhdl"
     "vscode-monokai-charcoal"
     "wat"
     "xml"
