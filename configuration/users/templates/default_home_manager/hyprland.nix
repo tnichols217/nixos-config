@@ -254,8 +254,6 @@ in
               };
               tablet = {
                 transform = 0;
-                region_position = [ 0 0 ];
-                region_size = [ 0 0 ];
                 relative_input = false;
                 output = "DP-1";
               };
