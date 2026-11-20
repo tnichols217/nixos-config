@@ -22,6 +22,7 @@
       systemd-coredump.gid = 984;
       systemd-oom.gid = 983;
       wpa_supplicant.gid = 982;
+      rtkit.gid = 981;
     };
     users = {
       acme = {
@@ -55,6 +56,7 @@
         uid = 987;
         group = "wpa_supplicant";
       };
+      rtkit.uid = 986;
       soda.uid = 1000;
       tev.uid = 1001;
     };

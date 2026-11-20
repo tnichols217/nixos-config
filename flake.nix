@@ -138,12 +138,14 @@
         allowUnfree = true;
         # TODO until obsidian updates electron
         # TODO until sonarr fixes dep
+        # TODO until zotero fixes dep
         permittedInsecurePackages = [
           "electron-39.8.10"
           "aspnetcore-runtime-6.0.36"
           "aspnetcore-runtime-wrapped-6.0.36"
           "dotnet-sdk-6.0.428"
           "dotnet-sdk-wrapped-6.0.428"
+          "firefox-esr-140-bin-unwrapped-140.17.0esr"
         ];
       };
       addresses = rec {
@@ -397,7 +399,7 @@
               build = {
                 type = "app";
                 program = pkgs.lib.getExe (
-                  pkgs.writeShellScript "build" (pkgs.lib.readFile ./nix/scripts/build.sh)
+                  pkgs.writeShellScriptBin "build" (pkgs.lib.readFile ./nix/scripts/build.sh)
                 );
               };
               switch = {
@@ -409,7 +411,7 @@
               ciBuild = {
                 type = "app";
                 program = pkgs.lib.getExe (
-                  pkgs.writeShellScript "ci-build" (pkgs.lib.readFile ./nix/scripts/ci-build.sh)
+                  pkgs.writeShellScriptBin "ci-build" (pkgs.lib.readFile ./nix/scripts/ci-build.sh)
                 );
               };
               default = build;
