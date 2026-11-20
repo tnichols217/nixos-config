@@ -255,7 +255,7 @@ in
           # dolphin-emu
           # lutris
           moonlight-qt
-          osu-lazer
+          # osu-lazer
           prismlauncher
           # broken :(
           # (pkgs.callPackage ./packages/torzu.pkg.nix {})
