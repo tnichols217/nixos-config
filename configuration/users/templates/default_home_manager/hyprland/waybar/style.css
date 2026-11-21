@@ -105,3 +105,12 @@ button.urgent,
     border-radius: 26px;
     background: rgba(0, 0, 0, 0.5);
 }
+
+/* hypr2d grid minimap: keep the dot rows within the bar's content height */
+#custom-hypr2d {
+    font-family: monospace;
+    min-height: 0;
+    padding: 0 8px;
+    margin: 0 4px;
+    border: none;
+}

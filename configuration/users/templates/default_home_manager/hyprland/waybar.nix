@@ -1,4 +1,14 @@
-{ pkgs, host-name, ... }:
+{
+  pkgs,
+  host-name,
+  inputs,
+  ...
+}:
+let
+  # The CLI package ships bin/hypr2d without dragging in the plugin's
+  # compositor dependency chain.
+  hypr2d = inputs.hypr2d.packages.${pkgs.stdenv.hostPlatform.system}.cli;
+in
 builtins.toJSON {
   "layer" = "top";
   "position" = "top";
@@ -28,7 +38,7 @@ builtins.toJSON {
 
   ############################# LEFT
   "modules-left" = [
-    "hyprland/workspaces"
+    "custom/hypr2d"
     "group/group-info"
     "pulseaudio"
   ];
@@ -42,8 +52,21 @@ builtins.toJSON {
     ];
   };
 
-  "hyprland/workspaces" = {
-    "format" = "{name}";
+  # hypr2d grid minimap: streams updates from the plugin over socket2,
+  # no interval/signal refresh needed. Shows all 5 columns, current row +-1.
+  "custom/hypr2d" = {
+    "exec" = "${hypr2d}/bin/hypr2d waybar --columns full --rows centered --radius-y 1";
+    "return-type" = "json";
+    "restart-interval" = 2;
+    "format" = "{text}";
+    "escape" = false;
+    "exec-on-event" = false;
+    "on-click" = "${hypr2d}/bin/hypr2d move right";
+    "on-click-right" = "${hypr2d}/bin/hypr2d move left";
+    "on-click-middle" = "${hypr2d}/bin/hypr2d goto 0 0";
+    "on-scroll-up" = "${hypr2d}/bin/hypr2d move up";
+    "on-scroll-down" = "${hypr2d}/bin/hypr2d move down";
+    "tooltip" = true;
   };
   "idle_inhibitor" = {
     "format" = "{icon}";

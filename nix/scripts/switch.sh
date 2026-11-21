@@ -5,11 +5,11 @@ upsearch () {
   local directory=$(pwd)
   for (( n=${#slashes}; n>0; --n ))
   do
-    test -e "$directory/$1" && cd $directory 
+    test -e "$directory/$1" && cd $directory
     directory="$directory/.."
   done
 }
 
 upsearch flake.nix
 
-sudo bash -cE "nixos-rebuild switch --flake \".#$(hostname)\" --log-format internal-json |& nom --json"
+sudo bash -cE "nixos-rebuild switch --flake \".#$(hostname)\" "$@" --log-format internal-json |& nom --json"

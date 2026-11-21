@@ -4,6 +4,7 @@
   username,
   host-name,
   inputs,
+  hyprPkgs,
   ...
 }@args:
 let
@@ -123,6 +124,28 @@ let
 in
 {
   home-manager.users.${username} = {
+    imports = [ inputs.hypr2d.homeManagerModules.default ];
+    programs.hypr2d = {
+      enable = true;
+      # Build the plugin against the same compositor it gets loaded into:
+      # the pinned 0.56 source compiled against the system nixpkgs
+      # (hyprPkgs), not hypr2d's internally-built hyprland.
+      package =
+        (inputs.hypr2d.packages.${pkgs.stdenv.hostPlatform.system}.plugin.overrideAttrs (old: {
+          buildInputs = [ hyprPkgs.hyprland ] ++ hyprPkgs.hyprland.buildInputs;
+        }));
+      # Match the old workspace2d.sh layout: a wrapping 5x5 grid per monitor
+      # with a stride of 10 monitor slots, so workspace ids stay
+      # 10 * (y * 5 + x) + slot + 1.
+      grid.stride = 10;
+      grids = lib.genAttrs (map toString (lib.range 0 9)) (_: {
+        columns = 5;
+        rows = 5;
+        wrap = true;
+      });
+      # Workspace swipe gestures were disabled before; keep them off.
+      gestures.enable = false;
+    };
     xdg.configFile = {
       "hypr/hyprpaper.conf" = {
         text = import ./hyprland/hyprpaper.nix { inherit host-name; };
@@ -148,6 +171,9 @@ in
         enable = true;
         # hyprland 0.57 dropped hyprlang; generate hyprland.lua instead of hyprland.conf
         configType = "lua";
+        # Same pinned-source/system-toolchain compositor as the NixOS module
+        # (hypr2d's module defaults this to its own internally-built hyprland).
+        package = lib.mkForce hyprPkgs.hyprland;
         plugins = [
           # inputs.hy3.packages.x86_64-linux.hy3
         ];
@@ -331,38 +357,6 @@ in
             (bind "ALT + Tab" "hl.dsp.window.bring_to_top()")
             (bind "ALT + Space" (exec "${pkgs.tofi}/bin/tofi-drun --drun-launch=true"))
             (bind "SUPER + Space" (exec "${pkgs.toybox}/bin/killall -SIGUSR1 waybar"))
-            (bind "SUPER + F1" (exec "sh ${./hyprland/workspace2d.sh} right"))
-            (bind "SUPER + right" (exec "sh ${./hyprland/workspace2d.sh} right"))
-            (bind "SUPER + CTRL + F1" (exec "sh ${./hyprland/workspace2d.sh} right all"))
-            (bind "SUPER + CTRL + right" (exec "sh ${./hyprland/workspace2d.sh} right all"))
-            (bind "SUPER + ALT + F1" (exec "sh ${./hyprland/workspace2d.sh} move_right"))
-            (bind "SUPER + ALT + right" (exec "sh ${./hyprland/workspace2d.sh} move_right"))
-            (bind "SUPER + ALT + CTRL + F1" (exec "sh ${./hyprland/workspace2d.sh} move_right all"))
-            (bind "SUPER + ALT + CTRL + right" (exec "sh ${./hyprland/workspace2d.sh} move_right all"))
-            (bind "SUPER + F2" (exec "sh ${./hyprland/workspace2d.sh} left"))
-            (bind "SUPER + left" (exec "sh ${./hyprland/workspace2d.sh} left"))
-            (bind "SUPER + CTRL + F2" (exec "sh ${./hyprland/workspace2d.sh} left all"))
-            (bind "SUPER + CTRL + left" (exec "sh ${./hyprland/workspace2d.sh} left all"))
-            (bind "SUPER + ALT + F2" (exec "sh ${./hyprland/workspace2d.sh} move_left"))
-            (bind "SUPER + ALT + left" (exec "sh ${./hyprland/workspace2d.sh} move_left"))
-            (bind "SUPER + ALT + CTRL + F2" (exec "sh ${./hyprland/workspace2d.sh} move_left all"))
-            (bind "SUPER + ALT + CTRL + left" (exec "sh ${./hyprland/workspace2d.sh} move_left all"))
-            (bind "SUPER + SHIFT + F1" (exec "sh ${./hyprland/workspace2d.sh} up"))
-            (bind "SUPER + up" (exec "sh ${./hyprland/workspace2d.sh} up"))
-            (bind "SUPER + SHIFT + CTRL + F1" (exec "sh ${./hyprland/workspace2d.sh} up all"))
-            (bind "SUPER + CTRL + up" (exec "sh ${./hyprland/workspace2d.sh} up all"))
-            (bind "SUPER + SHIFT + ALT + F1" (exec "sh ${./hyprland/workspace2d.sh} move_up"))
-            (bind "SUPER + ALT + up" (exec "sh ${./hyprland/workspace2d.sh} move_up"))
-            (bind "SUPER + SHIFT + ALT + CTRL + F1" (exec "sh ${./hyprland/workspace2d.sh} move_up all"))
-            (bind "SUPER + ALT + CTRL + up" (exec "sh ${./hyprland/workspace2d.sh} move_up all"))
-            (bind "SUPER + SHIFT + F2" (exec "sh ${./hyprland/workspace2d.sh} down"))
-            (bind "SUPER + down" (exec "sh ${./hyprland/workspace2d.sh} down"))
-            (bind "SUPER + SHIFT + CTRL + F2" (exec "sh ${./hyprland/workspace2d.sh} down all"))
-            (bind "SUPER + CTRL + down" (exec "sh ${./hyprland/workspace2d.sh} down all"))
-            (bind "SUPER + SHIFT + ALT + F2" (exec "sh ${./hyprland/workspace2d.sh} move_down"))
-            (bind "SUPER + ALT + down" (exec "sh ${./hyprland/workspace2d.sh} move_down"))
-            (bind "SUPER + SHIFT + ALT + CTRL + F2" (exec "sh ${./hyprland/workspace2d.sh} move_down all"))
-            (bind "SUPER + ALT + CTRL + down" (exec "sh ${./hyprland/workspace2d.sh} move_down all"))
             (bind "SUPER + V" (exec "${pkgs.cliphist}/bin/cliphist list | ${pkgs.tofi}/bin/tofi | ${pkgs.cliphist}/bin/cliphist decode | ${pkgs.wl-clipboard}/bin/wl-copy"))
             (bind "SUPER + SHIFT + V" (exec ''${pkgs.openssh}/bin/ssh ${other-host} "${pkgs.cliphist}/bin/cliphist list" | ${pkgs.tofi}/bin/tofi | ${pkgs.openssh}/bin/ssh ${other-host} "${pkgs.cliphist}/bin/cliphist decode" | ${pkgs.wl-clipboard}/bin/wl-copy''))
             (bind "SUPER + CTRL + V" (exec "${pkgs.wl-clipboard}/bin/wl-paste | ${pkgs.imagemagick}/bin/display"))
@@ -392,6 +386,7 @@ in
             {
               match = { class = "^(kitty)$"; };
               float = true;
+              suppress_event = "maximize";
             }
             {
               match = { class = "^(Display)$"; };
@@ -454,6 +449,54 @@ in
           };
         };
         xwayland.enable = true;
+        # hypr2d 2D workspace grid movement (replaces workspace2d.sh).
+        # Plugin loads are queued and the config is reparsed once the plugin is
+        # loaded, so the hl.plugin.hypr2d namespace must stay behind this guard.
+        # "carry all" composes carry + move-all, matching the old script's net
+        # effect (focused monitor ends up one cell ahead of the others).
+        extraConfig = ''
+          if hl.plugin.hypr2d then
+            local function carry_all(dir)
+              return function()
+                hl.dispatch(hl.plugin.hypr2d.carry(dir))
+                hl.dispatch(hl.plugin.hypr2d.move(dir, { all = true }))
+              end
+            end
+            hl.bind("SUPER + F1", hl.plugin.hypr2d.move("right"))
+            hl.bind("SUPER + right", hl.plugin.hypr2d.move("right"))
+            hl.bind("SUPER + CTRL + F1", hl.plugin.hypr2d.move("right", { all = true }))
+            hl.bind("SUPER + CTRL + right", hl.plugin.hypr2d.move("right", { all = true }))
+            hl.bind("SUPER + ALT + F1", hl.plugin.hypr2d.carry("right"))
+            hl.bind("SUPER + ALT + right", hl.plugin.hypr2d.carry("right"))
+            hl.bind("SUPER + ALT + CTRL + F1", carry_all("right"))
+            hl.bind("SUPER + ALT + CTRL + right", carry_all("right"))
+            hl.bind("SUPER + F2", hl.plugin.hypr2d.move("left"))
+            hl.bind("SUPER + left", hl.plugin.hypr2d.move("left"))
+            hl.bind("SUPER + CTRL + F2", hl.plugin.hypr2d.move("left", { all = true }))
+            hl.bind("SUPER + CTRL + left", hl.plugin.hypr2d.move("left", { all = true }))
+            hl.bind("SUPER + ALT + F2", hl.plugin.hypr2d.carry("left"))
+            hl.bind("SUPER + ALT + left", hl.plugin.hypr2d.carry("left"))
+            hl.bind("SUPER + ALT + CTRL + F2", carry_all("left"))
+            hl.bind("SUPER + ALT + CTRL + left", carry_all("left"))
+            hl.bind("SUPER + SHIFT + F1", hl.plugin.hypr2d.move("up"))
+            hl.bind("SUPER + up", hl.plugin.hypr2d.move("up"))
+            hl.bind("SUPER + SHIFT + CTRL + F1", hl.plugin.hypr2d.move("up", { all = true }))
+            hl.bind("SUPER + CTRL + up", hl.plugin.hypr2d.move("up", { all = true }))
+            hl.bind("SUPER + SHIFT + ALT + F1", hl.plugin.hypr2d.carry("up"))
+            hl.bind("SUPER + ALT + up", hl.plugin.hypr2d.carry("up"))
+            hl.bind("SUPER + SHIFT + ALT + CTRL + F1", carry_all("up"))
+            hl.bind("SUPER + ALT + CTRL + up", carry_all("up"))
+            hl.bind("SUPER + SHIFT + F2", hl.plugin.hypr2d.move("down"))
+            hl.bind("SUPER + down", hl.plugin.hypr2d.move("down"))
+            hl.bind("SUPER + SHIFT + CTRL + F2", hl.plugin.hypr2d.move("down", { all = true }))
+            hl.bind("SUPER + CTRL + down", hl.plugin.hypr2d.move("down", { all = true }))
+            hl.bind("SUPER + SHIFT + ALT + F2", hl.plugin.hypr2d.carry("down"))
+            hl.bind("SUPER + ALT + down", hl.plugin.hypr2d.carry("down"))
+            hl.bind("SUPER + SHIFT + ALT + CTRL + F2", carry_all("down"))
+            hl.bind("SUPER + ALT + CTRL + down", carry_all("down"))
+            hl.bind("SUPER + CTRL + TAB", hl.plugin.hypr2d.overview())
+          end
+        '';
       };
     };
   };

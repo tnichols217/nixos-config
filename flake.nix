@@ -102,6 +102,10 @@
       url = "github:outfoxxed/hy3";
     };
 
+    hypr2d = {
+      url = "github:404Wolf/hypr2d";
+    };
+
     disko = {
       url = "github:nix-community/disko/latest";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -207,6 +211,21 @@
       outs = inputs.flake-utils.lib.eachDefaultSystem (
         system:
         let
+          # Hyprland built from the source pinned by hypr2d (the plugin pokes
+          # at 0.56 renderer internals), but compiled against the *system*
+          # nixpkgs. hypr2d's internally-built hyprland uses an old toolchain
+          # whose glibc is too old for the mesa drivers in /run/opengl-driver
+          # (GBM dlopen fails with `GLIBC_2.43 not found`, aborting the
+          # compositor with "no allocator available"). The hyprtoolkit overlay
+          # is needed because hyprland-guiutils' default overlay doesn't bring
+          # it, and nixpkgs' own hyprtoolkit omits wayland from its inputs.
+          hyprPkgs = import inputs.nixpkgs {
+            inherit system config;
+            overlays = [
+              inputs.hypr2d.inputs.hyprland.overlays.hyprland-packages
+              inputs.hypr2d.inputs.hyprland.inputs.hyprland-guiutils.inputs.hyprtoolkit.overlays.default
+            ];
+          };
           fullAttrs = {
             inherit
               inputs
@@ -215,6 +234,7 @@
               persistence
               ports
               addressNumbers
+              hyprPkgs
               ;
             vscode_exts = inputs.nix-vscode-extensions.extensions.${system}.vscode-marketplace;
             openvsx_exts = inputs.nix-vscode-extensions.extensions.${system}.open-vsx;
