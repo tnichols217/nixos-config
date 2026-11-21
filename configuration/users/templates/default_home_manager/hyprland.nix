@@ -341,6 +341,7 @@ in
             (bind "SUPER + SHIFT + S" (exec "${pkgs.grimblast}/bin/grimblast copy area"))
             (bind "SUPER + L" (exec "pidof hyprlock || ${pkgs.hyprlock}/bin/hyprlock"))
             (bind "SUPER + SHIFT + L" "hl.dsp.exit()")
+            (bind "SUPER + F11" (exec "${pkgs.systemd}/bin/systemctl suspend"))
             (bind "${appmod} + F" (exec "firefox-devedition"))
             (bind "${appmod} + W" (exec "pkill .waybar-wrapped; ${pkgs.waybar}/bin/waybar"))
             (bind "${appmod} + T" (exec "${import ./shell/kitty/kitty.pkg.nix { inherit pkgs inputs; }}/bin/kitty"))
